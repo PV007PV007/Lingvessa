@@ -1,0 +1,177 @@
+{
+  "schema_version": "1.0",
+  "project": "Lingvessa",
+  "baseline_id": "LINGVESSA-OWNER-LOCK-2026-09-10",
+  "owner_lock": {
+    "status": "OWNER_LOCKED",
+    "date": "2026-09-10",
+    "approver": "Product owner",
+    "authorization": "P0 only",
+    "accepted_exceptions": [],
+    "prior_closure_audit": {
+      "BLOCKER": 0,
+      "IMPORTANT": 0,
+      "provenance": "owner-supplied manifest/package"
+    }
+  },
+  "p0": {
+    "artifact_status": "PASS",
+    "owner_acceptance": "PENDING",
+    "p1_authorized": false,
+    "required_owner_instruction": "P0 accepted. Proceed to P1."
+  },
+  "governing_documents": [
+    {
+      "document_id": "FS",
+      "path": "01_GOVERNING_DOCUMENTS/Lingvessa_Formal_Specification.pdf",
+      "version": "1.7",
+      "document_date": "2026-09-09",
+      "owner_lock_status": "OWNER_LOCKED",
+      "owner_lock_date": "2026-09-10",
+      "sha256": "edb294700455639d2b92fd9978fd74990dbd41503127cda430ac4870697e9d88",
+      "checksum_reference": "00_CONTEXT/OWNER_LOCK_SHA256SUMS.txt#Lingvessa_Formal_Specification.pdf",
+      "authority": "product scope, behavior and product invariants"
+    },
+    {
+      "document_id": "TS",
+      "path": "01_GOVERNING_DOCUMENTS/Lingvessa_Technical_Specification.pdf",
+      "version": "1.7",
+      "document_date": "2026-09-09",
+      "owner_lock_status": "OWNER_LOCKED",
+      "owner_lock_date": "2026-09-10",
+      "sha256": "fdf8b3bd81267ec297fccd132c0d2a44850d1d05e6bccca008ed94c4dc1f9615",
+      "checksum_reference": "00_CONTEXT/OWNER_LOCK_SHA256SUMS.txt#Lingvessa_Technical_Specification.pdf",
+      "authority": "normative technical requirements"
+    },
+    {
+      "document_id": "TD",
+      "path": "01_GOVERNING_DOCUMENTS/Lingvessa_Technical_Design.pdf",
+      "version": "1.7",
+      "document_date": "2026-09-09",
+      "owner_lock_status": "OWNER_LOCKED",
+      "owner_lock_date": "2026-09-10",
+      "sha256": "414fe86abb0aa598260eb4589f4547020468824e8511be044dbb5328e46dfeae",
+      "checksum_reference": "00_CONTEXT/OWNER_LOCK_SHA256SUMS.txt#Lingvessa_Technical_Design.pdf",
+      "authority": "concrete schema, state, API and DDL contracts"
+    },
+    {
+      "document_id": "CUR",
+      "path": "01_GOVERNING_DOCUMENTS/Lingvessa_Curriculum_Blueprint_A1.pdf",
+      "version": "1.6",
+      "document_date": "2026-09-09",
+      "owner_lock_status": "OWNER_LOCKED",
+      "owner_lock_date": "2026-09-10",
+      "sha256": "9dc5c924aee0d742f97e1225246db4c48bebe8473293091ba9fa715622085053",
+      "checksum_reference": "00_CONTEXT/OWNER_LOCK_SHA256SUMS.txt#Lingvessa_Curriculum_Blueprint_A1.pdf",
+      "authority": "A1 pedagogy, outcomes and curriculum"
+    },
+    {
+      "document_id": "REF",
+      "path": "01_GOVERNING_DOCUMENTS/Lingvessa_Reference_Module_Design.pdf",
+      "version": "1.6",
+      "document_date": "2026-09-09",
+      "owner_lock_status": "OWNER_LOCKED",
+      "owner_lock_date": "2026-09-10",
+      "sha256": "b4a3d91738daa0d96c5e9e6435486fc6bc328f9f8072efb7fa1830620481f0d7",
+      "checksum_reference": "00_CONTEXT/OWNER_LOCK_SHA256SUMS.txt#Lingvessa_Reference_Module_Design.pdf",
+      "authority": "executable bilingual reference fixtures"
+    },
+    {
+      "document_id": "AI",
+      "path": "01_GOVERNING_DOCUMENTS/Lingvessa_AI_Integration_Specification.pdf",
+      "version": "1.4",
+      "document_date": "2026-09-09",
+      "owner_lock_status": "OWNER_LOCKED",
+      "owner_lock_date": "2026-09-10",
+      "sha256": "9e81ac464eea66e309b957401981f688638ba78208946ec4b37a8ed6735dcbe9",
+      "checksum_reference": "00_CONTEXT/OWNER_LOCK_SHA256SUMS.txt#Lingvessa_AI_Integration_Specification.pdf",
+      "authority": "AI permissions, routing, privacy and cost contracts"
+    },
+    {
+      "document_id": "PLAN",
+      "path": "01_GOVERNING_DOCUMENTS/Lingvessa_Implementation_Plan.pdf",
+      "version": "1.4",
+      "document_date": "2026-09-09",
+      "owner_lock_status": "OWNER_LOCKED",
+      "owner_lock_date": "2026-09-10",
+      "sha256": "7be218921fbe2c7299899beb8a496afd68dd7cccad9b77cc5a4bdaa238ca4e3c",
+      "checksum_reference": "00_CONTEXT/OWNER_LOCK_SHA256SUMS.txt#Lingvessa_Implementation_Plan.pdf",
+      "authority": "sole execution-order authority for P0–P13"
+    }
+  ],
+  "architecture_manifest": {
+    "path": "00_CONTEXT/00_project_manifest_and_constraints.md",
+    "authority": "Architecture Decision Record and context authority; approved decisions and deliberate trade-offs",
+    "sha256": "8a9858dfeb164a4408448c8ebdb9d6c1853c97eebee6fc0a67afec066f88ed86"
+  },
+  "precedence": {
+    "rule": "Domain-specific authority; no global last-document-wins rule. Manifest records approved constraints. A real unresolved conflict requires STOP, owner decision and controlled ADR/spec revision before implementation.",
+    "domains": {
+      "FS": "product scope, behavior and product invariants",
+      "TS": "normative technical requirements",
+      "TD": "concrete schema, state, API and DDL contracts",
+      "CUR": "A1 pedagogy, outcomes and curriculum",
+      "REF": "executable bilingual reference fixtures",
+      "AI": "AI permissions, routing, privacy and cost contracts",
+      "PLAN": "sole execution-order authority for P0–P13"
+    },
+    "execution_order": {
+      "sole_authority": "01_GOVERNING_DOCUMENTS/Lingvessa_Implementation_Plan.pdf",
+      "version": "1.4",
+      "milestones": [
+        "P0",
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6",
+        "P7",
+        "P8",
+        "P9",
+        "P10",
+        "P11",
+        "P12",
+        "P13"
+      ],
+      "legacy_phase_labels": "Descriptive history only; map to Plan v1.4."
+    }
+  },
+  "checksum_manifest": {
+    "path": "00_CONTEXT/OWNER_LOCK_SHA256SUMS.txt",
+    "sha256": "7896608312fc33d8d1d6d1ac7b4cc4d58089f15eee4f1f0a5e86df2f96b79eda",
+    "algorithm": "SHA-256",
+    "entries": 9,
+    "unchanged": true,
+    "resolution": {
+      "governing_pdf_basenames": "01_GOVERNING_DOCUMENTS/",
+      "00_project_manifest_and_constraints.md": "00_CONTEXT/00_project_manifest_and_constraints.md",
+      "01_implementation_state_and_handoff.md": "docs/baseline/owner-lock/01_implementation_state_and_handoff.initial.md"
+    }
+  },
+  "handoff": {
+    "current": "00_CONTEXT/01_implementation_state_and_handoff.md",
+    "initial_owner_locked_snapshot": "docs/baseline/owner-lock/01_implementation_state_and_handoff.initial.md",
+    "initial_sha256": "f6f94eb441dfde53819960c77ffdcad85cf74dc5e84e442ca7fab3b62d253d4f",
+    "policy": "Operational handoff updated under explicit owner instruction. Original lock checksum refers to preserved initial bytes. Current handoff is not a changed governing contract."
+  },
+  "source_package": {
+    "filename": "Lingvessa_ASTRA_MAX_IMPLEMENTATION_PACKAGE_2026-09-10(1).zip",
+    "sha256": "9c6cb53ce2c30c1b337e57112f053751168b272bb5dfe0816404c66b812b3b73"
+  },
+  "repository": {
+    "exists": false,
+    "branch": null,
+    "commit_sha": null,
+    "pull_request": null,
+    "delivery": "Repository-ready file set; create/private-repository work belongs to P1."
+  },
+  "trace": {
+    "matrix": "docs/baseline/requirements-trace.csv",
+    "source_catalog": "docs/baseline/requirement-catalog.json",
+    "coverage_inventory": "docs/baseline/source-coverage.json",
+    "task_catalog": "docs/baseline/implementation-backlog.json",
+    "gates": "docs/baseline/validation-gates.json",
+    "methodology": "docs/baseline/trace-methodology.md"
+  }
+}

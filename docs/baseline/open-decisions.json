@@ -1,0 +1,222 @@
+[
+  {
+    "decision_id": "OD-001",
+    "topic": "Exact runtime/framework/tooling pins",
+    "source": "TS §40.2 ADR-002 p22; TD §35 p20",
+    "why_unresolved": "Baseline fixes Node 24 LTS/TypeScript strict/pnpm and framework families; exact compatible versions/lockfile require the P1 compatibility spike.",
+    "latest_phase": "P1 / before IMP-P1-001 gate",
+    "affected_requirements": [
+      "TS-TECH-001",
+      "TS-TECH-002",
+      "TS-TECH-004",
+      "TS-REPO-001"
+    ],
+    "default_behavior": "No unpinned implementation/toolchain is accepted; keep family/major constraints.",
+    "owner": "Platform foundation / technical owner",
+    "status": "OPEN_DEFERRED_NOT_P0_BLOCKING"
+  },
+  {
+    "decision_id": "OD-002",
+    "topic": "Authentication implementation details",
+    "source": "TS §40.2 ADR-003 p22; TD §35 p20",
+    "why_unresolved": "Exact implementation/library and benchmarked credential parameters are not chosen by the baseline.",
+    "latest_phase": "P2 / before identity acceptance",
+    "affected_requirements": [
+      "TS-AUTH-001",
+      "ROLE-001",
+      "TD-SEC-001"
+    ],
+    "default_behavior": "Secure server sessions and Argon2id remain governing defaults; no public identity deployment before review.",
+    "owner": "Identity/language / security owner",
+    "status": "OPEN_DEFERRED_NOT_P0_BLOCKING"
+  },
+  {
+    "decision_id": "OD-003",
+    "topic": "Production hosting, region, topology and PostgreSQL HA/PITR tier",
+    "source": "Formal §33.2 p21; TS §40.2 ADR-001/004 p22; TD §35 p20",
+    "why_unresolved": "Production geography, capacity, budget and backup tier require actual deployment selection.",
+    "latest_phase": "P13 / before production infrastructure or production data, whichever is earlier",
+    "affected_requirements": [
+      "NFR-DR-001",
+      "TS-ENV-003",
+      "TS-TECH-003"
+    ],
+    "default_behavior": "Local/synthetic environment only; portable OCI + PostgreSQL. Northflank/R2 are development candidates, not production approval.",
+    "owner": "Platform foundation / product owner",
+    "status": "OPEN_DEFERRED_NOT_P0_BLOCKING"
+  },
+  {
+    "decision_id": "OD-004",
+    "topic": "Object storage/CDN provider and production delivery policy",
+    "source": "TS §40.2 ADR-006 p22; TD §35 p20",
+    "why_unresolved": "Exact S3-compatible storage/CDN profile requires the media integration decision.",
+    "latest_phase": "P5 / before media integration",
+    "affected_requirements": [
+      "TS-MEDIA-001",
+      "MED-001",
+      "TD-CONT-001"
+    ],
+    "default_behavior": "Adapter/local fixture storage; platform asset UUID/version/checksum remain canonical.",
+    "owner": "Media/speech / platform owner",
+    "status": "OPEN_DEFERRED_NOT_P0_BLOCKING"
+  },
+  {
+    "decision_id": "OD-005",
+    "topic": "Image/TTS/STT providers, licences and voice cast",
+    "source": "TS §40.2 ADR-007 p22; Curriculum §19.2 p16; TD §35 p20",
+    "why_unresolved": "Provider quality, data use, licence/consent, varieties and voice cast require the approved integration spike.",
+    "latest_phase": "P5 / before generation/scoring integration or media batch",
+    "affected_requirements": [
+      "AUD-001",
+      "AUD-003",
+      "MED-001",
+      "CUR-A1-015",
+      "REF-A1-010"
+    ],
+    "default_behavior": "Deterministic adapters/fixtures; no unapproved provider payload or production media. Required published media stays pre-generated.",
+    "owner": "Media/speech / language leads",
+    "status": "OPEN_DEFERRED_NOT_P0_BLOCKING"
+  },
+  {
+    "decision_id": "OD-006",
+    "topic": "Versioned speech confidence/target-feature policy and pilot calibration",
+    "source": "Curriculum §19.2 p16; TD §14.2 p11; Manifest §2.2",
+    "why_unresolved": "Usability thresholds depend on selected provider/target/language and must not be invented as universal language scores.",
+    "latest_phase": "P5 before usable provider evidence; refine with P12 pilot before broad rollout",
+    "affected_requirements": [
+      "CUR-A1-010",
+      "REF-A1-006",
+      "AUD-005",
+      "TD-STATE-003"
+    ],
+    "default_behavior": "Unusable/unapproved evaluation becomes speech_unavailable with no mastery/mistake/scheduler effect. Use controlled fixtures for contract tests.",
+    "owner": "Media/speech / curriculum lead",
+    "status": "OPEN_DEFERRED_NOT_P0_BLOCKING"
+  },
+  {
+    "decision_id": "OD-007",
+    "topic": "Initial approved local/free text AI provider/model/runtime",
+    "source": "AI §22.2 AI-ADR-001/002 pp19–20; TS §40.2 ADR-008 p22",
+    "why_unresolved": "Exact local/free model choice requires quality/privacy/quota/current-terms spike; no provider is promised permanently free.",
+    "latest_phase": "P8 / before shared foundation provider integration",
+    "affected_requirements": [
+      "AI-PROV-001",
+      "AI-PROV-002",
+      "AI-COST-001",
+      "AIA-02",
+      "AIA-14"
+    ],
+    "default_behavior": "Provider ports/doubles only until approved. paid_inference_enabled=false; monthly_paid_budget=0; no paid fallback.",
+    "owner": "AI / security and product owner",
+    "status": "OPEN_DEFERRED_NOT_P0_BLOCKING"
+  },
+  {
+    "decision_id": "OD-008",
+    "topic": "Learner conversation retention and provider data-handling policy",
+    "source": "AI §22.2 AI-ADR-004 p19; TS §40.2 ADR-009 p22; Formal §33.2 p21",
+    "why_unresolved": "Exact retention/deletion/downstream handling policy must be approved for actual learner data route.",
+    "latest_phase": "P9 / before public learner AI or retaining conversation payload",
+    "affected_requirements": [
+      "AI-PRIV-001",
+      "AI-PRIV-002",
+      "AIA-03",
+      "AIA-13",
+      "TD-AILRN-004"
+    ],
+    "default_behavior": "Learner AI off without consent/policy; minimal/off retention and scripted fallback; raw audio remains transient under fixed policy.",
+    "owner": "AI / privacy and product owner",
+    "status": "OPEN_DEFERRED_NOT_P0_BLOCKING"
+  },
+  {
+    "decision_id": "OD-009",
+    "topic": "Observable production backend and operational retention configuration",
+    "source": "TS §40.2 ADR-010 p22; TD §35 p20",
+    "why_unresolved": "Exact analytics/observability backend and bounded operational retention are deployment choices not made in the baseline.",
+    "latest_phase": "P11 / before reference monitoring/restore acceptance; revalidate P13",
+    "affected_requirements": [
+      "TD-OBS-001",
+      "TD-OBS-003",
+      "TS-PRIV-001"
+    ],
+    "default_behavior": "OpenTelemetry-compatible ports, bounded/pseudonymous metadata; no raw answers/audio/secrets in telemetry.",
+    "owner": "QA/security/ops / platform owner",
+    "status": "OPEN_DEFERRED_NOT_P0_BLOCKING"
+  },
+  {
+    "decision_id": "OD-010",
+    "topic": "Launch countries, minors/consent, processors and public privacy approvals",
+    "source": "Formal §33.2 p21; TS §40.2 ADR-011 p23; AI AI-ADR-008 p20",
+    "why_unresolved": "Real launch jurisdictions, age policy and actual processors must be approved for the intended public release.",
+    "latest_phase": "P13 / BEFORE any real-user public registration or public EU AI flow",
+    "affected_requirements": [
+      "SEC-003",
+      "LEGAL-003",
+      "TS-PRIV-001",
+      "AI-PRIV-001"
+    ],
+    "default_behavior": "No real-user public registration; synthetic/private testing. No invented universal age or legal retention threshold.",
+    "owner": "Product owner / privacy-legal owner",
+    "status": "OPEN_DEFERRED_NOT_P0_BLOCKING"
+  },
+  {
+    "decision_id": "OD-011",
+    "topic": "Public brand/trademark clearance",
+    "source": "Formal §33.2 p21",
+    "why_unresolved": "Lingvessa is approved as a working name; public brand clearance is separate.",
+    "latest_phase": "P13 / before public brand release",
+    "affected_requirements": [
+      "LEGAL-002",
+      "LEGAL-004"
+    ],
+    "default_behavior": "Use Lingvessa as working project name; no claim of cleared trademark.",
+    "owner": "Product owner",
+    "status": "OPEN_DEFERRED_NOT_P0_BLOCKING"
+  },
+  {
+    "decision_id": "OD-012",
+    "topic": "M02–M12 module-map approval and lexical inventory calibration",
+    "source": "Curriculum §19.2 p16",
+    "why_unresolved": "12-module architecture is fixed; authoring approval and lexical targets require full inventory/pilot review before bulk production.",
+    "latest_phase": "P12 / before M02–M12 authoring/production freeze",
+    "affected_requirements": [
+      "CUR-A1-002",
+      "CUR-A1-003",
+      "CUR-A1-006",
+      "CUR-A1-013"
+    ],
+    "default_behavior": "Keep locked M01 fixtures; no bulk rollout; ~800–1000 active/250–400 receptive are design targets, not external CEFR mandates.",
+    "owner": "Curriculum/content / language leads and product owner",
+    "status": "OPEN_DEFERRED_NOT_P0_BLOCKING"
+  },
+  {
+    "decision_id": "OD-013",
+    "topic": "Optional Level Test readiness bands",
+    "source": "Curriculum §§13,19.2 pp13,16",
+    "why_unresolved": "Readiness bands require pilot data, item analysis and expert approval.",
+    "latest_phase": "P12 / only before optional Level Test activation",
+    "affected_requirements": [
+      "CUR-A1-014",
+      "A1-OUT-01",
+      "A1-OUT-08"
+    ],
+    "default_behavior": "Optional test inactive until calibrated; it never blocks A2 and makes no external certification claim.",
+    "owner": "Curriculum/content / assessment owner",
+    "status": "OPEN_DEFERRED_NOT_P0_BLOCKING"
+  },
+  {
+    "decision_id": "OD-014",
+    "topic": "Validated writing/conversation rubric before optional AI mastery effect",
+    "source": "AI §22.2 AI-ADR-005 p19; Curriculum §19.2 p16",
+    "why_unresolved": "Default AI writing/conversation is advisory; any evidence-bearing path needs approved calibrated evaluator/rubric.",
+    "latest_phase": "P9 / before enabling such evidence; may remain advisory through P12",
+    "affected_requirements": [
+      "CUR-A1-021",
+      "AI-MAST-003",
+      "TD-AILRN-005",
+      "AIA-07"
+    ],
+    "default_behavior": "Free-form AI practice/advice has no direct mastery effect. Only approved structured evaluator contracts may emit bounded evidence.",
+    "owner": "AI / curriculum and assessment owner",
+    "status": "OPEN_DEFERRED_NOT_P0_BLOCKING"
+  }
+]

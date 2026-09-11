@@ -1,0 +1,173 @@
+[
+  {
+    "phase": "P0",
+    "authority": "Implementation Plan v1.4",
+    "source_section": "§7",
+    "gate": "Governance freeze and full trace",
+    "execution_dependency": null,
+    "owner_status": "P0 authorized; acceptance pending",
+    "task_ids": [
+      "IMP-P0-001"
+    ]
+  },
+  {
+    "phase": "P1",
+    "authority": "Implementation Plan v1.4",
+    "source_section": "§8",
+    "gate": "Fresh clone → install → DB migrate → test → build",
+    "execution_dependency": "P0 exit gate",
+    "owner_status": "NOT_AUTHORIZED_IN_THIS_BATCH",
+    "task_ids": [
+      "IMP-P1-001",
+      "IMP-P1-002",
+      "IMP-P1-003",
+      "IMP-P1-004"
+    ]
+  },
+  {
+    "phase": "P2",
+    "authority": "Implementation Plan v1.4",
+    "source_section": "§9",
+    "gate": "DB negative isolation and immutable manifest/Approval",
+    "execution_dependency": "P1 exit gate",
+    "owner_status": "NOT_AUTHORIZED_IN_THIS_BATCH",
+    "task_ids": [
+      "IMP-P2-001",
+      "IMP-P2-002",
+      "IMP-P2-003"
+    ]
+  },
+  {
+    "phase": "P3",
+    "authority": "Implementation Plan v1.4",
+    "source_section": "§10",
+    "gate": "Bilingual deterministic learning/attempt E2E",
+    "execution_dependency": "P2 exit gate",
+    "owner_status": "NOT_AUTHORIZED_IN_THIS_BATCH",
+    "task_ids": [
+      "IMP-P3-001",
+      "IMP-P3-002",
+      "IMP-P3-003",
+      "IMP-P3-004"
+    ]
+  },
+  {
+    "phase": "P4",
+    "authority": "Implementation Plan v1.4",
+    "source_section": "§11",
+    "gate": "Mastery recompute and isolated Review",
+    "execution_dependency": "P3 exit gate",
+    "owner_status": "NOT_AUTHORIZED_IN_THIS_BATCH",
+    "task_ids": [
+      "IMP-P4-001",
+      "IMP-P4-002",
+      "IMP-P4-003"
+    ]
+  },
+  {
+    "phase": "P5",
+    "authority": "Implementation Plan v1.4",
+    "source_section": "§12",
+    "gate": "Media/speech failure, settlement and cleanup",
+    "execution_dependency": "P4 exit gate",
+    "owner_status": "NOT_AUTHORIZED_IN_THIS_BATCH",
+    "task_ids": [
+      "IMP-P5-001",
+      "IMP-P5-002",
+      "IMP-P5-003"
+    ]
+  },
+  {
+    "phase": "P6",
+    "authority": "Implementation Plan v1.4",
+    "source_section": "§13",
+    "gate": "English M01 vertical-slice QA",
+    "execution_dependency": "P5 exit gate",
+    "owner_status": "NOT_AUTHORIZED_IN_THIS_BATCH",
+    "task_ids": [
+      "IMP-P6-001"
+    ]
+  },
+  {
+    "phase": "P7",
+    "authority": "Implementation Plan v1.4",
+    "source_section": "§14",
+    "gate": "Czech M01/shared-engine/isolation QA",
+    "execution_dependency": "P6 exit gate",
+    "owner_status": "NOT_AUTHORIZED_IN_THIS_BATCH",
+    "task_ids": [
+      "IMP-P7-001"
+    ]
+  },
+  {
+    "phase": "P8",
+    "authority": "Implementation Plan v1.4",
+    "source_section": "§15",
+    "gate": "CMS publication drill + Admin Assist/shared foundation",
+    "execution_dependency": "P7 exit gate",
+    "owner_status": "NOT_AUTHORIZED_IN_THIS_BATCH",
+    "task_ids": [
+      "IMP-P8-001",
+      "IMP-P8-002",
+      "IMP-P8-003"
+    ]
+  },
+  {
+    "phase": "P9",
+    "authority": "Implementation Plan v1.4",
+    "source_section": "§16",
+    "gate": "Learner opt-in + AI-off/privacy/quota + Auto allowlist",
+    "execution_dependency": "P8 exit gate",
+    "owner_status": "NOT_AUTHORIZED_IN_THIS_BATCH",
+    "task_ids": [
+      "IMP-P9-001",
+      "IMP-P9-002"
+    ]
+  },
+  {
+    "phase": "P10",
+    "authority": "Implementation Plan v1.4",
+    "source_section": "§17",
+    "gate": "Persisted surfaces/settings/DST E2E",
+    "execution_dependency": "P9 exit gate",
+    "owner_status": "NOT_AUTHORIZED_IN_THIS_BATCH",
+    "task_ids": [
+      "IMP-P10-001"
+    ]
+  },
+  {
+    "phase": "P11",
+    "authority": "Implementation Plan v1.4",
+    "source_section": "§18",
+    "gate": "32 reference scenarios + TAC/TDA + signed reference RC",
+    "execution_dependency": "P10 exit gate",
+    "owner_status": "NOT_AUTHORIZED_IN_THIS_BATCH",
+    "task_ids": [
+      "IMP-P11-001",
+      "IMP-P11-002"
+    ]
+  },
+  {
+    "phase": "P12",
+    "authority": "Implementation Plan v1.4",
+    "source_section": "§19",
+    "gate": "Bilingual M02–M12 coverage/pilot/calibration",
+    "execution_dependency": "P11 exit gate",
+    "owner_status": "NOT_AUTHORIZED_IN_THIS_BATCH",
+    "task_ids": [
+      "IMP-P12-001",
+      "IMP-P12-002"
+    ]
+  },
+  {
+    "phase": "P13",
+    "authority": "Implementation Plan v1.4",
+    "source_section": "§20",
+    "gate": "Full-system launch gates or explicit no-launch",
+    "execution_dependency": "P12 exit gate",
+    "owner_status": "NOT_AUTHORIZED_IN_THIS_BATCH",
+    "task_ids": [
+      "IMP-P13-001"
+    ]
+  }
+]

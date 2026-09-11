@@ -1,0 +1,8 @@
+{
+  "BLOCKER": [],
+  "IMPORTANT": [],
+  "MINOR": [],
+  "accepted_exceptions": [],
+  "review_scope": "P0 materialization against owner-locked baseline; no new redesign audit",
+  "product_tests_executed": false
+}

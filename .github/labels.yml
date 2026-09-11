@@ -1,0 +1,227 @@
+[
+  {
+    "name": "phase:P0",
+    "color": "255B9B",
+    "description": "Implementation Plan v1.4 phase P0"
+  },
+  {
+    "name": "phase:P1",
+    "color": "255B9B",
+    "description": "Implementation Plan v1.4 phase P1"
+  },
+  {
+    "name": "phase:P2",
+    "color": "255B9B",
+    "description": "Implementation Plan v1.4 phase P2"
+  },
+  {
+    "name": "phase:P3",
+    "color": "255B9B",
+    "description": "Implementation Plan v1.4 phase P3"
+  },
+  {
+    "name": "phase:P4",
+    "color": "255B9B",
+    "description": "Implementation Plan v1.4 phase P4"
+  },
+  {
+    "name": "phase:P5",
+    "color": "255B9B",
+    "description": "Implementation Plan v1.4 phase P5"
+  },
+  {
+    "name": "phase:P6",
+    "color": "255B9B",
+    "description": "Implementation Plan v1.4 phase P6"
+  },
+  {
+    "name": "phase:P7",
+    "color": "255B9B",
+    "description": "Implementation Plan v1.4 phase P7"
+  },
+  {
+    "name": "phase:P8",
+    "color": "255B9B",
+    "description": "Implementation Plan v1.4 phase P8"
+  },
+  {
+    "name": "phase:P9",
+    "color": "255B9B",
+    "description": "Implementation Plan v1.4 phase P9"
+  },
+  {
+    "name": "phase:P10",
+    "color": "255B9B",
+    "description": "Implementation Plan v1.4 phase P10"
+  },
+  {
+    "name": "phase:P11",
+    "color": "255B9B",
+    "description": "Implementation Plan v1.4 phase P11"
+  },
+  {
+    "name": "phase:P12",
+    "color": "255B9B",
+    "description": "Implementation Plan v1.4 phase P12"
+  },
+  {
+    "name": "phase:P13",
+    "color": "255B9B",
+    "description": "Implementation Plan v1.4 phase P13"
+  },
+  {
+    "name": "workstream:platform",
+    "color": "176B5B",
+    "description": "Primary ownership: platform"
+  },
+  {
+    "name": "workstream:identity-language",
+    "color": "176B5B",
+    "description": "Primary ownership: identity-language"
+  },
+  {
+    "name": "workstream:content-publication",
+    "color": "176B5B",
+    "description": "Primary ownership: content-publication"
+  },
+  {
+    "name": "workstream:learning-runtime",
+    "color": "176B5B",
+    "description": "Primary ownership: learning-runtime"
+  },
+  {
+    "name": "workstream:mastery-review",
+    "color": "176B5B",
+    "description": "Primary ownership: mastery-review"
+  },
+  {
+    "name": "workstream:media-speech",
+    "color": "176B5B",
+    "description": "Primary ownership: media-speech"
+  },
+  {
+    "name": "workstream:admin-cms",
+    "color": "176B5B",
+    "description": "Primary ownership: admin-cms"
+  },
+  {
+    "name": "workstream:ai",
+    "color": "176B5B",
+    "description": "Primary ownership: ai"
+  },
+  {
+    "name": "workstream:qa-security-ops",
+    "color": "176B5B",
+    "description": "Primary ownership: qa-security-ops"
+  },
+  {
+    "name": "workstream:curriculum-content",
+    "color": "176B5B",
+    "description": "Primary ownership: curriculum-content"
+  },
+  {
+    "name": "severity:BLOCKER",
+    "color": "B42318",
+    "description": "BLOCKER defect triage"
+  },
+  {
+    "name": "severity:IMPORTANT",
+    "color": "B54708",
+    "description": "IMPORTANT defect triage"
+  },
+  {
+    "name": "severity:MINOR",
+    "color": "667085",
+    "description": "MINOR defect triage"
+  },
+  {
+    "name": "type:governance",
+    "color": "6941C6",
+    "description": "Work category: governance"
+  },
+  {
+    "name": "type:feature",
+    "color": "6941C6",
+    "description": "Work category: feature"
+  },
+  {
+    "name": "type:fix",
+    "color": "6941C6",
+    "description": "Work category: fix"
+  },
+  {
+    "name": "type:schema",
+    "color": "6941C6",
+    "description": "Work category: schema"
+  },
+  {
+    "name": "type:content",
+    "color": "6941C6",
+    "description": "Work category: content"
+  },
+  {
+    "name": "type:test",
+    "color": "6941C6",
+    "description": "Work category: test"
+  },
+  {
+    "name": "type:operations",
+    "color": "6941C6",
+    "description": "Work category: operations"
+  },
+  {
+    "name": "status:planned",
+    "color": "475467",
+    "description": "Task status: planned"
+  },
+  {
+    "name": "status:ready",
+    "color": "475467",
+    "description": "Task status: ready"
+  },
+  {
+    "name": "status:in-progress",
+    "color": "475467",
+    "description": "Task status: in-progress"
+  },
+  {
+    "name": "status:blocked",
+    "color": "475467",
+    "description": "Task status: blocked"
+  },
+  {
+    "name": "status:review",
+    "color": "475467",
+    "description": "Task status: review"
+  },
+  {
+    "name": "status:done",
+    "color": "475467",
+    "description": "Task status: done"
+  },
+  {
+    "name": "contract-change",
+    "color": "344054",
+    "description": "ADR/spec review before implementation"
+  },
+  {
+    "name": "owner-decision",
+    "color": "344054",
+    "description": "Real decision pending owner"
+  },
+  {
+    "name": "language:en",
+    "color": "344054",
+    "description": "English fixture/content"
+  },
+  {
+    "name": "language:cs",
+    "color": "344054",
+    "description": "Czech fixture/content"
+  },
+  {
+    "name": "language:shared",
+    "color": "344054",
+    "description": "Shared engine/contract"
+  }
+]

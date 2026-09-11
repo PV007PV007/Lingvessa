@@ -1,0 +1,54 @@
+{
+  "name": "Implementation task",
+  "description": "Task packet governed by Plan P0–P13",
+  "title": "[IMP-Px-nnn] ",
+  "labels": [
+    "status:planned"
+  ],
+  "body": [
+    {
+      "type": "textarea",
+      "id": "authority",
+      "attributes": {
+        "label": "Task, phase and governing refs",
+        "description": "Exact task ID, requirement IDs, versions, pages/sections and owner phase authorization"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "contract",
+      "attributes": {
+        "label": "Goal, boundaries and dependencies",
+        "description": "One behavior; files/modules; schema known or included; merged dependencies; open decisions"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "acceptance",
+      "attributes": {
+        "label": "Acceptance, negative cases and fixtures",
+        "description": "Test/gate, expected result, bilingual fixture, provider adapter/fallback and paid-budget policy"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "operations",
+      "attributes": {
+        "label": "Compatibility, migrations, observability and rollback",
+        "description": "Immutable history, safe events/logs, migration/recompute, disable/revert path"
+      },
+      "validations": {
+        "required": true
+      }
+    }
+  ]
+}

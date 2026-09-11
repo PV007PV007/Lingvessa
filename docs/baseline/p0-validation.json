@@ -1,0 +1,456 @@
+{
+  "generated_at_utc": "2026-09-10T17:31:40+00:00",
+  "phase": "P0",
+  "status": "PASS",
+  "owner_acceptance": "PENDING",
+  "P1_authorized": false,
+  "command": "python3 tools/governance/validate_p0.py --sources --write-report",
+  "product_tests_executed": false,
+  "statistics": {
+    "total_trace_rows": 2475,
+    "total_MUST": 2453,
+    "traced_MUST": 2453,
+    "untraced_MUST": 0,
+    "untraced_ids": [],
+    "SHOULD": 22,
+    "duplicate_trace_ids": [],
+    "ambiguous_trace_ids": [],
+    "explicit_requirement_and_acceptance_MUST": 507,
+    "source_granularity_note": "Counts source-located normative obligations/contract/fixture rows; mirrored source contracts retained, not unique feature counts.",
+    "by_document": {
+      "Lingvessa_Formal_Specification.pdf": {
+        "MUST": 349,
+        "SHOULD": 15
+      },
+      "Lingvessa_Technical_Specification.pdf": {
+        "MUST": 521,
+        "SHOULD": 1
+      },
+      "Lingvessa_Technical_Design.pdf": {
+        "MUST": 493,
+        "SHOULD": 3
+      },
+      "Lingvessa_Curriculum_Blueprint_A1.pdf": {
+        "MUST": 292
+      },
+      "Lingvessa_Reference_Module_Design.pdf": {
+        "MUST": 478
+      },
+      "Lingvessa_AI_Integration_Specification.pdf": {
+        "MUST": 320,
+        "SHOULD": 3
+      }
+    }
+  },
+  "checks": [
+    {
+      "check": "required_governance_files",
+      "status": "PASS",
+      "detail": {
+        "missing": []
+      }
+    },
+    {
+      "check": "exact_seven_versions",
+      "status": "PASS",
+      "detail": {
+        "FS": "1.7",
+        "TS": "1.7",
+        "TD": "1.7",
+        "CUR": "1.6",
+        "REF": "1.6",
+        "AI": "1.4",
+        "PLAN": "1.4"
+      }
+    },
+    {
+      "check": "owner_lock_and_phase_authority",
+      "status": "PASS",
+      "detail": "Owner lock 2026-09-10; Plan v1.4 sole execution authority; P1 not authorized."
+    },
+    {
+      "check": "nine_original_owner_lock_hashes",
+      "status": "PASS",
+      "detail": [
+        {
+          "original_entry": "00_project_manifest_and_constraints.md",
+          "verified_path": "00_CONTEXT/00_project_manifest_and_constraints.md",
+          "expected_sha256": "8a9858dfeb164a4408448c8ebdb9d6c1853c97eebee6fc0a67afec066f88ed86",
+          "actual_sha256": "8a9858dfeb164a4408448c8ebdb9d6c1853c97eebee6fc0a67afec066f88ed86",
+          "match": true
+        },
+        {
+          "original_entry": "01_implementation_state_and_handoff.md",
+          "verified_path": "docs/baseline/owner-lock/01_implementation_state_and_handoff.initial.md",
+          "expected_sha256": "f6f94eb441dfde53819960c77ffdcad85cf74dc5e84e442ca7fab3b62d253d4f",
+          "actual_sha256": "f6f94eb441dfde53819960c77ffdcad85cf74dc5e84e442ca7fab3b62d253d4f",
+          "match": true
+        },
+        {
+          "original_entry": "Lingvessa_Formal_Specification.pdf",
+          "verified_path": "01_GOVERNING_DOCUMENTS/Lingvessa_Formal_Specification.pdf",
+          "expected_sha256": "edb294700455639d2b92fd9978fd74990dbd41503127cda430ac4870697e9d88",
+          "actual_sha256": "edb294700455639d2b92fd9978fd74990dbd41503127cda430ac4870697e9d88",
+          "match": true
+        },
+        {
+          "original_entry": "Lingvessa_Technical_Specification.pdf",
+          "verified_path": "01_GOVERNING_DOCUMENTS/Lingvessa_Technical_Specification.pdf",
+          "expected_sha256": "fdf8b3bd81267ec297fccd132c0d2a44850d1d05e6bccca008ed94c4dc1f9615",
+          "actual_sha256": "fdf8b3bd81267ec297fccd132c0d2a44850d1d05e6bccca008ed94c4dc1f9615",
+          "match": true
+        },
+        {
+          "original_entry": "Lingvessa_Technical_Design.pdf",
+          "verified_path": "01_GOVERNING_DOCUMENTS/Lingvessa_Technical_Design.pdf",
+          "expected_sha256": "414fe86abb0aa598260eb4589f4547020468824e8511be044dbb5328e46dfeae",
+          "actual_sha256": "414fe86abb0aa598260eb4589f4547020468824e8511be044dbb5328e46dfeae",
+          "match": true
+        },
+        {
+          "original_entry": "Lingvessa_Curriculum_Blueprint_A1.pdf",
+          "verified_path": "01_GOVERNING_DOCUMENTS/Lingvessa_Curriculum_Blueprint_A1.pdf",
+          "expected_sha256": "9dc5c924aee0d742f97e1225246db4c48bebe8473293091ba9fa715622085053",
+          "actual_sha256": "9dc5c924aee0d742f97e1225246db4c48bebe8473293091ba9fa715622085053",
+          "match": true
+        },
+        {
+          "original_entry": "Lingvessa_Reference_Module_Design.pdf",
+          "verified_path": "01_GOVERNING_DOCUMENTS/Lingvessa_Reference_Module_Design.pdf",
+          "expected_sha256": "b4a3d91738daa0d96c5e9e6435486fc6bc328f9f8072efb7fa1830620481f0d7",
+          "actual_sha256": "b4a3d91738daa0d96c5e9e6435486fc6bc328f9f8072efb7fa1830620481f0d7",
+          "match": true
+        },
+        {
+          "original_entry": "Lingvessa_AI_Integration_Specification.pdf",
+          "verified_path": "01_GOVERNING_DOCUMENTS/Lingvessa_AI_Integration_Specification.pdf",
+          "expected_sha256": "9e81ac464eea66e309b957401981f688638ba78208946ec4b37a8ed6735dcbe9",
+          "actual_sha256": "9e81ac464eea66e309b957401981f688638ba78208946ec4b37a8ed6735dcbe9",
+          "match": true
+        },
+        {
+          "original_entry": "Lingvessa_Implementation_Plan.pdf",
+          "verified_path": "01_GOVERNING_DOCUMENTS/Lingvessa_Implementation_Plan.pdf",
+          "expected_sha256": "7be218921fbe2c7299899beb8a496afd68dd7cccad9b77cc5a4bdaa238ca4e3c",
+          "actual_sha256": "7be218921fbe2c7299899beb8a496afd68dd7cccad9b77cc5a4bdaa238ca4e3c",
+          "match": true
+        }
+      ]
+    },
+    {
+      "check": "checksum_manifest_unchanged",
+      "status": "PASS",
+      "detail": "Original checksum manifest remains unchanged; mutable handoff resolves to preserved initial snapshot for original lock verification."
+    },
+    {
+      "check": "baseline_sha_references",
+      "status": "PASS",
+      "detail": "Recorded SHA-256 values equal unchanged source bytes."
+    },
+    {
+      "check": "matrix_required_columns",
+      "status": "PASS",
+      "detail": [
+        "requirement_id",
+        "source_document",
+        "source_version",
+        "source_section/page",
+        "requirement_summary",
+        "priority",
+        "implementation_phase",
+        "implementation_task",
+        "test_or_gate",
+        "owner/workstream",
+        "status",
+        "ADR_or_exception",
+        "applicability",
+        "canonical_context",
+        "source_kind",
+        "original_requirement_id",
+        "planned_code_schema",
+        "actual_code_schema",
+        "implementation_status",
+        "milestone_evidence",
+        "followup_tasks"
+      ]
+    },
+    {
+      "check": "no_empty_required_trace_fields",
+      "status": "PASS",
+      "detail": {
+        "empty_fields": []
+      }
+    },
+    {
+      "check": "unique_trace_ids",
+      "status": "PASS",
+      "detail": {
+        "duplicate_ids": []
+      }
+    },
+    {
+      "check": "csv_catalog_round_trip",
+      "status": "PASS",
+      "detail": {
+        "csv_rows": 2475,
+        "catalog_rows": 2475
+      }
+    },
+    {
+      "check": "trace_current_source_versions",
+      "status": "PASS",
+      "detail": {
+        "Lingvessa_Formal_Specification.pdf": "1.7",
+        "Lingvessa_Technical_Specification.pdf": "1.7",
+        "Lingvessa_Technical_Design.pdf": "1.7",
+        "Lingvessa_Curriculum_Blueprint_A1.pdf": "1.6",
+        "Lingvessa_Reference_Module_Design.pdf": "1.6",
+        "Lingvessa_AI_Integration_Specification.pdf": "1.4"
+      }
+    },
+    {
+      "check": "requirement_task_gate_ADR_chain",
+      "status": "PASS",
+      "detail": {
+        "broken_links": [],
+        "gates": 2475,
+        "tasks": 31
+      }
+    },
+    {
+      "check": "gate_expectations_and_fixtures",
+      "status": "PASS",
+      "detail": "Every source-located row has its own expected behavior, verification strategy and fixture family."
+    },
+    {
+      "check": "no_fabricated_product_evidence",
+      "status": "PASS",
+      "detail": "Product code and tests are explicitly planned, not passed. P0 governance evidence is this separate report."
+    },
+    {
+      "check": "all_named_curriculum_reference_AI_acceptance_families",
+      "status": "PASS",
+      "detail": {
+        "CUR-A1": {
+          "expected": 22,
+          "traced": 22,
+          "missing": []
+        },
+        "A1-OUT": {
+          "expected": 8,
+          "traced": 8,
+          "missing": []
+        },
+        "REF-A1": {
+          "expected": 14,
+          "traced": 14,
+          "missing": []
+        },
+        "REF-tests": {
+          "expected": 32,
+          "traced": 32,
+          "missing": []
+        },
+        "AIA": {
+          "expected": 16,
+          "traced": 16,
+          "missing": []
+        },
+        "TAC": {
+          "expected": 20,
+          "traced": 20,
+          "missing": []
+        },
+        "TDA": {
+          "expected": 20,
+          "traced": 20,
+          "missing": []
+        }
+      }
+    },
+    {
+      "check": "P1_tasks_traceable_and_unstarted",
+      "status": "PASS",
+      "detail": {
+        "IMP-P1-001": 7,
+        "IMP-P1-002": 30,
+        "IMP-P1-003": 1,
+        "IMP-P1-004": 67
+      }
+    },
+    {
+      "check": "P8_foundation_P9_handoff",
+      "status": "PASS",
+      "detail": "P8 Admin Assist depends on shared foundation; P9 reuses it; AIA-10 Auto activation mapped to P9."
+    },
+    {
+      "check": "P0_P13_order_and_boundaries",
+      "status": "PASS",
+      "detail": [
+        "P0",
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6",
+        "P7",
+        "P8",
+        "P9",
+        "P10",
+        "P11",
+        "P12",
+        "P13"
+      ]
+    },
+    {
+      "check": "sourced_deferred_open_decisions",
+      "status": "PASS",
+      "detail": {
+        "count": 14,
+        "invalid": [],
+        "P0_blocking": 0
+      }
+    },
+    {
+      "check": "accepted_ADR_materialization",
+      "status": "PASS",
+      "detail": "20 accepted transcriptions; original ADR-D01–D11 preserved; no new architecture decision."
+    },
+    {
+      "check": "no_unresolved_P0_contract_conflict",
+      "status": "PASS",
+      "detail": {
+        "BLOCKER": [],
+        "IMPORTANT": [],
+        "MINOR": [],
+        "accepted_exceptions": [],
+        "review_scope": "P0 materialization against owner-locked baseline; no new redesign audit",
+        "product_tests_executed": false
+      }
+    },
+    {
+      "check": "P0_scope_no_P1_or_feature_files",
+      "status": "PASS",
+      "detail": {
+        "unexpected_runtime_roots": []
+      }
+    },
+    {
+      "check": "handoff_updated_and_P1_hard_stop",
+      "status": "PASS",
+      "detail": "Operational handoff populated with batch metadata, files, validation/evidence and hard stop."
+    },
+    {
+      "check": "independent_PDF_source_scan",
+      "status": "PASS",
+      "detail": {
+        "FS": {
+          "pages": 26,
+          "expected_pages": 26,
+          "explicit_ids_in_pdf": 136,
+          "explicit_ids_traced": 136,
+          "missing": [],
+          "not_found_in_pdf": []
+        },
+        "TS": {
+          "pages": 30,
+          "expected_pages": 30,
+          "explicit_ids_in_pdf": 153,
+          "explicit_ids_traced": 153,
+          "missing": [],
+          "not_found_in_pdf": []
+        },
+        "TD": {
+          "pages": 24,
+          "expected_pages": 24,
+          "explicit_ids_in_pdf": 108,
+          "explicit_ids_traced": 108,
+          "missing": [],
+          "not_found_in_pdf": []
+        },
+        "CUR": {
+          "pages": 20,
+          "expected_pages": 20,
+          "explicit_ids_in_pdf": 30,
+          "explicit_ids_traced": 30,
+          "missing": [],
+          "not_found_in_pdf": []
+        },
+        "REF": {
+          "pages": 30,
+          "expected_pages": 30,
+          "explicit_ids_in_pdf": 46,
+          "explicit_ids_traced": 46,
+          "missing": [],
+          "not_found_in_pdf": []
+        },
+        "AI": {
+          "pages": 26,
+          "expected_pages": 26,
+          "explicit_ids_in_pdf": 54,
+          "explicit_ids_traced": 54,
+          "missing": [],
+          "not_found_in_pdf": []
+        },
+        "PLAN": {
+          "pages": 28,
+          "expected_pages": 28,
+          "scope": "Execution authority; not a seventh normative-requirement source."
+        }
+      }
+    },
+    {
+      "check": "source_coverage_links",
+      "status": "PASS",
+      "detail": {
+        "broken": [],
+        "table_classifications": 373,
+        "prose_blocks": 127
+      }
+    },
+    {
+      "check": "zero_untraced_MUST",
+      "status": "PASS",
+      "detail": {
+        "total_trace_rows": 2475,
+        "total_MUST": 2453,
+        "traced_MUST": 2453,
+        "untraced_MUST": 0,
+        "untraced_ids": [],
+        "SHOULD": 22,
+        "duplicate_trace_ids": [],
+        "ambiguous_trace_ids": [],
+        "explicit_requirement_and_acceptance_MUST": 507,
+        "source_granularity_note": "Counts source-located normative obligations/contract/fixture rows; mirrored source contracts retained, not unique feature counts.",
+        "by_document": {
+          "Lingvessa_Formal_Specification.pdf": {
+            "MUST": 349,
+            "SHOULD": 15
+          },
+          "Lingvessa_Technical_Specification.pdf": {
+            "MUST": 521,
+            "SHOULD": 1
+          },
+          "Lingvessa_Technical_Design.pdf": {
+            "MUST": 493,
+            "SHOULD": 3
+          },
+          "Lingvessa_Curriculum_Blueprint_A1.pdf": {
+            "MUST": 292
+          },
+          "Lingvessa_Reference_Module_Design.pdf": {
+            "MUST": 478
+          },
+          "Lingvessa_AI_Integration_Specification.pdf": {
+            "MUST": 320,
+            "SHOULD": 3
+          }
+        }
+      }
+    }
+  ],
+  "BLOCKER": [],
+  "IMPORTANT": [],
+  "next_task": "Owner reviews P0 evidence. Wait for “P0 accepted. Proceed to P1.” Then IMP-P1-001; do not start it now."
+}
