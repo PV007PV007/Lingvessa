@@ -14,20 +14,34 @@
     "typecheck": "tsc --noEmit",
     "test": "node --import tsx --test tests/unit/*.test.ts",
     "build": "tsc -p tsconfig.build.json",
-    "check": "pnpm lint && pnpm typecheck && pnpm check:secrets && pnpm test && pnpm build",
+    "check": "pnpm db:generate && pnpm db:validate && pnpm lint && pnpm typecheck && pnpm check:secrets && pnpm test && pnpm build",
     "config:check": "node --import tsx tools/p1/config-check.ts",
-    "check:secrets": "node --import tsx tools/p1/scan-secrets.ts"
+    "check:secrets": "node --import tsx tools/p1/scan-secrets.ts",
+    "db:generate": "node --import tsx tools/p1/db-command.ts generate",
+    "db:validate": "node --import tsx tools/p1/db-command.ts validate",
+    "db:migrate": "node --import tsx tools/p1/db-command.ts migrate",
+    "db:seed": "node --import tsx tools/p1/db-command.ts seed",
+    "db:status": "node --import tsx tools/p1/db-command.ts status",
+    "bootstrap:local": "node --import tsx tools/p1/bootstrap-local.ts",
+    "test:integration": "node --import tsx --test tests/integration/*.test.ts"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
     "@types/node": "24.13.4",
+    "@types/pg": "8.23.1",
     "dependency-cruiser": "18.2.0",
     "eslint": "10.10.0",
+    "prisma": "7.10.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
     "tsx": "4.23.13",
     "typescript": "6.0.3",
     "typescript-eslint": "8.70.0"
   },
   "dependencies": {
+    "@prisma/adapter-pg": "7.10.0",
+    "@prisma/client": "7.10.0",
+    "pg": "8.23.0",
     "zod": "4.6.2"
   }
 }
