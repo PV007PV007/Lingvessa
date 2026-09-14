@@ -1,0 +1,107 @@
+Prisma generate: PASS
+Prisma validate: PASS
+No peer dependency issues found
+
+✔ no dependency violations found (42 modules, 24 dependencies cruised)
+
+{
+  "source_files": 189,
+  "history_blobs": 198,
+  "findings": []
+}
+✔ dependency gate rejects a framework import and infrastructure re-export in domain (1855.924653ms)
+✔ one schema across all four environments with safe AI defaults (5.104108ms)
+✔ required values and malformed ports, booleans, budgets and URLs fail closed (7.331223ms)
+✔ phase gate prevents any AI routing or paid capability activation in P1 (1.350489ms)
+✔ errors and startup diagnostics never include credential values (0.703937ms)
+✔ frontend projection has no implicit public environment variables (0.283736ms)
+✔ bootstrap refuses production, remote and unrelated databases (5.224889ms)
+✔ bootstrap accepts only explicit local synthetic database names (0.571188ms)
+✔ API liveness remains available; readiness changes 503 → 200 → 503 without leaking errors (184.558918ms)
+✔ worker exposes operational probes only and redacts dependency failures (14.174594ms)
+✔ real PostgreSQL driver handles missing DB within the timeout and drains safely (7.80826ms)
+✔ secret gate catches credentials without echoing their contents (1.502877ms)
+✔ templates and runtime references are not credential literals (0.909176ms)
+✔ rejects an unapproved package manager before installation (71.612665ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2137.974088
+▲ Next.js 16.3.4 (webpack)
+✓ Running next.config.mjs took 14ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.2s
+  Running TypeScript ...
+  Finished TypeScript in 1455ms ...
+  Collecting page data using 6 workers ...
+  Generating static pages using 6 workers (0/3) ...
+✓ Generating static pages using 6 workers (3/3) in 494ms
+  Finalizing page optimization ...
+  Collecting build traces ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /health/live
+└ ƒ /health/ready
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+▲ Next.js 16.3.4 (webpack)
+✓ Running next.config.mjs took 10ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.5s
+  Running TypeScript ...
+  Finished TypeScript in 1455ms ...
+  Collecting page data using 6 workers ...
+  Generating static pages using 6 workers (0/3) ...
+✓ Generating static pages using 6 workers (3/3) in 419ms
+  Finalizing page optimization ...
+  Collecting build traces ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /health/live
+└ ƒ /health/ready
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+✔ compiled api: liveness, DB-unavailable readiness, redacted logs and shutdown (471.921876ms)
+✔ compiled worker: liveness, DB-unavailable readiness, redacted logs and shutdown (224.281309ms)
+✔ web standalone artifact serves its shell, assets and health without exposing configuration (467.071348ms)
+✔ admin standalone artifact serves its shell, assets and health without exposing configuration (426.563999ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1112.385357
+$ pnpm db:generate && pnpm db:validate && pnpm peers check && pnpm lint && pnpm typecheck && pnpm check:boundaries && pnpm check:secrets && pnpm test && pnpm build && pnpm test:smoke
+$ node --import tsx tools/p1/db-command.ts generate
+$ node --import tsx tools/p1/db-command.ts validate
+$ eslint .
+$ tsc --noEmit && pnpm --filter @lingvessa/web typecheck && pnpm --filter @lingvessa/admin typecheck
+$ tsc --noEmit
+$ tsc --noEmit
+$ depcruise --config .dependency-cruiser.cjs apps packages infra
+$ node --import tsx tools/p1/scan-secrets.ts
+$ node --import tsx --test tests/unit/*.test.ts
+$ pnpm build:server && pnpm build:web
+$ tsc -p tsconfig.build.json
+$ node tools/p1/build-web.mjs
+$ next build --webpack
+$ next build --webpack
+$ node --import tsx --test tests/smoke/*.test.ts

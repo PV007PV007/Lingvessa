@@ -1,0 +1,48 @@
+{
+  "recorded_at_utc": "2026-09-14T07:44:30.912293+00:00",
+  "tested_code_commit": "49e27d071dbf6fe134cb5b4d9fc45ffad1bba426",
+  "clean_clone": "/workspace/scratch/3a694649f683/tmp/lingvessa_p1_final_clean_20260914",
+  "files": [
+    {
+      "original_path": "artifacts/p1/baseline-integrity.log",
+      "archived_path": "docs/p1/evidence/baseline-integrity.txt",
+      "sha256": "26368a0c9a6468771af11fe6903ab2f653d094bcadd02e73aefc23b6afb9ad27"
+    },
+    {
+      "original_path": "artifacts/p1/baseline-validation.json",
+      "archived_path": "docs/p1/evidence/baseline-validation.json",
+      "sha256": "73adc1738a2c2a64ca45d3ad6964ffa64f08b0a9039fa03528679175c76b638c"
+    },
+    {
+      "original_path": "artifacts/p1/container-build-and-recovery.log",
+      "archived_path": "docs/p1/evidence/container-build-and-recovery.txt",
+      "sha256": "c983b85bf84548fbbaa4a8f68a6832f763d4fe08dde3d09176425d3886525dbc"
+    },
+    {
+      "original_path": "artifacts/p1/dependency-audit.log",
+      "archived_path": "docs/p1/evidence/dependency-audit.txt",
+      "sha256": "1e4d825cc59cb0d9fdd5169c502390ed5cb0d11edf92d522da06f488962808ce"
+    },
+    {
+      "original_path": "artifacts/p1/frozen-install.log",
+      "archived_path": "docs/p1/evidence/frozen-install.txt",
+      "sha256": "ebabdb9f3b83660b12884104baf4e9d2f502d8fa6eb8024a211b59395672ff76"
+    },
+    {
+      "original_path": "artifacts/p1/postgres-bootstrap.log",
+      "archived_path": "docs/p1/evidence/postgres-bootstrap.txt",
+      "sha256": "f4dff6a4580ea32be9ce87ed28dd115051b6fa2026e22fdd78fa52a7fc47ef8b"
+    },
+    {
+      "original_path": "artifacts/p1/quality.log",
+      "archived_path": "docs/p1/evidence/quality.txt",
+      "sha256": "00160a7cde3310aa9d16452af50d2763f22468440fc4af75e689810912dbe092"
+    },
+    {
+      "original_path": "artifacts/p1/validation.json",
+      "archived_path": "docs/p1/evidence/validation.json",
+      "sha256": "71319f74acbdae42508f11bec306b680bb62da3e6c10ce4be85deb01897e9486"
+    }
+  ],
+  "note": "Raw command report retained unchanged. Its artifacts/p1 log references map to these tracked copies; .log files are archived as .txt. No credentials, local environment files, node_modules or build outputs are deliverables."
+}

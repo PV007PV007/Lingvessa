@@ -1,0 +1,609 @@
+{
+  "compared_to_tag": "p0-accepted-2026-09-11",
+  "tested_code_commit": "49e27d071dbf6fe134cb5b4d9fc45ffad1bba426",
+  "generated_at_utc": "2026-09-14T07:44:30.912293+00:00",
+  "counts": {
+    "created": 143,
+    "modified": 4,
+    "deleted": 0
+  },
+  "files": [
+    {
+      "status": "A",
+      "path": ".dependency-cruiser.cjs"
+    },
+    {
+      "status": "A",
+      "path": ".dockerignore"
+    },
+    {
+      "status": "A",
+      "path": ".env.example"
+    },
+    {
+      "status": "A",
+      "path": ".gitattributes"
+    },
+    {
+      "status": "A",
+      "path": ".github/repository-rules.json"
+    },
+    {
+      "status": "A",
+      "path": ".github/workflows/p1.yml"
+    },
+    {
+      "status": "A",
+      "path": ".gitignore"
+    },
+    {
+      "status": "A",
+      "path": ".node-version"
+    },
+    {
+      "status": "A",
+      "path": ".npmrc"
+    },
+    {
+      "status": "A",
+      "path": ".nvmrc"
+    },
+    {
+      "status": "M",
+      "path": "00_CONTEXT/01_implementation_state_and_handoff.md"
+    },
+    {
+      "status": "A",
+      "path": "README.md"
+    },
+    {
+      "status": "A",
+      "path": "apps/admin/next-env.d.ts"
+    },
+    {
+      "status": "A",
+      "path": "apps/admin/next.config.mjs"
+    },
+    {
+      "status": "A",
+      "path": "apps/admin/package.json"
+    },
+    {
+      "status": "A",
+      "path": "apps/admin/public/robots.txt"
+    },
+    {
+      "status": "A",
+      "path": "apps/admin/src/app/globals.css"
+    },
+    {
+      "status": "A",
+      "path": "apps/admin/src/app/health/live/route.ts"
+    },
+    {
+      "status": "A",
+      "path": "apps/admin/src/app/health/ready/route.ts"
+    },
+    {
+      "status": "A",
+      "path": "apps/admin/src/app/layout.tsx"
+    },
+    {
+      "status": "A",
+      "path": "apps/admin/src/app/page.tsx"
+    },
+    {
+      "status": "A",
+      "path": "apps/admin/src/instrumentation.ts"
+    },
+    {
+      "status": "A",
+      "path": "apps/admin/src/styles.d.ts"
+    },
+    {
+      "status": "A",
+      "path": "apps/admin/tsconfig.json"
+    },
+    {
+      "status": "A",
+      "path": "apps/api/package.json"
+    },
+    {
+      "status": "A",
+      "path": "apps/api/src/app.ts"
+    },
+    {
+      "status": "A",
+      "path": "apps/api/src/main.ts"
+    },
+    {
+      "status": "A",
+      "path": "apps/web/next-env.d.ts"
+    },
+    {
+      "status": "A",
+      "path": "apps/web/next.config.mjs"
+    },
+    {
+      "status": "A",
+      "path": "apps/web/package.json"
+    },
+    {
+      "status": "A",
+      "path": "apps/web/public/robots.txt"
+    },
+    {
+      "status": "A",
+      "path": "apps/web/src/app/globals.css"
+    },
+    {
+      "status": "A",
+      "path": "apps/web/src/app/health/live/route.ts"
+    },
+    {
+      "status": "A",
+      "path": "apps/web/src/app/health/ready/route.ts"
+    },
+    {
+      "status": "A",
+      "path": "apps/web/src/app/layout.tsx"
+    },
+    {
+      "status": "A",
+      "path": "apps/web/src/app/page.tsx"
+    },
+    {
+      "status": "A",
+      "path": "apps/web/src/instrumentation.ts"
+    },
+    {
+      "status": "A",
+      "path": "apps/web/src/styles.d.ts"
+    },
+    {
+      "status": "A",
+      "path": "apps/web/tsconfig.json"
+    },
+    {
+      "status": "A",
+      "path": "apps/worker/package.json"
+    },
+    {
+      "status": "A",
+      "path": "apps/worker/src/main.ts"
+    },
+    {
+      "status": "A",
+      "path": "assets/specs/README.md"
+    },
+    {
+      "status": "A",
+      "path": "content/czech/README.md"
+    },
+    {
+      "status": "A",
+      "path": "content/english/README.md"
+    },
+    {
+      "status": "M",
+      "path": "docs/baseline/baseline.yml"
+    },
+    {
+      "status": "M",
+      "path": "docs/baseline/open-decisions.json"
+    },
+    {
+      "status": "M",
+      "path": "docs/baseline/open-decisions.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/p1/authorization.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/p1/changed-files.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/p1/changed-files.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/p1/dependency-remediation.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/p1/evidence/baseline-integrity.txt"
+    },
+    {
+      "status": "A",
+      "path": "docs/p1/evidence/baseline-validation.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/p1/evidence/container-build-and-recovery.txt"
+    },
+    {
+      "status": "A",
+      "path": "docs/p1/evidence/dependency-audit.txt"
+    },
+    {
+      "status": "A",
+      "path": "docs/p1/evidence/final-metadata-validation.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/p1/evidence/frozen-install.txt"
+    },
+    {
+      "status": "A",
+      "path": "docs/p1/evidence/index.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/p1/evidence/postgres-bootstrap.txt"
+    },
+    {
+      "status": "A",
+      "path": "docs/p1/evidence/quality.txt"
+    },
+    {
+      "status": "A",
+      "path": "docs/p1/evidence/validation.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/p1/exit-evidence.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/p1/image-lock.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/p1/requirement-evidence.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/p1/resolved-decisions.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/p1/task-status.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/p1/toolchain.json"
+    },
+    {
+      "status": "A",
+      "path": "eslint.config.mjs"
+    },
+    {
+      "status": "A",
+      "path": "infra/config/README.md"
+    },
+    {
+      "status": "A",
+      "path": "infra/config/foundation.ts"
+    },
+    {
+      "status": "A",
+      "path": "infra/config/runtime.ts"
+    },
+    {
+      "status": "A",
+      "path": "infra/containers/Dockerfile"
+    },
+    {
+      "status": "A",
+      "path": "infra/contracts/health.openapi.json"
+    },
+    {
+      "status": "A",
+      "path": "infra/development/README.md"
+    },
+    {
+      "status": "A",
+      "path": "infra/development/compose.yml"
+    },
+    {
+      "status": "A",
+      "path": "infra/health/probe.ts"
+    },
+    {
+      "status": "A",
+      "path": "infra/health/worker-server.ts"
+    },
+    {
+      "status": "A",
+      "path": "infra/local/compose.yml"
+    },
+    {
+      "status": "A",
+      "path": "infra/local/database-guard.ts"
+    },
+    {
+      "status": "A",
+      "path": "package.json"
+    },
+    {
+      "status": "A",
+      "path": "packages/activity-schemas/README.md"
+    },
+    {
+      "status": "A",
+      "path": "packages/activity-schemas/package.json"
+    },
+    {
+      "status": "A",
+      "path": "packages/activity-schemas/src/index.ts"
+    },
+    {
+      "status": "A",
+      "path": "packages/ai-core/README.md"
+    },
+    {
+      "status": "A",
+      "path": "packages/ai-core/package.json"
+    },
+    {
+      "status": "A",
+      "path": "packages/ai-core/src/index.ts"
+    },
+    {
+      "status": "A",
+      "path": "packages/api-client/README.md"
+    },
+    {
+      "status": "A",
+      "path": "packages/api-client/package.json"
+    },
+    {
+      "status": "A",
+      "path": "packages/api-client/src/index.ts"
+    },
+    {
+      "status": "A",
+      "path": "packages/application/README.md"
+    },
+    {
+      "status": "A",
+      "path": "packages/application/package.json"
+    },
+    {
+      "status": "A",
+      "path": "packages/application/src/index.ts"
+    },
+    {
+      "status": "A",
+      "path": "packages/content-tools/README.md"
+    },
+    {
+      "status": "A",
+      "path": "packages/content-tools/package.json"
+    },
+    {
+      "status": "A",
+      "path": "packages/content-tools/src/index.ts"
+    },
+    {
+      "status": "A",
+      "path": "packages/domain/README.md"
+    },
+    {
+      "status": "A",
+      "path": "packages/domain/package.json"
+    },
+    {
+      "status": "A",
+      "path": "packages/domain/src/index.ts"
+    },
+    {
+      "status": "A",
+      "path": "packages/lesson-engine/README.md"
+    },
+    {
+      "status": "A",
+      "path": "packages/lesson-engine/package.json"
+    },
+    {
+      "status": "A",
+      "path": "packages/lesson-engine/src/index.ts"
+    },
+    {
+      "status": "A",
+      "path": "packages/mastery-review/README.md"
+    },
+    {
+      "status": "A",
+      "path": "packages/mastery-review/package.json"
+    },
+    {
+      "status": "A",
+      "path": "packages/mastery-review/src/index.ts"
+    },
+    {
+      "status": "A",
+      "path": "packages/provider-adapters/README.md"
+    },
+    {
+      "status": "A",
+      "path": "packages/provider-adapters/ai/README.md"
+    },
+    {
+      "status": "A",
+      "path": "packages/provider-adapters/email/README.md"
+    },
+    {
+      "status": "A",
+      "path": "packages/provider-adapters/image/README.md"
+    },
+    {
+      "status": "A",
+      "path": "packages/provider-adapters/package.json"
+    },
+    {
+      "status": "A",
+      "path": "packages/provider-adapters/speech/README.md"
+    },
+    {
+      "status": "A",
+      "path": "packages/provider-adapters/src/index.ts"
+    },
+    {
+      "status": "A",
+      "path": "packages/provider-adapters/storage/README.md"
+    },
+    {
+      "status": "A",
+      "path": "packages/provider-adapters/tts/README.md"
+    },
+    {
+      "status": "A",
+      "path": "packages/ui/README.md"
+    },
+    {
+      "status": "A",
+      "path": "packages/ui/package.json"
+    },
+    {
+      "status": "A",
+      "path": "packages/ui/src/index.ts"
+    },
+    {
+      "status": "A",
+      "path": "pnpm-lock.yaml"
+    },
+    {
+      "status": "A",
+      "path": "pnpm-workspace.yaml"
+    },
+    {
+      "status": "A",
+      "path": "prisma.config.ts"
+    },
+    {
+      "status": "A",
+      "path": "prisma/README.md"
+    },
+    {
+      "status": "A",
+      "path": "prisma/migrations/202609130001_p1_bootstrap/migration.sql"
+    },
+    {
+      "status": "A",
+      "path": "prisma/migrations/migration_lock.toml"
+    },
+    {
+      "status": "A",
+      "path": "prisma/schema.prisma"
+    },
+    {
+      "status": "A",
+      "path": "prisma/seed.ts"
+    },
+    {
+      "status": "A",
+      "path": "tests/fixtures/bootstrap/czech.json"
+    },
+    {
+      "status": "A",
+      "path": "tests/fixtures/bootstrap/english.json"
+    },
+    {
+      "status": "A",
+      "path": "tests/integration/bootstrap.test.ts"
+    },
+    {
+      "status": "A",
+      "path": "tests/smoke/backend.test.ts"
+    },
+    {
+      "status": "A",
+      "path": "tests/smoke/frontend.test.ts"
+    },
+    {
+      "status": "A",
+      "path": "tests/unit/boundaries.test.ts"
+    },
+    {
+      "status": "A",
+      "path": "tests/unit/config.test.ts"
+    },
+    {
+      "status": "A",
+      "path": "tests/unit/database-guard.test.ts"
+    },
+    {
+      "status": "A",
+      "path": "tests/unit/health.test.ts"
+    },
+    {
+      "status": "A",
+      "path": "tests/unit/secrets.test.ts"
+    },
+    {
+      "status": "A",
+      "path": "tests/unit/toolchain.test.ts"
+    },
+    {
+      "status": "A",
+      "path": "tools/governance/validate_p1_baseline.py"
+    },
+    {
+      "status": "A",
+      "path": "tools/p1/bootstrap-local.ts"
+    },
+    {
+      "status": "A",
+      "path": "tools/p1/build-web.mjs"
+    },
+    {
+      "status": "A",
+      "path": "tools/p1/check-toolchain.mjs"
+    },
+    {
+      "status": "A",
+      "path": "tools/p1/config-check.ts"
+    },
+    {
+      "status": "A",
+      "path": "tools/p1/containers.ts"
+    },
+    {
+      "status": "A",
+      "path": "tools/p1/db-command.ts"
+    },
+    {
+      "status": "A",
+      "path": "tools/p1/run-validation.mjs"
+    },
+    {
+      "status": "A",
+      "path": "tools/p1/scan-secrets.ts"
+    },
+    {
+      "status": "A",
+      "path": "tools/p1/secret-rules.ts"
+    },
+    {
+      "status": "A",
+      "path": "tsconfig.build.json"
+    },
+    {
+      "status": "A",
+      "path": "tsconfig.json"
+    }
+  ],
+  "excluded_generated_files": [
+    "node_modules",
+    "dist",
+    ".next",
+    ".local",
+    "artifacts",
+    "prisma/generated"
+  ],
+  "note": "Repository source/evidence inventory. Archive also adds the Git history bundle and external DELIVERY.json."
+}

@@ -163,10 +163,11 @@
   "repository": {
     "exists": true,
     "branch": "implementation/p1-foundation",
-    "commit_sha": "P1 code commit recorded in 00_CONTEXT/01_implementation_state_and_handoff.md",
+    "commit_sha": "49e27d071dbf6fe134cb5b4d9fc45ffad1bba426",
     "pull_request": null,
     "remote": null,
-    "delivery": "Local non-public Git repository plus source package and Git bundle; private GitHub remote/rules still to be connected."
+    "delivery": "Local non-public Git repository plus source package and Git bundle; private GitHub remote/rules still to be connected.",
+    "commit_sha_role": "Tested implementation commit. The later documentation-only delivery commit is recorded in DELIVERY.json and Git HEAD to avoid a self-referential commit hash."
   },
   "trace": {
     "matrix": "docs/baseline/requirements-trace.csv",
@@ -182,6 +183,8 @@
     "current_phase": "P1",
     "owner_instruction": "P0 accepted. Proceed to P1.",
     "record": "docs/p1/authorization.json",
-    "p2_authorized": false
+    "p2_authorized": false,
+    "p1_status": "NOT_READY",
+    "status_evidence": "docs/p1/exit-evidence.md"
   }
 }

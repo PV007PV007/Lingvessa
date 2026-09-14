@@ -1,0 +1,91 @@
+{
+  "timestamp": "2026-09-14T07:38:52.034Z",
+  "commit": "49e27d071dbf6fe134cb5b4d9fc45ffad1bba426",
+  "branch": "implementation/p1-foundation",
+  "node": "24.19.0",
+  "phase": "P1",
+  "p2_authorized": false,
+  "commands": [
+    {
+      "id": "frozen-install",
+      "command": [
+        "pnpm",
+        "install",
+        "--frozen-lockfile"
+      ],
+      "exit_code": 0,
+      "status": "PASS",
+      "duration_ms": 43933,
+      "log": "artifacts/p1/frozen-install.log"
+    },
+    {
+      "id": "baseline-integrity",
+      "command": [
+        "pnpm",
+        "validate:baseline"
+      ],
+      "exit_code": 0,
+      "status": "PASS",
+      "duration_ms": 511,
+      "log": "artifacts/p1/baseline-integrity.log"
+    },
+    {
+      "id": "quality",
+      "command": [
+        "pnpm",
+        "check"
+      ],
+      "exit_code": 0,
+      "status": "PASS",
+      "duration_ms": 75783,
+      "log": "artifacts/p1/quality.log"
+    },
+    {
+      "id": "dependency-audit",
+      "command": [
+        "pnpm",
+        "audit:dependencies"
+      ],
+      "exit_code": 0,
+      "status": "PASS",
+      "duration_ms": 10901,
+      "log": "artifacts/p1/dependency-audit.log"
+    },
+    {
+      "id": "postgres-bootstrap",
+      "command": [
+        "pnpm",
+        "bootstrap:local"
+      ],
+      "exit_code": 1,
+      "status": "FAIL",
+      "duration_ms": 606,
+      "log": "artifacts/p1/postgres-bootstrap.log"
+    },
+    {
+      "id": "database-integration",
+      "command": [
+        "node",
+        "--env-file=.local/runtime.env",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/integration/bootstrap.test.ts"
+      ],
+      "status": "NOT_RUN_DEPENDENCY_FAILED",
+      "reason": "PostgreSQL bootstrap did not pass; no skip/pass substitution."
+    },
+    {
+      "id": "container-build-and-recovery",
+      "command": [
+        "pnpm",
+        "test:containers"
+      ],
+      "exit_code": 1,
+      "status": "FAIL",
+      "duration_ms": 612,
+      "log": "artifacts/p1/container-build-and-recovery.log"
+    }
+  ],
+  "status": "NOT_READY"
+}

@@ -1,0 +1,111 @@
+{
+  "scope": "P1 governance integrity only; DB/OCI runtime gates are separate",
+  "timestamp": "2026-09-14T07:39:36.467767+00:00",
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "exact governing versions",
+      "status": "PASS"
+    },
+    {
+      "check": "locked checksum FS",
+      "status": "PASS"
+    },
+    {
+      "check": "locked checksum TS",
+      "status": "PASS"
+    },
+    {
+      "check": "locked checksum TD",
+      "status": "PASS"
+    },
+    {
+      "check": "locked checksum CUR",
+      "status": "PASS"
+    },
+    {
+      "check": "locked checksum REF",
+      "status": "PASS"
+    },
+    {
+      "check": "locked checksum AI",
+      "status": "PASS"
+    },
+    {
+      "check": "locked checksum PLAN",
+      "status": "PASS"
+    },
+    {
+      "check": "locked architecture manifest",
+      "status": "PASS"
+    },
+    {
+      "check": "locked original handoff retained",
+      "status": "PASS"
+    },
+    {
+      "check": "original checksum manifest unchanged",
+      "status": "PASS"
+    },
+    {
+      "check": "sole execution authority",
+      "status": "PASS"
+    },
+    {
+      "check": "P1 owner authorization; P2 hard stop",
+      "status": "PASS"
+    },
+    {
+      "check": "accepted P0 recorded",
+      "status": "PASS"
+    },
+    {
+      "check": "P0 trace preserved without lost IDs",
+      "status": "PASS"
+    },
+    {
+      "check": "all 2453 MUST rows retained",
+      "status": "PASS"
+    },
+    {
+      "check": "P1 evidence overlay covers exactly P1 planning rows",
+      "status": "PASS"
+    },
+    {
+      "check": "evidence points to real implementation files",
+      "status": "PASS"
+    },
+    {
+      "check": "no invented full runtime acceptance",
+      "status": "PASS"
+    },
+    {
+      "check": "P1-only schema boundary",
+      "status": "PASS"
+    },
+    {
+      "check": "no feature engine implementation before P2",
+      "status": "PASS"
+    },
+    {
+      "check": "exact Node/pnpm pins",
+      "status": "PASS"
+    },
+    {
+      "check": "private package and lockfile",
+      "status": "PASS"
+    },
+    {
+      "check": "OpenAPI 3.1.2",
+      "status": "PASS"
+    },
+    {
+      "check": "pinned base image digests",
+      "status": "PASS"
+    },
+    {
+      "check": "CI gates and review rule artifacts",
+      "status": "PASS"
+    }
+  ]
+}

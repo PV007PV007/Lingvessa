@@ -1,0 +1,129 @@
+Scope: all 15 workspace projects
+? Verifying lockfile against supply-chain policies (458 entries)...
+Lockfile is up to date, resolution step is skipped
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Packages: +400
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 400, reused 0, downloaded 0, added 0
+[WARN] Request took 12064ms: https://registry.npmjs.org/@borewit%2Ftext-codec
+[WARN] Request took 12065ms: https://registry.npmjs.org/@img%2Fsharp-darwin-x64
+[WARN] Request took 12073ms: https://registry.npmjs.org/@esbuild%2Fwin32-x64
+[WARN] Request took 12075ms: https://registry.npmjs.org/@eslint-community%2Fregexpp
+[WARN] Request took 12077ms: https://registry.npmjs.org/@esbuild%2Fwin32-ia32
+[WARN] Request took 12075ms: https://registry.npmjs.org/@humanfs%2Fnode
+[WARN] Request took 12083ms: https://registry.npmjs.org/@esbuild%2Flinux-ppc64
+[WARN] Request took 12085ms: https://registry.npmjs.org/@esbuild%2Flinux-ia32
+[WARN] Request took 12089ms: https://registry.npmjs.org/@esbuild%2Fopenbsd-arm64
+[WARN] Request took 12086ms: https://registry.npmjs.org/@eslint%2Fcore
+[WARN] Request took 12091ms: https://registry.npmjs.org/@eslint%2Fconfig-helpers
+[WARN] Request took 12095ms: https://registry.npmjs.org/@esbuild%2Fopenbsd-x64
+[WARN] Request took 12096ms: https://registry.npmjs.org/@eslint-community%2Feslint-utils
+[WARN] Request took 12095ms: https://registry.npmjs.org/@eslint%2Fconfig-array
+[WARN] Request took 12093ms: https://registry.npmjs.org/@humanwhocodes%2Fretry
+[WARN] Request took 12184ms: https://registry.npmjs.org/@cacheable%2Fmemory
+[WARN] Request took 12182ms: https://registry.npmjs.org/@emnapi%2Fruntime
+[WARN] Request took 12185ms: https://registry.npmjs.org/@img%2Fcolour
+[WARN] Request took 12194ms: https://registry.npmjs.org/@esbuild%2Fwin32-arm64
+[WARN] Request took 12207ms: https://registry.npmjs.org/@electric-sql%2Fpglite-socket
+[WARN] Request took 12206ms: https://registry.npmjs.org/@electric-sql%2Fpglite-tools
+[WARN] Request took 12203ms: https://registry.npmjs.org/@esbuild%2Fdarwin-arm64
+[WARN] Request took 12205ms: https://registry.npmjs.org/@esbuild%2Fandroid-x64
+[WARN] Request took 12463ms: https://registry.npmjs.org/pnpm
+
+   ╭─────────────────────────────────────────╮
+   │                                         │
+   │   Update available! 11.19.0 → 12.4.1.   │
+   │   Changelog: https://pnpm.io/v/12.4.1   │
+   │    To update, run: pnpm add -g pnpm     │
+   │                                         │
+   ╰─────────────────────────────────────────╯
+
+[WARN] Request took 12528ms: https://registry.npmjs.org/@eslint%2Fjs
+[WARN] Request took 12537ms: https://registry.npmjs.org/@esbuild%2Fsunos-x64
+[WARN] Request took 12540ms: https://registry.npmjs.org/@esbuild%2Fnetbsd-arm64
+[WARN] Request took 12558ms: https://registry.npmjs.org/@img%2Fsharp-freebsd-wasm32
+[WARN] Request took 12635ms: https://registry.npmjs.org/@esbuild%2Faix-ppc64
+[WARN] Request took 12635ms: https://registry.npmjs.org/@esbuild%2Fdarwin-x64
+[WARN] Request took 12636ms: https://registry.npmjs.org/@esbuild%2Ffreebsd-arm64
+[WARN] Request took 12636ms: https://registry.npmjs.org/@esbuild%2Flinux-arm
+[WARN] Request took 12630ms: https://registry.npmjs.org/@img%2Fsharp-libvips-darwin-arm64
+[WARN] Request took 12638ms: https://registry.npmjs.org/@img%2Fsharp-libvips-linux-ppc64
+[WARN] Request took 12640ms: https://registry.npmjs.org/@img%2Fsharp-libvips-linux-arm
+[WARN] Request took 12641ms: https://registry.npmjs.org/@img%2Fsharp-libvips-darwin-x64
+[WARN] Request took 12640ms: https://registry.npmjs.org/@img%2Fsharp-libvips-linux-arm64
+[WARN] Request took 12644ms: https://registry.npmjs.org/@img%2Fsharp-libvips-linux-s390x
+[WARN] Request took 12644ms: https://registry.npmjs.org/@img%2Fsharp-libvips-linux-riscv64
+[WARN] Request took 12645ms: https://registry.npmjs.org/@img%2Fsharp-libvips-linux-x64
+[WARN] Request took 12646ms: https://registry.npmjs.org/@img%2Fsharp-libvips-linuxmusl-arm64
+[WARN] Request took 12647ms: https://registry.npmjs.org/@img%2Fsharp-libvips-linuxmusl-x64
+[WARN] Request took 12648ms: https://registry.npmjs.org/@img%2Fsharp-linux-riscv64
+[WARN] Request took 12650ms: https://registry.npmjs.org/@img%2Fsharp-linux-arm64
+[WARN] Request took 12650ms: https://registry.npmjs.org/@img%2Fsharp-linux-arm
+[WARN] Request took 12656ms: https://registry.npmjs.org/@img%2Fsharp-linux-ppc64
+Progress: resolved 400, reused 0, downloaded 1, added 0
+Packages are hard linked from the content-addressable store to the virtual store.
+  Content-addressable store is at: /root/.local/share/pnpm/store/v11
+  Virtual store is at:             node_modules/.pnpm
+[WARN] Request took 12929ms: https://registry.npmjs.org/@esbuild%2Fandroid-arm
+[WARN] Request took 13049ms: https://registry.npmjs.org/@esbuild%2Ffreebsd-x64
+[WARN] Request took 13045ms: https://registry.npmjs.org/@eslint%2Fplugin-kit
+[WARN] Request took 13187ms: https://registry.npmjs.org/@electric-sql%2Fpglite
+[WARN] Request took 13192ms: https://registry.npmjs.org/@cacheable%2Futils
+[WARN] Request took 13185ms: https://registry.npmjs.org/@esbuild%2Flinux-loong64
+[WARN] Request took 13317ms: https://registry.npmjs.org/@eslint%2Fobject-schema
+[WARN] Request took 13408ms: https://registry.npmjs.org/@esbuild%2Fandroid-arm64
+[WARN] Request took 13398ms: https://registry.npmjs.org/@img%2Fsharp-darwin-arm64
+[WARN] Request took 13630ms: https://registry.npmjs.org/@humanfs%2Ftypes
+[WARN] Request took 13640ms: https://registry.npmjs.org/@esbuild%2Fnetbsd-x64
+[WARN] Request took 13648ms: https://registry.npmjs.org/@esbuild%2Flinux-arm64
+[WARN] Request took 13700ms: https://registry.npmjs.org/@humanwhocodes%2Fmodule-importer
+[WARN] Request took 13770ms: https://registry.npmjs.org/@esbuild%2Flinux-x64
+[WARN] Request took 13787ms: https://registry.npmjs.org/@esbuild%2Flinux-riscv64
+Progress: resolved 400, reused 0, downloaded 61, added 61
+[WARN] Request took 13901ms: https://registry.npmjs.org/@esbuild%2Fopenharmony-arm64
+[WARN] Request took 13899ms: https://registry.npmjs.org/@humanfs%2Fcore
+[WARN] Request took 13938ms: https://registry.npmjs.org/@esbuild%2Flinux-s390x
+[WARN] Request took 14046ms: https://registry.npmjs.org/@esbuild%2Flinux-mips64el
+Progress: resolved 400, reused 0, downloaded 116, added 109
+Progress: resolved 400, reused 0, downloaded 170, added 164
+Progress: resolved 400, reused 0, downloaded 235, added 235
+Progress: resolved 400, reused 0, downloaded 303, added 259
+Progress: resolved 400, reused 0, downloaded 385, added 385
+Progress: resolved 400, reused 0, downloaded 399, added 399
+Progress: resolved 400, reused 0, downloaded 400, added 400, done
+✓ Lockfile passes supply-chain policies (458 entries in 22.2s)
+.../node_modules/@prisma/engines postinstall$ node scripts/postinstall.js
+.../esbuild@0.28.2/node_modules/esbuild postinstall$ node install.js
+.../esbuild@0.28.2/node_modules/esbuild postinstall: Done
+.../node_modules/@prisma/engines postinstall: Done
+.../node_modules/prisma preinstall$ node scripts/preinstall-entry.js
+.../node_modules/prisma preinstall: Done
+
+dependencies:
++ @nestjs/common 12.0.1
++ @nestjs/core 12.0.1
++ @nestjs/platform-express 12.0.1
++ @prisma/adapter-pg 7.10.0
++ @prisma/client 7.10.0
++ pg 8.23.0
++ reflect-metadata 0.2.2
++ rxjs 7.8.2
++ zod 4.6.2
+
+devDependencies:
++ @eslint/js 10.0.1
++ @types/node 24.13.4
++ @types/pg 8.23.1
++ dependency-cruiser 18.2.0
++ eslint 10.10.0
++ prisma 7.10.0
++ react 19.3.0
++ react-dom 19.3.0
++ tsx 4.23.13
++ typescript 6.0.3
++ typescript-eslint 8.70.0
+
+. preinstall$ node tools/p1/check-toolchain.mjs
+. preinstall: Toolchain OK: Node 24.19.0, pnpm 11.19.0
+. preinstall: Done
+Done in 43.8s using pnpm v11.19.0
