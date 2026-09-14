@@ -12,12 +12,13 @@
       "BLOCKER": 0,
       "IMPORTANT": 0,
       "provenance": "owner-supplied manifest/package"
-    }
+    },
+    "scope_note": "Authorization in this object records the lock date only. Current phase authorization is in phase_authorization."
   },
   "p0": {
     "artifact_status": "PASS",
-    "owner_acceptance": "PENDING",
-    "p1_authorized": false,
+    "owner_acceptance": "ACCEPTED",
+    "p1_authorized": true,
     "required_owner_instruction": "P0 accepted. Proceed to P1."
   },
   "governing_documents": [
@@ -160,11 +161,12 @@
     "sha256": "9c6cb53ce2c30c1b337e57112f053751168b272bb5dfe0816404c66b812b3b73"
   },
   "repository": {
-    "exists": false,
-    "branch": null,
-    "commit_sha": null,
+    "exists": true,
+    "branch": "implementation/p1-foundation",
+    "commit_sha": "P1 code commit recorded in 00_CONTEXT/01_implementation_state_and_handoff.md",
     "pull_request": null,
-    "delivery": "Repository-ready file set; create/private-repository work belongs to P1."
+    "remote": null,
+    "delivery": "Local non-public Git repository plus source package and Git bundle; private GitHub remote/rules still to be connected."
   },
   "trace": {
     "matrix": "docs/baseline/requirements-trace.csv",
@@ -172,6 +174,14 @@
     "coverage_inventory": "docs/baseline/source-coverage.json",
     "task_catalog": "docs/baseline/implementation-backlog.json",
     "gates": "docs/baseline/validation-gates.json",
-    "methodology": "docs/baseline/trace-methodology.md"
+    "methodology": "docs/baseline/trace-methodology.md",
+    "matrix_role": "Accepted P0 planning snapshot. Current P1 implementation evidence is joined by requirement_id from current_status_overlay; absence from overlay means unchanged planned status.",
+    "current_status_overlay": "docs/p1/requirement-evidence.json"
+  },
+  "phase_authorization": {
+    "current_phase": "P1",
+    "owner_instruction": "P0 accepted. Proceed to P1.",
+    "record": "docs/p1/authorization.json",
+    "p2_authorized": false
   }
 }

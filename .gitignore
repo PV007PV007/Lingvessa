@@ -12,3 +12,5 @@ coverage/
 prisma/generated/
 *.log
 *.oci.tar
+# Ephemeral negative dependency fixtures; an interrupted test may leave one.
+packages/domain/src/negative-*.ts

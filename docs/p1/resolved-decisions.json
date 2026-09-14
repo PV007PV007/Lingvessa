@@ -1,0 +1,20 @@
+[
+  {
+    "decision_id": "OD-001",
+    "topic": "Exact runtime/framework/tooling pins",
+    "source": "TS §40.2 ADR-002 p22; TD §35 p20",
+    "why_unresolved": "Baseline fixes Node 24 LTS/TypeScript strict/pnpm and framework families; exact compatible versions/lockfile require the P1 compatibility spike.",
+    "latest_phase": "P1 / before IMP-P1-001 gate",
+    "affected_requirements": [
+      "TS-TECH-001",
+      "TS-TECH-002",
+      "TS-TECH-004",
+      "TS-REPO-001"
+    ],
+    "default_behavior": "No unpinned implementation/toolchain is accepted; keep family/major constraints.",
+    "owner": "Platform foundation / technical owner",
+    "status": "RESOLVED_INITIAL_PINS",
+    "decision_record": "docs/p1/toolchain.json",
+    "validation_note": "Initial pins selected and local framework/Prisma generation/HTTP compatibility verified. Real DB migration and OCI execution remain P1 gates, not alternative architecture decisions."
+  }
+]
