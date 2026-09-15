@@ -1,15 +1,6 @@
 # Open owner decisions
 
-Only genuinely unresolved decisions are listed. OD-001 exact tooling pins are recorded in `docs/p1/resolved-decisions.json`; DB/OCI gate execution remains pending. No architecture decision blocks P1.
-
-## OD-002 — Authentication implementation details
-
-- Source: TS §40.2 ADR-003 p22; TD §35 p20
-- Why unresolved: Exact implementation/library and benchmarked credential parameters are not chosen by the baseline.
-- Latest phase: P2 / before identity acceptance
-- Affected requirements: TS-AUTH-001, ROLE-001, TD-SEC-001
-- Default behavior: Secure server sessions and Argon2id remain governing defaults; no public identity deployment before review.
-- Owner: Identity/language / security owner
+Only genuinely unresolved decisions are listed. OD-001 is recorded in `docs/p1/resolved-decisions.json`; OD-002 is implemented in `docs/p2/resolved-decisions.json` and becomes accepted with the P2 milestone. No listed decision blocks P2.
 
 ## OD-003 — Production hosting, region, topology and PostgreSQL HA/PITR tier
 

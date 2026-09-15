@@ -58,6 +58,7 @@ test('P2 real PostgreSQL: identity, DB isolation, immutable publication and recr
       assert.equal(migrations.length, 2);
       for (const m of migrations) assert.equal(m.checksum, createHash('sha256').update(readFileSync(`prisma/migrations/${m.migration_name}/migration.sql`)).digest('hex'));
       assert.equal((await db.query('SELECT count(*) FROM p1_bootstrap.fixtures')).rows[0].count, '2');
+      assert.equal((await db.query('SELECT count(*) FROM roles')).rows[0].count, '7');
       const pairs = (await db.query('SELECT skill,facet FROM skill_facet_pairs')).rows.map((r) => `${r.skill}/${r.facet}`).sort();
       assert.deepEqual(pairs, Object.entries(skillFacetMatrix).flatMap(([skill, facets]) => facets.map((f) => `${skill}/${f}`)).sort());
       for (const f of [en, cs]) assert.equal((await loadReferenceFixture(db, authorId, f)).status, 'unchanged');
@@ -73,7 +74,7 @@ test('P2 real PostgreSQL: identity, DB isolation, immutable publication and recr
       await db.query(`INSERT INTO user_courses(id,user_id,language_profile_id,language_id,course_id,selected_lesson_id) VALUES($1,$2,$3,$4,$5,$6)`, [randomUUID(), learnerId, enProfile, languageIds.en, entity(en, 'course').id, entity(en, 'lesson').id]);
       await sqlReject(db, 'UPDATE user_courses SET selected_lesson_id=$1 WHERE language_profile_id=$2', [entity(cs, 'lesson').id, enProfile], '23514');
       await sqlReject(db, 'UPDATE user_courses SET course_id=$1,selected_lesson_id=NULL WHERE language_profile_id=$2', [entity(cs, 'course').id, enProfile], '23514');
-      await sqlReject(db, 'INSERT INTO user_courses(id,user_id,language_profile_id,language_id,course_id) VALUES($1,$2,$3,$4,$5)', [randomUUID(), strangerId, enProfile, languageIds.en, entity(en, 'course').id]);
+      await sqlReject(db, 'INSERT INTO user_courses(id,user_id,language_profile_id,language_id,course_id) VALUES($1,$2,$3,$4,$5)', [randomUUID(), strangerId, csProfile, languageIds.cs, entity(cs, 'course').id]);
       await sqlReject(db, 'UPDATE item_knowledge_map SET knowledge_item_id=$1 WHERE item_id=$2', [entity(cs, 'knowledge').id, entity(en, 'activity').id]);
       await sqlReject(db, 'UPDATE knowledge_edges SET to_id=$1 WHERE language_id=$2', [entity(cs, 'knowledge').id, languageIds.en]);
       await sqlReject(db, 'UPDATE content_version_refs SET target_entity_id=$1,target_version_id=$2 WHERE source_version_id=$3', [entity(cs, 'module').id, entity(cs, 'module').version_id, entity(en, 'level').version_id]);
@@ -122,12 +123,18 @@ test('P2 real PostgreSQL: identity, DB isolation, immutable publication and recr
       await db.query('INSERT INTO translations(id,language_id,content_version_id,locale,payload,version_code) VALUES($1,$2,$3,$4,$5,$6)', [translationId, languageIds.en, lesson.version_id, 'uk-UA', { title: 'Привіт!' }, '1']);
       await assert.rejects(content.publish(publicationInput), /validation required|approval required/);
       await approveAll(lesson.version_id);
+      const courseVersion = (await db.query('SELECT checksum,revision FROM content_versions WHERE id=$1', [entity(en, 'course').version_id])).rows[0];
+      await db.query(`INSERT INTO content_validations(id,content_version_id,target_checksum,target_revision,validator_version,passed,report)
+        VALUES($1,$2,$3,$4,'p2-negative-validator',false,$5)`, [randomUUID(), entity(en, 'course').version_id, courseVersion.checksum, courseVersion.revision, { reason: 'synthetic current failure' }]);
+      await assert.rejects(content.publish(publicationInput), /latest validation required/);
+      await content.validateVersion(entity(en, 'course').version_id);
       await sqlReject(db, 'UPDATE translations SET language_id=$1 WHERE id=$2', [languageIds.cs, translationId], '23514');
       await assert.rejects(content.approve(learnerId, id, 'invalid', 1, 'technical', 'approved', 'invalid approval'), /target changed/);
       const v = (await db.query('SELECT checksum,revision FROM content_versions WHERE id=$1', [id])).rows[0];
       await assert.rejects(content.approve(learnerId, id, v.checksum, v.revision, 'technical', 'approved', 'no reviewer role'), { code: '42501' });
       const pub = await content.publish(publicationInput);
       assert.equal(pub.checksum.length, 64);
+      assert.equal((pub.manifest as { knowledge_edges: unknown[] }).knowledge_edges.length, 1);
       await content.activate(reviewerId, publicationId, null);
       assert.equal((await content.catalog(languageIds.en, 'test')).length, 1);
       assert.equal((await content.catalog(languageIds.cs, 'test')).length, 0);
@@ -138,12 +145,15 @@ test('P2 real PostgreSQL: identity, DB isolation, immutable publication and recr
       await sqlReject(db, 'UPDATE publications SET manifest=manifest WHERE id=$1', [publicationId], '23514');
       await sqlReject(db, 'DELETE FROM publications WHERE id=$1', [publicationId], '23514');
       await sqlReject(db, 'UPDATE publication_entries SET content_checksum=$1 WHERE publication_id=$2', ['incorrect', publicationId], '23514');
+      await sqlReject(db, 'UPDATE publication_knowledge_edges SET edge_checksum=$1 WHERE publication_id=$2', ['incorrect', publicationId], '23514');
+      await sqlReject(db, 'UPDATE knowledge_edges SET weight=$1 WHERE language_id=$2', [0.5, languageIds.en], '23514');
       await sqlReject(db, 'UPDATE translations SET payload=$1 WHERE content_version_id=$2', [{ title: 'Інший' }, versionId], '23514');
       await sqlReject(db, 'DELETE FROM content_version_refs WHERE source_version_id=$1', [versionId], '23514');
       await sqlReject(db, 'UPDATE approvals SET notes=$1', ['rewritten history'], '23514');
       await sqlReject(db, 'UPDATE audit_events SET action=$1', ['rewritten history'], '23514');
       await sqlReject(db, 'UPDATE content_entities SET stable_code=$1 WHERE id=$2', ['NEW_CODE', entity(en, 'knowledge').id], '23514');
       await sqlReject(db, 'TRUNCATE publications CASCADE', [], '23514');
+      await sqlReject(db, 'DELETE FROM publication_pointers WHERE publication_id=$1', [publicationId], '23514');
     });
     await run('P2-PUB-003 new immutable version, pointer rollback, stale/concurrent activation and language mismatch', async () => {
       const course = entity(en, 'course');
@@ -177,12 +187,15 @@ test('P2 real PostgreSQL: identity, DB isolation, immutable publication and recr
         const base = await app.getUrl();
         const anonymous = await fetch(`${base}/api/v1/me`); assert.equal(anonymous.status, 401); assert.match(anonymous.headers.get('content-type') ?? '', /application\/problem\+json/);
         const login = await fetch(`${base}/api/v1/auth/login`, { method: 'POST', headers: { 'content-type': 'application/json', 'x-lingvessa-client': 'web' }, body: JSON.stringify({ email: 'p2-learner@example.invalid', password: 'Only synthetic test identity!' }) });
-        assert.equal(login.status, 201); const cookie = login.headers.get('set-cookie')!;
+        assert.equal(login.status, 200); const loginBody = await login.json() as { csrf_token: string }; const cookie = login.headers.get('set-cookie')!;
         for (const flag of ['Secure', 'HttpOnly', 'SameSite=Strict', 'Path=/']) assert(cookie.includes(flag));
         const headers = { cookie: cookie.split(';')[0]!, 'content-type': 'application/json' };
         const me = await fetch(`${base}/api/v1/me`, { headers }); assert.equal(me.status, 200); assert.equal((await me.json() as { id: string }).id, learnerId);
         assert.match(me.headers.get('cache-control') ?? '', /no-store/);
         assert.equal((await fetch(`${base}/api/v1/me/active-language`, { method: 'PUT', headers, body: JSON.stringify({ language_profile_id: enProfile, expected_revision: 1 }) })).status, 403);
+        const currentRevision = (await identity.settings(principal))!.revision as number;
+        const updated = await fetch(`${base}/api/v1/me`, { method: 'PATCH', headers: { ...headers, 'x-csrf-token': loginBody.csrf_token }, body: JSON.stringify({ timezone: 'Europe/Prague', expected_revision: currentRevision }) });
+        assert.equal(updated.status, 200); assert.equal((await updated.json() as { timezone: string }).timezone, 'Europe/Prague');
         assert.equal((await fetch(`${base}/api/v1/lesson-runs`, { headers })).status, 404);
         assert.equal((await fetch(`${base}/api/v1/auth/register`, { method: 'POST', headers, body: '{}' })).status, 404);
       } finally { await app.close(); }
@@ -200,6 +213,10 @@ test('P2 real PostgreSQL: identity, DB isolation, immutable publication and recr
       assert.equal((await db.query("SELECT count(*) FROM users WHERE email_normalized LIKE '%@example.invalid'")).rows[0].count, '4');
       await sqlReject(db, 'UPDATE knowledge_items SET status=$1 WHERE id=$2', ['deprecated', entity(cs, 'knowledge').id], '23514');
       await sqlReject(db, 'DELETE FROM knowledge_items WHERE id=$1', [entity(cs, 'knowledge').id], '23514');
+      const reportId = randomUUID();
+      await db.query(`INSERT INTO knowledge_migration_reports(id,language_id,operation,version_code,mapping,impact_report,status,created_by)
+        VALUES($1,$2,'deprecate','p2-test-impact',$3,$4,'approved',$5)`, [reportId, languageIds.cs, { retained: [], deprecated: [entity(cs, 'knowledge').id] }, { mastery_tables_present: false, future_recompute_required: true }, reviewerId]);
+      await sqlReject(db, 'UPDATE knowledge_migration_reports SET impact_report=$1 WHERE id=$2', [{ changed: true }, reportId], '23514');
     });
     // Schema introspection is an execution artifact; the committed Prisma view is checked separately.
     const inspected = spawnSync('pnpm', ['exec', 'prisma', 'db', 'pull', '--print'], { env, encoding: 'utf8', timeout: 45000 });

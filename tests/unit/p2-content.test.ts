@@ -63,3 +63,9 @@ test('P2 Argon2id versioned policy: independent salts, verification, Unicode and
   await assert.rejects(hashPassword('short'));
   assert.equal(passwordPolicy.memory, 65536);
 });
+test('P2 API contract is OpenAPI 3.1.2 and excludes public registration, lesson, mastery, speech and AI runtime', () => {
+  const api = JSON.parse(readFileSync('infra/contracts/p2.openapi.json', 'utf8')) as { openapi: string; paths: Record<string, unknown> };
+  assert.equal(api.openapi, '3.1.2');
+  for (const path of ['/auth/login', '/auth/logout', '/me', '/me/language-profiles', '/me/active-language', '/catalog']) assert(path in api.paths);
+  for (const path of ['/auth/register', '/lesson-runs', '/review', '/speech/jobs', '/ai/runs']) assert(!(path in api.paths));
+});

@@ -78,6 +78,12 @@ export class IdentityRepository {
   async settings(principal: Principal) {
     return (await this.pool.query(`SELECT active_language_profile_id,active_language_id,ui_locale,timezone,learner_ai_opt_in,revision FROM user_settings WHERE user_id=$1`, [principal.userId])).rows[0];
   }
+  async updateSettings(principal: Principal, timezone: string, expectedRevision: number) {
+    if (!timezone.trim() || timezone.length > 80) throw new ContractError('INVALID_INPUT', 'IANA timezone required');
+    const result = await this.pool.query('UPDATE user_settings SET timezone=$1 WHERE user_id=$2 AND revision=$3 RETURNING timezone,revision', [timezone, principal.userId, expectedRevision]);
+    if (!result.rowCount) throw new ContractError('CONFLICT', 'Settings revision changed');
+    return result.rows[0] as { timezone: string; revision: number };
+  }
   async switchProfile(principal: Principal, profileId: string, expectedRevision: number) {
     assertUuid(profileId);
     return transaction(this.pool, async (db) => {

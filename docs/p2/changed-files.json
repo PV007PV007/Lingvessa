@@ -30,6 +30,18 @@
       "change": "added"
     },
     {
+      "path": "docs/adr/adr-p2-identity-implementation.md",
+      "change": "added"
+    },
+    {
+      "path": "docs/baseline/open-decisions.json",
+      "change": "modified"
+    },
+    {
+      "path": "docs/baseline/open-decisions.md",
+      "change": "modified"
+    },
+    {
       "path": "docs/p2/P2_exit_evidence.md",
       "change": "added"
     },
@@ -50,6 +62,10 @@
       "change": "added"
     },
     {
+      "path": "docs/p2/resolved-decisions.json",
+      "change": "added"
+    },
+    {
       "path": "docs/p2/source-verification.json",
       "change": "added"
     },
@@ -60,6 +76,10 @@
     {
       "path": "infra/local/database-guard.ts",
       "change": "modified"
+    },
+    {
+      "path": "infra/contracts/p2.openapi.json",
+      "change": "added"
     },
     {
       "path": "infra/persistence/content.ts",

@@ -105,12 +105,19 @@ export class ContentRepository implements ContentLookup {
         await db.query(`INSERT INTO publication_entries(publication_id,entity_id,content_version_id,language_id,content_checksum)
           VALUES($1,$2,$3,$4,$5)`, [input.id, v.entity_id, id, input.languageId, v.checksum]);
       }
+      await db.query(`INSERT INTO publication_knowledge_edges(publication_id,edge_id,language_id,edge_checksum)
+        SELECT $1,e.id,e.language_id,e.checksum FROM knowledge_edges e
+        WHERE e.language_id=$2 AND e.review_status='approved'
+          AND EXISTS(SELECT 1 FROM publication_entries p WHERE p.publication_id=$1 AND p.entity_id=e.from_id)
+          AND EXISTS(SELECT 1 FROM publication_entries p WHERE p.publication_id=$1 AND p.entity_id=e.to_id)`, [input.id, input.languageId]);
       const entries = (await db.query(`SELECT e.entity_id,e.content_version_id,ce.stable_code,cv.version_code,cv.checksum
         FROM publication_entries e JOIN content_versions cv ON cv.id=e.content_version_id JOIN content_entities ce ON ce.id=e.entity_id
         WHERE e.publication_id=$1 ORDER BY ce.stable_code COLLATE "C"`, [input.id])).rows;
       const translations = (await db.query(`SELECT t.id AS translation_id,t.content_version_id,t.locale,t.version_code,t.checksum
         FROM translations t JOIN publication_entries e ON e.content_version_id=t.content_version_id WHERE e.publication_id=$1 ORDER BY t.id`, [input.id])).rows;
-      const manifest = { publication_id: input.id, course_id: input.courseId, language_id: input.languageId, schema_version: '1.7', entries, translations, assets: [] };
+      const knowledgeEdges = (await db.query(`SELECT k.id AS edge_id,k.version_code,k.checksum FROM publication_knowledge_edges e
+        JOIN knowledge_edges k ON k.id=e.edge_id WHERE e.publication_id=$1 ORDER BY k.id`, [input.id])).rows;
+      const manifest = { publication_id: input.id, course_id: input.courseId, language_id: input.languageId, schema_version: '1.7', entries, translations, knowledge_edges: knowledgeEdges, assets: [] };
       await db.query(`UPDATE publications SET manifest=$1,status='published',published_at=now() WHERE id=$2`, [manifest, input.id]);
       return (await db.query('SELECT id,checksum,manifest FROM publications WHERE id=$1', [input.id])).rows[0] as { id: string; checksum: string; manifest: unknown };
     });

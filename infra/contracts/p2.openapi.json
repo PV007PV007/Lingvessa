@@ -1,0 +1,31 @@
+{
+  "openapi": "3.1.2",
+  "info": { "title": "Lingvessa P2 foundation API", "version": "1.0.0" },
+  "servers": [{ "url": "/api/v1" }],
+  "paths": {
+    "/auth/login": { "post": { "operationId": "login", "description": "Rate-limited password login. Requires X-Lingvessa-Client: web; sets a Secure HttpOnly SameSite=Strict host cookie.", "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Login" } } } }, "responses": { "200": { "description": "Session and synchronizer CSRF token", "content": { "application/json": { "schema": { "type": "object", "required": ["csrf_token"], "properties": { "csrf_token": { "type": "string" } }, "additionalProperties": false } } } }, "401": { "$ref": "#/components/responses/Problem" }, "403": { "$ref": "#/components/responses/Problem" } } } },
+    "/auth/logout": { "post": { "operationId": "logout", "security": [{ "sessionCookie": [], "csrfToken": [] }], "responses": { "200": { "description": "Revoked" }, "401": { "$ref": "#/components/responses/Problem" }, "403": { "$ref": "#/components/responses/Problem" } } } },
+    "/me": {
+      "get": { "operationId": "getMe", "security": [{ "sessionCookie": [] }], "responses": { "200": { "description": "Session-derived user and settings" }, "401": { "$ref": "#/components/responses/Problem" } } },
+      "patch": { "operationId": "updateMe", "security": [{ "sessionCookie": [], "csrfToken": [] }], "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/SettingsUpdate" } } } }, "responses": { "200": { "description": "Updated using optimistic revision" }, "400": { "$ref": "#/components/responses/Problem" }, "409": { "$ref": "#/components/responses/Problem" } } }
+    },
+    "/me/language-profiles": {
+      "get": { "operationId": "listLanguageProfiles", "security": [{ "sessionCookie": [] }], "responses": { "200": { "description": "Profiles owned by the session user" } } },
+      "post": { "operationId": "createLanguageProfile", "security": [{ "sessionCookie": [], "csrfToken": [] }], "responses": { "201": { "description": "Unique user/language profile" }, "400": { "$ref": "#/components/responses/Problem" }, "409": { "$ref": "#/components/responses/Problem" } } }
+    },
+    "/me/active-language": { "put": { "operationId": "switchActiveLanguage", "description": "Changes active context only; never mutates language-owned state.", "security": [{ "sessionCookie": [], "csrfToken": [] }], "responses": { "200": { "description": "New settings revision" }, "404": { "$ref": "#/components/responses/Problem" }, "409": { "$ref": "#/components/responses/Problem" } } } },
+    "/catalog": { "get": { "operationId": "getCatalog", "parameters": [{ "name": "language", "in": "query", "required": true, "schema": { "type": "string", "enum": ["en", "cs"] } }], "responses": { "200": { "description": "Active stable publications only; drafts/test/preview excluded" }, "400": { "$ref": "#/components/responses/Problem" } } } }
+  },
+  "components": {
+    "securitySchemes": {
+      "sessionCookie": { "type": "apiKey", "in": "cookie", "name": "__Host-lingvessa_session" },
+      "csrfToken": { "type": "apiKey", "in": "header", "name": "X-CSRF-Token" }
+    },
+    "responses": { "Problem": { "description": "Safe RFC 9457-style problem", "content": { "application/problem+json": { "schema": { "$ref": "#/components/schemas/Problem" } } } } },
+    "schemas": {
+      "Login": { "type": "object", "required": ["email", "password"], "properties": { "email": { "type": "string", "format": "email", "maxLength": 254 }, "password": { "type": "string", "maxLength": 1024 } }, "additionalProperties": false },
+      "SettingsUpdate": { "type": "object", "required": ["timezone", "expected_revision"], "properties": { "timezone": { "type": "string", "maxLength": 80 }, "expected_revision": { "type": "integer", "minimum": 1 } }, "additionalProperties": false },
+      "Problem": { "type": "object", "required": ["type", "status", "title"], "properties": { "type": { "type": "string" }, "status": { "type": "integer" }, "title": { "type": "string" } }, "additionalProperties": false }
+    }
+  }
+}

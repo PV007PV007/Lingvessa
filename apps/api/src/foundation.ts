@@ -1,4 +1,4 @@
-import { Body, Catch, Controller, Get, Header, HttpException, Inject, Post, Put, Req, Res } from '@nestjs/common';
+import { Body, Catch, Controller, Get, Header, HttpCode, HttpException, Inject, Patch, Post, Put, Req, Res } from '@nestjs/common';
 import type { ArgumentsHost, ExceptionFilter } from '@nestjs/common';
 import { z, ZodError } from 'zod';
 import { ContractError, UUID_PATTERN, languageIds } from '../../../packages/domain/src/identity.js';
@@ -36,6 +36,7 @@ export class FoundationExceptionFilter implements ExceptionFilter {
 export class AuthController {
   constructor(@Inject(IDENTITY) private readonly identity: IdentityRepository) {}
   @Post('login')
+  @HttpCode(200)
   @Header('Cache-Control', noStore)
   async login(@Body() body: unknown, @Req() request: Request, @Res({ passthrough: true }) response: Response) {
     // JSON/custom header prevents a cross-origin form login. CORS is not enabled.
@@ -48,6 +49,7 @@ export class AuthController {
     return { csrf_token: session.csrf };
   }
   @Post('logout')
+  @HttpCode(200)
   @Header('Cache-Control', noStore)
   async logout(@Req() request: Request, @Res({ passthrough: true }) response: Response) {
     const principal = await this.identity.authenticate(tokenFrom(request)); this.identity.checkCsrf(principal, request.headers['x-csrf-token'] ?? '');
@@ -64,6 +66,13 @@ export class ProfileController {
   async me(@Req() request: Request) {
     const principal = await this.identity.authenticate(tokenFrom(request));
     return { id: principal.userId, roles: principal.roles, settings: await this.identity.settings(principal) };
+  }
+  @Patch()
+  @Header('Cache-Control', noStore)
+  async update(@Req() request: Request, @Body() body: unknown) {
+    const principal = await this.identity.authenticate(tokenFrom(request)); this.identity.checkCsrf(principal, request.headers['x-csrf-token'] ?? '');
+    const input = z.object({ timezone: z.string().min(1).max(80), expected_revision: z.number().int().positive() }).strict().parse(body);
+    return this.identity.updateSettings(principal, input.timezone, input.expected_revision);
   }
   @Get('language-profiles')
   @Header('Cache-Control', noStore)

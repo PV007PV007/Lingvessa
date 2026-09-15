@@ -6,6 +6,11 @@ BEGIN;
 CREATE FUNCTION p2_json_checksum(value jsonb) RETURNS text LANGUAGE sql IMMUTABLE STRICT AS $$
   SELECT encode(sha256(convert_to(value::text,'UTF8')),'hex')
 $$;
+CREATE FUNCTION p2_edge_checksum(from_id uuid,to_id uuid,edge_type text,direction text,weight numeric,
+  version_code text,review_status text,provenance jsonb) RETURNS text LANGUAGE sql IMMUTABLE STRICT AS $$
+  SELECT p2_json_checksum(jsonb_build_object('from_id',from_id,'to_id',to_id,'edge_type',edge_type,
+    'direction',direction,'weight',weight,'version_code',version_code,'review_status',review_status,'provenance',provenance))
+$$;
 
 CREATE TABLE languages (
   id uuid PRIMARY KEY, stable_code text NOT NULL UNIQUE CHECK (stable_code IN ('en','cs')),
@@ -30,12 +35,12 @@ CREATE TABLE users (
 );
 CREATE TABLE credentials (
   id uuid PRIMARY KEY, user_id uuid NOT NULL UNIQUE REFERENCES users(id) ON DELETE RESTRICT,
-  password_hash text NOT NULL CHECK (password_hash LIKE '$argon2id$v=19$%'),
+  password_hash text NOT NULL CHECK (password_hash ~ '^\$argon2id\$v=19\$m=65536,t=3,p=1\$[A-Za-z0-9+/]{22}\$[A-Za-z0-9+/]{43}$'),
   policy_version text NOT NULL, updated_at timestamptz NOT NULL DEFAULT now()
 );
 CREATE TABLE roles (
   id uuid PRIMARY KEY, stable_code text NOT NULL UNIQUE CHECK (stable_code IN
-    ('learner','content_editor','linguistic_reviewer','pedagogical_reviewer','administrator','service'))
+    ('learner','content_editor','linguistic_reviewer','pedagogical_reviewer','administrator','worker','service'))
 );
 CREATE TABLE user_roles (
   user_id uuid NOT NULL REFERENCES users(id) ON DELETE RESTRICT,
@@ -55,6 +60,7 @@ CREATE TABLE auth_rate_windows (
   key_hash bytea PRIMARY KEY CHECK(octet_length(key_hash)=32),
   attempts integer NOT NULL CHECK(attempts>0), expires_at timestamptz NOT NULL
 );
+CREATE INDEX auth_rate_expiry ON auth_rate_windows(expires_at);
 CREATE TABLE consents (
   id uuid PRIMARY KEY, user_id uuid NOT NULL REFERENCES users(id) ON DELETE RESTRICT,
   purpose text NOT NULL, policy_version text NOT NULL, granted boolean NOT NULL,
@@ -154,27 +160,27 @@ END $$;
 CREATE TRIGGER content_entity_identity BEFORE INSERT OR UPDATE ON content_entities FOR EACH ROW EXECUTE FUNCTION p2_entity_guard();
 CREATE TABLE courses (
   id uuid PRIMARY KEY, language_id uuid NOT NULL, kind text NOT NULL DEFAULT 'course' CHECK(kind='course'),
-  UNIQUE(id,language_id), FOREIGN KEY(id,language_id,kind) REFERENCES content_entities(id,language_id,kind) ON DELETE RESTRICT
+  UNIQUE(id,language_id), UNIQUE(id,language_id,kind), FOREIGN KEY(id,language_id,kind) REFERENCES content_entities(id,language_id,kind) ON DELETE RESTRICT
 );
 CREATE TABLE levels (
   id uuid PRIMARY KEY, language_id uuid NOT NULL, course_id uuid NOT NULL,
   kind text NOT NULL DEFAULT 'level' CHECK(kind='level'),
   cefr text NOT NULL CHECK(cefr IN ('A1','A2','B1','B2','C1')), position integer NOT NULL CHECK(position>=0),
-  UNIQUE(id,language_id), UNIQUE(course_id,cefr),
+  UNIQUE(id,language_id), UNIQUE(id,language_id,kind), UNIQUE(course_id,cefr),
   FOREIGN KEY(id,language_id,kind) REFERENCES content_entities(id,language_id,kind) ON DELETE RESTRICT,
   FOREIGN KEY(course_id,language_id) REFERENCES courses(id,language_id) ON DELETE RESTRICT
 );
 CREATE TABLE modules (
   id uuid PRIMARY KEY, language_id uuid NOT NULL, level_id uuid NOT NULL,
   kind text NOT NULL DEFAULT 'module' CHECK(kind='module'), position integer NOT NULL CHECK(position>=0),
-  UNIQUE(id,language_id), UNIQUE(level_id,position),
+  UNIQUE(id,language_id), UNIQUE(id,language_id,kind), UNIQUE(level_id,position),
   FOREIGN KEY(id,language_id,kind) REFERENCES content_entities(id,language_id,kind) ON DELETE RESTRICT,
   FOREIGN KEY(level_id,language_id) REFERENCES levels(id,language_id) ON DELETE RESTRICT
 );
 CREATE TABLE lessons (
   id uuid PRIMARY KEY, language_id uuid NOT NULL, module_id uuid NOT NULL,
   kind text NOT NULL DEFAULT 'lesson' CHECK(kind='lesson'), unit_kind text NOT NULL CHECK(unit_kind IN ('lesson','recap')),
-  position integer NOT NULL CHECK(position>=0), UNIQUE(id,language_id), UNIQUE(module_id,position),
+  position integer NOT NULL CHECK(position>=0), UNIQUE(id,language_id), UNIQUE(id,language_id,kind), UNIQUE(module_id,position),
   FOREIGN KEY(id,language_id,kind) REFERENCES content_entities(id,language_id,kind) ON DELETE RESTRICT,
   FOREIGN KEY(module_id,language_id) REFERENCES modules(id,language_id) ON DELETE RESTRICT
 );
@@ -182,7 +188,7 @@ CREATE TABLE activity_items (
   id uuid PRIMARY KEY, language_id uuid NOT NULL, lesson_id uuid NOT NULL,
   kind text NOT NULL DEFAULT 'activity' CHECK(kind='activity'), activity_type text NOT NULL,
   response_modality text NOT NULL CHECK(response_modality IN ('none','selection','typed','speech')),
-  position integer NOT NULL CHECK(position>=0), UNIQUE(id,language_id), UNIQUE(lesson_id,position),
+  position integer NOT NULL CHECK(position>=0), UNIQUE(id,language_id), UNIQUE(id,language_id,kind), UNIQUE(lesson_id,position),
   FOREIGN KEY(id,language_id,kind) REFERENCES content_entities(id,language_id,kind) ON DELETE RESTRICT,
   FOREIGN KEY(lesson_id,language_id) REFERENCES lessons(id,language_id) ON DELETE RESTRICT
 );
@@ -193,14 +199,14 @@ CREATE TABLE knowledge_items (
   learning_scope text NOT NULL CHECK(learning_scope IN ('active','receptive','both')),
   status text NOT NULL DEFAULT 'active' CHECK(status IN ('active','deprecated')),
   schema_version text NOT NULL DEFAULT '1.7',
-  UNIQUE(id,language_id),
+  UNIQUE(id,language_id), UNIQUE(id,language_id,kind),
   FOREIGN KEY(id,language_id,kind) REFERENCES content_entities(id,language_id,kind) ON DELETE RESTRICT
 );
 CREATE TABLE outcomes (
   id uuid PRIMARY KEY, language_id uuid NOT NULL, kind text NOT NULL DEFAULT 'outcome' CHECK(kind='outcome'),
   cefr text NOT NULL, can_do text NOT NULL, source_reference text NOT NULL,
   status text NOT NULL DEFAULT 'active' CHECK(status IN ('active','deprecated')), version_code text NOT NULL DEFAULT '1',
-  UNIQUE(id,language_id),
+  UNIQUE(id,language_id), UNIQUE(id,language_id,kind),
   FOREIGN KEY(id,language_id,kind) REFERENCES content_entities(id,language_id,kind) ON DELETE RESTRICT
 );
 CREATE TABLE knowledge_edges (
@@ -209,10 +215,37 @@ CREATE TABLE knowledge_edges (
   direction text NOT NULL CHECK(direction IN ('directed','bidirectional')), weight numeric(6,5) NOT NULL CHECK(weight BETWEEN 0 AND 1),
   version_code text NOT NULL, review_status text NOT NULL CHECK(review_status IN ('draft','approved')),
   provenance jsonb NOT NULL CHECK(jsonb_typeof(provenance)='object'),
+  checksum text GENERATED ALWAYS AS (p2_edge_checksum(from_id,to_id,edge_type,direction,weight,version_code,review_status,provenance)) STORED,
   UNIQUE(id,language_id), UNIQUE(from_id,to_id,edge_type,version_code), CHECK(from_id<>to_id),
   FOREIGN KEY(from_id,language_id) REFERENCES knowledge_items(id,language_id) ON DELETE RESTRICT,
   FOREIGN KEY(to_id,language_id) REFERENCES knowledge_items(id,language_id) ON DELETE RESTRICT
 );
+CREATE FUNCTION p2_edge_guard() RETURNS trigger LANGUAGE plpgsql AS $$
+BEGIN
+  IF TG_OP='DELETE' THEN
+    IF OLD.review_status='approved' THEN RAISE EXCEPTION 'approved knowledge edge is immutable' USING ERRCODE='23514'; END IF;
+    RETURN OLD;
+  END IF;
+  IF TG_OP='UPDATE' THEN
+    IF OLD.review_status='approved' THEN RAISE EXCEPTION 'approved knowledge edge is immutable' USING ERRCODE='23514'; END IF;
+    IF (NEW.id,NEW.language_id,NEW.from_id,NEW.to_id,NEW.edge_type,NEW.version_code)
+      IS DISTINCT FROM (OLD.id,OLD.language_id,OLD.from_id,OLD.to_id,OLD.edge_type,OLD.version_code) THEN
+      RAISE EXCEPTION 'immutable edge identity/version' USING ERRCODE='23514';
+    END IF;
+  END IF;
+  RETURN NEW;
+END $$;
+CREATE TRIGGER knowledge_edge_guard BEFORE UPDATE OR DELETE ON knowledge_edges FOR EACH ROW EXECUTE FUNCTION p2_edge_guard();
+CREATE TRIGGER no_truncate_edges BEFORE TRUNCATE ON knowledge_edges FOR EACH STATEMENT EXECUTE FUNCTION p2_append_only();
+CREATE TABLE knowledge_migration_reports (
+  id uuid PRIMARY KEY, language_id uuid NOT NULL REFERENCES languages(id) ON DELETE RESTRICT,
+  operation text NOT NULL CHECK(operation IN ('split','merge','deprecate')),
+  version_code text NOT NULL, mapping jsonb NOT NULL CHECK(jsonb_typeof(mapping)='object'),
+  impact_report jsonb NOT NULL CHECK(jsonb_typeof(impact_report)='object'), status text NOT NULL CHECK(status IN ('draft','approved')),
+  created_by uuid NOT NULL REFERENCES users(id) ON DELETE RESTRICT, created_at timestamptz NOT NULL DEFAULT now(),
+  UNIQUE(language_id,version_code)
+);
+CREATE TRIGGER migration_report_immutable BEFORE UPDATE OR DELETE OR TRUNCATE ON knowledge_migration_reports FOR EACH STATEMENT EXECUTE FUNCTION p2_append_only();
 -- Registry rows contain content validation data, not mastery states/projections.
 CREATE TABLE skill_facet_pairs (skill text NOT NULL, facet text NOT NULL, PRIMARY KEY(skill,facet));
 CREATE TABLE item_knowledge_map (
@@ -277,11 +310,21 @@ CREATE TABLE approvals (
   target_checksum text NOT NULL, target_revision integer NOT NULL,
   gate_type text NOT NULL CHECK(gate_type IN ('linguistic','pedagogical','technical','accessibility','media','originality')),
   reviewer_id uuid NOT NULL REFERENCES users(id) ON DELETE RESTRICT,
-  decision text NOT NULL CHECK(decision IN ('approved','rejected')), decided_at timestamptz NOT NULL DEFAULT now(), notes text NOT NULL,
+  decision text NOT NULL CHECK(decision IN ('approved','rejected')), decided_at timestamptz NOT NULL DEFAULT now(), notes text NOT NULL CHECK(length(btrim(notes))>0),
   UNIQUE(target_content_version_id,target_revision,gate_type,reviewer_id)
 );
 CREATE TRIGGER approval_immutable BEFORE UPDATE OR DELETE OR TRUNCATE ON approvals FOR EACH STATEMENT EXECUTE FUNCTION p2_append_only();
 CREATE TRIGGER validation_immutable BEFORE UPDATE OR DELETE OR TRUNCATE ON content_validations FOR EACH STATEMENT EXECUTE FUNCTION p2_append_only();
+CREATE FUNCTION p2_validation_guard() RETURNS trigger LANGUAGE plpgsql AS $$
+DECLARE v content_versions;
+BEGIN
+  SELECT * INTO v FROM content_versions WHERE id=NEW.content_version_id FOR UPDATE;
+  IF NOT FOUND OR NEW.target_checksum<>v.checksum OR NEW.target_revision<>v.revision OR jsonb_typeof(NEW.report)<>'object' THEN
+    RAISE EXCEPTION 'validation target changed or report invalid' USING ERRCODE='23514';
+  END IF;
+  RETURN NEW;
+END $$;
+CREATE TRIGGER validation_target BEFORE INSERT ON content_validations FOR EACH ROW EXECUTE FUNCTION p2_validation_guard();
 
 CREATE TABLE publications (
   id uuid PRIMARY KEY, course_id uuid NOT NULL, language_id uuid NOT NULL,
@@ -302,11 +345,18 @@ CREATE TABLE publication_entries (
   FOREIGN KEY(publication_id,language_id) REFERENCES publications(id,language_id) ON DELETE RESTRICT,
   FOREIGN KEY(content_version_id,entity_id,language_id) REFERENCES content_versions(id,entity_id,language_id) ON DELETE RESTRICT
 );
+CREATE TABLE publication_knowledge_edges (
+  publication_id uuid NOT NULL, edge_id uuid NOT NULL, language_id uuid NOT NULL, edge_checksum text NOT NULL,
+  PRIMARY KEY(publication_id,edge_id),
+  FOREIGN KEY(publication_id,language_id) REFERENCES publications(id,language_id) ON DELETE RESTRICT,
+  FOREIGN KEY(edge_id,language_id) REFERENCES knowledge_edges(id,language_id) ON DELETE RESTRICT
+);
 CREATE TABLE publication_pointers (
   course_id uuid NOT NULL, language_id uuid NOT NULL, channel text NOT NULL,
   publication_id uuid NOT NULL, revision integer NOT NULL DEFAULT 1,
   updated_by uuid NOT NULL REFERENCES users(id) ON DELETE RESTRICT, updated_at timestamptz NOT NULL DEFAULT now(),
   PRIMARY KEY(course_id,channel),
+  UNIQUE(publication_id,course_id,language_id,channel),
   FOREIGN KEY(publication_id,course_id,language_id,channel) REFERENCES publications(id,course_id,language_id,channel) ON DELETE RESTRICT
 );
 -- Curriculum selection context only; P3 owns lesson runs, attempts, evaluation and position advancement.
@@ -428,9 +478,11 @@ BEGIN
 END $$;
 CREATE TRIGGER publication_entry_guard BEFORE INSERT OR UPDATE OR DELETE ON publication_entries FOR EACH ROW EXECUTE FUNCTION p2_entry_guard();
 CREATE TRIGGER no_truncate_entries BEFORE TRUNCATE ON publication_entries FOR EACH STATEMENT EXECUTE FUNCTION p2_append_only();
+CREATE TRIGGER publication_edge_guard BEFORE INSERT OR UPDATE OR DELETE ON publication_knowledge_edges FOR EACH ROW EXECUTE FUNCTION p2_entry_guard();
+CREATE TRIGGER no_truncate_publication_edges BEFORE TRUNCATE ON publication_knowledge_edges FOR EACH STATEMENT EXECUTE FUNCTION p2_append_only();
 
 CREATE FUNCTION p2_publication_guard() RETURNS trigger LANGUAGE plpgsql AS $$
-DECLARE v record; gate text; actual_entries jsonb; actual_translations jsonb; actual_refs jsonb; a jsonb; k jsonb;
+DECLARE v record; gate text; actual_entries jsonb; actual_translations jsonb; actual_refs jsonb; actual_edges jsonb; a jsonb; k jsonb;
 BEGIN
   IF TG_OP='DELETE' THEN
     IF OLD.status='published' THEN RAISE EXCEPTION 'published snapshot is immutable' USING ERRCODE='23514'; END IF;
@@ -495,8 +547,9 @@ BEGIN
           END IF;
         END LOOP;
       END LOOP;
-      IF NOT EXISTS(SELECT 1 FROM content_validations c WHERE c.content_version_id=v.id AND c.target_checksum=v.checksum
-        AND c.target_revision=v.revision AND c.passed) THEN RAISE EXCEPTION 'current validation required' USING ERRCODE='23514'; END IF;
+      IF (SELECT c.passed FROM content_validations c WHERE c.content_version_id=v.id AND c.target_checksum=v.checksum
+        AND c.target_revision=v.revision ORDER BY c.validated_at DESC,c.id DESC LIMIT 1) IS DISTINCT FROM true
+        THEN RAISE EXCEPTION 'current latest validation required' USING ERRCODE='23514'; END IF;
       FOREACH gate IN ARRAY ARRAY['linguistic','pedagogical','technical','accessibility','media','originality'] LOOP
         IF NOT EXISTS(SELECT 1 FROM approvals a WHERE a.target_content_version_id=v.id AND a.target_checksum=v.checksum
           AND a.target_revision=v.revision AND a.gate_type=gate AND a.decision='approved') OR EXISTS(
@@ -517,8 +570,16 @@ BEGIN
       'locale',t.locale,'version_code',t.version_code,'checksum',t.checksum) ORDER BY t.id),'[]'::jsonb)
       INTO actual_translations FROM translations t JOIN publication_entries e ON e.content_version_id=t.content_version_id
       WHERE e.publication_id=NEW.id;
+    IF EXISTS(SELECT 1 FROM publication_knowledge_edges pe JOIN knowledge_edges ke ON ke.id=pe.edge_id
+      WHERE pe.publication_id=NEW.id AND (pe.edge_checksum<>ke.checksum OR ke.review_status<>'approved' OR ke.language_id<>NEW.language_id)) THEN
+      RAISE EXCEPTION 'knowledge edge snapshot mismatch' USING ERRCODE='23514';
+    END IF;
+    SELECT coalesce(jsonb_agg(jsonb_build_object('edge_id',ke.id,'version_code',ke.version_code,'checksum',ke.checksum)
+      ORDER BY ke.id),'[]'::jsonb) INTO actual_edges FROM publication_knowledge_edges pe
+      JOIN knowledge_edges ke ON ke.id=pe.edge_id WHERE pe.publication_id=NEW.id;
     IF NEW.manifest->'entries' IS DISTINCT FROM actual_entries OR
        NEW.manifest->'translations' IS DISTINCT FROM actual_translations OR
+       NEW.manifest->'knowledge_edges' IS DISTINCT FROM actual_edges OR
        NEW.manifest->>'publication_id' IS DISTINCT FROM NEW.id::text OR
        NEW.manifest->>'language_id' IS DISTINCT FROM NEW.language_id::text OR
        NEW.manifest->>'course_id' IS DISTINCT FROM NEW.course_id::text OR
@@ -558,6 +619,7 @@ BEGIN
   RETURN NEW;
 END $$;
 CREATE TRIGGER active_publication_guard BEFORE INSERT OR UPDATE ON publication_pointers FOR EACH ROW EXECUTE FUNCTION p2_pointer_guard();
+CREATE TRIGGER no_silent_pointer_delete BEFORE DELETE OR TRUNCATE ON publication_pointers FOR EACH STATEMENT EXECUTE FUNCTION p2_append_only();
 
 CREATE FUNCTION p2_modality_change_guard() RETURNS trigger LANGUAGE plpgsql AS $$
 BEGIN
@@ -601,7 +663,8 @@ INSERT INTO variants VALUES
 INSERT INTO roles(id,stable_code) VALUES
  ('0198f000-0000-7000-8000-000000000021','learner'),('0198f000-0000-7000-8000-000000000022','content_editor'),
  ('0198f000-0000-7000-8000-000000000023','linguistic_reviewer'),('0198f000-0000-7000-8000-000000000024','pedagogical_reviewer'),
- ('0198f000-0000-7000-8000-000000000025','administrator'),('0198f000-0000-7000-8000-000000000026','service');
+ ('0198f000-0000-7000-8000-000000000025','administrator'),('0198f000-0000-7000-8000-000000000026','service'),
+ ('0198f000-0000-7000-8000-000000000027','worker');
 INSERT INTO skill_facet_pairs(skill,facet)
 SELECT 'vocabulary',unnest(ARRAY['recognition','meaning','recall_l2_to_l1','recall_l1_to_l2','production','spelling','context_use','collocation','variant_awareness','register']) UNION ALL
 SELECT 'grammar',unnest(ARRAY['grammar_form','morphology','word_order','register','context_use']) UNION ALL

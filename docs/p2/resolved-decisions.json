@@ -1,0 +1,14 @@
+{
+  "phase": "P2",
+  "decisions": [
+    {
+      "decision_id": "OD-002",
+      "status": "IMPLEMENTED_WITHIN_LOCKED_DEFAULT_PENDING_MILESTONE_OWNER_ACCEPTANCE",
+      "resolution": "Pinned Node 24.19 async Argon2id m=65536,t=3,p=1 with 16-byte salt and 32-byte tag; PostgreSQL-backed opaque revocable 12-hour server sessions; hashed synchronizer CSRF tokens; status/role/credential session revocation; DB login throttle.",
+      "adr": "docs/adr/adr-p2-identity-implementation.md",
+      "requirements": ["TS-AUTH-001", "ROLE-001", "TD-SEC-001"],
+      "contract_change": false,
+      "owner_action": "Review as part of P2 milestone acceptance; no separate architectural deviation requested."
+    }
+  ]
+}
