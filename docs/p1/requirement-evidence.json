@@ -3,7 +3,7 @@
   "phase": "P1",
   "join_key": "requirement_id",
   "planning_snapshot": "docs/baseline/requirements-trace.csv",
-  "rule": "Use this overlay for current actual evidence. Do not interpret the P0 planning phase as permission to implement later product contracts in P1. Unlisted requirements retain their P0 planned status.",
+  "rule": "This current overlay joins the preserved P0 plan by requirement_id. Hosted execution is owner-verified on the exact SHA. Partial/future rows retain later runtime acceptance; no P2+ behavior is accepted by P1 closure.",
   "requirements": [
     {
       "requirement_id": "TECH-001",
@@ -39,11 +39,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TECH-002",
@@ -79,11 +83,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TECH-003",
@@ -119,11 +127,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TECH-004",
@@ -159,11 +171,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TECH-005",
@@ -199,11 +215,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TD-GOV-004",
@@ -239,11 +259,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TD-MOD-001",
@@ -279,11 +303,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TD-MOD-002",
@@ -307,11 +335,15 @@
       ],
       "test_or_gate": "CHK-TD-MOD-002",
       "actual_test_files": [],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "P0 mapped the engineering guard to P1; full feature/release acceptance remains in the governing later phase. No runtime implementation is claimed.",
       "followup_tasks": "IMP-P2-001; IMP-P2-002; IMP-P3-002; IMP-P11-001; IMP-P13-001",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "FUTURE_RUNTIME_ACCEPTANCE",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "NO_P1_RUNTIME_ACCEPTANCE_REQUIRED"
     },
     {
       "requirement_id": "TD-MOD-003",
@@ -347,11 +379,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TD-MOD-004",
@@ -375,11 +411,15 @@
       ],
       "test_or_gate": "CHK-TD-MOD-004",
       "actual_test_files": [],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "P0 mapped the engineering guard to P1; full feature/release acceptance remains in the governing later phase. No runtime implementation is claimed.",
       "followup_tasks": "IMP-P8-002; IMP-P9-001; IMP-P9-002",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "FUTURE_RUNTIME_ACCEPTANCE",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "NO_P1_RUNTIME_ACCEPTANCE_REQUIRED"
     },
     {
       "requirement_id": "TD-ENV-001",
@@ -408,11 +448,15 @@
         "tests/unit/config.test.ts",
         "tests/unit/secrets.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TD-ENV-002",
@@ -441,11 +485,15 @@
         "tests/unit/config.test.ts",
         "tests/unit/secrets.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TD-ENV-003",
@@ -456,7 +504,7 @@
       "priority": "MUST",
       "implementation_phase": "P1",
       "implementation_task": "IMP-P1-002",
-      "status": "P1_GATE_PENDING",
+      "status": "P1_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "infra/config/runtime.ts",
         "tools/p1/scan-secrets.ts",
@@ -474,11 +522,15 @@
         "tests/unit/config.test.ts",
         "tests/unit/secrets.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
-      "remaining_acceptance": "Artifacts exist; fresh PostgreSQL migration/seed, OCI build/recovery or connected repository evidence is still required.",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
+      "remaining_acceptance": "No remaining P1 runtime gate. Continue regression in later phases; no later product behavior is accepted here.",
       "followup_tasks": "IMP-P1-002",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_GATE_PENDING",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TD-ENV-004",
@@ -507,11 +559,15 @@
         "tests/unit/config.test.ts",
         "tests/unit/secrets.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d09.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d09.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TD-ENV-005",
@@ -540,11 +596,15 @@
         "tests/unit/config.test.ts",
         "tests/unit/secrets.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TD-CICD-001",
@@ -555,7 +615,7 @@
       "priority": "MUST",
       "implementation_phase": "P1",
       "implementation_task": "IMP-P1-004",
-      "status": "P1_GATE_PENDING",
+      "status": "P1_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         ".dependency-cruiser.cjs",
         "apps/api/src/app.ts",
@@ -580,11 +640,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
-      "remaining_acceptance": "Artifacts exist; fresh PostgreSQL migration/seed, OCI build/recovery or connected repository evidence is still required.",
-      "followup_tasks": "IMP-P1-004",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
+      "remaining_acceptance": "P1 images and migration path are owner-verified. Production publication/content/AI policy bindings and production promotion/reconstruction remain later-phase requirements.",
+      "followup_tasks": "Applicable P11/P13 provenance/release task in Implementation Plan v1.4; no production acceptance in P1.",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_GATE_PENDING",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TD-CICD-002",
@@ -608,11 +672,15 @@
       ],
       "test_or_gate": "CHK-TD-CICD-002",
       "actual_test_files": [],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "P0 mapped the engineering guard to P1; full feature/release acceptance remains in the governing later phase. No runtime implementation is claimed.",
       "followup_tasks": "IMP-P8-002; IMP-P9-001; IMP-P9-002",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "FUTURE_RUNTIME_ACCEPTANCE",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "NO_P1_RUNTIME_ACCEPTANCE_REQUIRED"
     },
     {
       "requirement_id": "TD-CICD-003",
@@ -648,11 +716,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d09.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d09.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TD-CICD-004",
@@ -676,11 +748,15 @@
       ],
       "test_or_gate": "CHK-TD-CICD-004",
       "actual_test_files": [],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "P0 mapped the engineering guard to P1; full feature/release acceptance remains in the governing later phase. No runtime implementation is claimed.",
       "followup_tasks": "IMP-P2-001; IMP-P2-002; IMP-P3-002; IMP-P11-001; IMP-P13-001",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d06.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
+      "previous_p1_status": "FUTURE_RUNTIME_ACCEPTANCE",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "NO_P1_RUNTIME_ACCEPTANCE_REQUIRED"
     },
     {
       "requirement_id": "TS-ARCH-001",
@@ -704,11 +780,15 @@
       ],
       "test_or_gate": "CHK-TS-ARCH-001",
       "actual_test_files": [],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "P0 mapped the engineering guard to P1; full feature/release acceptance remains in the governing later phase. No runtime implementation is claimed.",
       "followup_tasks": "IMP-P2-001; IMP-P2-002; IMP-P3-002; IMP-P11-001; IMP-P13-001",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "FUTURE_RUNTIME_ACCEPTANCE",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "NO_P1_RUNTIME_ACCEPTANCE_REQUIRED"
     },
     {
       "requirement_id": "TS-ARCH-002",
@@ -732,11 +812,15 @@
       ],
       "test_or_gate": "CHK-TS-ARCH-002",
       "actual_test_files": [],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "P0 mapped the engineering guard to P1; full feature/release acceptance remains in the governing later phase. No runtime implementation is claimed.",
       "followup_tasks": "IMP-P2-001; IMP-P2-002; IMP-P3-002; IMP-P11-001; IMP-P13-001",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "FUTURE_RUNTIME_ACCEPTANCE",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "NO_P1_RUNTIME_ACCEPTANCE_REQUIRED"
     },
     {
       "requirement_id": "TS-ARCH-003",
@@ -760,11 +844,15 @@
       ],
       "test_or_gate": "CHK-TS-ARCH-003",
       "actual_test_files": [],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "P0 mapped the engineering guard to P1; full feature/release acceptance remains in the governing later phase. No runtime implementation is claimed.",
       "followup_tasks": "IMP-P8-002; IMP-P9-001; IMP-P9-002",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "FUTURE_RUNTIME_ACCEPTANCE",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "NO_P1_RUNTIME_ACCEPTANCE_REQUIRED"
     },
     {
       "requirement_id": "TS-ARCH-004",
@@ -788,11 +876,15 @@
       ],
       "test_or_gate": "CHK-TS-ARCH-004",
       "actual_test_files": [],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "P0 mapped the engineering guard to P1; full feature/release acceptance remains in the governing later phase. No runtime implementation is claimed.",
       "followup_tasks": "IMP-P2-001; IMP-P2-002; IMP-P3-002; IMP-P11-001; IMP-P13-001",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "FUTURE_RUNTIME_ACCEPTANCE",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "NO_P1_RUNTIME_ACCEPTANCE_REQUIRED"
     },
     {
       "requirement_id": "TS-ARCH-005",
@@ -828,11 +920,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TS-TECH-001",
@@ -843,7 +939,7 @@
       "priority": "MUST",
       "implementation_phase": "P1",
       "implementation_task": "IMP-P1-001",
-      "status": "P1_GATE_PENDING",
+      "status": "P1_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "package.json",
         "pnpm-lock.yaml",
@@ -860,11 +956,15 @@
       ],
       "test_or_gate": "CHK-TS-TECH-001",
       "actual_test_files": [],
-      "execution_evidence": "docs/p1/evidence/validation.json",
-      "remaining_acceptance": "Artifacts exist; fresh PostgreSQL migration/seed, OCI build/recovery or connected repository evidence is still required.",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
+      "remaining_acceptance": "No remaining P1 runtime gate. Continue regression in later phases; no later product behavior is accepted here.",
       "followup_tasks": "IMP-P1-001",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "P1_GATE_PENDING",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TS-TECH-002",
@@ -892,11 +992,15 @@
       ],
       "test_or_gate": "CHK-TS-TECH-002",
       "actual_test_files": [],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TS-TECH-003",
@@ -907,7 +1011,7 @@
       "priority": "MUST",
       "implementation_phase": "P1",
       "implementation_task": "IMP-P1-003",
-      "status": "P1_GATE_PENDING",
+      "status": "P1_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/schema.prisma",
         "prisma/migrations/202609130001_p1_bootstrap/migration.sql",
@@ -924,11 +1028,15 @@
       "actual_test_files": [
         "tests/integration/bootstrap.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
-      "remaining_acceptance": "Artifacts exist; fresh PostgreSQL migration/seed, OCI build/recovery or connected repository evidence is still required.",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
+      "remaining_acceptance": "No remaining P1 runtime gate. Continue regression in later phases; no later product behavior is accepted here.",
       "followup_tasks": "IMP-P1-003",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "P1_GATE_PENDING",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TS-TECH-004",
@@ -956,11 +1064,15 @@
       ],
       "test_or_gate": "CHK-TS-TECH-004",
       "actual_test_files": [],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TS-TECH-005",
@@ -988,11 +1100,15 @@
       ],
       "test_or_gate": "CHK-TS-TECH-005",
       "actual_test_files": [],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TS-MOD-001",
@@ -1028,11 +1144,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TS-MOD-002",
@@ -1068,11 +1188,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TS-MOD-003",
@@ -1096,11 +1220,15 @@
       ],
       "test_or_gate": "CHK-TS-MOD-003",
       "actual_test_files": [],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "P0 mapped the engineering guard to P1; full feature/release acceptance remains in the governing later phase. No runtime implementation is claimed.",
       "followup_tasks": "IMP-P8-002; IMP-P9-001; IMP-P9-002",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "FUTURE_RUNTIME_ACCEPTANCE",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "NO_P1_RUNTIME_ACCEPTANCE_REQUIRED"
     },
     {
       "requirement_id": "TS-MOD-004",
@@ -1124,11 +1252,15 @@
       ],
       "test_or_gate": "CHK-TS-MOD-004",
       "actual_test_files": [],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "P0 mapped the engineering guard to P1; full feature/release acceptance remains in the governing later phase. No runtime implementation is claimed.",
       "followup_tasks": "IMP-P2-001; IMP-P2-002; IMP-P3-002; IMP-P11-001; IMP-P13-001",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "FUTURE_RUNTIME_ACCEPTANCE",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "NO_P1_RUNTIME_ACCEPTANCE_REQUIRED"
     },
     {
       "requirement_id": "TS-ENV-001",
@@ -1157,11 +1289,15 @@
         "tests/unit/config.test.ts",
         "tests/unit/secrets.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TS-ENV-002",
@@ -1190,11 +1326,15 @@
         "tests/unit/config.test.ts",
         "tests/unit/secrets.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TS-ENV-003",
@@ -1205,7 +1345,7 @@
       "priority": "MUST",
       "implementation_phase": "P1",
       "implementation_task": "IMP-P1-002",
-      "status": "P1_GATE_PENDING",
+      "status": "P1_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "infra/config/runtime.ts",
         "tools/p1/scan-secrets.ts",
@@ -1223,11 +1363,15 @@
         "tests/unit/config.test.ts",
         "tests/unit/secrets.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
-      "remaining_acceptance": "Artifacts exist; fresh PostgreSQL migration/seed, OCI build/recovery or connected repository evidence is still required.",
-      "followup_tasks": "IMP-P1-002",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
+      "remaining_acceptance": "P1 images and migration path are owner-verified. Production publication/content/AI policy bindings and production promotion/reconstruction remain later-phase requirements.",
+      "followup_tasks": "Applicable P11/P13 provenance/release task in Implementation Plan v1.4; no production acceptance in P1.",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d14.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
+      "previous_p1_status": "P1_GATE_PENDING",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TS-ENV-004",
@@ -1256,11 +1400,15 @@
         "tests/unit/config.test.ts",
         "tests/unit/secrets.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d09.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d09.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TS-ENV-005",
@@ -1289,11 +1437,15 @@
         "tests/unit/config.test.ts",
         "tests/unit/secrets.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TS-REPO-001",
@@ -1304,7 +1456,7 @@
       "priority": "MUST",
       "implementation_phase": "P1",
       "implementation_task": "IMP-P1-001",
-      "status": "P1_GATE_PENDING",
+      "status": "P1_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "package.json",
         "pnpm-lock.yaml",
@@ -1321,11 +1473,16 @@
       ],
       "test_or_gate": "CHK-TS-REPO-001",
       "actual_test_files": [],
-      "execution_evidence": "docs/p1/evidence/validation.json",
-      "remaining_acceptance": "Artifacts exist; fresh PostgreSQL migration/seed, OCI build/recovery or connected repository evidence is still required.",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
+      "remaining_acceptance": "Owner review/acceptance of PR #1 is pending. Technical main protection is not implemented; EXC-P1-001 explicitly records this operational limitation.",
       "followup_tasks": "IMP-P1-001",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception; docs/p1/closure/operational-exception.json#EXC-P1-001",
+      "previous_p1_status": "P1_GATE_PENDING",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_WITH_OWNER_OPERATIONAL_EXCEPTION",
+      "technical_branch_protection": "NOT_ENFORCED"
     },
     {
       "requirement_id": "TS-REPO-002",
@@ -1353,11 +1510,15 @@
       ],
       "test_or_gate": "CHK-TS-REPO-002",
       "actual_test_files": [],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TS-REPO-003",
@@ -1368,7 +1529,7 @@
       "priority": "MUST",
       "implementation_phase": "P1",
       "implementation_task": "IMP-P1-001",
-      "status": "P1_GATE_PENDING",
+      "status": "P1_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "package.json",
         "pnpm-lock.yaml",
@@ -1385,11 +1546,15 @@
       ],
       "test_or_gate": "CHK-TS-REPO-003",
       "actual_test_files": [],
-      "execution_evidence": "docs/p1/evidence/validation.json",
-      "remaining_acceptance": "Artifacts exist; fresh PostgreSQL migration/seed, OCI build/recovery or connected repository evidence is still required.",
-      "followup_tasks": "IMP-P1-001",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
+      "remaining_acceptance": "P1 images and migration path are owner-verified. Production publication/content/AI policy bindings and production promotion/reconstruction remain later-phase requirements.",
+      "followup_tasks": "Applicable P11/P13 provenance/release task in Implementation Plan v1.4; no production acceptance in P1.",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_GATE_PENDING",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TS-CICD-001",
@@ -1413,11 +1578,15 @@
       ],
       "test_or_gate": "CHK-TS-CICD-001",
       "actual_test_files": [],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "P0 mapped the engineering guard to P1; full feature/release acceptance remains in the governing later phase. No runtime implementation is claimed.",
       "followup_tasks": "IMP-P2-001; IMP-P2-002; IMP-P3-002; IMP-P11-001; IMP-P13-001",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "FUTURE_RUNTIME_ACCEPTANCE",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "NO_P1_RUNTIME_ACCEPTANCE_REQUIRED"
     },
     {
       "requirement_id": "TS-CICD-002",
@@ -1441,11 +1610,15 @@
       ],
       "test_or_gate": "CHK-TS-CICD-002",
       "actual_test_files": [],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "P0 mapped the engineering guard to P1; full feature/release acceptance remains in the governing later phase. No runtime implementation is claimed.",
       "followup_tasks": "IMP-P8-002; IMP-P9-001; IMP-P9-002",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "FUTURE_RUNTIME_ACCEPTANCE",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "NO_P1_RUNTIME_ACCEPTANCE_REQUIRED"
     },
     {
       "requirement_id": "TS-CICD-003",
@@ -1469,11 +1642,15 @@
       ],
       "test_or_gate": "CHK-TS-CICD-003",
       "actual_test_files": [],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "P0 mapped the engineering guard to P1; full feature/release acceptance remains in the governing later phase. No runtime implementation is claimed.",
       "followup_tasks": "IMP-P2-001; IMP-P2-002; IMP-P3-002; IMP-P11-001; IMP-P13-001",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "FUTURE_RUNTIME_ACCEPTANCE",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "NO_P1_RUNTIME_ACCEPTANCE_REQUIRED"
     },
     {
       "requirement_id": "TS-CICD-004",
@@ -1497,11 +1674,15 @@
       ],
       "test_or_gate": "CHK-TS-CICD-004",
       "actual_test_files": [],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "P0 mapped the engineering guard to P1; full feature/release acceptance remains in the governing later phase. No runtime implementation is claimed.",
       "followup_tasks": "IMP-P8-002; IMP-P9-001; IMP-P9-002",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "FUTURE_RUNTIME_ACCEPTANCE",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "NO_P1_RUNTIME_ACCEPTANCE_REQUIRED"
     },
     {
       "requirement_id": "AI-BL-009",
@@ -1537,11 +1718,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d06.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "AI-BL-012",
@@ -1577,11 +1762,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-CUR-P15-T02-R03",
@@ -1602,11 +1791,15 @@
       ],
       "test_or_gate": "CHK-N-CUR-P15-T02-R03",
       "actual_test_files": [],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "P0 mapped the engineering guard to P1; full feature/release acceptance remains in the governing later phase. No runtime implementation is claimed.",
       "followup_tasks": "IMP-P2-001; IMP-P2-002; IMP-P3-002; IMP-P11-001; IMP-P13-001",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "FUTURE_RUNTIME_ACCEPTANCE",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "NO_P1_RUNTIME_ACCEPTANCE_REQUIRED"
     },
     {
       "requirement_id": "CUR-BL-009",
@@ -1642,11 +1835,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d06.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "CUR-BL-012",
@@ -1682,11 +1879,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-CUR-P19-T03-R05",
@@ -1715,11 +1916,15 @@
         "tests/unit/config.test.ts",
         "tests/unit/secrets.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-FS-P18-T02-R04",
@@ -1748,11 +1953,15 @@
         "tests/unit/config.test.ts",
         "tests/unit/secrets.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "FS-BL-009",
@@ -1788,11 +1997,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d06.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "FS-BL-012",
@@ -1828,11 +2041,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-FS-P24-T03-R05",
@@ -1861,11 +2078,15 @@
         "tests/unit/config.test.ts",
         "tests/unit/secrets.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-REF-P24-T01-R10",
@@ -1901,11 +2122,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "REF-BL-009",
@@ -1941,11 +2166,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d06.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "REF-BL-012",
@@ -1981,11 +2210,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-REF-P29-T02-R05",
@@ -2014,11 +2247,15 @@
         "tests/unit/config.test.ts",
         "tests/unit/secrets.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-TD-P05-T01-R02",
@@ -2054,11 +2291,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-TD-P05-T01-R03",
@@ -2087,11 +2328,15 @@
         "tests/unit/config.test.ts",
         "tests/unit/secrets.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-TD-P05-T01-R10",
@@ -2120,11 +2365,15 @@
         "tests/unit/config.test.ts",
         "tests/unit/secrets.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-TD-P05-T04-R02",
@@ -2153,11 +2402,15 @@
         "tests/unit/config.test.ts",
         "tests/unit/secrets.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-TD-P05-T04-R03",
@@ -2193,11 +2446,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-TD-P05-T04-R05",
@@ -2233,11 +2490,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-TD-P07-T01-R04",
@@ -2261,11 +2522,15 @@
       ],
       "test_or_gate": "CHK-N-TD-P07-T01-R04",
       "actual_test_files": [],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "P0 mapped the engineering guard to P1; full feature/release acceptance remains in the governing later phase. No runtime implementation is claimed.",
       "followup_tasks": "IMP-P2-001; IMP-P2-002; IMP-P3-002; IMP-P11-001; IMP-P13-001",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "FUTURE_RUNTIME_ACCEPTANCE",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "NO_P1_RUNTIME_ACCEPTANCE_REQUIRED"
     },
     {
       "requirement_id": "N-TD-P11-T02-R03",
@@ -2289,11 +2554,15 @@
       ],
       "test_or_gate": "CHK-N-TD-P11-T02-R03",
       "actual_test_files": [],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "P0 mapped the engineering guard to P1; full feature/release acceptance remains in the governing later phase. No runtime implementation is claimed.",
       "followup_tasks": "IMP-P2-001; IMP-P2-002; IMP-P3-002; IMP-P11-001; IMP-P13-001",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "FUTURE_RUNTIME_ACCEPTANCE",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "NO_P1_RUNTIME_ACCEPTANCE_REQUIRED"
     },
     {
       "requirement_id": "N-TD-P13-T04-R03",
@@ -2314,11 +2583,15 @@
       ],
       "test_or_gate": "CHK-N-TD-P13-T04-R03",
       "actual_test_files": [],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "P0 mapped the engineering guard to P1; full feature/release acceptance remains in the governing later phase. No runtime implementation is claimed.",
       "followup_tasks": "IMP-P8-002; IMP-P9-001; IMP-P9-002",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "FUTURE_RUNTIME_ACCEPTANCE",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "NO_P1_RUNTIME_ACCEPTANCE_REQUIRED"
     },
     {
       "requirement_id": "N-TD-P15-T01-R02",
@@ -2354,11 +2627,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-TD-P17-T01-R09",
@@ -2387,11 +2664,15 @@
         "tests/unit/config.test.ts",
         "tests/unit/secrets.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-TD-P18-T03-R04",
@@ -2427,11 +2708,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-TD-P18-T03-R08",
@@ -2460,11 +2745,15 @@
         "tests/unit/config.test.ts",
         "tests/unit/secrets.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TD-BL-009",
@@ -2500,11 +2789,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d06.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TD-BL-012",
@@ -2540,11 +2833,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-TD-P22-T03-R05",
@@ -2573,11 +2870,15 @@
         "tests/unit/config.test.ts",
         "tests/unit/secrets.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-TS-P06-T01-R04",
@@ -2613,11 +2914,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-TS-P07-T02-R02",
@@ -2646,11 +2951,15 @@
         "tests/unit/config.test.ts",
         "tests/unit/secrets.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-TS-P07-T02-R03",
@@ -2686,11 +2995,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-TS-P07-T02-R05",
@@ -2726,11 +3039,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-TS-P08-T03-R04",
@@ -2754,11 +3071,15 @@
       ],
       "test_or_gate": "CHK-N-TS-P08-T03-R04",
       "actual_test_files": [],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "P0 mapped the engineering guard to P1; full feature/release acceptance remains in the governing later phase. No runtime implementation is claimed.",
       "followup_tasks": "IMP-P2-001; IMP-P2-002; IMP-P3-002; IMP-P11-001; IMP-P13-001",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "FUTURE_RUNTIME_ACCEPTANCE",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "NO_P1_RUNTIME_ACCEPTANCE_REQUIRED"
     },
     {
       "requirement_id": "N-TS-P13-T02-R03",
@@ -2779,11 +3100,15 @@
       ],
       "test_or_gate": "CHK-N-TS-P13-T02-R03",
       "actual_test_files": [],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "P0 mapped the engineering guard to P1; full feature/release acceptance remains in the governing later phase. No runtime implementation is claimed.",
       "followup_tasks": "IMP-P2-001; IMP-P2-002; IMP-P3-002; IMP-P11-001; IMP-P13-001",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "FUTURE_RUNTIME_ACCEPTANCE",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "NO_P1_RUNTIME_ACCEPTANCE_REQUIRED"
     },
     {
       "requirement_id": "N-TS-P20-T04-R05",
@@ -2819,11 +3144,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-TS-P20-T04-R08",
@@ -2852,11 +3181,15 @@
         "tests/unit/config.test.ts",
         "tests/unit/secrets.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TS-BL-009",
@@ -2892,11 +3225,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d06.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "TS-BL-012",
@@ -2932,11 +3269,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-TS-P27-T02-R05",
@@ -2965,11 +3306,15 @@
         "tests/unit/config.test.ts",
         "tests/unit/secrets.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-FS-P14-B06-C07",
@@ -2980,7 +3325,7 @@
       "priority": "MUST",
       "implementation_phase": "P1",
       "implementation_task": "IMP-P1-002",
-      "status": "P1_FOUNDATION_PARTIAL",
+      "status": "P1_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "infra/config/runtime.ts",
         "tools/p1/scan-secrets.ts",
@@ -2998,11 +3343,15 @@
         "tests/unit/config.test.ts",
         "tests/unit/secrets.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
-      "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
+      "remaining_acceptance": "No remaining P1 runtime gate. Continue regression in later phases; no later product behavior is accepted here.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-FS-P22-B04-C03",
@@ -3013,7 +3362,7 @@
       "priority": "MUST",
       "implementation_phase": "P1",
       "implementation_task": "IMP-P1-002",
-      "status": "P1_FOUNDATION_PARTIAL",
+      "status": "P1_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "infra/config/runtime.ts",
         "tools/p1/scan-secrets.ts",
@@ -3031,11 +3380,15 @@
         "tests/unit/config.test.ts",
         "tests/unit/secrets.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
-      "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
+      "remaining_acceptance": "No remaining P1 runtime gate. Continue regression in later phases; no later product behavior is accepted here.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-REF-P24-B03-C07",
@@ -3059,11 +3412,15 @@
       ],
       "test_or_gate": "CHK-N-REF-P24-B03-C07",
       "actual_test_files": [],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "P0 mapped the engineering guard to P1; full feature/release acceptance remains in the governing later phase. No runtime implementation is claimed.",
       "followup_tasks": "IMP-P2-001; IMP-P2-002; IMP-P3-002; IMP-P11-001; IMP-P13-001",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "FUTURE_RUNTIME_ACCEPTANCE",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "NO_P1_RUNTIME_ACCEPTANCE_REQUIRED"
     },
     {
       "requirement_id": "N-TD-P23-B04-C04",
@@ -3099,11 +3456,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d06.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-TD-P23-B04-C05",
@@ -3139,11 +3500,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-TS-P19-B04-C03",
@@ -3172,11 +3537,15 @@
         "tests/unit/config.test.ts",
         "tests/unit/secrets.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-TS-P23-B04-C01",
@@ -3212,11 +3581,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-TS-P28-B08-C01",
@@ -3252,11 +3625,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-TS-P28-B09-C01",
@@ -3292,11 +3669,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d06.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-TS-P29-B05-C01",
@@ -3332,11 +3713,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-TS-P29-B05-C02",
@@ -3372,11 +3757,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-TS-P06-T02-R02",
@@ -3412,11 +3801,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Verified for the P1 foundation only. This is not acceptance of future learning/AI/release functionality.",
       "followup_tasks": "Continue enforcing this invariant in later phases",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_VERIFIED",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-TS-P06-T02-R04",
@@ -3452,11 +3845,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-TS-P06-T02-R10",
@@ -3492,11 +3889,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-TS-P06-T02-R11",
@@ -3525,11 +3926,15 @@
         "tests/unit/config.test.ts",
         "tests/unit/secrets.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-TS-P12-T03-R02",
@@ -3565,11 +3970,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d19.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-TS-P14-T03-R03",
@@ -3593,11 +4002,15 @@
       ],
       "test_or_gate": "CHK-N-TS-P14-T03-R03",
       "actual_test_files": [],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "P0 mapped the engineering guard to P1; full feature/release acceptance remains in the governing later phase. No runtime implementation is claimed.",
       "followup_tasks": "IMP-P8-002; IMP-P9-001; IMP-P9-002",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "FUTURE_RUNTIME_ACCEPTANCE",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "NO_P1_RUNTIME_ACCEPTANCE_REQUIRED"
     },
     {
       "requirement_id": "N-TS-P20-T03-R03",
@@ -3633,11 +4046,15 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
     },
     {
       "requirement_id": "N-TS-P20-T03-R05",
@@ -3673,11 +4090,26 @@
         "tests/unit/boundaries.test.ts",
         "tests/smoke/frontend.test.ts"
       ],
-      "execution_evidence": "docs/p1/evidence/validation.json",
+      "execution_evidence": "docs/p1/closure/current-validation.json",
       "remaining_acceptance": "Only the P1 foundation portion is implemented. Content, authorization, AI routing, publication, preview and production semantics remain unimplemented.",
       "followup_tasks": "Applicable later task in docs/baseline/implementation-backlog.json under Plan v1.4",
       "owner/workstream": "Platform foundation",
-      "ADR_or_exception": "docs/adr/adr-d08.md; no exception"
+      "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
+      "previous_p1_status": "P1_FOUNDATION_PARTIAL",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI; reviewed test source at exact SHA",
+      "p1_gate_status": "SATISFIED_FOR_P1_SCOPE"
+    }
+  ],
+  "closure_status": "PASS — READY FOR OWNER ACCEPTANCE",
+  "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+  "updated_at_utc": "2026-09-14T20:14:59.557532+00:00",
+  "operational_exceptions": [
+    {
+      "id": "EXC-P1-001",
+      "record": "docs/p1/closure/operational-exception.json",
+      "related_requirement": "TS-REPO-001",
+      "technical_control_status": "NOT_ENFORCED"
     }
   ]
 }

@@ -1,124 +1,90 @@
-# P1 exit evidence — NOT READY
+# P1: PASS — READY FOR OWNER ACCEPTANCE
 
-Recorded UTC: 2026-09-14T07:44:30.912293+00:00. Tested implementation commit: `49e27d071dbf6fe134cb5b4d9fc45ffad1bba426`.
-Branch: `implementation/p1-foundation`. P0 accepted by the owner; P1 authorized.
-P2 is not authorized and was not started. Implementation Plan v1.4 §8 p6 is the sole P1 exit authority.
+Updated UTC: 2026-09-14T20:14:59.557532+00:00. **Single final hosted-CI-tested SHA: `3b0a45e2c143fb538edb7a626f8c84356cdcc34f`**.
+Branch: `implementation/p1-foundation`. Owner acceptance: **PENDING**. P2: **NOT AUTHORIZED / NOT STARTED**.
 
-## Reproduction and observed commands
+## Evidence provenance
 
-The source was committed and cloned without copying node_modules or generated builds:
+The product owner explicitly verified GitHub Actions `P1 foundation` / `p1-exit` success for **push** and **pull_request** associated with this SHA. All seven required steps ran successfully and were not skipped; a P1 runtime evidence artifact was produced. This closure accepts that owner-supplied evidence and maps it to the exact Git source restored from the prior bundle.
 
-```sh
-git clone --no-local --branch implementation/p1-foundation /workspace/scratch/3a694649f683/lingvessa_p1 /workspace/scratch/3a694649f683/tmp/lingvessa_p1_final_clean_20260914
-cd /workspace/scratch/3a694649f683/tmp/lingvessa_p1_final_clean_20260914
-node tools/p1/run-validation.mjs
-```
+No GitHub connector/log download is available to this session. Run URLs/IDs, timestamps, raw logs, artifact contents and image digests were not supplied and are not invented. `closure/owner-verification.json` is an owner attestation, **not raw CI output**. The push run establishes the tested source SHA; the PR check does not independently establish a synthetic PR checkout SHA.
 
-The runner exited **1 / NOT_READY**, with the exact child commands below.
+The old local run on `49e27d071dbf6fe134cb5b4d9fc45ffad1bba426` remains unchanged in `evidence/validation.json`. Its Docker failure is historical. Current phase status is `closure/current-validation.json`; earlier NOT_READY statements in preserved historical records do not override it.
 
-| Command | Observed status | Exit code |
+## Hosted commands and results
+
+| Committed workflow command | Hosted result |
+| --- | --- |
+| `pnpm install --frozen-lockfile` | PASS — owner verified; executed, not skipped |
+| `pnpm validate:baseline` | PASS — owner verified; executed, not skipped |
+| `pnpm check` | PASS — owner verified; executed, not skipped |
+| `pnpm audit:dependencies` | PASS — owner verified; executed, not skipped |
+| `pnpm bootstrap:local` | PASS — owner verified; executed, not skipped |
+| `node --env-file=.local/runtime.env --import tsx --test tests/integration/*.test.ts` | PASS — owner verified; executed, not skipped |
+| `pnpm test:containers` | PASS — owner verified; executed, not skipped |
+
+The owner quoted `tests/integration/**/*.test.ts`; the committed workflow has `tests/integration/*.test.ts`. The exact source has one integration test file, `tests/integration/bootstrap.test.ts`; this report attributes coverage to its assertions. No additional test suite is inferred.
+
+`pnpm check` expands to Prisma generation and validation, peers, lint, TypeScript, dependency-boundary and credential-pattern checks, unit tests, four application builds and smoke tests. At this SHA it contains 14 unit tests and 4 smoke tests; the real PostgreSQL suite adds one integration test. Their hosted success is owner-verified. Exact hosted TAP output and fresh vulnerability counts are not available; only the successful audit gate is claimed.
+
+## PostgreSQL / OCI acceptance map
+
+Every conclusion below uses successful execution confirmed by the owner plus the corresponding assertion in the tested source. Full structured mapping: `closure/acceptance-map.json`.
+
+| Gate | Exact acceptance scope | Test / implementation anchor |
 | --- | --- | --- |
-| `pnpm install --frozen-lockfile` | PASS | 0 |
-| `pnpm validate:baseline` | PASS | 0 |
-| `pnpm check` | PASS | 0 |
-| `pnpm audit:dependencies` | PASS | 0 |
-| `pnpm bootstrap:local` | FAIL | 1 |
-| `node --env-file=.local/runtime.env --import tsx --test tests/integration/bootstrap.test.ts` | NOT_RUN_DEPENDENCY_FAILED | not run |
-| `pnpm test:containers` | FAIL | 1 |
+| P1-DB-START | Docker Compose starts local PostgreSQL, generates Prisma client, deploys migration and seeds. | `tools/p1/bootstrap-local.ts:29` |
+| P1-DB-VERSION | Connected server_version_num is exactly 180006 (PostgreSQL 18.6). | `tests/integration/bootstrap.test.ts:21` |
+| P1-DB-FRESH | A new isolated UTF-8 database is created from template0 and migrated; migration deploy is replayed; exactly one completed migration remains. | `tests/integration/bootstrap.test.ts:22` |
+| P1-DB-RESEED | Two migration+seed iterations succeed without duplicate fixtures; final row count is two. | `tests/integration/bootstrap.test.ts:24` |
+| P1-DB-FIXTURES | EN/CS synthetic fixture UUID, stable_code, version_code, locale and Unicode text round-trip match the files; locale and malformed UUID mutations are rejected. | `tests/integration/bootstrap.test.ts:36` |
+| P1-DB-CONFLICT | Changing persisted Czech text then reseeding is rejected instead of overwriting content. | `tests/integration/bootstrap.test.ts:45` |
+| P1-DB-RECREATE | Each integration invocation creates a fresh named isolated DB and finally drops it. Both owner-verified runs execute the test, proving independent clean-state recreation. | `tests/integration/bootstrap.test.ts:48` |
+| P1-OCI-BUILD | All four Docker targets api, worker, web, admin build; image IDs and the runtime Git SHA are written to container-build.json. | `tools/p1/containers.ts:11` |
+| P1-OCI-START | Compose starts the four compiled/standalone images from runtime config; all services become ready against the migrated local DB. | `tools/p1/containers.ts:40` |
+| P1-OCI-DEGRADED | Stopping PostgreSQL causes API and worker readiness 503 while liveness stays 200. | `tools/p1/containers.ts:43` |
+| P1-OCI-RECOVERY | Starting PostgreSQL again restores both backend readiness endpoints to 200; finally restores the DB and stops the app stack. | `tools/p1/containers.ts:48` |
+| P1-OCI-PORTABILITY | Built images run production JavaScript/Next standalone; Compose injects config without source/node_modules bind mounts. P1 local synthetic environment is intentional. | `infra/containers/Dockerfile:18` |
+| P1-CI | Owner confirms p1-exit success for push and pull_request; required steps executed and runtime artifact produced. | `.github/workflows/p1.yml:12` |
 
-Raw evidence: `evidence/validation.json`, `evidence/baseline-validation.json` and
-the complete command output copies listed in `evidence/index.json`. The report
-records durations and tested SHA; failed runtime commands are not converted to
-skipped or passed tests. The database integration command was not run in this
-fresh clone because its prerequisite failed.
+Clean-state recreation means each real integration run creates a fresh UTF-8 template0 database, migrates/seeds it and drops it in cleanup; both verified runs execute that sequence. A same-name destructive recreation loop or backup restore is not claimed. Recovery means PostgreSQL stop/start with readiness transitions; a separate application restart drill is not claimed. Docker images use production JavaScript/standalone entrypoints without host source/development-server mounts. Local synthetic configuration is the intended P1 context; no production deployment is accepted.
 
-`pnpm check` expands to the following required sequence:
+## Repository / PR / operational exception
 
-```sh
-pnpm db:generate
-pnpm db:validate
-pnpm peers check
-pnpm lint
-pnpm typecheck
-pnpm check:boundaries
-pnpm check:secrets
-pnpm test
-pnpm build
-pnpm test:smoke
-```
+The private GitHub repository is connected, with branches `main`, `implementation/p1-foundation` and tag `p0-accepted-2026-09-11`, per owner verification.
+**PR #1 — P1: engineering foundation — OPEN**, base `main`, head `implementation/p1-foundation`. Owner milestone review and acceptance are pending. This agent did not merge, push or change repository settings.
 
-## What the passing checks prove
+**Main is NOT technically protected.** `EXC-P1-001` records the owner's operational exception for the current solo-development phase. Technical protection clauses are Plan v1.4 §4.1 p4 and Technical Specification v1.7 §7 p8 (unnumbered; related TS-REPO-001). Plan §8 p6 / Appendix B p12 have no non-waivable technical-protection exit condition; Plan's approval record p13 includes accepted exceptions. The owner-locked PDFs remain unchanged. Process controls do not count as technical enforcement.
 
-- Frozen install uses exact Node 24.19.0 and pnpm 11.19.0 with the committed lockfile.
-- 26/26 governance-integrity checks pass, including the seven exact governing
-  versions, nine original owner-lock checksums and the checksum-manifest hash.
-- TypeScript, lint, peer and dependency-boundary checks pass. A negative test
-  proves framework and infrastructure imports/re-exports into domain are rejected.
-- 14 unit tests and 4 smoke tests pass. Tests cover configuration failure/redaction,
-  AI-off/budget defaults, local DB target restrictions, dependency boundaries,
-  operational probes, four compiled app processes and frontend HTML/CSS.
-- Actual API/worker processes return liveness 200 and readiness 503 when PostgreSQL
-  is unavailable, then shut down normally. Unit probes cover a healthy DB query;
-  real healthy/recovered PostgreSQL and container behavior remain unverified.
-- Prisma generates the client and validates the bootstrap schema. These checks
-  do not execute a migration or prove seed repeatability on PostgreSQL.
-- The production dependency audit reports no known vulnerabilities at execution
-  time. Exact narrow patched transitive overrides remain recorded and unsuppressed.
-- Source and reachable Git history pass the implemented credential-pattern scan;
-  frontend smoke checks inspect public bundles for server-only configuration.
-  This is bounded automated evidence, not a guarantee against every possible secret.
+Required process: implementation/* branches; PRs into main; green hosted CI before merge; no direct push, force-push or deletion of main; owner review of milestone PRs. See `closure/operational-exception.md` and `.json` for scope and residual risk. No paid GitHub upgrade is required by this closure decision.
 
 ## P1 exit checklist
 
-| Required evidence | State | Record / outstanding work |
-| --- | --- | --- |
-| Exact locked baseline and approved P1 | PASS | baseline.yml, authorization.json, integrity report |
-| Private monorepo, exact toolchain and clean install | PASS locally | Local Git repository and fresh-clone log; private remote pending |
-| CI/review and supply-chain gate definitions | PREPARED | Workflow and repository rules exist; no hosted run or applied remote protection |
-| Typed configuration and safe examples | PASS locally | Config/secret/unit checks |
-| Canonical apps/packages and dependency boundaries | PASS locally | Build, negative boundary test and HTTP smoke suite |
-| Initial migration and synthetic EN/CS seed on real DB | BLOCKED | Docker/Compose/PostgreSQL unavailable; execute IMP-P1-003 gate |
-| OCI builds and healthy/degraded/recovered stack | BLOCKED | No Docker daemon; execute IMP-P1-004 gate after 003 |
-| Complete fresh clone → install → migrate → test → build | NOT PASSED | Real migration and OCI evidence missing |
-| Handoff, requirement evidence and complete diff | DELIVERED | Current handoff, task-status.json, requirement-evidence.json, changed-files.* |
-| P2 hard stop | ENFORCED | No P2 domain features or authorization |
+- PASS: exact locked baseline and checksum integrity retained.
+- PASS: private monorepo, exact tooling, hosted clean install/quality/audit.
+- PASS: typed config, secret scan and dependency boundaries.
+- PASS: real PostgreSQL bootstrap, migration replay, seed/reseed, EN/CS integrity and negative constraints.
+- PASS: four OCI builds/start/readiness/degraded/recovery gates.
+- PASS WITH `EXC-P1-001`: repository governance; technical main protection remains absent.
+- PASS: hosted final source SHA is exactly `3b0a45e2c143fb538edb7a626f8c84356cdcc34f`; no new implementation commit created.
+- PASS: no P2 domain schema or engine implementation introduced.
+- PENDING OWNER: review/acceptance of open PR #1. No automatic merge or P2 authorization.
 
-## Trace evidence
+## Reconciliation and trace
 
-The accepted P0 plan is retained: **2453 MUST rows, 2453 traced, 0 untraced,
-0 duplicate IDs; 22 SHOULD rows separately**. No governing requirement is removed.
-The P1 status overlay has **105 distinct requirement IDs** with code/test paths:
-40 P1_FOUNDATION_PARTIAL, 36 P1_FOUNDATION_VERIFIED, 22 FUTURE_RUNTIME_ACCEPTANCE, 7 P1_GATE_PENDING.
-`task-status.json` also lists the direct governing IDs and all reverse links for
-each P1 task. A foundation status never accepts later learning, authorization,
-publication, speech, AI or release behavior.
+P1-ENV-001: **CLOSED** by hosted runtime evidence. P1-REMOTE-001: **CLOSED WITH EXC-P1-001**. Previous final/tested SHA ambiguity: **CLOSED**; `3b0a45e2c143fb538edb7a626f8c84356cdcc34f` is now the single hosted-tested source baseline.
 
-## Remaining issues and decisions
+P0 trace retained: 2453 MUST rows / 2453 traced / 0 untraced / 0 duplicate IDs, plus 22 SHOULD. Current P1 overlay: 105 IDs; 41 P1_FOUNDATION_PARTIAL, 42 P1_FOUNDATION_VERIFIED, 22 FUTURE_RUNTIME_ACCEPTANCE. Partial/future rows describe later product acceptance, not missing P1 gates. Production release provenance remains future scope.
 
-**BLOCKER P1-ENV-001:** This execution host has no Docker/Compose/PostgreSQL.
-Real migration/seed/reseed and OCI build/recovery gates cannot pass here.
-This is an execution-evidence blocker, not an architecture contradiction.
-Run the unchanged gates on a Docker-capable local/CI host with PostgreSQL 18.6.
+**BLOCKER: 0. IMPORTANT: 0.**
+**MINOR:** P1-ACTIONS-001 — non-failing Node.js action deprecation warning; P1-DEPS-001 — review three narrow patched dependency overrides when upstream resolves them. No action/dependency upgrade was made solely for the warning.
 
-**IMPORTANT P1-REMOTE-001:** No owner private GitHub repository/remote was supplied
-or connected. Branch history and CI/protection artifacts are delivered, but no PR,
-hosted CI result or applied protection is claimed. Connect an owner-controlled
-private remote and apply the proposed rules before shared development/review.
+No new architecture decision. Thirteen future owner choices OD-002–OD-014 remain; none blocks P1 acceptance. OD-002 is due before P2 identity acceptance, not authorization to start P2 now.
 
-**MINOR P1-DEPS-001:** Three narrow patched transitive overrides require review
-when their upstream dependencies update; remove them only with fresh compatibility
-and advisory evidence. No current advisory is suppressed.
+## Delivery and exact next action
 
-No new architecture decision or spec exception is required for P1. OD-001 initial
-pins are resolved. Thirteen source-backed future owner decisions (OD-002–OD-014)
-remain in `docs/baseline/open-decisions.*`; none is silently decided or moved ahead.
-OD-002 authentication details are due before P2 identity acceptance.
+The Git bundle remains at `3b0a45e2c143fb538edb7a626f8c84356cdcc34f`. Updated handoff/trace/exception/evidence files are delivered as an explicit **closure metadata overlay**, separate from the immutable tested Git snapshot. They do not create another allegedly tested commit. The archive contains the complete current repository-ready tree, tested Git history, overlay patch and checksum manifest. All non-document source bytes match `3b0a45e2c143fb538edb7a626f8c84356cdcc34f`.
 
-## Exact next task and phase stop
+Local reconciliation commands and results are recorded in `closure/local-reconciliation-validation.json`; they validate document consistency, source hashes and package boundaries, not new DB/OCI executions.
 
-Continue **IMP-P1-003** on the required runtime host: run `pnpm bootstrap:local`,
-then `node --env-file=.local/runtime.env --import tsx --test tests/integration/bootstrap.test.ts`.
-After it passes, complete **IMP-P1-004** using `pnpm test:containers` and capture
-the full fresh-clone runner result. Connect the private remote/review gate.
-Update this evidence and the handoff; obtain owner P1 acceptance.
-**Do not start IMP-P2-001 or any P2 work without separate owner approval.**
+**Owner:** review PR #1 and this closure record; accept P1 if satisfied. Keep the tested SHA unchanged for that acceptance. If the closure overlay is committed into the branch, that new commit must receive the required hosted checks before it is treated as a new tested head. Do not merge automatically. **STOP before P2; await separate explicit owner authorization.**

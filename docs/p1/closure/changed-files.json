@@ -1,0 +1,77 @@
+{
+  "baseline_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+  "recorded_at_utc": "2026-09-14T20:17:45.413674+00:00",
+  "delivery_form": "Uncommitted closure metadata overlay; tested Git HEAD unchanged",
+  "created": 10,
+  "modified": 6,
+  "deleted": 0,
+  "files": [
+    {
+      "change": "M",
+      "path": "00_CONTEXT/01_implementation_state_and_handoff.md"
+    },
+    {
+      "change": "M",
+      "path": "README.md"
+    },
+    {
+      "change": "M",
+      "path": "docs/baseline/baseline.yml"
+    },
+    {
+      "change": "A",
+      "path": "docs/p1/closure/README.md"
+    },
+    {
+      "change": "A",
+      "path": "docs/p1/closure/acceptance-map.json"
+    },
+    {
+      "change": "A",
+      "path": "docs/p1/closure/changed-files.json"
+    },
+    {
+      "change": "A",
+      "path": "docs/p1/closure/changed-files.md"
+    },
+    {
+      "change": "A",
+      "path": "docs/p1/closure/current-validation.json"
+    },
+    {
+      "change": "A",
+      "path": "docs/p1/closure/local-reconciliation-validation.json"
+    },
+    {
+      "change": "A",
+      "path": "docs/p1/closure/operational-exception.json"
+    },
+    {
+      "change": "A",
+      "path": "docs/p1/closure/operational-exception.md"
+    },
+    {
+      "change": "A",
+      "path": "docs/p1/closure/owner-verification.json"
+    },
+    {
+      "change": "A",
+      "path": "docs/p1/closure/validate.py"
+    },
+    {
+      "change": "M",
+      "path": "docs/p1/exit-evidence.md"
+    },
+    {
+      "change": "M",
+      "path": "docs/p1/requirement-evidence.json"
+    },
+    {
+      "change": "M",
+      "path": "docs/p1/task-status.json"
+    }
+  ],
+  "runtime_code_changes": 0,
+  "governing_pdf_changes": 0,
+  "new_implementation_commits": 0
+}

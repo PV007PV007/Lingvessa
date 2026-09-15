@@ -1,7 +1,7 @@
 {
   "phase": "P1",
-  "status": "NOT_READY",
-  "updated_at_utc": "2026-09-14T07:44:30.912293+00:00",
+  "status": "PASS — READY FOR OWNER ACCEPTANCE",
+  "updated_at_utc": "2026-09-14T20:14:59.557532+00:00",
   "execution_authority": "Implementation Plan v1.4 §8 p6 and Appendix B p12",
   "authored_order": [
     "IMP-P1-001",
@@ -9,14 +9,14 @@
     "IMP-P1-003",
     "IMP-P1-004"
   ],
-  "acceptance_note": "Source preparation followed 001→002→003→004. The unexecuted 003 runtime gate means neither 003 nor downstream 004 is accepted complete.",
-  "tested_code_commit": "49e27d071dbf6fe134cb5b4d9fc45ffad1bba426",
+  "acceptance_note": "All P1 runtime steps are now owner-verified as non-skipped hosted successes on the same final SHA. Source order remains 001→002→003→004. Technical main protection has a recorded owner exception.",
+  "tested_code_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
   "p2_authorized": false,
   "tasks": [
     {
       "task_id": "IMP-P1-001",
       "title": "Private monorepo and exact toolchain",
-      "status": "LOCAL_VERIFIED_REMOTE_REVIEW_PENDING",
+      "status": "PASS_WITH_OWNER_OPERATIONAL_EXCEPTION",
       "direct_requirement_ids": [
         "TS-TECH-001",
         "TS-TECH-002",
@@ -33,14 +33,16 @@
         "TS-REPO-002",
         "TS-REPO-003"
       ],
-      "implemented_evidence": "Pinned workspace and local Git history; frozen install, peers, lint, types, unit/build, dependency and source/history secret checks pass.",
-      "remaining_exit_evidence": "Connect the owner private GitHub remote, apply main protection and execute the review/CI gate; no external PR exists.",
-      "test_report": "docs/p1/evidence/validation.json"
+      "implemented_evidence": "Private GitHub source, PR #1 open and hosted push/PR checks passed; clean install/quality/audit accepted. Technical main protection absent under EXC-P1-001.",
+      "remaining_exit_evidence": "None for P1 readiness under the recorded exception. Milestone owner acceptance/PR review remains pending.",
+      "test_report": "docs/p1/closure/current-validation.json",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI_AND_SOURCE_ASSERTIONS"
     },
     {
       "task_id": "IMP-P1-002",
       "title": "Typed runtime configuration and safe defaults",
-      "status": "LOCAL_VERIFIED",
+      "status": "PASS_OWNER_VERIFIED_HOSTED",
       "direct_requirement_ids": [
         "TS-ENV-001",
         "TS-ENV-002",
@@ -82,14 +84,16 @@
         "N-TS-P19-B04-C03",
         "N-TS-P06-T02-R11"
       ],
-      "implemented_evidence": "Shared config is fail closed; invalid config is redacted; AI flags cannot activate P8/P9 functionality; paid inference false and paid budget zero.",
-      "remaining_exit_evidence": "Keep the same configuration checks in the pending OCI gate; future consent/routing contracts are not implemented in P1.",
-      "test_report": "docs/p1/evidence/validation.json"
+      "implemented_evidence": "Shared typed configuration and no-secret/AI-off/budget-zero checks pass in hosted quality; compiled containers start with runtime-injected config.",
+      "remaining_exit_evidence": "None for P1 readiness under the recorded exception. Milestone owner acceptance/PR review remains pending.",
+      "test_report": "docs/p1/closure/current-validation.json",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI_AND_SOURCE_ASSERTIONS"
     },
     {
       "task_id": "IMP-P1-003",
       "title": "PostgreSQL bootstrap and synthetic bilingual fixtures",
-      "status": "PREPARED_RUNTIME_GATE_BLOCKED",
+      "status": "PASS_OWNER_VERIFIED_HOSTED",
       "direct_requirement_ids": [
         "TS-TECH-003",
         "TS-REPO-001",
@@ -100,14 +104,16 @@
       "overlay_requirement_ids": [
         "TS-TECH-003"
       ],
-      "implemented_evidence": "Prisma generate/validate and local database target guards pass; migration, seed and real PostgreSQL integration test are written.",
-      "remaining_exit_evidence": "Run bootstrap/migrate/seed/reseed and real PostgreSQL integration on Docker/Compose + PostgreSQL 18.6. This host has neither runtime.",
-      "test_report": "docs/p1/evidence/validation.json"
+      "implemented_evidence": "Hosted bootstrap plus real PostgreSQL 18.6 integration passes: fresh template0 database, repeated migrations/seed, exact EN/CS fixtures, constraint negatives, conflicting seed rejection and cleanup.",
+      "remaining_exit_evidence": "None for P1 readiness under the recorded exception. Milestone owner acceptance/PR review remains pending.",
+      "test_report": "docs/p1/closure/current-validation.json",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI_AND_SOURCE_ASSERTIONS"
     },
     {
       "task_id": "IMP-P1-004",
       "title": "Canonical apps/packages, operational probes and OCI",
-      "status": "PREPARED_LOCAL_VERIFIED_OCI_GATE_BLOCKED",
+      "status": "PASS_OWNER_VERIFIED_HOSTED",
       "direct_requirement_ids": [
         "TS-ARCH-001",
         "TS-MOD-001",
@@ -186,10 +192,14 @@
         "N-TS-P20-T03-R03",
         "N-TS-P20-T03-R05"
       ],
-      "implemented_evidence": "Four app builds, dependency boundaries, live/readiness behavior and HTTP/CSS smoke checks pass locally. OCI recipes and recovery gate are prepared.",
-      "remaining_exit_evidence": "After IMP-P1-003 passes, build and start all four OCI targets and verify healthy/degraded/recovered DB readiness. No image build, push or remote deployment is claimed.",
-      "test_report": "docs/p1/evidence/validation.json"
+      "implemented_evidence": "All four OCI targets build and start; ready 200, DB outage => backend ready 503/live 200, DB restart => ready 200. Package boundaries remain enforced.",
+      "remaining_exit_evidence": "None for P1 readiness under the recorded exception. Milestone owner acceptance/PR review remains pending.",
+      "test_report": "docs/p1/closure/current-validation.json",
+      "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+      "evidence_basis": "OWNER_VERIFIED_HOSTED_CI_AND_SOURCE_ASSERTIONS"
     }
   ],
-  "next_task": "IMP-P1-003: execute real local PostgreSQL migration/seed/reseed/integration, then IMP-P1-004 OCI build/start/degrade/recover gates."
+  "next_task": "Owner reviews PR #1 and this closure package, accepts P1 if satisfied; no automatic merge or P2 authorization.",
+  "owner_acceptance": "PENDING",
+  "current_evidence": "docs/p1/closure/current-validation.json"
 }

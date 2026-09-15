@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0",
+  "record_id": "OWNER-P1-HOSTED-2026-09-14",
+  "recorded_at_utc": "2026-09-14T20:14:59.557532+00:00",
+  "evidence_type": "OWNER_VERIFIED_ATTESTATION",
+  "authority": "Explicit product-owner message in this conversation",
+  "independent_github_log_inspection": false,
+  "repository": {
+    "provider": "GitHub",
+    "visibility": "PRIVATE",
+    "connected": true,
+    "url": null,
+    "url_note": "Owner confirms connection; repository URL not supplied and no GitHub connector is exposed to this implementation session.",
+    "branches": [
+      "main",
+      "implementation/p1-foundation"
+    ],
+    "tags": [
+      "p0-accepted-2026-09-11"
+    ]
+  },
+  "pull_request": {
+    "number": 1,
+    "title": "P1: engineering foundation",
+    "base": "main",
+    "head": "implementation/p1-foundation",
+    "state": "OPEN",
+    "url": null,
+    "merge_authorized": false,
+    "merged_by_this_agent": false
+  },
+  "hosted_ci": {
+    "workflow": "P1 foundation",
+    "job": "p1-exit",
+    "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+    "events": [
+      {
+        "event": "push",
+        "result": "SUCCESS",
+        "subject_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+        "run_id": null,
+        "run_url": null
+      },
+      {
+        "event": "pull_request",
+        "result": "SUCCESS",
+        "subject_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+        "run_id": null,
+        "run_url": null
+      }
+    ],
+    "all_required_steps_executed": true,
+    "skipped_required_steps": false,
+    "runtime_artifact_produced": true,
+    "runtime_artifact_downloaded_here": false,
+    "runtime_artifact_id": null,
+    "runtime_artifact_digest": null,
+    "checkout_note": "The owner verifies successful hosted checks for this SHA. The push run establishes the tested source baseline. Do not infer the PR synthetic merge SHA or runtime artifact contents from a check attached to the PR head."
+  },
+  "branch_protection": {
+    "technically_enforced": false,
+    "reason": "Current owner GitHub plan does not enforce branch protection/rulesets for this private repository.",
+    "owner_decision": "Keep private; do not buy Pro/Team solely for protection in the current solo-development phase.",
+    "accepted_exception": "EXC-P1-001"
+  },
+  "node_actions_warning": {
+    "reported": true,
+    "check_failed": false,
+    "severity": "MINOR",
+    "affected_actions": null,
+    "rule": "No dependency/action churn solely to silence a non-failing warning."
+  },
+  "provenance_limits": [
+    "No repository URL, workflow run ID/URL, exact hosted timestamps, raw logs or artifact/image digests were supplied.",
+    "Those identifiers and raw outputs are not fabricated; successful execution is attributed to the owner, and acceptance coverage is mapped to assertions in the exact tested Git source.",
+    "No new runtime checks were executed in this reconciliation batch."
+  ],
+  "commands": [
+    {
+      "id": "frozen-install",
+      "workflow_command": "pnpm install --frozen-lockfile",
+      "owner_reported_command": "pnpm install --frozen-lockfile",
+      "result": "SUCCESS",
+      "executed": true,
+      "skipped": false,
+      "raw_log": null,
+      "duration_ms": null
+    },
+    {
+      "id": "baseline-integrity",
+      "workflow_command": "pnpm validate:baseline",
+      "owner_reported_command": "pnpm validate:baseline",
+      "result": "SUCCESS",
+      "executed": true,
+      "skipped": false,
+      "raw_log": null,
+      "duration_ms": null
+    },
+    {
+      "id": "quality",
+      "workflow_command": "pnpm check",
+      "owner_reported_command": "pnpm check",
+      "result": "SUCCESS",
+      "executed": true,
+      "skipped": false,
+      "raw_log": null,
+      "duration_ms": null
+    },
+    {
+      "id": "dependency-audit",
+      "workflow_command": "pnpm audit:dependencies",
+      "owner_reported_command": "pnpm audit:dependencies",
+      "result": "SUCCESS",
+      "executed": true,
+      "skipped": false,
+      "raw_log": null,
+      "duration_ms": null
+    },
+    {
+      "id": "postgres-bootstrap",
+      "workflow_command": "pnpm bootstrap:local",
+      "owner_reported_command": "pnpm bootstrap:local",
+      "result": "SUCCESS",
+      "executed": true,
+      "skipped": false,
+      "raw_log": null,
+      "duration_ms": null
+    },
+    {
+      "id": "database-integration",
+      "workflow_command": "node --env-file=.local/runtime.env --import tsx --test tests/integration/*.test.ts",
+      "owner_reported_command": "node --env-file=.local/runtime.env --import tsx --test tests/integration/**/*.test.ts",
+      "result": "SUCCESS",
+      "executed": true,
+      "skipped": false,
+      "raw_log": null,
+      "duration_ms": null
+    },
+    {
+      "id": "container-build-and-recovery",
+      "workflow_command": "pnpm test:containers",
+      "owner_reported_command": "pnpm test:containers",
+      "result": "SUCCESS",
+      "executed": true,
+      "skipped": false,
+      "raw_log": null,
+      "duration_ms": null
+    }
+  ],
+  "command_reconciliation": "The committed workflow uses tests/integration/*.test.ts; the owner quotes **/*.test.ts. The exact tested source contains one integration file, tests/integration/bootstrap.test.ts. Coverage below refers to that real file, not an invented additional suite."
+}
