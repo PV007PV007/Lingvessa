@@ -76,7 +76,9 @@ test('P2 real PostgreSQL: identity, DB isolation, immutable publication and recr
       await sqlReject(db, 'UPDATE user_courses SET course_id=$1,selected_lesson_id=NULL WHERE language_profile_id=$2', [entity(cs, 'course').id, enProfile], '23514');
       await sqlReject(db, 'INSERT INTO user_courses(id,user_id,language_profile_id,language_id,course_id) VALUES($1,$2,$3,$4,$5)', [randomUUID(), strangerId, csProfile, languageIds.cs, entity(cs, 'course').id]);
       await sqlReject(db, 'UPDATE item_knowledge_map SET knowledge_item_id=$1 WHERE item_id=$2', [entity(cs, 'knowledge').id, entity(en, 'activity').id]);
-      await sqlReject(db, 'UPDATE knowledge_edges SET to_id=$1 WHERE language_id=$2', [entity(cs, 'knowledge').id, languageIds.en]);
+      await sqlReject(db, `INSERT INTO knowledge_edges(id,language_id,from_id,to_id,edge_type,direction,weight,version_code,review_status,provenance)
+        VALUES($1,$2,$3,$4,'component','directed',1,'p2-negative-cross-language','draft','{}')`,
+        [randomUUID(), languageIds.en, entity(en, 'knowledge').id, entity(cs, 'knowledge').id]);
       await sqlReject(db, 'UPDATE content_version_refs SET target_entity_id=$1,target_version_id=$2 WHERE source_version_id=$3', [entity(cs, 'module').id, entity(cs, 'module').version_id, entity(en, 'level').version_id]);
       await sqlReject(db, 'UPDATE item_knowledge_map SET skill=$1,facet=$2 WHERE item_id=$3', ['speaking', 'interaction_goal', entity(en, 'activity').id], '23514');
       await sqlReject(db, 'UPDATE item_knowledge_map SET facet=$1 WHERE item_id=$2', ['intelligibility', entity(en, 'activity').id]);
