@@ -72,7 +72,7 @@ test('P2 real PostgreSQL: identity, DB isolation, immutable publication and recr
       await sqlReject(db, 'UPDATE language_profiles SET variant_id=(SELECT id FROM variants WHERE code=$1) WHERE id=$2', ['cs-CZ', enProfile]);
       await db.query(`INSERT INTO user_courses(id,user_id,language_profile_id,language_id,course_id,selected_lesson_id) VALUES($1,$2,$3,$4,$5,$6)`, [randomUUID(), learnerId, enProfile, languageIds.en, entity(en, 'course').id, entity(en, 'lesson').id]);
       await sqlReject(db, 'UPDATE user_courses SET selected_lesson_id=$1 WHERE language_profile_id=$2', [entity(cs, 'lesson').id, enProfile], '23514');
-      await sqlReject(db, 'UPDATE user_courses SET course_id=$1,selected_lesson_id=NULL WHERE language_profile_id=$2', [entity(cs, 'course').id, enProfile]);
+      await sqlReject(db, 'UPDATE user_courses SET course_id=$1,selected_lesson_id=NULL WHERE language_profile_id=$2', [entity(cs, 'course').id, enProfile], '23514');
       await sqlReject(db, 'INSERT INTO user_courses(id,user_id,language_profile_id,language_id,course_id) VALUES($1,$2,$3,$4,$5)', [randomUUID(), strangerId, enProfile, languageIds.en, entity(en, 'course').id]);
       await sqlReject(db, 'UPDATE item_knowledge_map SET knowledge_item_id=$1 WHERE item_id=$2', [entity(cs, 'knowledge').id, entity(en, 'activity').id]);
       await sqlReject(db, 'UPDATE knowledge_edges SET to_id=$1 WHERE language_id=$2', [entity(cs, 'knowledge').id, languageIds.en]);
