@@ -1,0 +1,162 @@
+{
+  "base": "a37872bb87ff886a568e44aafcb9b0963e346651",
+  "files": [
+    {
+      "path": ".github/workflows/p2.yml",
+      "change": "added"
+    },
+    {
+      "path": "00_CONTEXT/01_implementation_state_and_handoff.md",
+      "change": "modified"
+    },
+    {
+      "path": "apps/api/src/app.ts",
+      "change": "modified"
+    },
+    {
+      "path": "apps/api/src/foundation.ts",
+      "change": "added"
+    },
+    {
+      "path": "apps/api/src/main.ts",
+      "change": "modified"
+    },
+    {
+      "path": "content/fixtures/p2/cs-m01.json",
+      "change": "added"
+    },
+    {
+      "path": "content/fixtures/p2/en-m01.json",
+      "change": "added"
+    },
+    {
+      "path": "docs/p2/P2_exit_evidence.md",
+      "change": "added"
+    },
+    {
+      "path": "docs/p2/authorization.json",
+      "change": "added"
+    },
+    {
+      "path": "docs/p2/changed-files.json",
+      "change": "added"
+    },
+    {
+      "path": "docs/p2/evidence/validation-index.json",
+      "change": "added"
+    },
+    {
+      "path": "docs/p2/requirement-evidence.json",
+      "change": "added"
+    },
+    {
+      "path": "docs/p2/source-verification.json",
+      "change": "added"
+    },
+    {
+      "path": "docs/p2/task-status.json",
+      "change": "added"
+    },
+    {
+      "path": "infra/local/database-guard.ts",
+      "change": "modified"
+    },
+    {
+      "path": "infra/persistence/content.ts",
+      "change": "added"
+    },
+    {
+      "path": "infra/persistence/database.ts",
+      "change": "added"
+    },
+    {
+      "path": "infra/persistence/fixtures.ts",
+      "change": "added"
+    },
+    {
+      "path": "infra/persistence/identity.ts",
+      "change": "added"
+    },
+    {
+      "path": "infra/security/passwords.ts",
+      "change": "added"
+    },
+    {
+      "path": "package.json",
+      "change": "modified"
+    },
+    {
+      "path": "packages/activity-schemas/mastery-registry.json",
+      "change": "added"
+    },
+    {
+      "path": "packages/activity-schemas/src/content.ts",
+      "change": "added"
+    },
+    {
+      "path": "packages/activity-schemas/src/index.ts",
+      "change": "modified"
+    },
+    {
+      "path": "packages/application/src/content.ts",
+      "change": "added"
+    },
+    {
+      "path": "packages/application/src/index.ts",
+      "change": "modified"
+    },
+    {
+      "path": "packages/content-tools/src/fixture.ts",
+      "change": "added"
+    },
+    {
+      "path": "packages/content-tools/src/index.ts",
+      "change": "modified"
+    },
+    {
+      "path": "packages/domain/src/identity.ts",
+      "change": "added"
+    },
+    {
+      "path": "packages/domain/src/index.ts",
+      "change": "modified"
+    },
+    {
+      "path": "prisma/migrations/202609150001_p2_foundation/migration.sql",
+      "change": "added"
+    },
+    {
+      "path": "prisma/schema.prisma",
+      "change": "modified"
+    },
+    {
+      "path": "tests/integration/bootstrap.test.ts",
+      "change": "modified"
+    },
+    {
+      "path": "tests/integration/p2-foundation.test.ts",
+      "change": "added"
+    },
+    {
+      "path": "tests/unit/p2-content.test.ts",
+      "change": "added"
+    },
+    {
+      "path": "tools/governance/validate_p2_baseline.py",
+      "change": "added"
+    },
+    {
+      "path": "tools/p2/benchmark-passwords.ts",
+      "change": "added"
+    },
+    {
+      "path": "tools/p2/sql-diagnostics.ts",
+      "change": "added"
+    },
+    {
+      "path": "tools/p2/validate-fixtures.ts",
+      "change": "added"
+    }
+  ],
+  "deleted": []
+}

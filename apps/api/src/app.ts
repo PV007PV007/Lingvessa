@@ -2,6 +2,9 @@ import 'reflect-metadata';
 import { Controller, Get, Header, Inject, Module, ServiceUnavailableException } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import type { HealthProbe } from '../../../infra/health/probe.js';
+import type { IdentityRepository } from '../../../infra/persistence/identity.js';
+import type { ContentRepository } from '../../../infra/persistence/content.js';
+import { AuthController, ProfileController, CatalogController, FoundationExceptionFilter, IDENTITY, CONTENT } from './foundation.js';
 
 const PROBE = Symbol('P1_HEALTH_PROBE');
 
@@ -22,11 +25,13 @@ class HealthController {
   }
 }
 
-export async function createApi(probe: HealthProbe) {
-  @Module({ controllers: [HealthController], providers: [{ provide: PROBE, useValue: probe }] })
+export async function createApi(probe: HealthProbe, foundation?: { identity: IdentityRepository; content: ContentRepository }) {
+  @Module({ controllers: [HealthController, ...(foundation ? [AuthController, ProfileController, CatalogController] : [])],
+    providers: [{ provide: PROBE, useValue: probe }, ...(foundation ? [{ provide: IDENTITY, useValue: foundation.identity }, { provide: CONTENT, useValue: foundation.content }] : [])] })
   class P1Module {}
   const app = await NestFactory.create(P1Module, { logger: false, abortOnError: false });
   app.setGlobalPrefix('api/v1');
+  app.useGlobalFilters(new FoundationExceptionFilter());
   app.getHttpAdapter().getInstance().disable('x-powered-by');
   return app;
 }

@@ -1,0 +1,280 @@
+{
+  "fixture_version": "p2-reference-metadata-1",
+  "source_document": "Reference Module Design v1.6 §§4-5/12",
+  "scope": "P2 schema/loading fixtures only: four lesson identifiers + recap and representative knowledge/activity metadata. Full executable M01 lessons and media remain P6/P7.",
+  "language": "cs",
+  "language_id": "0198f000-0000-7000-8000-000000000002",
+  "entities": [
+    {
+      "id": "349833ef-8b11-4851-8cf5-024dd5cb9a04",
+      "stable_code": "C-COURSE",
+      "kind": "course",
+      "title": "Čeština",
+      "version_id": "bbf40651-216f-4753-98ad-498a96a84bd6",
+      "version_code": "p2-schema-1",
+      "variety_scope": "cs-CZ",
+      "metadata": {}
+    },
+    {
+      "id": "a179cca7-cae3-4c53-b4cb-039edc292a79",
+      "stable_code": "C-A1",
+      "kind": "level",
+      "title": "A1",
+      "version_id": "c6eec096-db33-4596-acd5-d4f70ac51c54",
+      "version_code": "p2-schema-1",
+      "variety_scope": "cs-CZ",
+      "metadata": {
+        "cefr": "A1",
+        "position": 0
+      },
+      "parent_id": "349833ef-8b11-4851-8cf5-024dd5cb9a04"
+    },
+    {
+      "id": "05c65d47-983a-4f91-a5a4-c1bca2556843",
+      "stable_code": "C-A1-M01",
+      "kind": "module",
+      "title": "Dobrý den!",
+      "version_id": "e0c91d1a-824b-4c6b-9e26-baf69e7f137f",
+      "version_code": "p2-schema-1",
+      "variety_scope": "cs-CZ",
+      "metadata": {
+        "position": 0
+      },
+      "parent_id": "a179cca7-cae3-4c53-b4cb-039edc292a79"
+    },
+    {
+      "id": "b1eaa2c7-28e1-4d49-87b5-ec7357de88d9",
+      "stable_code": "C-A1-M01-L01",
+      "kind": "lesson",
+      "title": "Dobrý den!",
+      "version_id": "bac1d5d7-0629-4314-9b7a-54d70b615e51",
+      "version_code": "p2-schema-1",
+      "variety_scope": "cs-CZ",
+      "metadata": {
+        "position": 0,
+        "unit_kind": "lesson"
+      },
+      "parent_id": "05c65d47-983a-4f91-a5a4-c1bca2556843"
+    },
+    {
+      "id": "a7fee283-eca2-4c10-9a55-e747d7573f28",
+      "stable_code": "C-A1-M01-L02",
+      "kind": "lesson",
+      "title": "Jsem / jste / jsi",
+      "version_id": "3b45d13f-07bc-4f73-a564-0c707ff89bca",
+      "version_code": "p2-schema-1",
+      "variety_scope": "cs-CZ",
+      "metadata": {
+        "position": 1,
+        "unit_kind": "lesson"
+      },
+      "parent_id": "05c65d47-983a-4f91-a5a4-c1bca2556843"
+    },
+    {
+      "id": "8e9a8ea2-a9f6-4a55-a97b-25354ff05068",
+      "stable_code": "C-A1-M01-L03",
+      "kind": "lesson",
+      "title": "Odkud jste?",
+      "version_id": "96c9d685-2433-45b9-ab83-8d80de451100",
+      "version_code": "p2-schema-1",
+      "variety_scope": "cs-CZ",
+      "metadata": {
+        "position": 2,
+        "unit_kind": "lesson"
+      },
+      "parent_id": "05c65d47-983a-4f91-a5a4-c1bca2556843"
+    },
+    {
+      "id": "0abecbfe-f1ab-4fd9-a0b5-e16b26f837b6",
+      "stable_code": "C-A1-M01-L04",
+      "kind": "lesson",
+      "title": "Těší mě",
+      "version_id": "55010b74-b1cb-4e58-b6b7-18aef9ce827e",
+      "version_code": "p2-schema-1",
+      "variety_scope": "cs-CZ",
+      "metadata": {
+        "position": 3,
+        "unit_kind": "lesson"
+      },
+      "parent_id": "05c65d47-983a-4f91-a5a4-c1bca2556843"
+    },
+    {
+      "id": "abd08585-113c-4f91-a541-18ad93cd8892",
+      "stable_code": "C-A1-M01-R01",
+      "kind": "lesson",
+      "title": "První den v kurzu",
+      "version_id": "0755048c-2d6a-40f9-882d-f1a3de826183",
+      "version_code": "p2-schema-1",
+      "variety_scope": "cs-CZ",
+      "metadata": {
+        "position": 4,
+        "unit_kind": "recap"
+      },
+      "parent_id": "05c65d47-983a-4f91-a5a4-c1bca2556843"
+    },
+    {
+      "id": "5a0f2f80-c5b7-4c29-a8a2-a7d28eb0f6e1",
+      "stable_code": "CZE_K_DOBRY_DEN",
+      "kind": "knowledge",
+      "title": "Dobrý den.",
+      "version_id": "28aff649-ca6c-491b-8aba-2bea9f5b953a",
+      "version_code": "p2-schema-1",
+      "variety_scope": "cs-CZ",
+      "metadata": {
+        "knowledge_type": "chunk",
+        "canonical_form": "Dobrý den.",
+        "sense": "Dobrý den.",
+        "cefr": "A1",
+        "learning_scope": "active"
+      }
+    },
+    {
+      "id": "a7ae2b99-e64c-4c59-b031-edfd0c637250",
+      "stable_code": "CZE_K_AHOJ",
+      "kind": "knowledge",
+      "title": "Ahoj.",
+      "version_id": "d00e3dc9-c91a-4bae-8388-bcf194723797",
+      "version_code": "p2-schema-1",
+      "variety_scope": "cs-CZ",
+      "metadata": {
+        "knowledge_type": "chunk",
+        "canonical_form": "Ahoj.",
+        "sense": "Ahoj.",
+        "cefr": "A1",
+        "learning_scope": "active"
+      }
+    },
+    {
+      "id": "62a7f64e-fbd1-474a-a4b5-e75779283ee4",
+      "stable_code": "CZE_K_REPEAT",
+      "kind": "knowledge",
+      "title": "Můžete to zopakovat, prosím?",
+      "version_id": "3826e6ea-27ec-4492-82b5-739e3488e987",
+      "version_code": "p2-schema-1",
+      "variety_scope": "cs-CZ",
+      "metadata": {
+        "knowledge_type": "chunk",
+        "canonical_form": "Můžete to zopakovat, prosím?",
+        "sense": "Můžete to zopakovat, prosím?",
+        "cefr": "A1",
+        "learning_scope": "active"
+      }
+    },
+    {
+      "id": "238fc691-94c5-4d11-846e-2d335bef960b",
+      "stable_code": "CZE_K_PRON_STRESS",
+      "kind": "knowledge",
+      "title": "first-syllable stress",
+      "version_id": "33453bb6-e259-41f0-86b0-a41da0929d61",
+      "version_code": "p2-schema-1",
+      "variety_scope": "cs-CZ",
+      "metadata": {
+        "knowledge_type": "pronunciation",
+        "canonical_form": "first-syllable stress",
+        "sense": "first-syllable stress",
+        "cefr": "A1",
+        "learning_scope": "active"
+      }
+    },
+    {
+      "id": "a113420b-3fb2-42ab-a005-a54c2c08cf36",
+      "stable_code": "C-A1-M01-OUTCOME-CONTACT",
+      "kind": "outcome",
+      "title": "First contact",
+      "version_id": "73c1e491-f2ef-4238-ac20-9523a66fa51d",
+      "version_code": "p2-schema-1",
+      "variety_scope": "cs-CZ",
+      "metadata": {
+        "cefr": "A1",
+        "can_do": "Greet and use a repair phrase in a first-contact exchange.",
+        "source_reference": "Reference Module Design v1.6 §§5/12"
+      }
+    },
+    {
+      "id": "9eb07cd5-12e8-4243-a51b-63334602139e",
+      "stable_code": "C-A1-M01-L01-P2-A01",
+      "kind": "activity",
+      "title": "multiple_choice",
+      "version_id": "3f2447b5-edbd-4983-9039-923ff4d92bd2",
+      "version_code": "p2-schema-1",
+      "variety_scope": "cs-CZ",
+      "metadata": {
+        "position": 0,
+        "activity_type": "multiple_choice",
+        "response_modality": "selection"
+      },
+      "parent_id": "b1eaa2c7-28e1-4d49-87b5-ec7357de88d9"
+    },
+    {
+      "id": "cd5bd404-86e2-4e83-8de7-c578deb3f389",
+      "stable_code": "C-A1-M01-L01-P2-A02",
+      "kind": "activity",
+      "title": "classification",
+      "version_id": "f714e640-e5a0-4d59-a6cb-f2f9dadb086e",
+      "version_code": "p2-schema-1",
+      "variety_scope": "cs-CZ",
+      "metadata": {
+        "position": 1,
+        "activity_type": "classification",
+        "response_modality": "selection"
+      },
+      "parent_id": "b1eaa2c7-28e1-4d49-87b5-ec7357de88d9"
+    },
+    {
+      "id": "f2f17248-1b4c-45f6-9596-819871d1398d",
+      "stable_code": "C-A1-M01-L01-P2-A03",
+      "kind": "activity",
+      "title": "listen_repeat",
+      "version_id": "a3f82807-a7a5-4e3f-a639-6c005628930c",
+      "version_code": "p2-schema-1",
+      "variety_scope": "cs-CZ",
+      "metadata": {
+        "position": 2,
+        "activity_type": "listen_repeat",
+        "response_modality": "speech"
+      },
+      "parent_id": "b1eaa2c7-28e1-4d49-87b5-ec7357de88d9"
+    }
+  ],
+  "evidence_maps": [
+    {
+      "item_id": "9eb07cd5-12e8-4243-a51b-63334602139e",
+      "knowledge_item_id": "5a0f2f80-c5b7-4c29-a8a2-a7d28eb0f6e1",
+      "role": "practice",
+      "skill": "vocabulary",
+      "facet": "meaning",
+      "weight": 0.6
+    },
+    {
+      "item_id": "cd5bd404-86e2-4e83-8de7-c578deb3f389",
+      "knowledge_item_id": "a7ae2b99-e64c-4c59-b031-edfd0c637250",
+      "role": "practice",
+      "skill": "grammar",
+      "facet": "register",
+      "weight": 0.6
+    },
+    {
+      "item_id": "f2f17248-1b4c-45f6-9596-819871d1398d",
+      "knowledge_item_id": "238fc691-94c5-4d11-846e-2d335bef960b",
+      "role": "practice",
+      "skill": "pronunciation",
+      "facet": "pronunciation_target",
+      "weight": 0.6
+    }
+  ],
+  "knowledge_edges": [
+    {
+      "id": "1972ebd7-e6ab-4860-b7d6-e21572d5cde8",
+      "from_id": "5a0f2f80-c5b7-4c29-a8a2-a7d28eb0f6e1",
+      "to_id": "a7ae2b99-e64c-4c59-b031-edfd0c637250",
+      "edge_type": "contrast",
+      "direction": "bidirectional",
+      "weight": 1,
+      "version_code": "p2-schema-1",
+      "review_status": "approved",
+      "provenance": {
+        "source": "Reference Module Design v1.6; formal/informal greeting contrast"
+      }
+    }
+  ]
+}

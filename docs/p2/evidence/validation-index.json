@@ -1,0 +1,11 @@
+{
+  "phase": "P2",
+  "status": "PENDING",
+  "tested_commit": null,
+  "local_install": "PASS; pnpm install --frozen-lockfile",
+  "local_boundaries": "PASS; 53 modules / 69 dependencies at intermediate working tree",
+  "database_runtime": "NOT_EXECUTED_YET",
+  "container_runtime": "NOT_EXECUTED_YET",
+  "hosted_ci": "PENDING",
+  "no_inferred_runtime_evidence": true
+}

@@ -6,10 +6,10 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  schemas  = ["p1_bootstrap"]
+  schemas  = ["p1_bootstrap", "public"]
 }
 
-// Synthetic engineering probe only. No learner/domain tables exist before P2.
+// P1 synthetic probe retained. P2 domain DDL is in the additive migration.
 model BootstrapFixture {
   id           String @id @db.Uuid
   stableCode   String @map("stable_code") @db.VarChar(64)

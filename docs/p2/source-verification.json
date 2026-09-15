@@ -1,0 +1,35 @@
+{
+  "verified_at": "2026-09-15T10:02:54.855510+00:00",
+  "basis": "Direct connected GitHub integration: refs, tag object, PR #1, commit history, Actions runs and successful job steps",
+  "repository": "PV007PV007/Lingvessa",
+  "main_sha": "a37872bb87ff886a568e44aafcb9b0963e346651",
+  "main_tree": "05d543a9bc768e64130350f56d4dcc62a23648ae",
+  "tag": "p1-accepted-2026-09-15",
+  "tag_object": "8be1438433935c4bc943295ff37284be57a1abea",
+  "p1_closure_commit": "b9657db255136cd86d6a46f5b2e9ce92de5beb4e",
+  "closure_parent": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+  "pr1": {
+    "status": "MERGED",
+    "merged_at": "2026-09-15T04:44:26Z"
+  },
+  "closure_ci": [
+    {
+      "run_id": 34928484409,
+      "event": "push",
+      "conclusion": "success",
+      "updated_at": "2026-09-15T04:26:59Z"
+    },
+    {
+      "run_id": 34928486888,
+      "event": "pull_request",
+      "conclusion": "success",
+      "updated_at": "2026-09-15T04:26:27Z",
+      "job_id": 104251533796
+    }
+  ],
+  "file_materialization": {
+    "files": 213,
+    "method": "Every local blob checked against the accepted GitHub tree Git blob SHA; no ZIP/bundle authority"
+  },
+  "P2-SOURCE-001": "RESOLVED"
+}
