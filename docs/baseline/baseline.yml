@@ -12,12 +12,13 @@
       "BLOCKER": 0,
       "IMPORTANT": 0,
       "provenance": "owner-supplied manifest/package"
-    }
+    },
+    "scope_note": "Authorization in this object records the lock date only. Current phase authorization is in phase_authorization."
   },
   "p0": {
     "artifact_status": "PASS",
-    "owner_acceptance": "PENDING",
-    "p1_authorized": false,
+    "owner_acceptance": "ACCEPTED",
+    "p1_authorized": true,
     "required_owner_instruction": "P0 accepted. Proceed to P1."
   },
   "governing_documents": [
@@ -160,11 +161,37 @@
     "sha256": "9c6cb53ce2c30c1b337e57112f053751168b272bb5dfe0816404c66b812b3b73"
   },
   "repository": {
-    "exists": false,
-    "branch": null,
-    "commit_sha": null,
-    "pull_request": null,
-    "delivery": "Repository-ready file set; create/private-repository work belongs to P1."
+    "exists": true,
+    "branch": "implementation/p1-foundation",
+    "commit_sha": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+    "pull_request": {
+      "number": 1,
+      "title": "P1: engineering foundation",
+      "base": "main",
+      "head": "implementation/p1-foundation",
+      "state": "OPEN",
+      "url": null,
+      "merge_authorized": false,
+      "merged_by_this_agent": false
+    },
+    "remote": {
+      "provider": "GitHub",
+      "visibility": "PRIVATE",
+      "connected": true,
+      "url": null,
+      "url_note": "Owner confirms connection; repository URL not supplied and no GitHub connector is exposed to this implementation session.",
+      "branches": [
+        "main",
+        "implementation/p1-foundation"
+      ],
+      "tags": [
+        "p0-accepted-2026-09-11"
+      ]
+    },
+    "delivery": "Unchanged tested Git history plus complete source tree and explicit closure metadata overlay; no remote write or merge performed.",
+    "commit_sha_role": "Single final owner-verified hosted-CI-tested P1 source baseline. Closure reporting files are a separate uncommitted metadata overlay, not a new tested code commit.",
+    "technical_branch_protection": false,
+    "operational_exception": "EXC-P1-001"
   },
   "trace": {
     "matrix": "docs/baseline/requirements-trace.csv",
@@ -172,6 +199,31 @@
     "coverage_inventory": "docs/baseline/source-coverage.json",
     "task_catalog": "docs/baseline/implementation-backlog.json",
     "gates": "docs/baseline/validation-gates.json",
-    "methodology": "docs/baseline/trace-methodology.md"
+    "methodology": "docs/baseline/trace-methodology.md",
+    "matrix_role": "Accepted P0 planning snapshot. Current P1 implementation evidence is joined by requirement_id from current_status_overlay; absence from overlay means unchanged planned status.",
+    "current_status_overlay": "docs/p1/requirement-evidence.json"
+  },
+  "phase_authorization": {
+    "current_phase": "P1",
+    "owner_instruction": "P0 accepted. Proceed to P1.",
+    "record": "docs/p1/authorization.json",
+    "p2_authorized": false,
+    "p1_status": "PASS — READY FOR OWNER ACCEPTANCE",
+    "status_evidence": "docs/p1/closure/current-validation.json",
+    "p1_owner_acceptance": "PENDING"
+  },
+  "operational_exceptions": [
+    {
+      "id": "EXC-P1-001",
+      "record": "docs/p1/closure/operational-exception.json",
+      "approved_by": "Product owner",
+      "scope": "Current solo-development phase"
+    }
+  ],
+  "closure_record": {
+    "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+    "owner_verification": "docs/p1/closure/owner-verification.json",
+    "source_integrity": "docs/p1/closure/local-reconciliation-validation.json",
+    "historical_lock_exceptions_note": "The empty exceptions list inside owner_lock records 2026-09-10 only; this later operational exception does not change that historical lock or any PDF bytes."
   }
 }

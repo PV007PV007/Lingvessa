@@ -1,0 +1,175 @@
+{
+  "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+  "evidence_basis": "OWNER_VERIFIED_ATTESTATION_PLUS_SOURCE_ASSERTIONS",
+  "gates": [
+    {
+      "gate_id": "P1-DB-START",
+      "contract": "Plan §8 p6; Appendix B IMP-P1-003 p12",
+      "conclusion": "PASS_OWNER_VERIFIED",
+      "evidence_basis": "Owner-reported non-skipped hosted CI success on 3b0a45e2c143fb538edb7a626f8c84356cdcc34f plus inspected assertions in that source.",
+      "proved_scope": "Docker Compose starts local PostgreSQL, generates Prisma client, deploys migration and seeds.",
+      "source_assertion": {
+        "path": "tools/p1/bootstrap-local.ts",
+        "line": 29,
+        "anchor": "['docker', 'compose'"
+      },
+      "limits": ""
+    },
+    {
+      "gate_id": "P1-DB-VERSION",
+      "contract": "TS-TECH-003; IMP-P1-003",
+      "conclusion": "PASS_OWNER_VERIFIED",
+      "evidence_basis": "Owner-reported non-skipped hosted CI success on 3b0a45e2c143fb538edb7a626f8c84356cdcc34f plus inspected assertions in that source.",
+      "proved_scope": "Connected server_version_num is exactly 180006 (PostgreSQL 18.6).",
+      "source_assertion": {
+        "path": "tests/integration/bootstrap.test.ts",
+        "line": 21,
+        "anchor": "SHOW server_version_num"
+      },
+      "limits": ""
+    },
+    {
+      "gate_id": "P1-DB-FRESH",
+      "contract": "Plan §8 p6; IMP-P1-003",
+      "conclusion": "PASS_OWNER_VERIFIED",
+      "evidence_basis": "Owner-reported non-skipped hosted CI success on 3b0a45e2c143fb538edb7a626f8c84356cdcc34f plus inspected assertions in that source.",
+      "proved_scope": "A new isolated UTF-8 database is created from template0 and migrated; migration deploy is replayed; exactly one completed migration remains.",
+      "source_assertion": {
+        "path": "tests/integration/bootstrap.test.ts",
+        "line": 22,
+        "anchor": "CREATE DATABASE"
+      },
+      "limits": ""
+    },
+    {
+      "gate_id": "P1-DB-RESEED",
+      "contract": "Plan Appendix B IMP-P1-003 p12",
+      "conclusion": "PASS_OWNER_VERIFIED",
+      "evidence_basis": "Owner-reported non-skipped hosted CI success on 3b0a45e2c143fb538edb7a626f8c84356cdcc34f plus inspected assertions in that source.",
+      "proved_scope": "Two migration+seed iterations succeed without duplicate fixtures; final row count is two.",
+      "source_assertion": {
+        "path": "tests/integration/bootstrap.test.ts",
+        "line": 24,
+        "anchor": "for (let i = 0; i < 2; i++)"
+      },
+      "limits": ""
+    },
+    {
+      "gate_id": "P1-DB-FIXTURES",
+      "contract": "Manifest §4 P1; Plan §8 p6",
+      "conclusion": "PASS_OWNER_VERIFIED",
+      "evidence_basis": "Owner-reported non-skipped hosted CI success on 3b0a45e2c143fb538edb7a626f8c84356cdcc34f plus inspected assertions in that source.",
+      "proved_scope": "EN/CS synthetic fixture UUID, stable_code, version_code, locale and Unicode text round-trip match the files; locale and malformed UUID mutations are rejected.",
+      "source_assertion": {
+        "path": "tests/integration/bootstrap.test.ts",
+        "line": 36,
+        "anchor": "assert.equal(row.sample_text"
+      },
+      "limits": ""
+    },
+    {
+      "gate_id": "P1-DB-CONFLICT",
+      "contract": "Plan task failure/retry contract p10",
+      "conclusion": "PASS_OWNER_VERIFIED",
+      "evidence_basis": "Owner-reported non-skipped hosted CI success on 3b0a45e2c143fb538edb7a626f8c84356cdcc34f plus inspected assertions in that source.",
+      "proved_scope": "Changing persisted Czech text then reseeding is rejected instead of overwriting content.",
+      "source_assertion": {
+        "path": "tests/integration/bootstrap.test.ts",
+        "line": 45,
+        "anchor": "await assert.rejects(seedBootstrap"
+      },
+      "limits": ""
+    },
+    {
+      "gate_id": "P1-DB-RECREATE",
+      "contract": "IMP-P1-003 synthetic clean-state recreation",
+      "conclusion": "PASS_OWNER_VERIFIED",
+      "evidence_basis": "Owner-reported non-skipped hosted CI success on 3b0a45e2c143fb538edb7a626f8c84356cdcc34f plus inspected assertions in that source.",
+      "proved_scope": "Each integration invocation creates a fresh named isolated DB and finally drops it. Both owner-verified runs execute the test, proving independent clean-state recreation.",
+      "source_assertion": {
+        "path": "tests/integration/bootstrap.test.ts",
+        "line": 48,
+        "anchor": "DROP DATABASE"
+      },
+      "limits": "No same-name drop-and-recreate loop, Docker-volume destruction, backup restoration or production disaster recovery is asserted. Those are not the minimum P1 repeatable migration/seed gate."
+    },
+    {
+      "gate_id": "P1-OCI-BUILD",
+      "contract": "Plan §8 p6",
+      "conclusion": "PASS_OWNER_VERIFIED",
+      "evidence_basis": "Owner-reported non-skipped hosted CI success on 3b0a45e2c143fb538edb7a626f8c84356cdcc34f plus inspected assertions in that source.",
+      "proved_scope": "All four Docker targets api, worker, web, admin build; image IDs and the runtime Git SHA are written to container-build.json.",
+      "source_assertion": {
+        "path": "tools/p1/containers.ts",
+        "line": 11,
+        "anchor": "for (const target of ['api'"
+      },
+      "limits": "Raw artifact/image IDs have not been downloaded here; no invented digest or image publication claim."
+    },
+    {
+      "gate_id": "P1-OCI-START",
+      "contract": "Plan §8 p6; IMP-P1-004",
+      "conclusion": "PASS_OWNER_VERIFIED",
+      "evidence_basis": "Owner-reported non-skipped hosted CI success on 3b0a45e2c143fb538edb7a626f8c84356cdcc34f plus inspected assertions in that source.",
+      "proved_scope": "Compose starts the four compiled/standalone images from runtime config; all services become ready against the migrated local DB.",
+      "source_assertion": {
+        "path": "tools/p1/containers.ts",
+        "line": 40,
+        "anchor": "compose('up', '-d', '--wait')"
+      },
+      "limits": ""
+    },
+    {
+      "gate_id": "P1-OCI-DEGRADED",
+      "contract": "Plan failure behavior p10; IMP-P1-004",
+      "conclusion": "PASS_OWNER_VERIFIED",
+      "evidence_basis": "Owner-reported non-skipped hosted CI success on 3b0a45e2c143fb538edb7a626f8c84356cdcc34f plus inspected assertions in that source.",
+      "proved_scope": "Stopping PostgreSQL causes API and worker readiness 503 while liveness stays 200.",
+      "source_assertion": {
+        "path": "tools/p1/containers.ts",
+        "line": 43,
+        "anchor": "compose('stop', 'postgres')"
+      },
+      "limits": ""
+    },
+    {
+      "gate_id": "P1-OCI-RECOVERY",
+      "contract": "Plan failure/retry behavior p10; IMP-P1-004",
+      "conclusion": "PASS_OWNER_VERIFIED",
+      "evidence_basis": "Owner-reported non-skipped hosted CI success on 3b0a45e2c143fb538edb7a626f8c84356cdcc34f plus inspected assertions in that source.",
+      "proved_scope": "Starting PostgreSQL again restores both backend readiness endpoints to 200; finally restores the DB and stops the app stack.",
+      "source_assertion": {
+        "path": "tools/p1/containers.ts",
+        "line": 48,
+        "anchor": "compose('start', 'postgres')"
+      },
+      "limits": "An application-process restart loop, production deployment and backup/restore are not claimed."
+    },
+    {
+      "gate_id": "P1-OCI-PORTABILITY",
+      "contract": "TD-ENV-003; Plan §8 p6",
+      "conclusion": "PASS_OWNER_VERIFIED",
+      "evidence_basis": "Owner-reported non-skipped hosted CI success on 3b0a45e2c143fb538edb7a626f8c84356cdcc34f plus inspected assertions in that source.",
+      "proved_scope": "Built images run production JavaScript/Next standalone; Compose injects config without source/node_modules bind mounts. P1 local synthetic environment is intentional.",
+      "source_assertion": {
+        "path": "infra/containers/Dockerfile",
+        "line": 18,
+        "anchor": "ENV NODE_ENV=production HOST=0.0.0.0"
+      },
+      "limits": "Dockerfile/Compose inspection plus successful container startup support P1 portability, not production readiness."
+    },
+    {
+      "gate_id": "P1-CI",
+      "contract": "Plan §8 p6; TS-REPO-001",
+      "conclusion": "PASS_OWNER_VERIFIED",
+      "evidence_basis": "Owner-reported non-skipped hosted CI success on 3b0a45e2c143fb538edb7a626f8c84356cdcc34f plus inspected assertions in that source.",
+      "proved_scope": "Owner confirms p1-exit success for push and pull_request; required steps executed and runtime artifact produced.",
+      "source_assertion": {
+        "path": ".github/workflows/p1.yml",
+        "line": 12,
+        "anchor": "p1-exit:"
+      },
+      "limits": "Run IDs, URLs and raw GitHub logs/artifact bytes are not available in this session. PR synthetic checkout SHA is not inferred."
+    }
+  ]
+}

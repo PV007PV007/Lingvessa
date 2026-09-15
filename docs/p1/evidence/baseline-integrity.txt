@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "passed": 26,
+  "total": 26
+}
+$ python3 tools/governance/validate_p1_baseline.py

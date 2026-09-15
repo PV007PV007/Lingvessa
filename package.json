@@ -1,0 +1,60 @@
+{
+  "name": "lingvessa",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.19.0",
+  "engines": {
+    "node": "24.19.0",
+    "pnpm": "11.19.0"
+  },
+  "scripts": {
+    "preinstall": "node tools/p1/check-toolchain.mjs",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit && pnpm --filter @lingvessa/web typecheck && pnpm --filter @lingvessa/admin typecheck",
+    "test": "node --import tsx --test tests/unit/*.test.ts",
+    "build": "pnpm build:server && pnpm build:web",
+    "check": "pnpm db:generate && pnpm db:validate && pnpm peers check && pnpm lint && pnpm typecheck && pnpm check:boundaries && pnpm check:secrets && pnpm test && pnpm build && pnpm test:smoke",
+    "config:check": "node --import tsx tools/p1/config-check.ts",
+    "check:secrets": "node --import tsx tools/p1/scan-secrets.ts",
+    "db:generate": "node --import tsx tools/p1/db-command.ts generate",
+    "db:validate": "node --import tsx tools/p1/db-command.ts validate",
+    "db:migrate": "node --import tsx tools/p1/db-command.ts migrate",
+    "db:seed": "node --import tsx tools/p1/db-command.ts seed",
+    "db:status": "node --import tsx tools/p1/db-command.ts status",
+    "bootstrap:local": "node --import tsx tools/p1/bootstrap-local.ts",
+    "test:integration": "node --import tsx --test tests/integration/*.test.ts",
+    "check:boundaries": "depcruise --config .dependency-cruiser.cjs apps packages infra",
+    "build:server": "tsc -p tsconfig.build.json",
+    "build:web": "node tools/p1/build-web.mjs",
+    "build:containers": "node --import tsx tools/p1/containers.ts",
+    "test:containers": "node --import tsx tools/p1/containers.ts --smoke",
+    "audit:dependencies": "pnpm audit --prod --audit-level high",
+    "test:smoke": "node --import tsx --test tests/smoke/*.test.ts",
+    "validate:baseline": "python3 tools/governance/validate_p1_baseline.py"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "24.13.4",
+    "@types/pg": "8.23.1",
+    "dependency-cruiser": "18.2.0",
+    "eslint": "10.10.0",
+    "prisma": "7.10.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "tsx": "4.23.13",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.70.0"
+  },
+  "dependencies": {
+    "@nestjs/common": "12.0.1",
+    "@nestjs/core": "12.0.1",
+    "@nestjs/platform-express": "12.0.1",
+    "@prisma/adapter-pg": "7.10.0",
+    "@prisma/client": "7.10.0",
+    "pg": "8.23.0",
+    "reflect-metadata": "0.2.2",
+    "rxjs": "7.8.2",
+    "zod": "4.6.2"
+  }
+}

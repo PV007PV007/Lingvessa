@@ -1,21 +1,5 @@
 [
   {
-    "decision_id": "OD-001",
-    "topic": "Exact runtime/framework/tooling pins",
-    "source": "TS §40.2 ADR-002 p22; TD §35 p20",
-    "why_unresolved": "Baseline fixes Node 24 LTS/TypeScript strict/pnpm and framework families; exact compatible versions/lockfile require the P1 compatibility spike.",
-    "latest_phase": "P1 / before IMP-P1-001 gate",
-    "affected_requirements": [
-      "TS-TECH-001",
-      "TS-TECH-002",
-      "TS-TECH-004",
-      "TS-REPO-001"
-    ],
-    "default_behavior": "No unpinned implementation/toolchain is accepted; keep family/major constraints.",
-    "owner": "Platform foundation / technical owner",
-    "status": "OPEN_DEFERRED_NOT_P0_BLOCKING"
-  },
-  {
     "decision_id": "OD-002",
     "topic": "Authentication implementation details",
     "source": "TS §40.2 ADR-003 p22; TD §35 p20",

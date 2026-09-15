@@ -1,0 +1,51 @@
+{
+  "exception_id": "EXC-P1-001",
+  "type": "OPERATIONAL_LIMITATION",
+  "status": "OWNER_APPROVED",
+  "approved_date": "2026-09-14",
+  "approver": "Product owner — explicit current instruction",
+  "scope": "Current solo-development phase; private Lingvessa GitHub repository",
+  "requirement_status": "TECHNICAL_BRANCH_PROTECTION_NOT_IMPLEMENTED; accepted operational exception, not technical compliance",
+  "sources": [
+    {
+      "document": "Lingvessa_Implementation_Plan",
+      "version": "1.4",
+      "section": "4.1 Repository baseline",
+      "page": 4,
+      "requirement_id": null,
+      "clause": "Main branch protected; implementation moves through reviewed PRs/commits."
+    },
+    {
+      "document": "Lingvessa_Technical_Specification",
+      "version": "1.7",
+      "section": "7 Repository, source control and release provenance",
+      "page": 8,
+      "requirement_id": null,
+      "clause": "Protected main branch; reviewed pull requests."
+    }
+  ],
+  "trace_links": [
+    "TS-REPO-001",
+    "IMP-P1-001"
+  ],
+  "trace_note": "Protection clauses are unnumbered prose. TS-REPO-001 is the related source-control requirement, not a fabricated protection-specific requirement ID.",
+  "technical_branch_protection": false,
+  "repository_private": true,
+  "paid_plan_purchase_required": false,
+  "controls": [
+    "All implementation work uses implementation/* branches.",
+    "Changes enter main through Pull Requests.",
+    "Merge only after green hosted CI.",
+    "No direct push to main by process.",
+    "No force-push to main.",
+    "Do not delete main.",
+    "Owner reviews each milestone PR before merge."
+  ],
+  "residual_risk": "GitHub does not technically prevent bypass of these process rules; owner/admin credentials can bypass the process.",
+  "p1_disposition": "Does not block readiness for owner acceptance under this explicit owner-approved exception.",
+  "rationale": "Plan v1.4 §8 p6 and Appendix B p12 require reproducible clean-clone/install/migrate/test/build and foundational code boundaries. Neither makes technical protection a non-waivable P1 hard-exit condition. Plan Approval record p13 explicitly records accepted_exceptions. The owner grants this narrow operational exception; no product invariant, execution order or governing PDF is revised.",
+  "review_trigger": "Reassess with the owner when solo development ends, repository plan/access changes, or before public/production release review. No automatic extension to production controls.",
+  "runtime_or_schema_change": false,
+  "governing_document_change": false,
+  "p2_authorized": false
+}

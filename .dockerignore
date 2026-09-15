@@ -1,0 +1,16 @@
+node_modules
+**/node_modules
+.git
+.env
+.env.*
+.local
+artifacts
+**/.next
+**/dist
+**/*.tsbuildinfo
+prisma/generated
+01_GOVERNING_DOCUMENTS
+00_CONTEXT
+docs
+*.zip
+*.log

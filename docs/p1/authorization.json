@@ -1,0 +1,9 @@
+{
+  "phase": "P1",
+  "owner_instruction": "P0 accepted. Proceed to P1.",
+  "received_date_utc": "2026-09-11",
+  "p0_git_tag": "p0-accepted-2026-09-11",
+  "p0_commit": "eff561e",
+  "p2_authorized": false,
+  "execution_authority": "Lingvessa Implementation Plan v1.4 \u00a78, Appendix B"
+}

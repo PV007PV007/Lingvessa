@@ -1,0 +1,8 @@
+{
+  "id": "01992eaf-1000-7000-8000-000000000001",
+  "stableCode": "P1.EN.SMOKE",
+  "versionCode": "1.0.0",
+  "languageCode": "en",
+  "locale": "en-GB",
+  "sampleText": "Hello! This is a synthetic database fixture."
+}

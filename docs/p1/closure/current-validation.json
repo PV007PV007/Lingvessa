@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0",
+  "record_type": "P1_CLOSURE_RECONCILIATION_NOT_RAW_CI_LOG",
+  "recorded_at_utc": "2026-09-14T20:14:59.557532+00:00",
+  "phase": "P1",
+  "status": "PASS — READY FOR OWNER ACCEPTANCE",
+  "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+  "branch": "implementation/p1-foundation",
+  "evidence_source": "docs/p1/closure/owner-verification.json",
+  "acceptance_map": "docs/p1/closure/acceptance-map.json",
+  "hosted_ci": {
+    "workflow": "P1 foundation",
+    "job": "p1-exit",
+    "tested_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+    "events": [
+      {
+        "event": "push",
+        "result": "SUCCESS",
+        "subject_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+        "run_id": null,
+        "run_url": null
+      },
+      {
+        "event": "pull_request",
+        "result": "SUCCESS",
+        "subject_commit": "3b0a45e2c143fb538edb7a626f8c84356cdcc34f",
+        "run_id": null,
+        "run_url": null
+      }
+    ],
+    "all_required_steps_executed": true,
+    "skipped_required_steps": false,
+    "runtime_artifact_produced": true,
+    "runtime_artifact_downloaded_here": false,
+    "runtime_artifact_id": null,
+    "runtime_artifact_digest": null,
+    "checkout_note": "The owner verifies successful hosted checks for this SHA. The push run establishes the tested source baseline. Do not infer the PR synthetic merge SHA or runtime artifact contents from a check attached to the PR head."
+  },
+  "commands": [
+    {
+      "id": "frozen-install",
+      "workflow_command": "pnpm install --frozen-lockfile",
+      "owner_reported_command": "pnpm install --frozen-lockfile",
+      "result": "SUCCESS",
+      "executed": true,
+      "skipped": false,
+      "raw_log": null,
+      "duration_ms": null
+    },
+    {
+      "id": "baseline-integrity",
+      "workflow_command": "pnpm validate:baseline",
+      "owner_reported_command": "pnpm validate:baseline",
+      "result": "SUCCESS",
+      "executed": true,
+      "skipped": false,
+      "raw_log": null,
+      "duration_ms": null
+    },
+    {
+      "id": "quality",
+      "workflow_command": "pnpm check",
+      "owner_reported_command": "pnpm check",
+      "result": "SUCCESS",
+      "executed": true,
+      "skipped": false,
+      "raw_log": null,
+      "duration_ms": null
+    },
+    {
+      "id": "dependency-audit",
+      "workflow_command": "pnpm audit:dependencies",
+      "owner_reported_command": "pnpm audit:dependencies",
+      "result": "SUCCESS",
+      "executed": true,
+      "skipped": false,
+      "raw_log": null,
+      "duration_ms": null
+    },
+    {
+      "id": "postgres-bootstrap",
+      "workflow_command": "pnpm bootstrap:local",
+      "owner_reported_command": "pnpm bootstrap:local",
+      "result": "SUCCESS",
+      "executed": true,
+      "skipped": false,
+      "raw_log": null,
+      "duration_ms": null
+    },
+    {
+      "id": "database-integration",
+      "workflow_command": "node --env-file=.local/runtime.env --import tsx --test tests/integration/*.test.ts",
+      "owner_reported_command": "node --env-file=.local/runtime.env --import tsx --test tests/integration/**/*.test.ts",
+      "result": "SUCCESS",
+      "executed": true,
+      "skipped": false,
+      "raw_log": null,
+      "duration_ms": null
+    },
+    {
+      "id": "container-build-and-recovery",
+      "workflow_command": "pnpm test:containers",
+      "owner_reported_command": "pnpm test:containers",
+      "result": "SUCCESS",
+      "executed": true,
+      "skipped": false,
+      "raw_log": null,
+      "duration_ms": null
+    }
+  ],
+  "pull_request": {
+    "number": 1,
+    "title": "P1: engineering foundation",
+    "base": "main",
+    "head": "implementation/p1-foundation",
+    "state": "OPEN",
+    "url": null,
+    "merge_authorized": false,
+    "merged_by_this_agent": false
+  },
+  "accepted_operational_exceptions": [
+    "EXC-P1-001"
+  ],
+  "technical_main_protection": false,
+  "owner_acceptance": "PENDING",
+  "p2_authorized": false,
+  "historical_local_validation": {
+    "path": "docs/p1/evidence/validation.json",
+    "commit": "49e27d071dbf6fe134cb5b4d9fc45ffad1bba426",
+    "status": "NOT_READY",
+    "interpretation": "Preserved actual local run. Its environment failure is superseded for P1 closure by owner-verified hosted execution on the final SHA; original bytes are not rewritten."
+  },
+  "issues": [
+    {
+      "id": "P1-ENV-001",
+      "previous_severity": "BLOCKER",
+      "status": "CLOSED",
+      "resolution": "Owner confirms all PostgreSQL/OCI hosted steps actually passed on the final SHA."
+    },
+    {
+      "id": "P1-REMOTE-001",
+      "previous_severity": "IMPORTANT",
+      "status": "CLOSED_WITH_ACCEPTED_OPERATIONAL_EXCEPTION",
+      "resolution": "Private repository and open PR #1 with hosted CI confirmed; technical protection remains absent under EXC-P1-001"
+    },
+    {
+      "id": "P1-SHA-001",
+      "previous_severity": "IMPORTANT",
+      "status": "CLOSED",
+      "resolution": "Hosted push tests now verify 3b0a45e2c143fb538edb7a626f8c84356cdcc34f; older 49e27d071dbf6fe134cb5b4d9fc45ffad1bba426 is historical local evidence only."
+    },
+    {
+      "id": "P1-ACTIONS-001",
+      "severity": "MINOR",
+      "status": "OPEN",
+      "description": "Owner reports a non-failing Node.js deprecation warning from GitHub-maintained actions. No churn solely to remove it."
+    },
+    {
+      "id": "P1-DEPS-001",
+      "severity": "MINOR",
+      "status": "OPEN",
+      "description": "Review three exact patched transitive overrides when upstream incorporates fixes; no advisory suppressed."
+    }
+  ],
+  "remaining_blocker": 0,
+  "remaining_important": 0,
+  "provenance_note": "Owner attestation is explicitly accepted as supplied evidence. This file does not pretend to contain downloaded Actions output or new local runtime execution.",
+  "next_action": "Owner reviews PR #1 and this closure package, accepts P1 if satisfied; no automatic merge or P2 authorization."
+}

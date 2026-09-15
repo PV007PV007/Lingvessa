@@ -1,0 +1,46 @@
+{
+  "timestamp": "2026-09-14T07:44:31.545923+00:00",
+  "scope": "Documentation-only delivery integrity; source runtime evidence belongs to tested code SHA in validation.json",
+  "commands": [
+    {
+      "command": [
+        "pnpm",
+        "validate:baseline"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"passed\": 26,\n  \"total\": 26\n}\n",
+      "stderr": "$ python3 tools/governance/validate_p1_baseline.py\n"
+    },
+    {
+      "command": [
+        "pnpm",
+        "check:secrets"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"source_files\": 203,\n  \"history_blobs\": 198,\n  \"findings\": []\n}\n",
+      "stderr": "$ node --import tsx tools/p1/scan-secrets.ts\n"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "status": "PASS"
+}

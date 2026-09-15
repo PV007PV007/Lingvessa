@@ -1,0 +1,30 @@
+name: lingvessa-p1-local
+include:
+  - path: ../local/compose.yml
+services:
+  api:
+    image: lingvessa-api:${LINGVESSA_IMAGE_TAG:-p1-local}
+    environment:
+      LINGVESSA_ENV: local
+      PORT: '3000'
+      DATABASE_URL: postgresql://lingvessa_local:${LINGVESSA_LOCAL_DB_PASSWORD:?Run bootstrap first}@postgres:5432/lingvessa_p1_local
+    depends_on:
+      postgres: {condition: service_healthy}
+    ports: ['127.0.0.1:3002:3000']
+  worker:
+    image: lingvessa-worker:${LINGVESSA_IMAGE_TAG:-p1-local}
+    environment:
+      LINGVESSA_ENV: local
+      PORT: '3000'
+      DATABASE_URL: postgresql://lingvessa_local:${LINGVESSA_LOCAL_DB_PASSWORD:?Run bootstrap first}@postgres:5432/lingvessa_p1_local
+    depends_on:
+      postgres: {condition: service_healthy}
+    ports: ['127.0.0.1:3003:3000']
+  web:
+    image: lingvessa-web:${LINGVESSA_IMAGE_TAG:-p1-local}
+    environment: {LINGVESSA_ENV: local, PORT: '3000'}
+    ports: ['127.0.0.1:3000:3000']
+  admin:
+    image: lingvessa-admin:${LINGVESSA_IMAGE_TAG:-p1-local}
+    environment: {LINGVESSA_ENV: local, PORT: '3000'}
+    ports: ['127.0.0.1:3001:3000']

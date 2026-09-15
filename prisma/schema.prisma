@@ -1,0 +1,24 @@
+generator client {
+  provider     = "prisma-client"
+  output       = "./generated"
+  moduleFormat = "esm"
+}
+
+datasource db {
+  provider = "postgresql"
+  schemas  = ["p1_bootstrap"]
+}
+
+// Synthetic engineering probe only. No learner/domain tables exist before P2.
+model BootstrapFixture {
+  id           String @id @db.Uuid
+  stableCode   String @map("stable_code") @db.VarChar(64)
+  versionCode  String @map("version_code") @db.VarChar(32)
+  languageCode String @map("language_code") @db.VarChar(2)
+  locale       String @db.VarChar(16)
+  sampleText   String @map("sample_text")
+
+  @@unique([stableCode, versionCode], map: "bootstrap_fixture_code_version_key")
+  @@map("fixtures")
+  @@schema("p1_bootstrap")
+}

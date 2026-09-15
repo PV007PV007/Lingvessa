@@ -1,0 +1,35 @@
+{
+  "recorded_at_utc": "2026-09-14T20:16:47.425468+00:00",
+  "status": "PASS",
+  "scope": "Actual local closure-metadata verification only; owner supplies hosted runtime evidence",
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "docs/p1/closure/validate.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"scope\": \"Closure document/source reconciliation only; no new runtime or hosted execution\",\n  \"tested_source_commit\": \"3b0a45e2c143fb538edb7a626f8c84356cdcc34f\",\n  \"status\": \"PASS\",\n  \"checks\": [\n    {\n      \"check\": \"Git HEAD remains exact tested source SHA; no new implementation commit\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"check\": \"Every original non-document file exactly matches tested source\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"check\": \"All closure additions/changes are documentation metadata only\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"check\": \"Single current tested SHA across owner/baseline/task/trace/validation\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"check\": \"Current documents state single tested SHA and pending owner acceptance\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"check\": \"Hosted provenance is owner attestation, not fabricated raw logs\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"check\": \"Push and pull_request success recorded for tested subject\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"check\": \"Seven non-skipped commands and actual committed workflow verified\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"check\": \"Exactly one source integration test backs glob reconciliation\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"check\": \"13 acceptance anchors resolve to unchanged tested source\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"check\": \"PR remains open, unmerged and unauthorized for automatic merge\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"check\": \"Private repository + technical main protection explicitly absent\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"check\": \"Narrow explicit owner exception with all seven process controls\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"check\": \"P1 environment/remote/SHA items reconciled\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"check\": \"Only minor active debt; no remaining P1 blocker/important\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"check\": \"Full P0 planning trace preserved byte-for-byte\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"check\": \"2453 MUST and 22 SHOULD rows retained without duplicates\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"check\": \"105 P1 trace IDs retained, all current pointers valid\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"check\": \"Later runtime requirements not accepted as P1 implementation\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"check\": \"Task order unchanged and P1 readiness pending owner acceptance\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"check\": \"No P2 domain schema; placeholder engines remain unchanged\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"check\": \"No P2 authorization\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"check\": \"Seven locked PDFs and manifest/checksum preserved\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"check\": \"Original local execution evidence remains immutable history\",\n      \"status\": \"PASS\"\n    }\n  ],\n  \"passed\": 24,\n  \"total\": 24\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "tools/governance/validate_p1_baseline.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"passed\": 26,\n  \"total\": 26\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

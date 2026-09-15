@@ -1,0 +1,2 @@
+No known vulnerabilities found
+$ pnpm audit --prod --audit-level high
