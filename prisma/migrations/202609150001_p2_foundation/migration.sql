@@ -81,6 +81,7 @@ CREATE TABLE user_settings (
   timezone text NOT NULL DEFAULT 'UTC', learner_ai_opt_in boolean NOT NULL DEFAULT false,
   revision integer NOT NULL DEFAULT 1 CHECK (revision>0),
   CHECK ((active_language_profile_id IS NULL)=(active_language_id IS NULL)),
+  UNIQUE(active_language_profile_id,user_id,active_language_id),
   FOREIGN KEY(active_language_profile_id,user_id,active_language_id)
     REFERENCES language_profiles(id,user_id,language_id) ON DELETE RESTRICT
 );

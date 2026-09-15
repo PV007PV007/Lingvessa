@@ -80,6 +80,7 @@ model auth_rate_windows {
   attempts   Int
   expires_at DateTime @db.Timestamptz(6)
 
+  @@index([expires_at], map: "auth_rate_expiry")
   @@schema("public")
 }
 
@@ -245,8 +246,10 @@ model knowledge_edges {
   version_code                                                         String
   review_status                                                        String
   provenance                                                           Json
+  checksum                                                             String?                       @default(dbgenerated("p2_edge_checksum(from_id, to_id, edge_type, direction, weight, version_code, review_status, provenance)"))
   knowledge_items_knowledge_edges_from_id_language_idToknowledge_items knowledge_items @relation("knowledge_edges_from_id_language_idToknowledge_items", fields: [from_id, language_id], references: [id, language_id], onUpdate: NoAction)
   knowledge_items_knowledge_edges_to_id_language_idToknowledge_items   knowledge_items @relation("knowledge_edges_to_id_language_idToknowledge_items", fields: [to_id, language_id], references: [id, language_id], onUpdate: NoAction)
+  publication_knowledge_edges                                          publication_knowledge_edges[]
 
   @@unique([from_id, to_id, edge_type, version_code])
   @@unique([id, language_id])
@@ -295,11 +298,12 @@ model language_profiles {
 
 /// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
 model languages {
-  id                String              @id @db.Uuid
-  stable_code       String              @unique
-  content_entities  content_entities[]
-  language_profiles language_profiles[]
-  variants          variants[]
+  id                          String                        @id @db.Uuid
+  stable_code                 String                        @unique
+  content_entities            content_entities[]
+  knowledge_migration_reports knowledge_migration_reports[]
+  language_profiles           language_profiles[]
+  variants                    variants[]
 
   @@unique([id, stable_code])
   @@schema("public")
@@ -421,6 +425,7 @@ model publications {
   published_by            String                @db.Uuid
   published_at            DateTime?             @db.Timestamptz(6)
   publication_entries     publication_entries[]
+  publication_knowledge_edges publication_knowledge_edges[]
   publication_pointers    publication_pointers?
   courses                 courses               @relation(fields: [course_id, language_id], references: [id, language_id], onUpdate: NoAction)
   publications            publications?         @relation("publicationsTopublications", fields: [previous_publication_id, course_id, language_id, channel], references: [id, course_id, language_id, channel], onUpdate: NoAction)
@@ -539,6 +544,7 @@ model users {
   consents             consents[]
   content_versions     content_versions[]
   credentials          credentials?
+  knowledge_migration_reports knowledge_migration_reports[]
   language_profiles    language_profiles[]
   publication_pointers publication_pointers[]
   publications         publications[]
@@ -562,5 +568,35 @@ model variants {
   @@unique([id, language_id])
   @@unique([language_id, code])
   @@unique([language_id], map: "variants_one_default", where: raw("is_default"))
+  @@schema("public")
+}
+
+/// Immutable P2 impact/mapping records. The retirement command itself remains disabled until its later governing phase.
+model knowledge_migration_reports {
+  id            String    @id @db.Uuid
+  language_id   String    @db.Uuid
+  operation     String
+  version_code  String
+  mapping       Json
+  impact_report Json
+  status        String
+  created_by    String    @db.Uuid
+  created_at    DateTime  @default(now()) @db.Timestamptz(6)
+  users         users     @relation(fields: [created_by], references: [id], onUpdate: NoAction)
+  languages     languages @relation(fields: [language_id], references: [id], onUpdate: NoAction)
+
+  @@unique([language_id, version_code])
+  @@schema("public")
+}
+
+model publication_knowledge_edges {
+  publication_id  String          @db.Uuid
+  edge_id         String          @db.Uuid
+  language_id     String          @db.Uuid
+  edge_checksum   String
+  knowledge_edges knowledge_edges @relation(fields: [edge_id, language_id], references: [id, language_id], onUpdate: NoAction)
+  publications    publications    @relation(fields: [publication_id, language_id], references: [id, language_id], onUpdate: NoAction)
+
+  @@id([publication_id, edge_id])
   @@schema("public")
 }
