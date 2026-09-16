@@ -1,0 +1,58 @@
+name: P2 data foundation
+on:
+  push:
+    branches: ['implementation/p2-*']
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: p2-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  p2-exit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    env:
+      NEXT_TELEMETRY_DISABLED: '1'
+      GITHUB_HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version-file: .node-version
+      - run: npm install --global pnpm@11.19.0
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm validate:baseline
+      - run: pnpm check
+      - run: pnpm validate:references
+      - run: pnpm benchmark:passwords
+      - run: pnpm audit:dependencies
+      - run: pnpm bootstrap:local
+      - run: node --env-file=.local/runtime.env --import tsx --test tests/integration/*.test.ts
+      - run: pnpm test:containers
+      - name: Sanitized migration diagnostics on failure
+        if: failure()
+        run: |
+          if test -f .local/runtime.env; then
+            node --env-file=.local/runtime.env --import tsx tools/p2/sql-diagnostics.ts
+          fi
+      - name: Schema view synchronization evidence
+        if: always()
+        run: |
+          if test -f artifacts/p2/introspected.prisma; then
+            node --input-type=module -e "import {readFileSync} from 'node:fs'; import {gzipSync} from 'node:zlib'; console.log('P2_PRISMA_SCHEMA:'+gzipSync(readFileSync('artifacts/p2/introspected.prisma')).toString('base64'))"
+          fi
+      - name: Preserve generated gate evidence (no credentials)
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: p2-${{ github.event.pull_request.head.sha || github.sha }}-${{ github.event_name }}
+          path: |
+            artifacts/p1/*.json
+            artifacts/p2/*
+          if-no-files-found: error
+          retention-days: 14

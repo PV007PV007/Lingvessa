@@ -1,0 +1,54 @@
+{
+  "phase": "P2",
+  "repository": "PV007PV007/Lingvessa",
+  "branch": "implementation/p2-data-foundation",
+  "tested_implementation_sha": "247574352ee5f89ca7ee2172d92a008137c11dd7",
+  "pull_request": {
+    "number": 2,
+    "title": "P2: data, language isolation and publication foundation",
+    "status": "OPEN_DRAFT",
+    "base": "main",
+    "merged": false
+  },
+  "runs": [
+    {
+      "workflow": "P2 data foundation",
+      "event": "push",
+      "run_id": 34996815099,
+      "conclusion": "success"
+    },
+    {
+      "workflow": "P2 data foundation",
+      "event": "pull_request",
+      "run_id": 34996819964,
+      "conclusion": "success",
+      "artifact_id": 10408137898,
+      "artifact_digest": "sha256:9b2f5be649ead396a3337ea7507b4ce40362cf6f5bb619d09e57459d04912e36"
+    },
+    {
+      "workflow": "P1 foundation",
+      "event": "push",
+      "run_id": 34996815126,
+      "conclusion": "success"
+    },
+    {
+      "workflow": "P1 foundation",
+      "event": "pull_request",
+      "run_id": 34996820041,
+      "conclusion": "success"
+    }
+  ],
+  "required_sequence": [
+    "pnpm install --frozen-lockfile",
+    "pnpm validate:baseline",
+    "pnpm check",
+    "pnpm validate:references",
+    "pnpm benchmark:passwords",
+    "pnpm audit:dependencies",
+    "pnpm bootstrap:local",
+    "node --env-file=.local/runtime.env --import tsx --test tests/integration/*.test.ts",
+    "pnpm test:containers"
+  ],
+  "status": "PASS",
+  "final_metadata_rule": "The final closure commit is accepted only after the same four push/pull_request workflows pass on that exact branch head."
+}

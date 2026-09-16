@@ -1,0 +1,18 @@
+{
+  "phase": "P2",
+  "tested_implementation_sha": "247574352ee5f89ca7ee2172d92a008137c11dd7",
+  "source": "PostgreSQL 18.6 clean migration introspection artifact from GitHub Actions run 34996819964",
+  "artifact_id": 10408137898,
+  "runtime_introspection_sha256": "0321504ed3bc3688b7d1ea72664e48df33e186aac656bea91186177286ef8606",
+  "committed_prisma_sha256": "27699481b63753f818587a929bd455f8e08a534960e301f950b22b356fc99ede",
+  "migration_sha256": "1070d4ed37133be1a1d166458aead61d446167a91d46921d829843cfa5ec68b6",
+  "model_count_runtime": 36,
+  "model_count_committed": 36,
+  "missing_models": [],
+  "extra_models": [],
+  "intentional_normalizations": [
+    "Prisma introspection treats the partial variants_one_default index as a one-to-one relation; the committed schema preserves the actual one-to-many language-to-variants relation and models the same partial unique index at model level.",
+    "Relation alignment and declaration order differ only in formatting."
+  ],
+  "status": "PASS"
+}

@@ -1,20 +1,5 @@
 [
   {
-    "decision_id": "OD-002",
-    "topic": "Authentication implementation details",
-    "source": "TS §40.2 ADR-003 p22; TD §35 p20",
-    "why_unresolved": "Exact implementation/library and benchmarked credential parameters are not chosen by the baseline.",
-    "latest_phase": "P2 / before identity acceptance",
-    "affected_requirements": [
-      "TS-AUTH-001",
-      "ROLE-001",
-      "TD-SEC-001"
-    ],
-    "default_behavior": "Secure server sessions and Argon2id remain governing defaults; no public identity deployment before review.",
-    "owner": "Identity/language / security owner",
-    "status": "OPEN_DEFERRED_NOT_P0_BLOCKING"
-  },
-  {
     "decision_id": "OD-003",
     "topic": "Production hosting, region, topology and PostgreSQL HA/PITR tier",
     "source": "Formal §33.2 p21; TS §40.2 ADR-001/004 p22; TD §35 p20",

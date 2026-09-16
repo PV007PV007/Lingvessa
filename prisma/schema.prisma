@@ -1,15 +1,15 @@
 generator client {
-  provider     = "prisma-client"
-  output       = "./generated"
-  moduleFormat = "esm"
+  provider        = "prisma-client"
+  output          = "./generated"
+  previewFeatures = ["partialIndexes"]
+  moduleFormat    = "esm"
 }
 
 datasource db {
   provider = "postgresql"
-  schemas  = ["p1_bootstrap"]
+  schemas  = ["p1_bootstrap", "public"]
 }
 
-// Synthetic engineering probe only. No learner/domain tables exist before P2.
 model BootstrapFixture {
   id           String @id @db.Uuid
   stableCode   String @map("stable_code") @db.VarChar(64)
@@ -21,4 +21,582 @@ model BootstrapFixture {
   @@unique([stableCode, versionCode], map: "bootstrap_fixture_code_version_key")
   @@map("fixtures")
   @@schema("p1_bootstrap")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model activity_items {
+  id                 String               @id @db.Uuid
+  language_id        String               @db.Uuid
+  lesson_id          String               @db.Uuid
+  kind               String               @default("activity")
+  activity_type      String
+  response_modality  String
+  position           Int
+  content_entities   content_entities     @relation(fields: [id, language_id, kind], references: [id, language_id, kind], onUpdate: NoAction)
+  lessons            lessons              @relation(fields: [lesson_id, language_id], references: [id, language_id], onUpdate: NoAction)
+  item_knowledge_map item_knowledge_map[]
+  item_outcome_map   item_outcome_map[]
+
+  @@unique([id, language_id])
+  @@unique([id, language_id, kind])
+  @@unique([lesson_id, position])
+  @@schema("public")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model approvals {
+  id                        String           @id @db.Uuid
+  target_content_version_id String           @db.Uuid
+  target_checksum           String
+  target_revision           Int
+  gate_type                 String
+  reviewer_id               String           @db.Uuid
+  decision                  String
+  decided_at                DateTime         @default(now()) @db.Timestamptz(6)
+  notes                     String
+  users                     users            @relation(fields: [reviewer_id], references: [id], onUpdate: NoAction)
+  content_versions          content_versions @relation(fields: [target_content_version_id], references: [id], onUpdate: NoAction)
+
+  @@unique([target_content_version_id, target_revision, gate_type, reviewer_id])
+  @@schema("public")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model audit_events {
+  id          String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  actor_id    String?  @db.Uuid
+  action      String
+  target_id   String?  @db.Uuid
+  payload     Json     @default("{}")
+  occurred_at DateTime @default(now()) @db.Timestamptz(6)
+  users       users?   @relation(fields: [actor_id], references: [id], onDelete: Restrict, onUpdate: NoAction)
+
+  @@schema("public")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model auth_rate_windows {
+  key_hash   Bytes    @id
+  attempts   Int
+  expires_at DateTime @db.Timestamptz(6)
+
+  @@index([expires_at], map: "auth_rate_expiry")
+  @@schema("public")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model consents {
+  id             String   @id @db.Uuid
+  user_id        String   @db.Uuid
+  purpose        String
+  policy_version String
+  granted        Boolean
+  recorded_at    DateTime @default(now()) @db.Timestamptz(6)
+  users          users    @relation(fields: [user_id], references: [id], onUpdate: NoAction)
+
+  @@index([user_id, purpose, recorded_at(sort: Desc), id], map: "consents_owner_purpose_time")
+  @@schema("public")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model content_entities {
+  id               String             @id @db.Uuid
+  language_id      String             @db.Uuid
+  stable_code      String
+  kind             String
+  title            String
+  variety_scope    String             @default("common")
+  activity_items   activity_items?
+  languages        languages          @relation(fields: [language_id], references: [id], onUpdate: NoAction)
+  content_versions content_versions[]
+  courses          courses?
+  knowledge_items  knowledge_items?
+  lessons          lessons?
+  levels           levels?
+  modules          modules?
+  outcomes         outcomes?
+
+  @@unique([id, language_id])
+  @@unique([id, language_id, kind])
+  @@unique([language_id, stable_code])
+  @@schema("public")
+}
+
+model content_validations {
+  id                 String           @id @db.Uuid
+  content_version_id String           @db.Uuid
+  target_checksum    String
+  target_revision    Int
+  validator_version  String
+  passed             Boolean
+  report             Json
+  validated_at       DateTime         @default(now()) @db.Timestamptz(6)
+  content_versions   content_versions @relation(fields: [content_version_id], references: [id], onUpdate: NoAction)
+
+  @@schema("public")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model content_version_refs {
+  source_version_id                                                                                      String           @db.Uuid
+  language_id                                                                                            String           @db.Uuid
+  target_entity_id                                                                                       String           @db.Uuid
+  target_version_id                                                                                      String           @db.Uuid
+  relation                                                                                               String
+  content_versions_content_version_refs_source_version_id_language_idTocontent_versions                  content_versions @relation("content_version_refs_source_version_id_language_idTocontent_versions", fields: [source_version_id, language_id], references: [id, language_id], onUpdate: NoAction)
+  content_versions_content_version_refs_target_version_id_target_entity_id_language_idTocontent_versions content_versions @relation("content_version_refs_target_version_id_target_entity_id_language_idTocontent_versions", fields: [target_version_id, target_entity_id, language_id], references: [id, entity_id, language_id], onUpdate: NoAction)
+
+  @@id([source_version_id, target_entity_id, relation])
+  @@schema("public")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model content_versions {
+  id                                                                                                         String                 @id @db.Uuid
+  entity_id                                                                                                  String                 @db.Uuid
+  language_id                                                                                                String                 @db.Uuid
+  version_code                                                                                               String
+  schema_version                                                                                             String
+  payload                                                                                                    Json
+  checksum                                                                                                   String?                @default(dbgenerated("p2_json_checksum(payload)"))
+  status                                                                                                     String                 @default("draft")
+  revision                                                                                                   Int                    @default(1)
+  source_kind                                                                                                String
+  created_by                                                                                                 String                 @db.Uuid
+  created_at                                                                                                 DateTime               @default(now()) @db.Timestamptz(6)
+  approvals                                                                                                  approvals[]
+  content_validations                                                                                        content_validations[]
+  content_version_refs_content_version_refs_source_version_id_language_idTocontent_versions                  content_version_refs[] @relation("content_version_refs_source_version_id_language_idTocontent_versions")
+  content_version_refs_content_version_refs_target_version_id_target_entity_id_language_idTocontent_versions content_version_refs[] @relation("content_version_refs_target_version_id_target_entity_id_language_idTocontent_versions")
+  users                                                                                                      users                  @relation(fields: [created_by], references: [id], onUpdate: NoAction)
+  content_entities                                                                                           content_entities       @relation(fields: [entity_id, language_id], references: [id, language_id], onUpdate: NoAction)
+  publication_entries                                                                                        publication_entries[]
+  translations                                                                                               translations[]
+
+  @@unique([entity_id, version_code])
+  @@unique([id, entity_id, language_id])
+  @@unique([id, language_id])
+  @@schema("public")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model courses {
+  id               String           @id @db.Uuid
+  language_id      String           @db.Uuid
+  kind             String           @default("course")
+  content_entities content_entities @relation(fields: [id, language_id, kind], references: [id, language_id, kind], onUpdate: NoAction)
+  levels           levels[]
+  publications     publications[]
+  user_courses     user_courses[]
+
+  @@unique([id, language_id])
+  @@unique([id, language_id, kind])
+  @@schema("public")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model credentials {
+  id             String   @id @db.Uuid
+  user_id        String   @unique @db.Uuid
+  password_hash  String
+  policy_version String
+  updated_at     DateTime @default(now()) @db.Timestamptz(6)
+  users          users    @relation(fields: [user_id], references: [id], onUpdate: NoAction)
+
+  @@schema("public")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model item_knowledge_map {
+  item_id           String            @db.Uuid
+  knowledge_item_id String            @db.Uuid
+  language_id       String            @db.Uuid
+  role              String
+  skill             String
+  facet             String
+  evidence_weight   Decimal           @db.Decimal(6, 5)
+  activity_items    activity_items    @relation(fields: [item_id, language_id], references: [id, language_id], onUpdate: NoAction)
+  knowledge_items   knowledge_items   @relation(fields: [knowledge_item_id, language_id], references: [id, language_id], onUpdate: NoAction)
+  skill_facet_pairs skill_facet_pairs @relation(fields: [skill, facet], references: [skill, facet], onUpdate: NoAction)
+
+  @@id([item_id, knowledge_item_id, skill, facet])
+  @@schema("public")
+}
+
+model item_outcome_map {
+  item_id        String         @db.Uuid
+  outcome_id     String         @db.Uuid
+  language_id    String         @db.Uuid
+  activity_items activity_items @relation(fields: [item_id, language_id], references: [id, language_id], onUpdate: NoAction)
+  outcomes       outcomes       @relation(fields: [outcome_id, language_id], references: [id, language_id], onUpdate: NoAction)
+
+  @@id([item_id, outcome_id])
+  @@schema("public")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model knowledge_edges {
+  id                                                                   String          @id @db.Uuid
+  language_id                                                          String          @db.Uuid
+  from_id                                                              String          @db.Uuid
+  to_id                                                                String          @db.Uuid
+  edge_type                                                            String
+  direction                                                            String
+  weight                                                               Decimal         @db.Decimal(6, 5)
+  version_code                                                         String
+  review_status                                                        String
+  provenance                                                           Json
+  checksum                                                             String?                       @default(dbgenerated("p2_edge_checksum(from_id, to_id, edge_type, direction, weight, version_code, review_status, provenance)"))
+  knowledge_items_knowledge_edges_from_id_language_idToknowledge_items knowledge_items @relation("knowledge_edges_from_id_language_idToknowledge_items", fields: [from_id, language_id], references: [id, language_id], onUpdate: NoAction)
+  knowledge_items_knowledge_edges_to_id_language_idToknowledge_items   knowledge_items @relation("knowledge_edges_to_id_language_idToknowledge_items", fields: [to_id, language_id], references: [id, language_id], onUpdate: NoAction)
+  publication_knowledge_edges                                          publication_knowledge_edges[]
+
+  @@unique([from_id, to_id, edge_type, version_code])
+  @@unique([id, language_id])
+  @@schema("public")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model knowledge_items {
+  id                                                                   String               @id @db.Uuid
+  language_id                                                          String               @db.Uuid
+  kind                                                                 String               @default("knowledge")
+  knowledge_type                                                       String
+  canonical_form                                                       String
+  sense                                                                String
+  cefr                                                                 String
+  learning_scope                                                       String
+  status                                                               String               @default("active")
+  schema_version                                                       String               @default("1.7")
+  item_knowledge_map                                                   item_knowledge_map[]
+  knowledge_edges_knowledge_edges_from_id_language_idToknowledge_items knowledge_edges[]    @relation("knowledge_edges_from_id_language_idToknowledge_items")
+  knowledge_edges_knowledge_edges_to_id_language_idToknowledge_items   knowledge_edges[]    @relation("knowledge_edges_to_id_language_idToknowledge_items")
+  content_entities                                                     content_entities     @relation(fields: [id, language_id, kind], references: [id, language_id, kind], onUpdate: NoAction)
+
+  @@unique([id, language_id])
+  @@unique([id, language_id, kind])
+  @@schema("public")
+}
+
+model language_profiles {
+  id            String         @id @db.Uuid
+  user_id       String         @db.Uuid
+  language_id   String         @db.Uuid
+  variant_id    String         @db.Uuid
+  created_at    DateTime       @default(now()) @db.Timestamptz(6)
+  languages     languages      @relation(fields: [language_id], references: [id], onUpdate: NoAction)
+  users         users          @relation(fields: [user_id], references: [id], onUpdate: NoAction)
+  variants      variants       @relation(fields: [variant_id, language_id], references: [id, language_id], onUpdate: NoAction)
+  user_courses  user_courses[]
+  user_settings user_settings?
+
+  @@unique([id, language_id])
+  @@unique([id, user_id, language_id])
+  @@unique([user_id, language_id])
+  @@schema("public")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model languages {
+  id                          String                        @id @db.Uuid
+  stable_code                 String                        @unique
+  content_entities            content_entities[]
+  knowledge_migration_reports knowledge_migration_reports[]
+  language_profiles           language_profiles[]
+  variants                    variants[]
+
+  @@unique([id, stable_code])
+  @@schema("public")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model lessons {
+  id               String           @id @db.Uuid
+  language_id      String           @db.Uuid
+  module_id        String           @db.Uuid
+  kind             String           @default("lesson")
+  unit_kind        String
+  position         Int
+  activity_items   activity_items[]
+  content_entities content_entities @relation(fields: [id, language_id, kind], references: [id, language_id, kind], onUpdate: NoAction)
+  modules          modules          @relation(fields: [module_id, language_id], references: [id, language_id], onUpdate: NoAction)
+  user_courses     user_courses[]
+
+  @@unique([id, language_id])
+  @@unique([id, language_id, kind])
+  @@unique([module_id, position])
+  @@schema("public")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model levels {
+  id               String           @id @db.Uuid
+  language_id      String           @db.Uuid
+  course_id        String           @db.Uuid
+  kind             String           @default("level")
+  cefr             String
+  position         Int
+  courses          courses          @relation(fields: [course_id, language_id], references: [id, language_id], onUpdate: NoAction)
+  content_entities content_entities @relation(fields: [id, language_id, kind], references: [id, language_id, kind], onUpdate: NoAction)
+  modules          modules[]
+
+  @@unique([course_id, cefr])
+  @@unique([id, language_id])
+  @@unique([id, language_id, kind])
+  @@schema("public")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model modules {
+  id               String           @id @db.Uuid
+  language_id      String           @db.Uuid
+  level_id         String           @db.Uuid
+  kind             String           @default("module")
+  position         Int
+  lessons          lessons[]
+  content_entities content_entities @relation(fields: [id, language_id, kind], references: [id, language_id, kind], onUpdate: NoAction)
+  levels           levels           @relation(fields: [level_id, language_id], references: [id, language_id], onUpdate: NoAction)
+
+  @@unique([id, language_id])
+  @@unique([id, language_id, kind])
+  @@unique([level_id, position])
+  @@schema("public")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model outcomes {
+  id               String             @id @db.Uuid
+  language_id      String             @db.Uuid
+  kind             String             @default("outcome")
+  cefr             String
+  can_do           String
+  source_reference String
+  status           String             @default("active")
+  version_code     String             @default("1")
+  item_outcome_map item_outcome_map[]
+  content_entities content_entities   @relation(fields: [id, language_id, kind], references: [id, language_id, kind], onUpdate: NoAction)
+
+  @@unique([id, language_id])
+  @@unique([id, language_id, kind])
+  @@schema("public")
+}
+
+model publication_entries {
+  publication_id     String           @db.Uuid
+  entity_id          String           @db.Uuid
+  content_version_id String           @db.Uuid
+  language_id        String           @db.Uuid
+  content_checksum   String
+  content_versions   content_versions @relation(fields: [content_version_id, entity_id, language_id], references: [id, entity_id, language_id], onUpdate: NoAction)
+  publications       publications     @relation(fields: [publication_id, language_id], references: [id, language_id], onUpdate: NoAction)
+
+  @@id([publication_id, entity_id])
+  @@schema("public")
+}
+
+model publication_pointers {
+  course_id      String       @db.Uuid
+  language_id    String       @db.Uuid
+  channel        String
+  publication_id String       @db.Uuid
+  revision       Int          @default(1)
+  updated_by     String       @db.Uuid
+  updated_at     DateTime     @default(now()) @db.Timestamptz(6)
+  publications   publications @relation(fields: [publication_id, course_id, language_id, channel], references: [id, course_id, language_id, channel], onUpdate: NoAction)
+  users          users        @relation(fields: [updated_by], references: [id], onUpdate: NoAction)
+
+  @@id([course_id, channel])
+  @@unique([publication_id, course_id, language_id, channel])
+  @@schema("public")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model publications {
+  id                      String                @id @db.Uuid
+  course_id               String                @db.Uuid
+  language_id             String                @db.Uuid
+  channel                 String
+  version_code            String
+  schema_version          String
+  manifest                Json
+  checksum                String?               @default(dbgenerated("p2_json_checksum(manifest)"))
+  status                  String                @default("building")
+  previous_publication_id String?               @db.Uuid
+  published_by            String                @db.Uuid
+  published_at            DateTime?             @db.Timestamptz(6)
+  publication_entries     publication_entries[]
+  publication_knowledge_edges publication_knowledge_edges[]
+  publication_pointers    publication_pointers?
+  courses                 courses               @relation(fields: [course_id, language_id], references: [id, language_id], onUpdate: NoAction)
+  publications            publications?         @relation("publicationsTopublications", fields: [previous_publication_id, course_id, language_id, channel], references: [id, course_id, language_id, channel], onUpdate: NoAction)
+  other_publications      publications[]        @relation("publicationsTopublications")
+  users                   users                 @relation(fields: [published_by], references: [id], onUpdate: NoAction)
+
+  @@unique([course_id, channel, version_code])
+  @@unique([id, course_id, language_id, channel])
+  @@unique([id, language_id])
+  @@schema("public")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model roles {
+  id          String       @id @db.Uuid
+  stable_code String       @unique
+  user_roles  user_roles[]
+
+  @@schema("public")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model sessions {
+  id               String    @id @db.Uuid
+  user_id          String    @db.Uuid
+  token_hash       Bytes     @unique
+  csrf_hash        Bytes
+  created_at       DateTime  @default(now()) @db.Timestamptz(6)
+  expires_at       DateTime  @db.Timestamptz(6)
+  revoked_at       DateTime? @db.Timestamptz(6)
+  authenticated_at DateTime  @default(now()) @db.Timestamptz(6)
+  mfa_verified_at  DateTime? @db.Timestamptz(6)
+  users            users     @relation(fields: [user_id], references: [id], onUpdate: NoAction)
+
+  @@index([user_id], map: "sessions_owner_active", where: raw("(revoked_at IS NULL)"))
+  @@schema("public")
+}
+
+model skill_facet_pairs {
+  skill              String
+  facet              String
+  item_knowledge_map item_knowledge_map[]
+
+  @@id([skill, facet])
+  @@schema("public")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model translations {
+  id                 String           @id @db.Uuid
+  language_id        String           @db.Uuid
+  content_version_id String           @db.Uuid
+  locale             String
+  payload            Json
+  version_code       String
+  checksum           String?          @default(dbgenerated("p2_json_checksum(payload)"))
+  content_versions   content_versions @relation(fields: [content_version_id, language_id], references: [id, language_id], onUpdate: NoAction)
+
+  @@unique([content_version_id, locale, version_code])
+  @@unique([id, language_id])
+  @@schema("public")
+}
+
+model user_courses {
+  id                  String            @id @db.Uuid
+  user_id             String            @db.Uuid
+  language_profile_id String            @db.Uuid
+  language_id         String            @db.Uuid
+  course_id           String            @db.Uuid
+  selected_lesson_id  String?           @db.Uuid
+  courses             courses           @relation(fields: [course_id, language_id], references: [id, language_id], onUpdate: NoAction)
+  language_profiles   language_profiles @relation(fields: [language_profile_id, user_id, language_id], references: [id, user_id, language_id], onUpdate: NoAction)
+  lessons             lessons?          @relation(fields: [selected_lesson_id, language_id], references: [id, language_id], onUpdate: NoAction)
+
+  @@unique([id, user_id, language_profile_id, language_id])
+  @@unique([language_profile_id, course_id])
+  @@schema("public")
+}
+
+model user_roles {
+  user_id    String   @db.Uuid
+  role_id    String   @db.Uuid
+  granted_at DateTime @default(now()) @db.Timestamptz(6)
+  roles      roles    @relation(fields: [role_id], references: [id], onUpdate: NoAction)
+  users      users    @relation(fields: [user_id], references: [id], onUpdate: NoAction)
+
+  @@id([user_id, role_id])
+  @@schema("public")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model user_settings {
+  user_id                    String             @id @db.Uuid
+  active_language_profile_id String?            @db.Uuid
+  active_language_id         String?            @db.Uuid
+  ui_locale                  String             @default("uk-UA")
+  timezone                   String             @default("UTC")
+  learner_ai_opt_in          Boolean            @default(false)
+  revision                   Int                @default(1)
+  language_profiles          language_profiles? @relation(fields: [active_language_profile_id, user_id, active_language_id], references: [id, user_id, language_id], onUpdate: NoAction)
+  users                      users              @relation(fields: [user_id], references: [id], onUpdate: NoAction)
+
+  @@schema("public")
+  @@unique([active_language_profile_id, user_id, active_language_id])
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model users {
+  id                   String                 @id @db.Uuid
+  email_normalized     String                 @unique
+  account_type         String                 @default("human")
+  status               String                 @default("active")
+  created_at           DateTime               @default(now()) @db.Timestamptz(6)
+  approvals            approvals[]
+  audit_events         audit_events[]
+  consents             consents[]
+  content_versions     content_versions[]
+  credentials          credentials?
+  knowledge_migration_reports knowledge_migration_reports[]
+  language_profiles    language_profiles[]
+  publication_pointers publication_pointers[]
+  publications         publications[]
+  sessions             sessions[]
+  user_roles           user_roles[]
+  user_settings        user_settings?
+
+  @@schema("public")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model variants {
+  id                String              @id @db.Uuid
+  language_id       String              @db.Uuid
+  language_code     String
+  code              String              @unique
+  is_default        Boolean
+  language_profiles language_profiles[]
+  languages         languages           @relation(fields: [language_id, language_code], references: [id, stable_code], onUpdate: NoAction)
+
+  @@unique([id, language_id])
+  @@unique([language_id, code])
+  @@unique([language_id], map: "variants_one_default", where: raw("is_default"))
+  @@schema("public")
+}
+
+/// Immutable P2 impact/mapping records. The retirement command itself remains disabled until its later governing phase.
+model knowledge_migration_reports {
+  id            String    @id @db.Uuid
+  language_id   String    @db.Uuid
+  operation     String
+  version_code  String
+  mapping       Json
+  impact_report Json
+  status        String
+  created_by    String    @db.Uuid
+  created_at    DateTime  @default(now()) @db.Timestamptz(6)
+  users         users     @relation(fields: [created_by], references: [id], onUpdate: NoAction)
+  languages     languages @relation(fields: [language_id], references: [id], onUpdate: NoAction)
+
+  @@unique([language_id, version_code])
+  @@schema("public")
+}
+
+model publication_knowledge_edges {
+  publication_id  String          @db.Uuid
+  edge_id         String          @db.Uuid
+  language_id     String          @db.Uuid
+  edge_checksum   String
+  knowledge_edges knowledge_edges @relation(fields: [edge_id, language_id], references: [id, language_id], onUpdate: NoAction)
+  publications    publications    @relation(fields: [publication_id, language_id], references: [id, language_id], onUpdate: NoAction)
+
+  @@id([publication_id, edge_id])
+  @@schema("public")
 }

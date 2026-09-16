@@ -1,0 +1,40 @@
+{
+  "phase": "P2",
+  "status": "PASS_READY_FOR_OWNER_ACCEPTANCE",
+  "accepted_parent": "a37872bb87ff886a568e44aafcb9b0963e346651",
+  "tested_implementation_sha": "247574352ee5f89ca7ee2172d92a008137c11dd7",
+  "local": {
+    "frozen_install": "PASS",
+    "baseline_validation": "PASS 29/29",
+    "unit": "PASS 21/21",
+    "prisma_generate_validate": "PASS",
+    "lint_typecheck": "PASS",
+    "package_boundaries": "PASS 53 modules / 69 dependencies",
+    "production_builds": "PASS web and admin",
+    "smoke": "PASS 4/4"
+  },
+  "hosted_ci": {
+    "p2_push": "PASS run 34996815099",
+    "p2_pull_request": "PASS run 34996819964",
+    "p1_push": "PASS run 34996815126",
+    "p1_pull_request": "PASS run 34996820041"
+  },
+  "database_runtime": {
+    "engine": "PostgreSQL 18.6",
+    "status": "PASS",
+    "groups": "9/9",
+    "evidence": "database-validation.json in artifact 10408137898"
+  },
+  "container_runtime": {
+    "status": "PASS",
+    "images": ["api", "worker", "web", "admin"],
+    "checks": ["four services ready", "DB down => API/worker 503", "liveness remains 200", "DB restored => readiness 200"],
+    "evidence": "container-build.json and container-smoke.json in artifact 10408137898"
+  },
+  "reference_runtime": "PASS EN 16 entities/5 units; CS 16 entities/5 units; idempotent load and mutation refusal",
+  "schema_introspection": "PASS 36/36 models with documented partial-index normalization",
+  "p1_regression": "PASS",
+  "p3_implementation": "ABSENT",
+  "no_inferred_runtime_evidence": true,
+  "prior_failed_runs": "Retained in GitHub history; failures were negative-fixture assertion ordering and were corrected without weakening DB guards."
+}

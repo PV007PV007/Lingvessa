@@ -1,131 +1,88 @@
-# Lingvessa — Implementation State and Handoff
+# Lingvessa implementation state and handoff
 
-Updated UTC: **2026-09-14T20:14:59.557532+00:00**. Current phase: **P1**.
-**P1: PASS — READY FOR OWNER ACCEPTANCE. Owner acceptance: PENDING. P2: NOT AUTHORIZED / NOT STARTED.**
+Timestamp: 2026-09-16T04:05:00Z
 
-This operational synchronization record incorporates the owner's verified GitHub evidence. It changes no product architecture, locked specification or runtime code.
+## Authority and milestone state
 
-## Baseline and authority
+P0: ACCEPTED. P1: ACCEPTED. P2: PASS — READY FOR OWNER ACCEPTANCE. P3: NOT AUTHORIZED / NOT STARTED.
 
-Architecture/context authority: `00_CONTEXT/00_project_manifest_and_constraints.md`.
-Formal v1.7; Technical Specification v1.7; Technical Design v1.7; Curriculum A1 v1.6;
-Reference Module Design v1.6; AI Integration Specification v1.4.
-**Implementation Plan v1.4 is the sole P0–P13 execution-order authority.**
-Owner lock: 2026-09-10. All seven PDFs, manifest and checksum manifest remain byte-identical.
-Original locked handoff remains at `docs/baseline/owner-lock/01_implementation_state_and_handoff.initial.md`.
-P0 was accepted; P1 authorization remains valid. See `docs/baseline/baseline.yml`.
+GitHub `PV007PV007/Lingvessa` `main` and history are the implementation source of truth. Accepted parent: `a37872bb87ff886a568e44aafcb9b0963e346651`; accepted tag: `p1-accepted-2026-09-15`; PR #1: MERGED. P2-SOURCE-001 is RESOLVED. The manifest remains architecture/context authority, the seven owner-locked PDFs remain unchanged, and Implementation Plan v1.4 is the sole P0–P13 execution-order authority.
 
-## Git, hosted CI and PR
+## Repository state
 
-- **Single final hosted-CI-tested commit: `3b0a45e2c143fb538edb7a626f8c84356cdcc34f`**.
-- Branch: **implementation/p1-foundation**. Base branch: **main**.
-- Tag retained: **p0-accepted-2026-09-11**.
-- Private GitHub repository: **connected, owner verified**; URL not supplied in this session.
-- **PR #1: P1: engineering foundation — OPEN**, base main, compare implementation/p1-foundation.
-- Workflow **P1 foundation**, job **p1-exit**: **SUCCESS for push and pull_request**, owner verified; required steps actually executed, none skipped.
-- Runtime evidence artifact: produced per owner; not downloaded or inspected here. No run ID, URL or image/artifact digest is invented.
-- No remote write, PR merge, automatic acceptance or P2 implementation was performed by this closure batch.
-- Historical local tests used `49e27d071dbf6fe134cb5b4d9fc45ffad1bba426`. They are retained as history and are no longer the final P1 execution evidence.
+- Branch: `implementation/p2-data-foundation`.
+- Tested implementation SHA: `247574352ee5f89ca7ee2172d92a008137c11dd7`.
+- PR #2: “P2: data, language isolation and publication foundation”, OPEN DRAFT into `main`; not merged.
+- Final closure SHA rule: the evidence-only commit containing this handoff must itself receive green P2 and P1 push/pull_request workflows. GitHub `GITHUB_HEAD_SHA` and the final closure report resolve its exact SHA without pretending a Git commit can contain its own hash.
+- Task packets: IMP-P2-001, IMP-P2-002, IMP-P2-003 from the accepted P0 trace/backlog.
+- Requirement rows: 434 total; 432 MUST, 2 SHOULD; 434 traced, 0 untraced. P2-foundation verified 177, mixed/partial 170, future-runtime acceptance 87.
 
-Evidence authority: `docs/p1/closure/owner-verification.json`. Current validation:
-`docs/p1/closure/current-validation.json`. The owner attestation plus assertions in the exact source establish coverage; this report does not claim independent inspection of unavailable Actions logs. A PR check attached to the head SHA is not used to infer its synthetic checkout SHA; the verified push run establishes the exact tested source baseline.
+## Implemented P2 foundation
 
-## P1 task status and trace
+- Minimal users, credentials, opaque server sessions, roles, immutable consents/audit, language profiles and settings.
+- Composite database ownership keys bind user + language_profile + language. English and Czech use the same schema; en-GB is default, en-US selectable, cs-CZ separate, uk-UA UI locale independent.
+- UUID identities, immutable human-readable `stable_code`, immutable `version_code`; publication accepts resolved UUID/version references only.
+- Shared course/level/module/lesson/activity/knowledge/outcome identifiers, typed/versioned knowledge edges, canonical six-skill/21-facet/33-pair registry, evidence-map modality guards.
+- Versioned content payloads and resolved references, checksum/revision-bound validations and human approval records.
+- Immutable publication snapshots, entry/translation/knowledge-edge manifests, atomic active pointer and rollback without historical rewrite.
+- EN/CS P2 reference metadata fixtures and idempotent loader: 16 entities, four lesson identifiers plus recap per language, representative activity/knowledge metadata. Full executable M01 content remains P6/P7; media remains P5.
+- Minimal API: login/logout, GET/PATCH current user/settings, language profile list/create, active-language switch and published catalog. OpenAPI 3.1.2.
+- Controlled provisioning only. No public registration and no P3 Lesson Engine, P4 mastery/Review, P5 speech/media, P8/P9 AI or later product runtime.
 
-| Task | Closure status | Evidence |
-| --- | --- | --- |
-| IMP-P1-001 | PASS with EXC-P1-001 | Private monorepo; exact pins; hosted quality/audit; PR workflow; technical protection absent under owner exception |
-| IMP-P1-002 | PASS | Typed config; secret/AI-off/budget-zero tests; runtime-injected container configuration |
-| IMP-P1-003 | PASS | Real PostgreSQL bootstrap, migration/seed replay, clean-state database creation/cleanup, EN/CS fixture integrity and negative cases |
-| IMP-P1-004 | PASS | Four OCI targets; start/readiness; DB outage and recovery; dependency boundaries |
+Schema/migration: additive `prisma/migrations/202609150001_p2_foundation/migration.sql`; P1 migration retained. Migration SHA-256: `1070d4ed37133be1a1d166458aead61d446167a91d46921d829843cfa5ec68b6`. PostgreSQL 18.6 clean introspection has the same 36 models as `prisma/schema.prisma`; the documented difference is Prisma's incorrect one-to-one inference from the partial default-variant index plus formatting.
 
-Full direct requirement IDs and task links remain in `docs/p1/task-status.json`.
-Current per-requirement source/code/test evidence is `docs/p1/requirement-evidence.json` (105 IDs).
-P0 trace is preserved: 2453 MUST / 2453 traced / 0 untraced / 0 duplicate IDs, plus 22 SHOULD.
-Partial/future rows retain later-phase behavior; no learning, speech, AI or production contract is accepted prematurely.
+API changes: `infra/contracts/p2.openapi.json`; no provider-specific or later-phase endpoint.
 
-## Hosted commands/results
+Architecture decisions: no governing contract change. OD-002 is implemented within the locked Argon2id/server-session default in `docs/adr/adr-p2-identity-implementation.md` and becomes owner-accepted only with P2. EXC-P1-001 remains: `main` is NOT technically protected; implementation branch → PR → green hosted CI → owner review is mandatory.
 
-| Exact committed workflow command | Result supplied by owner |
-| --- | --- |
-| `pnpm install --frozen-lockfile` | PASS — owner verified; executed, not skipped |
-| `pnpm validate:baseline` | PASS — owner verified; executed, not skipped |
-| `pnpm check` | PASS — owner verified; executed, not skipped |
-| `pnpm audit:dependencies` | PASS — owner verified; executed, not skipped |
-| `pnpm bootstrap:local` | PASS — owner verified; executed, not skipped |
-| `node --env-file=.local/runtime.env --import tsx --test tests/integration/*.test.ts` | PASS — owner verified; executed, not skipped |
-| `pnpm test:containers` | PASS — owner verified; executed, not skipped |
+Files added/modified/deleted: complete inventory in `docs/p2/changed-files.json`; no governing document, manifest or owner-lock checksum file modified; no implementation file deleted.
 
-Owner wording uses **/*.test.ts for integration; the committed YAML uses *.test.ts. The source contains one real integration file, bootstrap.test.ts. No additional suite is claimed. `pnpm check` includes 14 unit and 4 smoke tests at this source SHA; real PostgreSQL adds one integration test. Detailed expansion and acceptance mapping: `docs/p1/exit-evidence.md` and `docs/p1/closure/acceptance-map.json`.
+## Exact validation and results
 
-## PostgreSQL / fixtures / recovery
+Local:
 
-The real test asserts PostgreSQL 18.6, creates a fresh UTF-8 database from template0,
-runs migration+seed twice, checks exactly one completed migration and two fixtures,
-and validates fixture UUID/stable_code/version_code/locale/Unicode text. Invalid Czech
-locale and malformed UUID are rejected. Conflicting existing fixture content causes
-reseed rejection instead of overwrite. Cleanup drops only the generated test database.
-The verified push and PR runs independently repeat this clean-state lifecycle.
+- `pnpm install --frozen-lockfile`: PASS.
+- `pnpm validate:baseline`: PASS 29/29.
+- `pnpm db:generate && pnpm db:validate`: PASS.
+- `pnpm validate:references`: PASS EN/CS.
+- `pnpm check`: PASS — lint/typecheck, boundaries 53 modules/69 dependencies, secret scan, unit 21/21, web/admin builds, smoke 4/4.
+- `pnpm audit:dependencies`: PASS in hosted CI; no known production vulnerabilities.
 
-This proves P1 fresh database construction/replay/cleanup, not a same-name destructive
-recreation loop, backup/restore or P11/P13 disaster recovery.
+Hosted at `247574352ee5f89ca7ee2172d92a008137c11dd7`:
 
-## OCI / portability
+- P2 push 34996815099 and P2 pull_request 34996819964: success.
+- P1 regression push 34996815126 and pull_request 34996820041: success.
+- `pnpm bootstrap:local`: PostgreSQL 18.6 migrated and seeded.
+- `node --env-file=.local/runtime.env --import tsx --test tests/integration/*.test.ts`: PASS; P1 integration plus 9/9 P2 groups.
+- `pnpm test:containers`: PASS; four images built and started, all ready; DB loss caused API/worker readiness 503 while liveness stayed 200; DB restore returned readiness 200.
+- Runtime artifact 10408137898; digest `sha256:9b2f5be649ead396a3337ea7507b4ce40362cf6f5bb619d09e57459d04912e36`.
 
-api, worker, web and admin images build and start. All readiness probes become 200.
-Stopping PostgreSQL gives backend readiness 503 while liveness remains 200; restarting
-PostgreSQL restores readiness 200. Cleanup restores DB and stops app containers.
-Runtime images use compiled production JS/Next standalone without host source or dev-server
-mounts. P1 local synthetic configuration is deliberate. No production deployment,
-image publication or separate application restart drill is claimed. Artifact hashes/IDs
-are left unknown until actual runtime artifact bytes are attached.
+PostgreSQL P2 groups all PASS:
 
-## Operational exception and issue reconciliation
+1. clean migration/replay, seed/reseed and registry parity;
+2. profile/owner/language/variety SQL isolation;
+3. EN → CS → EN context-only switch, IDOR and optimistic concurrency;
+4. UUID resolution, validation and approvals;
+5. published version/manifest/entry/edge/translation/reference immutability;
+6. new version, atomic pointer rollback, stale/concurrent and language rejection;
+7. session/CSRF/expiry/role-revocation/API ownership;
+8. later-phase table absence and no cascade-delete FK;
+9. clean database teardown/recreation and repeated migration/seed.
 
-**EXC-P1-001: Main is NOT technically protected.** The repository remains PRIVATE.
-Owner declines a paid plan solely for technical protection at the current solo stage.
-Plan §4.1 p4 and Technical Specification §7 p8 contain protection clauses; Plan §8 p6
-does not make them a non-waivable hard P1 exit condition, and its approval record p13
-includes accepted exceptions. This explicitly approved operational deviation is recorded
-without changing the governing specifications or claiming technical enforcement.
+Detailed evidence: `docs/p2/P2_exit_evidence.md`, `docs/p2/evidence/validation-index.json`, `docs/p2/evidence/hosted-ci.json`, `docs/p2/evidence/schema-introspection.json`, `docs/p2/evidence/contract-diff.md`, `docs/p2/task-status.json`, and `docs/p2/requirement-evidence.json`.
 
-Compensating process: implementation/* branches; PRs into main; green hosted CI before
-merge; no direct push, force-push or deletion of main; owner milestone review before merge.
-Process rules can be bypassed technically, which remains the documented residual risk.
-Scope/review trigger: `docs/p1/closure/operational-exception.md` and `.json`.
+## Findings and handoff
 
-- P1-ENV-001: **CLOSED** by owner-verified hosted PostgreSQL/OCI execution.
-- P1-REMOTE-001: **CLOSED WITH EXC-P1-001**; private remote/PR/CI now confirmed.
-- Previous SHA mismatch: **CLOSED**; `3b0a45e2c143fb538edb7a626f8c84356cdcc34f` is the sole final hosted-tested source commit.
-- **BLOCKER: 0. IMPORTANT: 0.**
-- **MINOR P1-ACTIONS-001:** owner-reported non-failing Node.js warning for GitHub actions; no warning-only upgrades.
-- **MINOR P1-DEPS-001:** review three patched transitive overrides as upstream fixes arrive; no advisory suppressed.
+BLOCKER: none.
 
-## Changes, architecture and schema/API
+IMPORTANT: none.
 
-Only closure documentation/metadata was changed. Full added/modified/deleted inventory:
-`docs/p1/closure/changed-files.md` and `.json`. Tested application, tests, migrations,
-fixtures, CI YAML, Dockerfile, Compose and lockfile remain byte-identical to `3b0a45e2c143fb538edb7a626f8c84356cdcc34f`.
-**No new implementation commit. No contract change. No new schema/API/migration change.**
-Existing P1-only p1_bootstrap fixtures and health endpoints are unchanged.
+MINOR / technical debt:
 
-All approved manifest decisions remain fixed: modular monolith, PostgreSQL/shared
-English+Czech engine, DB isolation, identity/versioning, immutable evidence/publication,
-mastery/speech contracts, optional provider-agnostic AI, P8/P9 order and paid budget zero.
-No learner/admin AI runtime or P2 domain schema exists. Thirteen genuine future owner
-choices OD-002–OD-014 remain; none blocks P1. OD-002 is due before P2 identity acceptance.
+- GitHub-maintained Actions emit the existing Node runtime deprecation warning; no check fails.
+- Node 24.19 built-in Argon2id API is experimental, so the exact Node patch and policy string remain pinned and guarded by unit/integration/benchmark evidence.
+- Production hosting, capacity, privacy lifecycle and later provider decisions retain their governing future deadlines.
 
-Local reconciliation validation is separate from hosted runtime results:
-`python3 docs/p1/closure/validate.py` and `python3 tools/governance/validate_p1_baseline.py`.
-Exact outputs are recorded in `docs/p1/closure/local-reconciliation-validation.json`.
+Open owner decisions: none blocking P2. Owner acceptance of OD-002 implementation occurs with P2 review.
 
-## Delivery identity and next owner action
-
-The full closure package includes the immutable Git bundle at `3b0a45e2c143fb538edb7a626f8c84356cdcc34f`, a complete
-repository-ready tree with updated reporting files, an explicit closure-only patch
-and checksum manifest. The reporting overlay is not represented as a new hosted-tested
-Git commit. If later committed, its new head requires its own required CI checks.
-
-**Next action: owner reviews PR #1 and this closure package, then accepts P1 if satisfied.**
-This agent must not merge PR #1. **HARD STOP before P2.** Await separate explicit owner
-authorization; P1 readiness is not approval to implement IMP-P2-001.
+Exact next task: finish the evidence-only commit's four hosted checks, keep PR #2 open, then owner reviews and explicitly accepts or rejects P2. Do not merge PR #2 and do not start P3 without owner authorization: “P2 accepted. Proceed to P3.”
