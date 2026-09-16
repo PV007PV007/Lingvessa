@@ -27,7 +27,7 @@ export type AttemptResult = {
   feedback: string;
   evaluator_version: string;
   answer_policy_version: string;
-  run: { id: string; state: 'active' | 'remediation' | 'completed'; position: number; revision: number; current_activity_id: string | null; unresolved_count: number };
+  run: { id: string; state: 'active' | 'remediation' | 'completed'; position: number; revision: number; current_activity_id: string | null; unresolved_count: number; retry_available: boolean };
   replayed: boolean;
 };
 

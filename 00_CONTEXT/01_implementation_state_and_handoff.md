@@ -1,6 +1,6 @@
 # Lingvessa implementation state and handoff
 
-Timestamp: 2026-09-16T11:31:00Z
+Timestamp: 2026-09-16T16:47:13.466369+00:00
 
 P0/P1/P2: OWNER ACCEPTED. P3: AUTHORIZED, IN PROGRESS / NOT READY. P4: NOT AUTHORIZED / NOT STARTED.
 
@@ -8,7 +8,7 @@ P0/P1/P2: OWNER ACCEPTED. P3: AUTHORIZED, IN PROGRESS / NOT READY. P4: NOT AUTHO
 
 GitHub PV007PV007/Lingvessa main/history is the implementation source of truth. P2 PR #2 was merged with merge commit `df07f9a15838c99da1ea8c876a8b6262057b0354`. Tag `p2-accepted-2026-09-16` and published P2 accepted prerelease point to that merge. The architecture manifest and seven owner-locked governing PDFs are unchanged; Implementation Plan v1.4 is the sole execution-order authority.
 
-Branch: `implementation/p3-lesson-engine`, created from accepted P2. Remote checkpoint: `a43734ca8570c0b47f304c4e168efe5e27ca44e0`; PR #3 OPEN DRAFT. Local mirror baseline is not claimed as a hosted tested commit. Final tested SHA will be taken from the required hosted checks of the final branch head.
+Branch: `implementation/p3-lesson-engine`, created from accepted P2. Remote checkpoint: `ec07f846ef3ffc9828f558da720c50c2a86d8a8c`; PR #3 OPEN DRAFT. Local mirror baseline is not claimed as a hosted tested commit. Final tested SHA will be taken from the required hosted checks of the final branch head.
 
 ## Current implementation batch
 
@@ -30,9 +30,9 @@ Schema: migration `202609160001_p3_lesson_engine` creates lesson_runs, lesson_ru
 - Hosted checkpoint a43734c: install/baseline/check/reference/audit/bootstrap PASS; integration FAILED (old P1 migration-count assertion and P3 test-database name refused by the local-only allowlist). Both causes corrected in the current batch; hosted rerun pending. OCI was SKIPPED at this checkpoint, not passed.
 
 BLOCKER: no architectural contradiction identified. P3 acceptance remains NOT READY until actual runtime and full local/hosted gates pass.
-IMPORTANT: LessonPlayer UI and complete core-family fixture coverage still in progress; current tests do not establish full P3 acceptance.
+IMPORTANT: hosted run 35122948839 passed install/baseline/check/references/audit/Chromium install/PostgreSQL bootstrap, then failed first outbox claim due to timestamp ordering. Corrective batch pins initial delivery availability to claim time, tests exhausted leases, enforces content retry policy, preserves assisted correction, and emits natural-completion outbox events. Full hosted rerun and browser/container acceptance remain pending.
 MINOR: existing GitHub Actions Node warning and experimental pinned Argon2id remain inherited technical debt.
 
 Operational exception EXC-P1-001 remains: main is not technically protected; implementation branches → PR → green CI → owner review. Open owner decisions: none blocking current P3 work.
 
-Exact next task: finish IMP-P3-001/003 renderer and state implementation, verify P3 lineage/transaction/replay tests, push P3 branch and inspect actual hosted logs. Keep P3 PR open; do not merge or start P4.
+Exact next task: push the corrective P3 batch, inspect actual PostgreSQL/browser/container CI logs, resolve concrete failures, then reconcile the 165-row trace and exit evidence. Browser LessonPlayer and all 12 core family fixture activities per language are implemented; full reference modules remain P6/P7. Keep P3 PR open; do not merge or start P4.

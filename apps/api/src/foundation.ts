@@ -21,15 +21,15 @@ const tokenFrom = (request: Request) => {
 @Catch()
 export class FoundationExceptionFilter implements ExceptionFilter {
   catch(error: unknown, host: ArgumentsHost) {
-    if (error instanceof HttpException) {
-      host.switchToHttp().getResponse<Response>().status(error.getStatus()).json(error.getResponse());
+    const request = host.switchToHttp().getRequest<Request>();
+    if (request.url?.split('?')[0] === '/api/v1/health/ready' && error instanceof HttpException && error.getStatus()===503) {
+      host.switchToHttp().getResponse<Response>().status(503).json({status:'not_ready'});
       return;
     }
     const codes = { INVALID_INPUT: 400, NOT_FOUND: 404, FORBIDDEN: 403, CONFLICT: 409, UNAUTHENTICATED: 401,
       UNSUPPORTED_CONTRACT: 422, VERSION_CONFLICT: 409, RATE_LIMITED: 429, SERVICE_UNAVAILABLE: 503 };
     const dbCode = error instanceof Error && 'code' in error ? String(error.code) : '';
-    const status = error instanceof ContractError ? codes[error.code] : error instanceof ZodError ? 400 : ['23505','40001'].includes(dbCode) ? 409 : ['23503', '23514', '22P02'].includes(dbCode) ? 400 : dbCode === '42501' ? 403 : 500;
-    const request = host.switchToHttp().getRequest<Request>();
+    const status = error instanceof HttpException ? error.getStatus() : error instanceof ContractError ? codes[error.code] : error instanceof ZodError ? 400 : ['23505','40001'].includes(dbCode) ? 409 : ['23503', '23514', '22P02'].includes(dbCode) ? 400 : dbCode === '42501' ? 403 : 500;
     const supplied = request.headers['x-correlation-id'];
     const correlationId = supplied && UUID_PATTERN.test(supplied) ? supplied : randomUUID();
     const code = error instanceof ContractError ? error.code : error instanceof ZodError ? 'INVALID_INPUT' : status === 500 ? 'INTERNAL_ERROR' : status === 409 ? 'CONFLICT' : 'REQUEST_REJECTED';
@@ -42,7 +42,7 @@ export class FoundationExceptionFilter implements ExceptionFilter {
       status,
       code,
       detail_safe: error instanceof ContractError ? error.message : error instanceof ZodError ? 'Request validation failed' : status === 500 ? 'Unexpected service error' : 'Request rejected',
-      instance: request.url ?? '/api/v1',
+      instance: request.url?.split('?')[0] ?? '/api/v1',
       correlation_id: correlationId,
       ...(error instanceof ZodError ? { field_errors: error.issues.map((issue) => ({ path: issue.path.join('.'), code: issue.code })) } : {}),
     });

@@ -26,7 +26,7 @@ export function learnerManifest(manifest: LessonManifest): LearnerManifest {
   return learnerManifestSchema.parse({ ...manifest, activities: manifest.activities.map(learnerActivity) });
 }
 export const runPositionSchema = z.object({ id: uuid, state: z.enum(['active','remediation','completed']), position: z.number().int().min(0),
-  revision: z.number().int().positive(), current_activity_id: uuid.nullable(), unresolved_count: z.number().int().min(0) }).strict();
+  revision: z.number().int().positive(), current_activity_id: uuid.nullable(), unresolved_count: z.number().int().min(0), retry_available: z.boolean() }).strict();
 export const learnerRunSchema = runPositionSchema.extend({ language_profile_id: uuid, language_id: uuid, publication_id: uuid, lesson_id: uuid,
   content_version_id: uuid, client_sequence: z.number().int().min(0), manifest: learnerManifestSchema }).strict();
 export type LearnerRun = z.infer<typeof learnerRunSchema>;

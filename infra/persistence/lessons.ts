@@ -31,6 +31,7 @@ export type RunView = {
   revision: number;
   current_activity_id: string | null;
   unresolved_count: number;
+  retry_available: boolean;
   manifest: LearnerManifest;
 };
 
@@ -145,6 +146,8 @@ export class LessonRepository {
       const activity = run.manifest.activities[run.position];
       if (!activity || activity.id !== command.item_id) throw new ContractError('VERSION_CONFLICT', 'Pinned manifest position is inconsistent');
       this.validateCommand(activity, command);
+      if (run.state === 'active' && command.intent === 'submit' && Number(item.attempt_count) > activity.runtime.max_retries)
+        throw new ContractError('CONFLICT', 'Retry limit reached; reveal the answer to continue');
       const evaluation = this.evaluate(activity, command);
       const outcome = command.intent === 'reveal' || (item.revealed && evaluation.result === 'correct') ? 'assisted' : evaluation.result;
       const feedback = command.intent === 'reveal' ? activity.feedback.reveal : evaluation.feedback;
@@ -183,6 +186,8 @@ export class LessonRepository {
           content_version_id: run.content_version_id, content_schema_version: P3_VERSIONS.content_schema,
           evaluator_version: evaluation.evaluator_version, mastery_model_version: P3_VERSIONS.mastery_model, scheduler_version: P3_VERSIONS.scheduler },
       });
+      if (next.state === 'completed') await this.writeOutbox(db, { eventType: 'lesson.run.completed', aggregateId: runId, correlationId: command.attempt_id, causationId: command.attempt_id,
+        profileId: run.language_profile_id, languageId: run.language_id, payload: { run_id: runId, unresolved_count: 0, reason: 'all_items_resolved' } });
       return receipt;
     });
   }
@@ -253,16 +258,18 @@ export class LessonRepository {
   private async runView(db: pg.PoolClient, row: RunRow): Promise<RunView> {
     const current = row.state === 'completed' ? null : row.manifest.activities[row.position]?.id ?? null;
     const unresolved = Number((await db.query('SELECT count(*) FROM lesson_run_items WHERE lesson_run_id=$1 AND needs_remediation', [row.id])).rows[0].count);
+    const item = current ? (await db.query('SELECT attempt_count FROM lesson_run_items WHERE lesson_run_id=$1 AND item_id=$2', [row.id,current])).rows[0] : null;
+    const retryAvailable = Boolean(current) && (row.state === 'remediation' || Number(item?.attempt_count ?? 0) <= row.manifest.activities[row.position]!.runtime.max_retries);
     return { id: row.id, language_profile_id: row.language_profile_id, language_id: row.language_id, publication_id: row.publication_id,
       lesson_id: row.lesson_id, content_version_id: row.content_version_id, state: row.state, position: row.position,
-      client_sequence: Number(row.client_sequence), revision: row.revision, current_activity_id: current, unresolved_count: unresolved, manifest: learnerManifest(row.manifest) };
+      client_sequence: Number(row.client_sequence), revision: row.revision, current_activity_id: current, unresolved_count: unresolved, retry_available: retryAvailable, manifest: learnerManifest(row.manifest) };
   }
 
   private async attemptView(db: pg.PoolClient, attempt: Record<string, unknown>, run: RunRow, replayed: boolean): Promise<AttemptView> {
     const view = await this.runView(db, run);
     return { attempt_id: String(attempt.attempt_id), outcome: attempt.outcome as AttemptView['outcome'], feedback: String(attempt.feedback),
       evaluator_version: String(attempt.evaluator_version), answer_policy_version: String(attempt.answer_policy_version), replayed,
-      run: { id: view.id, state: view.state, position: view.position, revision: view.revision, current_activity_id: view.current_activity_id, unresolved_count: view.unresolved_count } };
+      run: { id: view.id, state: view.state, position: view.position, revision: view.revision, current_activity_id: view.current_activity_id, unresolved_count: view.unresolved_count, retry_available: view.retry_available } };
   }
 
   private async writeOutbox(db: pg.PoolClient, event: { eventType: string; aggregateId: string; correlationId: string; causationId: string; profileId: string; languageId: string; payload: Record<string, unknown> }): Promise<void> {

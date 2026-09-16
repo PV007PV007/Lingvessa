@@ -289,6 +289,14 @@ BEGIN
   SELECT activity INTO pinned FROM lesson_runs r, jsonb_array_elements(r.manifest->'activities') activity
     WHERE r.id=attempt.lesson_run_id AND activity->>'id'=NEW.item_id::text;
   IF attempt.attempt_id IS DISTINCT FROM NEW.attempt_id OR
+     NEW.content_version_id IS DISTINCT FROM attempt.content_version_id OR
+     NEW.content_schema_version IS DISTINCT FROM attempt.content_schema_version OR
+     NEW.evaluator_version IS DISTINCT FROM attempt.evaluator_version OR
+     NEW.mastery_model_version IS DISTINCT FROM attempt.mastery_model_version OR
+     NEW.scheduler_version IS DISTINCT FROM attempt.scheduler_version OR
+     NEW.model_version IS DISTINCT FROM attempt.mastery_model_version OR
+     NEW.independence IS DISTINCT FROM (CASE WHEN outcome='assisted' THEN 'assisted' WHEN (attempt.assistance->>'prior_attempts')::int>0 THEN 'retry' ELSE 'independent' END) OR
+     NEW.difficulty IS DISTINCT FROM (pinned->'learning'->>'difficulty')::numeric OR
      NOT EXISTS (SELECT 1 FROM jsonb_array_elements(pinned->'learning'->'knowledge_refs') k WHERE k->>'knowledge_item_id'=NEW.knowledge_item_id::text) OR
      NOT EXISTS (SELECT 1 FROM jsonb_array_elements(pinned->'learning'->'evidence_map') m
        WHERE m->>'skill'=NEW.skill AND m->>'facet'=NEW.facet AND (m->>'weight')::numeric=NEW.base_weight) THEN

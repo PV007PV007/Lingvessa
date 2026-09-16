@@ -150,6 +150,20 @@ test('P3 PostgreSQL: pinned bilingual lesson runtime, attempts, idempotency, rem
       assert.equal(enRun.state,'completed'); assert.equal(enRun.unresolved_count,1);
     });
 
+    await run('P3-POLICY-001 retry cap requires explicit reveal; later correction remains assisted', async()=>{
+      let retryRun=await lessons.start(otherId,{language_profile_id:profiles.otherEn,publication_id:publications.en.id,lesson_id:p3.en.lesson_id});
+      for(let index=1;index<=3;index++)await lessons.submit(otherId,retryRun.id,command(randomUUID(),index,enActivity1,'goodbye'));
+      assert.equal((await lessons.get(otherId,retryRun.id)).retry_available,false);
+      await assert.rejects(lessons.submit(otherId,retryRun.id,command(randomUUID(),4,enActivity1,'hello')),/Retry limit/u);
+      await lessons.submit(otherId,retryRun.id,command(randomUUID(),4,enActivity1,'','reveal'));
+      await lessons.submit(otherId,retryRun.id,command(randomUUID(),5,enActivity2,'informal'));
+      retryRun=await lessons.get(otherId,retryRun.id);assert.equal(retryRun.state,'remediation');
+      const corrected=await lessons.submit(otherId,retryRun.id,command(randomUUID(),6,enActivity1,'hello'));
+      assert.equal(corrected.outcome,'assisted');assert.equal(corrected.run.state,'completed');
+      const event=(await db.query('SELECT independence,effective_weight FROM evidence_events WHERE user_id=$1 AND attempt_id=$2',[otherId,corrected.attempt_id])).rows[0];
+      assert.equal(event.independence,'assisted');assert.equal(Number(event.effective_weight),0);
+    });
+
     const faultRun = await lessons.start(learnerId,{ language_profile_id: profiles.en, publication_id: publications.en.id, lesson_id: p3.en.lesson_id });
     await run('P3-TXN-001 injected failure rolls back attempt/evidence/run/outbox atomically', async () => {
       const attemptId = randomUUID(); const before = Number((await db.query('SELECT count(*) FROM outbox_events')).rows[0].count);
@@ -186,7 +200,12 @@ test('P3 PostgreSQL: pinned bilingual lesson runtime, attempts, idempotency, rem
       assert.equal(await outbox.succeed('p3-test-consumer',first.id,retried.find(event=>event.id===first.id)!.attempt_count),true);
       assert.equal(await outbox.fail('p3-test-consumer',first.id,'LATE_FAILURE',true,first.attempt_count), 'stale');
       const second = retried.find((event) => event.id!==first.id) ?? (await outbox.claim('p3-test-consumer',20,new Date()))[0];
-      if (second) assert.equal(await outbox.fail('p3-test-consumer',second.id,'NON_RETRYABLE',false,second.attempt_count,new Date()),'terminal');
+      assert(second); assert.equal(await outbox.fail('p3-test-consumer',second.id,'NON_RETRYABLE',false,second.attempt_count,new Date()),'terminal');
+      const crashClaim = (await outbox.claim('p3-crash-consumer',1,new Date()))[0]!; assert(crashClaim);
+      await db.query(`UPDATE outbox_deliveries SET attempt_count=8,lease_expires_at=now()-interval '1 second' WHERE consumer='p3-crash-consumer' AND event_id=$1`,[crashClaim.id]);
+      await outbox.claim('p3-crash-consumer',1,new Date());
+      assert.equal((await db.query(`SELECT status FROM outbox_deliveries WHERE consumer='p3-crash-consumer' AND event_id=$1`,[crashClaim.id])).rows[0].status,'terminal_failure');
+      assert.equal(await outbox.succeed('p3-crash-consumer',crashClaim.id,8),false);
       assert((await outbox.metrics()).some((metric) => metric.consumer==='p3-test-consumer'));
       assert.equal((await db.query(`SELECT count(*) FROM outbox_events WHERE payload::text ~* 'raw_audio|password|full_response'`)).rows[0].count,'0');
       await sqlReject(db,'DELETE FROM outbox_events WHERE id=$1',[first.id],'23514');
@@ -216,6 +235,7 @@ test('P3 PostgreSQL: pinned bilingual lesson runtime, attempts, idempotency, rem
           assert.equal(result.outcome,response.kind==='none'?'accepted':'correct');coreRun=await lessons.get(learnerId,coreRun.id);
         }
         assert.equal(coreRun.state,'completed');assert.equal(coreRun.unresolved_count,0);
+        assert.equal((await db.query(`SELECT count(*) FROM outbox_events WHERE aggregate_id=$1 AND event_type='lesson.run.completed'`,[coreRun.id])).rows[0].count,'1');
       }
     });
 
@@ -234,13 +254,26 @@ test('P3 PostgreSQL: pinned bilingual lesson runtime, attempts, idempotency, rem
         const apiRun=await started.json() as {id:string;client_sequence:number;manifest:{activities:P3Fixture['activities']}};
         const item=apiRun.manifest.activities[0]!; const valid=command(randomUUID(),apiRun.client_sequence+1,item,'hello');
         const tampered=await fetch(`${base}/api/v1/lesson-runs/${apiRun.id}/attempts`,{method:'POST',headers,body:JSON.stringify({...valid,score:1,correct:true})}); assert.equal(tampered.status,400);
-        const accepted=await fetch(`${base}/api/v1/lesson-runs/${apiRun.id}/attempts`,{method:'POST',headers,body:JSON.stringify(valid)}); assert.equal(accepted.status,200);
+        const timings:number[]=[];
+        for(let sample=0;sample<20;sample++){
+          const current=await lessons.start(learnerId,startBody);
+          const submitted=command(randomUUID(),current.client_sequence+1,item,'hello');
+          const startedAt=performance.now();
+          const accepted=await fetch(`${base}/api/v1/lesson-runs/${current.id}/attempts`,{method:'POST',headers,body:JSON.stringify(submitted)});
+          assert.equal(accepted.status,200);await accepted.json();timings.push(performance.now()-startedAt);
+          await lessons.submit(learnerId,current.id,command(randomUUID(),current.client_sequence+2,enActivity2,'informal'));
+        }
+        timings.sort((a,b)=>a-b);const p95=timings[Math.ceil(timings.length*0.95)-1]!;assert(p95<=700,`Attempt API p95 ${p95.toFixed(2)}ms exceeds 700ms`);
+        mkdirSync('artifacts/p3',{recursive:true});writeFileSync('artifacts/p3/attempt-latency.json',JSON.stringify({samples:timings.length,p95_ms:p95,budget_ms:700,scope:'loopback API + real PostgreSQL deterministic attempts; not production load',status:'PASS'})+'\n');
+        for(let index=0;index<120;index++)assert.equal(await identity.allowLearningAction(otherId),true);
+        assert.equal(await identity.allowLearningAction(otherId),false);
         const resumed=await fetch(`${base}/api/v1/lesson-runs?language_profile_id=${profiles.en}`,{headers:{cookie}}); assert.equal(resumed.status,200);
         assert((await resumed.json() as Array<{id:string}>).some((entry)=>entry.id===apiRun.id));
         assert(!JSON.stringify(apiRun.manifest).includes('answer_policy'));
+        const safeError=await fetch(`${base}/api/v1/lesson-runs/not-a-uuid`,{headers:{cookie}});assert.equal(safeError.status,400);assert.equal((await safeError.json() as {code:string}).code,'INVALID_INPUT');
         if(process.env.P3_BROWSER_TESTS==='true'){
           for(const [language,runId] of [['en',faultRun.id],['cs',csRun.id]] as const){
-            const current=await lessons.get(learnerId,runId);const activity=(JSON.parse(readFileSync(`content/fixtures/p3/${language}-lesson.json`,'utf8')).activities as ActivityContract[])[current.position]!;
+            const current=await lessons.get(learnerId,runId);if(current.state==='completed')continue;const activity=(JSON.parse(readFileSync(`content/fixtures/p3/${language}-lesson.json`,'utf8')).activities as ActivityContract[])[current.position]!;
             await lessons.submit(learnerId,runId,{attempt_id:randomUUID(),content_version_id:current.content_version_id,item_id:activity.id,client_sequence:current.client_sequence+1,intent:'submit',
               response:{kind:'single',option_id:activity.response.answer_policy.accepted_option_ids![0]},presentation:{seed:activity.runtime.presentation_seed,order:activity.runtime.presentation_order},assistance:{hint_count:0,reveal:false}});
           }
@@ -268,6 +301,6 @@ test('P3 PostgreSQL: pinned bilingual lesson runtime, attempts, idempotency, rem
     await admin.end();
     mkdirSync('artifacts/p3',{recursive:true});
     writeFileSync('artifacts/p3/database-validation.json',JSON.stringify({ timestamp:new Date().toISOString(),commit:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),
-      source_sha:process.env.GITHUB_HEAD_SHA??null,phase:'P3',database:'PostgreSQL 18.6',gates:results,status:results.length===(process.env.P3_BROWSER_TESTS==='true'?14:13)&&results.every((entry)=>entry.status==='PASS')?'PASS':'FAIL' },null,2)+'\n');
+      source_sha:process.env.GITHUB_HEAD_SHA??null,phase:'P3',database:'PostgreSQL 18.6',gates:results,status:results.length===(process.env.P3_BROWSER_TESTS==='true'?15:14)&&results.every((entry)=>entry.status==='PASS')?'PASS':'FAIL' },null,2)+'\n');
   }
 });

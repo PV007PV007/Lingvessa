@@ -20,8 +20,8 @@ export class OutboxRepository {
     if (!/^[a-z0-9][a-z0-9-]{0,63}$/u.test(consumer) || !Number.isInteger(limit) || limit < 1 || limit > 100)
       throw new TypeError('Invalid outbox consumer/limit');
     return transaction(this.pool, async (db) => {
-      await db.query(`INSERT INTO outbox_deliveries(event_id,consumer)
-        SELECT id,$1 FROM outbox_events ON CONFLICT DO NOTHING`, [consumer]);
+      await db.query(`INSERT INTO outbox_deliveries(event_id,consumer,next_attempt_at)
+        SELECT id,$1,$2 FROM outbox_events ON CONFLICT DO NOTHING`, [consumer,now]);
       await db.query(`UPDATE outbox_deliveries SET status='terminal_failure',completed_at=$2,lease_expires_at=NULL,last_error_code='LEASE_RETRIES_EXHAUSTED'
         WHERE consumer=$1 AND status IN ('pending','processing') AND attempt_count>=8 AND (lease_expires_at IS NULL OR lease_expires_at<=$2)`, [consumer,now]);
       const due = (await db.query(`SELECT d.event_id FROM outbox_deliveries d

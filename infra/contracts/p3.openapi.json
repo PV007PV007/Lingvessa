@@ -1051,6 +1051,9 @@
             "minimum": 0,
             "maximum": 9007199254740991
           },
+          "retry_available": {
+            "type": "boolean"
+          },
           "language_profile_id": {
             "type": "string",
             "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
@@ -1206,6 +1209,39 @@
                         "stimulus": {
                           "type": "string",
                           "maxLength": 4000
+                        },
+                        "media_refs": {
+                          "default": [],
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "asset_id": {
+                                "type": "string",
+                                "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+                              },
+                              "asset_stable_code": {
+                                "type": "string",
+                                "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$"
+                              },
+                              "asset_version": {
+                                "type": "integer",
+                                "exclusiveMinimum": 0,
+                                "maximum": 9007199254740991
+                              },
+                              "role": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            },
+                            "required": [
+                              "asset_id",
+                              "asset_stable_code",
+                              "asset_version",
+                              "role"
+                            ],
+                            "additionalProperties": false
+                          }
                         },
                         "options": {
                           "maxItems": 40,
@@ -1397,6 +1433,7 @@
                       "required": [
                         "instruction_key",
                         "prompt",
+                        "media_refs",
                         "accessibility"
                       ],
                       "additionalProperties": false
@@ -1516,6 +1553,7 @@
           "revision",
           "current_activity_id",
           "unresolved_count",
+          "retry_available",
           "language_profile_id",
           "language_id",
           "publication_id",
@@ -1591,6 +1629,9 @@
                 "type": "integer",
                 "minimum": 0,
                 "maximum": 9007199254740991
+              },
+              "retry_available": {
+                "type": "boolean"
               }
             },
             "required": [
@@ -1599,7 +1640,8 @@
               "position",
               "revision",
               "current_activity_id",
-              "unresolved_count"
+              "unresolved_count",
+              "retry_available"
             ],
             "additionalProperties": false
           },

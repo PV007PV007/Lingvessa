@@ -59,7 +59,7 @@ export function LessonPlayer({runId}:{runId:string}) {
       await queue.current.enqueue({run_id:runId,queued_at:new Date().toISOString(),command});
       const accepted=await client.current.submitAttempt(runId,command);await queue.current.acknowledge(command.attempt_id);
       dispatch({type:'AUTHORITATIVE_RESULT',attempt_id:accepted.attempt_id,outcome:accepted.outcome,feedback:accepted.feedback,revision:accepted.run.revision});
-      setResult(accepted);setRun({...run,client_sequence:command.client_sequence,revision:accepted.run.revision});
+      setResult(accepted);setRun({...run,client_sequence:command.client_sequence,revision:accepted.run.revision,retry_available:accepted.run.retry_available});
     }catch(error){
       dispatch({type:'FAIL',code:error instanceof ApiProblem?error.problem.code:'NETWORK_UNAVAILABLE'});
       if(error instanceof ApiProblem&&error.problem.status<500&&error.problem.status!==401){
@@ -77,10 +77,11 @@ export function LessonPlayer({runId}:{runId:string}) {
     {!loginRequired&&<>
       {run&&run.state!=='completed'&&<><p>{run.manifest.language==='en'?'English':'Čeština'} · {run.position+1} / {run.manifest.activities.length}</p>
         {run.state==='remediation'&&<p>Повторення: невирішених вправ — {run.unresolved_count}.</p>}
-        {run.manifest.activities[run.position]&&<ActivityRenderer key={`${run.id}:${run.position}:${result?.attempt_id??'active'}`} activity={run.manifest.activities[run.position]!} disabled={busy||result!==null||notice!==''} onAnswer={response=>void answer(response)}/>}
+        {run.manifest.activities[run.position]&&<ActivityRenderer key={`${run.id}:${run.position}:${result?.attempt_id??'active'}`} activity={run.manifest.activities[run.position]!} disabled={busy||result!==null||notice!==''||(!run.retry_available&&run.manifest.activities[run.position]?.response_kind!=='none')} onAnswer={response=>void answer(response)}/>}
         {result&&<div className="lesson-feedback" aria-live="polite" role="status"><strong>{result.outcome==='correct'?'Правильно':result.outcome==='incorrect'?'Спробуйте ще раз':result.outcome==='assisted'?'Завершено з допомогою':'Продовжуймо'}</strong><p>{result.feedback}</p>
-          {result.outcome==='incorrect'?<button disabled={busy} onClick={()=>{dispatch({type:'RETRY'});setResult(null);}}>Повторити</button>:<button disabled={busy} onClick={()=>void next()}>Далі</button>}</div>}
+          {result.outcome==='incorrect'?<button disabled={busy||!result.run.retry_available} onClick={()=>{dispatch({type:'RETRY'});setResult(null);}}>Повторити</button>:<button disabled={busy} onClick={()=>void next()}>Далі</button>}</div>}
         {(!result||result.outcome==='incorrect')&&run.manifest.activities[run.position]?.response_kind!=='none'&&<button disabled={busy||notice!==''} onClick={()=>void answer({kind:'none'},true)}>Показати відповідь</button>}
+        {!run.retry_available&&(!result||result.outcome==='incorrect')&&<p>Спроби вичерпано. Перегляньте відповідь, щоб продовжити.</p>}
         <label><input type="checkbox" checked={autoAdvance} onChange={event=>setAutoAdvance(event.target.checked)}/>Автоматично переходити після відповіді</label>
         {run.state==='remediation'&&<button disabled={busy} onClick={()=>void exit()}>Завершити з невирішеними вправами</button>}
       </>}
