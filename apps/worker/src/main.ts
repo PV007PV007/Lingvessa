@@ -10,7 +10,7 @@ try {
   const pool = createFoundationPool(config.DATABASE_URL!);
   // The P3 default consumer acknowledges redacted learning diagnostics. A remote analytics
   // sink may be added later; its outage can never roll back accepted learning progress.
-  const stopOutbox = startOutboxLoop(new OutboxRepository(pool), 'analytics-v1', async () => undefined);
+  const stopOutbox = startOutboxLoop(new OutboxRepository(pool), 'analytics-v1', async (event) => { console.log(JSON.stringify({ event: 'outbox_delivery', event_key: event.event_key, event_type: event.event_type, event_version: event.event_version })); });
   const server = createWorkerHealthServer(probe);
   server.requestTimeout = 5000;
   server.headersTimeout = 5000;

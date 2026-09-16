@@ -129,9 +129,11 @@ export const activityContractSchema = z.object({
   for (const [index, evidence] of activity.learning.evidence_map.entries()) {
     if (!isSkillFacet(evidence.skill, evidence.facet))
       ctx.addIssue({ code: 'custom', path: ['learning', 'evidence_map', index], message: 'Invalid canonical skill/facet pair' });
-    if (['speaking', 'pronunciation'].includes(evidence.skill) && activity.runtime.completion_policy !== 'optional_speech_v1')
+    if (['speaking', 'pronunciation'].includes(evidence.skill) && (activity.runtime.completion_policy !== 'optional_speech_v1' || !['listen_repeat','read_aloud'].includes(activity.type)))
       ctx.addIssue({ code: 'custom', path: ['learning', 'evidence_map', index], message: 'Speech evidence requires the optional speech contract' });
   }
+  if(activity.response.answer_policy.mode === 'exposure' && activity.learning.evidence_map.length)
+    ctx.addIssue({code:'custom',message:'Exposure cannot create performance evidence'});
   const identifiers = activity.presentation.options?.map((option) => option.id) ?? [];
   if (new Set(identifiers).size !== identifiers.length)
     ctx.addIssue({ code: 'custom', path: ['presentation', 'options'], message: 'Presentation option IDs must be unique' });

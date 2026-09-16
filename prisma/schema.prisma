@@ -651,10 +651,15 @@ model activity_attempts {
   @@unique([lesson_run_id, client_sequence])
   @@unique([lesson_run_id, user_id, attempt_id])
   @@unique([user_id, attempt_id, language_profile_id, language_id, item_id, content_version_id])
+  @@unique([id, user_id, language_profile_id, language_id])
   @@schema("public")
 }
 
 model evidence_events {
+  attempt_db_id String @db.Uuid
+  independence String
+  difficulty Decimal @db.Decimal(6,5)
+  model_version String
   id                      String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   user_id                 String   @db.Uuid
   attempt_id              String   @db.Uuid

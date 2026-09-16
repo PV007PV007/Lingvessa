@@ -13,6 +13,10 @@ import { OutboxRepository } from '../../infra/persistence/outbox.js';
 import { loadReferenceFixture } from '../../infra/persistence/fixtures.js';
 import { loadExecutableLessonFixture } from '../../infra/persistence/p3-fixtures.js';
 import { createApi } from '../../apps/api/src/app.js';
+import { browserGate } from '../../tools/p3/browser-gate.js';
+import { executableLessonFixtureSchema } from '../../packages/content-tools/src/p3-fixture.js';
+import type { ActivityContract } from '../../packages/activity-schemas/src/lesson.js';
+import type { ActivityResponse } from '../../packages/lesson-engine/src/evaluator.js';
 import { seedBootstrap } from '../../prisma/seed.js';
 import { languageIds } from '../../packages/domain/src/identity.js';
 
@@ -21,7 +25,7 @@ type P3Fixture = { language: 'en' | 'cs'; language_id: string; lesson_id: string
   ancestor_versions: Array<{ entity_id: string; content_version_id: string }>; activities: Array<{ id: string; runtime: { presentation_seed: string; presentation_order: string[] } }> };
 type Gate = { gate: string; status: 'PASS' };
 
-test('P3 PostgreSQL: pinned bilingual lesson runtime, attempts, idempotency, remediation and outbox', { timeout: 240000 }, async () => {
+test('P3 PostgreSQL: pinned bilingual lesson runtime, attempts, idempotency, remediation and outbox', { timeout: 360000 }, async () => {
   const baseUrl = localDatabaseUrl(process.env);
   const admin = new pg.Client({ connectionString: baseUrl, connectionTimeoutMillis: 2000 });
   const name = `lingvessa_p3_test_${randomBytes(8).toString('hex')}`;
@@ -165,25 +169,54 @@ test('P3 PostgreSQL: pinned bilingual lesson runtime, attempts, idempotency, rem
       assert(outcomes.every((result) => result.outcome==='correct')); assert.equal(outcomes.filter((result) => result.replayed).length,1);
       assert.equal((await db.query('SELECT count(*) FROM activity_attempts WHERE attempt_id=$1',[csAttempt.attempt_id])).rows[0].count,'1');
       assert.equal((await db.query('SELECT count(*) FROM evidence_events WHERE attempt_id=$1',[csAttempt.attempt_id])).rows[0].count,'1');
-      await sqlReject(db,`INSERT INTO evidence_events(user_id,attempt_id,language_profile_id,language_id,item_id,knowledge_item_id,skill,facet,result_class,assisted,
+      await sqlReject(db,`INSERT INTO evidence_events(attempt_db_id,independence,difficulty,model_version,user_id,attempt_id,language_profile_id,language_id,item_id,knowledge_item_id,skill,facet,result_class,assisted,
         base_weight,effective_weight,content_version_id,content_schema_version,evaluator_version,mastery_model_version,scheduler_version)
-        SELECT user_id,attempt_id,language_profile_id,$1,item_id,$2,skill,facet,result_class,assisted,base_weight,effective_weight,content_version_id,
+        SELECT attempt_db_id,independence,difficulty,model_version,user_id,attempt_id,language_profile_id,$1,item_id,$2,skill,facet,result_class,assisted,base_weight,effective_weight,content_version_id,
           content_schema_version,evaluator_version,mastery_model_version,scheduler_version FROM evidence_events WHERE attempt_id=$3`,
-      [languageIds.en,'49db33a3-4a56-48d6-8a73-0676c3133625',csAttempt.attempt_id],'23503');
+      [languageIds.en,'49db33a3-4a56-48d6-8a73-0676c3133625',csAttempt.attempt_id],'23514');
     });
 
     await run('P3-OUT-001 durable outbox has bounded retry/idempotent settlement and sink failure leaves attempt committed', async () => {
       const outbox = new OutboxRepository(db); const claimed = await outbox.claim('p3-test-consumer',2,new Date()); assert(claimed.length>0);
-      const first = claimed[0]!; assert.equal(await outbox.fail('p3-test-consumer',first.id,'SYNTHETIC_OUTAGE',true,new Date()),'retry');
+      const first = claimed[0]!; assert.equal(await outbox.fail('p3-test-consumer',first.id,'SYNTHETIC_OUTAGE',true,first.attempt_count,new Date()),'retry');
       assert.equal((await db.query('SELECT count(*) FROM activity_attempts WHERE attempt_id=$1',[wrongId])).rows[0].count,'1');
       await db.query(`UPDATE outbox_deliveries SET next_attempt_at=now()-interval '1 second' WHERE event_id=$1 AND consumer='p3-test-consumer'`,[first.id]);
       const retried = await outbox.claim('p3-test-consumer',20,new Date()); assert(retried.some((event) => event.id===first.id));
-      await outbox.succeed('p3-test-consumer',first.id); await outbox.succeed('p3-test-consumer',first.id);
+      assert.equal(await outbox.succeed('p3-test-consumer',first.id,first.attempt_count),false);
+      assert.equal(await outbox.succeed('p3-test-consumer',first.id,retried.find(event=>event.id===first.id)!.attempt_count),true);
+      assert.equal(await outbox.fail('p3-test-consumer',first.id,'LATE_FAILURE',true,first.attempt_count), 'stale');
       const second = retried.find((event) => event.id!==first.id) ?? (await outbox.claim('p3-test-consumer',20,new Date()))[0];
-      if (second) assert.equal(await outbox.fail('p3-test-consumer',second.id,'NON_RETRYABLE',false,new Date()),'terminal');
+      if (second) assert.equal(await outbox.fail('p3-test-consumer',second.id,'NON_RETRYABLE',false,second.attempt_count,new Date()),'terminal');
       assert((await outbox.metrics()).some((metric) => metric.consumer==='p3-test-consumer'));
       assert.equal((await db.query(`SELECT count(*) FROM outbox_events WHERE payload::text ~* 'raw_audio|password|full_response'`)).rows[0].count,'0');
       await sqlReject(db,'DELETE FROM outbox_events WHERE id=$1',[first.id],'23514');
+    });
+
+    await run('P3-CORE-001 EN/CS intro/matching/construction/typing/grammar/listening/dialogue/text-roleplay/result share one engine', async()=>{
+      for(const language of ['en','cs'] as const){
+        const fixture=executableLessonFixtureSchema.parse(JSON.parse(readFileSync(`content/fixtures/p3/${language}-core.json`,'utf8')));
+        const loaded=await loadExecutableLessonFixture(db,authorId,fixture);assert.equal(loaded.version_ids.length,14);
+        assert.equal((await loadExecutableLessonFixture(db,authorId,fixture)).status,'unchanged');
+        const replacements=new Map([[fixture.lesson_id,fixture.content_version_id],...fixture.ancestor_versions.map(entry=>[entry.entity_id,entry.content_version_id] as const)]);
+        const versionIds=[...p2[language].entities.map(entity=>replacements.get(entity.id)??entity.version_id),...fixture.new_items.map(entry=>entry.content_version_id)];
+        for(const versionId of versionIds){
+          await content.validateVersion(versionId);const version=(await db.query('SELECT checksum,revision FROM content_versions WHERE id=$1',[versionId])).rows[0];
+          for(const gate of gateTypes)await content.approve(reviewerId,versionId,version.checksum,version.revision,gate,'approved',`Synthetic P3 core ${gate} approval`);
+        }
+        const publicationId=randomUUID();await content.publish({id:publicationId,actorId:reviewerId,courseId:p2[language].entities.find(entity=>entity.kind==='course')!.id,
+          languageId:fixture.language_id,channel:'test',versionCode:`p3-core-${language}-1`,versionIds});
+        let coreRun=await lessons.start(learnerId,{language_profile_id:profiles[language],publication_id:publicationId,lesson_id:fixture.lesson_id});
+        assert(!JSON.stringify(coreRun.manifest).includes('accepted_text'));
+        for(const activity of fixture.activities){
+          const policy=activity.response.answer_policy;
+          const response:ActivityResponse=policy.mode==='exposure'?{kind:'none'}:policy.mode==='single'?{kind:'single',option_id:policy.accepted_option_ids![0]!}:
+            policy.mode==='text'?{kind:'text',text:policy.accepted_text![0]!}:policy.mode==='mapping'?{kind:'mapping',pairs:policy.accepted_pairs!}:{kind:'order',option_ids:policy.accepted_order!};
+          const result=await lessons.submit(learnerId,coreRun.id,{attempt_id:randomUUID(),content_version_id:fixture.content_version_id,item_id:activity.id,client_sequence:coreRun.client_sequence+1,
+            intent:response.kind==='none'?'continue':'submit',response,presentation:{seed:activity.runtime.presentation_seed,order:activity.runtime.presentation_order},assistance:{hint_count:0,reveal:false}});
+          assert.equal(result.outcome,response.kind==='none'?'accepted':'correct');coreRun=await lessons.get(learnerId,coreRun.id);
+        }
+        assert.equal(coreRun.state,'completed');assert.equal(coreRun.unresolved_count,0);
+      }
     });
 
     await run('P3-API-001 auth/CSRF/strict-body/problem details and resume surface are enforced', async () => {
@@ -204,6 +237,18 @@ test('P3 PostgreSQL: pinned bilingual lesson runtime, attempts, idempotency, rem
         const accepted=await fetch(`${base}/api/v1/lesson-runs/${apiRun.id}/attempts`,{method:'POST',headers,body:JSON.stringify(valid)}); assert.equal(accepted.status,200);
         const resumed=await fetch(`${base}/api/v1/lesson-runs?language_profile_id=${profiles.en}`,{headers:{cookie}}); assert.equal(resumed.status,200);
         assert((await resumed.json() as Array<{id:string}>).some((entry)=>entry.id===apiRun.id));
+        assert(!JSON.stringify(apiRun.manifest).includes('answer_policy'));
+        if(process.env.P3_BROWSER_TESTS==='true'){
+          for(const [language,runId] of [['en',faultRun.id],['cs',csRun.id]] as const){
+            const current=await lessons.get(learnerId,runId);const activity=(JSON.parse(readFileSync(`content/fixtures/p3/${language}-lesson.json`,'utf8')).activities as ActivityContract[])[current.position]!;
+            await lessons.submit(learnerId,runId,{attempt_id:randomUUID(),content_version_id:current.content_version_id,item_id:activity.id,client_sequence:current.client_sequence+1,intent:'submit',
+              response:{kind:'single',option_id:activity.response.answer_policy.accepted_option_ids![0]},presentation:{seed:activity.runtime.presentation_seed,order:activity.runtime.presentation_order},assistance:{hint_count:0,reveal:false}});
+          }
+          const freshEn=await lessons.start(learnerId,{language_profile_id:profiles.en,publication_id:publications.en.id,lesson_id:p3.en.lesson_id});
+          const freshCs=await lessons.start(learnerId,{language_profile_id:profiles.cs,publication_id:publications.cs.id,lesson_id:p3.cs.lesson_id});
+          await run('P3-UI-001 real Chromium EN/CS login/reload/lost-response/reveal/remediation',()=>browserGate(base,freshEn.id,freshCs.id));
+        }
+
       } finally { await app.close(); }
     });
 
@@ -223,6 +268,6 @@ test('P3 PostgreSQL: pinned bilingual lesson runtime, attempts, idempotency, rem
     await admin.end();
     mkdirSync('artifacts/p3',{recursive:true});
     writeFileSync('artifacts/p3/database-validation.json',JSON.stringify({ timestamp:new Date().toISOString(),commit:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),
-      source_sha:process.env.GITHUB_HEAD_SHA??null,phase:'P3',database:'PostgreSQL 18.6',gates:results,status:results.length===12&&results.every((entry)=>entry.status==='PASS')?'PASS':'FAIL' },null,2)+'\n');
+      source_sha:process.env.GITHUB_HEAD_SHA??null,phase:'P3',database:'PostgreSQL 18.6',gates:results,status:results.length===(process.env.P3_BROWSER_TESTS==='true'?14:13)&&results.every((entry)=>entry.status==='PASS')?'PASS':'FAIL' },null,2)+'\n');
   }
 });

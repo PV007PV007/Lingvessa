@@ -64,6 +64,15 @@ export class AuthController {
     response.setHeader('Set-Cookie', `${cookieName}=${session.token}; Path=/; Secure; HttpOnly; SameSite=Strict; Max-Age=43200`);
     return { csrf_token: session.csrf };
   }
+  @Post('csrf')
+  @HttpCode(200)
+  @Header('Cache-Control', noStore)
+  async csrf(@Req() request: Request) {
+    // Same-origin custom header; CORS remains disabled. The token is never stored in browser persistence.
+    if (request.headers['x-lingvessa-client'] !== 'web') throw new ContractError('FORBIDDEN', 'Client header required');
+    const principal = await this.identity.authenticate(tokenFrom(request));
+    return { csrf_token: await this.identity.refreshCsrf(principal) };
+  }
   @Post('logout')
   @HttpCode(200)
   @Header('Cache-Control', noStore)

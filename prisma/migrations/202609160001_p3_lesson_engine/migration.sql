@@ -92,7 +92,7 @@ CREATE TABLE activity_attempts (
   presentation jsonb NOT NULL CHECK(jsonb_typeof(presentation)='object'),
   assistance jsonb NOT NULL CHECK(jsonb_typeof(assistance)='object'),
   intent text NOT NULL CHECK(intent IN ('submit','reveal','continue')),
-  outcome text NOT NULL CHECK(outcome IN ('correct','incorrect','assisted','unscored')),
+  outcome text NOT NULL CHECK(outcome IN ('correct','incorrect','assisted','accepted')),
   error_category text NOT NULL CHECK(error_category IN ('none','selection','mapping','form','order')),
   feedback text NOT NULL,
   content_schema_version text NOT NULL,
@@ -106,6 +106,7 @@ CREATE TABLE activity_attempts (
   UNIQUE(lesson_run_id,client_sequence),
   UNIQUE(lesson_run_id,user_id,attempt_id),
   UNIQUE(user_id,attempt_id,language_profile_id,language_id,item_id,content_version_id),
+  UNIQUE(id,user_id,language_profile_id,language_id),
   FOREIGN KEY(lesson_run_id,user_id,language_profile_id,language_id,item_id)
     REFERENCES lesson_run_items(lesson_run_id,user_id,language_profile_id,language_id,item_id) ON DELETE RESTRICT,
   FOREIGN KEY(publication_id,lesson_id,content_version_id,language_id)
@@ -120,6 +121,10 @@ CREATE TABLE activity_attempts (
 -- P4 owns mastery/review projections and recompute behavior; no projection table exists here.
 CREATE TABLE evidence_events (
   id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  attempt_db_id uuid NOT NULL,
+  independence text NOT NULL CHECK(independence IN ('independent','retry','assisted')),
+  difficulty numeric(6,5) NOT NULL CHECK(difficulty BETWEEN 0 AND 1),
+  model_version text NOT NULL,
   user_id uuid NOT NULL,
   attempt_id uuid NOT NULL,
   language_profile_id uuid NOT NULL,
@@ -139,6 +144,8 @@ CREATE TABLE evidence_events (
   scheduler_version text NOT NULL,
   occurred_at timestamptz NOT NULL DEFAULT now(),
   UNIQUE(user_id,attempt_id,knowledge_item_id,skill,facet),
+  FOREIGN KEY(attempt_db_id,user_id,language_profile_id,language_id)
+    REFERENCES activity_attempts(id,user_id,language_profile_id,language_id) ON DELETE RESTRICT,
   FOREIGN KEY(user_id,attempt_id,language_profile_id,language_id,item_id,content_version_id)
     REFERENCES activity_attempts(user_id,attempt_id,language_profile_id,language_id,item_id,content_version_id) ON DELETE RESTRICT,
   FOREIGN KEY(language_profile_id,user_id,language_id)
@@ -192,6 +199,24 @@ CREATE TABLE outbox_deliveries (
 CREATE INDEX outbox_delivery_ready ON outbox_deliveries(consumer,next_attempt_at,event_id)
   WHERE status IN ('pending','processing');
 
+CREATE FUNCTION p3_run_insert_guard() RETURNS trigger LANGUAGE plpgsql AS $$
+DECLARE content content_versions%ROWTYPE; publication publications%ROWTYPE; expected_activities jsonb; variant uuid;
+BEGIN
+  SELECT * INTO content FROM content_versions WHERE id=NEW.content_version_id;
+  SELECT * INTO publication FROM publications WHERE id=NEW.publication_id;
+  SELECT variant_id INTO variant FROM language_profiles WHERE id=NEW.language_profile_id;
+  SELECT jsonb_agg(activity->'contract' ORDER BY ordinal) INTO expected_activities
+    FROM jsonb_array_elements(content.payload->'activities') WITH ORDINALITY a(activity,ordinal);
+  IF publication.status IS DISTINCT FROM 'published' OR publication.checksum IS DISTINCT FROM NEW.publication_checksum OR
+     content.checksum IS DISTINCT FROM NEW.content_checksum OR expected_activities IS DISTINCT FROM NEW.manifest->'activities' OR
+     expected_activities IS NULL OR variant IS DISTINCT FROM NEW.variant_id OR
+     NEW.state<>'active' OR NEW.position<>0 OR NEW.client_sequence<>0 OR NEW.revision<>1 THEN
+    RAISE EXCEPTION 'run does not pin an executable published lesson' USING ERRCODE='23514';
+  END IF;
+  RETURN NEW;
+END $$;
+CREATE TRIGGER lesson_run_insert_guard BEFORE INSERT ON lesson_runs FOR EACH ROW EXECUTE FUNCTION p3_run_insert_guard();
+
 CREATE FUNCTION p3_run_guard() RETURNS trigger LANGUAGE plpgsql AS $$
 BEGIN
   IF TG_OP='UPDATE' THEN
@@ -211,6 +236,9 @@ BEGIN
     END IF;
     IF NEW.revision<>OLD.revision+1 OR NEW.client_sequence<OLD.client_sequence THEN
       RAISE EXCEPTION 'lesson run revision/sequence conflict' USING ERRCODE='40001';
+    END IF;
+    IF NEW.state='completed' AND OLD.state='active' AND EXISTS (SELECT 1 FROM lesson_run_items WHERE lesson_run_id=NEW.id AND state IN ('pending','active','incorrect')) THEN
+      RAISE EXCEPTION 'scored path is not complete' USING ERRCODE='23514';
     END IF;
     NEW.updated_at=now();
   END IF;
@@ -254,12 +282,21 @@ CREATE TRIGGER attempt_immutable BEFORE UPDATE OR DELETE OR TRUNCATE ON activity
 CREATE TRIGGER attempt_receipt_immutable BEFORE UPDATE OR DELETE OR TRUNCATE ON attempt_receipts FOR EACH STATEMENT EXECUTE FUNCTION p2_append_only();
 
 CREATE FUNCTION p3_evidence_guard() RETURNS trigger LANGUAGE plpgsql AS $$
-DECLARE outcome text;
+DECLARE outcome text; pinned jsonb; attempt activity_attempts%ROWTYPE;
 BEGIN
-  SELECT a.outcome INTO outcome FROM activity_attempts a WHERE a.user_id=NEW.user_id AND a.attempt_id=NEW.attempt_id;
+  SELECT * INTO attempt FROM activity_attempts a WHERE a.id=NEW.attempt_db_id;
+  outcome=attempt.outcome;
+  SELECT activity INTO pinned FROM lesson_runs r, jsonb_array_elements(r.manifest->'activities') activity
+    WHERE r.id=attempt.lesson_run_id AND activity->>'id'=NEW.item_id::text;
+  IF attempt.attempt_id IS DISTINCT FROM NEW.attempt_id OR
+     NOT EXISTS (SELECT 1 FROM jsonb_array_elements(pinned->'learning'->'knowledge_refs') k WHERE k->>'knowledge_item_id'=NEW.knowledge_item_id::text) OR
+     NOT EXISTS (SELECT 1 FROM jsonb_array_elements(pinned->'learning'->'evidence_map') m
+       WHERE m->>'skill'=NEW.skill AND m->>'facet'=NEW.facet AND (m->>'weight')::numeric=NEW.base_weight) THEN
+    RAISE EXCEPTION 'evidence differs from pinned attempt/mapping' USING ERRCODE='23514';
+  END IF;
   IF (outcome='correct' AND NEW.result_class<>'positive') OR
      (outcome='incorrect' AND NEW.result_class<>'negative') OR
-     (outcome='assisted' AND NEW.result_class<>'assisted') OR outcome='unscored' THEN
+     (outcome='assisted' AND NEW.result_class<>'assisted') OR outcome='accepted' THEN
     RAISE EXCEPTION 'evidence result differs from authoritative attempt' USING ERRCODE='23514';
   END IF;
   RETURN NEW;

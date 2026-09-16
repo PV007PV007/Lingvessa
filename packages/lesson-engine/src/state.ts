@@ -1,10 +1,10 @@
-export type AuthoritativeOutcome = 'correct' | 'incorrect' | 'assisted' | 'unscored';
+export type AuthoritativeOutcome = 'correct' | 'incorrect' | 'assisted' | 'accepted';
 
 export type LessonPlayerState =
   | { kind: 'loading' }
   | { kind: 'active'; activity_id: string; position: number; revision: number; ai_notice?: string }
   | { kind: 'submitting'; activity_id: string; position: number; revision: number; attempt_id: string }
-  | { kind: 'correct' | 'incorrect' | 'assisted' | 'unscored'; activity_id: string; position: number; revision: number; attempt_id: string; feedback: string }
+  | { kind: 'correct' | 'incorrect' | 'assisted' | 'accepted'; activity_id: string; position: number; revision: number; attempt_id: string; feedback: string }
   | { kind: 'speech_unavailable' | 'ai_unavailable'; activity_id: string; position: number; revision: number; reason: string }
   | { kind: 'remediation'; activity_id: string; position: number; revision: number; unresolved_count: number }
   | { kind: 'completed'; revision: number; unresolved_count: number }
@@ -43,7 +43,7 @@ export function lessonPlayerReducer(state: LessonPlayerState, event: LessonPlaye
       break;
     case 'correct':
     case 'assisted':
-    case 'unscored':
+    case 'accepted':
       if (event.type === 'NEXT') {
         if (event.activity_id !== undefined && event.position !== undefined) {
           if ((event.remediation_count ?? 0) > 0)

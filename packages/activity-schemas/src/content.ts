@@ -28,6 +28,8 @@ export const activityMetadataSchema = z.object({
   }
   if (a.evidence_map.length && (!a.knowledge_refs.length || a.response_modality === 'none'))
     ctx.addIssue({ code: 'custom', message: 'Evidence requires an assessable knowledge target' });
+  if (a.contract && (JSON.stringify(a.contract.learning.evidence_map)!==JSON.stringify(a.evidence_map) || JSON.stringify(a.contract.learning.knowledge_refs)!==JSON.stringify(a.knowledge_refs)))
+    ctx.addIssue({ code:'custom',path:['contract','learning'],message:'Executable contract mapping differs from published metadata' });
   if (a.contract && (a.contract.id !== a.id || a.contract.stable_code !== a.stable_code || a.contract.type !== a.type))
     ctx.addIssue({ code: 'custom', path: ['contract'], message: 'Executable contract identity/type differs from activity metadata' });
 });

@@ -131,3 +131,42 @@ test('P3 manifest loader pins exact publication/content/language and rejects mis
   assert.equal(loadPinnedManifest(manifest).status, 'ready');
   assert.equal(loadPinnedManifest({ ...manifest, content_version_id: randomUUID() }).status, 'recoverable_error');
 });
+
+test('P3 every deterministic core family has executable EN/CS policy fixtures, with no answer keys in learner projection', async () => {
+  const { learnerManifest } = await import('../../packages/activity-schemas/src/learner.js');
+  for(const language of ['en','cs']){
+    const fixture=executableLessonFixtureSchema.parse(JSON.parse(readFileSync(`content/fixtures/p3/${language}-core.json`,'utf8')));
+    assert.equal(fixture.activities.length,10);
+    for(const activity of fixture.activities){
+      assert.equal(resolveActivity(activity).status,'supported',activity.type);
+      const policy=activity.response.answer_policy;
+      const response=policy.mode==='exposure'?{kind:'none' as const}:policy.mode==='single'?{kind:'single' as const,option_id:policy.accepted_option_ids![0]!}:
+        policy.mode==='text'?{kind:'text' as const,text:policy.accepted_text![0]!}:policy.mode==='mapping'?{kind:'mapping' as const,pairs:policy.accepted_pairs!}:
+        {kind:'order' as const,option_ids:policy.accepted_order!};
+      assert.equal(evaluateActivity(activity,response).result,policy.mode==='exposure'?'accepted':'correct',activity.type);
+    }
+    const safe=learnerManifest({schema_version:'1.7',publication_id:randomUUID(),publication_checksum:'a'.repeat(64),lesson_id:fixture.lesson_id,
+      content_version_id:fixture.content_version_id,language_id:fixture.language_id,language:fixture.language,variety:language==='en'?'en-GB':'cs-CZ',activities:fixture.activities});
+    assert(!JSON.stringify(safe).includes('accepted_text'));assert(!JSON.stringify(safe).includes('answer_policy'));assert(!JSON.stringify(safe).includes('"reveal":'));
+  }
+});
+
+test('P3 expired queued responses are deleted from persistence, not only hidden',async()=>{
+  const storage=new MemoryQueueStorage(); const queue=new UnsentAttemptQueue(storage,10,1000);
+  await queue.enqueue(queued(1),1_700_000_000_010);assert.equal(storage.records.length,1);
+  assert.deepEqual(await queue.pending(1_700_000_003_000),[]);assert.deepEqual(storage.records,[]);
+});
+
+test('P3 text role-play cannot fabricate Speaking or Pronunciation evidence',()=>{
+  const activity=structuredClone(fixtures[0]!.activities[0]!);activity.type='role_play';activity.runtime.completion_policy='optional_speech_v1';
+  activity.response.kind='text';activity.response.answer_policy.mode='text';activity.response.answer_policy.accepted_text=['Hello'];
+  activity.learning.evidence_map=[{skill:'speaking',facet:'production',weight:0.5}];
+  assert.equal(activityContractSchema.safeParse(activity).success,false);
+});
+
+
+test('P3 OpenAPI schemas match runtime request/response validation without manual drift',async()=>{
+  const {p3RuntimeSchemas}=await import('../../tools/p3/openapi.js');
+  const api=JSON.parse(readFileSync('infra/contracts/p3.openapi.json','utf8'));
+  for(const [name,schema] of Object.entries(p3RuntimeSchemas()))assert.deepEqual(api.components.schemas[name],schema,name);
+});

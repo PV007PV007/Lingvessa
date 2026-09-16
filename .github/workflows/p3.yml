@@ -30,8 +30,11 @@ jobs:
       - run: pnpm check
       - run: pnpm validate:references
       - run: pnpm audit:dependencies
+      - run: pnpm exec playwright install --with-deps chromium
       - run: pnpm bootstrap:local
       - run: node --env-file=.local/runtime.env --import tsx --test tests/integration/*.test.ts
+        env:
+          P3_BROWSER_TESTS: 'true'
       - run: pnpm test:containers
       - name: Sanitized migration diagnostics on failure
         if: failure()

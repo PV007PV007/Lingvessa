@@ -2,3 +2,15 @@
 body { margin: 0; }
 main { max-width: 60rem; margin: 4rem auto; padding: 2rem; }
 h1 { font-size: clamp(2rem, 5vw, 3rem); }
+.lesson-player { max-width: 46rem; margin: 1rem auto; }
+.lesson-player button, .lesson-player select, .lesson-player input, .lesson-player textarea { font: inherit; }
+.lesson-player button { min-height: 44px; margin: .35rem; padding: .6rem 1rem; cursor: pointer; }
+.lesson-player button:disabled { cursor: default; opacity: .55; }
+.lesson-player label { display: block; margin: .6rem 0; }
+.lesson-player textarea { display: block; width: min(100%,36rem); min-height: 5rem; }
+.lesson-player fieldset { border: 0; padding: 0; }
+.lesson-player .answer-option { padding: .7rem; border: 1px solid #a8bdb7; border-radius: .4rem; }
+.lesson-player input[type=radio], .lesson-player input[type=checkbox] { margin-right: .6rem; }
+.lesson-feedback { padding: 1rem; background: #e4efea; border-left: 4px solid #285a48; }
+:focus-visible { outline: 3px solid #186dc1; outline-offset: 3px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }

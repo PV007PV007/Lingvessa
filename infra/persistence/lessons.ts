@@ -2,6 +2,8 @@ import { randomUUID } from 'node:crypto';
 import type pg from 'pg';
 import { attemptCommandSchema, exitLessonRunSchema, P3_VERSIONS, semanticAttemptHash, sha256, startLessonRunSchema } from '../../packages/application/src/lesson.js';
 import type { AttemptCommand, ExitLessonRun, StartLessonRun } from '../../packages/application/src/lesson.js';
+import { learnerManifest } from '../../packages/activity-schemas/src/learner.js';
+import type { LearnerManifest } from '../../packages/activity-schemas/src/learner.js';
 import { lessonManifestSchema } from '../../packages/activity-schemas/src/lesson.js';
 import type { ActivityContract, LessonManifest } from '../../packages/activity-schemas/src/lesson.js';
 import { ContractError, assertUuid } from '../../packages/domain/src/identity.js';
@@ -29,12 +31,12 @@ export type RunView = {
   revision: number;
   current_activity_id: string | null;
   unresolved_count: number;
-  manifest: LessonManifest;
+  manifest: LearnerManifest;
 };
 
 export type AttemptView = {
   attempt_id: string;
-  outcome: 'correct' | 'incorrect' | 'assisted' | 'unscored';
+  outcome: 'correct' | 'incorrect' | 'assisted' | 'accepted';
   feedback: string;
   evaluator_version: string;
   answer_policy_version: string;
@@ -155,18 +157,19 @@ export class LessonRepository {
         command.client_sequence,requestHash,command.response,sha256(command.response),command.presentation,assistance,command.intent,outcome,evaluation.error_category,
         feedback,P3_VERSIONS.content_schema,evaluation.evaluator_version,evaluation.answer_policy_id,evaluation.answer_policy_version,P3_VERSIONS.mastery_model,P3_VERSIONS.scheduler]);
       if (fault === 'after_attempt') throw new Error('P3_FAULT_AFTER_ATTEMPT');
-      if (outcome !== 'unscored') {
+      if (outcome !== 'accepted') {
         const mappings = activity.learning.knowledge_refs.flatMap((knowledge) => activity.learning.evidence_map.map((entry) => ({
           knowledge_item_id: knowledge.knowledge_item_id, skill: entry.skill, facet: entry.facet, evidence_weight: entry.weight,
         })));
         for (const mapping of mappings) {
           const resultClass = outcome === 'correct' ? 'positive' : outcome === 'incorrect' ? 'negative' : 'assisted';
-          await db.query(`INSERT INTO evidence_events(user_id,attempt_id,language_profile_id,language_id,item_id,knowledge_item_id,skill,facet,
+          await db.query(`INSERT INTO evidence_events(attempt_db_id,independence,difficulty,model_version,user_id,attempt_id,language_profile_id,language_id,item_id,knowledge_item_id,skill,facet,
             result_class,assisted,base_weight,effective_weight,content_version_id,content_schema_version,evaluator_version,mastery_model_version,scheduler_version)
-            VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17)`,
+            VALUES((SELECT id FROM activity_attempts WHERE user_id=$1 AND attempt_id=$2),$18,$19,$16,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17)`,
           [userId,command.attempt_id,run.language_profile_id,run.language_id,command.item_id,mapping.knowledge_item_id,mapping.skill,mapping.facet,
             resultClass,outcome === 'assisted',mapping.evidence_weight,outcome === 'assisted' ? 0 : mapping.evidence_weight,run.content_version_id,
-            P3_VERSIONS.content_schema,evaluation.evaluator_version,P3_VERSIONS.mastery_model,P3_VERSIONS.scheduler]);
+            P3_VERSIONS.content_schema,evaluation.evaluator_version,P3_VERSIONS.mastery_model,P3_VERSIONS.scheduler,
+            outcome === 'assisted' ? 'assisted' : Number(item.attempt_count)>0 ? 'retry' : 'independent',activity.learning.difficulty]);
         }
       }
       const next = await this.advance(db, run, item, command.attempt_id, outcome, evaluation.result === 'correct' && command.intent !== 'reveal');
@@ -252,7 +255,7 @@ export class LessonRepository {
     const unresolved = Number((await db.query('SELECT count(*) FROM lesson_run_items WHERE lesson_run_id=$1 AND needs_remediation', [row.id])).rows[0].count);
     return { id: row.id, language_profile_id: row.language_profile_id, language_id: row.language_id, publication_id: row.publication_id,
       lesson_id: row.lesson_id, content_version_id: row.content_version_id, state: row.state, position: row.position,
-      client_sequence: Number(row.client_sequence), revision: row.revision, current_activity_id: current, unresolved_count: unresolved, manifest: row.manifest };
+      client_sequence: Number(row.client_sequence), revision: row.revision, current_activity_id: current, unresolved_count: unresolved, manifest: learnerManifest(row.manifest) };
   }
 
   private async attemptView(db: pg.PoolClient, attempt: Record<string, unknown>, run: RunRow, replayed: boolean): Promise<AttemptView> {

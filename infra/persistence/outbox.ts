@@ -39,16 +39,18 @@ export class OutboxRepository {
     });
   }
 
-  async succeed(consumer: string, eventId: string): Promise<void> {
-    await this.pool.query(`UPDATE outbox_deliveries SET status='succeeded',completed_at=COALESCE(completed_at,now()),lease_expires_at=NULL,last_error_code=NULL
-      WHERE consumer=$1 AND event_id=$2 AND status<>'terminal_failure'`, [consumer,eventId]);
+  async succeed(consumer: string, eventId: string, leaseAttempt: number): Promise<boolean> {
+    const settled=await this.pool.query(`UPDATE outbox_deliveries SET status='succeeded',completed_at=COALESCE(completed_at,now()),lease_expires_at=NULL,last_error_code=NULL
+      WHERE consumer=$1 AND event_id=$2 AND status='processing' AND attempt_count=$3`, [consumer,eventId,leaseAttempt]);
+    return settled.rowCount===1;
   }
 
-  async fail(consumer: string, eventId: string, errorCode: string, retryable: boolean, now = new Date()): Promise<'retry' | 'terminal'> {
+  async fail(consumer: string, eventId: string, errorCode: string, retryable: boolean, leaseAttempt: number, now = new Date()): Promise<'retry' | 'terminal' | 'stale'> {
     if (!/^[A-Z0-9_]{1,64}$/u.test(errorCode)) throw new TypeError('Safe bounded error code required');
     return transaction(this.pool, async (db) => {
-      const row = (await db.query(`SELECT attempt_count FROM outbox_deliveries WHERE consumer=$1 AND event_id=$2 FOR UPDATE`, [consumer,eventId])).rows[0];
+      const row = (await db.query(`SELECT attempt_count,status FROM outbox_deliveries WHERE consumer=$1 AND event_id=$2 FOR UPDATE`, [consumer,eventId])).rows[0];
       if (!row) throw new TypeError('Unknown outbox delivery');
+      if(row.status!=='processing'||Number(row.attempt_count)!==leaseAttempt)return 'stale';
       const terminal = !retryable || Number(row.attempt_count) >= 8;
       if (terminal) {
         await db.query(`UPDATE outbox_deliveries SET status='terminal_failure',completed_at=$3,lease_expires_at=NULL,last_error_code=$4 WHERE consumer=$1 AND event_id=$2`, [consumer,eventId,now,errorCode]);
@@ -78,8 +80,8 @@ export function startOutboxLoop(repository: OutboxRepository, consumer: string, 
     running = true;
     try {
       for (const event of await repository.claim(consumer)) {
-        try { await handle(event); await repository.succeed(consumer, event.id); }
-        catch { await repository.fail(consumer, event.id, 'CONSUMER_FAILURE', true); }
+        try { await handle(event); await repository.succeed(consumer, event.id,event.attempt_count); }
+        catch { await repository.fail(consumer, event.id, 'CONSUMER_FAILURE', true,event.attempt_count); }
       }
     } catch { /* Durable delivery stays retryable; readiness separately reports database loss. */ }
     finally { running = false; }

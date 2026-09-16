@@ -19,6 +19,7 @@ export const executableLessonFixtureSchema = z.object({
     content_version_id: uuid,
     version_code: z.string().min(1),
   }).strict()).length(3),
+  new_items: z.array(z.object({activity_id: uuid, content_version_id: uuid, version_code: z.string().min(1)}).strict()).default([]),
   activities: z.array(activityContractSchema).min(1),
 }).strict().superRefine((fixture, ctx) => {
   for (const [index, activity] of fixture.activities.entries()) {

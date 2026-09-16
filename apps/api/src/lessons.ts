@@ -64,6 +64,7 @@ export class LessonRunsController {
     const csrf = request.headers['x-csrf-token'];
     if (!csrf) throw new ContractError('FORBIDDEN', 'CSRF token required');
     this.identity.checkCsrf(principal, csrf);
+    if(!await this.identity.allowLearningAction(principal.userId))throw new ContractError('RATE_LIMITED','Learning action rate limit reached; retry after a minute');
     return principal;
   }
 }

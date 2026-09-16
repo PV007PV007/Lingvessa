@@ -9,7 +9,7 @@ export type ActivityResponse =
   | { kind: 'order'; option_ids: string[] };
 
 export type EvaluationResult = {
-  result: 'correct' | 'incorrect' | 'unscored';
+  result: 'correct' | 'incorrect' | 'accepted';
   error_category: 'none' | 'selection' | 'mapping' | 'form' | 'order';
   normalized_response: unknown;
   feedback: string;
@@ -36,7 +36,7 @@ export function evaluateActivity(activity: ActivityContract, response: ActivityR
   const policy = activity.response.answer_policy;
   if (policy.mode === 'exposure') {
     if (response.kind !== 'none') throw new TypeError('Exposure activity accepts only a continue response');
-    return result(activity, 'unscored', 'none', null);
+    return result(activity, 'accepted', 'none', null);
   }
   if (response.kind !== policy.mode) throw new TypeError('Response kind does not match the server-selected answer policy');
   let correct: boolean;

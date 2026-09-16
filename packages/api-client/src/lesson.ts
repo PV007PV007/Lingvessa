@@ -1,3 +1,6 @@
+import { z } from 'zod';
+import { learnerRunSchema, attemptResultSchema, problemSchema } from '../../activity-schemas/src/learner.js';
+import type { LearnerRun } from '../../activity-schemas/src/learner.js';
 import type { ActivityResponse, AuthoritativeOutcome } from '../../lesson-engine/src/index.js';
 
 export const P3_API_PATHS = Object.freeze({
@@ -35,7 +38,7 @@ export type ProblemDetails = {
   code: string;
   detail_safe: string;
   correlation_id: string;
-  field_errors?: Array<{ path: string; code: string }>;
+  field_errors?: Array<{ path: string; code: string }> | undefined;
 };
 
 export class ApiProblem extends Error {
@@ -45,22 +48,22 @@ export class ApiProblem extends Error {
 export class LessonApiClient {
   constructor(private readonly baseUrl: string, private readonly csrfToken: () => string) {}
 
-  async startRun(input: { language_profile_id: string; publication_id: string; lesson_id: string }): Promise<unknown> {
-    return this.request(P3_API_PATHS.lessonRuns, 'POST', input);
+  async startRun(input: { language_profile_id: string; publication_id: string; lesson_id: string }): Promise<LearnerRun> {
+    return learnerRunSchema.parse(await this.request(P3_API_PATHS.lessonRuns, 'POST', input));
   }
 
-  async getRun(runId: string): Promise<unknown> { return this.request(`${P3_API_PATHS.lessonRuns}/${runId}`, 'GET'); }
+  async getRun(runId: string): Promise<LearnerRun> { return learnerRunSchema.parse(await this.request(`${P3_API_PATHS.lessonRuns}/${runId}`, 'GET')); }
 
-  async listRuns(languageProfileId: string): Promise<unknown> {
-    return this.request(`${P3_API_PATHS.lessonRuns}?language_profile_id=${encodeURIComponent(languageProfileId)}`, 'GET');
+  async listRuns(languageProfileId: string): Promise<LearnerRun[]> {
+    return z.array(learnerRunSchema).parse(await this.request(`${P3_API_PATHS.lessonRuns}?language_profile_id=${encodeURIComponent(languageProfileId)}`, 'GET'));
   }
 
   async submitAttempt(runId: string, command: AttemptCommand): Promise<AttemptResult> {
-    return this.request(`${P3_API_PATHS.lessonRuns}/${runId}/attempts`, 'POST', command) as Promise<AttemptResult>;
+    return attemptResultSchema.parse(await this.request(`${P3_API_PATHS.lessonRuns}/${runId}/attempts`, 'POST', command));
   }
 
-  async exitRun(runId: string, expectedRevision: number, acknowledgeUnresolved: boolean): Promise<unknown> {
-    return this.request(`${P3_API_PATHS.lessonRuns}/${runId}/exit`, 'POST', { expected_revision: expectedRevision, acknowledge_unresolved: acknowledgeUnresolved });
+  async exitRun(runId: string, expectedRevision: number, acknowledgeUnresolved: boolean): Promise<LearnerRun> {
+    return learnerRunSchema.parse(await this.request(`${P3_API_PATHS.lessonRuns}/${runId}/exit`, 'POST', { expected_revision: expectedRevision, acknowledge_unresolved: acknowledgeUnresolved }));
   }
 
   private async request(path: string, method: 'GET' | 'POST', body?: unknown): Promise<unknown> {
@@ -71,7 +74,7 @@ export class LessonApiClient {
       ...(body === undefined ? {} : { body: JSON.stringify(body) }),
     });
     const result = await response.json() as unknown;
-    if (!response.ok) throw new ApiProblem(result as ProblemDetails);
+    if (!response.ok) throw new ApiProblem(problemSchema.parse(result));
     return result;
   }
 }
