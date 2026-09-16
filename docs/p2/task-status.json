@@ -1,10 +1,24 @@
 {
   "phase": "P2",
-  "status": "IN_PROGRESS",
+  "status": "PASS_READY_FOR_OWNER_ACCEPTANCE",
+  "tested_implementation_sha": "247574352ee5f89ca7ee2172d92a008137c11dd7",
+  "closure_commit_resolution": "The final metadata commit is the Git commit containing this file; hosted P2 and P1 push/pull_request workflows must all pass on that exact head before owner acceptance.",
+  "hosted_ci_runs": {
+    "p2_push": 34996815099,
+    "p2_pull_request": 34996819964,
+    "p1_push": 34996815126,
+    "p1_pull_request": 34996820041
+  },
+  "runtime_gates": {
+    "postgresql_18_6": "PASS 9/9 P2 groups plus P1 integration regression",
+    "oci_container": "PASS four images, four-service readiness, DB-down degraded state, liveness and DB-restored recovery",
+    "reference_fixtures": "PASS EN 16 entities/5 units; CS 16 entities/5 units; P2 metadata scope",
+    "p3_absent": true
+  },
   "tasks": [
     {
       "task_id": "IMP-P2-001",
-      "status": "IMPLEMENTED_GATES_PENDING",
+      "status": "P2_SCOPE_PASS",
       "requirement_ids": [
         "LANG-001",
         "LANG-002",
@@ -66,7 +80,7 @@
     },
     {
       "task_id": "IMP-P2-002",
-      "status": "IMPLEMENTED_GATES_PENDING",
+      "status": "P2_SCOPE_PASS",
       "requirement_ids": [
         "CUR-A1-005",
         "CONT-001",
@@ -402,7 +416,7 @@
     },
     {
       "task_id": "IMP-P2-003",
-      "status": "IMPLEMENTED_GATES_PENDING",
+      "status": "P2_SCOPE_PASS",
       "requirement_ids": [
         "ROLE-001",
         "ROLE-002",

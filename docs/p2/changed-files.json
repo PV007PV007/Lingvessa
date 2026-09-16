@@ -58,6 +58,18 @@
       "change": "added"
     },
     {
+      "path": "docs/p2/evidence/contract-diff.md",
+      "change": "added"
+    },
+    {
+      "path": "docs/p2/evidence/hosted-ci.json",
+      "change": "added"
+    },
+    {
+      "path": "docs/p2/evidence/schema-introspection.json",
+      "change": "added"
+    },
+    {
       "path": "docs/p2/requirement-evidence.json",
       "change": "added"
     },

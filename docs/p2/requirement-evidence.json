@@ -7,7 +7,15 @@
     "MUST": 432,
     "SHOULD": 2,
     "traced": 434,
-    "untraced": 0
+    "untraced": 0,
+    "status_counts": {
+      "P2_FOUNDATION_VERIFIED": 177,
+      "P2_FOUNDATION_PARTIAL": 170,
+      "FUTURE_RUNTIME_ACCEPTANCE": 87
+    },
+    "scope_note": "P2 foundation gates passed for P2-owned schema/identity/isolation/publication behavior. Mixed rows retain later milestone acceptance; no future runtime is claimed.",
+    "tested_implementation_sha": "247574352ee5f89ca7ee2172d92a008137c11dd7",
+    "hosted_ci_reference": "docs/p2/evidence/hosted-ci.json"
   },
   "requirements": [
     {
@@ -23,7 +31,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -51,7 +59,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -77,7 +85,7 @@
       "ADR_or_exception": "docs/adr/adr-d09.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -103,7 +111,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -129,7 +137,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -155,7 +163,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -180,7 +188,7 @@
       "ADR_or_exception": "docs/adr/adr-d04.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -205,7 +213,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -230,7 +238,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -255,7 +263,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -280,7 +288,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -305,7 +313,7 @@
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -333,7 +341,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -361,7 +369,7 @@
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -389,7 +397,7 @@
       "ADR_or_exception": "docs/adr/adr-d04.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -417,7 +425,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -445,7 +453,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -473,7 +481,7 @@
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -501,7 +509,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -529,7 +537,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -557,7 +565,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -585,7 +593,7 @@
       "ADR_or_exception": "docs/adr/adr-d04.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -613,7 +621,7 @@
       "ADR_or_exception": "docs/adr/adr-d04.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -638,7 +646,7 @@
       "ADR_or_exception": "docs/adr/adr-d13.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -663,7 +671,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -688,7 +696,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -713,7 +721,7 @@
       "ADR_or_exception": "docs/adr/adr-d04.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -738,7 +746,7 @@
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -766,7 +774,7 @@
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -794,7 +802,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -822,7 +830,7 @@
       "ADR_or_exception": "docs/adr/adr-d04.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -850,7 +858,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -878,7 +886,7 @@
       "ADR_or_exception": "docs/adr/adr-d04.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -906,7 +914,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -934,7 +942,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -962,7 +970,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -990,7 +998,7 @@
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -1018,7 +1026,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -1046,7 +1054,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -1074,7 +1082,7 @@
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -1102,7 +1110,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -1130,7 +1138,7 @@
       "ADR_or_exception": "docs/adr/adr-d04.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -1158,7 +1166,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -1186,7 +1194,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -1214,7 +1222,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -1240,7 +1248,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -1266,7 +1274,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -1292,7 +1300,7 @@
       "ADR_or_exception": "docs/adr/adr-d12.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -1320,7 +1328,7 @@
       "ADR_or_exception": "docs/adr/adr-d13.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -1345,7 +1353,7 @@
       "ADR_or_exception": "docs/adr/adr-d12.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -1373,7 +1381,7 @@
       "ADR_or_exception": "docs/adr/adr-d12.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -1401,7 +1409,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -1429,7 +1437,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -1457,7 +1465,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -1485,7 +1493,7 @@
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -1513,7 +1521,7 @@
       "ADR_or_exception": "docs/adr/adr-d12.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -1541,7 +1549,7 @@
       "ADR_or_exception": "docs/adr/adr-d13.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -1566,7 +1574,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -1594,7 +1602,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -1622,7 +1630,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -1650,7 +1658,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -1678,7 +1686,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -1706,7 +1714,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -1734,7 +1742,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -1762,7 +1770,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -1790,7 +1798,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -1818,7 +1826,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -1846,7 +1854,7 @@
       "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -1874,7 +1882,7 @@
       "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -1902,7 +1910,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -1930,7 +1938,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -1958,7 +1966,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -1986,7 +1994,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -2014,7 +2022,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -2042,7 +2050,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -2070,7 +2078,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -2098,7 +2106,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -2126,7 +2134,7 @@
       "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -2154,7 +2162,7 @@
       "ADR_or_exception": "docs/adr/adr-d12.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -2182,7 +2190,7 @@
       "ADR_or_exception": "docs/adr/adr-d12.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -2210,7 +2218,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -2236,7 +2244,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -2262,7 +2270,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -2288,7 +2296,7 @@
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -2316,7 +2324,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -2342,7 +2350,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -2368,7 +2376,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -2394,7 +2402,7 @@
       "ADR_or_exception": "docs/adr/adr-d12.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -2422,7 +2430,7 @@
       "ADR_or_exception": "docs/adr/adr-d13.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -2447,7 +2455,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -2475,7 +2483,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -2503,7 +2511,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -2531,7 +2539,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -2559,7 +2567,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -2587,7 +2595,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -2615,7 +2623,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -2643,7 +2651,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -2671,7 +2679,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -2699,7 +2707,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -2727,7 +2735,7 @@
       "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -2755,7 +2763,7 @@
       "ADR_or_exception": "docs/adr/adr-d12.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -2783,7 +2791,7 @@
       "ADR_or_exception": "docs/adr/adr-d12.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -2811,7 +2819,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -2839,7 +2847,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -2865,7 +2873,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -2893,7 +2901,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -2919,7 +2927,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -2947,7 +2955,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -2975,7 +2983,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3003,7 +3011,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3031,7 +3039,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3059,7 +3067,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3087,7 +3095,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3115,7 +3123,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3143,7 +3151,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3171,7 +3179,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3199,7 +3207,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3227,7 +3235,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3255,7 +3263,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3283,7 +3291,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3311,7 +3319,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3339,7 +3347,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3367,7 +3375,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3395,7 +3403,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3423,7 +3431,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3451,7 +3459,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3479,7 +3487,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3507,7 +3515,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3535,7 +3543,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3563,7 +3571,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3591,7 +3599,7 @@
       "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3619,7 +3627,7 @@
       "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3647,7 +3655,7 @@
       "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3675,7 +3683,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3703,7 +3711,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3731,7 +3739,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3759,7 +3767,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3787,7 +3795,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3815,7 +3823,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3843,7 +3851,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3871,7 +3879,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3899,7 +3907,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3927,7 +3935,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3955,7 +3963,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -3983,7 +3991,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4011,7 +4019,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4039,7 +4047,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4067,7 +4075,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4095,7 +4103,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4123,7 +4131,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4151,7 +4159,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4179,7 +4187,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4207,7 +4215,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4235,7 +4243,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4263,7 +4271,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4291,7 +4299,7 @@
       "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4319,7 +4327,7 @@
       "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4347,7 +4355,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4375,7 +4383,7 @@
       "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4403,7 +4411,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4431,7 +4439,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4459,7 +4467,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4487,7 +4495,7 @@
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4515,7 +4523,7 @@
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4543,7 +4551,7 @@
       "ADR_or_exception": "docs/adr/adr-d12.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4571,7 +4579,7 @@
       "ADR_or_exception": "docs/adr/adr-d13.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -4596,7 +4604,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4624,7 +4632,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4652,7 +4660,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4680,7 +4688,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4708,7 +4716,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4736,7 +4744,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4764,7 +4772,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4792,7 +4800,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4820,7 +4828,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4848,7 +4856,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4876,7 +4884,7 @@
       "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4904,7 +4912,7 @@
       "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4932,7 +4940,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4960,7 +4968,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -4988,7 +4996,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -5016,7 +5024,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -5044,7 +5052,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -5072,7 +5080,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -5100,7 +5108,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -5128,7 +5136,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -5156,7 +5164,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -5184,7 +5192,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -5212,7 +5220,7 @@
       "ADR_or_exception": "docs/adr/adr-d12.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -5240,7 +5248,7 @@
       "ADR_or_exception": "docs/adr/adr-d12.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -5268,7 +5276,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -5296,7 +5304,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -5324,7 +5332,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -5352,7 +5360,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -5378,7 +5386,7 @@
       "ADR_or_exception": "docs/adr/adr-d12.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -5406,7 +5414,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -5434,7 +5442,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -5462,7 +5470,7 @@
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -5490,7 +5498,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -5516,7 +5524,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -5544,7 +5552,7 @@
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -5572,7 +5580,7 @@
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -5600,7 +5608,7 @@
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -5628,7 +5636,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -5654,7 +5662,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -5680,7 +5688,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -5706,7 +5714,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -5732,7 +5740,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -5758,7 +5766,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -5784,7 +5792,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -5812,7 +5820,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -5840,7 +5848,7 @@
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -5868,7 +5876,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -5896,7 +5904,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -5924,7 +5932,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -5952,7 +5960,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -5978,7 +5986,7 @@
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -6006,7 +6014,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -6032,7 +6040,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -6060,7 +6068,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -6086,7 +6094,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -6114,7 +6122,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -6142,7 +6150,7 @@
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -6170,7 +6178,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -6196,7 +6204,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -6224,7 +6232,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -6252,7 +6260,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -6278,7 +6286,7 @@
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -6306,7 +6314,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -6332,7 +6340,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -6360,7 +6368,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -6388,7 +6396,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -6414,7 +6422,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -6440,7 +6448,7 @@
       "ADR_or_exception": "docs/adr/adr-d12.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -6468,7 +6476,7 @@
       "ADR_or_exception": "docs/adr/adr-d13.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -6493,7 +6501,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -6521,7 +6529,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -6549,7 +6557,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -6577,7 +6585,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -6605,7 +6613,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -6633,7 +6641,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -6661,7 +6669,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -6689,7 +6697,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -6717,7 +6725,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -6745,7 +6753,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -6773,7 +6781,7 @@
       "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -6801,7 +6809,7 @@
       "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -6829,7 +6837,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -6857,7 +6865,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -6885,7 +6893,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -6913,7 +6921,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -6941,7 +6949,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -6969,7 +6977,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -6997,7 +7005,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -7025,7 +7033,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -7053,7 +7061,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -7081,7 +7089,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -7109,7 +7117,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -7137,7 +7145,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -7165,7 +7173,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -7193,7 +7201,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -7221,7 +7229,7 @@
       "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -7249,7 +7257,7 @@
       "ADR_or_exception": "docs/adr/adr-d12.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -7277,7 +7285,7 @@
       "ADR_or_exception": "docs/adr/adr-d12.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -7305,7 +7313,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -7330,7 +7338,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -7355,7 +7363,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -7380,7 +7388,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -7405,7 +7413,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -7430,7 +7438,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -7455,7 +7463,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -7480,7 +7488,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -7505,7 +7513,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -7530,7 +7538,7 @@
       "ADR_or_exception": "docs/adr/adr-d13.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -7555,7 +7563,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -7580,7 +7588,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -7605,7 +7613,7 @@
       "ADR_or_exception": "docs/adr/adr-d13.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -7630,7 +7638,7 @@
       "ADR_or_exception": "docs/adr/adr-d13.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -7655,7 +7663,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -7680,7 +7688,7 @@
       "ADR_or_exception": "docs/adr/adr-d04.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -7705,7 +7713,7 @@
       "ADR_or_exception": "docs/adr/adr-d13.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -7730,7 +7738,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -7755,7 +7763,7 @@
       "ADR_or_exception": "docs/adr/adr-d13.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -7780,7 +7788,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -7808,7 +7816,7 @@
       "ADR_or_exception": "docs/adr/adr-d12.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -7836,7 +7844,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -7864,7 +7872,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -7890,7 +7898,7 @@
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -7918,7 +7926,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -7944,7 +7952,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -7972,7 +7980,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -8000,7 +8008,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -8028,7 +8036,7 @@
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -8056,7 +8064,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -8082,7 +8090,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -8108,7 +8116,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -8136,7 +8144,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -8162,7 +8170,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -8188,7 +8196,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -8214,7 +8222,7 @@
       "ADR_or_exception": "docs/adr/adr-d12.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -8242,7 +8250,7 @@
       "ADR_or_exception": "docs/adr/adr-d13.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -8267,7 +8275,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -8295,7 +8303,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -8323,7 +8331,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -8351,7 +8359,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -8379,7 +8387,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -8407,7 +8415,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -8435,7 +8443,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -8463,7 +8471,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -8491,7 +8499,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -8519,7 +8527,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -8547,7 +8555,7 @@
       "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -8575,7 +8583,7 @@
       "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -8603,7 +8611,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -8631,7 +8639,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -8659,7 +8667,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -8687,7 +8695,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -8715,7 +8723,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -8743,7 +8751,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -8771,7 +8779,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -8799,7 +8807,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -8827,7 +8835,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -8855,7 +8863,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -8883,7 +8891,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -8911,7 +8919,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -8939,7 +8947,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -8967,7 +8975,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -8995,7 +9003,7 @@
       "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -9023,7 +9031,7 @@
       "ADR_or_exception": "docs/adr/adr-d12.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -9051,7 +9059,7 @@
       "ADR_or_exception": "docs/adr/adr-d12.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -9079,7 +9087,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -9104,7 +9112,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -9129,7 +9137,7 @@
       "ADR_or_exception": "docs/adr/adr-d13.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -9154,7 +9162,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -9179,7 +9187,7 @@
       "ADR_or_exception": "docs/adr/adr-d13.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -9204,7 +9212,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -9229,7 +9237,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -9254,7 +9262,7 @@
       "ADR_or_exception": "docs/adr/adr-d13.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -9279,7 +9287,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -9304,7 +9312,7 @@
       "ADR_or_exception": "docs/adr/adr-d13.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -9329,7 +9337,7 @@
       "ADR_or_exception": "docs/adr/adr-d13.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -9354,7 +9362,7 @@
       "ADR_or_exception": "docs/adr/adr-d12.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -9382,7 +9390,7 @@
       "ADR_or_exception": "docs/adr/adr-d12.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -9410,7 +9418,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -9436,7 +9444,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -9464,7 +9472,7 @@
       "ADR_or_exception": "docs/adr/adr-d12.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -9492,7 +9500,7 @@
       "ADR_or_exception": "docs/adr/adr-d12.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -9520,7 +9528,7 @@
       "ADR_or_exception": "docs/adr/adr-d04.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -9548,7 +9556,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -9574,7 +9582,7 @@
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -9602,7 +9610,7 @@
       "ADR_or_exception": "docs/adr/adr-d12.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -9630,7 +9638,7 @@
       "ADR_or_exception": "docs/adr/adr-d12.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -9658,7 +9666,7 @@
       "ADR_or_exception": "docs/adr/adr-d04.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -9686,7 +9694,7 @@
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -9714,7 +9722,7 @@
       "ADR_or_exception": "docs/adr/adr-d12.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -9742,7 +9750,7 @@
       "ADR_or_exception": "docs/adr/adr-d12.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -9770,7 +9778,7 @@
       "ADR_or_exception": "docs/adr/adr-d04.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -9798,7 +9806,7 @@
       "ADR_or_exception": "docs/adr/adr-d13.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -9823,7 +9831,7 @@
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -9851,7 +9859,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -9879,7 +9887,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -9907,7 +9915,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -9935,7 +9943,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -9963,7 +9971,7 @@
       "ADR_or_exception": "docs/adr/adr-d12.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -9991,7 +9999,7 @@
       "ADR_or_exception": "docs/adr/adr-d12.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -10019,7 +10027,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -10047,7 +10055,7 @@
       "ADR_or_exception": "docs/adr/adr-d09.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -10075,7 +10083,7 @@
       "ADR_or_exception": "docs/adr/adr-d04.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -10103,7 +10111,7 @@
       "ADR_or_exception": "docs/adr/adr-d13.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -10128,7 +10136,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -10153,7 +10161,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -10178,7 +10186,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -10203,7 +10211,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -10228,7 +10236,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -10253,7 +10261,7 @@
       "ADR_or_exception": "docs/adr/adr-d13.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -10278,7 +10286,7 @@
       "ADR_or_exception": "docs/adr/adr-d13.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -10303,7 +10311,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -10331,7 +10339,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -10359,7 +10367,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -10387,7 +10395,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -10415,7 +10423,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -10441,7 +10449,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -10469,7 +10477,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -10497,7 +10505,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -10523,7 +10531,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -10551,7 +10559,7 @@
       "ADR_or_exception": "docs/adr/adr-d12.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -10579,7 +10587,7 @@
       "ADR_or_exception": "docs/adr/adr-d12.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -10607,7 +10615,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -10635,7 +10643,7 @@
       "ADR_or_exception": "docs/adr/adr-d09.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -10663,7 +10671,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -10691,7 +10699,7 @@
       "ADR_or_exception": "docs/adr/adr-d04.md; no exception",
       "followup_tasks": "IMP-P4-001; IMP-P11-001",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -10719,7 +10727,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -10747,7 +10755,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -10773,7 +10781,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -10799,7 +10807,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -10825,7 +10833,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -10853,7 +10861,7 @@
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -10881,7 +10889,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -10909,7 +10917,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -10937,7 +10945,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -10965,7 +10973,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -10993,7 +11001,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -11021,7 +11029,7 @@
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -11049,7 +11057,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -11077,7 +11085,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -11105,7 +11113,7 @@
       "ADR_or_exception": "docs/adr/adr-d04.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -11133,7 +11141,7 @@
       "ADR_or_exception": "docs/adr/adr-d04.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -11161,7 +11169,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -11189,7 +11197,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -11217,7 +11225,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -11245,7 +11253,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -11271,7 +11279,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -11299,7 +11307,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -11327,7 +11335,7 @@
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -11353,7 +11361,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -11381,7 +11389,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -11409,7 +11417,7 @@
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -11437,7 +11445,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -11465,7 +11473,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -11493,7 +11501,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -11521,7 +11529,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -11549,7 +11557,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -11577,7 +11585,7 @@
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "FUTURE_RUNTIME_ACCEPTANCE",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -11605,7 +11613,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -11633,7 +11641,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -11661,7 +11669,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -11689,7 +11697,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -11717,7 +11725,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/identity.ts",
@@ -11743,7 +11751,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -11771,7 +11779,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -11799,7 +11807,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -11827,7 +11835,7 @@
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -11855,7 +11863,7 @@
       "ADR_or_exception": "docs/adr/adr-d09.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_PARTIAL",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",
@@ -11883,7 +11891,7 @@
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "followup_tasks": "Regression at applicable later milestone gates",
       "implementation_phase": "P2",
-      "status": "P2_GATE_PENDING",
+      "status": "P2_FOUNDATION_VERIFIED",
       "actual_code_schema": [
         "prisma/migrations/202609150001_p2_foundation/migration.sql",
         "infra/persistence/content.ts",

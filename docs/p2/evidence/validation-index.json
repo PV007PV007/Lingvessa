@@ -1,31 +1,40 @@
 {
   "phase": "P2",
-  "status": "IN_PROGRESS",
+  "status": "PASS_READY_FOR_OWNER_ACCEPTANCE",
   "accepted_parent": "a37872bb87ff886a568e44aafcb9b0963e346651",
-  "last_pushed_sha": "2708578221ae9807db330f92d6c682990f19470f",
+  "tested_implementation_sha": "247574352ee5f89ca7ee2172d92a008137c11dd7",
   "local": {
     "frozen_install": "PASS",
     "baseline_validation": "PASS 29/29",
     "unit": "PASS 21/21",
     "prisma_generate_validate": "PASS",
     "lint_typecheck": "PASS",
-    "package_boundaries": "PASS 53 modules / 69 dependencies"
+    "package_boundaries": "PASS 53 modules / 69 dependencies",
+    "production_builds": "PASS web and admin",
+    "smoke": "PASS 4/4"
   },
-  "hosted_runs_reviewed": [34962269866, 34962269905, 34962229543, 34962229449, 34986657680, 34986657771, 34986652473, 34986652411],
-  "hosted_findings": {
-    "first_sha": "f5a7ed0245e248ac13f73d12c208a229732a7fac",
-    "second_sha": "2708578221ae9807db330f92d6c682990f19470f",
-    "postgres_version": "18.6",
-    "passed_database_groups_before_current_fix": 8,
-    "total_database_groups": 9,
-    "failure_class": "Negative-test expectation was masked first by the ownership trigger and then by an earlier uniqueness constraint; no accepted DB operation crossed a language or owner boundary.",
-    "container_gate": "SKIPPED_BY_FAILED_PREDECESSOR",
-    "current_fix": "Uses an otherwise unused Czech profile/course pair so the ownership composite FK is the actual rejection under test."
+  "hosted_ci": {
+    "p2_push": "PASS run 34996815099",
+    "p2_pull_request": "PASS run 34996819964",
+    "p1_push": "PASS run 34996815126",
+    "p1_pull_request": "PASS run 34996820041"
   },
-  "current_working_tree": "Knowledge-edge publication closure and normalized Prisma introspection view added; next hosted run pending.",
-  "database_runtime": "PARTIAL_HOSTED_EVIDENCE_ONLY; final full run required",
-  "container_runtime": "PENDING",
-  "hosted_ci": "PENDING_NEXT_COMMIT",
-  "no_inferred_runtime_evidence": true
+  "database_runtime": {
+    "engine": "PostgreSQL 18.6",
+    "status": "PASS",
+    "groups": "9/9",
+    "evidence": "database-validation.json in artifact 10408137898"
+  },
+  "container_runtime": {
+    "status": "PASS",
+    "images": ["api", "worker", "web", "admin"],
+    "checks": ["four services ready", "DB down => API/worker 503", "liveness remains 200", "DB restored => readiness 200"],
+    "evidence": "container-build.json and container-smoke.json in artifact 10408137898"
+  },
+  "reference_runtime": "PASS EN 16 entities/5 units; CS 16 entities/5 units; idempotent load and mutation refusal",
+  "schema_introspection": "PASS 36/36 models with documented partial-index normalization",
+  "p1_regression": "PASS",
+  "p3_implementation": "ABSENT",
+  "no_inferred_runtime_evidence": true,
+  "prior_failed_runs": "Retained in GitHub history; failures were negative-fixture assertion ordering and were corrected without weakening DB guards."
 }
-
