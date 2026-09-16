@@ -1,12 +1,13 @@
 import { Body, Catch, Controller, Get, Header, HttpCode, HttpException, Inject, Patch, Post, Put, Req, Res } from '@nestjs/common';
 import type { ArgumentsHost, ExceptionFilter } from '@nestjs/common';
+import { randomUUID } from 'node:crypto';
 import { z, ZodError } from 'zod';
 import { ContractError, UUID_PATTERN, languageIds } from '../../../packages/domain/src/identity.js';
 import type { IdentityRepository } from '../../../infra/persistence/identity.js';
 import type { ContentRepository } from '../../../infra/persistence/content.js';
 
 export const IDENTITY = Symbol('P2_IDENTITY'); export const CONTENT = Symbol('P2_CONTENT');
-type Request = { headers: Record<string, string | undefined>; ip?: string; query: Record<string, string | undefined> };
+type Request = { headers: Record<string, string | undefined>; ip?: string; query: Record<string, string | undefined>; url?: string };
 type Response = { status(code: number): Response; type(value: string): Response; json(value: unknown): void; setHeader(name: string, value: string): void };
 const noStore = 'private, no-store';
 const cookieName = '__Host-lingvessa_session';
@@ -24,12 +25,27 @@ export class FoundationExceptionFilter implements ExceptionFilter {
       host.switchToHttp().getResponse<Response>().status(error.getStatus()).json(error.getResponse());
       return;
     }
-    const codes = { INVALID_INPUT: 400, NOT_FOUND: 404, FORBIDDEN: 403, CONFLICT: 409, UNAUTHENTICATED: 401 };
+    const codes = { INVALID_INPUT: 400, NOT_FOUND: 404, FORBIDDEN: 403, CONFLICT: 409, UNAUTHENTICATED: 401,
+      UNSUPPORTED_CONTRACT: 422, VERSION_CONFLICT: 409, RATE_LIMITED: 429, SERVICE_UNAVAILABLE: 503 };
     const dbCode = error instanceof Error && 'code' in error ? String(error.code) : '';
-    const status = error instanceof ContractError ? codes[error.code] : error instanceof ZodError ? 400 : dbCode === '23505' ? 409 : ['23503', '23514', '22P02'].includes(dbCode) ? 400 : dbCode === '42501' ? 403 : 500;
+    const status = error instanceof ContractError ? codes[error.code] : error instanceof ZodError ? 400 : ['23505','40001'].includes(dbCode) ? 409 : ['23503', '23514', '22P02'].includes(dbCode) ? 400 : dbCode === '42501' ? 403 : 500;
+    const request = host.switchToHttp().getRequest<Request>();
+    const supplied = request.headers['x-correlation-id'];
+    const correlationId = supplied && UUID_PATTERN.test(supplied) ? supplied : randomUUID();
+    const code = error instanceof ContractError ? error.code : error instanceof ZodError ? 'INVALID_INPUT' : status === 500 ? 'INTERNAL_ERROR' : status === 409 ? 'CONFLICT' : 'REQUEST_REJECTED';
     const response = host.switchToHttp().getResponse<Response>();
     response.setHeader('Cache-Control', noStore);
-    response.status(status).type('application/problem+json').json({ type: 'about:blank', status, title: error instanceof ContractError ? error.code : status === 500 ? 'INTERNAL_ERROR' : 'REQUEST_REJECTED' });
+    response.setHeader('X-Correlation-ID', correlationId);
+    response.status(status).type('application/problem+json').json({
+      type: `https://lingvessa.invalid/problems/${code.toLowerCase().replaceAll('_','-')}`,
+      title: code,
+      status,
+      code,
+      detail_safe: error instanceof ContractError ? error.message : error instanceof ZodError ? 'Request validation failed' : status === 500 ? 'Unexpected service error' : 'Request rejected',
+      instance: request.url ?? '/api/v1',
+      correlation_id: correlationId,
+      ...(error instanceof ZodError ? { field_errors: error.issues.map((issue) => ({ path: issue.path.join('.'), code: issue.code })) } : {}),
+    });
   }
 }
 @Controller('auth')

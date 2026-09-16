@@ -1,0 +1,16 @@
+{
+  "phase": "P3",
+  "new_architecture_decisions": [],
+  "implementation_clarifications": [
+    {
+      "id": "P3-IC-001",
+      "decision": "Raw immutable evidence and attempt receipts are committed in P3; mastery/review projections remain P4.",
+      "basis": "Implementation Plan v1.4 \u00a710 attempt transaction and duplicate-evidence exit gate; \u00a711 P4 projection ownership"
+    },
+    {
+      "id": "P3-IC-002",
+      "decision": "Speech registry entries are explicit P5-deferred contracts and cannot start a P3 run.",
+      "basis": "Implementation Plan v1.4 P3 AI rule and P5 speech ownership"
+    }
+  ]
+}

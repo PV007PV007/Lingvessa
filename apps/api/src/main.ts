@@ -4,12 +4,13 @@ import { createApi } from './app.js';
 import { createFoundationPool } from '../../../infra/persistence/database.js';
 import { IdentityRepository } from '../../../infra/persistence/identity.js';
 import { ContentRepository } from '../../../infra/persistence/content.js';
+import { LessonRepository } from '../../../infra/persistence/lessons.js';
 
 async function main() {
   const config = loadP1Config({ ...process.env, SERVICE_NAME: 'api' });
   const probe = postgresProbe(config);
   const pool = createFoundationPool(config.DATABASE_URL!);
-  const app = await createApi(probe, { identity: new IdentityRepository(pool), content: new ContentRepository(pool) });
+  const app = await createApi(probe, { identity: new IdentityRepository(pool), content: new ContentRepository(pool), lessons: new LessonRepository(pool) });
   let stopping = false;
   for (const signal of ['SIGTERM', 'SIGINT'] as const) process.once(signal, () => {
     if (stopping) return;
