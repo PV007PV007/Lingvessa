@@ -5,8 +5,8 @@ test.beforeEach(async({page,request,baseURL})=>{
   expect(baseURL).toBeTruthy();
   const origin=new URL(baseURL!).origin;
   // A browser using the actual Host reaches authentication; a foreign Origin is rejected by the proxy.
-  expect((await request.post('/api/v1/auth/csrf',{headers:{origin}})).status()).toBe(401);
-  expect((await request.post('/api/v1/auth/csrf',{headers:{origin:'https://foreign.example.invalid'}})).status()).toBe(403);
+  expect((await request.post('/api/v1/auth/csrf',{headers:{origin,'x-lingvessa-client':'web'}})).status()).toBe(401);
+  expect((await request.post('/api/v1/auth/csrf',{headers:{origin:'https://foreign.example.invalid','x-lingvessa-client':'web'}})).status()).toBe(403);
   page.on('response',response=>{const path=new URL(response.url()).pathname;if(path.startsWith('/api/'))console.log('P3_BROWSER_HTTP',path,response.status());});
   page.on('pageerror',error=>console.log('P3_BROWSER_RUNTIME',error.message.slice(0,300)));
 });

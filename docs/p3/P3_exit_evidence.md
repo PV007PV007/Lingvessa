@@ -15,3 +15,5 @@ All 165 P3 planning rows are traced. Later-phase obligations are explicitly reta
 BLOCKER: none requiring owner decision. IMPORTANT: complete browser/final-SHA hosted gates pending. MINOR: inherited Actions Node warning and experimental pinned Argon2id.
 
 EXC-P1-001: main is NOT technically protected; owner-approved PR/green-CI process remains. P4 is not authorized or implemented. Next action: execute corrective CI, prepare final evidence, retain PR open for owner review.
+
+Corrective checkpoint `2cefaed9f07aea6f2cd5004e895962fdb73f9c19`, run 35207465061: real DB negative tests and server core gates PASS. Browser test setup omitted mandatory custom header; test corrected, full rerun pending.

@@ -1,0 +1,308 @@
+{
+  "phase": "P3",
+  "comparison_base": "df07f9a15838c99da1ea8c876a8b6262057b0354",
+  "comparison_base_tag": "p2-accepted-2026-09-16",
+  "scope": "cumulative milestone changes including closure records; final review via git diff --name-status p2-accepted-2026-09-16 HEAD",
+  "files": [
+    {
+      "status": "M",
+      "path": ".github/workflows/p1.yml"
+    },
+    {
+      "status": "A",
+      "path": ".github/workflows/p3.yml"
+    },
+    {
+      "status": "M",
+      "path": "00_CONTEXT/01_implementation_state_and_handoff.md"
+    },
+    {
+      "status": "M",
+      "path": "apps/api/src/app.ts"
+    },
+    {
+      "status": "M",
+      "path": "apps/api/src/foundation.ts"
+    },
+    {
+      "status": "A",
+      "path": "apps/api/src/lessons.ts"
+    },
+    {
+      "status": "M",
+      "path": "apps/api/src/main.ts"
+    },
+    {
+      "status": "M",
+      "path": "apps/web/next.config.mjs"
+    },
+    {
+      "status": "A",
+      "path": "apps/web/src/app/api/v1/[...segments]/route.ts"
+    },
+    {
+      "status": "M",
+      "path": "apps/web/src/app/globals.css"
+    },
+    {
+      "status": "A",
+      "path": "apps/web/src/app/lesson/[runId]/page.tsx"
+    },
+    {
+      "status": "A",
+      "path": "apps/web/src/app/lesson/error.tsx"
+    },
+    {
+      "status": "A",
+      "path": "apps/web/src/lesson/activity.tsx"
+    },
+    {
+      "status": "A",
+      "path": "apps/web/src/lesson/player.tsx"
+    },
+    {
+      "status": "A",
+      "path": "apps/web/src/lesson/queue.ts"
+    },
+    {
+      "status": "M",
+      "path": "apps/worker/src/main.ts"
+    },
+    {
+      "status": "A",
+      "path": "content/fixtures/p3/cs-core.json"
+    },
+    {
+      "status": "A",
+      "path": "content/fixtures/p3/cs-lesson.json"
+    },
+    {
+      "status": "A",
+      "path": "content/fixtures/p3/en-core.json"
+    },
+    {
+      "status": "A",
+      "path": "content/fixtures/p3/en-lesson.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/p3/P3_exit_evidence.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/p3/authorization.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/p3/contract-diff.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/p3/evidence/changed-files.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/p3/evidence/hosted-ci.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/p3/evidence/validation-index.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/p3/phase-scope.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/p3/requirement-evidence.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/p3/resolved-decisions.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/p3/task-status.json"
+    },
+    {
+      "status": "A",
+      "path": "infra/contracts/p3.openapi.json"
+    },
+    {
+      "status": "M",
+      "path": "infra/development/compose.yml"
+    },
+    {
+      "status": "M",
+      "path": "infra/local/database-guard.ts"
+    },
+    {
+      "status": "M",
+      "path": "infra/persistence/identity.ts"
+    },
+    {
+      "status": "A",
+      "path": "infra/persistence/lessons.ts"
+    },
+    {
+      "status": "A",
+      "path": "infra/persistence/outbox.ts"
+    },
+    {
+      "status": "A",
+      "path": "infra/persistence/p3-fixtures.ts"
+    },
+    {
+      "status": "M",
+      "path": "package.json"
+    },
+    {
+      "status": "A",
+      "path": "packages/activity-schemas/src/attempt.ts"
+    },
+    {
+      "status": "M",
+      "path": "packages/activity-schemas/src/content.ts"
+    },
+    {
+      "status": "M",
+      "path": "packages/activity-schemas/src/index.ts"
+    },
+    {
+      "status": "A",
+      "path": "packages/activity-schemas/src/learner.ts"
+    },
+    {
+      "status": "A",
+      "path": "packages/activity-schemas/src/lesson.ts"
+    },
+    {
+      "status": "A",
+      "path": "packages/activity-schemas/src/mastery.ts"
+    },
+    {
+      "status": "M",
+      "path": "packages/api-client/src/index.ts"
+    },
+    {
+      "status": "A",
+      "path": "packages/api-client/src/lesson.ts"
+    },
+    {
+      "status": "M",
+      "path": "packages/application/src/index.ts"
+    },
+    {
+      "status": "A",
+      "path": "packages/application/src/lesson.ts"
+    },
+    {
+      "status": "M",
+      "path": "packages/content-tools/src/index.ts"
+    },
+    {
+      "status": "A",
+      "path": "packages/content-tools/src/p3-fixture.ts"
+    },
+    {
+      "status": "M",
+      "path": "packages/domain/src/identity.ts"
+    },
+    {
+      "status": "A",
+      "path": "packages/lesson-engine/src/evaluator.ts"
+    },
+    {
+      "status": "M",
+      "path": "packages/lesson-engine/src/index.ts"
+    },
+    {
+      "status": "A",
+      "path": "packages/lesson-engine/src/manifest.ts"
+    },
+    {
+      "status": "A",
+      "path": "packages/lesson-engine/src/presentation.ts"
+    },
+    {
+      "status": "A",
+      "path": "packages/lesson-engine/src/registry.ts"
+    },
+    {
+      "status": "A",
+      "path": "packages/lesson-engine/src/state.ts"
+    },
+    {
+      "status": "A",
+      "path": "packages/provider-adapters/src/callback.ts"
+    },
+    {
+      "status": "M",
+      "path": "packages/provider-adapters/src/index.ts"
+    },
+    {
+      "status": "M",
+      "path": "pnpm-lock.yaml"
+    },
+    {
+      "status": "A",
+      "path": "prisma/migrations/202609160001_p3_lesson_engine/migration.sql"
+    },
+    {
+      "status": "M",
+      "path": "prisma/schema.prisma"
+    },
+    {
+      "status": "A",
+      "path": "tests/browser/p3.spec.ts"
+    },
+    {
+      "status": "M",
+      "path": "tests/integration/bootstrap.test.ts"
+    },
+    {
+      "status": "M",
+      "path": "tests/integration/p2-foundation.test.ts"
+    },
+    {
+      "status": "A",
+      "path": "tests/integration/p3-lesson-engine.test.ts"
+    },
+    {
+      "status": "M",
+      "path": "tests/unit/boundaries.test.ts"
+    },
+    {
+      "status": "A",
+      "path": "tests/unit/p3-lesson-engine.test.ts"
+    },
+    {
+      "status": "A",
+      "path": "tools/governance/validate_p3_baseline.py"
+    },
+    {
+      "status": "M",
+      "path": "tools/p2/validate-fixtures.ts"
+    },
+    {
+      "status": "A",
+      "path": "tools/p3/acceptance-summary.ts"
+    },
+    {
+      "status": "A",
+      "path": "tools/p3/browser-gate.ts"
+    },
+    {
+      "status": "A",
+      "path": "tools/p3/openapi.ts"
+    },
+    {
+      "status": "A",
+      "path": "tools/p3/playwright.config.ts"
+    }
+  ],
+  "counts": {
+    "A": 48,
+    "M": 26
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "phase": "P3",
+  "accepted_base_sha": "df07f9a15838c99da1ea8c876a8b6262057b0354",
+  "governing_contract_change": false,
+  "migrations": [
+    {
+      "id": "202609160001_p3_lesson_engine",
+      "path": "prisma/migrations/202609160001_p3_lesson_engine/migration.sql",
+      "sha256": "a01ff0acca4c6175adffd4815b8991909ec1a3dbcefc6fc2d996b01bce0b2031",
+      "mode": "additive, transactional",
+      "creates_tables": [
+        "lesson_runs",
+        "lesson_run_items",
+        "activity_attempts",
+        "evidence_events",
+        "attempt_receipts",
+        "outbox_events",
+        "outbox_deliveries"
+      ],
+      "creates_functions": [
+        "p3_run_insert_guard",
+        "p3_run_guard",
+        "p3_run_item_guard",
+        "p3_attempt_guard",
+        "p3_evidence_guard"
+      ],
+      "adds_unique_constraints_to": [
+        "publication_entries",
+        "activity_items",
+        "item_knowledge_map"
+      ],
+      "accepted_P1_P2_migrations_unchanged": true
+    }
+  ],
+  "api": {
+    "specification": "infra/contracts/p3.openapi.json",
+    "openapi": "3.1.2",
+    "new_endpoints": [
+      {
+        "path": "/api/v1/lesson-runs",
+        "methods": [
+          "post",
+          "get"
+        ]
+      },
+      {
+        "path": "/api/v1/lesson-runs/{id}",
+        "methods": [
+          "get"
+        ]
+      },
+      {
+        "path": "/api/v1/lesson-runs/{id}/attempts",
+        "methods": [
+          "post"
+        ]
+      },
+      {
+        "path": "/api/v1/lesson-runs/{id}/exit",
+        "methods": [
+          "post"
+        ]
+      },
+      {
+        "path": "/api/v1/auth/csrf",
+        "methods": [
+          "post"
+        ]
+      }
+    ],
+    "existing_P2_endpoints": "retained; ordinary learning quota is separate from login quota",
+    "versioning": "strict command/response Zod schemas; UUID attempt identity; pinned content/evaluator/answer-policy; immutable replay receipt"
+  },
+  "security": [
+    "authenticated owner required",
+    "CSRF required for authoritative writes",
+    "same-origin browser proxy checks actual request Host",
+    "composite user/profile/language/content/publication FKs",
+    "version/sequence conflict rejects instead of substituting newer content",
+    "safe ProblemDetails without SQL/token/payload logging"
+  ],
+  "future_tables_not_created": [
+    "knowledge_mastery_states",
+    "skill_mastery_states",
+    "review_schedules",
+    "speech_jobs",
+    "ai_runs",
+    "ai_sessions"
+  ],
+  "rollback": "Deploy the prior accepted application if necessary; preserve additive tables and immutable P3 records. Do not edit applied migrations, rewrite published snapshots or delete attempt/evidence history. Corrective database changes require a reviewed forward migration."
+}
