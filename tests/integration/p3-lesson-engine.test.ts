@@ -33,7 +33,7 @@ test('P3 PostgreSQL: pinned bilingual lesson runtime, attempts, idempotency, rem
   const env = { ...process.env, LINGVESSA_ENV: 'local', DATABASE_URL: url.toString() };
   const results: Gate[] = [];
   let created = false; let pool: pg.Pool | undefined;
-  const run = async (gate: string, action: () => Promise<void>) => { await action(); results.push({ gate, status: 'PASS' }); };
+  const run = async (gate: string, action: () => Promise<void>) => { await action(); results.push({ gate, status: 'PASS' }); process.stdout.write(`P3_GATE PASS ${gate}\n`); };
   const migrate = () => {
     const result = spawnSync('pnpm', ['db:migrate'], { env, encoding: 'utf8', timeout: 60000 });
     assert.equal(result.status, 0, `Migration failed: ${result.stderr.slice(0, 500)}`);
@@ -129,6 +129,19 @@ test('P3 PostgreSQL: pinned bilingual lesson runtime, attempts, idempotency, rem
       assert.equal((await db.query('SELECT evaluator_version FROM activity_attempts WHERE user_id=$1 AND attempt_id=$2',[learnerId,wrongId])).rows[0].evaluator_version,'deterministic-choice-1.0.0');
       const retry = await lessons.submit(learnerId,enRun.id,command(randomUUID(),2,enActivity1,'hello'));
       assert.equal(retry.outcome,'correct'); assert.equal(retry.run.position,1);
+      await sqlReject(db,`INSERT INTO activity_attempts SELECT (jsonb_populate_record(NULL::activity_attempts,to_jsonb(a)||jsonb_build_object(
+        'id',$2::uuid,'attempt_id',$3::uuid,'client_sequence',3,'item_id',$4::uuid))).* FROM activity_attempts a WHERE a.attempt_id=$1`,
+        [wrongId,randomUUID(),randomUUID(),p3.cs.activities[0]!.id],'23503');
+      await sqlReject(db,`INSERT INTO activity_attempts SELECT (jsonb_populate_record(NULL::activity_attempts,to_jsonb(a)||jsonb_build_object(
+        'id',$2::uuid,'attempt_id',$3::uuid,'client_sequence',3,'user_id',$4::uuid))).* FROM activity_attempts a WHERE a.attempt_id=$1`,
+        [wrongId,randomUUID(),randomUUID(),otherId],'23514');
+      await sqlReject(db,`INSERT INTO evidence_events SELECT (jsonb_populate_record(NULL::evidence_events,to_jsonb(e)||jsonb_build_object(
+        'id',$2::uuid,'user_id',$3::uuid,'language_profile_id',$4::uuid))).* FROM evidence_events e WHERE e.attempt_id=$1`,
+        [wrongId,randomUUID(),otherId,profiles.otherEn],'23503');
+      await sqlReject(db,`INSERT INTO evidence_events SELECT (jsonb_populate_record(NULL::evidence_events,to_jsonb(e)||jsonb_build_object(
+        'id',$2::uuid,'knowledge_item_id',$3::uuid))).* FROM evidence_events e WHERE e.attempt_id=$1`,
+        [wrongId,randomUUID(),'5a0f2f80-c5b7-4c29-a8a2-a7d28eb0f6e1'],'23514');
+
       await sqlReject(db,'UPDATE activity_attempts SET feedback=$1 WHERE user_id=$2 AND attempt_id=$3',['rewrite',learnerId,wrongId],'23514');
       await sqlReject(db,'UPDATE evidence_events SET effective_weight=0 WHERE user_id=$1 AND attempt_id=$2',[learnerId,wrongId],'23514');
     });
@@ -302,6 +315,7 @@ test('P3 PostgreSQL: pinned bilingual lesson runtime, attempts, idempotency, rem
         assert.equal((await fresh.query('SELECT count(*) FROM p1_bootstrap.fixtures')).rows[0].count,'2');
       } finally { await fresh.end(); }
     });
+    assert.equal(results.length,process.env.P3_BROWSER_TESTS==='true'?15:14,'Every P3 runtime gate must execute');
   } finally {
     await pool?.end();
     if (created) await admin.query(`DROP DATABASE "${name}" WITH (FORCE)`);

@@ -6,7 +6,9 @@ async function forward(request: NextRequest, context: {params:Promise<{segments:
   if (!['auth','me','catalog','lesson-runs'].includes(segments[0]??'')) return new Response(null,{status:404});
   const origin=new URL(process.env.LINGVESSA_API_ORIGIN??'http://127.0.0.1:3002');
   if (!['http:','https:'].includes(origin.protocol)||origin.username||origin.password||origin.pathname!=='/') return new Response(null,{status:503});
-  if (request.method!=='GET' && request.headers.get('origin') && request.headers.get('origin')!==request.nextUrl.origin)
+  // Next normalizes loopback nextUrl.host to localhost; Origin must match the actual request authority.
+  const requestOrigin=`${request.nextUrl.protocol}//${request.headers.get('host')??request.nextUrl.host}`;
+  if (request.method!=='GET' && request.headers.get('origin') && request.headers.get('origin')!==requestOrigin)
     return new Response(null,{status:403});
   const target=new URL(`/api/v1/${segments.map(encodeURIComponent).join('/')}${request.nextUrl.search}`,origin);
   const headers=new Headers();

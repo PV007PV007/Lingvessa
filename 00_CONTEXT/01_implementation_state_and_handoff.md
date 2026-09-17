@@ -1,38 +1,38 @@
 # Lingvessa implementation state and handoff
 
-Timestamp: 2026-09-16T16:54:10.594900+00:00
+Timestamp: 2026-09-17T09:51:09.772837+00:00
 
 P0/P1/P2: OWNER ACCEPTED. P3: AUTHORIZED, IN PROGRESS / NOT READY. P4: NOT AUTHORIZED / NOT STARTED.
 
 ## Authority and accepted source
 
-GitHub PV007PV007/Lingvessa main/history is the implementation source of truth. P2 PR #2 was merged with merge commit `df07f9a15838c99da1ea8c876a8b6262057b0354`. Tag `p2-accepted-2026-09-16` and published P2 accepted prerelease point to that merge. The architecture manifest and seven owner-locked governing PDFs are unchanged; Implementation Plan v1.4 is the sole execution-order authority.
+GitHub PV007PV007/Lingvessa main/history is the implementation source of truth. P2 PR #2 merge: `df07f9a15838c99da1ea8c876a8b6262057b0354`; accepted tag: `p2-accepted-2026-09-16`. Manifest and seven owner-locked governing PDFs are unchanged; Implementation Plan v1.4 remains the sole execution-order authority.
 
-Branch: `implementation/p3-lesson-engine`, created from accepted P2. Remote checkpoint: `1518805576a12f1cbbfd6df19ff499b90fa7df1b`; PR #3 OPEN DRAFT. Local mirror baseline is not claimed as a hosted tested commit. Final tested SHA will be taken from the required hosted checks of the final branch head.
+Branch: `implementation/p3-lesson-engine`. PR [#3](https://github.com/PV007PV007/Lingvessa/pull/3): OPEN DRAFT, not merged. Latest tested hosted checkpoint: `92ff200fb50aad65c899cc52b1060df4a86f5f56`. This handoff accompanies the next corrective commit; it does not claim that checkpoint tested these new changes. The final acceptance artifact must match the exact final branch HEAD.
 
 ## Current implementation batch
 
-Task IDs: IMP-P3-001, IMP-P3-002, IMP-P3-003, IMP-P3-004. All 165 assigned trace rows are retained in docs/p3/requirement-evidence.json (162 MUST, 3 SHOULD); runtime verification is pending.
+Tasks: IMP-P3-001 → IMP-P3-002 → IMP-P3-003 → IMP-P3-004. All 165 assigned trace rows retained (162 MUST, 3 SHOULD). Requirement evidence explicitly separates 93 implemented P3 rows, 48 partial foundations with later acceptance, and 24 later-runtime rows; none is claimed globally complete merely by phase assignment.
 
-Added: P3 activity schemas/registry/evaluators/state reducer, API/client, additive PostgreSQL migration and run/attempt/raw-evidence/outbox repositories, synthetic EN/CS fixtures, unit/integration tests, workflow and docs/p3 evidence records. Modified: P2 schema exports, API/worker wiring, Prisma schema, validation scripts/package script. Full changed-file inventory will be regenerated at closure. No governing document or accepted migration changed.
+Changes in this batch: `apps/web/src/app/api/v1/[...segments]/route.ts` compares Origin to the actual Host; `apps/web/src/app/lesson/error.tsx` adds safe rendering recovery; `apps/web/src/lesson/player.tsx` distinguishes failed queue persistence from a saved pending answer; browser tests assert trusted/foreign Origin behavior and emit safe diagnostics; integration tests add direct database cross-owner/cross-language rejection cases; `tools/p3/acceptance-summary.ts` verifies exact tested SHA and every runtime artifact; P3 workflow invokes that summary; task/requirement/exit records updated. No deletions. Complete milestone inventory will be generated at closure.
 
-Schema: migration `202609160001_p3_lesson_engine` creates lesson_runs, lesson_run_items, activity_attempts, immutable raw evidence_events, attempt_receipts, outbox_events and outbox_deliveries. P4 mastery/Review projections remain absent. API: /api/v1/lesson-runs, resume, attempts and explicit remediation exit. No contract change; implementation follows approved pinned publications and server-authoritative scoring.
+P3 schema: additive `202609160001_p3_lesson_engine` creates lesson_runs, lesson_run_items, activity_attempts, evidence_events, attempt_receipts, outbox_events, outbox_deliveries. Composite language/ownership/publication FKs, immutable raw records and pins remain mandatory. API: start/list/resume run, submit attempt, remediation exit, session CSRF refresh. No contract change. No P4 mastery/Review, P5 speech/media jobs or P8/P9 AI runtime.
 
-## Validation executed and remaining
+## Exact validation and results
 
-- pnpm install --frozen-lockfile: PASS.
-- pnpm db:generate; pnpm db:validate; pnpm lint; pnpm typecheck: PASS before current corrective batch, rerun pending.
-- pnpm test: 29/29 PASS before corrective batch; new negative cases added, rerun pending.
-- pnpm validate:baseline: 39/39 PASS before current batch.
-- pnpm validate:references: EN/CS synthetic P2 and P3 PASS.
-- pnpm check at first checkpoint: PASS (29 unit, 4 smoke); negative dependency fixture cleanup corrected. Current batch adds browser UI, public response schemas, full core-family fixtures and tests; final rerun pending.
-- pnpm bootstrap:local: could not execute; local host lacks Docker/PostgreSQL. No local PostgreSQL runtime PASS claimed. Real migrations/integration/container tests will run in hosted CI.
-- Hosted checkpoint a43734c: install/baseline/check/reference/audit/bootstrap PASS; integration FAILED (old P1 migration-count assertion and P3 test-database name refused by the local-only allowlist). Both causes corrected in the current batch; hosted rerun pending. OCI was SKIPPED at this checkpoint, not passed.
+- `pnpm install --frozen-lockfile`; `pnpm validate:baseline`; `pnpm check`; `pnpm validate:references`; `pnpm audit:dependencies`: hosted PASS at 92ff200 (35 unit, 4 smoke; 39 P3 baseline checks).
+- `pnpm bootstrap:local`; `node --env-file=.local/runtime.env --import tsx --test tests/integration/*.test.ts`; `pnpm test:containers`: hosted PASS in P1/P2 regression at 92ff200. PostgreSQL migration/seed/recreation and server P3 integration executed; four OCI services built and passed ready → DB unavailable/degraded → DB restored/recovery.
+- P1 PR run 35175662789 / job 105056690928: SUCCESS. P2 PR run 35175662796 / job 105056691145: SUCCESS.
+- P3 PR run 35175662938 / job 105056691787: FAILED in four browser journeys before login. Browser Origin 127.0.0.1 was compared to Next.js normalized localhost. Subsequent P3 recreation/OCI steps were not passed in that failed workflow.
+- Corrective local diagnostic `LINGVESSA_ENV=local node ../debug-proxy.mjs`: same-origin request now reaches upstream 401; foreign localhost Origin receives 403. This stub diagnostic is not PostgreSQL/browser acceptance evidence.
+- Corrective local `pnpm build:web`, `pnpm lint`, `pnpm typecheck`: PASS. New browser/DB assertions require the next hosted run.
 
-BLOCKER: no architectural contradiction identified. P3 acceptance remains NOT READY until actual runtime and full local/hosted gates pass.
-IMPORTANT: hosted run 35122948839 passed install/baseline/check/references/audit/Chromium install/PostgreSQL bootstrap, then failed first outbox claim due to timestamp ordering. Corrective batch pins initial delivery availability to claim time, tests exhausted leases, enforces content retry policy, preserves assisted correction, and emits natural-completion outbox events. Hosted rerun 35124209992 confirmed the outbox fix, then exposed duplicate approval setup in the expanded fixture test; that test now reuses the existing exact-checksum approval. Current batch adds atomic IndexedDB queue updates and shared command validation, exact recorded UI order, safe conflict recovery and 4 bilingual browser journeys. Local unit tests: 35/35 PASS. Final hosted browser/container gates remain pending.
-MINOR: existing GitHub Actions Node warning and experimental pinned Argon2id remain inherited technical debt.
+## Risks and next task
 
-Operational exception EXC-P1-001 remains: main is not technically protected; implementation branches → PR → green CI → owner review. Open owner decisions: none blocking current P3 work.
+BLOCKER: none requiring an owner decision. P3 is NOT READY until complete final hosted gates pass.
+IMPORTANT: complete browser gate and final-SHA runtime rerun pending.
+MINOR: inherited GitHub Actions Node warning; pinned Node Argon2id remains experimental. No dependency churn for warnings alone.
 
-Exact next task: push the corrective P3 batch, inspect actual PostgreSQL/browser/container CI logs, resolve concrete failures, then reconcile the 165-row trace and exit evidence. Browser LessonPlayer and all 12 core family fixture activities per language are implemented; full reference modules remain P6/P7. Keep P3 PR open; do not merge or start P4.
+EXC-P1-001 retained: main is NOT technically protected; implementation branches → PR → green hosted CI → owner review. No direct push/force-push/delete of main. Open owner decisions: none blocking P3.
+
+Exact next task: push this corrective batch, inspect real DB/browser/container results, fix concrete failures, then update closure evidence and run every required gate on the final branch commit. Keep PR #3 open. Do not merge or start P4.

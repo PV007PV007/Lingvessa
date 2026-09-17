@@ -4,7 +4,11 @@
   "accepted_parent": "df07f9a15838c99da1ea8c876a8b6262057b0354",
   "branch": "implementation/p3-lesson-engine",
   "tested_sha": null,
-  "pr": null,
+  "pr": {
+    "number": 3,
+    "status": "OPEN_DRAFT",
+    "url": "https://github.com/PV007PV007/Lingvessa/pull/3"
+  },
   "tasks": [
     {
       "task_id": "IMP-P3-001",
@@ -43,8 +47,8 @@
         "content/fixtures/p3/en-lesson.json",
         "content/fixtures/p3/cs-lesson.json"
       ],
-      "local_evidence": "pnpm db:generate; db:validate; lint; typecheck; unit 29/29. PostgreSQL/container execution requires hosted CI.",
-      "hosted_evidence": "PENDING",
+      "local_evidence": "pnpm check PASS at 92ff200 source tree: 35 unit, 4 smoke; current browser-origin corrective batch lint/type/build PASS. Final hosted checks pending.",
+      "hosted_evidence": "PostgreSQL/server integration and OCI passed in P1/P2 regression runs at 92ff200; complete P3 browser workflow pending corrective rerun.",
       "contract_change": "No governing contract change; additive P3 schema/API implementation only."
     },
     {
@@ -202,8 +206,8 @@
         "infra/contracts/p3.openapi.json",
         "apps/worker/src/main.ts"
       ],
-      "local_evidence": "pnpm db:generate; db:validate; lint; typecheck; unit 29/29. PostgreSQL/container execution requires hosted CI.",
-      "hosted_evidence": "PENDING",
+      "local_evidence": "pnpm check PASS at 92ff200 source tree: 35 unit, 4 smoke; current browser-origin corrective batch lint/type/build PASS. Final hosted checks pending.",
+      "hosted_evidence": "PostgreSQL/server integration and OCI passed in P1/P2 regression runs at 92ff200; complete P3 browser workflow pending corrective rerun.",
       "contract_change": "No governing contract change; additive P3 schema/API implementation only."
     },
     {
@@ -394,8 +398,8 @@
         "tests/unit/p3-lesson-engine.test.ts",
         "tests/integration/p3-lesson-engine.test.ts"
       ],
-      "local_evidence": "pnpm db:generate; db:validate; lint; typecheck; unit 29/29. PostgreSQL/container execution requires hosted CI.",
-      "hosted_evidence": "PENDING",
+      "local_evidence": "pnpm check PASS at 92ff200 source tree: 35 unit, 4 smoke; current browser-origin corrective batch lint/type/build PASS. Final hosted checks pending.",
+      "hosted_evidence": "PostgreSQL/server integration and OCI passed in P1/P2 regression runs at 92ff200; complete P3 browser workflow pending corrective rerun.",
       "contract_change": "No governing contract change; additive P3 schema/API implementation only."
     },
     {
@@ -425,11 +429,17 @@
         "tests/unit/p3-lesson-engine.test.ts",
         "tests/integration/p3-lesson-engine.test.ts"
       ],
-      "local_evidence": "pnpm db:generate; db:validate; lint; typecheck; unit 29/29. PostgreSQL/container execution requires hosted CI.",
-      "hosted_evidence": "PENDING",
+      "local_evidence": "pnpm check PASS at 92ff200 source tree: 35 unit, 4 smoke; current browser-origin corrective batch lint/type/build PASS. Final hosted checks pending.",
+      "hosted_evidence": "PostgreSQL/server integration and OCI passed in P1/P2 regression runs at 92ff200; complete P3 browser workflow pending corrective rerun.",
       "contract_change": "No governing contract change; additive P3 schema/API implementation only."
     }
   ],
   "p4_absent": true,
-  "updated_at": "2026-09-16T10:31:17.766650Z"
+  "updated_at": "2026-09-17T09:51:09.772837+00:00",
+  "latest_hosted_checkpoint": "92ff200fb50aad65c899cc52b1060df4a86f5f56",
+  "hosted_regression": {
+    "P1": "PASS",
+    "P2": "PASS",
+    "P3": "BROWSER_ORIGIN_FIX_PENDING_RECHECK"
+  }
 }

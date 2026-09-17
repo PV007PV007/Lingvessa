@@ -59,15 +59,17 @@ export function LessonPlayer({runId}:{runId:string}) {
       client_sequence:run.client_sequence+1,intent:reveal?'reveal':response.kind==='none'?'continue':'submit',response,
       presentation:{seed:activity.runtime.presentation_seed,order:activity.runtime.presentation_order},assistance:{hint_count:0,reveal}};
     dispatch({type:'SUBMIT',attempt_id:command.attempt_id});
+    let enqueued=false;
     try{
-      await queue.current.enqueue({run_id:runId,queued_at:new Date().toISOString(),command});
+      await queue.current.enqueue({run_id:runId,queued_at:new Date().toISOString(),command});enqueued=true;
       const accepted=await client.current.submitAttempt(runId,command);await queue.current.acknowledge(command.attempt_id);
       dispatch({type:'AUTHORITATIVE_RESULT',attempt_id:accepted.attempt_id,outcome:accepted.outcome,feedback:accepted.feedback,revision:accepted.run.revision});
       setResult(accepted);setRun({...run,client_sequence:command.client_sequence,revision:accepted.run.revision,retry_available:accepted.run.retry_available});
     }catch(error){
       captureProblem(error);
       dispatch({type:'FAIL',code:error instanceof ApiProblem?error.problem.code:'NETWORK_UNAVAILABLE'});
-      if(error instanceof ApiProblem&&error.problem.status<500&&error.problem.status!==401){
+      if(!enqueued){setNotice('Не вдалося зберегти відповідь у локальній черзі. Відновіть урок і повторіть спробу.');}
+      else if(error instanceof ApiProblem&&error.problem.status<500&&error.problem.status!==401){
         await queue.current.acknowledge(command.attempt_id);setNotice('Відповідь не прийнята. Відновіть урок із сервера.');
       }else setNotice('З’єднання перервано. Відповідь збережена й буде повторно надіслана з тим самим номером.');
     }finally{setBusy(false);inflight.current=false;}
