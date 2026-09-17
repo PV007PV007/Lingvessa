@@ -1,0 +1,64 @@
+{
+  "phase": "P3",
+  "tested_implementation_sha": "5ac7f53053c42945dc54c8583a17d1333fabd6b2",
+  "source_run": 35208020243,
+  "source_job": 105158481046,
+  "source": "P2 regression workflow PostgreSQL 18.6 introspection, decoded from its P2_PRISMA_SCHEMA log record",
+  "runtime_sha256": "2035f741687d5335ec1ba48deef01cb3e53af8503cb185bba3e9e624d2472dad",
+  "committed_schema_sha256": "2bf0fe8b7bfe9f4836f6467b9361236c505464bd64cec57b4c34a324283a98b5",
+  "model_count_runtime": 43,
+  "model_count_committed": 43,
+  "p3_scalar_models": [
+    {
+      "model": "lesson_runs",
+      "runtime_fields": 18,
+      "committed_fields": 18,
+      "equal_scalar_field_names_types": true,
+      "differences": {}
+    },
+    {
+      "model": "lesson_run_items",
+      "runtime_fields": 13,
+      "committed_fields": 13,
+      "equal_scalar_field_names_types": true,
+      "differences": {}
+    },
+    {
+      "model": "activity_attempts",
+      "runtime_fields": 27,
+      "committed_fields": 27,
+      "equal_scalar_field_names_types": true,
+      "differences": {}
+    },
+    {
+      "model": "evidence_events",
+      "runtime_fields": 23,
+      "committed_fields": 23,
+      "equal_scalar_field_names_types": true,
+      "differences": {}
+    },
+    {
+      "model": "attempt_receipts",
+      "runtime_fields": 4,
+      "committed_fields": 4,
+      "equal_scalar_field_names_types": true,
+      "differences": {}
+    },
+    {
+      "model": "outbox_events",
+      "runtime_fields": 12,
+      "committed_fields": 12,
+      "equal_scalar_field_names_types": true,
+      "differences": {}
+    },
+    {
+      "model": "outbox_deliveries",
+      "runtime_fields": 8,
+      "committed_fields": 8,
+      "equal_scalar_field_names_types": true,
+      "differences": {}
+    }
+  ],
+  "scope": "Model set and P3 scalar names/types/nullability; relational behavior is authoritative in SQL migration and real DB tests. No unsupported claim of textual Prisma/DDL equality.",
+  "status": "PASS"
+}

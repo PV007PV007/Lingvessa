@@ -18,6 +18,12 @@ export class IdentityRepository {
       return (result.rows[0]?.attempts as number) <= 8;
     });
   }
+  async allowLearningAction(userId: string): Promise<boolean> {
+    const row=(await this.pool.query(`INSERT INTO auth_rate_windows(key_hash,attempts,expires_at) VALUES($1,1,now()+interval '1 minute')
+      ON CONFLICT(key_hash) DO UPDATE SET attempts=CASE WHEN auth_rate_windows.expires_at<=now() THEN 1 ELSE auth_rate_windows.attempts+1 END,
+        expires_at=CASE WHEN auth_rate_windows.expires_at<=now() THEN now()+interval '1 minute' ELSE auth_rate_windows.expires_at END RETURNING attempts`,[digest(`learning:${userId}`)])).rows[0];
+    return Number(row.attempts)<=120;
+  }
   /** Controlled provisioning primitive. Public signup/reset/verification UI is not opened in P2. */
   async provision(email: string, password: string) {
     const normalized = email.trim().normalize('NFC').toLowerCase();
@@ -56,6 +62,12 @@ export class IdentityRepository {
     if (!row) throw unauthorized();
     const roles = (await this.pool.query('SELECT r.stable_code FROM user_roles ur JOIN roles r ON r.id=ur.role_id WHERE ur.user_id=$1', [row.user_id])).rows.map((r) => r.stable_code as string);
     return { sessionId: row.id as string, userId: row.user_id as string, csrfHash: row.csrf_hash as Buffer, roles };
+  }
+  async refreshCsrf(principal: Principal): Promise<string> {
+    const csrf = randomBytes(32).toString('base64url');
+    const result = await this.pool.query('UPDATE sessions SET csrf_hash=$1 WHERE id=$2 AND user_id=$3 AND revoked_at IS NULL AND expires_at>now()', [digest(csrf),principal.sessionId,principal.userId]);
+    if (result.rowCount !== 1) throw unauthorized();
+    return csrf;
   }
   checkCsrf(principal: Principal, csrf: string): void {
     if (!/^[A-Za-z0-9_-]{43}$/u.test(csrf) || !timingSafeEqual(digest(csrf), principal.csrfHash)) throw new ContractError('FORBIDDEN', 'CSRF verification required');

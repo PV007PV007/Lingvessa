@@ -1,0 +1,927 @@
+{
+  "fixture_version": "p3-executable-lesson-1",
+  "source_document": "Implementation Plan v1.4 §10; synthetic bilingual P3 acceptance fixture",
+  "language": "en",
+  "language_id": "0198f000-0000-7000-8000-000000000001",
+  "lesson_id": "ce6e2ae2-d195-4bf7-bef1-b8bbde0fcdff",
+  "base_content_version_id": "49318cd0-2dd3-4cd7-99ee-9bbf6e47d005",
+  "content_version_id": "614e2fcb-2739-5096-bea2-55081ca0724a",
+  "version_code": "p3-core-1",
+  "ancestor_versions": [
+    {
+      "entity_id": "9426bc83-58c1-4abc-8f7b-3251e2feed29",
+      "base_content_version_id": "7c863e1b-b850-45ba-9f14-c499f5baea5d",
+      "content_version_id": "327a1a40-a6df-5842-b435-0e205ed69704",
+      "version_code": "p3-core-1"
+    },
+    {
+      "entity_id": "81255bb6-b92f-46b9-9ae9-17954e5e1c22",
+      "base_content_version_id": "80c805d2-7a95-407c-9cf1-7896a0ec3852",
+      "content_version_id": "938b1c13-27c1-5255-a7be-5ef7de0b956b",
+      "version_code": "p3-core-1"
+    },
+    {
+      "entity_id": "43d922e0-e657-4f28-a597-23ebd6ed8214",
+      "base_content_version_id": "b7a58482-7ebe-4f32-8b6b-455c288587e8",
+      "content_version_id": "d5e6e722-bde8-5877-9d8a-49747db62930",
+      "version_code": "p3-core-1"
+    }
+  ],
+  "activities": [
+    {
+      "schema_version": "1.7",
+      "id": "10202603-6dd8-5a79-8556-b30c8d156460",
+      "stable_code": "EN-P3-CORE-00",
+      "type": "scene_intro",
+      "language": "en",
+      "variety": "en-GB",
+      "cefr": "A1",
+      "content_version_id": "614e2fcb-2739-5096-bea2-55081ca0724a",
+      "presentation": {
+        "instruction_key": "EN-P3-CORE-00_INSTRUCTION",
+        "prompt": "Practise the greeting.",
+        "accessibility": {
+          "keyboard_action": "Use arrow keys and Enter to select an answer.",
+          "feedback_live_region": true
+        }
+      },
+      "response": {
+        "kind": "none",
+        "answer_policy": {
+          "id": "EN-P3-CORE-00_POLICY",
+          "version": "1.0.0",
+          "mode": "exposure",
+          "normalization": {
+            "unicode": "NFC",
+            "locale": "en-GB",
+            "case_sensitive": false,
+            "collapse_whitespace": true,
+            "punctuation_sensitive": false,
+            "apostrophe_equivalent": true,
+            "diacritics_sensitive": true
+          }
+        }
+      },
+      "feedback": {
+        "correct": "Correct.",
+        "incorrect": "Try again.",
+        "reveal": "Hello",
+        "remediation": "Hello"
+      },
+      "learning": {
+        "knowledge_refs": [],
+        "outcome_refs": [
+          {
+            "outcome_id": "c7912952-098b-421c-bfe3-fa75bc0fc776",
+            "stable_code": "E-A1-M01-OUTCOME-CONTACT"
+          }
+        ],
+        "evidence_map": [],
+        "difficulty": 0.2
+      },
+      "runtime": {
+        "completion_policy": "exposure_v1",
+        "evaluator_version": "deterministic-core-1.0.0",
+        "presentation_seed": "EN-P3-CORE-00",
+        "presentation_order": [],
+        "max_retries": 2,
+        "auto_advance_allowed": true
+      }
+    },
+    {
+      "schema_version": "1.7",
+      "id": "949fd930-d1ca-5b89-935d-4acdce088688",
+      "stable_code": "EN-P3-CORE-01",
+      "type": "matching",
+      "language": "en",
+      "variety": "en-GB",
+      "cefr": "A1",
+      "content_version_id": "614e2fcb-2739-5096-bea2-55081ca0724a",
+      "presentation": {
+        "instruction_key": "EN-P3-CORE-01_INSTRUCTION",
+        "prompt": "Practise the greeting.",
+        "options": [
+          {
+            "id": "greeting",
+            "label": "Hello"
+          },
+          {
+            "id": "farewell",
+            "label": "Goodbye"
+          }
+        ],
+        "accessibility": {
+          "keyboard_action": "Use arrow keys and Enter to select an answer.",
+          "feedback_live_region": true
+        },
+        "pairs": [
+          {
+            "left": {
+              "id": "open",
+              "label": "Початок"
+            },
+            "right": {
+              "id": "greeting",
+              "label": "Hello"
+            }
+          },
+          {
+            "left": {
+              "id": "close",
+              "label": "Кінець"
+            },
+            "right": {
+              "id": "farewell",
+              "label": "Goodbye"
+            }
+          }
+        ]
+      },
+      "response": {
+        "kind": "mapping",
+        "answer_policy": {
+          "id": "EN-P3-CORE-01_POLICY",
+          "version": "1.0.0",
+          "mode": "mapping",
+          "normalization": {
+            "unicode": "NFC",
+            "locale": "en-GB",
+            "case_sensitive": false,
+            "collapse_whitespace": true,
+            "punctuation_sensitive": false,
+            "apostrophe_equivalent": true,
+            "diacritics_sensitive": true
+          },
+          "accepted_pairs": [
+            {
+              "left": "open",
+              "right": "greeting"
+            },
+            {
+              "left": "close",
+              "right": "farewell"
+            }
+          ]
+        }
+      },
+      "feedback": {
+        "correct": "Correct.",
+        "incorrect": "Try again.",
+        "reveal": "Hello",
+        "remediation": "Hello"
+      },
+      "learning": {
+        "knowledge_refs": [
+          {
+            "knowledge_item_id": "49db33a3-4a56-48d6-8a73-0676c3133625",
+            "stable_code": "ENG_K_GREET_HELLO",
+            "role": "practice"
+          }
+        ],
+        "outcome_refs": [
+          {
+            "outcome_id": "c7912952-098b-421c-bfe3-fa75bc0fc776",
+            "stable_code": "E-A1-M01-OUTCOME-CONTACT"
+          }
+        ],
+        "evidence_map": [
+          {
+            "skill": "vocabulary",
+            "facet": "meaning",
+            "weight": 0.6
+          }
+        ],
+        "difficulty": 0.2
+      },
+      "runtime": {
+        "completion_policy": "correct_or_reveal_v1",
+        "evaluator_version": "deterministic-core-1.0.0",
+        "presentation_seed": "EN-P3-CORE-01",
+        "presentation_order": [
+          "close",
+          "open"
+        ],
+        "max_retries": 2,
+        "auto_advance_allowed": true
+      }
+    },
+    {
+      "schema_version": "1.7",
+      "id": "5a7f1d93-de23-5018-ab98-1ff824af1043",
+      "stable_code": "EN-P3-CORE-02",
+      "type": "gap_fill",
+      "language": "en",
+      "variety": "en-GB",
+      "cefr": "A1",
+      "content_version_id": "614e2fcb-2739-5096-bea2-55081ca0724a",
+      "presentation": {
+        "instruction_key": "EN-P3-CORE-02_INSTRUCTION",
+        "prompt": "Practise the greeting.",
+        "accessibility": {
+          "keyboard_action": "Use arrow keys and Enter to select an answer.",
+          "feedback_live_region": true
+        }
+      },
+      "response": {
+        "kind": "text",
+        "answer_policy": {
+          "id": "EN-P3-CORE-02_POLICY",
+          "version": "1.0.0",
+          "mode": "text",
+          "normalization": {
+            "unicode": "NFC",
+            "locale": "en-GB",
+            "case_sensitive": false,
+            "collapse_whitespace": true,
+            "punctuation_sensitive": false,
+            "apostrophe_equivalent": true,
+            "diacritics_sensitive": true
+          },
+          "accepted_text": [
+            "Hello"
+          ]
+        }
+      },
+      "feedback": {
+        "correct": "Correct.",
+        "incorrect": "Try again.",
+        "reveal": "Hello",
+        "remediation": "Hello"
+      },
+      "learning": {
+        "knowledge_refs": [
+          {
+            "knowledge_item_id": "49db33a3-4a56-48d6-8a73-0676c3133625",
+            "stable_code": "ENG_K_GREET_HELLO",
+            "role": "practice"
+          }
+        ],
+        "outcome_refs": [
+          {
+            "outcome_id": "c7912952-098b-421c-bfe3-fa75bc0fc776",
+            "stable_code": "E-A1-M01-OUTCOME-CONTACT"
+          }
+        ],
+        "evidence_map": [
+          {
+            "skill": "writing",
+            "facet": "production",
+            "weight": 0.2
+          }
+        ],
+        "difficulty": 0.2
+      },
+      "runtime": {
+        "completion_policy": "correct_or_reveal_v1",
+        "evaluator_version": "deterministic-core-1.0.0",
+        "presentation_seed": "EN-P3-CORE-02",
+        "presentation_order": [],
+        "max_retries": 2,
+        "auto_advance_allowed": true
+      }
+    },
+    {
+      "schema_version": "1.7",
+      "id": "b7c3ee19-c6f8-537f-8546-bd45983eaf4f",
+      "stable_code": "EN-P3-CORE-03",
+      "type": "word_builder",
+      "language": "en",
+      "variety": "en-GB",
+      "cefr": "A1",
+      "content_version_id": "614e2fcb-2739-5096-bea2-55081ca0724a",
+      "presentation": {
+        "instruction_key": "EN-P3-CORE-03_INSTRUCTION",
+        "prompt": "Hello → Goodbye",
+        "options": [
+          {
+            "id": "greeting",
+            "label": "Hello"
+          },
+          {
+            "id": "farewell",
+            "label": "Goodbye"
+          }
+        ],
+        "accessibility": {
+          "keyboard_action": "Use arrow keys and Enter to select an answer.",
+          "feedback_live_region": true
+        },
+        "tokens": [
+          {
+            "id": "greeting",
+            "label": "Hello"
+          },
+          {
+            "id": "farewell",
+            "label": "Goodbye"
+          }
+        ]
+      },
+      "response": {
+        "kind": "order",
+        "answer_policy": {
+          "id": "EN-P3-CORE-03_POLICY",
+          "version": "1.0.0",
+          "mode": "order",
+          "normalization": {
+            "unicode": "NFC",
+            "locale": "en-GB",
+            "case_sensitive": false,
+            "collapse_whitespace": true,
+            "punctuation_sensitive": false,
+            "apostrophe_equivalent": true,
+            "diacritics_sensitive": true
+          },
+          "accepted_order": [
+            "greeting",
+            "farewell"
+          ]
+        }
+      },
+      "feedback": {
+        "correct": "Correct.",
+        "incorrect": "Try again.",
+        "reveal": "Hello",
+        "remediation": "Hello"
+      },
+      "learning": {
+        "knowledge_refs": [
+          {
+            "knowledge_item_id": "49db33a3-4a56-48d6-8a73-0676c3133625",
+            "stable_code": "ENG_K_GREET_HELLO",
+            "role": "practice"
+          }
+        ],
+        "outcome_refs": [
+          {
+            "outcome_id": "c7912952-098b-421c-bfe3-fa75bc0fc776",
+            "stable_code": "E-A1-M01-OUTCOME-CONTACT"
+          }
+        ],
+        "evidence_map": [
+          {
+            "skill": "vocabulary",
+            "facet": "meaning",
+            "weight": 0.6
+          }
+        ],
+        "difficulty": 0.2
+      },
+      "runtime": {
+        "completion_policy": "correct_or_reveal_v1",
+        "evaluator_version": "deterministic-core-1.0.0",
+        "presentation_seed": "EN-P3-CORE-03",
+        "presentation_order": [
+          "farewell",
+          "greeting"
+        ],
+        "max_retries": 2,
+        "auto_advance_allowed": true
+      }
+    },
+    {
+      "schema_version": "1.7",
+      "id": "13b99214-5564-5e40-8276-24f349855d84",
+      "stable_code": "EN-P3-CORE-04",
+      "type": "full_typing",
+      "language": "en",
+      "variety": "en-GB",
+      "cefr": "A1",
+      "content_version_id": "614e2fcb-2739-5096-bea2-55081ca0724a",
+      "presentation": {
+        "instruction_key": "EN-P3-CORE-04_INSTRUCTION",
+        "prompt": "Practise the greeting.",
+        "accessibility": {
+          "keyboard_action": "Use arrow keys and Enter to select an answer.",
+          "feedback_live_region": true
+        }
+      },
+      "response": {
+        "kind": "text",
+        "answer_policy": {
+          "id": "EN-P3-CORE-04_POLICY",
+          "version": "1.0.0",
+          "mode": "text",
+          "normalization": {
+            "unicode": "NFC",
+            "locale": "en-GB",
+            "case_sensitive": false,
+            "collapse_whitespace": true,
+            "punctuation_sensitive": false,
+            "apostrophe_equivalent": true,
+            "diacritics_sensitive": true
+          },
+          "accepted_text": [
+            "Hello"
+          ]
+        }
+      },
+      "feedback": {
+        "correct": "Correct.",
+        "incorrect": "Try again.",
+        "reveal": "Hello",
+        "remediation": "Hello"
+      },
+      "learning": {
+        "knowledge_refs": [
+          {
+            "knowledge_item_id": "49db33a3-4a56-48d6-8a73-0676c3133625",
+            "stable_code": "ENG_K_GREET_HELLO",
+            "role": "practice"
+          }
+        ],
+        "outcome_refs": [
+          {
+            "outcome_id": "c7912952-098b-421c-bfe3-fa75bc0fc776",
+            "stable_code": "E-A1-M01-OUTCOME-CONTACT"
+          }
+        ],
+        "evidence_map": [
+          {
+            "skill": "writing",
+            "facet": "production",
+            "weight": 0.2
+          }
+        ],
+        "difficulty": 0.2
+      },
+      "runtime": {
+        "completion_policy": "correct_or_reveal_v1",
+        "evaluator_version": "deterministic-core-1.0.0",
+        "presentation_seed": "EN-P3-CORE-04",
+        "presentation_order": [],
+        "max_retries": 2,
+        "auto_advance_allowed": true
+      }
+    },
+    {
+      "schema_version": "1.7",
+      "id": "54da7f7b-319f-55dd-b238-969f2c112875",
+      "stable_code": "EN-P3-CORE-05",
+      "type": "interactive_grammar",
+      "language": "en",
+      "variety": "en-GB",
+      "cefr": "A1",
+      "content_version_id": "614e2fcb-2739-5096-bea2-55081ca0724a",
+      "presentation": {
+        "instruction_key": "EN-P3-CORE-05_INSTRUCTION",
+        "prompt": "Practise the greeting.",
+        "options": [
+          {
+            "id": "greeting",
+            "label": "Hello"
+          },
+          {
+            "id": "farewell",
+            "label": "Goodbye"
+          }
+        ],
+        "accessibility": {
+          "keyboard_action": "Use arrow keys and Enter to select an answer.",
+          "feedback_live_region": true
+        },
+        "steps": [
+          "Приклад привітання: Hello.",
+          "Виберіть привітання. Це синтетична перевірка поетапного пояснення."
+        ]
+      },
+      "response": {
+        "kind": "single",
+        "answer_policy": {
+          "id": "EN-P3-CORE-05_POLICY",
+          "version": "1.0.0",
+          "mode": "single",
+          "normalization": {
+            "unicode": "NFC",
+            "locale": "en-GB",
+            "case_sensitive": false,
+            "collapse_whitespace": true,
+            "punctuation_sensitive": false,
+            "apostrophe_equivalent": true,
+            "diacritics_sensitive": true
+          },
+          "accepted_option_ids": [
+            "greeting"
+          ]
+        }
+      },
+      "feedback": {
+        "correct": "Correct.",
+        "incorrect": "Try again.",
+        "reveal": "Hello",
+        "remediation": "Hello"
+      },
+      "learning": {
+        "knowledge_refs": [
+          {
+            "knowledge_item_id": "49db33a3-4a56-48d6-8a73-0676c3133625",
+            "stable_code": "ENG_K_GREET_HELLO",
+            "role": "practice"
+          }
+        ],
+        "outcome_refs": [
+          {
+            "outcome_id": "c7912952-098b-421c-bfe3-fa75bc0fc776",
+            "stable_code": "E-A1-M01-OUTCOME-CONTACT"
+          }
+        ],
+        "evidence_map": [
+          {
+            "skill": "vocabulary",
+            "facet": "meaning",
+            "weight": 0.6
+          }
+        ],
+        "difficulty": 0.2
+      },
+      "runtime": {
+        "completion_policy": "correct_or_reveal_v1",
+        "evaluator_version": "deterministic-core-1.0.0",
+        "presentation_seed": "EN-P3-CORE-05",
+        "presentation_order": [
+          "farewell",
+          "greeting"
+        ],
+        "max_retries": 2,
+        "auto_advance_allowed": true
+      }
+    },
+    {
+      "schema_version": "1.7",
+      "id": "a06a90f3-e8fb-5f61-9ff0-9ab10352c41a",
+      "stable_code": "EN-P3-CORE-06",
+      "type": "listening_gist",
+      "language": "en",
+      "variety": "en-GB",
+      "cefr": "A1",
+      "content_version_id": "614e2fcb-2739-5096-bea2-55081ca0724a",
+      "presentation": {
+        "instruction_key": "EN-P3-CORE-06_INSTRUCTION",
+        "prompt": "Practise the greeting.",
+        "options": [
+          {
+            "id": "greeting",
+            "label": "Hello"
+          },
+          {
+            "id": "farewell",
+            "label": "Goodbye"
+          }
+        ],
+        "accessibility": {
+          "keyboard_action": "Use arrow keys and Enter to select an answer.",
+          "feedback_live_region": true,
+          "transcript": "Hello"
+        },
+        "stimulus": "Hello"
+      },
+      "response": {
+        "kind": "single",
+        "answer_policy": {
+          "id": "EN-P3-CORE-06_POLICY",
+          "version": "1.0.0",
+          "mode": "single",
+          "normalization": {
+            "unicode": "NFC",
+            "locale": "en-GB",
+            "case_sensitive": false,
+            "collapse_whitespace": true,
+            "punctuation_sensitive": false,
+            "apostrophe_equivalent": true,
+            "diacritics_sensitive": true
+          },
+          "accepted_option_ids": [
+            "greeting"
+          ]
+        }
+      },
+      "feedback": {
+        "correct": "Correct.",
+        "incorrect": "Try again.",
+        "reveal": "Hello",
+        "remediation": "Hello"
+      },
+      "learning": {
+        "knowledge_refs": [
+          {
+            "knowledge_item_id": "49db33a3-4a56-48d6-8a73-0676c3133625",
+            "stable_code": "ENG_K_GREET_HELLO",
+            "role": "practice"
+          }
+        ],
+        "outcome_refs": [
+          {
+            "outcome_id": "c7912952-098b-421c-bfe3-fa75bc0fc776",
+            "stable_code": "E-A1-M01-OUTCOME-CONTACT"
+          }
+        ],
+        "evidence_map": [
+          {
+            "skill": "vocabulary",
+            "facet": "meaning",
+            "weight": 0.6
+          }
+        ],
+        "difficulty": 0.2
+      },
+      "runtime": {
+        "completion_policy": "correct_or_reveal_v1",
+        "evaluator_version": "deterministic-core-1.0.0",
+        "presentation_seed": "EN-P3-CORE-06",
+        "presentation_order": [
+          "farewell",
+          "greeting"
+        ],
+        "max_retries": 2,
+        "auto_advance_allowed": true
+      }
+    },
+    {
+      "schema_version": "1.7",
+      "id": "06adaf19-92fd-5f06-9358-9c808a19df0b",
+      "stable_code": "EN-P3-CORE-07",
+      "type": "dialogue_chain",
+      "language": "en",
+      "variety": "en-GB",
+      "cefr": "A1",
+      "content_version_id": "614e2fcb-2739-5096-bea2-55081ca0724a",
+      "presentation": {
+        "instruction_key": "EN-P3-CORE-07_INSTRUCTION",
+        "prompt": "Practise the greeting.",
+        "options": [
+          {
+            "id": "greeting",
+            "label": "Hello"
+          },
+          {
+            "id": "farewell",
+            "label": "Goodbye"
+          }
+        ],
+        "accessibility": {
+          "keyboard_action": "Use arrow keys and Enter to select an answer.",
+          "feedback_live_region": true
+        },
+        "segments": [
+          {
+            "speaker": "A",
+            "text": "Hello",
+            "language": "en"
+          },
+          {
+            "speaker": "B",
+            "text": "…",
+            "language": "en"
+          }
+        ]
+      },
+      "response": {
+        "kind": "single",
+        "answer_policy": {
+          "id": "EN-P3-CORE-07_POLICY",
+          "version": "1.0.0",
+          "mode": "single",
+          "normalization": {
+            "unicode": "NFC",
+            "locale": "en-GB",
+            "case_sensitive": false,
+            "collapse_whitespace": true,
+            "punctuation_sensitive": false,
+            "apostrophe_equivalent": true,
+            "diacritics_sensitive": true
+          },
+          "accepted_option_ids": [
+            "greeting"
+          ]
+        }
+      },
+      "feedback": {
+        "correct": "Correct.",
+        "incorrect": "Try again.",
+        "reveal": "Hello",
+        "remediation": "Hello"
+      },
+      "learning": {
+        "knowledge_refs": [
+          {
+            "knowledge_item_id": "49db33a3-4a56-48d6-8a73-0676c3133625",
+            "stable_code": "ENG_K_GREET_HELLO",
+            "role": "practice"
+          }
+        ],
+        "outcome_refs": [
+          {
+            "outcome_id": "c7912952-098b-421c-bfe3-fa75bc0fc776",
+            "stable_code": "E-A1-M01-OUTCOME-CONTACT"
+          }
+        ],
+        "evidence_map": [
+          {
+            "skill": "vocabulary",
+            "facet": "meaning",
+            "weight": 0.6
+          }
+        ],
+        "difficulty": 0.2
+      },
+      "runtime": {
+        "completion_policy": "correct_or_reveal_v1",
+        "evaluator_version": "deterministic-core-1.0.0",
+        "presentation_seed": "EN-P3-CORE-07",
+        "presentation_order": [
+          "farewell",
+          "greeting"
+        ],
+        "max_retries": 2,
+        "auto_advance_allowed": true
+      }
+    },
+    {
+      "schema_version": "1.7",
+      "id": "2c8d75fd-ef80-579e-ad03-e47d8ed6f87b",
+      "stable_code": "EN-P3-CORE-08",
+      "type": "role_play",
+      "language": "en",
+      "variety": "en-GB",
+      "cefr": "A1",
+      "content_version_id": "614e2fcb-2739-5096-bea2-55081ca0724a",
+      "presentation": {
+        "instruction_key": "EN-P3-CORE-08_INSTRUCTION",
+        "prompt": "Practise the greeting.",
+        "accessibility": {
+          "keyboard_action": "Use arrow keys and Enter to select an answer.",
+          "feedback_live_region": true
+        }
+      },
+      "response": {
+        "kind": "text",
+        "answer_policy": {
+          "id": "EN-P3-CORE-08_POLICY",
+          "version": "1.0.0",
+          "mode": "text",
+          "normalization": {
+            "unicode": "NFC",
+            "locale": "en-GB",
+            "case_sensitive": false,
+            "collapse_whitespace": true,
+            "punctuation_sensitive": false,
+            "apostrophe_equivalent": true,
+            "diacritics_sensitive": true
+          },
+          "accepted_text": [
+            "Hello"
+          ]
+        }
+      },
+      "feedback": {
+        "correct": "Correct.",
+        "incorrect": "Try again.",
+        "reveal": "Hello",
+        "remediation": "Hello"
+      },
+      "learning": {
+        "knowledge_refs": [
+          {
+            "knowledge_item_id": "49db33a3-4a56-48d6-8a73-0676c3133625",
+            "stable_code": "ENG_K_GREET_HELLO",
+            "role": "practice"
+          }
+        ],
+        "outcome_refs": [
+          {
+            "outcome_id": "c7912952-098b-421c-bfe3-fa75bc0fc776",
+            "stable_code": "E-A1-M01-OUTCOME-CONTACT"
+          }
+        ],
+        "evidence_map": [
+          {
+            "skill": "writing",
+            "facet": "production",
+            "weight": 0.2
+          }
+        ],
+        "difficulty": 0.2
+      },
+      "runtime": {
+        "completion_policy": "correct_or_reveal_v1",
+        "evaluator_version": "deterministic-core-1.0.0",
+        "presentation_seed": "EN-P3-CORE-08",
+        "presentation_order": [],
+        "max_retries": 2,
+        "auto_advance_allowed": true
+      }
+    },
+    {
+      "schema_version": "1.7",
+      "id": "5810df90-4090-5ed0-b65f-3d121300f8fa",
+      "stable_code": "EN-P3-CORE-09",
+      "type": "result",
+      "language": "en",
+      "variety": "en-GB",
+      "cefr": "A1",
+      "content_version_id": "614e2fcb-2739-5096-bea2-55081ca0724a",
+      "presentation": {
+        "instruction_key": "EN-P3-CORE-09_INSTRUCTION",
+        "prompt": "Practise the greeting.",
+        "accessibility": {
+          "keyboard_action": "Use arrow keys and Enter to select an answer.",
+          "feedback_live_region": true
+        }
+      },
+      "response": {
+        "kind": "none",
+        "answer_policy": {
+          "id": "EN-P3-CORE-09_POLICY",
+          "version": "1.0.0",
+          "mode": "exposure",
+          "normalization": {
+            "unicode": "NFC",
+            "locale": "en-GB",
+            "case_sensitive": false,
+            "collapse_whitespace": true,
+            "punctuation_sensitive": false,
+            "apostrophe_equivalent": true,
+            "diacritics_sensitive": true
+          }
+        }
+      },
+      "feedback": {
+        "correct": "Correct.",
+        "incorrect": "Try again.",
+        "reveal": "Hello",
+        "remediation": "Hello"
+      },
+      "learning": {
+        "knowledge_refs": [],
+        "outcome_refs": [
+          {
+            "outcome_id": "c7912952-098b-421c-bfe3-fa75bc0fc776",
+            "stable_code": "E-A1-M01-OUTCOME-CONTACT"
+          }
+        ],
+        "evidence_map": [],
+        "difficulty": 0.2
+      },
+      "runtime": {
+        "completion_policy": "exposure_v1",
+        "evaluator_version": "deterministic-core-1.0.0",
+        "presentation_seed": "EN-P3-CORE-09",
+        "presentation_order": [],
+        "max_retries": 2,
+        "auto_advance_allowed": true
+      }
+    }
+  ],
+  "new_items": [
+    {
+      "activity_id": "10202603-6dd8-5a79-8556-b30c8d156460",
+      "content_version_id": "6a80c3eb-a15e-5bff-8a41-f7334e0f9654",
+      "version_code": "p3-core-1"
+    },
+    {
+      "activity_id": "949fd930-d1ca-5b89-935d-4acdce088688",
+      "content_version_id": "352b9b24-0106-5796-bd7a-f9fa0a082109",
+      "version_code": "p3-core-1"
+    },
+    {
+      "activity_id": "5a7f1d93-de23-5018-ab98-1ff824af1043",
+      "content_version_id": "000a3afd-fa34-5ff4-b00e-020d39953c1a",
+      "version_code": "p3-core-1"
+    },
+    {
+      "activity_id": "b7c3ee19-c6f8-537f-8546-bd45983eaf4f",
+      "content_version_id": "f6a7659a-b560-58f5-88aa-0aa1a3076978",
+      "version_code": "p3-core-1"
+    },
+    {
+      "activity_id": "13b99214-5564-5e40-8276-24f349855d84",
+      "content_version_id": "37443956-a00d-50ec-b50b-d16a5ecdac64",
+      "version_code": "p3-core-1"
+    },
+    {
+      "activity_id": "54da7f7b-319f-55dd-b238-969f2c112875",
+      "content_version_id": "3792d674-f97d-5c6e-b0cf-a1a1a6fe094b",
+      "version_code": "p3-core-1"
+    },
+    {
+      "activity_id": "a06a90f3-e8fb-5f61-9ff0-9ab10352c41a",
+      "content_version_id": "5cc49194-3876-5de1-84ec-8fcd9010303c",
+      "version_code": "p3-core-1"
+    },
+    {
+      "activity_id": "06adaf19-92fd-5f06-9358-9c808a19df0b",
+      "content_version_id": "f3c064e7-f111-572d-8b78-8de31d377c89",
+      "version_code": "p3-core-1"
+    },
+    {
+      "activity_id": "2c8d75fd-ef80-579e-ad03-e47d8ed6f87b",
+      "content_version_id": "b73afe97-bb9a-53d4-a301-e5a1fc33a634",
+      "version_code": "p3-core-1"
+    },
+    {
+      "activity_id": "5810df90-4090-5ed0-b65f-3d121300f8fa",
+      "content_version_id": "58f770dd-04ea-5b96-9e9a-e48889e8ef36",
+      "version_code": "p3-core-1"
+    }
+  ]
+}

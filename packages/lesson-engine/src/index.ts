@@ -1,2 +1,4 @@
-/** Shared-engine contracts begin in P3; no lesson runtime in P1. */
-export {};
+export * from './evaluator.js';
+export * from './manifest.js';
+export * from './registry.js';
+export * from './state.js';

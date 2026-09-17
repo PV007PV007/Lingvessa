@@ -1,19 +1,9 @@
 import { z } from 'zod';
 import { UUID_PATTERN, STABLE_CODE_PATTERN } from '../../domain/src/identity.js';
+import { activityContractSchema } from './lesson.js';
+export { isSkillFacet, skillFacetMatrix, type Skill } from './mastery.js';
+import { isSkillFacet } from './mastery.js';
 
-// Content metadata only. No evaluator, renderer, score or mastery projection exists in P2.
-export const skillFacetMatrix = {
-  vocabulary: ['recognition', 'meaning', 'recall_l2_to_l1', 'recall_l1_to_l2', 'production', 'spelling', 'context_use', 'collocation', 'variant_awareness', 'register'],
-  grammar: ['grammar_form', 'morphology', 'word_order', 'register', 'context_use'],
-  listening: ['listening_recognition', 'listening_gist', 'listening_detail', 'meaning'],
-  speaking: ['production', 'context_use', 'register', 'interaction_repair', 'interaction_goal', 'intelligibility'],
-  writing: ['production', 'spelling', 'orthography', 'grammar_form', 'context_use', 'register'],
-  pronunciation: ['pronunciation_target', 'intelligibility'],
-} as const;
-export type Skill = keyof typeof skillFacetMatrix;
-export function isSkillFacet(skill: string, facet: string): boolean {
-  return Object.entries(skillFacetMatrix).some(([key, facets]) => key === skill && (facets as readonly string[]).includes(facet));
-}
 const uuid = z.string().regex(UUID_PATTERN);
 const code = z.string().regex(STABLE_CODE_PATTERN);
 const version = z.string().min(1).max(80).refine((v) => !/[\s*]/u.test(v));
@@ -29,6 +19,7 @@ export const activityMetadataSchema = z.object({
   knowledge_refs: z.array(z.object({ knowledge_item_id: uuid, stable_code: code, role: z.enum(['teach', 'practice', 'assess']) }).strict()),
   evidence_map: z.array(z.object({ skill: z.string(), facet: z.string(), weight: z.number().positive().max(1) }).strict()),
   media_refs: z.array(z.object({ asset_id: uuid, asset_stable_code: code, asset_version: z.number().int().positive(), role: z.string().min(1) }).strict()),
+  contract: activityContractSchema.optional(),
 }).strict().superRefine((a, ctx) => {
   for (const [index, map] of a.evidence_map.entries()) {
     if (!isSkillFacet(map.skill, map.facet)) ctx.addIssue({ code: 'custom', path: ['evidence_map', index], message: 'Invalid canonical skill/facet pair' });
@@ -37,6 +28,10 @@ export const activityMetadataSchema = z.object({
   }
   if (a.evidence_map.length && (!a.knowledge_refs.length || a.response_modality === 'none'))
     ctx.addIssue({ code: 'custom', message: 'Evidence requires an assessable knowledge target' });
+  if (a.contract && (JSON.stringify(a.contract.learning.evidence_map)!==JSON.stringify(a.evidence_map) || JSON.stringify(a.contract.learning.knowledge_refs)!==JSON.stringify(a.knowledge_refs)))
+    ctx.addIssue({ code:'custom',path:['contract','learning'],message:'Executable contract mapping differs from published metadata' });
+  if (a.contract && (a.contract.id !== a.id || a.contract.stable_code !== a.stable_code || a.contract.type !== a.type))
+    ctx.addIssue({ code: 'custom', path: ['contract'], message: 'Executable contract identity/type differs from activity metadata' });
 });
 export const contentSchema = z.object({
   schema_version: z.literal('1.7'), entity_id: uuid, content_version_id: uuid,
@@ -56,6 +51,10 @@ export const contentSchema = z.object({
   if (new Set(value.refs.map((r) => `${r.relation}:${r.entity_id}`)).size !== value.refs.length)
     ctx.addIssue({ code: 'custom', message: 'Duplicate relationship' });
   if (value.kind === 'lesson' && !value.activities) ctx.addIssue({ code: 'custom', message: 'Lesson activity metadata required' });
+  for (const [index, activity] of (value.activities ?? []).entries()) {
+    if (activity.contract && (activity.contract.language !== value.language || activity.contract.content_version_id !== value.content_version_id))
+      ctx.addIssue({ code: 'custom', path: ['activities', index, 'contract'], message: 'Executable activity is not pinned to lesson language/content version' });
+  }
 });
 export type ContentPayload = z.infer<typeof contentSchema>;
 export type ContentReference = z.infer<typeof referenceSchema>;

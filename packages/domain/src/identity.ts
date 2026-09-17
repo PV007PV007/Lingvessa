@@ -9,7 +9,7 @@ export type Language = keyof typeof languageIds;
 export function isUuid(value: string): boolean { return UUID_PATTERN.test(value); }
 export function isStableCode(value: string): boolean { return STABLE_CODE_PATTERN.test(value); }
 export class ContractError extends Error {
-  constructor(public readonly code: 'INVALID_INPUT' | 'NOT_FOUND' | 'FORBIDDEN' | 'CONFLICT' | 'UNAUTHENTICATED', message: string) {
+  constructor(public readonly code: 'INVALID_INPUT' | 'NOT_FOUND' | 'FORBIDDEN' | 'CONFLICT' | 'UNAUTHENTICATED' | 'UNSUPPORTED_CONTRACT' | 'VERSION_CONFLICT' | 'RATE_LIMITED' | 'SERVICE_UNAVAILABLE', message: string) {
     super(message); this.name = 'ContractError';
   }
 }

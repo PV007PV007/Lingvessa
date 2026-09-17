@@ -571,6 +571,162 @@ model variants {
   @@schema("public")
 }
 
+/// P3 pinned lesson run. Composite PostgreSQL FKs and transition checks are migration-owned.
+model lesson_runs {
+  id                    String    @id @db.Uuid
+  user_id               String    @db.Uuid
+  language_profile_id   String    @db.Uuid
+  language_id           String    @db.Uuid
+  variant_id            String    @db.Uuid
+  publication_id        String    @db.Uuid
+  publication_checksum  String
+  lesson_id             String    @db.Uuid
+  content_version_id    String    @db.Uuid
+  content_checksum      String
+  manifest              Json
+  state                 String    @default("active")
+  position              Int       @default(0)
+  client_sequence       BigInt    @default(0)
+  revision              Int       @default(1)
+  started_at            DateTime  @default(now()) @db.Timestamptz(6)
+  updated_at            DateTime  @default(now()) @db.Timestamptz(6)
+  completed_at          DateTime? @db.Timestamptz(6)
+
+  @@unique([id, user_id, language_profile_id, language_id])
+  @@index([user_id, language_profile_id, state, updated_at(sort: Desc)], map: "lesson_runs_resume")
+  @@schema("public")
+}
+
+model lesson_run_items {
+  lesson_run_id       String   @db.Uuid
+  user_id             String   @db.Uuid
+  language_profile_id String   @db.Uuid
+  language_id         String   @db.Uuid
+  lesson_id           String   @db.Uuid
+  item_id             String   @db.Uuid
+  ordinal             Int
+  state               String   @default("pending")
+  attempt_count       Int      @default(0)
+  revealed            Boolean  @default(false)
+  needs_remediation   Boolean  @default(false)
+  last_attempt_id     String?  @db.Uuid
+  updated_at          DateTime @default(now()) @db.Timestamptz(6)
+
+  @@id([lesson_run_id, item_id])
+  @@unique([lesson_run_id, ordinal])
+  @@unique([lesson_run_id, user_id, language_profile_id, language_id, item_id])
+  @@schema("public")
+}
+
+model activity_attempts {
+  id String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  user_id                String   @db.Uuid
+  attempt_id             String   @db.Uuid
+  lesson_run_id          String   @db.Uuid
+  language_profile_id    String   @db.Uuid
+  language_id            String   @db.Uuid
+  publication_id         String   @db.Uuid
+  lesson_id              String   @db.Uuid
+  item_id                String   @db.Uuid
+  content_version_id     String   @db.Uuid
+  client_sequence        BigInt
+  request_hash           String
+  response               Json
+  response_hash          String
+  presentation           Json
+  assistance             Json
+  intent                  String
+  outcome                 String
+  error_category          String
+  feedback                String
+  content_schema_version  String
+  evaluator_version       String
+  answer_policy_id        String
+  answer_policy_version   String
+  mastery_model_version   String
+  scheduler_version       String
+  accepted_at             DateTime @default(now()) @db.Timestamptz(6)
+
+  @@unique([user_id, attempt_id])
+  @@unique([lesson_run_id, client_sequence])
+  @@unique([lesson_run_id, user_id, attempt_id])
+  @@unique([user_id, attempt_id, language_profile_id, language_id, item_id, content_version_id])
+  @@unique([id, user_id, language_profile_id, language_id])
+  @@schema("public")
+}
+
+model evidence_events {
+  attempt_db_id String @db.Uuid
+  independence String
+  difficulty Decimal @db.Decimal(6,5)
+  model_version String
+  id                      String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  user_id                 String   @db.Uuid
+  attempt_id              String   @db.Uuid
+  language_profile_id     String   @db.Uuid
+  language_id             String   @db.Uuid
+  item_id                 String   @db.Uuid
+  knowledge_item_id       String   @db.Uuid
+  skill                   String
+  facet                   String
+  result_class            String
+  assisted                Boolean
+  base_weight             Decimal  @db.Decimal(6, 5)
+  effective_weight        Decimal  @db.Decimal(6, 5)
+  content_version_id      String   @db.Uuid
+  content_schema_version  String
+  evaluator_version       String
+  mastery_model_version   String
+  scheduler_version       String
+  occurred_at             DateTime @default(now()) @db.Timestamptz(6)
+
+  @@unique([user_id, attempt_id, knowledge_item_id, skill, facet])
+  @@schema("public")
+}
+
+model attempt_receipts {
+  user_id     String   @db.Uuid
+  attempt_id  String   @db.Uuid
+  result      Json
+  created_at  DateTime @default(now()) @db.Timestamptz(6)
+
+  @@id([user_id, attempt_id])
+  @@schema("public")
+}
+
+model outbox_events {
+  id                    String    @id @db.Uuid
+  event_key             String    @unique
+  event_type            String
+  event_version         Int
+  aggregate_type        String
+  aggregate_id          String    @db.Uuid
+  correlation_id        String    @db.Uuid
+  causation_id          String    @db.Uuid
+  language_profile_id   String?   @db.Uuid
+  language_id           String?   @db.Uuid
+  payload               Json
+  created_at            DateTime  @default(now()) @db.Timestamptz(6)
+
+  @@index([created_at, id], map: "outbox_events_created")
+  @@schema("public")
+}
+
+model outbox_deliveries {
+  event_id          String    @db.Uuid
+  consumer          String
+  status            String    @default("pending")
+  attempt_count     Int       @default(0)
+  next_attempt_at   DateTime  @default(now()) @db.Timestamptz(6)
+  lease_expires_at  DateTime? @db.Timestamptz(6)
+  last_error_code   String?
+  completed_at      DateTime? @db.Timestamptz(6)
+
+  @@id([event_id, consumer])
+  @@index([consumer, next_attempt_at, event_id], map: "outbox_delivery_ready")
+  @@schema("public")
+}
+
 /// Immutable P2 impact/mapping records. The retirement command itself remains disabled until its later governing phase.
 model knowledge_migration_reports {
   id            String    @id @db.Uuid

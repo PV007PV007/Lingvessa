@@ -1,0 +1,927 @@
+{
+  "fixture_version": "p3-executable-lesson-1",
+  "source_document": "Implementation Plan v1.4 §10; synthetic bilingual P3 acceptance fixture",
+  "language": "cs",
+  "language_id": "0198f000-0000-7000-8000-000000000002",
+  "lesson_id": "a7fee283-eca2-4c10-9a55-e747d7573f28",
+  "base_content_version_id": "3b45d13f-07bc-4f73-a564-0c707ff89bca",
+  "content_version_id": "37c740d8-6eec-5ac6-8740-35e8280eaf8e",
+  "version_code": "p3-core-1",
+  "ancestor_versions": [
+    {
+      "entity_id": "05c65d47-983a-4f91-a5a4-c1bca2556843",
+      "base_content_version_id": "e0c91d1a-824b-4c6b-9e26-baf69e7f137f",
+      "content_version_id": "e352472d-e26b-528a-b34f-81a268db4979",
+      "version_code": "p3-core-1"
+    },
+    {
+      "entity_id": "a179cca7-cae3-4c53-b4cb-039edc292a79",
+      "base_content_version_id": "c6eec096-db33-4596-acd5-d4f70ac51c54",
+      "content_version_id": "bf525427-4c2b-52a1-918b-23487d956bc4",
+      "version_code": "p3-core-1"
+    },
+    {
+      "entity_id": "349833ef-8b11-4851-8cf5-024dd5cb9a04",
+      "base_content_version_id": "bbf40651-216f-4753-98ad-498a96a84bd6",
+      "content_version_id": "4b685c75-8b34-5a4f-96d2-b5feb591364b",
+      "version_code": "p3-core-1"
+    }
+  ],
+  "activities": [
+    {
+      "schema_version": "1.7",
+      "id": "9d66e48f-4c71-5164-b00d-71f9336f710e",
+      "stable_code": "CS-P3-CORE-00",
+      "type": "scene_intro",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "cefr": "A1",
+      "content_version_id": "37c740d8-6eec-5ac6-8740-35e8280eaf8e",
+      "presentation": {
+        "instruction_key": "CS-P3-CORE-00_INSTRUCTION",
+        "prompt": "Procvičte pozdrav.",
+        "accessibility": {
+          "keyboard_action": "Use arrow keys and Enter to select an answer.",
+          "feedback_live_region": true
+        }
+      },
+      "response": {
+        "kind": "none",
+        "answer_policy": {
+          "id": "CS-P3-CORE-00_POLICY",
+          "version": "1.0.0",
+          "mode": "exposure",
+          "normalization": {
+            "unicode": "NFC",
+            "locale": "cs-CZ",
+            "case_sensitive": false,
+            "collapse_whitespace": true,
+            "punctuation_sensitive": false,
+            "apostrophe_equivalent": false,
+            "diacritics_sensitive": true
+          }
+        }
+      },
+      "feedback": {
+        "correct": "Správně.",
+        "incorrect": "Zkuste to znovu.",
+        "reveal": "Dobrý den",
+        "remediation": "Dobrý den"
+      },
+      "learning": {
+        "knowledge_refs": [],
+        "outcome_refs": [
+          {
+            "outcome_id": "a113420b-3fb2-42ab-a005-a54c2c08cf36",
+            "stable_code": "C-A1-M01-OUTCOME-CONTACT"
+          }
+        ],
+        "evidence_map": [],
+        "difficulty": 0.2
+      },
+      "runtime": {
+        "completion_policy": "exposure_v1",
+        "evaluator_version": "deterministic-core-1.0.0",
+        "presentation_seed": "CS-P3-CORE-00",
+        "presentation_order": [],
+        "max_retries": 2,
+        "auto_advance_allowed": true
+      }
+    },
+    {
+      "schema_version": "1.7",
+      "id": "68545296-ad18-568a-ac10-9ec63d4562bb",
+      "stable_code": "CS-P3-CORE-01",
+      "type": "matching",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "cefr": "A1",
+      "content_version_id": "37c740d8-6eec-5ac6-8740-35e8280eaf8e",
+      "presentation": {
+        "instruction_key": "CS-P3-CORE-01_INSTRUCTION",
+        "prompt": "Procvičte pozdrav.",
+        "options": [
+          {
+            "id": "greeting",
+            "label": "Dobrý den"
+          },
+          {
+            "id": "farewell",
+            "label": "Na shledanou"
+          }
+        ],
+        "accessibility": {
+          "keyboard_action": "Use arrow keys and Enter to select an answer.",
+          "feedback_live_region": true
+        },
+        "pairs": [
+          {
+            "left": {
+              "id": "open",
+              "label": "Початок"
+            },
+            "right": {
+              "id": "greeting",
+              "label": "Dobrý den"
+            }
+          },
+          {
+            "left": {
+              "id": "close",
+              "label": "Кінець"
+            },
+            "right": {
+              "id": "farewell",
+              "label": "Na shledanou"
+            }
+          }
+        ]
+      },
+      "response": {
+        "kind": "mapping",
+        "answer_policy": {
+          "id": "CS-P3-CORE-01_POLICY",
+          "version": "1.0.0",
+          "mode": "mapping",
+          "normalization": {
+            "unicode": "NFC",
+            "locale": "cs-CZ",
+            "case_sensitive": false,
+            "collapse_whitespace": true,
+            "punctuation_sensitive": false,
+            "apostrophe_equivalent": false,
+            "diacritics_sensitive": true
+          },
+          "accepted_pairs": [
+            {
+              "left": "open",
+              "right": "greeting"
+            },
+            {
+              "left": "close",
+              "right": "farewell"
+            }
+          ]
+        }
+      },
+      "feedback": {
+        "correct": "Správně.",
+        "incorrect": "Zkuste to znovu.",
+        "reveal": "Dobrý den",
+        "remediation": "Dobrý den"
+      },
+      "learning": {
+        "knowledge_refs": [
+          {
+            "knowledge_item_id": "5a0f2f80-c5b7-4c29-a8a2-a7d28eb0f6e1",
+            "stable_code": "CZE_K_DOBRY_DEN",
+            "role": "practice"
+          }
+        ],
+        "outcome_refs": [
+          {
+            "outcome_id": "a113420b-3fb2-42ab-a005-a54c2c08cf36",
+            "stable_code": "C-A1-M01-OUTCOME-CONTACT"
+          }
+        ],
+        "evidence_map": [
+          {
+            "skill": "vocabulary",
+            "facet": "meaning",
+            "weight": 0.6
+          }
+        ],
+        "difficulty": 0.2
+      },
+      "runtime": {
+        "completion_policy": "correct_or_reveal_v1",
+        "evaluator_version": "deterministic-core-1.0.0",
+        "presentation_seed": "CS-P3-CORE-01",
+        "presentation_order": [
+          "close",
+          "open"
+        ],
+        "max_retries": 2,
+        "auto_advance_allowed": true
+      }
+    },
+    {
+      "schema_version": "1.7",
+      "id": "4cbbd33c-bbdc-516a-a636-86edaebbca63",
+      "stable_code": "CS-P3-CORE-02",
+      "type": "gap_fill",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "cefr": "A1",
+      "content_version_id": "37c740d8-6eec-5ac6-8740-35e8280eaf8e",
+      "presentation": {
+        "instruction_key": "CS-P3-CORE-02_INSTRUCTION",
+        "prompt": "Procvičte pozdrav.",
+        "accessibility": {
+          "keyboard_action": "Use arrow keys and Enter to select an answer.",
+          "feedback_live_region": true
+        }
+      },
+      "response": {
+        "kind": "text",
+        "answer_policy": {
+          "id": "CS-P3-CORE-02_POLICY",
+          "version": "1.0.0",
+          "mode": "text",
+          "normalization": {
+            "unicode": "NFC",
+            "locale": "cs-CZ",
+            "case_sensitive": false,
+            "collapse_whitespace": true,
+            "punctuation_sensitive": false,
+            "apostrophe_equivalent": false,
+            "diacritics_sensitive": true
+          },
+          "accepted_text": [
+            "Dobrý den"
+          ]
+        }
+      },
+      "feedback": {
+        "correct": "Správně.",
+        "incorrect": "Zkuste to znovu.",
+        "reveal": "Dobrý den",
+        "remediation": "Dobrý den"
+      },
+      "learning": {
+        "knowledge_refs": [
+          {
+            "knowledge_item_id": "5a0f2f80-c5b7-4c29-a8a2-a7d28eb0f6e1",
+            "stable_code": "CZE_K_DOBRY_DEN",
+            "role": "practice"
+          }
+        ],
+        "outcome_refs": [
+          {
+            "outcome_id": "a113420b-3fb2-42ab-a005-a54c2c08cf36",
+            "stable_code": "C-A1-M01-OUTCOME-CONTACT"
+          }
+        ],
+        "evidence_map": [
+          {
+            "skill": "writing",
+            "facet": "production",
+            "weight": 0.2
+          }
+        ],
+        "difficulty": 0.2
+      },
+      "runtime": {
+        "completion_policy": "correct_or_reveal_v1",
+        "evaluator_version": "deterministic-core-1.0.0",
+        "presentation_seed": "CS-P3-CORE-02",
+        "presentation_order": [],
+        "max_retries": 2,
+        "auto_advance_allowed": true
+      }
+    },
+    {
+      "schema_version": "1.7",
+      "id": "546f78ca-d33d-59ed-a976-9469af980117",
+      "stable_code": "CS-P3-CORE-03",
+      "type": "word_builder",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "cefr": "A1",
+      "content_version_id": "37c740d8-6eec-5ac6-8740-35e8280eaf8e",
+      "presentation": {
+        "instruction_key": "CS-P3-CORE-03_INSTRUCTION",
+        "prompt": "Dobrý den → Na shledanou",
+        "options": [
+          {
+            "id": "greeting",
+            "label": "Dobrý den"
+          },
+          {
+            "id": "farewell",
+            "label": "Na shledanou"
+          }
+        ],
+        "accessibility": {
+          "keyboard_action": "Use arrow keys and Enter to select an answer.",
+          "feedback_live_region": true
+        },
+        "tokens": [
+          {
+            "id": "greeting",
+            "label": "Dobrý den"
+          },
+          {
+            "id": "farewell",
+            "label": "Na shledanou"
+          }
+        ]
+      },
+      "response": {
+        "kind": "order",
+        "answer_policy": {
+          "id": "CS-P3-CORE-03_POLICY",
+          "version": "1.0.0",
+          "mode": "order",
+          "normalization": {
+            "unicode": "NFC",
+            "locale": "cs-CZ",
+            "case_sensitive": false,
+            "collapse_whitespace": true,
+            "punctuation_sensitive": false,
+            "apostrophe_equivalent": false,
+            "diacritics_sensitive": true
+          },
+          "accepted_order": [
+            "greeting",
+            "farewell"
+          ]
+        }
+      },
+      "feedback": {
+        "correct": "Správně.",
+        "incorrect": "Zkuste to znovu.",
+        "reveal": "Dobrý den",
+        "remediation": "Dobrý den"
+      },
+      "learning": {
+        "knowledge_refs": [
+          {
+            "knowledge_item_id": "5a0f2f80-c5b7-4c29-a8a2-a7d28eb0f6e1",
+            "stable_code": "CZE_K_DOBRY_DEN",
+            "role": "practice"
+          }
+        ],
+        "outcome_refs": [
+          {
+            "outcome_id": "a113420b-3fb2-42ab-a005-a54c2c08cf36",
+            "stable_code": "C-A1-M01-OUTCOME-CONTACT"
+          }
+        ],
+        "evidence_map": [
+          {
+            "skill": "vocabulary",
+            "facet": "meaning",
+            "weight": 0.6
+          }
+        ],
+        "difficulty": 0.2
+      },
+      "runtime": {
+        "completion_policy": "correct_or_reveal_v1",
+        "evaluator_version": "deterministic-core-1.0.0",
+        "presentation_seed": "CS-P3-CORE-03",
+        "presentation_order": [
+          "farewell",
+          "greeting"
+        ],
+        "max_retries": 2,
+        "auto_advance_allowed": true
+      }
+    },
+    {
+      "schema_version": "1.7",
+      "id": "46ae0cd2-c6fb-576d-9f50-0a7a40c9aba0",
+      "stable_code": "CS-P3-CORE-04",
+      "type": "full_typing",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "cefr": "A1",
+      "content_version_id": "37c740d8-6eec-5ac6-8740-35e8280eaf8e",
+      "presentation": {
+        "instruction_key": "CS-P3-CORE-04_INSTRUCTION",
+        "prompt": "Procvičte pozdrav.",
+        "accessibility": {
+          "keyboard_action": "Use arrow keys and Enter to select an answer.",
+          "feedback_live_region": true
+        }
+      },
+      "response": {
+        "kind": "text",
+        "answer_policy": {
+          "id": "CS-P3-CORE-04_POLICY",
+          "version": "1.0.0",
+          "mode": "text",
+          "normalization": {
+            "unicode": "NFC",
+            "locale": "cs-CZ",
+            "case_sensitive": false,
+            "collapse_whitespace": true,
+            "punctuation_sensitive": false,
+            "apostrophe_equivalent": false,
+            "diacritics_sensitive": true
+          },
+          "accepted_text": [
+            "Dobrý den"
+          ]
+        }
+      },
+      "feedback": {
+        "correct": "Správně.",
+        "incorrect": "Zkuste to znovu.",
+        "reveal": "Dobrý den",
+        "remediation": "Dobrý den"
+      },
+      "learning": {
+        "knowledge_refs": [
+          {
+            "knowledge_item_id": "5a0f2f80-c5b7-4c29-a8a2-a7d28eb0f6e1",
+            "stable_code": "CZE_K_DOBRY_DEN",
+            "role": "practice"
+          }
+        ],
+        "outcome_refs": [
+          {
+            "outcome_id": "a113420b-3fb2-42ab-a005-a54c2c08cf36",
+            "stable_code": "C-A1-M01-OUTCOME-CONTACT"
+          }
+        ],
+        "evidence_map": [
+          {
+            "skill": "writing",
+            "facet": "production",
+            "weight": 0.2
+          }
+        ],
+        "difficulty": 0.2
+      },
+      "runtime": {
+        "completion_policy": "correct_or_reveal_v1",
+        "evaluator_version": "deterministic-core-1.0.0",
+        "presentation_seed": "CS-P3-CORE-04",
+        "presentation_order": [],
+        "max_retries": 2,
+        "auto_advance_allowed": true
+      }
+    },
+    {
+      "schema_version": "1.7",
+      "id": "0d7b6834-b502-5e9a-b4fd-9a7c91cd0207",
+      "stable_code": "CS-P3-CORE-05",
+      "type": "interactive_grammar",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "cefr": "A1",
+      "content_version_id": "37c740d8-6eec-5ac6-8740-35e8280eaf8e",
+      "presentation": {
+        "instruction_key": "CS-P3-CORE-05_INSTRUCTION",
+        "prompt": "Procvičte pozdrav.",
+        "options": [
+          {
+            "id": "greeting",
+            "label": "Dobrý den"
+          },
+          {
+            "id": "farewell",
+            "label": "Na shledanou"
+          }
+        ],
+        "accessibility": {
+          "keyboard_action": "Use arrow keys and Enter to select an answer.",
+          "feedback_live_region": true
+        },
+        "steps": [
+          "Приклад привітання: Dobrý den.",
+          "Виберіть привітання. Це синтетична перевірка поетапного пояснення."
+        ]
+      },
+      "response": {
+        "kind": "single",
+        "answer_policy": {
+          "id": "CS-P3-CORE-05_POLICY",
+          "version": "1.0.0",
+          "mode": "single",
+          "normalization": {
+            "unicode": "NFC",
+            "locale": "cs-CZ",
+            "case_sensitive": false,
+            "collapse_whitespace": true,
+            "punctuation_sensitive": false,
+            "apostrophe_equivalent": false,
+            "diacritics_sensitive": true
+          },
+          "accepted_option_ids": [
+            "greeting"
+          ]
+        }
+      },
+      "feedback": {
+        "correct": "Správně.",
+        "incorrect": "Zkuste to znovu.",
+        "reveal": "Dobrý den",
+        "remediation": "Dobrý den"
+      },
+      "learning": {
+        "knowledge_refs": [
+          {
+            "knowledge_item_id": "5a0f2f80-c5b7-4c29-a8a2-a7d28eb0f6e1",
+            "stable_code": "CZE_K_DOBRY_DEN",
+            "role": "practice"
+          }
+        ],
+        "outcome_refs": [
+          {
+            "outcome_id": "a113420b-3fb2-42ab-a005-a54c2c08cf36",
+            "stable_code": "C-A1-M01-OUTCOME-CONTACT"
+          }
+        ],
+        "evidence_map": [
+          {
+            "skill": "vocabulary",
+            "facet": "meaning",
+            "weight": 0.6
+          }
+        ],
+        "difficulty": 0.2
+      },
+      "runtime": {
+        "completion_policy": "correct_or_reveal_v1",
+        "evaluator_version": "deterministic-core-1.0.0",
+        "presentation_seed": "CS-P3-CORE-05",
+        "presentation_order": [
+          "farewell",
+          "greeting"
+        ],
+        "max_retries": 2,
+        "auto_advance_allowed": true
+      }
+    },
+    {
+      "schema_version": "1.7",
+      "id": "04f9cba8-40f3-566d-b5fc-935666f93ffe",
+      "stable_code": "CS-P3-CORE-06",
+      "type": "listening_gist",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "cefr": "A1",
+      "content_version_id": "37c740d8-6eec-5ac6-8740-35e8280eaf8e",
+      "presentation": {
+        "instruction_key": "CS-P3-CORE-06_INSTRUCTION",
+        "prompt": "Procvičte pozdrav.",
+        "options": [
+          {
+            "id": "greeting",
+            "label": "Dobrý den"
+          },
+          {
+            "id": "farewell",
+            "label": "Na shledanou"
+          }
+        ],
+        "accessibility": {
+          "keyboard_action": "Use arrow keys and Enter to select an answer.",
+          "feedback_live_region": true,
+          "transcript": "Dobrý den"
+        },
+        "stimulus": "Dobrý den"
+      },
+      "response": {
+        "kind": "single",
+        "answer_policy": {
+          "id": "CS-P3-CORE-06_POLICY",
+          "version": "1.0.0",
+          "mode": "single",
+          "normalization": {
+            "unicode": "NFC",
+            "locale": "cs-CZ",
+            "case_sensitive": false,
+            "collapse_whitespace": true,
+            "punctuation_sensitive": false,
+            "apostrophe_equivalent": false,
+            "diacritics_sensitive": true
+          },
+          "accepted_option_ids": [
+            "greeting"
+          ]
+        }
+      },
+      "feedback": {
+        "correct": "Správně.",
+        "incorrect": "Zkuste to znovu.",
+        "reveal": "Dobrý den",
+        "remediation": "Dobrý den"
+      },
+      "learning": {
+        "knowledge_refs": [
+          {
+            "knowledge_item_id": "5a0f2f80-c5b7-4c29-a8a2-a7d28eb0f6e1",
+            "stable_code": "CZE_K_DOBRY_DEN",
+            "role": "practice"
+          }
+        ],
+        "outcome_refs": [
+          {
+            "outcome_id": "a113420b-3fb2-42ab-a005-a54c2c08cf36",
+            "stable_code": "C-A1-M01-OUTCOME-CONTACT"
+          }
+        ],
+        "evidence_map": [
+          {
+            "skill": "vocabulary",
+            "facet": "meaning",
+            "weight": 0.6
+          }
+        ],
+        "difficulty": 0.2
+      },
+      "runtime": {
+        "completion_policy": "correct_or_reveal_v1",
+        "evaluator_version": "deterministic-core-1.0.0",
+        "presentation_seed": "CS-P3-CORE-06",
+        "presentation_order": [
+          "farewell",
+          "greeting"
+        ],
+        "max_retries": 2,
+        "auto_advance_allowed": true
+      }
+    },
+    {
+      "schema_version": "1.7",
+      "id": "70f9fe69-0450-5fef-b364-8861dea49788",
+      "stable_code": "CS-P3-CORE-07",
+      "type": "dialogue_chain",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "cefr": "A1",
+      "content_version_id": "37c740d8-6eec-5ac6-8740-35e8280eaf8e",
+      "presentation": {
+        "instruction_key": "CS-P3-CORE-07_INSTRUCTION",
+        "prompt": "Procvičte pozdrav.",
+        "options": [
+          {
+            "id": "greeting",
+            "label": "Dobrý den"
+          },
+          {
+            "id": "farewell",
+            "label": "Na shledanou"
+          }
+        ],
+        "accessibility": {
+          "keyboard_action": "Use arrow keys and Enter to select an answer.",
+          "feedback_live_region": true
+        },
+        "segments": [
+          {
+            "speaker": "A",
+            "text": "Dobrý den",
+            "language": "cs"
+          },
+          {
+            "speaker": "B",
+            "text": "…",
+            "language": "cs"
+          }
+        ]
+      },
+      "response": {
+        "kind": "single",
+        "answer_policy": {
+          "id": "CS-P3-CORE-07_POLICY",
+          "version": "1.0.0",
+          "mode": "single",
+          "normalization": {
+            "unicode": "NFC",
+            "locale": "cs-CZ",
+            "case_sensitive": false,
+            "collapse_whitespace": true,
+            "punctuation_sensitive": false,
+            "apostrophe_equivalent": false,
+            "diacritics_sensitive": true
+          },
+          "accepted_option_ids": [
+            "greeting"
+          ]
+        }
+      },
+      "feedback": {
+        "correct": "Správně.",
+        "incorrect": "Zkuste to znovu.",
+        "reveal": "Dobrý den",
+        "remediation": "Dobrý den"
+      },
+      "learning": {
+        "knowledge_refs": [
+          {
+            "knowledge_item_id": "5a0f2f80-c5b7-4c29-a8a2-a7d28eb0f6e1",
+            "stable_code": "CZE_K_DOBRY_DEN",
+            "role": "practice"
+          }
+        ],
+        "outcome_refs": [
+          {
+            "outcome_id": "a113420b-3fb2-42ab-a005-a54c2c08cf36",
+            "stable_code": "C-A1-M01-OUTCOME-CONTACT"
+          }
+        ],
+        "evidence_map": [
+          {
+            "skill": "vocabulary",
+            "facet": "meaning",
+            "weight": 0.6
+          }
+        ],
+        "difficulty": 0.2
+      },
+      "runtime": {
+        "completion_policy": "correct_or_reveal_v1",
+        "evaluator_version": "deterministic-core-1.0.0",
+        "presentation_seed": "CS-P3-CORE-07",
+        "presentation_order": [
+          "farewell",
+          "greeting"
+        ],
+        "max_retries": 2,
+        "auto_advance_allowed": true
+      }
+    },
+    {
+      "schema_version": "1.7",
+      "id": "a1c6d781-a9fa-5f71-86d2-acd04db6d5ac",
+      "stable_code": "CS-P3-CORE-08",
+      "type": "role_play",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "cefr": "A1",
+      "content_version_id": "37c740d8-6eec-5ac6-8740-35e8280eaf8e",
+      "presentation": {
+        "instruction_key": "CS-P3-CORE-08_INSTRUCTION",
+        "prompt": "Procvičte pozdrav.",
+        "accessibility": {
+          "keyboard_action": "Use arrow keys and Enter to select an answer.",
+          "feedback_live_region": true
+        }
+      },
+      "response": {
+        "kind": "text",
+        "answer_policy": {
+          "id": "CS-P3-CORE-08_POLICY",
+          "version": "1.0.0",
+          "mode": "text",
+          "normalization": {
+            "unicode": "NFC",
+            "locale": "cs-CZ",
+            "case_sensitive": false,
+            "collapse_whitespace": true,
+            "punctuation_sensitive": false,
+            "apostrophe_equivalent": false,
+            "diacritics_sensitive": true
+          },
+          "accepted_text": [
+            "Dobrý den"
+          ]
+        }
+      },
+      "feedback": {
+        "correct": "Správně.",
+        "incorrect": "Zkuste to znovu.",
+        "reveal": "Dobrý den",
+        "remediation": "Dobrý den"
+      },
+      "learning": {
+        "knowledge_refs": [
+          {
+            "knowledge_item_id": "5a0f2f80-c5b7-4c29-a8a2-a7d28eb0f6e1",
+            "stable_code": "CZE_K_DOBRY_DEN",
+            "role": "practice"
+          }
+        ],
+        "outcome_refs": [
+          {
+            "outcome_id": "a113420b-3fb2-42ab-a005-a54c2c08cf36",
+            "stable_code": "C-A1-M01-OUTCOME-CONTACT"
+          }
+        ],
+        "evidence_map": [
+          {
+            "skill": "writing",
+            "facet": "production",
+            "weight": 0.2
+          }
+        ],
+        "difficulty": 0.2
+      },
+      "runtime": {
+        "completion_policy": "correct_or_reveal_v1",
+        "evaluator_version": "deterministic-core-1.0.0",
+        "presentation_seed": "CS-P3-CORE-08",
+        "presentation_order": [],
+        "max_retries": 2,
+        "auto_advance_allowed": true
+      }
+    },
+    {
+      "schema_version": "1.7",
+      "id": "60d1b9bf-2f42-56e7-a4c2-1725fe9bfa88",
+      "stable_code": "CS-P3-CORE-09",
+      "type": "result",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "cefr": "A1",
+      "content_version_id": "37c740d8-6eec-5ac6-8740-35e8280eaf8e",
+      "presentation": {
+        "instruction_key": "CS-P3-CORE-09_INSTRUCTION",
+        "prompt": "Procvičte pozdrav.",
+        "accessibility": {
+          "keyboard_action": "Use arrow keys and Enter to select an answer.",
+          "feedback_live_region": true
+        }
+      },
+      "response": {
+        "kind": "none",
+        "answer_policy": {
+          "id": "CS-P3-CORE-09_POLICY",
+          "version": "1.0.0",
+          "mode": "exposure",
+          "normalization": {
+            "unicode": "NFC",
+            "locale": "cs-CZ",
+            "case_sensitive": false,
+            "collapse_whitespace": true,
+            "punctuation_sensitive": false,
+            "apostrophe_equivalent": false,
+            "diacritics_sensitive": true
+          }
+        }
+      },
+      "feedback": {
+        "correct": "Správně.",
+        "incorrect": "Zkuste to znovu.",
+        "reveal": "Dobrý den",
+        "remediation": "Dobrý den"
+      },
+      "learning": {
+        "knowledge_refs": [],
+        "outcome_refs": [
+          {
+            "outcome_id": "a113420b-3fb2-42ab-a005-a54c2c08cf36",
+            "stable_code": "C-A1-M01-OUTCOME-CONTACT"
+          }
+        ],
+        "evidence_map": [],
+        "difficulty": 0.2
+      },
+      "runtime": {
+        "completion_policy": "exposure_v1",
+        "evaluator_version": "deterministic-core-1.0.0",
+        "presentation_seed": "CS-P3-CORE-09",
+        "presentation_order": [],
+        "max_retries": 2,
+        "auto_advance_allowed": true
+      }
+    }
+  ],
+  "new_items": [
+    {
+      "activity_id": "9d66e48f-4c71-5164-b00d-71f9336f710e",
+      "content_version_id": "4e65e339-f6f1-58c9-b9bd-3d9c96e4f7dc",
+      "version_code": "p3-core-1"
+    },
+    {
+      "activity_id": "68545296-ad18-568a-ac10-9ec63d4562bb",
+      "content_version_id": "648abae2-1d44-5aad-b294-946ff19e08c9",
+      "version_code": "p3-core-1"
+    },
+    {
+      "activity_id": "4cbbd33c-bbdc-516a-a636-86edaebbca63",
+      "content_version_id": "732fc98b-646d-511c-acba-72d3348286f1",
+      "version_code": "p3-core-1"
+    },
+    {
+      "activity_id": "546f78ca-d33d-59ed-a976-9469af980117",
+      "content_version_id": "4c0905de-69ca-5b38-94ae-57baeb5e7e2e",
+      "version_code": "p3-core-1"
+    },
+    {
+      "activity_id": "46ae0cd2-c6fb-576d-9f50-0a7a40c9aba0",
+      "content_version_id": "cfc6f611-4bdc-556a-aae1-ee8a1bdb828c",
+      "version_code": "p3-core-1"
+    },
+    {
+      "activity_id": "0d7b6834-b502-5e9a-b4fd-9a7c91cd0207",
+      "content_version_id": "2b0bdb33-473a-57a5-874d-37ecf74c7656",
+      "version_code": "p3-core-1"
+    },
+    {
+      "activity_id": "04f9cba8-40f3-566d-b5fc-935666f93ffe",
+      "content_version_id": "2c3849b5-d125-5474-9d8c-d45e1ef8f0a4",
+      "version_code": "p3-core-1"
+    },
+    {
+      "activity_id": "70f9fe69-0450-5fef-b364-8861dea49788",
+      "content_version_id": "65e2dbb0-7a25-51a7-b6b3-37844bf2251b",
+      "version_code": "p3-core-1"
+    },
+    {
+      "activity_id": "a1c6d781-a9fa-5f71-86d2-acd04db6d5ac",
+      "content_version_id": "9c564927-7730-5a42-b6bc-2306d07b5498",
+      "version_code": "p3-core-1"
+    },
+    {
+      "activity_id": "60d1b9bf-2f42-56e7-a4c2-1725fe9bfa88",
+      "content_version_id": "3cc895c5-ebbe-585e-b64b-fc84646432c9",
+      "version_code": "p3-core-1"
+    }
+  ]
+}
