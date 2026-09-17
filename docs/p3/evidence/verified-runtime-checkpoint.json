@@ -1,0 +1,184 @@
+{
+  "provenance": "Unmodified JSON object emitted by tools/p3/acceptance-summary.ts in the successful hosted P3 job log; raw reports are in the linked artifact.",
+  "summary": {
+    "artifacts": [
+      {
+        "path": "artifacts/p3/database-validation.json",
+        "sha256": "9a34ff0e6b3a1e56c0d1a6b62d778d7db0462b62ce21710e53727ff4c76c3548"
+      },
+      {
+        "path": "artifacts/p3/reference-validation.json",
+        "sha256": "be62e3228f4bd7337385157c3c430cb560339c3c387c919337249111a4a3de44"
+      },
+      {
+        "path": "artifacts/p3/browser-results.json",
+        "sha256": "df52faa34ea3c6dcd23aa1b2d1732232557f5a2047a3564879ec61cb0c3379d1"
+      },
+      {
+        "path": "artifacts/p3/attempt-latency.json",
+        "sha256": "8bd665ed86cace46b6840e54ecd4191867cc2be95625729c6cdf5463c66ccd1f"
+      },
+      {
+        "path": "artifacts/p1/container-build.json",
+        "sha256": "21f38c336fcf1ba73eb5075bb3bde6798c7f40bd520e6f33d56e02ffee4d5ca4"
+      },
+      {
+        "path": "artifacts/p1/container-smoke.json",
+        "sha256": "52c71c7362fae339c35e72a3bf14c1d637c2433a2471404ab6ecc0c5c3449b00"
+      },
+      {
+        "path": "artifacts/p3/baseline-validation.json",
+        "sha256": "f802b50031a3c3153a5ef6cfff34b4cc2afb8dcce2acddd0c95d9c344a4ca1e5"
+      }
+    ],
+    "baseline": {
+      "passed": 39,
+      "total": 39
+    },
+    "browser": {
+      "duration": 10612.559,
+      "expected": 4,
+      "flaky": 0,
+      "skipped": 0,
+      "startTime": "2026-09-17T10:12:15.316Z",
+      "unexpected": 0
+    },
+    "container_checks": [
+      "four services ready",
+      "DB down => API/worker 503",
+      "liveness remains 200",
+      "DB restored => readiness 200"
+    ],
+    "container_images": {
+      "admin": {
+        "image_id": "sha256:b32d30608a0420a53790699c7ca2a12c1768b7e1ed42a8f248b4c1a59b494212",
+        "tag": "lingvessa-admin:p1-721341d8d8a2"
+      },
+      "api": {
+        "image_id": "sha256:d266ffeb87614b43be7eb75340b9581f20fad18c300e251ac999dd1c7d964b3d",
+        "tag": "lingvessa-api:p1-721341d8d8a2"
+      },
+      "web": {
+        "image_id": "sha256:55b1e28f194f90d0801774fefc02ceb6580ff78fa2db9489110826c71479244f",
+        "tag": "lingvessa-web:p1-721341d8d8a2"
+      },
+      "worker": {
+        "image_id": "sha256:d23600cc663ea8d2aa99a67b1efb52097baa815acf94ad0be1dcf70dbeda0f15",
+        "tag": "lingvessa-worker:p1-721341d8d8a2"
+      }
+    },
+    "database": {
+      "engine": "PostgreSQL 18.6",
+      "gates": [
+        {
+          "gate": "P3-DB-001 clean migration/replay and exact phase table boundary",
+          "status": "PASS"
+        },
+        {
+          "gate": "P3-FIX-001 EN/CS executable fixtures load idempotently and publish complete immutable closure",
+          "status": "PASS"
+        },
+        {
+          "gate": "P3-ISO-001 DB owner/profile/language/publication lineage rejects EN/CS and IDOR mismatches",
+          "status": "PASS"
+        },
+        {
+          "gate": "P3-RUN-001 start/resume returns one exact pinned manifest and run pin is immutable",
+          "status": "PASS"
+        },
+        {
+          "gate": "P3-ATT-001 authoritative incorrect/retry/correct records immutable exact-version evidence",
+          "status": "PASS"
+        },
+        {
+          "gate": "P3-ATT-002 same attempt semantic replay is one effect; changed payload and client score tampering reject",
+          "status": "PASS"
+        },
+        {
+          "gate": "P3-REM-001 reveal is assisted zero-weight evidence; remediation has explicit exit and no fabricated success",
+          "status": "PASS"
+        },
+        {
+          "gate": "P3-POLICY-001 retry cap requires explicit reveal; later correction remains assisted",
+          "status": "PASS"
+        },
+        {
+          "gate": "P3-TXN-001 injected failure rolls back attempt/evidence/run/outbox atomically",
+          "status": "PASS"
+        },
+        {
+          "gate": "P3-E2E-001 English and Czech traverse same repository/evaluator; concurrent retry creates one effect set",
+          "status": "PASS"
+        },
+        {
+          "gate": "P3-OUT-001 durable outbox has bounded retry/idempotent settlement and sink failure leaves attempt committed",
+          "status": "PASS"
+        },
+        {
+          "gate": "P3-CORE-001 EN/CS intro/matching/construction/typing/grammar/listening/dialogue/text-roleplay/result share one engine",
+          "status": "PASS"
+        },
+        {
+          "gate": "P3-UI-001 real Chromium EN/CS login/reload/lost-response/reveal/remediation/core-family rendering",
+          "status": "PASS"
+        },
+        {
+          "gate": "P3-API-001 auth/CSRF/strict-body/problem details and resume surface are enforced",
+          "status": "PASS"
+        },
+        {
+          "gate": "P3-DB-002 clean database recreation repeats all migrations and synthetic seed",
+          "status": "PASS"
+        }
+      ]
+    },
+    "event": "pull_request",
+    "fixtures": [
+      {
+        "activities": 2,
+        "ancestor_versions": 3,
+        "content_version_id": "813c0f3a-ef0d-4a64-9f16-7274e2627e11",
+        "kind": "lesson",
+        "language": "en",
+        "status": "PASS"
+      },
+      {
+        "activities": 10,
+        "ancestor_versions": 3,
+        "content_version_id": "614e2fcb-2739-5096-bea2-55081ca0724a",
+        "kind": "core",
+        "language": "en",
+        "status": "PASS"
+      },
+      {
+        "activities": 2,
+        "ancestor_versions": 3,
+        "content_version_id": "962462d6-5f92-4a63-bba6-fbd9a5f9964b",
+        "kind": "lesson",
+        "language": "cs",
+        "status": "PASS"
+      },
+      {
+        "activities": 10,
+        "ancestor_versions": 3,
+        "content_version_id": "37c740d8-6eec-5ac6-8740-35e8280eaf8e",
+        "kind": "core",
+        "language": "cs",
+        "status": "PASS"
+      }
+    ],
+    "latency": {
+      "budget_ms": 700,
+      "p95_ms": 14.282060999999885,
+      "samples": 20,
+      "scope": "loopback API + real PostgreSQL deterministic attempts; not production load",
+      "status": "PASS"
+    },
+    "owner_acceptance_pending": true,
+    "p4_authorized": false,
+    "phase": "P3",
+    "run_id": "35208895558",
+    "status": "PASS_READY_FOR_OWNER_ACCEPTANCE",
+    "tested_sha": "721341d8d8a2fddb93abe105398889da5f9faa22"
+  }
+}

@@ -1,19 +1,21 @@
 {
   "phase": "P3",
-  "status": "NOT_READY_HOSTED_RUNTIME_PENDING",
+  "status": "PASS_READY_FOR_OWNER_ACCEPTANCE",
   "accepted_parent": "df07f9a15838c99da1ea8c876a8b6262057b0354",
   "branch": "implementation/p3-lesson-engine",
-  "tested_sha": null,
+  "tested_sha": "721341d8d8a2fddb93abe105398889da5f9faa22",
   "pr": {
     "number": 3,
-    "status": "OPEN_DRAFT",
-    "url": "https://github.com/PV007PV007/Lingvessa/pull/3"
+    "status": "OPEN",
+    "url": "https://github.com/PV007PV007/Lingvessa/pull/3",
+    "merged": false,
+    "owner_acceptance_pending": true
   },
   "tasks": [
     {
       "task_id": "IMP-P3-001",
       "goal": "Pinned manifest loader and versioned activity registry",
-      "status": "IMPLEMENTED_LOCAL_HOSTED_PENDING",
+      "status": "P3_SCOPE_VERIFIED_READY_FOR_OWNER_ACCEPTANCE",
       "dependencies": [
         "P2 gate"
       ],
@@ -40,21 +42,31 @@
         "CHK-TS-ACT-004"
       ],
       "actual_files": [
-        "packages/activity-schemas/src/lesson.ts",
-        "packages/lesson-engine/src/registry.ts",
-        "packages/lesson-engine/src/manifest.ts",
-        "packages/api-client/src/lesson.ts",
+        "apps/web/src/lesson/activity.tsx",
+        "content/fixtures/p3/cs-core.json",
+        "content/fixtures/p3/cs-lesson.json",
+        "content/fixtures/p3/en-core.json",
         "content/fixtures/p3/en-lesson.json",
-        "content/fixtures/p3/cs-lesson.json"
+        "packages/activity-schemas/src/learner.ts",
+        "packages/activity-schemas/src/lesson.ts",
+        "packages/lesson-engine/src/manifest.ts",
+        "packages/lesson-engine/src/presentation.ts",
+        "packages/lesson-engine/src/registry.ts"
       ],
-      "local_evidence": "pnpm check PASS at 92ff200 source tree: 35 unit, 4 smoke; current browser-origin corrective batch lint/type/build PASS. Final hosted checks pending.",
-      "hosted_evidence": "PostgreSQL/server integration and OCI passed in P1/P2 regression runs at 92ff200; complete P3 browser workflow pending corrective rerun.",
-      "contract_change": "No governing contract change; additive P3 schema/API implementation only."
+      "local_evidence": "Lint/type/build, Prisma/schema, unit and baseline diagnostics passed; actual DB/browser/OCI acceptance is hosted, not simulated locally.",
+      "hosted_evidence": "docs/p3/evidence/hosted-ci.json; docs/p3/evidence/validation-index.json; docs/p3/evidence/verified-runtime-checkpoint.json",
+      "contract_change": "No governing contract change; additive P3 schema/API implementation only.",
+      "tested_implementation_sha": "721341d8d8a2fddb93abe105398889da5f9faa22",
+      "actual_gate_ids": [
+        "P3-CORE-001",
+        "P3-FIX-001",
+        "P3-UI-001"
+      ]
     },
     {
       "task_id": "IMP-P3-002",
       "goal": "Server-authoritative attempt transaction, idempotency and outbox",
-      "status": "IMPLEMENTED_LOCAL_HOSTED_PENDING",
+      "status": "P3_SCOPE_VERIFIED_READY_FOR_OWNER_ACCEPTANCE",
       "dependencies": [
         "IMP-P3-001"
       ],
@@ -197,23 +209,35 @@
         "CHK-N-TS-P19-T03-R04"
       ],
       "actual_files": [
-        "prisma/migrations/202609160001_p3_lesson_engine/migration.sql",
-        "prisma/schema.prisma",
-        "packages/application/src/lesson.ts",
+        "apps/api/src/foundation.ts",
+        "apps/api/src/lessons.ts",
+        "apps/worker/src/main.ts",
+        "infra/contracts/p3.openapi.json",
+        "infra/persistence/identity.ts",
         "infra/persistence/lessons.ts",
         "infra/persistence/outbox.ts",
-        "apps/api/src/lessons.ts",
-        "infra/contracts/p3.openapi.json",
-        "apps/worker/src/main.ts"
+        "packages/activity-schemas/src/attempt.ts",
+        "packages/application/src/lesson.ts",
+        "prisma/migrations/202609160001_p3_lesson_engine/migration.sql",
+        "prisma/schema.prisma"
       ],
-      "local_evidence": "pnpm check PASS at 92ff200 source tree: 35 unit, 4 smoke; current browser-origin corrective batch lint/type/build PASS. Final hosted checks pending.",
-      "hosted_evidence": "PostgreSQL/server integration and OCI passed in P1/P2 regression runs at 92ff200; complete P3 browser workflow pending corrective rerun.",
-      "contract_change": "No governing contract change; additive P3 schema/API implementation only."
+      "local_evidence": "Lint/type/build, Prisma/schema, unit and baseline diagnostics passed; actual DB/browser/OCI acceptance is hosted, not simulated locally.",
+      "hosted_evidence": "docs/p3/evidence/hosted-ci.json; docs/p3/evidence/validation-index.json; docs/p3/evidence/verified-runtime-checkpoint.json",
+      "contract_change": "No governing contract change; additive P3 schema/API implementation only.",
+      "tested_implementation_sha": "721341d8d8a2fddb93abe105398889da5f9faa22",
+      "actual_gate_ids": [
+        "P3-API-001",
+        "P3-ATT-001",
+        "P3-ATT-002",
+        "P3-ISO-001",
+        "P3-OUT-001",
+        "P3-TXN-001"
+      ]
     },
     {
       "task_id": "IMP-P3-003",
       "goal": "Scored state machine, language evaluation and remediation",
-      "status": "IMPLEMENTED_LOCAL_HOSTED_PENDING",
+      "status": "P3_SCOPE_VERIFIED_READY_FOR_OWNER_ACCEPTANCE",
       "dependencies": [
         "IMP-P3-001",
         "IMP-P3-002"
@@ -393,19 +417,28 @@
         "CHK-N-TS-P17-T02-R03"
       ],
       "actual_files": [
+        "apps/web/src/lesson/activity.tsx",
+        "apps/web/src/lesson/player.tsx",
+        "infra/persistence/lessons.ts",
         "packages/lesson-engine/src/evaluator.ts",
-        "packages/lesson-engine/src/state.ts",
-        "tests/unit/p3-lesson-engine.test.ts",
-        "tests/integration/p3-lesson-engine.test.ts"
+        "packages/lesson-engine/src/state.ts"
       ],
-      "local_evidence": "pnpm check PASS at 92ff200 source tree: 35 unit, 4 smoke; current browser-origin corrective batch lint/type/build PASS. Final hosted checks pending.",
-      "hosted_evidence": "PostgreSQL/server integration and OCI passed in P1/P2 regression runs at 92ff200; complete P3 browser workflow pending corrective rerun.",
-      "contract_change": "No governing contract change; additive P3 schema/API implementation only."
+      "local_evidence": "Lint/type/build, Prisma/schema, unit and baseline diagnostics passed; actual DB/browser/OCI acceptance is hosted, not simulated locally.",
+      "hosted_evidence": "docs/p3/evidence/hosted-ci.json; docs/p3/evidence/validation-index.json; docs/p3/evidence/verified-runtime-checkpoint.json",
+      "contract_change": "No governing contract change; additive P3 schema/API implementation only.",
+      "tested_implementation_sha": "721341d8d8a2fddb93abe105398889da5f9faa22",
+      "actual_gate_ids": [
+        "P3-CORE-001",
+        "P3-E2E-001",
+        "P3-POLICY-001",
+        "P3-REM-001",
+        "P3-UI-001"
+      ]
     },
     {
       "task_id": "IMP-P3-004",
       "goal": "Pinned run resume, non-sensitive unsent queue and conflict behavior",
-      "status": "IMPLEMENTED_LOCAL_HOSTED_PENDING",
+      "status": "P3_SCOPE_VERIFIED_READY_FOR_OWNER_ACCEPTANCE",
       "dependencies": [
         "IMP-P3-002",
         "IMP-P3-003"
@@ -423,23 +456,31 @@
         "CHK-TS-SYNC-004"
       ],
       "actual_files": [
-        "packages/api-client/src/lesson.ts",
+        "apps/web/src/lesson/player.tsx",
+        "apps/web/src/lesson/queue.ts",
         "infra/persistence/lessons.ts",
-        "apps/api/src/lessons.ts",
-        "tests/unit/p3-lesson-engine.test.ts",
-        "tests/integration/p3-lesson-engine.test.ts"
+        "packages/activity-schemas/src/attempt.ts",
+        "packages/api-client/src/lesson.ts"
       ],
-      "local_evidence": "pnpm check PASS at 92ff200 source tree: 35 unit, 4 smoke; current browser-origin corrective batch lint/type/build PASS. Final hosted checks pending.",
-      "hosted_evidence": "PostgreSQL/server integration and OCI passed in P1/P2 regression runs at 92ff200; complete P3 browser workflow pending corrective rerun.",
-      "contract_change": "No governing contract change; additive P3 schema/API implementation only."
+      "local_evidence": "Lint/type/build, Prisma/schema, unit and baseline diagnostics passed; actual DB/browser/OCI acceptance is hosted, not simulated locally.",
+      "hosted_evidence": "docs/p3/evidence/hosted-ci.json; docs/p3/evidence/validation-index.json; docs/p3/evidence/verified-runtime-checkpoint.json",
+      "contract_change": "No governing contract change; additive P3 schema/API implementation only.",
+      "tested_implementation_sha": "721341d8d8a2fddb93abe105398889da5f9faa22",
+      "actual_gate_ids": [
+        "P3-ATT-002",
+        "P3-RUN-001",
+        "P3-UI-001"
+      ]
     }
   ],
   "p4_absent": true,
-  "updated_at": "2026-09-17T09:51:09.772837+00:00",
-  "latest_hosted_checkpoint": "92ff200fb50aad65c899cc52b1060df4a86f5f56",
+  "updated_at": "2026-09-17T15:19:42.836888+00:00",
+  "latest_hosted_checkpoint": "721341d8d8a2fddb93abe105398889da5f9faa22",
   "hosted_regression": {
     "P1": "PASS",
     "P2": "PASS",
-    "P3": "BROWSER_ORIGIN_FIX_PENDING_RECHECK"
-  }
+    "P3": "PASS"
+  },
+  "tested_sha_scope": "Verified implementation checkpoint. Closure commit must also pass the exact-HEAD CI rule.",
+  "final_head_attestation": "CI artifact artifacts/p3/acceptance-summary.json:tested_sha must equal final branch HEAD; all five hosted runs required green."
 }

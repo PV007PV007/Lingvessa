@@ -2,7 +2,7 @@
   "phase": "P3",
   "comparison_base": "df07f9a15838c99da1ea8c876a8b6262057b0354",
   "comparison_base_tag": "p2-accepted-2026-09-16",
-  "scope": "cumulative milestone changes including closure records; final review via git diff --name-status p2-accepted-2026-09-16 HEAD",
+  "review_command": "git diff --name-status p2-accepted-2026-09-16 HEAD",
   "files": [
     {
       "status": "M",
@@ -106,7 +106,19 @@
     },
     {
       "status": "A",
+      "path": "docs/p3/evidence/schema-api-diff.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/p3/evidence/schema-introspection.json"
+    },
+    {
+      "status": "A",
       "path": "docs/p3/evidence/validation-index.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/p3/evidence/verified-runtime-checkpoint.json"
     },
     {
       "status": "A",
@@ -302,7 +314,7 @@
     }
   ],
   "counts": {
-    "A": 48,
-    "M": 26
+    "M": 26,
+    "A": 51
   }
 }

@@ -1,0 +1,87 @@
+{
+  "phase": "P3",
+  "status": "PASS_AT_VERIFIED_IMPLEMENTATION_CHECKPOINT",
+  "tested_implementation_sha": "721341d8d8a2fddb93abe105398889da5f9faa22",
+  "branch": "implementation/p3-lesson-engine",
+  "pr": 3,
+  "captured_at": "2026-09-17T15:19:42.836888+00:00",
+  "runs": [
+    {
+      "id": 35208895544,
+      "name": "P2 data foundation",
+      "event": "pull_request",
+      "head_sha": "721341d8d8a2fddb93abe105398889da5f9faa22",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/35208895544",
+      "run_attempt": 1,
+      "updated_at": "2026-09-17T10:14:22Z"
+    },
+    {
+      "id": 35208895492,
+      "name": "P1 foundation",
+      "event": "pull_request",
+      "head_sha": "721341d8d8a2fddb93abe105398889da5f9faa22",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/35208895492",
+      "run_attempt": 1,
+      "updated_at": "2026-09-17T10:14:21Z"
+    },
+    {
+      "id": 35208895558,
+      "name": "P3 lesson engine",
+      "event": "pull_request",
+      "head_sha": "721341d8d8a2fddb93abe105398889da5f9faa22",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/35208895558",
+      "run_attempt": 1,
+      "updated_at": "2026-09-17T10:15:07Z"
+    },
+    {
+      "id": 35208891443,
+      "name": "P1 foundation",
+      "event": "push",
+      "head_sha": "721341d8d8a2fddb93abe105398889da5f9faa22",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/35208891443",
+      "run_attempt": 1,
+      "updated_at": "2026-09-17T10:14:25Z"
+    },
+    {
+      "id": 35208891439,
+      "name": "P3 lesson engine",
+      "event": "push",
+      "head_sha": "721341d8d8a2fddb93abe105398889da5f9faa22",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/35208891439",
+      "run_attempt": 1,
+      "updated_at": "2026-09-17T10:14:37Z"
+    }
+  ],
+  "artifacts": [
+    {
+      "archive_download_url": "https://api.github.com/repos/PV007PV007/Lingvessa/actions/artifacts/10491636831/zip",
+      "created_at": "2026-09-17T10:15:04Z",
+      "digest": "sha256:e784cb3ad188d4b33e44865a30f020aa13dfe4dc83da77b94572ce4dd97b18de",
+      "expired": false,
+      "expires_at": "2026-10-01T10:15:03Z",
+      "id": 10491636831,
+      "name": "p3-721341d8d8a2fddb93abe105398889da5f9faa22-pull_request",
+      "size_in_bytes": 60426,
+      "updated_at": "2026-09-17T10:15:04Z",
+      "url": "https://api.github.com/repos/PV007PV007/Lingvessa/actions/artifacts/10491636831",
+      "workflow_run": {
+        "head_branch": "implementation/p3-lesson-engine",
+        "head_repository_id": 1370429105,
+        "head_sha": "721341d8d8a2fddb93abe105398889da5f9faa22",
+        "id": 35208895558,
+        "repository_id": 1370429105
+      }
+    }
+  ],
+  "final_metadata_rule": "The closure commit containing this file is accepted only after P1 push/PR, P2 PR and P3 push/PR workflows pass on that exact branch HEAD. The generated P3 acceptance-summary.tested_sha must equal that HEAD. No earlier green checkpoint alone accepts an untested metadata revision."
+}

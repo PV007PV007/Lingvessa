@@ -1,46 +1,58 @@
 # Lingvessa implementation state and handoff
 
-Timestamp: 2026-09-17T10:07:22.907962+00:00
+Timestamp: 2026-09-17T15:19:42.836888+00:00
 
-P0/P1/P2: OWNER ACCEPTED. P3: AUTHORIZED, IN PROGRESS / NOT READY. P4: NOT AUTHORIZED / NOT STARTED.
+P0/P1/P2: OWNER ACCEPTED. P3: technical exit PASS — READY FOR OWNER ACCEPTANCE under the exact final-head gate below. P4: NOT AUTHORIZED / NOT STARTED.
 
-## Authority and accepted source
+## Source, branch and exact commit evidence
 
-GitHub PV007PV007/Lingvessa main/history is the implementation source of truth. P2 PR #2 merge: `df07f9a15838c99da1ea8c876a8b6262057b0354`; accepted tag: `p2-accepted-2026-09-16`. Manifest and seven owner-locked governing PDFs are unchanged; Implementation Plan v1.4 remains the sole execution-order authority.
+GitHub PV007PV007/Lingvessa main/history is authoritative. Accepted P2 merge `df07f9a15838c99da1ea8c876a8b6262057b0354`, tag `p2-accepted-2026-09-16`, PR #2 merged. Main remains that accepted merge.
 
-Branch: `implementation/p3-lesson-engine`. PR [#3](https://github.com/PV007PV007/Lingvessa/pull/3): OPEN DRAFT, not merged. Latest tested hosted checkpoint: `5ac7f53053c42945dc54c8583a17d1333fabd6b2`. This handoff accompanies the next corrective commit; it does not claim that checkpoint tested these new changes. The final acceptance artifact must match the exact final branch HEAD.
+Branch: `implementation/p3-lesson-engine`. PR [#3](https://github.com/PV007PV007/Lingvessa/pull/3): OPEN, not merged. Tested implementation checkpoint: `721341d8d8a2fddb93abe105398889da5f9faa22`. Its five hosted runs are green (links below). This closure metadata commit must pass the same five checks on its own exact SHA before delivery. The final full SHA is machine-recorded by `artifacts/p3/acceptance-summary.json:tested_sha`, asserted against checked-out HEAD, and reported in the PR/final delivery. The earlier checkpoint is not a substitute for final-head testing.
 
-## Current implementation batch
+The architecture manifest, seven locked governing PDFs and Implementation Plan v1.4 execution authority are unchanged. No contract change.
 
-Tasks: IMP-P3-001 → IMP-P3-002 → IMP-P3-003 → IMP-P3-004. All 165 assigned trace rows retained (162 MUST, 3 SHOULD). Requirement evidence explicitly separates 93 implemented P3 rows, 48 partial foundations with later acceptance, and 24 later-runtime rows; none is claimed globally complete merely by phase assignment.
+## Tasks, requirements and files
 
-Changes in this batch: `apps/web/src/app/api/v1/[...segments]/route.ts` compares Origin to the actual Host; `apps/web/src/app/lesson/error.tsx` adds safe rendering recovery; `apps/web/src/lesson/player.tsx` distinguishes failed queue persistence from a saved pending answer; browser tests assert trusted/foreign Origin behavior and emit safe diagnostics; integration tests add direct database cross-owner/cross-language rejection cases; `tools/p3/acceptance-summary.ts` verifies exact tested SHA and every runtime artifact; P3 workflow invokes that summary; task/requirement/exit records updated. No deletions. Complete milestone inventory will be generated at closure.
+IMP-P3-001 → IMP-P3-002 → IMP-P3-003 → IMP-P3-004 completed within P3 scope. Requirement IDs and source/page/task/code/gate mappings: `docs/p3/requirement-evidence.json`; 165 rows (162 MUST, 3 SHOULD), zero missing/duplicate IDs. 93 P3 requirements verified; 48 foundation slices verified with later residual acceptance; 24 future-runtime rows are deferred under the plan. The immutable P0 trace remains intact.
 
-P3 schema: additive `202609160001_p3_lesson_engine` creates lesson_runs, lesson_run_items, activity_attempts, evidence_events, attempt_receipts, outbox_events, outbox_deliveries. Composite language/ownership/publication FKs, immutable raw records and pins remain mandatory. API: start/list/resume run, submit attempt, remediation exit, session CSRF refresh. No contract change. No P4 mastery/Review, P5 speech/media jobs or P8/P9 AI runtime.
+Full added/modified/deleted inventory: `docs/p3/evidence/changed-files.json`. Added activity command/public schemas, versioned registry/evaluators/state/presentation, lesson API/client and LessonPlayer, immutable persistence/outbox, synthetic fixtures and real DB/browser tests, workflow and P3 evidence. Modified shared P2 foundation wiring/schema, migration-count regression assertions, queue/auth support, worker, compose, package scripts/lock and validation. Deleted: none. No accepted migration was edited.
 
-## Exact validation and results
+## Database, API and implementation
 
-- `pnpm install --frozen-lockfile`; `pnpm validate:baseline`; `pnpm check`; `pnpm validate:references`; `pnpm audit:dependencies`: hosted PASS at 92ff200 (35 unit, 4 smoke; 39 P3 baseline checks).
-- `pnpm bootstrap:local`; `node --env-file=.local/runtime.env --import tsx --test tests/integration/*.test.ts`; `pnpm test:containers`: hosted PASS in P1/P2 regression at 92ff200. PostgreSQL migration/seed/recreation and server P3 integration executed; four OCI services built and passed ready → DB unavailable/degraded → DB restored/recovery.
-- P1 PR run 35175662789 / job 105056690928: SUCCESS. P2 PR run 35175662796 / job 105056691145: SUCCESS.
-- P3 PR run 35175662938 / job 105056691787: FAILED in four browser journeys before login. Browser Origin 127.0.0.1 was compared to Next.js normalized localhost. Subsequent P3 recreation/OCI steps were not passed in that failed workflow.
-- Corrective local diagnostic `LINGVESSA_ENV=local node ../debug-proxy.mjs`: same-origin request now reaches upstream 401; foreign localhost Origin receives 403. This stub diagnostic is not PostgreSQL/browser acceptance evidence.
-- Corrective local `pnpm build:web`, `pnpm lint`, `pnpm typecheck`: PASS. New browser/DB assertions require the next hosted run.
+Migration: `202609160001_p3_lesson_engine`, additive and transactional. Tables: lesson_runs, lesson_run_items, activity_attempts, evidence_events, attempt_receipts, outbox_events, outbox_deliveries. Composite ownership/language/publication/version/item integrity, immutable pins/history, exact attempt replay and per-consumer delivery leases. No P4 projections or speech/AI tables.
 
-## Latest corrective run
+API: POST/GET `/api/v1/lesson-runs`; GET `/api/v1/lesson-runs/{id}`; POST `/attempts` and `/exit` under that run; POST `/api/v1/auth/csrf`. Strict server-derived ownership/evaluation, CSRF, safe errors, separate learning quota, generated OpenAPI 3.1.2/typed clients. Full details: `docs/p3/evidence/schema-api-diff.json`.
 
-P3 PR run 35207465061 / job 105156639112 at `2cefaed9f07aea6f2cd5004e895962fdb73f9c19`: 12 pre-browser PostgreSQL P3 gates PASS, including all new direct DB ownership/language negatives and core-family server journeys. Browser beforeEach failed because the newly added Origin test omitted the required `x-lingvessa-client: web` header and correctly received API 403. This batch fixes only that test request, preserving the security check. Full browser, recreation and P3 OCI acceptance are still pending rerun. Added phase-scope and additive schema/API/changed-files inventory records.
+EN/CS use one renderer/evaluator and immutable published fixture contracts. Reveal/assisted attempts never become independent success; server transaction writes attempt/evidence/receipt/run/outbox atomically. Reload and response-loss recovery replay the original attempt UUID; user-visible conflicts require recovery. The IndexedDB queue is owner-scoped, capped and time-bounded, with no credentials/audio. Outbox has bounded retry, terminal failure and stale-worker fencing.
 
-## Runtime checkpoint 5ac7f53
+## Exact commands and verified results
 
-P3 PR run 35208020418 / job 105158481639: all runtime commands PASS, 35 unit / 4 smoke / 12 integration tests, 15 P3 DB gate groups including 4 real Chromium EN/CS journeys, and all four OCI build/health/degraded/recovery checks. The final acceptance-summary step FAILED because Playwright resolved its JSON output relative to tools/p3 instead of repository root. This batch fixes the path using import.meta.url; the summary is not falsely reported PASS. P1 push/PR and P2 PR regression workflows passed at the same checkpoint. Runtime introspection confirms 43 model names and exact scalar names/types/nullability for all seven P3 models. Full rerun of final attestation pending.
+- `pnpm install --frozen-lockfile`: PASS.
+- `pnpm validate:baseline`: PASS.
+- `pnpm check`: PASS.
+- `pnpm validate:references`: PASS.
+- `pnpm audit:dependencies`: PASS.
+- `pnpm exec playwright install --with-deps chromium`: PASS.
+- `pnpm bootstrap:local`: PASS.
+- `P3_BROWSER_TESTS=true node --env-file=.local/runtime.env --import tsx --test tests/integration/*.test.ts`: PASS.
+- `pnpm test:containers`: PASS.
+- `node --import tsx tools/p3/acceptance-summary.ts`: PASS.
 
-## Risks and next task
+Results: 39 baseline checks, 35 unit, 4 smoke, 12 integration tests; 15 P3 runtime groups, 4/4 Chromium journeys, 4 OCI images. DB schema introspection: 43 model names and exact scalar parity on seven new models. p95 deterministic attempt 14.282 ms / 20 real loopback DB samples; production load is outside this gate.
 
-BLOCKER: none requiring an owner decision. P3 is NOT READY until complete final hosted gates pass.
-IMPORTANT: correct the evidence output path and pass the complete final-SHA workflow; actual browser/DB/OCI runtime has passed at the checkpoint above.
-MINOR: inherited GitHub Actions Node warning; pinned Node Argon2id remains experimental. No dependency churn for warnings alone.
+- [P2 data foundation / pull_request / 35208895544](https://github.com/PV007PV007/Lingvessa/actions/runs/35208895544): SUCCESS.
+- [P1 foundation / pull_request / 35208895492](https://github.com/PV007PV007/Lingvessa/actions/runs/35208895492): SUCCESS.
+- [P3 lesson engine / pull_request / 35208895558](https://github.com/PV007PV007/Lingvessa/actions/runs/35208895558): SUCCESS.
+- [P1 foundation / push / 35208891443](https://github.com/PV007PV007/Lingvessa/actions/runs/35208891443): SUCCESS.
+- [P3 lesson engine / push / 35208891439](https://github.com/PV007PV007/Lingvessa/actions/runs/35208891439): SUCCESS.
 
-EXC-P1-001 retained: main is NOT technically protected; implementation branches → PR → green hosted CI → owner review. No direct push/force-push/delete of main. Open owner decisions: none blocking P3.
+Validation/evidence locations: `docs/p3/P3_exit_evidence.md`, `docs/p3/evidence/hosted-ci.json`, `validation-index.json`, `verified-runtime-checkpoint.json`, `schema-introspection.json`, plus generated final-head CI artifacts. Local host lacks Docker/PostgreSQL/Chromium; hosted runtime was actually executed, not inferred from local preparation.
 
-Exact next task: push this corrective batch, inspect real DB/browser/container results, fix concrete failures, then update closure evidence and run every required gate on the final branch commit. Keep PR #3 open. Do not merge or start P4.
+## Findings, operational limitation and hard stop
+
+BLOCKER: none. IMPORTANT: none once the required final-head checks are green. MINOR: existing Actions Node deprecation notices and experimental patch-pinned Argon2id. Earlier browser/proxy/test-report path failures were corrected; only successful reruns count as evidence.
+
+EXC-P1-001 remains accepted: main is NOT technically protected. No direct push, force-push or deletion of main; changes enter through PR after green hosted CI and owner review. No new architecture decision or exception. Open owner decisions: none blocking this phase; owner acceptance of P3 is still pending.
+
+Exact next task: owner reviews PR #3, final exact-head CI and exit evidence. Do not merge unless explicitly authorized. Do not start P4 without a separate owner instruction accepting P3 and authorizing P4.
