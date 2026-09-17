@@ -74,6 +74,7 @@ test('P3 PostgreSQL: pinned bilingual lesson runtime, attempts, idempotency, rem
     });
 
     const publications: Record<'en'|'cs',{ id: string; versionIds: string[] }> = { en: { id: randomUUID(), versionIds: [] }, cs: { id: randomUUID(), versionIds: [] } };
+    const coreStarts:Partial<Record<'en'|'cs',{language_profile_id:string;publication_id:string;lesson_id:string}>>={};
     const gateTypes = ['linguistic','pedagogical','technical','accessibility','media','originality'];
     await run('P3-FIX-001 EN/CS executable fixtures load idempotently and publish complete immutable closure', async () => {
       for (const language of ['en','cs'] as const) {
@@ -220,11 +221,16 @@ test('P3 PostgreSQL: pinned bilingual lesson runtime, attempts, idempotency, rem
         const versionIds=[...p2[language].entities.map(entity=>replacements.get(entity.id)??entity.version_id),...fixture.new_items.map(entry=>entry.content_version_id)];
         for(const versionId of versionIds){
           await content.validateVersion(versionId);const version=(await db.query('SELECT checksum,revision FROM content_versions WHERE id=$1',[versionId])).rows[0];
-          for(const gate of gateTypes)await content.approve(reviewerId,versionId,version.checksum,version.revision,gate,'approved',`Synthetic P3 core ${gate} approval`);
+          for(const gate of gateTypes){
+            const existing=(await db.query('SELECT target_checksum,decision FROM approvals WHERE target_content_version_id=$1 AND target_revision=$2 AND gate_type=$3 AND reviewer_id=$4',[versionId,version.revision,gate,reviewerId])).rows[0];
+            if(existing){assert.equal(existing.target_checksum,version.checksum);assert.equal(existing.decision,'approved');}
+            else await content.approve(reviewerId,versionId,version.checksum,version.revision,gate,'approved',`Synthetic P3 core ${gate} approval`);
+          }
         }
         const publicationId=randomUUID();await content.publish({id:publicationId,actorId:reviewerId,courseId:p2[language].entities.find(entity=>entity.kind==='course')!.id,
           languageId:fixture.language_id,channel:'test',versionCode:`p3-core-${language}-1`,versionIds});
-        let coreRun=await lessons.start(learnerId,{language_profile_id:profiles[language],publication_id:publicationId,lesson_id:fixture.lesson_id});
+        coreStarts[language]={language_profile_id:profiles[language],publication_id:publicationId,lesson_id:fixture.lesson_id};
+        let coreRun=await lessons.start(learnerId,coreStarts[language]);
         assert(!JSON.stringify(coreRun.manifest).includes('accepted_text'));
         for(const activity of fixture.activities){
           const policy=activity.response.answer_policy;
@@ -279,7 +285,8 @@ test('P3 PostgreSQL: pinned bilingual lesson runtime, attempts, idempotency, rem
           }
           const freshEn=await lessons.start(learnerId,{language_profile_id:profiles.en,publication_id:publications.en.id,lesson_id:p3.en.lesson_id});
           const freshCs=await lessons.start(learnerId,{language_profile_id:profiles.cs,publication_id:publications.cs.id,lesson_id:p3.cs.lesson_id});
-          await run('P3-UI-001 real Chromium EN/CS login/reload/lost-response/reveal/remediation',()=>browserGate(base,freshEn.id,freshCs.id));
+          const enCore=await lessons.start(learnerId,coreStarts.en!);const csCore=await lessons.start(learnerId,coreStarts.cs!);
+          await run('P3-UI-001 real Chromium EN/CS login/reload/lost-response/reveal/remediation/core-family rendering',()=>browserGate(base,freshEn.id,freshCs.id,enCore.id,csCore.id));
         }
 
       } finally { await app.close(); }

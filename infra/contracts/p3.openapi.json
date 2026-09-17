@@ -1210,6 +1210,15 @@
                           "type": "string",
                           "maxLength": 4000
                         },
+                        "steps": {
+                          "maxItems": 8,
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 1000
+                          }
+                        },
                         "media_refs": {
                           "default": [],
                           "type": "array",

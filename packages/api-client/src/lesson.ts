@@ -1,7 +1,10 @@
 import { z } from 'zod';
 import { learnerRunSchema, attemptResultSchema, problemSchema } from '../../activity-schemas/src/learner.js';
 import type { LearnerRun } from '../../activity-schemas/src/learner.js';
-import type { ActivityResponse, AuthoritativeOutcome } from '../../lesson-engine/src/index.js';
+import { attemptCommandSchema } from '../../activity-schemas/src/attempt.js';
+import type { AttemptCommand } from '../../activity-schemas/src/attempt.js';
+export type { AttemptCommand } from '../../activity-schemas/src/attempt.js';
+import type { AuthoritativeOutcome } from '../../lesson-engine/src/index.js';
 
 export const P3_API_PATHS = Object.freeze({
   lessonRuns: '/api/v1/lesson-runs',
@@ -9,17 +12,6 @@ export const P3_API_PATHS = Object.freeze({
   attempts: '/api/v1/lesson-runs/{id}/attempts',
   exit: '/api/v1/lesson-runs/{id}/exit',
 });
-
-export type AttemptCommand = {
-  attempt_id: string;
-  content_version_id: string;
-  item_id: string;
-  client_sequence: number;
-  intent: 'submit' | 'reveal' | 'continue';
-  response: ActivityResponse;
-  presentation: { seed: string; order: string[] };
-  assistance: { hint_count: number; reveal: boolean };
-};
 
 export type AttemptResult = {
   attempt_id: string;
@@ -83,7 +75,10 @@ export type QueueRecord = { command: AttemptCommand; run_id: string; queued_at: 
 export interface QueueStorage {
   read(): Promise<QueueRecord[]>;
   write(records: QueueRecord[]): Promise<void>;
+  update?(mutate: (records: QueueRecord[]) => QueueRecord[]): Promise<QueueRecord[]>;
 }
+
+const queueRecordSchema=z.object({command:attemptCommandSchema,run_id:z.string().uuid(),queued_at:z.string().datetime()}).strict();
 
 const sensitiveKey = /(?:raw[_-]?audio|password|secret|authorization|cookie|provider[_-]?key|access[_-]?token|refresh[_-]?token)/iu;
 
@@ -105,32 +100,40 @@ export class UnsentAttemptQueue {
 
   async enqueue(record: QueueRecord, now = Date.now()): Promise<void> {
     assertNonSensitive(record);
-    const records = await this.retained(now);
-    const duplicate = records.find((saved) => saved.command.attempt_id === record.command.attempt_id);
-    if (duplicate) {
-      if (JSON.stringify(duplicate) !== JSON.stringify(record)) throw new TypeError('Attempt ID reused with a different queued payload');
-      return;
-    }
-    if (records.length >= this.cap) throw new RangeError('Offline attempt queue retention cap reached');
-    records.push(structuredClone(record));
-    records.sort((left, right) => left.command.client_sequence - right.command.client_sequence || left.queued_at.localeCompare(right.queued_at));
-    await this.storage.write(records);
+    const parsed = queueRecordSchema.parse(record);
+    await this.update(records => {
+      const retained = this.retained(records, now);
+      const duplicate = retained.find(saved => saved.command.attempt_id === parsed.command.attempt_id);
+      if (duplicate) {
+        if (JSON.stringify(duplicate) !== JSON.stringify(parsed)) throw new TypeError('Attempt ID reused with a different queued payload');
+        return retained;
+      }
+      if (retained.length >= this.cap) throw new RangeError('Offline attempt queue retention cap reached');
+      retained.push(parsed);
+      return retained.sort((left,right)=>left.command.client_sequence-right.command.client_sequence||left.queued_at.localeCompare(right.queued_at));
+    });
   }
 
-  async pending(now = Date.now()): Promise<QueueRecord[]> { return this.retained(now); }
+  async pending(now = Date.now()): Promise<QueueRecord[]> { return this.update(records=>this.retained(records,now)); }
 
   async acknowledge(attemptId: string, now = Date.now()): Promise<void> {
-    await this.storage.write((await this.retained(now)).filter((record) => record.command.attempt_id !== attemptId));
+    await this.update(records=>this.retained(records,now).filter(record=>record.command.attempt_id!==attemptId));
   }
 
-  private async retained(now: number): Promise<QueueRecord[]> {
-    const stored = await this.storage.read();
-    const records = stored.filter((record) => {
-      const timestamp = Date.parse(record.queued_at);
-      return Number.isFinite(timestamp) && timestamp <= now && now - timestamp <= this.retentionMs;
-    });
-    if (records.length > this.cap) throw new RangeError('Stored offline queue exceeds its configured cap');
-    if (records.length !== stored.length) await this.storage.write(records);
+  private async update(mutate:(records:QueueRecord[])=>QueueRecord[]):Promise<QueueRecord[]> {
+    if(this.storage.update)return this.storage.update(mutate);
+    const records=mutate(await this.storage.read());await this.storage.write(records);return records;
+  }
+
+  private retained(stored: QueueRecord[], now: number): QueueRecord[] {
+    const records:QueueRecord[]=[];
+    for(const raw of stored){
+      const parsed=queueRecordSchema.safeParse(raw);
+      if(!parsed.success)continue; // Corrupt or obsolete local data cannot become an API command.
+      const timestamp=Date.parse(parsed.data.queued_at);
+      if(Number.isFinite(timestamp)&&timestamp<=now&&now-timestamp<=this.retentionMs)records.push(parsed.data);
+    }
+    if(records.length>this.cap)throw new RangeError('Stored offline queue exceeds its configured cap');
     return records;
   }
 }

@@ -35,3 +35,34 @@ for(const language of ['en','cs'] as const)test(`P3 ${language}: login, keyboard
     }return count;
   });expect(queueCount).toBe(0);
 });
+for(const language of ['en','cs'] as const)test(`P3 ${language}: all deterministic core renderers complete with recorded presentation order`,async({page})=>{
+  const runId=process.env[language==='en'?'P3_EN_CORE':'P3_CS_CORE'];expect(runId).toBeTruthy();
+  const fixture=JSON.parse(readFileSync(`content/fixtures/p3/${language}-core.json`,'utf8'));
+  await page.goto(`/lesson/${runId}`);
+  await page.getByLabel('Email',{exact:true}).fill('p3-learner@example.invalid');await page.getByLabel('Пароль',{exact:true}).fill('Synthetic P3 learner password!');
+  await page.getByRole('button',{name:'Увійти та відновити'}).click();
+  for(const activity of fixture.activities){
+    await expect(page.getByRole('heading',{name:activity.presentation.prompt,exact:true})).toBeVisible();
+    for(let index=1;index<(activity.presentation.steps?.length??0);index++)await page.getByRole('button',{name:'Наступний приклад',exact:true}).click();
+    const policy=activity.response.answer_policy;
+    if(policy.mode==='single'){
+      const option=activity.presentation.options.find((entry:{id:string})=>entry.id===policy.accepted_option_ids[0]);
+      const displayed=await page.getByRole('radio').evaluateAll(elements=>elements.map(element=>(element as HTMLInputElement).value));
+      expect(displayed).toEqual(activity.runtime.presentation_order);
+      await page.getByRole('radio',{name:option.label,exact:true}).check();
+    }else if(policy.mode==='mapping'){
+      for(const pair of policy.accepted_pairs){const label=activity.presentation.pairs.find((entry:{left:{id:string}})=>entry.left.id===pair.left).left.label;
+        await page.getByRole('combobox',{name:label,exact:true}).selectOption(pair.right);}
+    }else if(policy.mode==='text')await page.getByRole('textbox',{name:'Ваша відповідь',exact:true}).fill(policy.accepted_text[0]);
+    else if(policy.mode==='order')for(const id of policy.accepted_order){
+      const token=activity.presentation.tokens.find((entry:{id:string})=>entry.id===id);await page.getByRole('button',{name:token.label,exact:true}).click();
+    }
+    await page.getByRole('button',{name:policy.mode==='exposure'?'Продовжити':'Перевірити',exact:true}).click();
+    await expect(page.getByRole('button',{name:'Далі',exact:true})).toBeVisible();
+    await page.getByRole('button',{name:'Далі',exact:true}).click();
+  }
+  await expect(page.getByRole('heading',{name:'Урок завершено',exact:true})).toBeVisible();
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
+  await page.setViewportSize({width:1280,height:800});
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
+});

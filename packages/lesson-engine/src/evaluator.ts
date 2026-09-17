@@ -85,6 +85,13 @@ function result(activity: ActivityContract, outcome: EvaluationResult['result'],
 
 /** Reject ambiguous authored options before a lesson can be loaded. */
 export function validateEvaluationContract(activity: ActivityContract): void {
+  const kind = activity.response.kind;
+  const presented = kind === 'mapping' ? (activity.presentation.pairs ?? []).map(pair=>pair.left.id)
+    : kind === 'order' ? (activity.presentation.tokens ?? []).map(token=>token.id)
+    : ['single','set'].includes(kind) ? (activity.presentation.options ?? []).map(option=>option.id) : [];
+  const recorded=activity.runtime.presentation_order;
+  if (new Set(recorded).size !== recorded.length || JSON.stringify([...presented].sort())!==JSON.stringify([...recorded].sort()))
+    throw new TypeError('Presentation order must be a complete permutation of response controls');
   const options = activity.presentation.options ?? [];
   const normalized = new Map<string, string>();
   for (const option of options) {

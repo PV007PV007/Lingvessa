@@ -40,16 +40,6 @@
       "presentation": {
         "instruction_key": "EN-P3-CORE-00_INSTRUCTION",
         "prompt": "Practise the greeting.",
-        "options": [
-          {
-            "id": "greeting",
-            "label": "Hello"
-          },
-          {
-            "id": "farewell",
-            "label": "Goodbye"
-          }
-        ],
         "accessibility": {
           "keyboard_action": "Use arrow keys and Enter to select an answer.",
           "feedback_live_region": true
@@ -93,10 +83,7 @@
         "completion_policy": "exposure_v1",
         "evaluator_version": "deterministic-core-1.0.0",
         "presentation_seed": "EN-P3-CORE-00",
-        "presentation_order": [
-          "greeting",
-          "farewell"
-        ],
+        "presentation_order": [],
         "max_retries": 2,
         "auto_advance_allowed": true
       }
@@ -211,8 +198,8 @@
         "evaluator_version": "deterministic-core-1.0.0",
         "presentation_seed": "EN-P3-CORE-01",
         "presentation_order": [
-          "greeting",
-          "farewell"
+          "close",
+          "open"
         ],
         "max_retries": 2,
         "auto_advance_allowed": true
@@ -230,16 +217,6 @@
       "presentation": {
         "instruction_key": "EN-P3-CORE-02_INSTRUCTION",
         "prompt": "Practise the greeting.",
-        "options": [
-          {
-            "id": "greeting",
-            "label": "Hello"
-          },
-          {
-            "id": "farewell",
-            "label": "Goodbye"
-          }
-        ],
         "accessibility": {
           "keyboard_action": "Use arrow keys and Enter to select an answer.",
           "feedback_live_region": true
@@ -298,10 +275,7 @@
         "completion_policy": "correct_or_reveal_v1",
         "evaluator_version": "deterministic-core-1.0.0",
         "presentation_seed": "EN-P3-CORE-02",
-        "presentation_order": [
-          "greeting",
-          "farewell"
-        ],
+        "presentation_order": [],
         "max_retries": 2,
         "auto_advance_allowed": true
       }
@@ -398,8 +372,8 @@
         "evaluator_version": "deterministic-core-1.0.0",
         "presentation_seed": "EN-P3-CORE-03",
         "presentation_order": [
-          "greeting",
-          "farewell"
+          "farewell",
+          "greeting"
         ],
         "max_retries": 2,
         "auto_advance_allowed": true
@@ -417,16 +391,6 @@
       "presentation": {
         "instruction_key": "EN-P3-CORE-04_INSTRUCTION",
         "prompt": "Practise the greeting.",
-        "options": [
-          {
-            "id": "greeting",
-            "label": "Hello"
-          },
-          {
-            "id": "farewell",
-            "label": "Goodbye"
-          }
-        ],
         "accessibility": {
           "keyboard_action": "Use arrow keys and Enter to select an answer.",
           "feedback_live_region": true
@@ -485,10 +449,7 @@
         "completion_policy": "correct_or_reveal_v1",
         "evaluator_version": "deterministic-core-1.0.0",
         "presentation_seed": "EN-P3-CORE-04",
-        "presentation_order": [
-          "greeting",
-          "farewell"
-        ],
+        "presentation_order": [],
         "max_retries": 2,
         "auto_advance_allowed": true
       }
@@ -518,7 +479,11 @@
         "accessibility": {
           "keyboard_action": "Use arrow keys and Enter to select an answer.",
           "feedback_live_region": true
-        }
+        },
+        "steps": [
+          "Приклад привітання: Hello.",
+          "Виберіть привітання. Це синтетична перевірка поетапного пояснення."
+        ]
       },
       "response": {
         "kind": "single",
@@ -574,8 +539,8 @@
         "evaluator_version": "deterministic-core-1.0.0",
         "presentation_seed": "EN-P3-CORE-05",
         "presentation_order": [
-          "greeting",
-          "farewell"
+          "farewell",
+          "greeting"
         ],
         "max_retries": 2,
         "auto_advance_allowed": true
@@ -664,8 +629,8 @@
         "evaluator_version": "deterministic-core-1.0.0",
         "presentation_seed": "EN-P3-CORE-06",
         "presentation_order": [
-          "greeting",
-          "farewell"
+          "farewell",
+          "greeting"
         ],
         "max_retries": 2,
         "auto_advance_allowed": true
@@ -764,8 +729,8 @@
         "evaluator_version": "deterministic-core-1.0.0",
         "presentation_seed": "EN-P3-CORE-07",
         "presentation_order": [
-          "greeting",
-          "farewell"
+          "farewell",
+          "greeting"
         ],
         "max_retries": 2,
         "auto_advance_allowed": true
@@ -783,16 +748,6 @@
       "presentation": {
         "instruction_key": "EN-P3-CORE-08_INSTRUCTION",
         "prompt": "Practise the greeting.",
-        "options": [
-          {
-            "id": "greeting",
-            "label": "Hello"
-          },
-          {
-            "id": "farewell",
-            "label": "Goodbye"
-          }
-        ],
         "accessibility": {
           "keyboard_action": "Use arrow keys and Enter to select an answer.",
           "feedback_live_region": true
@@ -851,10 +806,7 @@
         "completion_policy": "correct_or_reveal_v1",
         "evaluator_version": "deterministic-core-1.0.0",
         "presentation_seed": "EN-P3-CORE-08",
-        "presentation_order": [
-          "greeting",
-          "farewell"
-        ],
+        "presentation_order": [],
         "max_retries": 2,
         "auto_advance_allowed": true
       }
@@ -871,16 +823,6 @@
       "presentation": {
         "instruction_key": "EN-P3-CORE-09_INSTRUCTION",
         "prompt": "Practise the greeting.",
-        "options": [
-          {
-            "id": "greeting",
-            "label": "Hello"
-          },
-          {
-            "id": "farewell",
-            "label": "Goodbye"
-          }
-        ],
         "accessibility": {
           "keyboard_action": "Use arrow keys and Enter to select an answer.",
           "feedback_live_region": true
@@ -924,10 +866,7 @@
         "completion_policy": "exposure_v1",
         "evaluator_version": "deterministic-core-1.0.0",
         "presentation_seed": "EN-P3-CORE-09",
-        "presentation_order": [
-          "greeting",
-          "farewell"
-        ],
+        "presentation_order": [],
         "max_retries": 2,
         "auto_advance_allowed": true
       }

@@ -18,9 +18,12 @@ export function LessonPlayer({runId}:{runId:string}) {
   const [notice,setNotice]=useState('Завантаження уроку…');const [busy,setBusy]=useState(true);const [loginRequired,setLoginRequired]=useState(false);
   const [autoAdvance,setAutoAdvance]=useState(false);const csrf=useRef('');const client=useRef<LessonApiClient|null>(null);const queue=useRef<UnsentAttemptQueue|null>(null);
   const inflight=useRef(false);const loading=useRef(false);
+  const [conflictingAttempt,setConflictingAttempt]=useState<string|null>(null);
+  const [diagnostic,setDiagnostic]=useState('');
+  const captureProblem=(error:unknown)=>setDiagnostic(error instanceof ApiProblem?`${error.problem.code} · ${error.problem.correlation_id} · ${run?.content_version_id??runId}`:'');
   async function load() {
     if(loading.current)return;loading.current=true;
-    setBusy(true);setNotice('Завантаження уроку…');
+    setBusy(true);setNotice('Завантаження уроку…');setDiagnostic('');setConflictingAttempt(null);
     try {
       const session=await fetch('/api/v1/auth/csrf',{method:'POST',headers:{'x-lingvessa-client':'web'},credentials:'include'});
       if(session.status===401){setLoginRequired(true);setNotice('Увійдіть, щоб відновити урок.');return;}
@@ -33,10 +36,11 @@ export function LessonPlayer({runId}:{runId:string}) {
       const pending=await queue.current.pending();
       // Replay only this run, in original sequence, with original attempt identities.
       for(const record of pending.filter(entry=>entry.run_id===runId)){
-        await client.current.submitAttempt(runId,record.command);await queue.current.acknowledge(record.command.attempt_id);
+        try{await client.current.submitAttempt(runId,record.command);await queue.current.acknowledge(record.command.attempt_id);}
+        catch(error){if(error instanceof ApiProblem&&error.problem.status===409)setConflictingAttempt(record.command.attempt_id);throw error;}
       }
       restore(await client.current.getRun(runId));setResult(null);setLoginRequired(false);setNotice('');
-    } catch(error){setNotice(error instanceof ApiProblem && error.problem.code==='VERSION_CONFLICT'?'Позиція уроку змінилася. Відновіть її з сервера; непідтверджена відповідь збережена.':'Не вдалося відновити урок. Повторіть спробу, коли з’єднання відновиться.');}
+    } catch(error){captureProblem(error);setNotice(error instanceof ApiProblem && error.problem.code==='VERSION_CONFLICT'?'Позиція уроку змінилася. Відновіть її з сервера; непідтверджена відповідь збережена.':'Не вдалося відновити урок. Повторіть спробу, коли з’єднання відновиться.');}
     finally{setBusy(false);loading.current=false;}
   }
   useEffect(()=>{void load();const reconnect=()=>{if(!inflight.current)void load();};window.addEventListener('online',reconnect);return()=>window.removeEventListener('online',reconnect);},[runId]);
@@ -61,6 +65,7 @@ export function LessonPlayer({runId}:{runId:string}) {
       dispatch({type:'AUTHORITATIVE_RESULT',attempt_id:accepted.attempt_id,outcome:accepted.outcome,feedback:accepted.feedback,revision:accepted.run.revision});
       setResult(accepted);setRun({...run,client_sequence:command.client_sequence,revision:accepted.run.revision,retry_available:accepted.run.retry_available});
     }catch(error){
+      captureProblem(error);
       dispatch({type:'FAIL',code:error instanceof ApiProblem?error.problem.code:'NETWORK_UNAVAILABLE'});
       if(error instanceof ApiProblem&&error.problem.status<500&&error.problem.status!==401){
         await queue.current.acknowledge(command.attempt_id);setNotice('Відповідь не прийнята. Відновіть урок із сервера.');
@@ -70,6 +75,8 @@ export function LessonPlayer({runId}:{runId:string}) {
   async function exit(){if(!run||!client.current)return;setBusy(true);try{restore(await client.current.exitRun(runId,run.revision,true));setResult(null);}catch{setNotice('Не вдалося завершити повторення. Відновіть урок.');}finally{setBusy(false);}}
   return <main className="lesson-player"><header><a href="/">Lingvessa</a><h1>Урок</h1></header>
     <p role="status" aria-live="polite">{notice}</p>
+    {diagnostic&&<details><summary>Дані для підтримки</summary><code>{diagnostic}</code></details>}
+    {conflictingAttempt&&<button disabled={busy} onClick={async()=>{await queue.current?.acknowledge(conflictingAttempt);setConflictingAttempt(null);await load();}}>Відкинути конфліктну відповідь і відновити</button>}
     {loginRequired&&<form onSubmit={async event=>{event.preventDefault();const data=new FormData(event.currentTarget);setBusy(true);
       try{const response=await fetch('/api/v1/auth/login',{method:'POST',headers:{'content-type':'application/json','x-lingvessa-client':'web'},credentials:'include',body:JSON.stringify({email:data.get('email'),password:data.get('password')})});
         event.currentTarget?.reset();if(!response.ok){setNotice('Не вдалося увійти. Перевірте дані.');setBusy(false);return;}await load();}catch{setNotice('Сервіс входу недоступний.');setBusy(false);}}}>

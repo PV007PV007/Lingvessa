@@ -74,6 +74,7 @@ export const activityContractSchema = z.object({
     instruction_key: stableCode,
     prompt: z.string().min(1).max(2000),
     stimulus: z.string().max(4000).optional(),
+    steps: z.array(z.string().min(1).max(1000)).max(8).optional(),
     media_refs: z.array(z.object({asset_id:uuid,asset_stable_code:stableCode,asset_version:z.number().int().positive(),role:z.string().min(1)}).strict()).default([]),
     options: z.array(optionSchema).max(40).optional(),
     pairs: z.array(z.object({ left: optionSchema, right: optionSchema }).strict()).max(30).optional(),

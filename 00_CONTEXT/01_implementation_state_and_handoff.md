@@ -1,6 +1,6 @@
 # Lingvessa implementation state and handoff
 
-Timestamp: 2026-09-16T16:47:13.466369+00:00
+Timestamp: 2026-09-16T16:54:10.594900+00:00
 
 P0/P1/P2: OWNER ACCEPTED. P3: AUTHORIZED, IN PROGRESS / NOT READY. P4: NOT AUTHORIZED / NOT STARTED.
 
@@ -8,7 +8,7 @@ P0/P1/P2: OWNER ACCEPTED. P3: AUTHORIZED, IN PROGRESS / NOT READY. P4: NOT AUTHO
 
 GitHub PV007PV007/Lingvessa main/history is the implementation source of truth. P2 PR #2 was merged with merge commit `df07f9a15838c99da1ea8c876a8b6262057b0354`. Tag `p2-accepted-2026-09-16` and published P2 accepted prerelease point to that merge. The architecture manifest and seven owner-locked governing PDFs are unchanged; Implementation Plan v1.4 is the sole execution-order authority.
 
-Branch: `implementation/p3-lesson-engine`, created from accepted P2. Remote checkpoint: `ec07f846ef3ffc9828f558da720c50c2a86d8a8c`; PR #3 OPEN DRAFT. Local mirror baseline is not claimed as a hosted tested commit. Final tested SHA will be taken from the required hosted checks of the final branch head.
+Branch: `implementation/p3-lesson-engine`, created from accepted P2. Remote checkpoint: `1518805576a12f1cbbfd6df19ff499b90fa7df1b`; PR #3 OPEN DRAFT. Local mirror baseline is not claimed as a hosted tested commit. Final tested SHA will be taken from the required hosted checks of the final branch head.
 
 ## Current implementation batch
 
@@ -30,7 +30,7 @@ Schema: migration `202609160001_p3_lesson_engine` creates lesson_runs, lesson_ru
 - Hosted checkpoint a43734c: install/baseline/check/reference/audit/bootstrap PASS; integration FAILED (old P1 migration-count assertion and P3 test-database name refused by the local-only allowlist). Both causes corrected in the current batch; hosted rerun pending. OCI was SKIPPED at this checkpoint, not passed.
 
 BLOCKER: no architectural contradiction identified. P3 acceptance remains NOT READY until actual runtime and full local/hosted gates pass.
-IMPORTANT: hosted run 35122948839 passed install/baseline/check/references/audit/Chromium install/PostgreSQL bootstrap, then failed first outbox claim due to timestamp ordering. Corrective batch pins initial delivery availability to claim time, tests exhausted leases, enforces content retry policy, preserves assisted correction, and emits natural-completion outbox events. Full hosted rerun and browser/container acceptance remain pending.
+IMPORTANT: hosted run 35122948839 passed install/baseline/check/references/audit/Chromium install/PostgreSQL bootstrap, then failed first outbox claim due to timestamp ordering. Corrective batch pins initial delivery availability to claim time, tests exhausted leases, enforces content retry policy, preserves assisted correction, and emits natural-completion outbox events. Hosted rerun 35124209992 confirmed the outbox fix, then exposed duplicate approval setup in the expanded fixture test; that test now reuses the existing exact-checksum approval. Current batch adds atomic IndexedDB queue updates and shared command validation, exact recorded UI order, safe conflict recovery and 4 bilingual browser journeys. Local unit tests: 35/35 PASS. Final hosted browser/container gates remain pending.
 MINOR: existing GitHub Actions Node warning and experimental pinned Argon2id remain inherited technical debt.
 
 Operational exception EXC-P1-001 remains: main is not technically protected; implementation branches → PR → green CI → owner review. Open owner decisions: none blocking current P3 work.

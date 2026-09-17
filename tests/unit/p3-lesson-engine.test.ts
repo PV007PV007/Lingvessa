@@ -170,3 +170,18 @@ test('P3 OpenAPI schemas match runtime request/response validation without manua
   const api=JSON.parse(readFileSync('infra/contracts/p3.openapi.json','utf8'));
   for(const [name,schema] of Object.entries(p3RuntimeSchemas()))assert.deepEqual(api.components.schemas[name],schema,name);
 });
+
+test('P3 invalid retained queue records are removed and never replayed as commands',async()=>{
+  const storage=new MemoryQueueStorage();storage.records=[{...queued(1),command:{...queued(1).command,attempt_id:'invalid'}}];
+  const queue=new UnsentAttemptQueue(storage);assert.deepEqual(await queue.pending(1_700_000_000_010),[]);assert.deepEqual(storage.records,[]);
+});
+
+test('P3 pinned control order reproduces shuffled presentation without changing answers',async()=>{
+  const {pinnedOrder}=await import('../../packages/lesson-engine/src/presentation.js');
+  const fixture=executableLessonFixtureSchema.parse(JSON.parse(readFileSync('content/fixtures/p3/en-core.json','utf8')));
+  const activity=fixture.activities.find(entry=>entry.type==='interactive_grammar')!;
+  const ordered=pinnedOrder(activity.presentation.options!,activity.runtime.presentation_order,entry=>entry.id);
+  assert.deepEqual(ordered.map(entry=>entry.id),activity.runtime.presentation_order);
+  assert.equal(evaluateActivity(activity,{kind:'single',option_id:activity.response.answer_policy.accepted_option_ids![0]!}).result,'correct');
+  assert.throws(()=>pinnedOrder(activity.presentation.options!,['missing'],entry=>entry.id),/Invalid pinned/u);
+});
