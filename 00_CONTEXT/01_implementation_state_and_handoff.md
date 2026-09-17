@@ -1,6 +1,6 @@
 # Lingvessa implementation state and handoff
 
-Timestamp: 2026-09-17T09:57:26.411923+00:00
+Timestamp: 2026-09-17T10:07:22.907962+00:00
 
 P0/P1/P2: OWNER ACCEPTED. P3: AUTHORIZED, IN PROGRESS / NOT READY. P4: NOT AUTHORIZED / NOT STARTED.
 
@@ -8,7 +8,7 @@ P0/P1/P2: OWNER ACCEPTED. P3: AUTHORIZED, IN PROGRESS / NOT READY. P4: NOT AUTHO
 
 GitHub PV007PV007/Lingvessa main/history is the implementation source of truth. P2 PR #2 merge: `df07f9a15838c99da1ea8c876a8b6262057b0354`; accepted tag: `p2-accepted-2026-09-16`. Manifest and seven owner-locked governing PDFs are unchanged; Implementation Plan v1.4 remains the sole execution-order authority.
 
-Branch: `implementation/p3-lesson-engine`. PR [#3](https://github.com/PV007PV007/Lingvessa/pull/3): OPEN DRAFT, not merged. Latest tested hosted checkpoint: `2cefaed9f07aea6f2cd5004e895962fdb73f9c19`. This handoff accompanies the next corrective commit; it does not claim that checkpoint tested these new changes. The final acceptance artifact must match the exact final branch HEAD.
+Branch: `implementation/p3-lesson-engine`. PR [#3](https://github.com/PV007PV007/Lingvessa/pull/3): OPEN DRAFT, not merged. Latest tested hosted checkpoint: `5ac7f53053c42945dc54c8583a17d1333fabd6b2`. This handoff accompanies the next corrective commit; it does not claim that checkpoint tested these new changes. The final acceptance artifact must match the exact final branch HEAD.
 
 ## Current implementation batch
 
@@ -31,10 +31,14 @@ P3 schema: additive `202609160001_p3_lesson_engine` creates lesson_runs, lesson_
 
 P3 PR run 35207465061 / job 105156639112 at `2cefaed9f07aea6f2cd5004e895962fdb73f9c19`: 12 pre-browser PostgreSQL P3 gates PASS, including all new direct DB ownership/language negatives and core-family server journeys. Browser beforeEach failed because the newly added Origin test omitted the required `x-lingvessa-client: web` header and correctly received API 403. This batch fixes only that test request, preserving the security check. Full browser, recreation and P3 OCI acceptance are still pending rerun. Added phase-scope and additive schema/API/changed-files inventory records.
 
+## Runtime checkpoint 5ac7f53
+
+P3 PR run 35208020418 / job 105158481639: all runtime commands PASS, 35 unit / 4 smoke / 12 integration tests, 15 P3 DB gate groups including 4 real Chromium EN/CS journeys, and all four OCI build/health/degraded/recovery checks. The final acceptance-summary step FAILED because Playwright resolved its JSON output relative to tools/p3 instead of repository root. This batch fixes the path using import.meta.url; the summary is not falsely reported PASS. P1 push/PR and P2 PR regression workflows passed at the same checkpoint. Runtime introspection confirms 43 model names and exact scalar names/types/nullability for all seven P3 models. Full rerun of final attestation pending.
+
 ## Risks and next task
 
 BLOCKER: none requiring an owner decision. P3 is NOT READY until complete final hosted gates pass.
-IMPORTANT: complete browser gate and final-SHA runtime rerun pending.
+IMPORTANT: correct the evidence output path and pass the complete final-SHA workflow; actual browser/DB/OCI runtime has passed at the checkpoint above.
 MINOR: inherited GitHub Actions Node warning; pinned Node Argon2id remains experimental. No dependency churn for warnings alone.
 
 EXC-P1-001 retained: main is NOT technically protected; implementation branches → PR → green hosted CI → owner review. No direct push/force-push/delete of main. Open owner decisions: none blocking P3.

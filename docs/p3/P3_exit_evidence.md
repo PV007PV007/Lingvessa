@@ -17,3 +17,5 @@ BLOCKER: none requiring owner decision. IMPORTANT: complete browser/final-SHA ho
 EXC-P1-001: main is NOT technically protected; owner-approved PR/green-CI process remains. P4 is not authorized or implemented. Next action: execute corrective CI, prepare final evidence, retain PR open for owner review.
 
 Corrective checkpoint `2cefaed9f07aea6f2cd5004e895962fdb73f9c19`, run 35207465061: real DB negative tests and server core gates PASS. Browser test setup omitted mandatory custom header; test corrected, full rerun pending.
+
+Checkpoint `5ac7f53053c42945dc54c8583a17d1333fabd6b2`: all P3 runtime gates passed in run 35208020418 (35 unit / 4 smoke / 12 integration / 4 Chromium journeys / 15 P3 DB groups / four OCI images and recovery). Final artifact attestation failed only on browser-results.json path. Reporter path corrected in this batch; full workflow remains pending until the attestation executes successfully.
