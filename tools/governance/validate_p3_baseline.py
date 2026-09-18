@@ -8,6 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 checks = []
+p4_authorized = (ROOT / "docs/p4/authorization.json").exists() and json.loads((ROOT / "docs/p4/authorization.json").read_text()).get("p4_authorized") is True
 
 def check(name, condition):
     checks.append({"check": name, "status": "PASS" if condition else "FAIL"})
@@ -56,8 +57,8 @@ schema = (ROOT / "prisma/schema.prisma").read_text(encoding="utf-8")
 migration = (ROOT / "prisma/migrations/202609160001_p3_lesson_engine/migration.sql").read_text(encoding="utf-8")
 for table in ["lesson_runs","lesson_run_items","activity_attempts","attempt_receipts","evidence_events","outbox_events","outbox_deliveries"]:
     check("P3 schema table " + table, f"model {table}" in schema and f"CREATE TABLE {table}" in migration)
-check("P4/P5/P8 runtime remains absent", all(f"model {name}" not in schema and f"CREATE TABLE {name}" not in migration for name in ["knowledge_mastery_states","skill_mastery_states","review_schedules","speech_jobs","ai_runs","ai_sessions"]))
-check("mastery and AI packages remain phase-empty", all((ROOT / f"packages/{name}/src/index.ts").read_text().strip().endswith("export {};") for name in ["mastery-review","ai-core"]))
+check("authorized phase boundary (P4 extension allowed only by recorded authorization)", all(f"model {name}" not in schema and f"CREATE TABLE {name}" not in migration for name in (["speech_jobs","ai_runs","ai_sessions"] if p4_authorized else ["knowledge_mastery_states","skill_mastery_states","review_schedules","speech_jobs","ai_runs","ai_sessions"])))
+check("mastery and AI packages remain phase-empty", all((ROOT / f"packages/{name}/src/index.ts").read_text().strip().endswith("export {};") for name in (["ai-core"] if p4_authorized else ["mastery-review","ai-core"])))
 check("lesson engine materialized", not (ROOT / "packages/lesson-engine/src/index.ts").read_text().strip().endswith("export {};") and (ROOT / "packages/lesson-engine/src/state.ts").exists())
 check("shared bilingual executable fixtures", all((ROOT / f"content/fixtures/p3/{language}-lesson.json").exists() for language in ["en","cs"]))
 check("OpenAPI 3.1.2 and P3 surface", read("infra/contracts/p3.openapi.json")["openapi"] == "3.1.2" and "/lesson-runs/{id}/attempts" in read("infra/contracts/p3.openapi.json")["paths"])

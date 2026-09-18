@@ -51,6 +51,11 @@ export class LessonRunsController {
     return this.lessons.submit(principal.userId, uuid.parse(id), body);
   }
 
+  @Post(':id/hint')
+  @HttpCode(200)
+  @Header('Cache-Control','private, no-store')
+  async hint(@Req() request:Request,@Param('id') id:string){const p=await this.principalForMutation(request);return this.lessons.hint(p.userId,uuid.parse(id));}
+
   @Post(':id/exit')
   @HttpCode(200)
   @Header('Cache-Control', 'private, no-store')

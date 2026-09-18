@@ -1,0 +1,5 @@
+{
+  "prisma/migrations/202609160001_p3_lesson_engine/migration.sql": "a01ff0acca4c6175adffd4815b8991909ec1a3dbcefc6fc2d996b01bce0b2031",
+  "prisma/migrations/202609150001_p2_foundation/migration.sql": "1070d4ed37133be1a1d166458aead61d446167a91d46921d829843cfa5ec68b6",
+  "prisma/migrations/202609130001_p1_bootstrap/migration.sql": "ff76c0621eb0f153047095432f8d7099819880c21fde743427207b82e6bc4a33"
+}

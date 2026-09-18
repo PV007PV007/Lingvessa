@@ -6,11 +6,16 @@ import { IdentityRepository } from '../../../infra/persistence/identity.js';
 import { ContentRepository } from '../../../infra/persistence/content.js';
 import { LessonRepository } from '../../../infra/persistence/lessons.js';
 
+import {MasteryRepository} from '../../../infra/persistence/mastery.js';
+import {ReviewRepository} from '../../../infra/persistence/review.js';
+import {CollectionRepository} from '../../../infra/persistence/collections.js';
+import {ResetRepository} from '../../../infra/persistence/resets.js';
+
 async function main() {
   const config = loadP1Config({ ...process.env, SERVICE_NAME: 'api' });
   const probe = postgresProbe(config);
   const pool = createFoundationPool(config.DATABASE_URL!);
-  const app = await createApi(probe, { identity: new IdentityRepository(pool), content: new ContentRepository(pool), lessons: new LessonRepository(pool) });
+  const app = await createApi(probe, { identity: new IdentityRepository(pool), content: new ContentRepository(pool), lessons: new LessonRepository(pool), p4:{mastery:new MasteryRepository(pool),review:new ReviewRepository(pool),collections:new CollectionRepository(pool),resets:new ResetRepository(pool)} });
   let stopping = false;
   for (const signal of ['SIGTERM', 'SIGINT'] as const) process.once(signal, () => {
     if (stopping) return;

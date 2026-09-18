@@ -19,3 +19,9 @@ mkdirSync('artifacts/p3', { recursive: true });
 const p3Report = { phase: 'P3', commit: execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim(), results: p3Results, status: 'PASS' };
 writeFileSync('artifacts/p3/reference-validation.json', JSON.stringify(p3Report, null, 2) + '\n');
 console.log(JSON.stringify({ p2: report, p3: p3Report }));
+const p4Results=['en','cs'].flatMap(language=>{
+ const base=referenceFixtureSchema.parse(JSON.parse(readFileSync(`content/fixtures/p4/${language}-base.json`,'utf8')));
+ return ['lesson','core'].map(kind=>{const fixture=executableLessonFixtureSchema.parse(JSON.parse(readFileSync(`content/fixtures/p4/${language}-${kind}.json`,'utf8')));
+ if(fixture.language!==base.language||fixture.activities.some(a=>resolveActivity(a).status!=='supported'))throw new Error('Invalid P4 fixture');
+ return {language,kind,activities:fixture.activities.length,content_version_id:fixture.content_version_id,status:'PASS'};});});
+mkdirSync('artifacts/p4',{recursive:true});writeFileSync('artifacts/p4/reference-validation.json',JSON.stringify({phase:'P4',commit:report.commit,status:'PASS',results:p4Results},null,2)+'\n');
