@@ -42,7 +42,7 @@ export function schedule(previous:Schedule|null, outcome:SchedulingOutcome, at:s
 }
 function uniqueTargets(events:Evidence[]):Evidence[]{
   const seen=new Map<string,Evidence>();
-  for(const e of events){const key=`${e.attempt_id}:${e.knowledge_item_id}:${e.facet}`;const prior=seen.get(key);if(!prior||e.effective_weight>prior.effective_weight)seen.set(key,e);}
+  for(const e of events){const key=`${e.attempt_id}:${e.knowledge_item_id}:${e.facet}`;const prior=seen.get(key);if(!prior||e.effective_weight>prior.effective_weight||(e.effective_weight===prior.effective_weight&&e.id.localeCompare(prior.id)<0))seen.set(key,e);}
   return [...seen.values()].sort((a,b)=>a.occurred_at.localeCompare(b.occurred_at)||a.id.localeCompare(b.id));
 }
 export function project(events:Evidence[], p:Policy=policy):Projection {

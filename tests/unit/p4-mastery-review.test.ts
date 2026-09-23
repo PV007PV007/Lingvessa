@@ -1,6 +1,8 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {policy,DAY,recompute,project,schedule,evidenceWeight,buildSession} from '../../packages/mastery-review/src/index.js';
+import {readFileSync} from 'node:fs';
+import {activityContractSchema} from '../../packages/activity-schemas/src/lesson.js';
+import {policy,DAY,recompute,project,schedule,evidenceWeight,buildSession,reviewSurface} from '../../packages/mastery-review/src/index.js';
 import type {Evidence,Candidate} from '../../packages/mastery-review/src/index.js';
 const at='2026-09-01T12:00:00.000Z';
 const e:Evidence={id:'1',attempt_id:'a1',knowledge_item_id:'k1',skill:'vocabulary',facet:'meaning',result_class:'positive',independence:'independent',base_weight:1,effective_weight:1,difficulty:0.5,occurred_at:at,hint_count:0,prior_attempts:0,response_time_ms:3000,transcript_support:false};
@@ -17,8 +19,21 @@ test('P4 canonical six skills, separate facets and deterministic golden projecti
 });
 test('P4 repeated surfaces share facet state; multi-skill same attempt is not double item credit',()=>{
   const duplicate={...e,id:'2',skill:'listening' as const};assert.equal(recompute([e,duplicate]).knowledge[0]!.evidence_count,1);
+  assert.deepEqual(recompute([duplicate,e]),recompute([e,duplicate]));
   assert.equal(recompute([e,{...e,id:'3',attempt_id:'a3',occurred_at:new Date(Date.parse(at)+DAY).toISOString()}]).knowledge.length,1);
   assert.equal(project([e,{...e,knowledge_item_id:'k2',id:'4',attempt_id:'a4'}]).estimate,0.65517);
+});
+test('P4 Review surface ignores policy/option identities but retains pedagogical answer differences',()=>{
+  const raw=JSON.parse(readFileSync('content/fixtures/p4/en-lesson.json','utf8')).activities[0];
+  const first=activityContractSchema.parse(raw),second=structuredClone(first);
+  second.response.answer_policy.id='OTHER-POLICY';second.response.answer_policy.version='99';
+  const accepted=second.response.answer_policy.accepted_option_ids![0]!;
+  second.presentation.options!.find(o=>o.id===accepted)!.id='RENAMED-OPTION';
+  second.response.answer_policy.accepted_option_ids=['RENAMED-OPTION'];
+  second.presentation.options!.reverse();second.presentation.prompt=`  ${second.presentation.prompt.toUpperCase()}  `;
+  assert.equal(reviewSurface(first),reviewSurface(second));
+  second.presentation.options!.find(o=>o.id==='RENAMED-OPTION')!.label='A different target';
+  assert.notEqual(reviewSurface(first),reviewSurface(second));
 });
 test('P4 weight considers operation, difficulty, hint, retry, freshness, latency and transcript',()=>{
   const weight=evidenceWeight(e,null);assert(evidenceWeight({...e,facet:'production'},null)>weight);

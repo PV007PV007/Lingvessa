@@ -1,0 +1,25 @@
+{
+  "phase": "P4",
+  "tested_sha": "b19458620e21e5942c2c0666c8d49d9b42f136f2",
+  "run_id": 35334108022,
+  "job_id": 105564886333,
+  "status": "FAIL",
+  "failures": [
+    {
+      "gate": "P2-DB-001",
+      "cause": "Expected 3 migrations after additive P4 introduced fourth",
+      "fix": "Expect four, continue verifying every migration checksum"
+    },
+    {
+      "gate": "P3-ISO-001",
+      "cause": "Foreign owner rejection text changed when first profile lock added",
+      "fix": "Assert NOT_FOUND contract code"
+    },
+    {
+      "gate": "P4-DB-001",
+      "cause": "Synthetic P4 database prefix excluded by local guard",
+      "fix": "Extend explicit allowlist to P4 and preserve localhost/hex-only/production rejection"
+    }
+  ],
+  "acceptance": "No complete P4 runtime acceptance is claimed from this run"
+}

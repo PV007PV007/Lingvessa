@@ -2,7 +2,7 @@ import {randomUUID} from 'node:crypto';
 import type pg from 'pg';
 import {reviewStartSchema,reviewSkipSchema} from '../../packages/activity-schemas/src/review.js';
 import {activityContractSchema} from '../../packages/activity-schemas/src/lesson.js';
-import {buildSession,policy} from '../../packages/mastery-review/src/index.js';
+import {buildSession,policy,reviewSurface} from '../../packages/mastery-review/src/index.js';
 import type {Candidate} from '../../packages/mastery-review/src/index.js';
 import {sha256} from '../../packages/application/src/lesson.js';
 import {ContractError,assertUuid} from '../../packages/domain/src/identity.js';
@@ -57,7 +57,7 @@ export class ReviewRepository {
           if(input.mode==='mistakes'&&!unresolved)continue;
           const observed=evidence.find(e=>e.knowledge_item_id===target.knowledge_item_id&&e.facet===mapping.facet);
           candidates.push({knowledge_item_id:target.knowledge_item_id,facet:mapping.facet,skill:mapping.skill,item_id:activity.id,lesson_id:lesson.lesson_id,publication_id:lesson.publication_id,content_version_id:lesson.content_version_id,
-            surface:[activity.presentation.prompt,activity.presentation.stimulus??'',JSON.stringify(activity.response.answer_policy)].join('|'),
+            surface:reviewSurface(activity),
             due_at:due?.due_at?.toISOString()??null,unresolved,estimate:state?Number(state.estimate):0.5,uncertainty:state?Number(state.uncertainty):1,
             selected:Boolean(input.topic_id||input.collection_id||input.mode==='all'||input.mode==='words'||input.mode==='phrases'),fresh:!state,source_evidence_id:observed?.id??null});
         }

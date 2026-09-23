@@ -131,7 +131,7 @@ test('P4 real PostgreSQL: mastery/recompute, Review, collections, reset and P3 a
   await gate('P4-DB-002 introspection and clean database recreation',async()=>{
    const pulled=spawnSync('pnpm',['exec','prisma','db','pull','--print'],{env,encoding:'utf8',timeout:60000});assert.equal(pulled.status,0);mkdirSync('artifacts/p4',{recursive:true});writeFileSync('artifacts/p4/introspected.prisma',pulled.stdout);
    const actual=[...pulled.stdout.matchAll(/^model (\w+)/gm)].map(m=>m[1]).sort(),expected=[...readFileSync('prisma/schema.prisma','utf8').matchAll(/^model (\w+)/gm)].map(m=>m[1]).sort();assert.deepEqual(actual,expected);
-   const recreate=`${name}_fresh`,freshUrl=new URL(url);freshUrl.pathname=`/${recreate}`;await admin.query(`CREATE DATABASE "${recreate}" TEMPLATE template0 ENCODING 'UTF8'`);
+   const recreate=`lingvessa_p4_test_${randomBytes(8).toString('hex')}`,freshUrl=new URL(url);freshUrl.pathname=`/${recreate}`;await admin.query(`CREATE DATABASE "${recreate}" TEMPLATE template0 ENCODING 'UTF8'`);
    try{const freshEnv={...env,DATABASE_URL:freshUrl.toString()};assert.equal(spawnSync('pnpm',['db:migrate'],{env:freshEnv,encoding:'utf8',timeout:60000}).status,0);await seedBootstrap(freshEnv);await seedBootstrap(freshEnv);
     const fresh=new pg.Client({connectionString:freshUrl.toString()});await fresh.connect();try{assert.equal((await fresh.query('SELECT count(*) FROM knowledge_mastery_states')).rows[0].count,'0');assert.equal((await fresh.query('SELECT count(*) FROM learning_policies')).rows[0].count,'1');}finally{await fresh.end();}
    }finally{await admin.query(`DROP DATABASE "${recreate}" WITH (FORCE)`);}

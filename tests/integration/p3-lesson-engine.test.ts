@@ -100,7 +100,7 @@ test('P3 PostgreSQL: pinned bilingual lesson runtime, attempts, idempotency, rem
     let enRun = await lessons.start(learnerId,{ language_profile_id: profiles.en, publication_id: publications.en.id, lesson_id: p3.en.lesson_id });
     await run('P3-ISO-001 DB owner/profile/language/publication lineage rejects EN/CS and IDOR mismatches', async () => {
       await assert.rejects(lessons.start(learnerId,{ language_profile_id: profiles.en, publication_id: publications.cs.id, lesson_id: p3.cs.lesson_id }), /unavailable/u);
-      await assert.rejects(lessons.start(otherId,{ language_profile_id: profiles.en, publication_id: publications.en.id, lesson_id: p3.en.lesson_id }), /unavailable/u);
+      await assert.rejects(lessons.start(otherId,{ language_profile_id: profiles.en, publication_id: publications.en.id, lesson_id: p3.en.lesson_id }), {code:'NOT_FOUND'});
       await assert.rejects(lessons.get(otherId,enRun.id), /not found/u);
       await sqlReject(db,'UPDATE lesson_runs SET language_id=$1,revision=revision+1 WHERE id=$2',[languageIds.cs,enRun.id],'23514');
       await sqlReject(db,`INSERT INTO lesson_runs(id,user_id,language_profile_id,language_id,variant_id,publication_id,publication_checksum,lesson_id,content_version_id,content_checksum,manifest)
