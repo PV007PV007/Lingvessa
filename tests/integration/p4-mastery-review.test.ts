@@ -38,7 +38,7 @@ test('P4 real PostgreSQL: mastery/recompute, Review, collections, reset and P3 a
    assert.equal((await db.query('SELECT parameters FROM learning_policies WHERE model_version=$1',[policy.model_version])).rows[0].parameters.scheduler_version,policy.scheduler_version);
    await reject("UPDATE learning_policies SET parameters='{}'",[]);
   });
-  const f=await p4Fixture(db),lessons=new LessonRepository(db),mastery=new MasteryRepository(db),review=new ReviewRepository(db),collections=new CollectionRepository(db),resets=new ResetRepository(db);
+  const f=await p4Fixture(db),lessons=new LessonRepository(db),mastery=new MasteryRepository(db),review=new ReviewRepository(db,'test'),collections=new CollectionRepository(db),resets=new ResetRepository(db);
   const start=(language:'en'|'cs',kind:'lesson'|'core'='lesson')=>lessons.start(f.learner,{language_profile_id:f.profiles[language],publication_id:f.publications[language][kind],lesson_id:f.sources[language][kind].lesson_id});
   const finish=async(initial:RunView)=>{let run=initial;let cap=0;while(run.state!=='completed'){assert(cap++<30);const a=f.activities.get(run.current_activity_id!)!;await lessons.submit(f.learner,run.id,command(run,a));run=await lessons.get(f.learner,run.id);}return run;};
   let en:RunView,cs:RunView;
@@ -65,6 +65,8 @@ test('P4 real PostgreSQL: mastery/recompute, Review, collections, reset and P3 a
    await reject(`INSERT INTO knowledge_mastery_states SELECT user_id,language_profile_id,language_id,$1,facet,model_version,estimate,uncertainty,evidence_count,lapse_count,last_evidence_at,updated_at FROM knowledge_mastery_states WHERE language_profile_id=$2 LIMIT 1`,[csKnowledge,f.profiles.en]);
    await reject(`INSERT INTO skill_mastery_states SELECT user_id,language_profile_id,language_id,'reading',model_version,estimate,uncertainty,evidence_count,lapse_count,last_evidence_at,updated_at FROM skill_mastery_states WHERE language_profile_id=$1 LIMIT 1`,[f.profiles.en]);
    await reject(`INSERT INTO review_schedules SELECT user_id,language_profile_id,language_id,$1,facet,skill,scheduler_version,state,difficulty,stability_days,due_at,lapses,reps,updated_at FROM review_schedules WHERE language_profile_id=$2 LIMIT 1`,[csKnowledge,f.profiles.en]);
+   await reject("UPDATE review_schedules SET skill='pronunciation' WHERE facet='meaning'",[]);
+   await reject("UPDATE knowledge_mastery_states SET facet='invented_facet' WHERE language_profile_id=$1",[f.profiles.en]);
    await assert.rejects(mastery.summary(f.other,f.profiles.en),/not found/);
    await assert.rejects(review.start(f.learner,{language_profile_id:f.profiles.en,topic_id:f.sources.cs.base.entities.find(e=>e.kind==='module')!.id}),/not found/);
   });
@@ -77,6 +79,7 @@ test('P4 real PostgreSQL: mastery/recompute, Review, collections, reset and P3 a
    const state=await mastery.summary(f.learner,f.profiles.en,true);await lessons.submit(f.learner,run.id,c);assert.deepEqual(await mastery.summary(f.learner,f.profiles.en,true),state);await finish(await lessons.get(f.learner,run.id));
   });
   await gate('P4-REVIEW-001 candidate isolation, immutable selection, shared attempts, skip and expiry',async()=>{
+   assert.equal((await new ReviewRepository(db).start(f.learner,{language_profile_id:f.profiles.en})).item_count,0,'Default stable reader cannot see test publications');
    const input={language_profile_id:f.profiles.en,mode:'all',cap:10};const sessions=await Promise.all([review.start(f.learner,input),review.start(f.learner,input)]);let s=sessions[0];assert.equal(s.id,sessions[1].id);assert(s.item_count>0);assert(s.item_count<=10);
    assert(s.items.every((i:{knowledge_item_id:string})=>!f.sources.cs.base.entities.some(e=>e.id===i.knowledge_item_id)));
    await assert.rejects(review.get(f.other,s.id),/not found/);const first=s.items[0];assert(first);const oldDue=(await db.query('SELECT * FROM review_schedules WHERE language_profile_id=$1 ORDER BY knowledge_item_id,facet,scheduler_version',[f.profiles.en])).rows;
@@ -107,6 +110,16 @@ test('P4 real PostgreSQL: mastery/recompute, Review, collections, reset and P3 a
    const enBefore=await mastery.summary(f.learner,f.profiles.en,true),csBefore=await mastery.summary(f.learner,f.profiles.cs,true);
    const request={request_id:randomUUID(),language_profile_id:f.profiles.en,scope:'lesson',target_id:f.sources.en.lesson.lesson_id,reset_mastery:false,confirmed:true};
    await resets.reset(f.learner,request);assert.deepEqual(await mastery.summary(f.learner,f.profiles.en,true),enBefore);
+   await assert.rejects(resets.reset(f.other,{...request,request_id:randomUUID()}),{code:'NOT_FOUND'});
+   await assert.rejects(resets.reset(f.learner,{...request,reset_mastery:true}),{code:'CONFLICT'});
+   const moduleId=f.sources.en.base.entities.find(e=>e.kind==='module')!.id;
+   await assert.rejects(resets.reset(f.learner,{...request,request_id:randomUUID(),scope:'module',target_id:f.sources.cs.base.entities.find(e=>e.kind==='module')!.id}),{code:'NOT_FOUND'});
+   const evidenceBeforeModule=(await db.query('SELECT count(*) FROM evidence_events')).rows[0].count;
+   await resets.reset(f.learner,{...request,request_id:randomUUID(),scope:'module',target_id:moduleId,reset_mastery:true});
+   assert((await mastery.summary(f.learner,f.profiles.en)).skills.every(x=>x.evidence_count===0));
+   assert.equal((await db.query('SELECT count(*) FROM evidence_events')).rows[0].count,evidenceBeforeModule);
+   assert.deepEqual(await mastery.summary(f.learner,f.profiles.cs,true),csBefore);
+   await finish(await start('en'));
    const active=await start('en');const counts=(await db.query('SELECT (SELECT count(*) FROM evidence_events) AS evidence,(SELECT count(*) FROM activity_attempts) AS attempts')).rows[0];
    await assert.rejects(resets.reset(f.learner,{request_id:randomUUID(),language_profile_id:f.profiles.en,scope:'language',reset_mastery:true,confirmed:true}),/confirmation/);
    const full={request_id:randomUUID(),language_profile_id:f.profiles.en,scope:'language',reset_mastery:true,confirmed:true,confirmation:'RESET_LANGUAGE'};

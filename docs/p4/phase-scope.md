@@ -15,3 +15,5 @@ Reset defaults to position-only. `reset_mastery=true` explicitly resets the face
 Collections own only their entries. Custom text has no automatic curriculum/knowledge identity or mastery credit; absent audio is explicit until P5. Collection deletion only cascades to its own entries.
 
 Protected governing contracts are unchanged; numeric implementation policies and P4 additive schema/API behavior are versioned. Main is NOT technically protected under EXC-P1-001. P5 is not authorized.
+
+Publication-channel boundary: the learner Review service defaults to active stable pointers, matching the catalog. Synthetic fixtures inject the test channel when constructing the same repository for isolated integration tests. Channel is never accepted from a learner request. P2 stable publication remains blocked until its later release gates; P4 does not publish a production course.

@@ -29,5 +29,12 @@
     "passed": "P1/P2/P3 DB regression; P4 migration, fixtures, mastery, isolation and atomicity gates",
     "failure": "P4-REVIEW-001: no candidates because fixture publications were never activated",
     "fix": "Activate approved synthetic stable publications through the real ContentRepository; Review selects only stable active pointers, matching learner catalog"
+  },
+  "third_run": {
+    "tested_sha": "0c4946ae9d69d8a489a55b883f909fd6f11c1923",
+    "run_id": 35889829270,
+    "job_id": 107279184736,
+    "failure": "Synthetic fixture used stable publication, correctly rejected by accepted later-release gate",
+    "fix": "Retain test publication channel; activate through normal pointer API; inject test channel only in synthetic ReviewRepository fixture. Application default remains stable and learner cannot choose channel; no release gate removed."
   }
 }

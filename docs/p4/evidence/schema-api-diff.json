@@ -1,0 +1,75 @@
+{
+  "phase": "P4",
+  "accepted_parent_sha": "07b6aae9b001dbb4d620df3d491473a95f674ad2",
+  "governing_contract_change": "No contract change. Additive implementation of Plan v1.4 \u00a711; immutable accepted migrations and governing PDFs unchanged.",
+  "migration": {
+    "path": "prisma/migrations/202609180001_p4_mastery_review/migration.sql",
+    "sha256": "6e0d8c8a64c73160cede7f6acf5c6b0d03614ba6648c8be9945c8ac333bb0b0f"
+  },
+  "added_tables": [
+    "learning_policies",
+    "mastery_facets",
+    "knowledge_mastery_states",
+    "skill_mastery_states",
+    "review_schedules",
+    "mistake_instances",
+    "learning_reset_jobs",
+    "mastery_reset_targets",
+    "collections",
+    "collection_entries",
+    "review_sessions",
+    "review_session_items"
+  ],
+  "existing_table_extensions": {
+    "lesson_runs": [
+      "run_kind",
+      "review_session_id",
+      "selected_item_id",
+      "superseded_at"
+    ],
+    "lesson_run_items": [
+      "hint_count"
+    ],
+    "evidence_events": [
+      "composite owner key",
+      "hinted independence; insert guard validates server-observed hint",
+      "clock_timestamp default for new evidence"
+    ],
+    "activity_attempts": [
+      "scope guard for expired/cancelled/out-of-order Review and superseded runs",
+      "clock_timestamp default for new attempts"
+    ]
+  },
+  "identity": "No UUID/stable_code/version_code contract change. Review pins existing publication/content/activity UUIDs and does not manufacture published versions.",
+  "transaction": "Profile lock precedes run/attempt locks. Attempt + evidence + projection + mistake + review settlement + outbox commit/rollback together. Immutable receipts serve retries before terminal-state rejection.",
+  "reset": "Audited scope and target cutoff mask historic evidence for projection recomputation. Historical records are retained. Current/future progress views must respect these reset jobs rather than treating every historical completed run as current progress.",
+  "rollback": "Do not edit/drop historical attempts/evidence/publications. Stop new P4 writes and deploy a compatible application rollback; preserve additive tables and return to previous active content pointer through reviewed activation. Any destructive data rollback requires a separate reviewed migration/restore decision.",
+  "api_routes": [
+    "GET /api/v1/mastery/summary",
+    "GET /api/v1/lesson-runs/{id}/summary",
+    "GET /api/v1/mistakes",
+    "POST /api/v1/review-sessions",
+    "GET /api/v1/review-sessions/{id}",
+    "POST /api/v1/review-sessions/{id}/skip",
+    "POST /api/v1/review-sessions/{id}/cancel",
+    "POST /api/v1/collections",
+    "GET /api/v1/collections",
+    "GET /api/v1/collections/{id}",
+    "PATCH /api/v1/collections/{id}",
+    "DELETE /api/v1/collections/{id}",
+    "POST /api/v1/collections/{id}/entries",
+    "PUT /api/v1/collections/{id}/entries/{entry}",
+    "DELETE /api/v1/collections/{id}/entries/{entry}",
+    "POST /api/v1/learning-resets",
+    "POST /api/v1/lesson-runs/{id}/hint"
+  ],
+  "api_boundary": "Authenticated owner/profile; CSRF for writes; allowlisted server proxy; strict request schemas; no endpoint accepts client score, due date, model, owner or AI feedback as authority.",
+  "out_of_scope": [
+    "P5 speech/media",
+    "P6/P7 complete module authoring",
+    "P8 AI foundation",
+    "P9 learner AI",
+    "P10 full Progress/settings",
+    "P11/P13 production load/privacy release gates"
+  ]
+}

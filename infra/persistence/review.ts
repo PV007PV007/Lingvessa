@@ -14,7 +14,9 @@ import {LessonRepository} from './lessons.js';
 
 export class ReviewRepository {
   private readonly lessons:LessonRepository;
-  constructor(private readonly pool:pg.Pool){this.lessons=new LessonRepository(pool);}
+  // Production wiring always uses stable. Synthetic integration fixtures explicitly inject test.
+  // This is a server-owned dependency; learner requests cannot choose a publication channel.
+  constructor(private readonly pool:pg.Pool,private readonly contentChannel:'stable'|'test'|'preview'='stable'){this.lessons=new LessonRepository(pool);}
   async start(userId:string,raw:unknown){
     assertUuid(userId);const input=reviewStartSchema.parse(raw);const requestHash=sha256(input);
     return transaction(this.pool,async db=>{
@@ -28,11 +30,11 @@ export class ReviewRepository {
       // Active publication pointers only; every candidate is rooted in the selected profile and pinned content.
       const source=(await db.query(`SELECT DISTINCT p.id AS publication_id,pe.entity_id AS lesson_id,cv.id AS content_version_id,cv.payload,
         v.code AS variety FROM language_profiles lp JOIN variants v ON v.id=lp.variant_id AND v.language_id=lp.language_id
-        JOIN publication_pointers pp ON pp.language_id=lp.language_id AND pp.channel='stable' JOIN publications p ON p.id=pp.publication_id AND p.language_id=lp.language_id
+        JOIN publication_pointers pp ON pp.language_id=lp.language_id AND pp.channel=$4 JOIN publications p ON p.id=pp.publication_id AND p.language_id=lp.language_id
         JOIN publication_entries pe ON pe.publication_id=p.id AND pe.language_id=lp.language_id
         JOIN lessons l ON l.id=pe.entity_id AND l.language_id=lp.language_id
         JOIN content_versions cv ON cv.id=pe.content_version_id AND cv.language_id=lp.language_id
-        WHERE lp.id=$1 AND lp.user_id=$2 AND p.status='published' AND ($3::uuid IS NULL OR l.module_id=$3)`,[profile.id,userId,input.topic_id??null])).rows;
+        WHERE lp.id=$1 AND lp.user_id=$2 AND p.status='published' AND ($3::uuid IS NULL OR l.module_id=$3)`,[profile.id,userId,input.topic_id??null,this.contentChannel])).rows;
       const states=(await db.query('SELECT * FROM knowledge_mastery_states WHERE language_profile_id=$1 AND model_version=$2',[profile.id,policy.model_version])).rows;
       const schedules=(await db.query('SELECT * FROM review_schedules WHERE language_profile_id=$1 AND scheduler_version=$2',[profile.id,policy.scheduler_version])).rows;
       const evidence=(await db.query(`SELECT e.* FROM evidence_events e WHERE e.language_profile_id=$1 AND NOT EXISTS(
