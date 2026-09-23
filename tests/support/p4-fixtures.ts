@@ -31,7 +31,8 @@ export async function p4Fixture(db:pg.Pool){
     for(const gate of ['linguistic','pedagogical','technical','accessibility','media','originality'])if(!(await db.query('SELECT 1 FROM approvals WHERE target_content_version_id=$1 AND reviewer_id=$2 AND gate_type=$3',[id,reviewer,gate])).rowCount)
      await content.approve(reviewer,id,v.checksum,v.revision,gate,'approved',`Synthetic P4 ${gate} approval`);
    }
-   const id=randomUUID();await content.publish({id,actorId:reviewer,courseId:source.base.entities.find(e=>e.kind==='course')!.id,languageId:source.base.language_id,channel:'test',versionCode:`p4-${kind}-${language}-1`,versionIds});publications[language][kind]=id;
+   const id=randomUUID();await content.publish({id,actorId:reviewer,courseId:source.base.entities.find(e=>e.kind==='course')!.id,languageId:source.base.language_id,channel:'stable',versionCode:`p4-${kind}-${language}-1`,versionIds});publications[language][kind]=id;
+   await content.activate(reviewer,id,kind==='lesson'?null:1);
   }
  }
  const activities=new Map([...sources.en.lesson.activities,...sources.en.core.activities,...sources.cs.lesson.activities,...sources.cs.core.activities].map(a=>[a.id,a]));

@@ -21,5 +21,13 @@
       "fix": "Extend explicit allowlist to P4 and preserve localhost/hex-only/production rejection"
     }
   ],
-  "acceptance": "No complete P4 runtime acceptance is claimed from this run"
+  "acceptance": "No complete P4 runtime acceptance is claimed from this run",
+  "second_run": {
+    "tested_sha": "8519043385496d8f64d986f6d6a8f48306f7e744",
+    "run_id": 35889104161,
+    "job_id": 107276767827,
+    "passed": "P1/P2/P3 DB regression; P4 migration, fixtures, mastery, isolation and atomicity gates",
+    "failure": "P4-REVIEW-001: no candidates because fixture publications were never activated",
+    "fix": "Activate approved synthetic stable publications through the real ContentRepository; Review selects only stable active pointers, matching learner catalog"
+  }
 }

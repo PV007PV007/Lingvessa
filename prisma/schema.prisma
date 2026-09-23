@@ -650,7 +650,7 @@ model activity_attempts {
   answer_policy_version   String
   mastery_model_version   String
   scheduler_version       String
-  accepted_at             DateTime @default(now()) @db.Timestamptz(6)
+  accepted_at             DateTime @default(dbgenerated("clock_timestamp()")) @db.Timestamptz(6)
 
   @@unique([user_id, attempt_id])
   @@unique([lesson_run_id, client_sequence])
@@ -683,7 +683,7 @@ model evidence_events {
   evaluator_version       String
   mastery_model_version   String
   scheduler_version       String
-  occurred_at             DateTime @default(now()) @db.Timestamptz(6)
+  occurred_at             DateTime @default(dbgenerated("clock_timestamp()")) @db.Timestamptz(6)
 
   @@unique([user_id, attempt_id, knowledge_item_id, skill, facet])
   @@schema("public")
@@ -765,7 +765,7 @@ model publication_knowledge_edges {
 /// P4 scalar view; composite FKs, checks and immutability are SQL migration-owned.
 model learning_policies {
   model_version String @id
-  scheduler_version String
+  scheduler_version String @unique
   parameters Json
   checksum String? @default(dbgenerated())
   created_at DateTime @default(now()) @db.Timestamptz(6)
@@ -841,7 +841,7 @@ model mistake_instances {
   language_id String @db.Uuid
   knowledge_item_id String @db.Uuid
   facet String
-  source_evidence_id String @db.Uuid
+  source_evidence_id String @unique @db.Uuid
   item_id String @db.Uuid
   error_type String
   first_seen DateTime @db.Timestamptz(6)
@@ -864,7 +864,7 @@ model learning_reset_jobs {
   reset_mastery Boolean
   confirmed Boolean
   status String
-  created_at DateTime @default(now()) @db.Timestamptz(6)
+  created_at DateTime @default(dbgenerated("clock_timestamp()")) @db.Timestamptz(6)
   @@schema("public")
 }
 

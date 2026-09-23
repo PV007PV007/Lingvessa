@@ -28,7 +28,7 @@ export class ReviewRepository {
       // Active publication pointers only; every candidate is rooted in the selected profile and pinned content.
       const source=(await db.query(`SELECT DISTINCT p.id AS publication_id,pe.entity_id AS lesson_id,cv.id AS content_version_id,cv.payload,
         v.code AS variety FROM language_profiles lp JOIN variants v ON v.id=lp.variant_id AND v.language_id=lp.language_id
-        JOIN publication_pointers pp ON pp.language_id=lp.language_id JOIN publications p ON p.id=pp.publication_id AND p.language_id=lp.language_id
+        JOIN publication_pointers pp ON pp.language_id=lp.language_id AND pp.channel='stable' JOIN publications p ON p.id=pp.publication_id AND p.language_id=lp.language_id
         JOIN publication_entries pe ON pe.publication_id=p.id AND pe.language_id=lp.language_id
         JOIN lessons l ON l.id=pe.entity_id AND l.language_id=lp.language_id
         JOIN content_versions cv ON cv.id=pe.content_version_id AND cv.language_id=lp.language_id

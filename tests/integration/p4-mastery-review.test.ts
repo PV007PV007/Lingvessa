@@ -130,7 +130,20 @@ test('P4 real PostgreSQL: mastery/recompute, Review, collections, reset and P3 a
   });
   await gate('P4-DB-002 introspection and clean database recreation',async()=>{
    const pulled=spawnSync('pnpm',['exec','prisma','db','pull','--print'],{env,encoding:'utf8',timeout:60000});assert.equal(pulled.status,0);mkdirSync('artifacts/p4',{recursive:true});writeFileSync('artifacts/p4/introspected.prisma',pulled.stdout);
-   const actual=[...pulled.stdout.matchAll(/^model (\w+)/gm)].map(m=>m[1]).sort(),expected=[...readFileSync('prisma/schema.prisma','utf8').matchAll(/^model (\w+)/gm)].map(m=>m[1]).sort();assert.deepEqual(actual,expected);
+   const schema=readFileSync('prisma/schema.prisma','utf8');
+   const actual=[...pulled.stdout.matchAll(/^model (\w+)/gm)].map(m=>m[1]).sort(),expected=[...schema.matchAll(/^model (\w+)/gm)].map(m=>m[1]).sort();assert.deepEqual(actual,expected);
+   // SQL owns constraints; Prisma's scalar view must still match every P4-owned column/type/nullability.
+   const models=[...schema.slice(schema.indexOf('model learning_policies')).matchAll(/model (\w+) \{([^}]+)\}/g)];
+   for(const [,table,body] of models){
+    const fields=[...body!.matchAll(/^\s+(\w+)\s+(String|Int|Boolean|DateTime|Decimal|Json)(\?)?([^\n]*)/gm)];
+    const columns=(await db.query('SELECT column_name,data_type,is_nullable,numeric_precision,numeric_scale FROM information_schema.columns WHERE table_schema=\'public\' AND table_name=$1 ORDER BY column_name',[table])).rows;
+    assert.deepEqual(columns.map(c=>c.column_name),fields.map(f=>f[1]).sort(),`${table} columns`);
+    for(const [,name,type,optional,attributes] of fields){const column=columns.find(c=>c.column_name===name)!;
+     const sqlType=attributes!.includes('@db.Uuid')?'uuid':({String:'text',Int:'integer',Boolean:'boolean',DateTime:'timestamp with time zone',Decimal:'numeric',Json:'jsonb'} as Record<string,string>)[type!];
+     assert.equal(column.data_type,sqlType,`${table}.${name} type`);assert.equal(column.is_nullable,optional?'YES':'NO',`${table}.${name} nullable`);
+     const decimal=/@db.Decimal\((\d+),\s*(\d+)\)/.exec(attributes!);if(decimal){assert.equal(column.numeric_precision,Number(decimal[1]));assert.equal(column.numeric_scale,Number(decimal[2]));}
+    }
+   }
    const recreate=`lingvessa_p4_test_${randomBytes(8).toString('hex')}`,freshUrl=new URL(url);freshUrl.pathname=`/${recreate}`;await admin.query(`CREATE DATABASE "${recreate}" TEMPLATE template0 ENCODING 'UTF8'`);
    try{const freshEnv={...env,DATABASE_URL:freshUrl.toString()};assert.equal(spawnSync('pnpm',['db:migrate'],{env:freshEnv,encoding:'utf8',timeout:60000}).status,0);await seedBootstrap(freshEnv);await seedBootstrap(freshEnv);
     const fresh=new pg.Client({connectionString:freshUrl.toString()});await fresh.connect();try{assert.equal((await fresh.query('SELECT count(*) FROM knowledge_mastery_states')).rows[0].count,'0');assert.equal((await fresh.query('SELECT count(*) FROM learning_policies')).rows[0].count,'1');}finally{await fresh.end();}
