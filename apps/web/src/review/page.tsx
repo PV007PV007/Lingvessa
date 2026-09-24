@@ -26,7 +26,7 @@ export function ReviewPage(){
  <button disabled={busy||!profile} onClick={()=>void act(async()=>setSession(await api('review-sessions','POST',{language_profile_id:profile,mode,cap:10,...(collection?{collection_id:collection}:{})})))}>Почати повторення</button>
  {session&&<section><h2>{name(profiles.find(p=>p.id===profile))}: повторення</h2><p>{Math.min(session.position+1,session.item_count)} / {session.item_count} · Приблизно {Math.ceil(session.eta_seconds/60)} хв.</p>
  {session.state==='active'&&current?<>
- <LessonPlayer embedded key={current.lesson_run_id} runId={current.lesson_run_id}/>
+ <LessonPlayer embedded key={current.lesson_run_id} runId={current.lesson_run_id} sessionCsrf={()=>csrf.current}/>
  <div className="review-actions"><button disabled={busy} onClick={()=>void act(async()=>setSession(await api(`review-sessions/${session.id}`)))}>Наступна вправа / оновити</button>
  <button disabled={busy} onClick={()=>void act(async()=>setSession(await api(`review-sessions/${session.id}/skip`,'POST',{expected_position:session.position})))}>Пропустити без зарахування</button>
  <button disabled={busy} onClick={()=>void act(async()=>setSession(await api(`review-sessions/${session.id}/cancel`,'POST')))}>Завершити сесію</button></div></>:<p>{session.state==='completed'?(session.item_count?'Повторення завершено.':'Немає доступних вправ для цього вибору.'):'Сесію завершено або її час минув. Можна почати нову.'}</p>}</section>}

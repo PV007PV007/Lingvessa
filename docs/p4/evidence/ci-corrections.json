@@ -51,5 +51,13 @@
     "passed": "P1/P2/P3 regression; P4 DB/FIX/MAST/ISO/TXN/REVIEW/SUPPORT/COLL gates",
     "failure": "P4-RESET-001: PostgreSQL 42P08 uuid versus text in INSERT SELECT DISTINCT reset targets",
     "fix": "Explicitly cast reset job/owner/profile/language SELECT parameters to uuid; scope and immutable cutoff semantics unchanged."
+  },
+  "sixth_run": {
+    "tested_sha": "3063632791b756ff98d3da44c7ac1d79171709db",
+    "run_id": 35956035051,
+    "job_id": 107494454170,
+    "passed": "All non-browser P4 DB/API gates including reset and scalar parity in P1 workflow; P4 browser workflow reached reset PASS",
+    "failure": "Playwright exact getByLabel for wrapped select did not resolve despite rendered accessible combobox and 200 login/csrf/profile/collection requests (artifact 10790890101)",
+    "fix": "Use accessible combobox role/name; retain same expected profile and zero retries. Embedded LessonPlayer shares the authenticated parent CSRF token so child mount cannot rotate/invalidate parent actions; require actual skip HTTP 200. Add direct-SQL immutable Review selection rejection cases."
   }
 }

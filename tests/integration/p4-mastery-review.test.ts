@@ -82,6 +82,10 @@ test('P4 real PostgreSQL: mastery/recompute, Review, collections, reset and P3 a
    assert.equal((await new ReviewRepository(db).start(f.learner,{language_profile_id:f.profiles.en})).item_count,0,'Default stable reader cannot see test publications');
    const input={language_profile_id:f.profiles.en,mode:'all',cap:10};const sessions=await Promise.all([review.start(f.learner,input),review.start(f.learner,input)]);let s=sessions[0];assert.equal(s.id,sessions[1].id);assert(s.item_count>0);assert(s.item_count<=10);
    assert(s.items.every((i:{knowledge_item_id:string})=>!f.sources.cs.base.entities.some(e=>e.id===i.knowledge_item_id)));
+   // Session selection is historical: direct SQL cannot retarget it, even within English.
+   await reject("UPDATE review_session_items SET facet=CASE WHEN facet='meaning' THEN 'spelling' ELSE 'meaning' END WHERE session_id=$1 AND ordinal=0",[s.id]);
+   await reject('UPDATE review_session_items SET knowledge_item_id=$1 WHERE session_id=$2 AND ordinal=0',[f.sources.cs.lesson.activities[0]!.learning.knowledge_refs[0]!.knowledge_item_id,s.id]);
+
    await assert.rejects(review.get(f.other,s.id),/not found/);const first=s.items[0];assert(first);const oldDue=(await db.query('SELECT * FROM review_schedules WHERE language_profile_id=$1 ORDER BY knowledge_item_id,facet,scheduler_version',[f.profiles.en])).rows;
    s=await review.skip(f.learner,s.id,{expected_position:0});await review.skip(f.learner,s.id,{expected_position:0});assert.deepEqual((await db.query('SELECT * FROM review_schedules WHERE language_profile_id=$1 ORDER BY knowledge_item_id,facet,scheduler_version',[f.profiles.en])).rows,oldDue);
    const skipped=await lessons.get(f.learner,first.lesson_run_id);await assert.rejects(lessons.submit(f.learner,skipped.id,command(skipped,f.activities.get(skipped.current_activity_id!)!)),/expired|position/);

@@ -9,7 +9,7 @@ import type { LessonPlayerState } from '../../../../packages/lesson-engine/src/s
 import { ActivityRenderer } from './activity';
 import { IndexedAttemptStorage } from './queue';
 
-export function LessonPlayer({runId,embedded=false}:{runId:string;embedded?:boolean}) {
+export function LessonPlayer({runId,embedded=false,sessionCsrf}:{runId:string;embedded?:boolean;sessionCsrf?:()=>string}) {
   const Wrapper=embedded?'section':'main';
   const [indicators,setIndicators]=useState<Array<{skill:string;estimate:number;uncertainty:number;evidence_count:number}>>([]);
   const [player,dispatch]=useReducer(lessonPlayerReducer,{kind:'loading'});
@@ -27,10 +27,16 @@ export function LessonPlayer({runId,embedded=false}:{runId:string;embedded?:bool
     if(loading.current)return;loading.current=true;
     setBusy(true);setNotice('Завантаження уроку…');setDiagnostic('');setConflictingAttempt(null);
     try {
-      const session=await fetch('/api/v1/auth/csrf',{method:'POST',headers:{'x-lingvessa-client':'web'},credentials:'include'});
-      if(session.status===401){setLoginRequired(true);setNotice('Увійдіть, щоб відновити урок.');return;}
-      if(!session.ok)throw new Error('SESSION_UNAVAILABLE');
-      csrf.current=(await session.json() as {csrf_token:string}).csrf_token;
+      if(embedded&&sessionCsrf){
+        // The authenticated Review parent owns this session token. A second rotation
+        // would invalidate its concurrent skip/collection actions on every item mount.
+        csrf.current=sessionCsrf();if(!csrf.current)throw new Error('SESSION_UNAVAILABLE');
+      }else{
+        const session=await fetch('/api/v1/auth/csrf',{method:'POST',headers:{'x-lingvessa-client':'web'},credentials:'include'});
+        if(session.status===401){setLoginRequired(true);setNotice('Увійдіть, щоб відновити урок.');return;}
+        if(!session.ok)throw new Error('SESSION_UNAVAILABLE');
+        csrf.current=(await session.json() as {csrf_token:string}).csrf_token;
+      }
       const me=await fetch('/api/v1/me',{credentials:'include'});if(!me.ok)throw new Error('SESSION_UNAVAILABLE');
       const owner=(await me.json() as {id:string}).id;
       client.current=new LessonApiClient(window.location.origin,()=>csrf.current);
