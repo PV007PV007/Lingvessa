@@ -4,7 +4,7 @@ Timestamp: 2026-09-24T04:25:21.548080+00:00
 Phase: P4 AUTHORIZED — IN PROGRESS; P0/P1/P2/P3 ACCEPTED.
 Branch: `implementation/p4-mastery-review`.
 Remote branch base/main merge SHA: `07b6aae9b001dbb4d620df3d491473a95f674ad2`.
-P3 final tested SHA: `9932a1bbf4b95353445422cb7bde7396d8f1fab5`. PR #3 MERGED via merge commit after owner-delegated review; review ID 5239772950. P4 PR #4 OPEN / DRAFT: https://github.com/PV007PV007/Lingvessa/pull/4. Current remote implementation SHA `8717f93fa3071e1a5be4e6d277997af64006a3b6`; CI failed and corrective batch is pending retest.
+P3 final tested SHA: `9932a1bbf4b95353445422cb7bde7396d8f1fab5`. PR #3 MERGED via merge commit after owner-delegated review; review ID 5239772950. P4 PR #4 OPEN / DRAFT: https://github.com/PV007PV007/Lingvessa/pull/4. Current remote implementation SHA `feb28a35691d15d45f4740ac6f99d9167cbdb115`; CI failed and corrective batch is pending retest.
 
 ## Current batch
 
@@ -28,3 +28,5 @@ Latest runtime batch: P1/P2/P3 integration regression passed on 8519043; P4 migr
 Correction checkpoint `0c4946ae9d69d8a489a55b883f909fd6f11c1923`: stable release gate correctly rejected synthetic publication. Corrective batch retains P2 test-only publications and explicitly injects test channel in integration service construction; normal application Review defaults to stable. No stable-publication gate removed, no P8/P13 work. New negative test proves default reader excludes test content. Reset scope coverage now includes module, foreign user/language and request-ID payload conflict.
 
 Latest exact-head CI failure (8717f93, P4 run 35890499817/job 107281449683): negative facet test performed a bulk update and hit a duplicate key before registry validation. Corrective batch isolates one row, preserving the required foreign-key/check rejection codes. No runtime contract change; full P4 acceptance still pending.
+
+Checkpoint feb28a35691d15d45f4740ac6f99d9167cbdb115: eight P4 runtime gate groups passed, including Review and collections. Module reset exposed PostgreSQL 42P08 in INSERT SELECT DISTINCT parameter inference. Added explicit UUID casts to the four identity parameters; no behavior/contract change. Full runtime retest pending.

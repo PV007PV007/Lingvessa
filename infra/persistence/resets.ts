@@ -20,7 +20,7 @@ export class ResetRepository {
       VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,true,'completed') RETURNING *`,[id,userId,profile.id,profile.language_id,input.request_id,hash,input.scope,input.target_id??null,input.reset_mastery])).rows[0];
     if(input.reset_mastery){
       await db.query(`INSERT INTO mastery_reset_targets(reset_job_id,user_id,language_profile_id,language_id,knowledge_item_id,facet)
-        SELECT DISTINCT $1,$2,$3,$4,e.knowledge_item_id,e.facet FROM evidence_events e JOIN activity_attempts a ON a.id=e.attempt_db_id
+        SELECT DISTINCT $1::uuid,$2::uuid,$3::uuid,$4::uuid,e.knowledge_item_id,e.facet FROM evidence_events e JOIN activity_attempts a ON a.id=e.attempt_db_id
         WHERE e.language_profile_id=$3 AND ($5='language' OR a.lesson_id=ANY($6::uuid[]))`,[id,userId,profile.id,profile.language_id,input.scope,lessons]);
     }
     // Explicit position reset supersedes active scoped runs. Completed historical runs are left immutable.

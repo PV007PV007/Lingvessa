@@ -43,5 +43,13 @@
     "job_id": 107281449683,
     "failure": "P4-ISO-001 bulk invalid-facet update collided with another facet primary key before the intended registry FK check",
     "fix": "Change exactly one projection row to an unregistered facet so the test isolates the registry FK. Continue requiring SQLSTATE 23503/23514; do not accept duplicate-key as isolation proof."
+  },
+  "fifth_run": {
+    "tested_sha": "feb28a35691d15d45f4740ac6f99d9167cbdb115",
+    "run_id": 35955643018,
+    "job_id": 107493274905,
+    "passed": "P1/P2/P3 regression; P4 DB/FIX/MAST/ISO/TXN/REVIEW/SUPPORT/COLL gates",
+    "failure": "P4-RESET-001: PostgreSQL 42P08 uuid versus text in INSERT SELECT DISTINCT reset targets",
+    "fix": "Explicitly cast reset job/owner/profile/language SELECT parameters to uuid; scope and immutable cutoff semantics unchanged."
   }
 }
