@@ -36,5 +36,12 @@
     "job_id": 107279184736,
     "failure": "Synthetic fixture used stable publication, correctly rejected by accepted later-release gate",
     "fix": "Retain test publication channel; activate through normal pointer API; inject test channel only in synthetic ReviewRepository fixture. Application default remains stable and learner cannot choose channel; no release gate removed."
+  },
+  "fourth_run": {
+    "tested_sha": "8717f93fa3071e1a5be4e6d277997af64006a3b6",
+    "run_id": 35890499817,
+    "job_id": 107281449683,
+    "failure": "P4-ISO-001 bulk invalid-facet update collided with another facet primary key before the intended registry FK check",
+    "fix": "Change exactly one projection row to an unregistered facet so the test isolates the registry FK. Continue requiring SQLSTATE 23503/23514; do not accept duplicate-key as isolation proof."
   }
 }

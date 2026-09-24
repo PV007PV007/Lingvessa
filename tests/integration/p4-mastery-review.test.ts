@@ -66,7 +66,7 @@ test('P4 real PostgreSQL: mastery/recompute, Review, collections, reset and P3 a
    await reject(`INSERT INTO skill_mastery_states SELECT user_id,language_profile_id,language_id,'reading',model_version,estimate,uncertainty,evidence_count,lapse_count,last_evidence_at,updated_at FROM skill_mastery_states WHERE language_profile_id=$1 LIMIT 1`,[f.profiles.en]);
    await reject(`INSERT INTO review_schedules SELECT user_id,language_profile_id,language_id,$1,facet,skill,scheduler_version,state,difficulty,stability_days,due_at,lapses,reps,updated_at FROM review_schedules WHERE language_profile_id=$2 LIMIT 1`,[csKnowledge,f.profiles.en]);
    await reject("UPDATE review_schedules SET skill='pronunciation' WHERE facet='meaning'",[]);
-   await reject("UPDATE knowledge_mastery_states SET facet='invented_facet' WHERE language_profile_id=$1",[f.profiles.en]);
+   await reject("UPDATE knowledge_mastery_states SET facet='invented_facet' WHERE ctid=(SELECT ctid FROM knowledge_mastery_states WHERE language_profile_id=$1 LIMIT 1)",[f.profiles.en]);
    await assert.rejects(mastery.summary(f.other,f.profiles.en),/not found/);
    await assert.rejects(review.start(f.learner,{language_profile_id:f.profiles.en,topic_id:f.sources.cs.base.entities.find(e=>e.kind==='module')!.id}),/not found/);
   });
