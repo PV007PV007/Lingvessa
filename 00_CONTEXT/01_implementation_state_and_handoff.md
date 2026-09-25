@@ -1,10 +1,10 @@
 # Lingvessa implementation state and handoff
 
-Timestamp: 2026-09-24T04:39:23.775701+00:00
+Timestamp: 2026-09-25T06:01:18.300993+00:00
 Phase: P4 AUTHORIZED — IN PROGRESS; P0/P1/P2/P3 ACCEPTED.
 Branch: `implementation/p4-mastery-review`.
 Remote branch base/main merge SHA: `07b6aae9b001dbb4d620df3d491473a95f674ad2`.
-P3 final tested SHA: `9932a1bbf4b95353445422cb7bde7396d8f1fab5`. PR #3 MERGED via merge commit after owner-delegated review; review ID 5239772950. P4 PR #4 OPEN / DRAFT: https://github.com/PV007PV007/Lingvessa/pull/4. Current remote implementation SHA `3063632791b756ff98d3da44c7ac1d79171709db`; CI failed and corrective batch is pending retest.
+P3 final tested SHA: `9932a1bbf4b95353445422cb7bde7396d8f1fab5`. PR #3 MERGED via merge commit after owner-delegated review; review ID 5239772950. P4 PR #4 OPEN / DRAFT: https://github.com/PV007PV007/Lingvessa/pull/4. Current remote implementation SHA `01d7d4aebb5fea08f058c6853c3a2a43d83b089e`; CI failed and corrective batch is pending retest.
 
 ## Current batch
 
@@ -32,3 +32,5 @@ Latest exact-head CI failure (8717f93, P4 run 35890499817/job 107281449683): neg
 Checkpoint feb28a35691d15d45f4740ac6f99d9167cbdb115: eight P4 runtime gate groups passed, including Review and collections. Module reset exposed PostgreSQL 42P08 in INSERT SELECT DISTINCT parameter inference. Added explicit UUID casts to the four identity parameters; no behavior/contract change. Full runtime retest pending.
 
 Checkpoint 3063632791b756ff98d3da44c7ac1d79171709db: non-browser integration is green. Hosted Playwright artifact 10790890101 proves login/profile/collection HTTP 200 and rendered language combobox; locator used exact nested label text and failed. Corrected to accessible role/name. Shared embedded-player CSRF handoff avoids independent token rotation invalidating parent Review actions; browser skip now asserts actual HTTP 200. Direct DB immutable Review-selection negatives added. No security check removed; final retest required.
+
+Checkpoint 01d7d4aebb5fea08f058c6853c3a2a43d83b089e: hosted P1 push/PR, P2 PR and P3 PR all green, including actual PostgreSQL and OCI regression. P4 browser successfully authenticates, starts Review and loads its shared player; its test-only APIRequestContext failed to send Secure cookie over HTTP loopback. Before/after mastery assertion now executes actual browser fetch, preserving secure cookie policy. Full P4 retest pending.

@@ -10,11 +10,14 @@ for(const language of ['en','cs'] as const){
   await page.goto(`/review?profile=${profile}`);await page.getByLabel('Email',{exact:true}).fill('p4-learner@example.invalid');await page.getByLabel('Пароль',{exact:true}).fill('Synthetic P4 learner password!');await page.getByRole('button',{name:'Увійти',exact:true}).click();
   await expect(page.getByRole('combobox',{name:'Мова',exact:true})).toHaveValue(profile);await page.getByRole('combobox',{name:'Режим',exact:true}).selectOption('all');
   await page.getByRole('button',{name:'Почати повторення',exact:true}).click();await expect(page.getByRole('button',{name:'Пропустити без зарахування',exact:true})).toBeVisible();
-  const before=await page.request.get(`/api/v1/mastery/summary?language_profile_id=${profile}&details=true`);expect(before.status()).toBe(200);const beforeBody=await before.json();
+  // Use the real browser's Secure-cookie handling on loopback, just like the UI.
+  // APIRequestContext over plain HTTP does not send this Secure session cookie.
+  const summary=()=>page.evaluate(async profile=>{const r=await fetch(`/api/v1/mastery/summary?language_profile_id=${profile}&details=true`,{credentials:'include'});return {status:r.status,body:await r.json()};},profile);
+  const before=await summary();expect(before.status).toBe(200);const beforeBody=before.body;
   const skipped=page.waitForResponse(r=>r.url().endsWith('/skip')&&r.request().method()==='POST');
   await page.getByRole('button',{name:'Пропустити без зарахування',exact:true}).click();expect((await skipped).status()).toBe(200);
   await expect(page.getByRole('status').first()).toHaveText('');
-  const after=await page.request.get(`/api/v1/mastery/summary?language_profile_id=${profile}&details=true`);expect((await after.json()).projection_checksum).toBe(beforeBody.projection_checksum);
+  const after=await summary();expect(after.status).toBe(200);expect(after.body.projection_checksum).toBe(beforeBody.projection_checksum);
   if(await page.getByRole('button',{name:'Завершити сесію',exact:true}).isVisible())await page.getByRole('button',{name:'Завершити сесію',exact:true}).click();
   const collectionName=`Browser ${language}`;await page.getByLabel('Назва колекції',{exact:true}).fill(collectionName);await page.getByRole('button',{name:'Створити колекцію',exact:true}).click();
   await page.getByRole('button',{name:collectionName,exact:true}).click();await page.getByLabel('Слово або фраза',{exact:true}).fill(language==='en'?'hello again':'dobrý den');

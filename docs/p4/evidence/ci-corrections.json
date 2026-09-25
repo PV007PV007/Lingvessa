@@ -59,5 +59,13 @@
     "passed": "All non-browser P4 DB/API gates including reset and scalar parity in P1 workflow; P4 browser workflow reached reset PASS",
     "failure": "Playwright exact getByLabel for wrapped select did not resolve despite rendered accessible combobox and 200 login/csrf/profile/collection requests (artifact 10790890101)",
     "fix": "Use accessible combobox role/name; retain same expected profile and zero retries. Embedded LessonPlayer shares the authenticated parent CSRF token so child mount cannot rotate/invalidate parent actions; require actual skip HTTP 200. Add direct-SQL immutable Review selection rejection cases."
+  },
+  "seventh_run": {
+    "tested_sha": "01d7d4aebb5fea08f058c6853c3a2a43d83b089e",
+    "run_id": 35956639919,
+    "job_id": 107496262660,
+    "passed": "P1 push/PR, P2 PR, P3 PR all successful; DB including direct immutable Review negatives and OCI regression green; P4 browser login/start/read actions succeeded",
+    "failure": "Test-only APIRequestContext returned 401 for Secure session cookie over HTTP loopback, while Chromium UI requests authenticated successfully",
+    "fix": "Read before/after mastery through actual browser fetch with credentials:include. Preserve Secure/HttpOnly/SameSite cookie and mandatory HTTP 200; no auth relaxation."
   }
 }
