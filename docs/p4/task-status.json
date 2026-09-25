@@ -1,13 +1,13 @@
 {
   "phase": "P4",
-  "status": "IN_PROGRESS",
+  "status": "PASS_READY_FOR_OWNER_ACCEPTANCE",
   "tasks": [
     {
       "task_id": "IMP-P4-001",
       "phase": "P4",
       "goal": "Canonical facets, immutable evidence and six skill projections",
       "owner_workstream": "Mastery/Review",
-      "source": "Plan \u00a711 p6; Appendix B p12",
+      "source": "Plan §11 p6; Appendix B p12",
       "dependencies": [
         "P3 gate"
       ],
@@ -16,7 +16,7 @@
         "packages/mastery-review",
         "prisma"
       ],
-      "status": "IMPLEMENTATION_IN_PROGRESS_RUNTIME_PENDING",
+      "status": "P4_SCOPE_VERIFIED_READY_FOR_OWNER_ACCEPTANCE",
       "requirement_ids": [
         "CUR-A1-007",
         "MAST-001",
@@ -213,17 +213,43 @@
         "CHK-N-TS-P11-T02-R04",
         "CHK-N-TS-P12-T01-R03"
       ],
-      "readiness": "Recheck Definition of Ready and owner phase authorization before execution",
-      "contract_change": "None in P0; future schema/API work remains in named task",
+      "readiness": "Dependencies satisfied; contracts/fixtures/acceptance gates implemented and hosted-verified within P4 scope.",
+      "contract_change": "No governing contract change. Additive P4 implementation schema/API, as recorded in schema-api-diff.json.",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
-      "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
+      "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists",
+      "tested_implementation_sha": "5873b6f9789b92d4aa0dee5044481745c1385ef4",
+      "actual_gate_ids": [
+        "P4-API-001",
+        "P4-ISO-001",
+        "P4-MAST-001",
+        "P4-REVIEW-001",
+        "P4-SUPPORT-001",
+        "P4-TXN-001"
+      ],
+      "actual_files": [
+        "apps/api/src/review.ts",
+        "infra/persistence/lessons.ts",
+        "infra/persistence/mastery.ts",
+        "infra/persistence/review.ts",
+        "packages/mastery-review/src/model.ts",
+        "packages/mastery-review/src/policy.ts",
+        "packages/mastery-review/src/session.ts",
+        "packages/mastery-review/src/surface.ts",
+        "prisma/migrations/202609180001_p4_mastery_review/migration.sql"
+      ],
+      "evidence": "docs/p4/evidence/validation-index.json",
+      "scope_status_counts": {
+        "P4_VERIFIED": 64,
+        "P4_FOUNDATION_PARTIAL": 23,
+        "FUTURE_RUNTIME_ACCEPTANCE": 9
+      }
     },
     {
       "task_id": "IMP-P4-002",
       "phase": "P4",
       "goal": "Review scheduler and due/weak session builder",
       "owner_workstream": "Mastery/Review",
-      "source": "Plan \u00a711 p6; Appendix B p12",
+      "source": "Plan §11 p6; Appendix B p12",
       "dependencies": [
         "IMP-P4-001"
       ],
@@ -232,7 +258,7 @@
         "apps/api",
         "prisma"
       ],
-      "status": "IMPLEMENTATION_IN_PROGRESS_RUNTIME_PENDING",
+      "status": "P4_SCOPE_VERIFIED_READY_FOR_OWNER_ACCEPTANCE",
       "requirement_ids": [
         "CUR-A1-008",
         "CUR-A1-009",
@@ -307,17 +333,43 @@
         "CHK-N-TS-P07-T01-R05",
         "CHK-N-TS-P09-T02-R08"
       ],
-      "readiness": "Recheck Definition of Ready and owner phase authorization before execution",
-      "contract_change": "None in P0; future schema/API work remains in named task",
+      "readiness": "Dependencies satisfied; contracts/fixtures/acceptance gates implemented and hosted-verified within P4 scope.",
+      "contract_change": "No governing contract change. Additive P4 implementation schema/API, as recorded in schema-api-diff.json.",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
-      "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
+      "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists",
+      "tested_implementation_sha": "5873b6f9789b92d4aa0dee5044481745c1385ef4",
+      "actual_gate_ids": [
+        "P4-API-001",
+        "P4-ISO-001",
+        "P4-MAST-001",
+        "P4-REVIEW-001",
+        "P4-SUPPORT-001",
+        "P4-TXN-001"
+      ],
+      "actual_files": [
+        "apps/api/src/review.ts",
+        "infra/persistence/lessons.ts",
+        "infra/persistence/mastery.ts",
+        "infra/persistence/review.ts",
+        "packages/mastery-review/src/model.ts",
+        "packages/mastery-review/src/policy.ts",
+        "packages/mastery-review/src/session.ts",
+        "packages/mastery-review/src/surface.ts",
+        "prisma/migrations/202609180001_p4_mastery_review/migration.sql"
+      ],
+      "evidence": "docs/p4/evidence/validation-index.json",
+      "scope_status_counts": {
+        "P4_VERIFIED": 26,
+        "P4_FOUNDATION_PARTIAL": 8,
+        "FUTURE_RUNTIME_ACCEPTANCE": 1
+      }
     },
     {
       "task_id": "IMP-P4-003",
       "phase": "P4",
       "goal": "Mistakes, reset scopes and language-isolated collections",
       "owner_workstream": "Mastery/Review",
-      "source": "Plan \u00a711 p6 (derived task packet)",
+      "source": "Plan §11 p6 (derived task packet)",
       "dependencies": [
         "IMP-P4-001",
         "IMP-P4-002"
@@ -327,7 +379,7 @@
         "apps/api",
         "apps/web"
       ],
-      "status": "IMPLEMENTATION_IN_PROGRESS_RUNTIME_PENDING",
+      "status": "P4_SCOPE_VERIFIED_READY_FOR_OWNER_ACCEPTANCE",
       "requirement_ids": [
         "COLL-001",
         "COLL-002",
@@ -366,10 +418,54 @@
         "CHK-N-TS-P12-T01-R02",
         "CHK-N-TS-P17-T01-R07"
       ],
-      "readiness": "Recheck Definition of Ready and owner phase authorization before execution",
-      "contract_change": "None in P0; future schema/API work remains in named task",
+      "readiness": "Dependencies satisfied; contracts/fixtures/acceptance gates implemented and hosted-verified within P4 scope.",
+      "contract_change": "No governing contract change. Additive P4 implementation schema/API, as recorded in schema-api-diff.json.",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
-      "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
+      "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists",
+      "tested_implementation_sha": "5873b6f9789b92d4aa0dee5044481745c1385ef4",
+      "actual_gate_ids": [
+        "P4-API-001",
+        "P4-COLL-001",
+        "P4-ISO-001",
+        "P4-MAST-001",
+        "P4-RESET-001",
+        "P4-REVIEW-001",
+        "P4-SUPPORT-001",
+        "P4-TXN-001",
+        "P4-UI-001"
+      ],
+      "actual_files": [
+        "apps/api/src/review.ts",
+        "apps/web/src/lesson/player.tsx",
+        "apps/web/src/review/page.tsx",
+        "infra/persistence/collections.ts",
+        "infra/persistence/lessons.ts",
+        "infra/persistence/mastery.ts",
+        "infra/persistence/resets.ts",
+        "infra/persistence/review.ts",
+        "packages/activity-schemas/src/review.ts",
+        "packages/mastery-review/src/model.ts",
+        "packages/mastery-review/src/policy.ts",
+        "packages/mastery-review/src/session.ts",
+        "packages/mastery-review/src/surface.ts",
+        "prisma/migrations/202609180001_p4_mastery_review/migration.sql"
+      ],
+      "evidence": "docs/p4/evidence/validation-index.json",
+      "scope_status_counts": {
+        "P4_VERIFIED": 15,
+        "FUTURE_RUNTIME_ACCEPTANCE": 1,
+        "P4_FOUNDATION_PARTIAL": 1
+      }
     }
-  ]
+  ],
+  "tested_sha": "5873b6f9789b92d4aa0dee5044481745c1385ef4",
+  "tested_sha_scope": "Verified implementation checkpoint. Final containing commit also requires exact-head hosted checks.",
+  "updated_at": "2026-09-25T06:09:52.686873+00:00",
+  "pr": {
+    "number": 4,
+    "status": "OPEN",
+    "merged": false,
+    "owner_acceptance_pending": true
+  },
+  "final_head_rule": "Final containing commit must pass P1 push/PR, P2 PR, P3 PR and P4 push/PR on its exact head. artifacts/p4/acceptance-summary.json:tested_sha must equal checked-out HEAD and GITHUB_HEAD_SHA. Earlier green checkpoint is not acceptance of later code/metadata."
 }

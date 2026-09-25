@@ -1,0 +1,140 @@
+{
+  "provenance": "Unmodified JSON emitted by tools/p4/acceptance-summary.ts in successful hosted P4 job log; raw reports are in the referenced Actions artifact.",
+  "summary": {
+    "phase": "P4",
+    "status": "PASS_READY_FOR_OWNER_ACCEPTANCE",
+    "tested_sha": "5873b6f9789b92d4aa0dee5044481745c1385ef4",
+    "run_id": "36101075639",
+    "event": "push",
+    "database": {
+      "engine": "PostgreSQL 18.6",
+      "gates": [
+        {
+          "gate": "P4-DB-001 clean migration/replay/seed and phase boundary",
+          "status": "PASS"
+        },
+        {
+          "gate": "P4-FIX-001 isolated bilingual fixtures idempotently load and publish",
+          "status": "PASS"
+        },
+        {
+          "gate": "P4-MAST-001 separate facets, immutable evidence, six skills and exact recompute",
+          "status": "PASS"
+        },
+        {
+          "gate": "P4-ISO-001 direct DB negative owner/language/facet projection constraints",
+          "status": "PASS"
+        },
+        {
+          "gate": "P4-TXN-001 projections/mistakes/evidence roll back together; replay/concurrency exact once",
+          "status": "PASS"
+        },
+        {
+          "gate": "P4-REVIEW-001 candidate isolation, immutable selection, shared attempts, skip and expiry",
+          "status": "PASS"
+        },
+        {
+          "gate": "P4-SUPPORT-001 reveal retains lapse/short due and cannot fabricate independent mastery",
+          "status": "PASS"
+        },
+        {
+          "gate": "P4-COLL-001 curated/custom CRUD, cross-language rejection, deletion preserves learning",
+          "status": "PASS"
+        },
+        {
+          "gate": "P4-RESET-001 explicit position/language reset, immutable history and unaffected Czech",
+          "status": "PASS"
+        },
+        {
+          "gate": "P4-UI-001 Chromium EN/CS Review and collection journeys",
+          "status": "PASS"
+        },
+        {
+          "gate": "P4-API-001 auth/CSRF, Review permissions and actual P4 HTTP contracts",
+          "status": "PASS"
+        },
+        {
+          "gate": "P4-DB-002 introspection and clean database recreation",
+          "status": "PASS"
+        }
+      ]
+    },
+    "browser": {
+      "startTime": "2026-09-25T06:06:10.860Z",
+      "duration": 4942.724999999999,
+      "expected": 2,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "fixtures": [
+      {
+        "language": "en",
+        "kind": "lesson",
+        "activities": 2,
+        "content_version_id": "02507406-c5f7-5a3d-a723-439b297746d0",
+        "status": "PASS"
+      },
+      {
+        "language": "en",
+        "kind": "core",
+        "activities": 10,
+        "content_version_id": "48dd173e-4c54-5101-a2fe-55573967def8",
+        "status": "PASS"
+      },
+      {
+        "language": "cs",
+        "kind": "lesson",
+        "activities": 2,
+        "content_version_id": "b0d3da0d-81bf-5e41-b640-cf33012d658d",
+        "status": "PASS"
+      },
+      {
+        "language": "cs",
+        "kind": "core",
+        "activities": 10,
+        "content_version_id": "a0019ac3-776c-5d80-b8fa-1051d154fa1d",
+        "status": "PASS"
+      }
+    ],
+    "baseline": {
+      "passed": 59,
+      "total": 59
+    },
+    "p3_regression": "PASS_READY_FOR_OWNER_ACCEPTANCE",
+    "container_checks": [
+      "four services ready",
+      "DB down => API/worker 503",
+      "liveness remains 200",
+      "DB restored => readiness 200"
+    ],
+    "artifacts": [
+      {
+        "path": "artifacts/p4/database-validation.json",
+        "sha256": "850e16cc7eab58d953d36a011841dcbb1b109c13ffec224f51f484e91f971a1f"
+      },
+      {
+        "path": "artifacts/p4/browser-results.json",
+        "sha256": "c4fabf35f3386713fa1b5d57eea11a3981aa44e33fbd4a85ec7e9c8ad1d641bb"
+      },
+      {
+        "path": "artifacts/p4/baseline-validation.json",
+        "sha256": "271a4f0f5431f82af87bde61ef9903d3b24220b1f609c9c6c2a0065798adae15"
+      },
+      {
+        "path": "artifacts/p4/reference-validation.json",
+        "sha256": "afb1593e7ff19c36e6c606edad44a34eee5cf73adb6f4864d4c2856deebfcf8d"
+      },
+      {
+        "path": "artifacts/p4/introspected.prisma",
+        "sha256": "ba1d7e56e7db86cc96d3ad46803065ccee806e53b625a975c48de95eecb0cc3e"
+      },
+      {
+        "path": "artifacts/p3/acceptance-summary.json",
+        "sha256": "74ff522b2fda8e41a70498abb5d334f3f22d157365b48852c479e9539684c96d"
+      }
+    ],
+    "p5_authorized": false,
+    "owner_acceptance_pending": true
+  }
+}

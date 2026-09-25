@@ -1,7 +1,7 @@
 {
   "phase": "P4",
   "accepted_parent_sha": "07b6aae9b001dbb4d620df3d491473a95f674ad2",
-  "governing_contract_change": "No contract change. Additive implementation of Plan v1.4 \u00a711; immutable accepted migrations and governing PDFs unchanged.",
+  "governing_contract_change": "No contract change. Additive implementation of Plan v1.4 §11; immutable accepted migrations and governing PDFs unchanged.",
   "migration": {
     "path": "prisma/migrations/202609180001_p4_mastery_review/migration.sql",
     "sha256": "6e0d8c8a64c73160cede7f6acf5c6b0d03614ba6648c8be9945c8ac333bb0b0f"

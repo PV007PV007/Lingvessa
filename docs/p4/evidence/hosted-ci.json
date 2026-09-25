@@ -1,0 +1,98 @@
+{
+  "phase": "P4",
+  "status": "PASS_AT_VERIFIED_IMPLEMENTATION_CHECKPOINT",
+  "tested_implementation_sha": "5873b6f9789b92d4aa0dee5044481745c1385ef4",
+  "branch": "implementation/p4-mastery-review",
+  "pr": 4,
+  "captured_at": "2026-09-25T06:09:52.686873+00:00",
+  "runs": [
+    {
+      "id": 36101078692,
+      "name": "P1 foundation",
+      "event": "pull_request",
+      "head_sha": "5873b6f9789b92d4aa0dee5044481745c1385ef4",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/36101078692",
+      "run_attempt": 1,
+      "updated_at": "2026-09-25T06:06:58Z"
+    },
+    {
+      "id": 36101078680,
+      "name": "P3 lesson engine",
+      "event": "pull_request",
+      "head_sha": "5873b6f9789b92d4aa0dee5044481745c1385ef4",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/36101078680",
+      "run_attempt": 1,
+      "updated_at": "2026-09-25T06:08:39Z"
+    },
+    {
+      "id": 36101078687,
+      "name": "P2 data foundation",
+      "event": "pull_request",
+      "head_sha": "5873b6f9789b92d4aa0dee5044481745c1385ef4",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/36101078687",
+      "run_attempt": 1,
+      "updated_at": "2026-09-25T06:08:42Z"
+    },
+    {
+      "id": 36101078697,
+      "name": "P4 mastery and Review",
+      "event": "pull_request",
+      "head_sha": "5873b6f9789b92d4aa0dee5044481745c1385ef4",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/36101078697",
+      "run_attempt": 1,
+      "updated_at": "2026-09-25T06:09:31Z"
+    },
+    {
+      "id": 36101075639,
+      "name": "P4 mastery and Review",
+      "event": "push",
+      "head_sha": "5873b6f9789b92d4aa0dee5044481745c1385ef4",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/36101075639",
+      "run_attempt": 1,
+      "updated_at": "2026-09-25T06:08:49Z"
+    },
+    {
+      "id": 36101075634,
+      "name": "P1 foundation",
+      "event": "push",
+      "head_sha": "5873b6f9789b92d4aa0dee5044481745c1385ef4",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/36101075634",
+      "run_attempt": 1,
+      "updated_at": "2026-09-25T06:08:51Z"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": 10848848670,
+      "name": "p4-5873b6f9789b92d4aa0dee5044481745c1385ef4-push",
+      "size_in_bytes": 29780,
+      "url": "https://api.github.com/repos/PV007PV007/Lingvessa/actions/artifacts/10848848670",
+      "archive_download_url": "https://api.github.com/repos/PV007PV007/Lingvessa/actions/artifacts/10848848670/zip",
+      "expired": false,
+      "created_at": "2026-09-25T06:08:45Z",
+      "expires_at": "2026-10-09T06:08:45Z",
+      "updated_at": "2026-09-25T06:08:45Z",
+      "digest": "sha256:7abb9c787dc17dee7cf24ae8057877d9e286b85183218cf758e73c9694dca8c2",
+      "workflow_run": {
+        "id": 36101075639,
+        "repository_id": 1370429105,
+        "head_repository_id": 1370429105,
+        "head_branch": "implementation/p4-mastery-review",
+        "head_sha": "5873b6f9789b92d4aa0dee5044481745c1385ef4"
+      }
+    }
+  ],
+  "final_metadata_rule": "Final containing commit must pass P1 push/PR, P2 PR, P3 PR and P4 push/PR on its exact head. artifacts/p4/acceptance-summary.json:tested_sha must equal checked-out HEAD and GITHUB_HEAD_SHA. Earlier green checkpoint is not acceptance of later code/metadata."
+}

@@ -1,36 +1,46 @@
 # Lingvessa implementation state and handoff
 
-Timestamp: 2026-09-25T06:01:18.300993+00:00
-Phase: P4 AUTHORIZED — IN PROGRESS; P0/P1/P2/P3 ACCEPTED.
-Branch: `implementation/p4-mastery-review`.
-Remote branch base/main merge SHA: `07b6aae9b001dbb4d620df3d491473a95f674ad2`.
-P3 final tested SHA: `9932a1bbf4b95353445422cb7bde7396d8f1fab5`. PR #3 MERGED via merge commit after owner-delegated review; review ID 5239772950. P4 PR #4 OPEN / DRAFT: https://github.com/PV007PV007/Lingvessa/pull/4. Current remote implementation SHA `01d7d4aebb5fea08f058c6853c3a2a43d83b089e`; CI failed and corrective batch is pending retest.
+Timestamp: 2026-09-25T06:09:52.686873+00:00
+Current phase: P4 — PASS READY FOR OWNER ACCEPTANCE, subject to final exact-head checks. P0/P1/P2/P3 ACCEPTED. P5 NOT AUTHORIZED.
+Branch: `implementation/p4-mastery-review`. PR [#4](https://github.com/PV007PV007/Lingvessa/pull/4): OPEN, not merged.
+Accepted main/P3 merge: `07b6aae9b001dbb4d620df3d491473a95f674ad2`. P3 tested source: `9932a1bbf4b95353445422cb7bde7396d8f1fab5`; owner-delegated review and merge recorded in `docs/p4/evidence/p3-acceptance.json`.
+Exact tested implementation checkpoint: `5873b6f9789b92d4aa0dee5044481745c1385ef4`.
 
-## Current batch
+Final containing commit must pass P1 push/PR, P2 PR, P3 PR and P4 push/PR on its exact head. artifacts/p4/acceptance-summary.json:tested_sha must equal checked-out HEAD and GITHUB_HEAD_SHA. Earlier green checkpoint is not acceptance of later code/metadata.
+The containing closure commit requires its own full successful rerun. The final exact SHA is recorded by generated `artifacts/p4/acceptance-summary.json:tested_sha`, compared with `git rev-parse HEAD`, and included in the PR/final delivery.
 
-IMP-P4-001 -> IMP-P4-002 -> IMP-P4-003. All 148 P4 trace rows and exact governing IDs retained in `docs/p4/requirement-evidence.json`; task packets in `docs/p4/task-status.json`.
+## Completed batch
 
-Implemented in PR #4: deterministic facet/skill projections, configurable versioned scheduler, candidate ordering/dedup/caps, additive migration, normal-attempt integration, Review sessions, collections and audited reset repositories. API/UI and runtime test gates are now implemented; hosted execution is pending. Files: `docs/p4/evidence/changed-files.json` records the implementation delta. No deleted files.
+IMP-P4-001 -> IMP-P4-002 -> IMP-P4-003. All 148 P4 requirement IDs and their task/code/schema/test mappings are in `docs/p4/requirement-evidence.json`; future-phase portions are explicit. Main IDs include CUR-A1-007/008/009, MAST-001..007, REV-001..005, COLL-001..003, TD-MAST/TD-REV and TS-MAST/TS-REV. Complete added/modified/deleted file inventory: `docs/p4/evidence/changed-files.json`.
 
-Schema/migration: additive `202609180001_p4_mastery_review`; prior migrations and locked documents unchanged. API: GET mastery/summary, mistakes and run summary; Review start/get/skip/cancel; collections/entries CRUD; confirmed learning reset; curated hint. No governing contract change. P3 acceptance evidence: `docs/p4/evidence/p3-acceptance.json`.
+Implemented versioned facet/mastery projections, exactly six skill aggregates, scheduling, Review session ordering/dedup/expiry/skip, mistakes/remediation, curated hint, language-scoped collections, audited reset scopes, authenticated API and shared-player Review UI. Negative isolation, concurrent receipt/recompute, rollback, browser and container gates passed at the named checkpoint.
 
-Executed: `node --import tsx --test tests/unit/p4-mastery-review.test.ts` (5/5 PASS); `pnpm db:validate` (PASS); `pnpm validate:baseline` (59/59 PASS); `pnpm lint` and TypeScript checks (PASS); reference validation (PASS). Hosted check (lint/types/unit 40/40/build/smoke 4/4), dependency audit and PostgreSQL bootstrap passed at b194586. Integration failed before P4 runtime coverage: stale migration count in P2 test; assertion tied to old IDOR message; P4 synthetic database prefix missing from isolated-local allowlist. Fixes preserve the isolation guard and typed NOT_FOUND assertion; add only authorized P4 prefix and fresh hexadecimal DB name. Also corrected Review semantic-surface dedup and deterministic multi-skill tie handling (6/6 P4 unit tests locally). OCI/browser acceptance remains unproven. P3 five exact-head hosted runs were reverified success before merge.
+Schema: 12 P4 tables; additive migration `202609180001_p4_mastery_review`; Review/hint/reset fields and constraint guards extend P3. Historical migrations, attempts/evidence and owner-locked PDFs remain unchanged. Schema/API route list, migration checksum, identity/transaction/rollback contracts: `docs/p4/evidence/schema-api-diff.json`. No governing contract change. PostgreSQL remains source of truth; no AI/media/speech runtime was added.
 
-P4 acceptance evidence: pending; P4 NOT READY.
-BLOCKER: none identified. IMPORTANT: incomplete P4 runtime/CI gates. MINOR: inherited GitHub Actions Node notices and patch-pinned experimental Argon2id; full-history projection requires P11 load validation.
+## Validation and CI
 
-EXC-P1-001: main is NOT technically protected. Implementation branch -> PR -> green hosted checks -> owner/delegated acceptance remains mandatory.
-Open owner decisions: none blocking P4. P5 provider/storage/calibration decisions remain deferred and unchanged.
-Exact next task: commit corrective P4 batch to PR #4, inspect the rerun on its exact SHA, resolve remaining actual runtime failures and publish final evidence. Stop before P5.
+- `pnpm install --frozen-lockfile`: PASS.
+- `pnpm validate:baseline`: PASS.
+- `pnpm check`: PASS.
+- `pnpm validate:references`: PASS.
+- `pnpm audit:dependencies`: PASS.
+- `pnpm exec playwright install --with-deps chromium`: PASS.
+- `pnpm bootstrap:local`: PASS.
+- `P3_BROWSER_TESTS=true P4_BROWSER_TESTS=true node --env-file=.local/runtime.env --import tsx --test tests/integration/*.test.ts`: PASS.
+- `pnpm test:containers`: PASS.
+- `node --import tsx tools/p3/acceptance-summary.ts`: PASS.
+- `node --import tsx tools/p4/acceptance-summary.ts`: PASS.
 
-Latest runtime batch: P1/P2/P3 integration regression passed on 8519043; P4 migration/fixture/mastery/isolation/atomicity reached PASS. Review gate found inactive fixture publications, now corrected through real publish/activate pointer API. P4 Prisma scalar defaults aligned with authoritative SQL clock_timestamp; added runtime column/type/nullability/precision parity assertions. Full P4 acceptance remains pending.
+- [P1 foundation / pull_request / 36101078692](https://github.com/PV007PV007/Lingvessa/actions/runs/36101078692): SUCCESS.
+- [P3 lesson engine / pull_request / 36101078680](https://github.com/PV007PV007/Lingvessa/actions/runs/36101078680): SUCCESS.
+- [P2 data foundation / pull_request / 36101078687](https://github.com/PV007PV007/Lingvessa/actions/runs/36101078687): SUCCESS.
+- [P4 mastery and Review / pull_request / 36101078697](https://github.com/PV007PV007/Lingvessa/actions/runs/36101078697): SUCCESS.
+- [P4 mastery and Review / push / 36101075639](https://github.com/PV007PV007/Lingvessa/actions/runs/36101075639): SUCCESS.
+- [P1 foundation / push / 36101075634](https://github.com/PV007PV007/Lingvessa/actions/runs/36101075634): SUCCESS.
 
-Correction checkpoint `0c4946ae9d69d8a489a55b883f909fd6f11c1923`: stable release gate correctly rejected synthetic publication. Corrective batch retains P2 test-only publications and explicitly injects test channel in integration service construction; normal application Review defaults to stable. No stable-publication gate removed, no P8/P13 work. New negative test proves default reader excludes test content. Reset scope coverage now includes module, foreign user/language and request-ID payload conflict.
+P4 acceptance: real PostgreSQL clean/repeat/fresh migration+seed, projection recompute and two-level isolation, transaction fault/concurrency, active-publication channel isolation, Review stale/replay/skip/expiry, collections, reset, SQL/Prisma parity, two EN/CS Chromium journeys; P1–P3 regression and four OCI images/degraded/recovery passed. Raw gate summary/hashes and linked hosted artifacts: `docs/p4/evidence/verified-runtime-checkpoint.json`, `hosted-ci.json`, `validation-index.json`. Current exit record: `docs/p4/P4_exit_evidence.md`.
 
-Latest exact-head CI failure (8717f93, P4 run 35890499817/job 107281449683): negative facet test performed a bulk update and hit a duplicate key before registry validation. Corrective batch isolates one row, preserving the required foreign-key/check rejection codes. No runtime contract change; full P4 acceptance still pending.
-
-Checkpoint feb28a35691d15d45f4740ac6f99d9167cbdb115: eight P4 runtime gate groups passed, including Review and collections. Module reset exposed PostgreSQL 42P08 in INSERT SELECT DISTINCT parameter inference. Added explicit UUID casts to the four identity parameters; no behavior/contract change. Full runtime retest pending.
-
-Checkpoint 3063632791b756ff98d3da44c7ac1d79171709db: non-browser integration is green. Hosted Playwright artifact 10790890101 proves login/profile/collection HTTP 200 and rendered language combobox; locator used exact nested label text and failed. Corrected to accessible role/name. Shared embedded-player CSRF handoff avoids independent token rotation invalidating parent Review actions; browser skip now asserts actual HTTP 200. Direct DB immutable Review-selection negatives added. No security check removed; final retest required.
-
-Checkpoint 01d7d4aebb5fea08f058c6853c3a2a43d83b089e: hosted P1 push/PR, P2 PR and P3 PR all green, including actual PostgreSQL and OCI regression. P4 browser successfully authenticates, starts Review and loads its shared player; its test-only APIRequestContext failed to send Secure cookie over HTTP loopback. Before/after mastery assertion now executes actual browser fetch, preserving secure cookie policy. Full P4 retest pending.
+BLOCKER: 0. IMPORTANT: 0 once final-head CI passes. MINOR/technical debt: inherited Node Actions/Argon2id warnings; full-history projection load validation remains P11. This is P4 engine acceptance, not launch acceptance.
+EXC-P1-001: main is NOT technically protected. No direct/force push, no deletion, PR and green hosted checks required; owner acceptance controls milestone transition.
+Open owner decisions: none blocking P4. P5 storage/provider/licensing/calibration choices remain future decisions, not reopened architecture.
+Exact next task: verify final closure HEAD checks, then owner review/acceptance of PR #4. Do not merge without authorization. Stop before P5; no P5 implementation exists.
