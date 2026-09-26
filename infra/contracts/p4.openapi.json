@@ -1,0 +1,1044 @@
+{
+  "openapi": "3.1.2",
+  "info": {
+    "title": "Lingvessa P4 mastery/Review/collections",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "/api/v1"
+    }
+  ],
+  "paths": {
+    "/mastery/summary": {
+      "get": {
+        "operationId": "masterySummary",
+        "security": [
+          {
+            "sessionCookie": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Owned language-scoped result"
+          },
+          "400": {
+            "description": "Invalid contract"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "CSRF or permission denied"
+          },
+          "404": {
+            "description": "Owned resource not found"
+          },
+          "409": {
+            "description": "Version/position conflict"
+          }
+        },
+        "parameters": [
+          {
+            "name": "language_profile_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ]
+      }
+    },
+    "/lesson-runs/{id}/summary": {
+      "get": {
+        "operationId": "lessonMasterySummary",
+        "security": [
+          {
+            "sessionCookie": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Owned language-scoped result"
+          },
+          "400": {
+            "description": "Invalid contract"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "CSRF or permission denied"
+          },
+          "404": {
+            "description": "Owned resource not found"
+          },
+          "409": {
+            "description": "Version/position conflict"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ]
+      }
+    },
+    "/mistakes": {
+      "get": {
+        "operationId": "listMistakes",
+        "security": [
+          {
+            "sessionCookie": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Owned language-scoped result"
+          },
+          "400": {
+            "description": "Invalid contract"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "CSRF or permission denied"
+          },
+          "404": {
+            "description": "Owned resource not found"
+          },
+          "409": {
+            "description": "Version/position conflict"
+          }
+        },
+        "parameters": [
+          {
+            "name": "language_profile_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ]
+      }
+    },
+    "/review-sessions": {
+      "post": {
+        "operationId": "startReview",
+        "security": [
+          {
+            "sessionCookie": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReviewStart"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Owned language-scoped result"
+          },
+          "400": {
+            "description": "Invalid contract"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "CSRF or permission denied"
+          },
+          "404": {
+            "description": "Owned resource not found"
+          },
+          "409": {
+            "description": "Version/position conflict"
+          }
+        },
+        "parameters": [
+          {
+            "name": "X-CSRF-Token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/review-sessions/{id}": {
+      "get": {
+        "operationId": "getReview",
+        "security": [
+          {
+            "sessionCookie": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Owned language-scoped result"
+          },
+          "400": {
+            "description": "Invalid contract"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "CSRF or permission denied"
+          },
+          "404": {
+            "description": "Owned resource not found"
+          },
+          "409": {
+            "description": "Version/position conflict"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ]
+      }
+    },
+    "/review-sessions/{id}/skip": {
+      "post": {
+        "operationId": "skipReview",
+        "security": [
+          {
+            "sessionCookie": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReviewSkip"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Owned language-scoped result"
+          },
+          "400": {
+            "description": "Invalid contract"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "CSRF or permission denied"
+          },
+          "404": {
+            "description": "Owned resource not found"
+          },
+          "409": {
+            "description": "Version/position conflict"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "X-CSRF-Token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/review-sessions/{id}/cancel": {
+      "post": {
+        "operationId": "cancelReview",
+        "security": [
+          {
+            "sessionCookie": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Owned language-scoped result"
+          },
+          "400": {
+            "description": "Invalid contract"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "CSRF or permission denied"
+          },
+          "404": {
+            "description": "Owned resource not found"
+          },
+          "409": {
+            "description": "Version/position conflict"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "X-CSRF-Token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/collections": {
+      "post": {
+        "operationId": "createCollection",
+        "security": [
+          {
+            "sessionCookie": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CollectionCreate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Owned language-scoped result"
+          },
+          "400": {
+            "description": "Invalid contract"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "CSRF or permission denied"
+          },
+          "404": {
+            "description": "Owned resource not found"
+          },
+          "409": {
+            "description": "Version/position conflict"
+          }
+        },
+        "parameters": [
+          {
+            "name": "X-CSRF-Token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "get": {
+        "operationId": "listCollections",
+        "security": [
+          {
+            "sessionCookie": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Owned language-scoped result"
+          },
+          "400": {
+            "description": "Invalid contract"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "CSRF or permission denied"
+          },
+          "404": {
+            "description": "Owned resource not found"
+          },
+          "409": {
+            "description": "Version/position conflict"
+          }
+        },
+        "parameters": [
+          {
+            "name": "language_profile_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ]
+      }
+    },
+    "/collections/{id}": {
+      "get": {
+        "operationId": "getCollection",
+        "security": [
+          {
+            "sessionCookie": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Owned language-scoped result"
+          },
+          "400": {
+            "description": "Invalid contract"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "CSRF or permission denied"
+          },
+          "404": {
+            "description": "Owned resource not found"
+          },
+          "409": {
+            "description": "Version/position conflict"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ]
+      },
+      "patch": {
+        "operationId": "updateCollection",
+        "security": [
+          {
+            "sessionCookie": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CollectionUpdate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Owned language-scoped result"
+          },
+          "400": {
+            "description": "Invalid contract"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "CSRF or permission denied"
+          },
+          "404": {
+            "description": "Owned resource not found"
+          },
+          "409": {
+            "description": "Version/position conflict"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "X-CSRF-Token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "deleteCollection",
+        "security": [
+          {
+            "sessionCookie": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Owned language-scoped result"
+          },
+          "400": {
+            "description": "Invalid contract"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "CSRF or permission denied"
+          },
+          "404": {
+            "description": "Owned resource not found"
+          },
+          "409": {
+            "description": "Version/position conflict"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "X-CSRF-Token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/collections/{id}/entries": {
+      "post": {
+        "operationId": "addEntry",
+        "security": [
+          {
+            "sessionCookie": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CollectionEntry"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Owned language-scoped result"
+          },
+          "400": {
+            "description": "Invalid contract"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "CSRF or permission denied"
+          },
+          "404": {
+            "description": "Owned resource not found"
+          },
+          "409": {
+            "description": "Version/position conflict"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "X-CSRF-Token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/collections/{id}/entries/{entry}": {
+      "put": {
+        "operationId": "updateEntry",
+        "security": [
+          {
+            "sessionCookie": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CollectionEntry"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Owned language-scoped result"
+          },
+          "400": {
+            "description": "Invalid contract"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "CSRF or permission denied"
+          },
+          "404": {
+            "description": "Owned resource not found"
+          },
+          "409": {
+            "description": "Version/position conflict"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "X-CSRF-Token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "deleteEntry",
+        "security": [
+          {
+            "sessionCookie": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Owned language-scoped result"
+          },
+          "400": {
+            "description": "Invalid contract"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "CSRF or permission denied"
+          },
+          "404": {
+            "description": "Owned resource not found"
+          },
+          "409": {
+            "description": "Version/position conflict"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "X-CSRF-Token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/learning-resets": {
+      "post": {
+        "operationId": "resetLearning",
+        "security": [
+          {
+            "sessionCookie": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LearningReset"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Owned language-scoped result"
+          },
+          "400": {
+            "description": "Invalid contract"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "CSRF or permission denied"
+          },
+          "404": {
+            "description": "Owned resource not found"
+          },
+          "409": {
+            "description": "Version/position conflict"
+          }
+        },
+        "parameters": [
+          {
+            "name": "X-CSRF-Token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/lesson-runs/{id}/hint": {
+      "post": {
+        "operationId": "curatedHint",
+        "security": [
+          {
+            "sessionCookie": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Owned language-scoped result"
+          },
+          "400": {
+            "description": "Invalid contract"
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "CSRF or permission denied"
+          },
+          "404": {
+            "description": "Owned resource not found"
+          },
+          "409": {
+            "description": "Version/position conflict"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "X-CSRF-Token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "sessionCookie": {
+        "type": "apiKey",
+        "in": "cookie",
+        "name": "__Host-lingvessa_session"
+      }
+    },
+    "schemas": {
+      "ReviewStart": {
+        "type": "object",
+        "properties": {
+          "language_profile_id": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+          },
+          "mode": {
+            "default": "recommended",
+            "type": "string",
+            "enum": [
+              "recommended",
+              "mistakes",
+              "all",
+              "words",
+              "phrases"
+            ]
+          },
+          "skill": {
+            "type": "string",
+            "enum": [
+              "vocabulary",
+              "grammar",
+              "listening",
+              "speaking",
+              "writing",
+              "pronunciation"
+            ]
+          },
+          "topic_id": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+          },
+          "collection_id": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+          },
+          "cap": {
+            "default": 10,
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 20
+          }
+        },
+        "required": [
+          "language_profile_id",
+          "mode",
+          "cap"
+        ],
+        "additionalProperties": false
+      },
+      "ReviewSkip": {
+        "type": "object",
+        "properties": {
+          "expected_position": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 20
+          }
+        },
+        "required": [
+          "expected_position"
+        ],
+        "additionalProperties": false
+      },
+      "CollectionCreate": {
+        "type": "object",
+        "properties": {
+          "language_profile_id": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          }
+        },
+        "required": [
+          "language_profile_id",
+          "name"
+        ],
+        "additionalProperties": false
+      },
+      "CollectionUpdate": {
+        "type": "object",
+        "properties": {
+          "expected_revision": {
+            "type": "integer",
+            "exclusiveMinimum": 0,
+            "maximum": 9007199254740991
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "active",
+              "archived"
+            ]
+          }
+        },
+        "required": [
+          "expected_revision"
+        ],
+        "additionalProperties": false
+      },
+      "CollectionEntry": {
+        "type": "object",
+        "properties": {
+          "knowledge_item_id": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+          },
+          "content_entity_id": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+          },
+          "custom_text": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "translation": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "note": {
+            "type": "string",
+            "maxLength": 4000
+          }
+        },
+        "additionalProperties": false
+      },
+      "LearningReset": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+          },
+          "language_profile_id": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+          },
+          "scope": {
+            "type": "string",
+            "enum": [
+              "lesson",
+              "module",
+              "language"
+            ]
+          },
+          "target_id": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+          },
+          "reset_mastery": {
+            "default": false,
+            "type": "boolean"
+          },
+          "confirmed": {
+            "type": "boolean",
+            "const": true
+          },
+          "confirmation": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "request_id",
+          "language_profile_id",
+          "scope",
+          "reset_mastery",
+          "confirmed"
+        ],
+        "additionalProperties": false
+      }
+    }
+  }
+}

@@ -1,0 +1,208 @@
+{
+  "fixture_version": "p3-executable-lesson-1",
+  "source_document": "Implementation Plan v1.4 §11; TD v1.7 §§17–18; synthetic P4 engine fixtures using shared fixture schema.",
+  "language": "cs",
+  "language_id": "0198f000-0000-7000-8000-000000000002",
+  "lesson_id": "6489f687-8ec5-5226-b0e5-29f9f8dcd18b",
+  "base_content_version_id": "cd9093fd-e587-5278-a233-192d1ff43773",
+  "content_version_id": "b0d3da0d-81bf-5e41-b640-cf33012d658d",
+  "version_code": "p3-synthetic-1",
+  "ancestor_versions": [
+    {
+      "entity_id": "8f31116c-d7a7-582a-b3c2-2406ebf467b3",
+      "base_content_version_id": "01d12d51-1b80-563f-935d-d96a7ae13597",
+      "content_version_id": "e6d045a7-8bae-5cd1-a388-6b0962822c9c",
+      "version_code": "p3-synthetic-1"
+    },
+    {
+      "entity_id": "bc16ff97-423c-5416-bf48-ee8ce0ec1fcc",
+      "base_content_version_id": "0e90cfc3-25b6-59db-bf00-e432544fad27",
+      "content_version_id": "baafb635-1d5e-509e-832c-e3d2f378a2c8",
+      "version_code": "p3-synthetic-1"
+    },
+    {
+      "entity_id": "fa75d1a0-0074-579d-9808-a5c043e2ff54",
+      "base_content_version_id": "f88b0816-146f-5c80-93b5-1d022c9e21b0",
+      "content_version_id": "8e0b9d83-dcd4-58ef-9ff8-eeaf01c3a46d",
+      "version_code": "p3-synthetic-1"
+    }
+  ],
+  "activities": [
+    {
+      "schema_version": "1.7",
+      "id": "bb270078-6363-511a-b978-9a5a07e33db8",
+      "stable_code": "P4-C-A1-M01-L01-P2-A01",
+      "type": "multiple_choice",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "cefr": "A1",
+      "content_version_id": "b0d3da0d-81bf-5e41-b640-cf33012d658d",
+      "presentation": {
+        "instruction_key": "C-A1-M01-L01-P2-A01_INSTRUCTION",
+        "prompt": "Vyberte pozdrav.",
+        "options": [
+          {
+            "id": "dobry_den",
+            "label": "Dobrý den."
+          },
+          {
+            "id": "na_shledanou",
+            "label": "Na shledanou."
+          }
+        ],
+        "accessibility": {
+          "keyboard_action": "Use arrow keys and Enter to select an answer.",
+          "feedback_live_region": true
+        }
+      },
+      "response": {
+        "kind": "single",
+        "answer_policy": {
+          "id": "C-A1-M01-L01-P2-A01_POLICY",
+          "version": "1.0.0",
+          "mode": "single",
+          "accepted_option_ids": [
+            "dobry_den"
+          ],
+          "normalization": {
+            "unicode": "NFC",
+            "locale": "cs-CZ",
+            "case_sensitive": false,
+            "collapse_whitespace": true,
+            "punctuation_sensitive": false,
+            "apostrophe_equivalent": false,
+            "diacritics_sensitive": true
+          }
+        }
+      },
+      "feedback": {
+        "correct": "Správně: „Dobrý den“ je pozdrav.",
+        "incorrect": "Vyberte pozdrav na začátku rozhovoru.",
+        "reveal": "Správná odpověď je „Dobrý den“. Dokončení je s nápovědou.",
+        "remediation": "Zkuste pozdrav znovu bez odhalení odpovědi."
+      },
+      "learning": {
+        "knowledge_refs": [
+          {
+            "knowledge_item_id": "a87a740b-eb94-56ae-a9f0-73b41a660c0d",
+            "stable_code": "P4-CZE_K_DOBRY_DEN",
+            "role": "practice"
+          }
+        ],
+        "outcome_refs": [
+          {
+            "outcome_id": "005435eb-bb8c-54b8-aa22-463a9ffa2fdd",
+            "stable_code": "P4-C-A1-M01-OUTCOME-CONTACT"
+          }
+        ],
+        "evidence_map": [
+          {
+            "skill": "vocabulary",
+            "facet": "meaning",
+            "weight": 0.6
+          }
+        ],
+        "difficulty": 0.2
+      },
+      "runtime": {
+        "completion_policy": "correct_or_reveal_v1",
+        "evaluator_version": "deterministic-choice-1.0.0",
+        "presentation_seed": "p3-cs-a01",
+        "presentation_order": [
+          "dobry_den",
+          "na_shledanou"
+        ],
+        "max_retries": 2,
+        "auto_advance_allowed": true
+      }
+    },
+    {
+      "schema_version": "1.7",
+      "id": "026786de-6a3c-50b1-ae71-fcbeb62347cc",
+      "stable_code": "P4-C-A1-M01-L01-P2-A02",
+      "type": "classification",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "cefr": "A1",
+      "content_version_id": "b0d3da0d-81bf-5e41-b640-cf33012d658d",
+      "presentation": {
+        "instruction_key": "C-A1-M01-L01-P2-A02_INSTRUCTION",
+        "prompt": "Vyberte neformální pozdrav.",
+        "options": [
+          {
+            "id": "formal",
+            "label": "Dobrý den."
+          },
+          {
+            "id": "informal",
+            "label": "Ahoj."
+          }
+        ],
+        "accessibility": {
+          "keyboard_action": "Use arrow keys and Enter to select an answer.",
+          "feedback_live_region": true
+        }
+      },
+      "response": {
+        "kind": "single",
+        "answer_policy": {
+          "id": "C-A1-M01-L01-P2-A02_POLICY",
+          "version": "1.0.0",
+          "mode": "single",
+          "accepted_option_ids": [
+            "informal"
+          ],
+          "normalization": {
+            "unicode": "NFC",
+            "locale": "cs-CZ",
+            "case_sensitive": false,
+            "collapse_whitespace": true,
+            "punctuation_sensitive": false,
+            "apostrophe_equivalent": false,
+            "diacritics_sensitive": true
+          }
+        }
+      },
+      "feedback": {
+        "correct": "Správně: „Ahoj“ je neformální.",
+        "incorrect": "Hledejte neformální pozdrav.",
+        "reveal": "Správná odpověď je „Ahoj“. Dokončení je s nápovědou.",
+        "remediation": "Zařaďte pozdrav znovu bez odhalení odpovědi."
+      },
+      "learning": {
+        "knowledge_refs": [
+          {
+            "knowledge_item_id": "7afd367e-f5e7-5d39-94b8-93114df59ab7",
+            "stable_code": "P4-CZE_K_AHOJ",
+            "role": "practice"
+          }
+        ],
+        "outcome_refs": [
+          {
+            "outcome_id": "005435eb-bb8c-54b8-aa22-463a9ffa2fdd",
+            "stable_code": "P4-C-A1-M01-OUTCOME-CONTACT"
+          }
+        ],
+        "evidence_map": [
+          {
+            "skill": "grammar",
+            "facet": "register",
+            "weight": 0.6
+          }
+        ],
+        "difficulty": 0.2
+      },
+      "runtime": {
+        "completion_policy": "correct_or_reveal_v1",
+        "evaluator_version": "deterministic-choice-1.0.0",
+        "presentation_seed": "p3-cs-a02",
+        "presentation_order": [
+          "formal",
+          "informal"
+        ],
+        "max_retries": 2,
+        "auto_advance_allowed": true
+      }
+    }
+  ]
+}

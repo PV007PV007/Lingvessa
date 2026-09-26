@@ -8,6 +8,9 @@ import type { LessonRepository } from '../../../infra/persistence/lessons.js';
 import { AuthController, ProfileController, CatalogController, FoundationExceptionFilter, IDENTITY, CONTENT } from './foundation.js';
 import { LessonRunsController, LESSONS } from './lessons.js';
 
+import {ReviewController,P4} from './review.js';
+import type {P4Services} from './review.js';
+
 const PROBE = Symbol('P1_HEALTH_PROBE');
 
 @Controller('health')
@@ -27,9 +30,9 @@ class HealthController {
   }
 }
 
-export async function createApi(probe: HealthProbe, foundation?: { identity: IdentityRepository; content: ContentRepository; lessons?: LessonRepository }) {
-  @Module({ controllers: [HealthController, ...(foundation ? [AuthController, ProfileController, CatalogController, ...(foundation.lessons ? [LessonRunsController] : [])] : [])],
-    providers: [{ provide: PROBE, useValue: probe }, ...(foundation ? [{ provide: IDENTITY, useValue: foundation.identity }, { provide: CONTENT, useValue: foundation.content }, ...(foundation.lessons ? [{ provide: LESSONS, useValue: foundation.lessons }] : [])] : [])] })
+export async function createApi(probe: HealthProbe, foundation?: { identity: IdentityRepository; content: ContentRepository; lessons?: LessonRepository; p4?:P4Services }) {
+  @Module({ controllers: [HealthController, ...(foundation ? [AuthController, ProfileController, CatalogController, ...(foundation.lessons ? [LessonRunsController] : []), ...(foundation.p4?[ReviewController]:[])] : [])],
+    providers: [{ provide: PROBE, useValue: probe }, ...(foundation ? [{ provide: IDENTITY, useValue: foundation.identity }, { provide: CONTENT, useValue: foundation.content }, ...(foundation.lessons ? [{ provide: LESSONS, useValue: foundation.lessons }] : []), ...(foundation.p4?[{provide:P4,useValue:foundation.p4}]:[])] : [])] })
   class P1Module {}
   const app = await NestFactory.create(P1Module, { logger: false, abortOnError: false });
   app.setGlobalPrefix('api/v1');

@@ -55,7 +55,7 @@ test('P2 real PostgreSQL: identity, DB isolation, immutable publication and recr
 
     await run('P2-DB-001 clean migrations, replay, seed/reseed and registry parity', async () => {
       const migrations = (await db.query('SELECT migration_name,checksum FROM _prisma_migrations WHERE finished_at IS NOT NULL ORDER BY migration_name')).rows;
-      assert.equal(migrations.length, 3);
+      assert.equal(migrations.length, 4);
       for (const m of migrations) assert.equal(m.checksum, createHash('sha256').update(readFileSync(`prisma/migrations/${m.migration_name}/migration.sql`)).digest('hex'));
       assert.equal((await db.query('SELECT count(*) FROM p1_bootstrap.fixtures')).rows[0].count, '2');
       assert.equal((await db.query('SELECT count(*) FROM roles')).rows[0].count, '7');
@@ -208,10 +208,10 @@ test('P2 real PostgreSQL: identity, DB isolation, immutable publication and recr
       await assert.rejects(identity.authenticate(newSession.token), { code: 'UNAUTHENTICATED' });
       for (let n = 1; n <= 9; n++) assert.equal(await identity.allowLogin('synthetic-rate-window'), n <= 8);
     });
-    await run('P2-SCOPE-001 accepted P2 invariants with authorized P3 extension; P4+ absent; no FK cascade delete', async () => {
+    await run('P2-SCOPE-001 accepted P2 invariants with authorized P4 extension; P5+ absent; cascade limited to owned collection entries', async () => {
       const tables = (await db.query(`SELECT tablename FROM pg_tables WHERE schemaname='public'`)).rows.map((r) => r.tablename);
-      for (const table of ['knowledge_mastery_states', 'review_schedules', 'speech_jobs', 'ai_runs', 'ai_sessions']) assert(!tables.includes(table));
-      assert.equal((await db.query(`SELECT count(*) FROM pg_constraint WHERE contype='f' AND confdeltype='c'`)).rows[0].count, '0');
+      for (const table of ['speech_jobs', 'ai_runs', 'ai_sessions']) assert(!tables.includes(table));
+      assert.deepEqual((await db.query(`SELECT conrelid::regclass::text AS child,confrelid::regclass::text AS parent FROM pg_constraint WHERE contype='f' AND confdeltype='c'`)).rows,[{child:'collection_entries',parent:'collections'}]);
       assert.equal((await db.query("SELECT count(*) FROM users WHERE email_normalized LIKE '%@example.invalid'")).rows[0].count, '4');
       await sqlReject(db, 'UPDATE knowledge_items SET status=$1 WHERE id=$2', ['deprecated', entity(cs, 'knowledge').id], '23514');
       await sqlReject(db, 'DELETE FROM knowledge_items WHERE id=$1', [entity(cs, 'knowledge').id], '23514');

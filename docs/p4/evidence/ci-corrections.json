@@ -1,0 +1,79 @@
+{
+  "phase": "P4",
+  "tested_sha": "b19458620e21e5942c2c0666c8d49d9b42f136f2",
+  "run_id": 35334108022,
+  "job_id": 105564886333,
+  "status": "FAIL",
+  "failures": [
+    {
+      "gate": "P2-DB-001",
+      "cause": "Expected 3 migrations after additive P4 introduced fourth",
+      "fix": "Expect four, continue verifying every migration checksum"
+    },
+    {
+      "gate": "P3-ISO-001",
+      "cause": "Foreign owner rejection text changed when first profile lock added",
+      "fix": "Assert NOT_FOUND contract code"
+    },
+    {
+      "gate": "P4-DB-001",
+      "cause": "Synthetic P4 database prefix excluded by local guard",
+      "fix": "Extend explicit allowlist to P4 and preserve localhost/hex-only/production rejection"
+    }
+  ],
+  "acceptance": "No complete P4 runtime acceptance is claimed from this run",
+  "second_run": {
+    "tested_sha": "8519043385496d8f64d986f6d6a8f48306f7e744",
+    "run_id": 35889104161,
+    "job_id": 107276767827,
+    "passed": "P1/P2/P3 DB regression; P4 migration, fixtures, mastery, isolation and atomicity gates",
+    "failure": "P4-REVIEW-001: no candidates because fixture publications were never activated",
+    "fix": "Attempted activation of synthetic publications through ContentRepository. Initial stable-channel attempt was correctly rejected by the third run; third_run.fix records the final test-channel-only solution."
+  },
+  "third_run": {
+    "tested_sha": "0c4946ae9d69d8a489a55b883f909fd6f11c1923",
+    "run_id": 35889829270,
+    "job_id": 107279184736,
+    "failure": "Synthetic fixture used stable publication, correctly rejected by accepted later-release gate",
+    "fix": "Retain test publication channel; activate through normal pointer API; inject test channel only in synthetic ReviewRepository fixture. Application default remains stable and learner cannot choose channel; no release gate removed."
+  },
+  "fourth_run": {
+    "tested_sha": "8717f93fa3071e1a5be4e6d277997af64006a3b6",
+    "run_id": 35890499817,
+    "job_id": 107281449683,
+    "failure": "P4-ISO-001 bulk invalid-facet update collided with another facet primary key before the intended registry FK check",
+    "fix": "Change exactly one projection row to an unregistered facet so the test isolates the registry FK. Continue requiring SQLSTATE 23503/23514; do not accept duplicate-key as isolation proof."
+  },
+  "fifth_run": {
+    "tested_sha": "feb28a35691d15d45f4740ac6f99d9167cbdb115",
+    "run_id": 35955643018,
+    "job_id": 107493274905,
+    "passed": "P1/P2/P3 regression; P4 DB/FIX/MAST/ISO/TXN/REVIEW/SUPPORT/COLL gates",
+    "failure": "P4-RESET-001: PostgreSQL 42P08 uuid versus text in INSERT SELECT DISTINCT reset targets",
+    "fix": "Explicitly cast reset job/owner/profile/language SELECT parameters to uuid; scope and immutable cutoff semantics unchanged."
+  },
+  "sixth_run": {
+    "tested_sha": "3063632791b756ff98d3da44c7ac1d79171709db",
+    "run_id": 35956035051,
+    "job_id": 107494454170,
+    "passed": "All non-browser P4 DB/API gates including reset and scalar parity in P1 workflow; P4 browser workflow reached reset PASS",
+    "failure": "Playwright exact getByLabel for wrapped select did not resolve despite rendered accessible combobox and 200 login/csrf/profile/collection requests (artifact 10790890101)",
+    "fix": "Use accessible combobox role/name; retain same expected profile and zero retries. Embedded LessonPlayer shares the authenticated parent CSRF token so child mount cannot rotate/invalidate parent actions; require actual skip HTTP 200. Add direct-SQL immutable Review selection rejection cases."
+  },
+  "seventh_run": {
+    "tested_sha": "01d7d4aebb5fea08f058c6853c3a2a43d83b089e",
+    "run_id": 35956639919,
+    "job_id": 107496262660,
+    "passed": "P1 push/PR, P2 PR, P3 PR all successful; DB including direct immutable Review negatives and OCI regression green; P4 browser login/start/read actions succeeded",
+    "failure": "Test-only APIRequestContext returned 401 for Secure session cookie over HTTP loopback, while Chromium UI requests authenticated successfully",
+    "fix": "Read before/after mastery through actual browser fetch with credentials:include. Preserve Secure/HttpOnly/SameSite cookie and mandatory HTTP 200; no auth relaxation."
+  },
+  "resolution": {
+    "status": "ALL_RECORDED_FAILURES_RESOLVED",
+    "verified_sha": "5873b6f9789b92d4aa0dee5044481745c1385ef4",
+    "p4_runtime_gates": 12,
+    "hosted_runs": "P1 push/PR, P2 PR, P3 PR, P4 push/PR all success",
+    "evidence": "docs/p4/evidence/hosted-ci.json; docs/p4/evidence/verified-runtime-checkpoint.json",
+    "final_head_rule": "Containing closure commit requires its own full exact-head CI acceptance."
+  }
+}

@@ -66,10 +66,10 @@ test('P3 PostgreSQL: pinned bilingual lesson runtime, attempts, idempotency, rem
 
     await run('P3-DB-001 clean migration/replay and exact phase table boundary', async () => {
       migrate();
-      assert.equal((await db.query(`SELECT count(*) FROM public._prisma_migrations WHERE finished_at IS NOT NULL`)).rows[0].count, '3');
+      assert.equal((await db.query(`SELECT count(*) FROM public._prisma_migrations WHERE finished_at IS NOT NULL`)).rows[0].count, '4');
       const tables = (await db.query(`SELECT tablename FROM pg_tables WHERE schemaname='public'`)).rows.map((row) => row.tablename);
       for (const table of ['lesson_runs','lesson_run_items','activity_attempts','attempt_receipts','evidence_events','outbox_events','outbox_deliveries']) assert(tables.includes(table));
-      for (const table of ['knowledge_mastery_states','skill_mastery_states','review_schedules','speech_jobs','ai_runs','ai_sessions']) assert(!tables.includes(table));
+      for (const table of ['speech_jobs','ai_runs','ai_sessions']) assert(!tables.includes(table));
       assert.equal((await db.query('SELECT count(*) FROM p1_bootstrap.fixtures')).rows[0].count, '2');
     });
 
@@ -100,7 +100,7 @@ test('P3 PostgreSQL: pinned bilingual lesson runtime, attempts, idempotency, rem
     let enRun = await lessons.start(learnerId,{ language_profile_id: profiles.en, publication_id: publications.en.id, lesson_id: p3.en.lesson_id });
     await run('P3-ISO-001 DB owner/profile/language/publication lineage rejects EN/CS and IDOR mismatches', async () => {
       await assert.rejects(lessons.start(learnerId,{ language_profile_id: profiles.en, publication_id: publications.cs.id, lesson_id: p3.cs.lesson_id }), /unavailable/u);
-      await assert.rejects(lessons.start(otherId,{ language_profile_id: profiles.en, publication_id: publications.en.id, lesson_id: p3.en.lesson_id }), /unavailable/u);
+      await assert.rejects(lessons.start(otherId,{ language_profile_id: profiles.en, publication_id: publications.en.id, lesson_id: p3.en.lesson_id }), {code:'NOT_FOUND'});
       await assert.rejects(lessons.get(otherId,enRun.id), /not found/u);
       await sqlReject(db,'UPDATE lesson_runs SET language_id=$1,revision=revision+1 WHERE id=$2',[languageIds.cs,enRun.id],'23514');
       await sqlReject(db,`INSERT INTO lesson_runs(id,user_id,language_profile_id,language_id,variant_id,publication_id,publication_checksum,lesson_id,content_version_id,content_checksum,manifest)
@@ -310,7 +310,7 @@ test('P3 PostgreSQL: pinned bilingual lesson runtime, attempts, idempotency, rem
     await run('P3-DB-002 clean database recreation repeats all migrations and synthetic seed', async () => {
       await admin.query(`CREATE DATABASE "${name}" TEMPLATE template0 ENCODING 'UTF8'`); created=true; migrate(); await seedBootstrap(env); await seedBootstrap(env);
       const fresh=createFoundationPool(url.toString()); try {
-        assert.equal((await fresh.query('SELECT count(*) FROM public._prisma_migrations WHERE finished_at IS NOT NULL')).rows[0].count,'3');
+        assert.equal((await fresh.query('SELECT count(*) FROM public._prisma_migrations WHERE finished_at IS NOT NULL')).rows[0].count,'4');
         assert.equal((await fresh.query('SELECT count(*) FROM lesson_runs')).rows[0].count,'0');
         assert.equal((await fresh.query('SELECT count(*) FROM p1_bootstrap.fixtures')).rows[0].count,'2');
       } finally { await fresh.end(); }

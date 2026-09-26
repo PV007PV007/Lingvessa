@@ -1,6 +1,6 @@
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
+import {readFileSync,writeFileSync,mkdirSync,existsSync} from 'node:fs';
 import assert from 'node:assert/strict';
 const commit=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();
 assert.equal(process.env.GITHUB_HEAD_SHA,commit,'Acceptance must check the exact PR head, not a different merge/document commit');
@@ -23,6 +23,6 @@ const summary={phase:'P3',status:'PASS_READY_FOR_OWNER_ACCEPTANCE',tested_sha:co
   database:{engine:database.database,gates:database.gates},fixtures:fixtures.results,browser:browser.stats,latency,
   container_checks:containers.checks,container_images:images.images,baseline:{passed:baseline.checks.filter((entry:{status:string})=>entry.status==='PASS').length,total:baseline.checks.length},
   artifacts:artifacts.map(path=>({path,sha256:createHash('sha256').update(readFileSync(path)).digest('hex')})),
-  p4_authorized:false,owner_acceptance_pending:true};
+  p4_authorized:existsSync("docs/p4/authorization.json"),owner_acceptance_pending:!existsSync("docs/p4/authorization.json"),regression_for:existsSync("docs/p4/authorization.json")?"P4":null};
 mkdirSync('artifacts/p3',{recursive:true});writeFileSync('artifacts/p3/acceptance-summary.json',JSON.stringify(summary,null,2)+'\n');
 console.log(JSON.stringify(summary));

@@ -1,0 +1,262 @@
+{
+  "phase": "P4",
+  "base_remote_sha": "07b6aae9b001dbb4d620df3d491473a95f674ad2",
+  "files": [
+    {
+      "path": ".github/workflows/p4.yml",
+      "status": "added"
+    },
+    {
+      "path": "00_CONTEXT/01_implementation_state_and_handoff.md",
+      "status": "modified"
+    },
+    {
+      "path": "apps/api/src/app.ts",
+      "status": "modified"
+    },
+    {
+      "path": "apps/api/src/lessons.ts",
+      "status": "modified"
+    },
+    {
+      "path": "apps/api/src/main.ts",
+      "status": "modified"
+    },
+    {
+      "path": "apps/api/src/review.ts",
+      "status": "added"
+    },
+    {
+      "path": "apps/web/src/app/api/v1/[...segments]/route.ts",
+      "status": "modified"
+    },
+    {
+      "path": "apps/web/src/app/review/page.tsx",
+      "status": "added"
+    },
+    {
+      "path": "apps/web/src/lesson/player.tsx",
+      "status": "modified"
+    },
+    {
+      "path": "apps/web/src/review/page.tsx",
+      "status": "added"
+    },
+    {
+      "path": "content/fixtures/p4/cs-base.json",
+      "status": "added"
+    },
+    {
+      "path": "content/fixtures/p4/cs-core.json",
+      "status": "added"
+    },
+    {
+      "path": "content/fixtures/p4/cs-lesson.json",
+      "status": "added"
+    },
+    {
+      "path": "content/fixtures/p4/en-base.json",
+      "status": "added"
+    },
+    {
+      "path": "content/fixtures/p4/en-core.json",
+      "status": "added"
+    },
+    {
+      "path": "content/fixtures/p4/en-lesson.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/p4/P4_exit_evidence.md",
+      "status": "added"
+    },
+    {
+      "path": "docs/p4/authorization.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/p4/evidence/accepted-file-checksums.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/p4/evidence/changed-files.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/p4/evidence/ci-corrections.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/p4/evidence/hosted-ci.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/p4/evidence/p3-acceptance.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/p4/evidence/schema-api-diff.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/p4/evidence/validation-index.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/p4/evidence/verified-runtime-checkpoint.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/p4/phase-scope.md",
+      "status": "added"
+    },
+    {
+      "path": "docs/p4/requirement-evidence.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/p4/task-status.json",
+      "status": "added"
+    },
+    {
+      "path": "infra/contracts/p4.openapi.json",
+      "status": "added"
+    },
+    {
+      "path": "infra/local/database-guard.ts",
+      "status": "modified"
+    },
+    {
+      "path": "infra/persistence/collections.ts",
+      "status": "added"
+    },
+    {
+      "path": "infra/persistence/learning-lock.ts",
+      "status": "added"
+    },
+    {
+      "path": "infra/persistence/lessons.ts",
+      "status": "modified"
+    },
+    {
+      "path": "infra/persistence/mastery.ts",
+      "status": "added"
+    },
+    {
+      "path": "infra/persistence/resets.ts",
+      "status": "added"
+    },
+    {
+      "path": "infra/persistence/review.ts",
+      "status": "added"
+    },
+    {
+      "path": "package.json",
+      "status": "modified"
+    },
+    {
+      "path": "packages/activity-schemas/src/review.ts",
+      "status": "added"
+    },
+    {
+      "path": "packages/mastery-review/src/index.ts",
+      "status": "modified"
+    },
+    {
+      "path": "packages/mastery-review/src/model.ts",
+      "status": "added"
+    },
+    {
+      "path": "packages/mastery-review/src/policy.ts",
+      "status": "added"
+    },
+    {
+      "path": "packages/mastery-review/src/session.ts",
+      "status": "added"
+    },
+    {
+      "path": "packages/mastery-review/src/surface.ts",
+      "status": "added"
+    },
+    {
+      "path": "prisma/migrations/202609180001_p4_mastery_review/migration.sql",
+      "status": "added"
+    },
+    {
+      "path": "prisma/schema.prisma",
+      "status": "modified"
+    },
+    {
+      "path": "tests/browser/p4.spec.ts",
+      "status": "added"
+    },
+    {
+      "path": "tests/integration/bootstrap.test.ts",
+      "status": "modified"
+    },
+    {
+      "path": "tests/integration/p2-foundation.test.ts",
+      "status": "modified"
+    },
+    {
+      "path": "tests/integration/p3-lesson-engine.test.ts",
+      "status": "modified"
+    },
+    {
+      "path": "tests/integration/p4-mastery-review.test.ts",
+      "status": "added"
+    },
+    {
+      "path": "tests/support/p4-fixtures.ts",
+      "status": "added"
+    },
+    {
+      "path": "tests/unit/database-guard.test.ts",
+      "status": "modified"
+    },
+    {
+      "path": "tests/unit/p4-mastery-review.test.ts",
+      "status": "added"
+    },
+    {
+      "path": "tools/governance/validate_p3_baseline.py",
+      "status": "modified"
+    },
+    {
+      "path": "tools/governance/validate_p4_baseline.py",
+      "status": "added"
+    },
+    {
+      "path": "tools/p2/validate-fixtures.ts",
+      "status": "modified"
+    },
+    {
+      "path": "tools/p3/acceptance-summary.ts",
+      "status": "modified"
+    },
+    {
+      "path": "tools/p3/playwright.config.ts",
+      "status": "modified"
+    },
+    {
+      "path": "tools/p4/acceptance-summary.ts",
+      "status": "added"
+    },
+    {
+      "path": "tools/p4/browser-gate.ts",
+      "status": "added"
+    },
+    {
+      "path": "tools/p4/openapi.ts",
+      "status": "added"
+    },
+    {
+      "path": "tools/p4/playwright.config.ts",
+      "status": "added"
+    }
+  ],
+  "counts": {
+    "added": 44,
+    "modified": 19
+  }
+}

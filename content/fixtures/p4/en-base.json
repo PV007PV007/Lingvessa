@@ -1,0 +1,280 @@
+{
+  "fixture_version": "p2-reference-metadata-1",
+  "source_document": "Reference Module Design v1.6 §§4-5/12",
+  "scope": "P4 isolated synthetic mastery/Review dataset; distinct UUID namespace from P2/P3 reference fixtures. Not full M01 curriculum.",
+  "language": "en",
+  "language_id": "0198f000-0000-7000-8000-000000000001",
+  "entities": [
+    {
+      "id": "36aa1b89-db79-5f6c-97a8-f74d5242b5b4",
+      "stable_code": "P4-E-COURSE",
+      "kind": "course",
+      "title": "English",
+      "version_id": "a0b33040-5a6e-5f52-801f-8b95fa960d63",
+      "version_code": "p2-schema-1",
+      "variety_scope": "common",
+      "metadata": {}
+    },
+    {
+      "id": "a8d5b5b3-cf1d-5889-97bb-d84f7780e060",
+      "stable_code": "P4-E-A1",
+      "kind": "level",
+      "title": "A1",
+      "version_id": "489228f5-1b34-5d67-a864-c811a13da684",
+      "version_code": "p2-schema-1",
+      "variety_scope": "common",
+      "metadata": {
+        "cefr": "A1",
+        "position": 0
+      },
+      "parent_id": "36aa1b89-db79-5f6c-97a8-f74d5242b5b4"
+    },
+    {
+      "id": "7cb4950a-22aa-576d-abe8-100eb4748278",
+      "stable_code": "P4-E-A1-M01",
+      "kind": "module",
+      "title": "Hello & first contact",
+      "version_id": "25deb522-0580-5695-b1fe-050821749315",
+      "version_code": "p2-schema-1",
+      "variety_scope": "common",
+      "metadata": {
+        "position": 0
+      },
+      "parent_id": "a8d5b5b3-cf1d-5889-97bb-d84f7780e060"
+    },
+    {
+      "id": "9c46cecc-d293-5d5c-aec9-08cc0d715b5e",
+      "stable_code": "P4-E-A1-M01-L01",
+      "kind": "lesson",
+      "title": "Hello!",
+      "version_id": "4f42a5cf-cbb5-594b-841b-a16219a2696d",
+      "version_code": "p2-schema-1",
+      "variety_scope": "common",
+      "metadata": {
+        "position": 0,
+        "unit_kind": "lesson"
+      },
+      "parent_id": "7cb4950a-22aa-576d-abe8-100eb4748278"
+    },
+    {
+      "id": "fbdfc083-378c-54b6-9181-5f4ebce14de6",
+      "stable_code": "P4-E-A1-M01-L02",
+      "kind": "lesson",
+      "title": "I am / You are",
+      "version_id": "0f781af5-c256-5f29-a768-e4b2b8010572",
+      "version_code": "p2-schema-1",
+      "variety_scope": "common",
+      "metadata": {
+        "position": 1,
+        "unit_kind": "lesson"
+      },
+      "parent_id": "7cb4950a-22aa-576d-abe8-100eb4748278"
+    },
+    {
+      "id": "3b8d6d2a-1ec9-5cfc-a774-8fc3f034e82d",
+      "stable_code": "P4-E-A1-M01-L03",
+      "kind": "lesson",
+      "title": "Where are you from?",
+      "version_id": "9e36b29b-fbbc-59f6-a971-da5f3833ca5a",
+      "version_code": "p2-schema-1",
+      "variety_scope": "common",
+      "metadata": {
+        "position": 2,
+        "unit_kind": "lesson"
+      },
+      "parent_id": "7cb4950a-22aa-576d-abe8-100eb4748278"
+    },
+    {
+      "id": "99aaf6e2-ad92-5e6b-a5d7-1a9c5cc10ffb",
+      "stable_code": "P4-E-A1-M01-L04",
+      "kind": "lesson",
+      "title": "Nice to meet you",
+      "version_id": "e586e2ba-67de-567b-9531-211cfbd7bee1",
+      "version_code": "p2-schema-1",
+      "variety_scope": "common",
+      "metadata": {
+        "position": 3,
+        "unit_kind": "lesson"
+      },
+      "parent_id": "7cb4950a-22aa-576d-abe8-100eb4748278"
+    },
+    {
+      "id": "b71c29b2-055f-5de9-80c4-ed23d496bdb0",
+      "stable_code": "P4-E-A1-M01-R01",
+      "kind": "lesson",
+      "title": "First day at a language club",
+      "version_id": "b88faeb2-61c0-5078-9f0c-3f4211b28239",
+      "version_code": "p2-schema-1",
+      "variety_scope": "common",
+      "metadata": {
+        "position": 4,
+        "unit_kind": "recap"
+      },
+      "parent_id": "7cb4950a-22aa-576d-abe8-100eb4748278"
+    },
+    {
+      "id": "18e1708b-1178-5950-9120-b1e1d24dbc36",
+      "stable_code": "P4-ENG_K_GREET_HELLO",
+      "kind": "knowledge",
+      "title": "Hello.",
+      "version_id": "4dc3bf2b-30ff-5f36-87c5-112a5d314882",
+      "version_code": "p2-schema-1",
+      "variety_scope": "common",
+      "metadata": {
+        "knowledge_type": "chunk",
+        "canonical_form": "Hello.",
+        "sense": "Hello.",
+        "cefr": "A1",
+        "learning_scope": "active"
+      }
+    },
+    {
+      "id": "fcbf3d92-41ff-5862-aecb-addd83e41557",
+      "stable_code": "P4-ENG_K_GREET_HI",
+      "kind": "knowledge",
+      "title": "Hi.",
+      "version_id": "d2395030-95ac-58e0-8b73-083ef910e0d0",
+      "version_code": "p2-schema-1",
+      "variety_scope": "common",
+      "metadata": {
+        "knowledge_type": "chunk",
+        "canonical_form": "Hi.",
+        "sense": "Hi.",
+        "cefr": "A1",
+        "learning_scope": "active"
+      }
+    },
+    {
+      "id": "c8280572-0474-5902-b913-e5aef40771c3",
+      "stable_code": "P4-ENG_K_REPEAT",
+      "kind": "knowledge",
+      "title": "Can you repeat, please?",
+      "version_id": "1542da0f-13c2-5cd1-b617-c57f88ae6e00",
+      "version_code": "p2-schema-1",
+      "variety_scope": "common",
+      "metadata": {
+        "knowledge_type": "chunk",
+        "canonical_form": "Can you repeat, please?",
+        "sense": "Can you repeat, please?",
+        "cefr": "A1",
+        "learning_scope": "active"
+      }
+    },
+    {
+      "id": "030932f3-385c-5a9d-be93-be7ac153b529",
+      "stable_code": "P4-ENG_K_PRON_H",
+      "kind": "knowledge",
+      "title": "/h/ awareness",
+      "version_id": "4907a277-d7bd-5416-9d3b-dac278a29ab5",
+      "version_code": "p2-schema-1",
+      "variety_scope": "common",
+      "metadata": {
+        "knowledge_type": "pronunciation",
+        "canonical_form": "/h/ awareness",
+        "sense": "/h/ awareness",
+        "cefr": "A1",
+        "learning_scope": "active"
+      }
+    },
+    {
+      "id": "6e3a4dd9-a208-588c-886a-1f8f4013ad10",
+      "stable_code": "P4-E-A1-M01-OUTCOME-CONTACT",
+      "kind": "outcome",
+      "title": "First contact",
+      "version_id": "48edd0e9-2cd8-59a1-b9ee-f99231ab3c85",
+      "version_code": "p2-schema-1",
+      "variety_scope": "common",
+      "metadata": {
+        "cefr": "A1",
+        "can_do": "Greet and use a repair phrase in a first-contact exchange.",
+        "source_reference": "Reference Module Design v1.6 §§5/12"
+      }
+    },
+    {
+      "id": "f2419572-94c0-51a5-812e-fc4e053ee121",
+      "stable_code": "P4-E-A1-M01-L01-P2-A01",
+      "kind": "activity",
+      "title": "multiple_choice",
+      "version_id": "0012aebb-792d-58d0-bd0b-41cebec8bb77",
+      "version_code": "p2-schema-1",
+      "variety_scope": "common",
+      "metadata": {
+        "position": 0,
+        "activity_type": "multiple_choice",
+        "response_modality": "selection"
+      },
+      "parent_id": "9c46cecc-d293-5d5c-aec9-08cc0d715b5e"
+    },
+    {
+      "id": "47d899ae-8bff-50be-aa0d-badc9520bf12",
+      "stable_code": "P4-E-A1-M01-L01-P2-A02",
+      "kind": "activity",
+      "title": "classification",
+      "version_id": "f3a21afe-e59d-5319-b916-7e358f994608",
+      "version_code": "p2-schema-1",
+      "variety_scope": "common",
+      "metadata": {
+        "position": 1,
+        "activity_type": "classification",
+        "response_modality": "selection"
+      },
+      "parent_id": "9c46cecc-d293-5d5c-aec9-08cc0d715b5e"
+    },
+    {
+      "id": "47857597-609e-5e3a-85fb-a55f788e1402",
+      "stable_code": "P4-E-A1-M01-L01-P2-A03",
+      "kind": "activity",
+      "title": "listen_repeat",
+      "version_id": "dec6c21a-3e11-56cf-885f-70d5d828590f",
+      "version_code": "p2-schema-1",
+      "variety_scope": "common",
+      "metadata": {
+        "position": 2,
+        "activity_type": "listen_repeat",
+        "response_modality": "speech"
+      },
+      "parent_id": "9c46cecc-d293-5d5c-aec9-08cc0d715b5e"
+    }
+  ],
+  "evidence_maps": [
+    {
+      "item_id": "f2419572-94c0-51a5-812e-fc4e053ee121",
+      "knowledge_item_id": "18e1708b-1178-5950-9120-b1e1d24dbc36",
+      "role": "practice",
+      "skill": "vocabulary",
+      "facet": "meaning",
+      "weight": 0.6
+    },
+    {
+      "item_id": "47d899ae-8bff-50be-aa0d-badc9520bf12",
+      "knowledge_item_id": "fcbf3d92-41ff-5862-aecb-addd83e41557",
+      "role": "practice",
+      "skill": "grammar",
+      "facet": "register",
+      "weight": 0.6
+    },
+    {
+      "item_id": "47857597-609e-5e3a-85fb-a55f788e1402",
+      "knowledge_item_id": "030932f3-385c-5a9d-be93-be7ac153b529",
+      "role": "practice",
+      "skill": "pronunciation",
+      "facet": "pronunciation_target",
+      "weight": 0.6
+    }
+  ],
+  "knowledge_edges": [
+    {
+      "id": "e5c082c6-2ad2-5278-83ce-5e06747c67fd",
+      "from_id": "18e1708b-1178-5950-9120-b1e1d24dbc36",
+      "to_id": "fcbf3d92-41ff-5862-aecb-addd83e41557",
+      "edge_type": "contrast",
+      "direction": "bidirectional",
+      "weight": 1,
+      "version_code": "p2-schema-1",
+      "review_status": "approved",
+      "provenance": {
+        "source": "Reference Module Design v1.6; formal/informal greeting contrast"
+      }
+    }
+  ]
+}

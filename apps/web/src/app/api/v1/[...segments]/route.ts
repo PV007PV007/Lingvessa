@@ -3,7 +3,7 @@ export const dynamic='force-dynamic';
 /** Fixed service origin configured on the server; request data cannot choose a remote host. */
 async function forward(request: NextRequest, context: {params:Promise<{segments:string[]}>}) {
   const {segments}=await context.params;
-  if (!['auth','me','catalog','lesson-runs'].includes(segments[0]??'')) return new Response(null,{status:404});
+  if (!['auth','me','catalog','lesson-runs','mastery','mistakes','review-sessions','collections','learning-resets'].includes(segments[0]??'')) return new Response(null,{status:404});
   const origin=new URL(process.env.LINGVESSA_API_ORIGIN??'http://127.0.0.1:3002');
   if (!['http:','https:'].includes(origin.protocol)||origin.username||origin.password||origin.pathname!=='/') return new Response(null,{status:503});
   // Next normalizes loopback nextUrl.host to localhost; Origin must match the actual request authority.
@@ -23,4 +23,4 @@ async function forward(request: NextRequest, context: {params:Promise<{segments:
     return new Response(upstream.body,{status:upstream.status,headers:safe});
   } catch { return Response.json({type:'about:blank',title:'Service unavailable',status:503,code:'SERVICE_UNAVAILABLE',detail_safe:'Сервіс тимчасово недоступний.',correlation_id:crypto.randomUUID()},{status:503,headers:{'cache-control':'no-store'}}); }
 }
-export const GET=forward; export const POST=forward; export const PATCH=forward; export const PUT=forward;
+export const GET=forward; export const POST=forward; export const PATCH=forward; export const PUT=forward; export const DELETE=forward;

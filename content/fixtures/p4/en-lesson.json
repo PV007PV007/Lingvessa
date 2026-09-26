@@ -1,0 +1,208 @@
+{
+  "fixture_version": "p3-executable-lesson-1",
+  "source_document": "Implementation Plan v1.4 §11; TD v1.7 §§17–18; synthetic P4 engine fixtures using shared fixture schema.",
+  "language": "en",
+  "language_id": "0198f000-0000-7000-8000-000000000001",
+  "lesson_id": "9c46cecc-d293-5d5c-aec9-08cc0d715b5e",
+  "base_content_version_id": "4f42a5cf-cbb5-594b-841b-a16219a2696d",
+  "content_version_id": "02507406-c5f7-5a3d-a723-439b297746d0",
+  "version_code": "p3-synthetic-1",
+  "ancestor_versions": [
+    {
+      "entity_id": "7cb4950a-22aa-576d-abe8-100eb4748278",
+      "base_content_version_id": "25deb522-0580-5695-b1fe-050821749315",
+      "content_version_id": "e2de03f1-0de7-58a7-b10b-0e003ffb1a91",
+      "version_code": "p3-synthetic-1"
+    },
+    {
+      "entity_id": "a8d5b5b3-cf1d-5889-97bb-d84f7780e060",
+      "base_content_version_id": "489228f5-1b34-5d67-a864-c811a13da684",
+      "content_version_id": "8bb1b5d7-09ec-505b-8ae2-3b594103df8a",
+      "version_code": "p3-synthetic-1"
+    },
+    {
+      "entity_id": "36aa1b89-db79-5f6c-97a8-f74d5242b5b4",
+      "base_content_version_id": "a0b33040-5a6e-5f52-801f-8b95fa960d63",
+      "content_version_id": "2c8f3bf6-d00e-5b8c-bb0d-47a1e96db0c6",
+      "version_code": "p3-synthetic-1"
+    }
+  ],
+  "activities": [
+    {
+      "schema_version": "1.7",
+      "id": "f2419572-94c0-51a5-812e-fc4e053ee121",
+      "stable_code": "P4-E-A1-M01-L01-P2-A01",
+      "type": "multiple_choice",
+      "language": "en",
+      "variety": "en-GB",
+      "cefr": "A1",
+      "content_version_id": "02507406-c5f7-5a3d-a723-439b297746d0",
+      "presentation": {
+        "instruction_key": "E-A1-M01-L01-P2-A01_INSTRUCTION",
+        "prompt": "Choose the greeting.",
+        "options": [
+          {
+            "id": "hello",
+            "label": "Hello."
+          },
+          {
+            "id": "goodbye",
+            "label": "Goodbye."
+          }
+        ],
+        "accessibility": {
+          "keyboard_action": "Use arrow keys and Enter to select an answer.",
+          "feedback_live_region": true
+        }
+      },
+      "response": {
+        "kind": "single",
+        "answer_policy": {
+          "id": "E-A1-M01-L01-P2-A01_POLICY",
+          "version": "1.0.0",
+          "mode": "single",
+          "accepted_option_ids": [
+            "hello"
+          ],
+          "normalization": {
+            "unicode": "NFC",
+            "locale": "en-GB",
+            "case_sensitive": false,
+            "collapse_whitespace": true,
+            "punctuation_sensitive": false,
+            "apostrophe_equivalent": true,
+            "diacritics_sensitive": true
+          }
+        }
+      },
+      "feedback": {
+        "correct": "Correct: “Hello” is a greeting.",
+        "incorrect": "Choose the greeting used to open a conversation.",
+        "reveal": "The answer is “Hello”. This completion is assisted.",
+        "remediation": "Try the greeting again without the reveal."
+      },
+      "learning": {
+        "knowledge_refs": [
+          {
+            "knowledge_item_id": "18e1708b-1178-5950-9120-b1e1d24dbc36",
+            "stable_code": "P4-ENG_K_GREET_HELLO",
+            "role": "practice"
+          }
+        ],
+        "outcome_refs": [
+          {
+            "outcome_id": "6e3a4dd9-a208-588c-886a-1f8f4013ad10",
+            "stable_code": "P4-E-A1-M01-OUTCOME-CONTACT"
+          }
+        ],
+        "evidence_map": [
+          {
+            "skill": "vocabulary",
+            "facet": "meaning",
+            "weight": 0.6
+          }
+        ],
+        "difficulty": 0.2
+      },
+      "runtime": {
+        "completion_policy": "correct_or_reveal_v1",
+        "evaluator_version": "deterministic-choice-1.0.0",
+        "presentation_seed": "p3-en-a01",
+        "presentation_order": [
+          "hello",
+          "goodbye"
+        ],
+        "max_retries": 2,
+        "auto_advance_allowed": true
+      }
+    },
+    {
+      "schema_version": "1.7",
+      "id": "47d899ae-8bff-50be-aa0d-badc9520bf12",
+      "stable_code": "P4-E-A1-M01-L01-P2-A02",
+      "type": "classification",
+      "language": "en",
+      "variety": "en-GB",
+      "cefr": "A1",
+      "content_version_id": "02507406-c5f7-5a3d-a723-439b297746d0",
+      "presentation": {
+        "instruction_key": "E-A1-M01-L01-P2-A02_INSTRUCTION",
+        "prompt": "Choose the informal greeting.",
+        "options": [
+          {
+            "id": "formal",
+            "label": "Good morning."
+          },
+          {
+            "id": "informal",
+            "label": "Hi."
+          }
+        ],
+        "accessibility": {
+          "keyboard_action": "Use arrow keys and Enter to select an answer.",
+          "feedback_live_region": true
+        }
+      },
+      "response": {
+        "kind": "single",
+        "answer_policy": {
+          "id": "E-A1-M01-L01-P2-A02_POLICY",
+          "version": "1.0.0",
+          "mode": "single",
+          "accepted_option_ids": [
+            "informal"
+          ],
+          "normalization": {
+            "unicode": "NFC",
+            "locale": "en-GB",
+            "case_sensitive": false,
+            "collapse_whitespace": true,
+            "punctuation_sensitive": false,
+            "apostrophe_equivalent": true,
+            "diacritics_sensitive": true
+          }
+        }
+      },
+      "feedback": {
+        "correct": "Correct: “Hi” is informal.",
+        "incorrect": "Look for the informal greeting.",
+        "reveal": "The answer is “Hi”. This completion is assisted.",
+        "remediation": "Classify the greeting again without the reveal."
+      },
+      "learning": {
+        "knowledge_refs": [
+          {
+            "knowledge_item_id": "fcbf3d92-41ff-5862-aecb-addd83e41557",
+            "stable_code": "P4-ENG_K_GREET_HI",
+            "role": "practice"
+          }
+        ],
+        "outcome_refs": [
+          {
+            "outcome_id": "6e3a4dd9-a208-588c-886a-1f8f4013ad10",
+            "stable_code": "P4-E-A1-M01-OUTCOME-CONTACT"
+          }
+        ],
+        "evidence_map": [
+          {
+            "skill": "grammar",
+            "facet": "register",
+            "weight": 0.6
+          }
+        ],
+        "difficulty": 0.2
+      },
+      "runtime": {
+        "completion_policy": "correct_or_reveal_v1",
+        "evaluator_version": "deterministic-choice-1.0.0",
+        "presentation_seed": "p3-en-a02",
+        "presentation_order": [
+          "formal",
+          "informal"
+        ],
+        "max_retries": 2,
+        "auto_advance_allowed": true
+      }
+    }
+  ]
+}
