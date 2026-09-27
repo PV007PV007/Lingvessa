@@ -45,7 +45,8 @@ export async function p5AudioFixture(db:pg.Pool,store:AssetStore){
    await f.approve(await f.media.ingest(f.author,job,metadata,bytes));assets.push(metadata);
    const ref={asset_id:id,asset_version:1,asset_stable_code:metadata.stable_code,role:speed};activity.media_refs.push(ref);activity.contract!.presentation.media_refs.push(ref);
   }
-  await f.content.saveDraft(f.author,source.language_id,payload,1);
+  const revision=(await db.query('SELECT revision FROM content_versions WHERE id=$1',[fixture.content_version_id])).rows[0].revision as number;
+  await f.content.saveDraft(f.author,source.language_id,payload,revision);
   const replacements=new Map([[fixture.lesson_id,fixture.content_version_id],...fixture.ancestor_versions.map(a=>[a.entity_id,a.content_version_id] as const)]);
   const versionIds=source.entities.map(e=>replacements.get(e.id)??e.version_id);
   for(const id of versionIds){await f.content.validateVersion(id);const v=(await db.query('SELECT checksum,revision FROM content_versions WHERE id=$1',[id])).rows[0];

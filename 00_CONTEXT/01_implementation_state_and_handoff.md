@@ -4,7 +4,7 @@ Timestamp: 2026-09-27T19:05:53.814236+00:00
 Current phase: P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED. P6 NOT AUTHORIZED.
 Branch: `implementation/p5-media-speech`. PR [#5](https://github.com/PV007PV007/Lingvessa/pull/5): OPEN DRAFT.
 Accepted main/P4 merge: `5027f001237b6451237d87343ebeca58cd0af007` (merge tree equals tested P4 `ee16aeea822d7cccb09f65e310d19fd5a1807747`).
-Last exact hosted P5 source: `789f0d400144012ae663635c343f38940167a822`, failed integration, not accepted. Current audio/SQL follow-up needs its own exact-head hosted result. Local synthetic checkpoint IDs are not remote tested SHAs.
+Last exact hosted P5 source: `3617b773babb255885ba7829028eda79e3735621`, failed integration, not accepted. Current audio/SQL follow-up needs its own exact-head hosted result. Local synthetic checkpoint IDs are not remote tested SHAs.
 
 ## Batch / tasks / requirements
 
@@ -27,3 +27,5 @@ BLOCKER: none established. IMPORTANT: P5 exit gates and speech implementation re
 EXC-P1-001 remains: main NOT technically branch protected. Branch/PR/green CI/owner acceptance process applies.
 Open owner decisions OD-004 storage profile, OD-005 providers/licences/voices, OD-006 calibrated speech policy retain safe defaults (synthetic adapters only; unapproved speech unavailable). No unapproved learner-data route or paid inference.
 Exact next task: commit this audio/SQL batch to PR #5, inspect and fix its actual hosted tests; then implement IMP-P5-003 under the canonical speech contract. No P5 merge or P6 work.
+
+Hosted audio batch 3617b773: previous publication guard fix passed. Remaining actual failures: generated media checksums lacked DB NOT NULL despite non-null Prisma scalars; synthetic audio draft used hardcoded revision 1. Fix: add NOT NULL to three generated checksum columns; read actual draft revision. Run 36343322735/job 108687522405. Speech foundation work has begun locally and is not included in this narrow CI fix.
