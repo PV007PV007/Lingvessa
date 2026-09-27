@@ -1,0 +1,25 @@
+{
+  "sha": "d3f9c4937277fea11cd2fddb62870e385d0fceb3",
+  "run_id": 36326198598,
+  "job_id": 108639315306,
+  "conclusion": "failure",
+  "passed": [
+    "install frozen lockfile",
+    "baseline 74/74",
+    "check 44 unit + 4 smoke and builds",
+    "reference fixtures",
+    "dependency audit",
+    "real PostgreSQL bootstrap"
+  ],
+  "failed": "integration",
+  "causes": [
+    "ContentRepository publication_assets SELECT DISTINCT $1 needed explicit UUID cast",
+    "P5 test database name absent from isolated local guard",
+    "P2 synthetic user count accidentally changed with migration count"
+  ],
+  "skipped": [
+    "container gates",
+    "P3/P4 acceptance summaries"
+  ],
+  "resolution": "code fixes prepared; runtime rerun required"
+}

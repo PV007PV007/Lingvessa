@@ -128,7 +128,7 @@ export class ContentRepository implements ContentLookup {
       const knowledgeEdges = (await db.query(`SELECT k.id AS edge_id,k.version_code,k.checksum FROM publication_knowledge_edges e
         JOIN knowledge_edges k ON k.id=e.edge_id WHERE e.publication_id=$1 ORDER BY k.id`, [input.id])).rows;
       await db.query(`INSERT INTO publication_assets(publication_id,asset_id,asset_version,language_id,checksum,metadata_checksum)
-        SELECT DISTINCT $1,b.asset_id,b.asset_version,b.language_id,v.checksum,v.metadata_checksum
+        SELECT DISTINCT $1::uuid,b.asset_id,b.asset_version,b.language_id,v.checksum,v.metadata_checksum
         FROM content_media_bindings b JOIN publication_entries pe ON pe.content_version_id=b.content_version_id
         JOIN asset_versions v ON v.asset_id=b.asset_id AND v.version=b.asset_version WHERE pe.publication_id=$1`,[input.id]);
       const assets=(await db.query(`SELECT asset_id,asset_version,checksum,metadata_checksum FROM publication_assets

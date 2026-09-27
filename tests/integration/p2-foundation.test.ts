@@ -212,7 +212,7 @@ test('P2 real PostgreSQL: identity, DB isolation, immutable publication and recr
       const tables = (await db.query(`SELECT tablename FROM pg_tables WHERE schemaname='public'`)).rows.map((r) => r.tablename);
       for (const table of ['speech_jobs', 'ai_runs', 'ai_sessions']) assert(!tables.includes(table));
       assert.deepEqual((await db.query(`SELECT conrelid::regclass::text AS child,confrelid::regclass::text AS parent FROM pg_constraint WHERE contype='f' AND confdeltype='c'`)).rows,[{child:'collection_entries',parent:'collections'}]);
-      assert.equal((await db.query("SELECT count(*) FROM users WHERE email_normalized LIKE '%@example.invalid'")).rows[0].count, '5');
+      assert.equal((await db.query("SELECT count(*) FROM users WHERE email_normalized LIKE '%@example.invalid'")).rows[0].count, '4');
       await sqlReject(db, 'UPDATE knowledge_items SET status=$1 WHERE id=$2', ['deprecated', entity(cs, 'knowledge').id], '23514');
       await sqlReject(db, 'DELETE FROM knowledge_items WHERE id=$1', [entity(cs, 'knowledge').id], '23514');
       const reportId = randomUUID();

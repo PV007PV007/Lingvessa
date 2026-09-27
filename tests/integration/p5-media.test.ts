@@ -15,7 +15,7 @@ import {assetObjectKey} from '../../packages/provider-adapters/storage/asset-int
 import {p5MediaFixture} from '../support/p5-fixtures.js';
 
 test('P5 real PostgreSQL: media ownership, immutable versions, bytes preflight and publication pins',{timeout:240000},async()=>{
- const base=localDatabaseUrl(process.env),admin=new pg.Client({connectionString:base,connectionTimeoutMillis:2000}),name=`lingvessa_p5_media_${randomBytes(8).toString('hex')}`,url=new URL(base);url.pathname=`/${name}`;
+ const base=localDatabaseUrl(process.env),admin=new pg.Client({connectionString:base,connectionTimeoutMillis:2000}),name=`lingvessa_p5_test_${randomBytes(8).toString('hex')}`,url=new URL(base);url.pathname=`/${name}`;
  const env={...process.env,LINGVESSA_ENV:'local',DATABASE_URL:url.toString()},root=await mkdtemp(join(tmpdir(),'p5-assets-'));let created=false,pool:pg.Pool|undefined;
  const gates:Array<{gate:string;status:'PASS'}>=[],gate=async(name:string,f:()=>Promise<void>)=>{await f();gates.push({gate:name,status:'PASS'});console.log(`P5_GATE PASS ${name}`);};
  const migrate=()=>{const r=spawnSync('pnpm',['db:migrate'],{env,encoding:'utf8',timeout:60000});assert.equal(r.status,0,`${r.stdout.slice(-2500)} ${r.stderr.slice(-1200)}`);};

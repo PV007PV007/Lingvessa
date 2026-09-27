@@ -31,6 +31,10 @@ jobs:
       - run: pnpm validate:references
       - run: pnpm audit:dependencies
       - run: pnpm exec playwright install --with-deps chromium
+      - name: Build pinned standalone S3 protocol test server
+        run: go install github.com/minio/minio@9e49d5e7a648f00e26f2246f4dc28e6b07f8c84a
+      - name: Verify actual S3 adapter and restart recovery
+        run: MINIO_BINARY="$(go env GOPATH)/bin/minio" node --import tsx tools/p5/storage-gate.ts
       - run: pnpm bootstrap:local
       - run: node --env-file=.local/runtime.env --import tsx --test tests/integration/*.test.ts
         env:
