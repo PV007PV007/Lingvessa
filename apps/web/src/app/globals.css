@@ -14,3 +14,5 @@ h1 { font-size: clamp(2rem, 5vw, 3rem); }
 .lesson-feedback { padding: 1rem; background: #e4efea; border-left: 4px solid #285a48; }
 :focus-visible { outline: 3px solid #186dc1; outline-offset: 3px; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+
+.lesson-media img{max-width:100%;height:auto;max-height:360px;object-fit:contain}.media-audio{padding:1rem;border:1px solid currentColor;border-radius:.5rem;margin:.75rem 0}.media-audio .active-speaker{font-weight:bold;border-inline-start:.25rem solid currentColor;padding-inline-start:.5rem}

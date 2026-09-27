@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-09-27T19:05:53.814236+00:00",
+  "tested_sha": "789f0d400144012ae663635c343f38940167a822",
+  "run_id": 36326624952,
+  "job_id": 108640523500,
+  "event": "pull_request",
+  "status": "FAILED_NOT_ACCEPTED",
+  "passed": [
+    "frozen install",
+    "baseline",
+    "check (44 unit, 4 smoke)",
+    "reference validation",
+    "dependency audit",
+    "standalone S3 source build",
+    "actual S3 PUT/HEAD/GET immutable replay, auth/integrity, outage/restart recovery",
+    "PostgreSQL 18.6 migrate/bootstrap/seed"
+  ],
+  "failed": {
+    "step": "integration",
+    "root_cause": "PL/pgSQL variable av collides with SQL alias av inside p5_publication_media_guard",
+    "fix": "Use distinct pinned alias for SQL rows; keep asset-version row variable separate. Only unaccepted P5 migration changes."
+  },
+  "not_executed": [
+    "OCI container suite after failed integration",
+    "P3/P4 acceptance summaries"
+  ],
+  "production_provider_approved": false
+}

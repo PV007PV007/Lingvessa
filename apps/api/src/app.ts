@@ -11,6 +11,9 @@ import { LessonRunsController, LESSONS } from './lessons.js';
 import {ReviewController,P4} from './review.js';
 import type {P4Services} from './review.js';
 
+import {MediaController,MEDIA} from './media.js';
+import type {MediaRepository} from '../../../infra/persistence/media.js';
+
 const PROBE = Symbol('P1_HEALTH_PROBE');
 
 @Controller('health')
@@ -30,9 +33,9 @@ class HealthController {
   }
 }
 
-export async function createApi(probe: HealthProbe, foundation?: { identity: IdentityRepository; content: ContentRepository; lessons?: LessonRepository; p4?:P4Services }) {
-  @Module({ controllers: [HealthController, ...(foundation ? [AuthController, ProfileController, CatalogController, ...(foundation.lessons ? [LessonRunsController] : []), ...(foundation.p4?[ReviewController]:[])] : [])],
-    providers: [{ provide: PROBE, useValue: probe }, ...(foundation ? [{ provide: IDENTITY, useValue: foundation.identity }, { provide: CONTENT, useValue: foundation.content }, ...(foundation.lessons ? [{ provide: LESSONS, useValue: foundation.lessons }] : []), ...(foundation.p4?[{provide:P4,useValue:foundation.p4}]:[])] : [])] })
+export async function createApi(probe: HealthProbe, foundation?: { identity: IdentityRepository; content: ContentRepository; lessons?: LessonRepository; p4?:P4Services;media?:MediaRepository }) {
+  @Module({ controllers: [HealthController, ...(foundation ? [AuthController, ProfileController, CatalogController, ...(foundation.lessons ? [LessonRunsController] : []), ...(foundation.p4?[ReviewController]:[]),...(foundation.media?[MediaController]:[])] : [])],
+    providers: [{ provide: PROBE, useValue: probe }, ...(foundation ? [{ provide: IDENTITY, useValue: foundation.identity }, { provide: CONTENT, useValue: foundation.content }, ...(foundation.lessons ? [{ provide: LESSONS, useValue: foundation.lessons }] : []), ...(foundation.p4?[{provide:P4,useValue:foundation.p4}]:[]),...(foundation.media?[{provide:MEDIA,useValue:foundation.media}]:[])] : [])] })
   class P1Module {}
   const app = await NestFactory.create(P1Module, { logger: false, abortOnError: false });
   app.setGlobalPrefix('api/v1');

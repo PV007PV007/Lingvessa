@@ -7,7 +7,7 @@
       "phase": "P5",
       "goal": "Media manifests, generated assets, QA and object-storage adapter",
       "owner_workstream": "Media/speech",
-      "source": "Plan §12 p7; Appendix B p12",
+      "source": "Plan \u00a712 p7; Appendix B p12",
       "dependencies": [
         "P4 gate"
       ],
@@ -296,7 +296,7 @@
       "phase": "P5",
       "goal": "Normal/slow playback and voice/variety bindings",
       "owner_workstream": "Media/speech",
-      "source": "Plan §12 p7; Appendix B p12",
+      "source": "Plan \u00a712 p7; Appendix B p12",
       "dependencies": [
         "IMP-P5-001"
       ],
@@ -305,7 +305,7 @@
         "packages/ui",
         "packages/provider-adapters/tts"
       ],
-      "status": "PLANNED_NOT_STARTED",
+      "status": "IN_PROGRESS",
       "requirement_ids": [
         "N-CUR-P06-T01-R08",
         "N-CUR-P06-T02-R02",
@@ -408,7 +408,7 @@
         "CHK-N-TS-P13-T03-R08",
         "CHK-N-TS-P16-T01-R02"
       ],
-      "readiness": "Recheck Definition of Ready and owner phase authorization before execution",
+      "readiness": "Audio foundation uses immutable P5 media contracts; hosted migration/bytes/playback checks pending. No approved production voice/provider implied.",
       "contract_change": "None in P0; future schema/API work remains in named task",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
@@ -418,7 +418,7 @@
       "phase": "P5",
       "goal": "Async speech jobs, mic UX, exact evidence settlement and cleanup",
       "owner_workstream": "Media/speech",
-      "source": "Plan §12 p7; Appendix B p12",
+      "source": "Plan \u00a712 p7; Appendix B p12",
       "dependencies": [
         "IMP-P5-001",
         "IMP-P5-002"

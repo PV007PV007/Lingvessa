@@ -6,6 +6,7 @@ import type { AttemptCommand, AttemptResult } from '../../../../packages/api-cli
 import type { ActivityResponse } from '../../../../packages/lesson-engine/src/evaluator';
 import { lessonPlayerReducer, mayAutoAdvance } from '../../../../packages/lesson-engine/src/state';
 import type { LessonPlayerState } from '../../../../packages/lesson-engine/src/state';
+import { MediaPanel } from './media';
 import { ActivityRenderer } from './activity';
 import { IndexedAttemptStorage } from './queue';
 
@@ -95,6 +96,7 @@ export function LessonPlayer({runId,embedded=false,sessionCsrf}:{runId:string;em
     {!loginRequired&&<>
       {run&&run.state!=='completed'&&<>{!embedded&&<p>{run.manifest.language==='en'?'English':'Čeština'} · {run.position+1} / {run.manifest.activities.length}</p>}
         {run.state==='remediation'&&<p>Повторення: невирішених вправ — {run.unresolved_count}.</p>}
+        {run.manifest.activities[run.position]&&<MediaPanel key={`media:${run.id}:${run.position}`} runId={run.id} itemId={run.manifest.activities[run.position]!.id} hasMedia={run.manifest.activities[run.position]!.presentation.media_refs.length>0} csrf={()=>csrf.current}/>}
         {run.manifest.activities[run.position]&&<ActivityRenderer key={`${run.id}:${run.position}:${result?.attempt_id??'active'}`} activity={run.manifest.activities[run.position]!} disabled={busy||result!==null||notice!==''||(!run.retry_available&&run.manifest.activities[run.position]?.response_kind!=='none')} onAnswer={response=>void answer(response)}/>}
         {result&&<div className="lesson-feedback" aria-live="polite" role="status"><strong>{result.outcome==='correct'?'Правильно':result.outcome==='incorrect'?'Спробуйте ще раз':result.outcome==='assisted'?'Завершено з допомогою':'Продовжуймо'}</strong><p>{result.feedback}</p>
           {result.outcome==='incorrect'?<button disabled={busy||!result.run.retry_available} onClick={()=>{dispatch({type:'RETRY'});setResult(null);}}>Повторити</button>:<button disabled={busy} onClick={()=>void next()}>Далі</button>}</div>}

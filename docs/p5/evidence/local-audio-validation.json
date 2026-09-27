@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-09-27T19:08:33.868527+00:00",
+  "scope": "uncommitted audio follow-up; hosted exact SHA pending",
+  "commands": [
+    {
+      "command": "node node_modules/typescript/bin/tsc --noEmit",
+      "status": "PASS"
+    },
+    {
+      "command": "pnpm lint",
+      "status": "PASS"
+    },
+    {
+      "command": "pnpm typecheck && pnpm check:boundaries && pnpm check:secrets && pnpm test && pnpm build && pnpm test:smoke",
+      "status": "PASS",
+      "unit": 46,
+      "smoke": 4,
+      "skipped": 0
+    },
+    {
+      "command": "python3 tools/governance/validate_p5_baseline.py",
+      "status": "PASS",
+      "checks": 74
+    }
+  ],
+  "runtime_pg_and_browser": "PENDING"
+}

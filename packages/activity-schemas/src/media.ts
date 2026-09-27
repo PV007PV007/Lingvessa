@@ -43,12 +43,15 @@ export const assetVersionSchema = z.object({
   decorative: z.boolean(), alt_text: z.string().max(1000), transcript: z.string().max(12000).optional(),
   script_version: version.optional(), script_hash: digest.optional(), speed: z.enum(['normal','slow']).optional(),
   voice_id: uuid.optional(), voice_version_code: version.optional(), turns: z.array(audioTurnSchema).max(100).optional(),
+  normal_asset_id:uuid.optional(),normal_asset_version:z.number().int().positive().optional(),
   rights: rightsSchema,
 }).strict().superRefine((a,ctx) => {
   const error = (message:string) => ctx.addIssue({code:'custom',message});
   if(a.kind==='audio') {
     if(!a.mime.startsWith('audio/') || !a.duration_ms || !a.codec || a.loudness_lufs===undefined || !a.transcript || !a.script_version || !a.script_hash || !a.speed || !a.voice_id || !a.voice_version_code || a.scope.variety==='common') error('Audio requires exact variety, script, transcript, voice, speed and technical metadata');
     if(a.decorative) error('Instructional audio is not decorative');
+    if(a.speed==='slow'&&(!a.normal_asset_id||!a.normal_asset_version))error('Slow assets must pin their normal-speed source');
+    if(a.speed!=='slow'&&(a.normal_asset_id||a.normal_asset_version))error('Normal-speed linkage is only valid for a slow asset');
     let end=0;
     for(const t of a.turns??[]) { if(t.start_ms<end || t.end_ms>(a.duration_ms??0)) error('Audio turns overlap or exceed duration'); end=t.end_ms; }
   } else if(!a.mime.startsWith('image/') || !a.width || !a.height || (!a.decorative && !a.alt_text.trim()) || (a.decorative && a.alt_text)) error('Image dimensions and correct alt/decorative treatment required');

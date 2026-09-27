@@ -40,6 +40,7 @@ jobs:
         env:
           P3_BROWSER_TESTS: 'true'
           P4_BROWSER_TESTS: 'true'
+          P5_BROWSER_TESTS: 'true'
       - run: pnpm test:containers
       - run: node --import tsx tools/p3/acceptance-summary.ts
       - run: node --import tsx tools/p4/acceptance-summary.ts

@@ -12,14 +12,14 @@ async function forward(request: NextRequest, context: {params:Promise<{segments:
     return new Response(null,{status:403});
   const target=new URL(`/api/v1/${segments.map(encodeURIComponent).join('/')}${request.nextUrl.search}`,origin);
   const headers=new Headers();
-  for(const key of ['cookie','content-type','x-csrf-token','x-lingvessa-client','x-correlation-id']) {
+  for(const key of ['cookie','content-type','x-csrf-token','x-lingvessa-client','x-correlation-id','range']) {
     const value=request.headers.get(key); if(value) headers.set(key,value);
   }
   try {
     const upstream=await fetch(target,{method:request.method,headers,redirect:'error',cache:'no-store',signal:AbortSignal.timeout(10000),
       ...(request.method==='GET'?{}:{body:await request.text()})});
     const safe=new Headers({'cache-control':'private, no-store'});
-    for(const key of ['content-type','set-cookie','x-correlation-id']){const value=upstream.headers.get(key);if(value)safe.set(key,value);}
+    for(const key of ['content-type','set-cookie','x-correlation-id','content-length','content-range','accept-ranges','x-content-type-options','content-security-policy']){const value=upstream.headers.get(key);if(value)safe.set(key,value);}
     return new Response(upstream.body,{status:upstream.status,headers:safe});
   } catch { return Response.json({type:'about:blank',title:'Service unavailable',status:503,code:'SERVICE_UNAVAILABLE',detail_safe:'Сервіс тимчасово недоступний.',correlation_id:crypto.randomUUID()},{status:503,headers:{'cache-control':'no-store'}}); }
 }

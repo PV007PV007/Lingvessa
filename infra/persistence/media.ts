@@ -4,6 +4,9 @@ import { ContractError, assertUuid } from '../../packages/domain/src/identity.js
 import { assetVersionSchema, voiceSchema, characterSchema, mediaRequirementSchema } from '../../packages/activity-schemas/src/media.js';
 import type { AssetStore, MediaReference } from '../../packages/application/src/media.js';
 import { transaction } from './database.js';
+import {deliveredMediaSchema} from '../../packages/activity-schemas/src/media-delivery.js';
+import type {DeliveredMedia} from '../../packages/activity-schemas/src/media-delivery.js';
+import type {LessonManifest} from '../../packages/activity-schemas/src/lesson.js';
 
 /** P5 ingestion/preflight service. P8 owns Admin screens and generation-provider orchestration. */
 export class MediaRepository {
@@ -74,8 +77,47 @@ export class MediaRepository {
     });
   }
   async approve(actorId:string,assetId:string,version:number,checksum:string,metadataChecksum:string,gate:string,decision:'approved'|'rejected',notes:string):Promise<void> {
-    await this.pool.query(`INSERT INTO asset_approvals(id,asset_id,asset_version,language_id,target_checksum,target_metadata_checksum,gate_type,reviewer_id,decision,notes)
-      SELECT $1,a.id,$3,a.language_id,$4,$5,$6,$7,$8,$9 FROM assets a WHERE a.id=$2`,[randomUUID(),assetId,version,checksum,metadataChecksum,gate,actorId,decision,notes]);
+    assertUuid(actorId);assertUuid(assetId);
+    const result=await this.pool.query(`INSERT INTO asset_approvals(id,asset_id,asset_version,language_id,target_checksum,target_metadata_checksum,gate_type,reviewer_id,decision,notes)
+      SELECT $1::uuid,a.id,$3::integer,a.language_id,$4::text,$5::text,$6::text,$7::uuid,$8::text,$9::text FROM assets a WHERE a.id=$2::uuid`,[randomUUID(),assetId,version,checksum,metadataChecksum,gate,actorId,decision,notes]);
+    if(result.rowCount!==1)throw new ContractError('NOT_FOUND','Asset not found');
+  }
+  async forRun(userId:string,runId:string,itemId:string):Promise<DeliveredMedia[]> {
+    for(const id of [userId,runId,itemId])assertUuid(id);
+    const run=(await this.pool.query('SELECT manifest,publication_id,language_id FROM lesson_runs WHERE id=$1 AND user_id=$2',[runId,userId])).rows[0];
+    if(!run)throw new ContractError('NOT_FOUND','Lesson run not found');
+    const manifest=run.manifest as LessonManifest,activity=manifest.activities.find(a=>a.id===itemId);
+    if(!activity)throw new ContractError('NOT_FOUND','Activity not in this pinned run');
+    const media:DeliveredMedia[]=[];
+    for(const ref of activity.presentation.media_refs){
+      const row=(await this.pool.query(`SELECT v.metadata,v.checksum,v.metadata_checksum,p.checksum AS pinned_checksum,p.metadata_checksum AS pinned_metadata_checksum
+        FROM publication_assets p JOIN asset_versions v ON v.asset_id=p.asset_id AND v.version=p.asset_version AND v.language_id=p.language_id
+        WHERE p.publication_id=$1 AND p.asset_id=$2 AND p.asset_version=$3 AND p.language_id=$4`,[run.publication_id,ref.asset_id,ref.asset_version,run.language_id])).rows[0];
+      if(!row||row.checksum!==row.pinned_checksum||row.metadata_checksum!==row.pinned_metadata_checksum)throw new ContractError('CONFLICT','Media pin failed integrity');
+      const a=assetVersionSchema.parse(row.metadata);
+      if(a.stable_code!==ref.asset_stable_code)throw new ContractError('CONFLICT','Asset semantic identity differs from pin');
+      // Audio remains labelled with its real variety; the client never relabels a different voice.
+      media.push(deliveredMediaSchema.parse({asset_id:a.asset_id,asset_version:a.asset_version,role:ref.role,kind:a.kind,scope:a.scope,mime:a.mime,checksum:a.checksum,byte_length:a.byte_length,
+        alt_text:a.alt_text,decorative:a.decorative,...(a.duration_ms?{duration_ms:a.duration_ms}:{}),...(a.transcript?{transcript:a.transcript}:{}),...(a.speed?{speed:a.speed}:{}),
+        ...(a.voice_id?{voice_id:a.voice_id,voice_version_code:a.voice_version_code}:{}),...(a.turns?{turns:a.turns}:{}),...(a.normal_asset_id?{normal_asset_id:a.normal_asset_id,normal_asset_version:a.normal_asset_version}:{})}));
+    }
+    return media;
+  }
+  async bytesForRun(userId:string,runId:string,itemId:string,assetId:string,version:number):Promise<{metadata:DeliveredMedia;bytes:Uint8Array}> {
+    const metadata=(await this.forRun(userId,runId,itemId)).find(a=>a.asset_id===assetId&&a.asset_version===version);
+    if(!metadata)throw new ContractError('NOT_FOUND','Asset not in this run/activity');
+    return {metadata,bytes:await this.store.readVerified(`assets/${assetId}/${version}/${metadata.checksum}`,metadata.checksum,metadata.byte_length)};
+  }
+  async recordTranscriptSupport(userId:string,runId:string,itemId:string):Promise<void> {
+    const media=await this.forRun(userId,runId,itemId);
+    if(!media.some(a=>a.kind==='audio'&&a.transcript))throw new ContractError('NOT_FOUND','No audio transcript for this activity');
+    await transaction(this.pool,async db=>{
+      await db.query('SELECT pg_advisory_xact_lock(hashtextextended($1,0))',[`transcript:${userId}:${runId}:${itemId}`]);
+      await db.query(`INSERT INTO audit_events(actor_id,action,target_id,payload)
+        SELECT $1::uuid,'media.transcript_opened',$2::uuid,jsonb_build_object('item_id',$3::uuid)
+        WHERE NOT EXISTS(SELECT 1 FROM audit_events WHERE actor_id=$1 AND action='media.transcript_opened' AND target_id=$2 AND payload->>'item_id'=$3::text)`,[userId,runId,itemId]);
+    });
+    // This records use only. The accepted conservative transcript weighting remains server-authoritative.
   }
 }
 

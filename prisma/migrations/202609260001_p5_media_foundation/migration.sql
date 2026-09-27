@@ -128,6 +128,14 @@ BEGIN
   IF NEW.metadata->>'kind' IS DISTINCT FROM a.kind OR NEW.metadata->>'stable_code' IS DISTINCT FROM a.stable_code OR NEW.metadata->'scope'->>'variety' IS DISTINCT FROM a.variety OR NEW.metadata->'scope'->>'language' IS DISTINCT FROM (SELECT stable_code FROM languages WHERE id=NEW.language_id) OR NEW.metadata->'rights'->>'real_person_clone' IS DISTINCT FROM 'false' THEN RAISE EXCEPTION 'asset metadata language/identity/rights mismatch' USING ERRCODE='23514'; END IF;
   IF a.kind='audio' THEN
    IF NOT EXISTS(SELECT 1 FROM voices v WHERE v.id=(NEW.metadata->>'voice_id')::uuid AND v.version_code=NEW.metadata->>'voice_version_code' AND v.language_id=NEW.language_id AND v.variety=a.variety) THEN RAISE EXCEPTION 'audio voice language/variety mismatch' USING ERRCODE='23514'; END IF;
+   IF NEW.metadata->>'speed'='slow' AND NOT EXISTS(
+    SELECT 1 FROM asset_versions normal JOIN assets source ON source.id=normal.asset_id
+    WHERE normal.asset_id=(NEW.metadata->>'normal_asset_id')::uuid AND normal.version=(NEW.metadata->>'normal_asset_version')::integer
+     AND normal.language_id=NEW.language_id AND source.variety=a.variety AND source.kind='audio'
+     AND normal.metadata->>'speed'='normal' AND normal.metadata->>'script_hash'=NEW.metadata->>'script_hash'
+     AND normal.metadata->>'voice_id'=NEW.metadata->>'voice_id' AND normal.metadata->>'voice_version_code'=NEW.metadata->>'voice_version_code'
+     AND normal.metadata->>'transcript'=NEW.metadata->>'transcript'
+   ) THEN RAISE EXCEPTION 'slow audio must pin the same script and voice at normal speed' USING ERRCODE='23514'; END IF;
    FOR turn IN SELECT value FROM jsonb_array_elements(coalesce(NEW.metadata->'turns','[]')) LOOP
     IF NOT EXISTS(SELECT 1 FROM voices v WHERE v.id=(turn->>'voice_id')::uuid AND v.version_code=turn->>'voice_version_code' AND v.language_id=NEW.language_id AND v.variety=a.variety) THEN RAISE EXCEPTION 'turn voice language/variety mismatch' USING ERRCODE='23514'; END IF;
     IF turn ? 'character_id' AND NOT EXISTS(SELECT 1 FROM characters c WHERE c.id=(turn->>'character_id')::uuid AND c.version_code=turn->>'character_version_code' AND c.language_id=NEW.language_id AND c.variety=a.variety AND c.voice_id=(turn->>'voice_id')::uuid AND c.voice_version_code=turn->>'voice_version_code') THEN RAISE EXCEPTION 'turn character binding mismatch' USING ERRCODE='23514'; END IF;
@@ -202,7 +210,11 @@ BEGIN
   END LOOP;
  END LOOP;
  IF EXISTS(SELECT 1 FROM publication_assets pa WHERE pa.publication_id=NEW.id AND NOT EXISTS(SELECT 1 FROM content_media_bindings b JOIN publication_entries pe ON pe.content_version_id=b.content_version_id WHERE pe.publication_id=NEW.id AND b.asset_id=pa.asset_id AND b.asset_version=pa.asset_version)) THEN RAISE EXCEPTION 'extraneous publication asset' USING ERRCODE='23514'; END IF;
- IF EXISTS(SELECT 1 FROM publication_assets pa JOIN asset_versions av ON av.asset_id=pa.asset_id AND av.version=pa.asset_version WHERE pa.publication_id=NEW.id AND (pa.checksum<>av.checksum OR pa.metadata_checksum<>av.metadata_checksum OR NOT p5_asset_approved(pa.asset_id,pa.asset_version))) THEN RAISE EXCEPTION 'asset snapshot checksum/approval mismatch' USING ERRCODE='23514'; END IF;
+ IF EXISTS(SELECT 1 FROM publication_assets pa JOIN asset_versions pinned ON pinned.asset_id=pa.asset_id AND pinned.version=pa.asset_version WHERE pa.publication_id=NEW.id AND (pa.checksum<>pinned.checksum OR pa.metadata_checksum<>pinned.metadata_checksum OR NOT p5_asset_approved(pa.asset_id,pa.asset_version))) THEN RAISE EXCEPTION 'asset snapshot checksum/approval mismatch' USING ERRCODE='23514'; END IF;
+ IF EXISTS(SELECT 1 FROM publication_assets pa JOIN asset_versions pinned ON pinned.asset_id=pa.asset_id AND pinned.version=pa.asset_version
+   WHERE pa.publication_id=NEW.id AND pinned.metadata->>'speed'='slow' AND NOT EXISTS(
+    SELECT 1 FROM publication_assets normal WHERE normal.publication_id=NEW.id AND normal.asset_id=(pinned.metadata->>'normal_asset_id')::uuid AND normal.asset_version=(pinned.metadata->>'normal_asset_version')::integer
+   )) THEN RAISE EXCEPTION 'slow audio requires its normal source in the publication' USING ERRCODE='23514'; END IF;
  SELECT coalesce(jsonb_agg(jsonb_build_object('asset_id',pa.asset_id,'asset_version',pa.asset_version,'checksum',pa.checksum,'metadata_checksum',pa.metadata_checksum) ORDER BY pa.asset_id,pa.asset_version),'[]') INTO actual FROM publication_assets pa WHERE pa.publication_id=NEW.id;
  IF NEW.manifest->'assets' IS DISTINCT FROM actual THEN RAISE EXCEPTION 'publication media manifest differs from relational pins' USING ERRCODE='23514'; END IF;
  RETURN NEW;
