@@ -54,13 +54,12 @@ const families: ReadonlyArray<{ family: string; types: readonly ActivityType[] }
 const registry = new Map<string, ActivityAdapter>();
 for (const group of families) {
   for (const type of group.types) {
-    const deferred = group.family === 'speech';
+    const speech = group.family === 'speech';
     const adapter: ActivityAdapter = {
       type,
       schema_major: 1,
       family: group.family,
       fixture_languages: ['en', 'cs'],
-      ...(deferred ? { deferred_to_phase: 'P5' as const } : {}),
       render: (activity) => ({
         activity_id: activity.id,
         type: activity.type,
@@ -76,7 +75,7 @@ for (const group of families) {
         accessibility: activity.presentation.accessibility,
       }),
       evaluate: (activity, response) => {
-        if (deferred) throw new TypeError('Speech evaluation is unavailable until P5; use the deterministic text fallback declared by role_play');
+        if (speech) throw new TypeError('Speech uses the asynchronous server-authoritative job contract');
         return evaluateActivity(activity, response);
       },
     };
@@ -94,7 +93,7 @@ export function resolveActivity(input: unknown): RegistryResolution {
     validateEvaluationContract(parsed.data);
     const allowed: Record<string, readonly ActivityContract['response']['kind'][]> = {
       intro: ['none'], selection: ['single','set'], mapping: ['mapping'], construction: ['text','order'],
-      production: ['text'], receptive: ['single','set','text'], dialogue: ['single','text'], speech: ['none'],
+      production: ['text'], receptive: ['single','set','text'], dialogue: ['single','text'], speech: ['speech'],
       grammar: ['single','text'], assessment: ['single','set','mapping','text','order'], result: ['none'],
     };
     if (!allowed[adapter.family]?.includes(parsed.data.response.kind)) throw new TypeError('Activity type uses an incompatible answer policy');

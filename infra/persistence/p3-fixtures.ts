@@ -28,10 +28,12 @@ export async function loadExecutableLessonFixture(pool: pg.Pool, authorId: strin
       WHERE cv.id=$1 AND cv.entity_id=$2 AND cv.language_id=$3`, [fixture.base_content_version_id,fixture.lesson_id,fixture.language_id])).rows[0];
     if (!base) throw new ContractError('NOT_FOUND', 'Base lesson version not found');
     const addedRefs: ContentPayload['refs'] = [];
-    for (const [position, entry] of fixture.new_items.entries()) {
+    const firstNewPosition=Number((await db.query('SELECT COALESCE(max(position)+1,0) AS next FROM activity_items WHERE lesson_id=$1',[fixture.lesson_id])).rows[0].next);
+    for (const [offset, entry] of fixture.new_items.entries()) {
+      const position=firstNewPosition+offset;
       const contract = fixture.activities.find((activity) => activity.id === entry.activity_id);
       if (!contract) throw new ContractError('INVALID_INPUT', 'New fixture item has no contract');
-      const modality = contract.response.kind === 'none' ? 'none' : contract.response.kind === 'text' ? 'typed' : 'selection';
+      const modality = contract.response.kind === 'none' ? 'none' : contract.response.kind === 'speech' ? 'speech' : contract.response.kind === 'text' ? 'typed' : 'selection';
       await db.query(`INSERT INTO content_entities(id,language_id,stable_code,kind,title,variety_scope) VALUES($1,$2,$3,'activity',$4,$5)`,
         [contract.id,fixture.language_id,contract.stable_code,contract.presentation.prompt,fixture.language === 'cs' ? 'cs-CZ' : 'common']);
       await db.query(`INSERT INTO activity_items(id,language_id,lesson_id,activity_type,response_modality,position) VALUES($1,$2,$3,$4,$5,$6)`,

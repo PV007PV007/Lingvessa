@@ -1455,7 +1455,8 @@
                         "set",
                         "mapping",
                         "text",
-                        "order"
+                        "order",
+                        "speech"
                       ]
                     },
                     "runtime": {
@@ -1466,7 +1467,8 @@
                           "enum": [
                             "exposure_v1",
                             "correct_or_reveal_v1",
-                            "optional_speech_v1"
+                            "optional_speech_v1",
+                            "speech_binary_nonblocking_v1"
                           ]
                         },
                         "evaluator_version": {

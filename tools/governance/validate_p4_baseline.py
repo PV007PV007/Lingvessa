@@ -20,7 +20,8 @@ check('P4 tasks ordered',[t['task_id'] for t in read('docs/p4/task-status.json')
 schema=(root/'prisma/schema.prisma').read_text();sql=(root/'prisma/migrations/202609180001_p4_mastery_review/migration.sql').read_text()
 for table in ['learning_policies','mastery_facets','knowledge_mastery_states','skill_mastery_states','review_schedules','mistake_instances','learning_reset_jobs','mastery_reset_targets','collections','collection_entries','review_sessions','review_session_items']:
  check('P4 schema '+table,'model '+table in schema and 'CREATE TABLE '+table in sql)
-check('P5/P8/P9 tables absent',all('model '+t not in schema for t in ['speech_jobs','ai_sessions','ai_runs']))
+p5_authorized=(root/'docs/p5/authorization.json').exists() and read('docs/p5/authorization.json').get('p5_authorized') is True
+check('P5 extension requires authorization; P8/P9 tables absent',all('model '+t not in schema for t in (['ai_sessions','ai_runs'] if p5_authorized else ['speech_jobs','ai_sessions','ai_runs'])))
 check('no locked source or previous migration rewrite',all(hashlib.sha256((root/path).read_bytes()).hexdigest()==digest for path,digest in read('docs/p4/evidence/accepted-file-checksums.json').items()))
 check('P4 phase-specific workflow exists',(root/'.github/workflows/p4.yml').exists())
 # Closure cannot mark a planning row verified without concrete existing code and gate links.

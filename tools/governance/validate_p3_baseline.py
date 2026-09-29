@@ -57,7 +57,9 @@ schema = (ROOT / "prisma/schema.prisma").read_text(encoding="utf-8")
 migration = (ROOT / "prisma/migrations/202609160001_p3_lesson_engine/migration.sql").read_text(encoding="utf-8")
 for table in ["lesson_runs","lesson_run_items","activity_attempts","attempt_receipts","evidence_events","outbox_events","outbox_deliveries"]:
     check("P3 schema table " + table, f"model {table}" in schema and f"CREATE TABLE {table}" in migration)
-check("authorized phase boundary (P4 extension allowed only by recorded authorization)", all(f"model {name}" not in schema and f"CREATE TABLE {name}" not in migration for name in (["speech_jobs","ai_runs","ai_sessions"] if p4_authorized else ["knowledge_mastery_states","skill_mastery_states","review_schedules","speech_jobs","ai_runs","ai_sessions"])))
+p5_authorized = (ROOT / "docs/p5/authorization.json").exists() and read("docs/p5/authorization.json").get("p5_authorized") is True
+forbidden = ["ai_runs","ai_sessions"] if p5_authorized and p4_authorized else ["speech_jobs","ai_runs","ai_sessions"] if p4_authorized else ["knowledge_mastery_states","skill_mastery_states","review_schedules","speech_jobs","ai_runs","ai_sessions"]
+check("authorized phase boundary (P4/P5 extensions require recorded owner authorization)", all(f"model {name}" not in schema and f"CREATE TABLE {name}" not in migration for name in forbidden))
 check("mastery and AI packages remain phase-empty", all((ROOT / f"packages/{name}/src/index.ts").read_text().strip().endswith("export {};") for name in (["ai-core"] if p4_authorized else ["mastery-review","ai-core"])))
 check("lesson engine materialized", not (ROOT / "packages/lesson-engine/src/index.ts").read_text().strip().endswith("export {};") and (ROOT / "packages/lesson-engine/src/state.ts").exists())
 check("shared bilingual executable fixtures", all((ROOT / f"content/fixtures/p3/{language}-lesson.json").exists() for language in ["en","cs"]))

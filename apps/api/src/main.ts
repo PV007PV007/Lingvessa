@@ -1,3 +1,5 @@
+import {SpeechRepository} from '../../../infra/persistence/speech.js';
+import {speechRuntime} from '../../../infra/config/speech.js';
 import { loadP1Config, safeStartupRecord } from '../../../infra/config/runtime.js';
 import { postgresProbe } from '../../../infra/health/probe.js';
 import { createApi } from './app.js';
@@ -19,7 +21,8 @@ async function main() {
   const probe = postgresProbe(config);
   const pool = createFoundationPool(config.DATABASE_URL!);
   const assets=mediaStore(process.env);
-  const app = await createApi(probe, { identity: new IdentityRepository(pool), content: new ContentRepository(pool,assets),media:new MediaRepository(pool,assets), lessons: new LessonRepository(pool), p4:{mastery:new MasteryRepository(pool),review:new ReviewRepository(pool),collections:new CollectionRepository(pool),resets:new ResetRepository(pool)} });
+  const speech=speechRuntime(process.env);
+  const app = await createApi(probe, { identity: new IdentityRepository(pool),speech:{repository:new SpeechRepository(pool,speech.audio,speech.evaluator,speech.uploadKey)}, content: new ContentRepository(pool,assets),media:new MediaRepository(pool,assets), lessons: new LessonRepository(pool), p4:{mastery:new MasteryRepository(pool),review:new ReviewRepository(pool),collections:new CollectionRepository(pool),resets:new ResetRepository(pool)} });
   let stopping = false;
   for (const signal of ['SIGTERM', 'SIGINT'] as const) process.once(signal, () => {
     if (stopping) return;

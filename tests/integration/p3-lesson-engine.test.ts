@@ -66,10 +66,10 @@ test('P3 PostgreSQL: pinned bilingual lesson runtime, attempts, idempotency, rem
 
     await run('P3-DB-001 clean migration/replay and exact phase table boundary', async () => {
       migrate();
-      assert.equal((await db.query(`SELECT count(*) FROM public._prisma_migrations WHERE finished_at IS NOT NULL`)).rows[0].count, '5');
+      assert.equal((await db.query(`SELECT count(*) FROM public._prisma_migrations WHERE finished_at IS NOT NULL`)).rows[0].count, '6');
       const tables = (await db.query(`SELECT tablename FROM pg_tables WHERE schemaname='public'`)).rows.map((row) => row.tablename);
       for (const table of ['lesson_runs','lesson_run_items','activity_attempts','attempt_receipts','evidence_events','outbox_events','outbox_deliveries']) assert(tables.includes(table));
-      for (const table of ['speech_jobs','ai_runs','ai_sessions']) assert(!tables.includes(table));
+      for (const table of ['ai_runs','ai_sessions']) assert(!tables.includes(table));
       assert.equal((await db.query('SELECT count(*) FROM p1_bootstrap.fixtures')).rows[0].count, '2');
     });
 
@@ -310,7 +310,7 @@ test('P3 PostgreSQL: pinned bilingual lesson runtime, attempts, idempotency, rem
     await run('P3-DB-002 clean database recreation repeats all migrations and synthetic seed', async () => {
       await admin.query(`CREATE DATABASE "${name}" TEMPLATE template0 ENCODING 'UTF8'`); created=true; migrate(); await seedBootstrap(env); await seedBootstrap(env);
       const fresh=createFoundationPool(url.toString()); try {
-        assert.equal((await fresh.query('SELECT count(*) FROM public._prisma_migrations WHERE finished_at IS NOT NULL')).rows[0].count,'5');
+        assert.equal((await fresh.query('SELECT count(*) FROM public._prisma_migrations WHERE finished_at IS NOT NULL')).rows[0].count,'6');
         assert.equal((await fresh.query('SELECT count(*) FROM lesson_runs')).rows[0].count,'0');
         assert.equal((await fresh.query('SELECT count(*) FROM p1_bootstrap.fixtures')).rows[0].count,'2');
       } finally { await fresh.end(); }

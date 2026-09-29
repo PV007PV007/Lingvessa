@@ -38,7 +38,7 @@ test('real PostgreSQL 18.6: fresh migration, replay, bilingual seed and DB const
       assert.equal(row.version_code, expected.versionCode);
       assert.equal(row.locale, expected.locale);
     }
-    assert.equal((await db.query('SELECT count(*) FROM public._prisma_migrations WHERE finished_at IS NOT NULL')).rows[0].count, '5');
+    assert.equal((await db.query('SELECT count(*) FROM public._prisma_migrations WHERE finished_at IS NOT NULL')).rows[0].count, '6');
     await assert.rejects(db.query("UPDATE p1_bootstrap.fixtures SET locale = 'en-GB' WHERE language_code = 'cs'"), { code: '23514' });
     await assert.rejects(db.query("UPDATE p1_bootstrap.fixtures SET id = 'not-a-uuid' WHERE language_code = 'en'"), { code: '22P02' });
     await db.query("UPDATE p1_bootstrap.fixtures SET sample_text = 'changed' WHERE language_code = 'cs'");

@@ -624,6 +624,7 @@ model lesson_run_items {
 }
 
 model activity_attempts {
+  speech_job_id String? @unique @db.Uuid
   id String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   user_id                String   @db.Uuid
   attempt_id             String   @db.Uuid
@@ -1089,5 +1090,81 @@ model publication_assets {
   checksum String
   metadata_checksum String
   @@id([publication_id, asset_id, asset_version])
+  @@schema("public")
+}
+
+/// P5 immutable approved calibration policy. Test policies cannot score a production publication.
+model speech_policies {
+  id String @id @db.Uuid
+  stable_code String
+  version_code String
+  language_id String @db.Uuid
+  variety String
+  target_feature String
+  provider_code String
+  model_version String
+  confidence_threshold Decimal
+  test_only Boolean
+  calibration_reference String
+  approved_by String @db.Uuid
+  approved_at DateTime @default(dbgenerated("clock_timestamp()")) @db.Timestamptz(6)
+  @@unique([id,language_id])
+  @@unique([stable_code,version_code,language_id,variety,target_feature])
+  @@schema("public")
+}
+
+/// No raw microphone audio. Mutable lifecycle metadata becomes immutable at settlement.
+model speech_jobs {
+  id String @id @db.Uuid
+  attempt_id String @db.Uuid
+  idempotency_key String @db.Uuid
+  request_hash String
+  user_id String @db.Uuid
+  language_profile_id String @db.Uuid
+  language_id String @db.Uuid
+  lesson_run_id String @db.Uuid
+  item_id String @db.Uuid
+  content_version_id String @db.Uuid
+  policy_id String? @db.Uuid
+  policy_code String
+  policy_version String
+  provider_code String
+  model_version String
+  state String @default("created")
+  attempts Int @default(0)
+  execution_id String? @db.Uuid
+  lease_until DateTime? @db.Timestamptz(6)
+  next_attempt_at DateTime @default(dbgenerated("clock_timestamp()")) @db.Timestamptz(6)
+  created_at DateTime @default(dbgenerated("clock_timestamp()")) @db.Timestamptz(6)
+  expires_at DateTime @db.Timestamptz(6)
+  mime String?
+  audio_checksum String?
+  audio_bytes Int?
+  audio_deleted_at DateTime? @db.Timestamptz(6)
+  cleanup_pending Boolean @default(false)
+  settled_at DateTime? @db.Timestamptz(6)
+  outcome String?
+  reason String?
+  result Json?
+  feedback String @default("")
+  @@unique([user_id,attempt_id])
+  @@unique([user_id,idempotency_key])
+  @@unique([id,user_id])
+  @@unique([id,user_id,language_profile_id,language_id])
+  @@schema("public")
+}
+model speech_callback_events {
+  event_id String @id @db.Uuid
+  job_id String @db.Uuid
+  payload_hash String
+  disposition String
+  received_at DateTime @default(dbgenerated("clock_timestamp()")) @db.Timestamptz(6)
+  @@schema("public")
+}
+model speech_next_receipts {
+  job_id String @id @db.Uuid
+  user_id String @db.Uuid
+  result Json
+  created_at DateTime @default(dbgenerated("clock_timestamp()")) @db.Timestamptz(6)
   @@schema("public")
 }

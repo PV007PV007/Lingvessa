@@ -15,7 +15,7 @@ import { lockLearningProfile } from './learning-lock.js';
 import { refreshMastery } from './mastery.js';
 import { policy } from '../../packages/mastery-review/src/policy.js';
 
-type RunRow = {
+export type RunRow = {
   id: string; user_id: string; language_profile_id: string; language_id: string; variant_id: string;
   publication_id: string; lesson_id: string; content_version_id: string; manifest: LessonManifest;
   run_kind: 'lesson'|'review'; review_session_id: string|null; superseded_at: Date|null; updated_at: Date;
@@ -251,11 +251,23 @@ export class LessonRepository {
     });
   }
 
+  /** P5 Next consumes an existing terminal speech attempt; it never evaluates or appends evidence. */
+  async continueSpeech(db:pg.PoolClient,run:RunRow,job:{item_id:string;attempt_id:string}):Promise<RunView>{
+    if(run.superseded_at||run.state==='completed')throw new ContractError('CONFLICT','Speech context is no longer active');
+    const item=(await db.query('SELECT * FROM lesson_run_items WHERE lesson_run_id=$1 AND item_id=$2 FOR UPDATE',[run.id,job.item_id])).rows[0];
+    if(!item||item.ordinal!==run.position||item.last_attempt_id!==job.attempt_id)throw new ContractError('CONFLICT','Next requires the latest settled speech attempt');
+    const next=await this.advance(db,run,item,job.attempt_id,'accepted',true,true);
+    if(run.run_kind==='review'&&next.state==='completed')await settleReviewItem(db,run.id);
+    if(next.state==='completed')await this.writeOutbox(db,{eventType:'lesson.run.completed',aggregateId:run.id,correlationId:job.attempt_id,causationId:job.attempt_id,profileId:run.language_profile_id,languageId:run.language_id,payload:{run_id:run.id,unresolved_count:0,reason:'all_items_resolved'}});
+    return this.runView(db,next);
+  }
+
   private validateCommand(activity: ActivityContract, command: AttemptCommand): void {
     if (command.presentation.seed !== activity.runtime.presentation_seed || JSON.stringify(command.presentation.order) !== JSON.stringify(activity.runtime.presentation_order))
       throw new ContractError('VERSION_CONFLICT', 'Presentation seed/order differs from pinned activity');
     if (command.assistance.hint_count !== 0 || command.assistance.reveal !== (command.intent === 'reveal'))
       throw new ContractError('INVALID_INPUT', 'Assistance is server-authoritative in P3');
+    if(activity.response.kind==='speech')throw new ContractError('INVALID_INPUT','Speech attempts use the asynchronous speech API');
     const exposure = activity.response.answer_policy.mode === 'exposure';
     if (exposure !== (command.intent === 'continue') || (exposure && command.response.kind !== 'none'))
       throw new ContractError('INVALID_INPUT', exposure ? 'Exposure requires continue' : 'Scored activity requires submit or reveal');
@@ -274,7 +286,7 @@ export class LessonRepository {
     catch { throw new ContractError('INVALID_INPUT', 'Response does not match the server-selected answer policy'); }
   }
 
-  private async advance(db: pg.PoolClient, run: RunRow, item: { item_id: string; ordinal: number }, attemptId: string, outcome: AttemptView['outcome'], resolved: boolean): Promise<RunRow> {
+  private async advance(db: pg.PoolClient, run: RunRow, item: { item_id: string; ordinal: number }, attemptId: string, outcome: AttemptView['outcome'], resolved: boolean, counted = false): Promise<RunRow> {
     if (outcome === 'incorrect') {
       await db.query(`UPDATE lesson_run_items SET state='incorrect',attempt_count=attempt_count+1,needs_remediation=true,last_attempt_id=$1,updated_at=now()
         WHERE lesson_run_id=$2 AND item_id=$3`, [attemptId,run.id,item.item_id]);
@@ -282,23 +294,23 @@ export class LessonRepository {
       return (await db.query('SELECT * FROM lesson_runs WHERE id=$1', [run.id])).rows[0] as RunRow;
     }
     const assisted = outcome === 'assisted';
-    await db.query(`UPDATE lesson_run_items SET state=$1,attempt_count=attempt_count+1,revealed=revealed OR $2,needs_remediation=$6,last_attempt_id=$3,updated_at=now()
-      WHERE lesson_run_id=$4 AND item_id=$5`, [assisted ? 'assisted' : 'completed',assisted,attemptId,run.id,item.item_id,assisted && !resolved]);
+    await db.query(`UPDATE lesson_run_items SET state=$1,attempt_count=attempt_count+CASE WHEN $7 THEN 0 ELSE 1 END,revealed=revealed OR $2,needs_remediation=$6,last_attempt_id=$3,updated_at=now()
+      WHERE lesson_run_id=$4 AND item_id=$5`, [assisted ? 'assisted' : 'completed',assisted,attemptId,run.id,item.item_id,assisted && !resolved,counted]);
     let next = run.state === 'active'
       ? (await db.query(`SELECT * FROM lesson_run_items WHERE lesson_run_id=$1 AND ordinal>$2 ORDER BY ordinal LIMIT 1 FOR UPDATE`, [run.id,item.ordinal])).rows[0]
       : (await db.query(`SELECT * FROM lesson_run_items WHERE lesson_run_id=$1 AND needs_remediation AND item_id<>$2 ORDER BY ordinal LIMIT 1 FOR UPDATE`, [run.id,item.item_id])).rows[0];
     if (!next) next = (await db.query(`SELECT * FROM lesson_run_items WHERE lesson_run_id=$1 AND needs_remediation ORDER BY ordinal LIMIT 1 FOR UPDATE`, [run.id])).rows[0];
     if (next) {
       await db.query(`UPDATE lesson_run_items SET state='active',updated_at=now() WHERE lesson_run_id=$1 AND item_id=$2`, [run.id,next.item_id]);
-      await db.query(`UPDATE lesson_runs SET state=$1,position=$2,client_sequence=client_sequence+1,revision=revision+1 WHERE id=$3`,
-        [run.state === 'active' && next.ordinal > item.ordinal ? 'active' : 'remediation',next.ordinal,run.id]);
+      await db.query(`UPDATE lesson_runs SET state=$1,position=$2,client_sequence=client_sequence+CASE WHEN $4 THEN 0 ELSE 1 END,revision=revision+1 WHERE id=$3`,
+        [run.state === 'active' && next.ordinal > item.ordinal ? 'active' : 'remediation',next.ordinal,run.id,counted]);
     } else {
-      await db.query(`UPDATE lesson_runs SET state='completed',completed_at=now(),client_sequence=client_sequence+1,revision=revision+1 WHERE id=$1`, [run.id]);
+      await db.query(`UPDATE lesson_runs SET state='completed',completed_at=now(),client_sequence=client_sequence+CASE WHEN $2 THEN 0 ELSE 1 END,revision=revision+1 WHERE id=$1`, [run.id,counted]);
     }
     return (await db.query('SELECT * FROM lesson_runs WHERE id=$1', [run.id])).rows[0] as RunRow;
   }
 
-  private async runView(db: pg.PoolClient, row: RunRow): Promise<RunView> {
+  async runView(db: pg.PoolClient, row: RunRow): Promise<RunView> {
     const current = row.state === 'completed' ? null : row.manifest.activities[row.position]?.id ?? null;
     const unresolved = Number((await db.query('SELECT count(*) FROM lesson_run_items WHERE lesson_run_id=$1 AND needs_remediation', [row.id])).rows[0].count);
     const item = current ? (await db.query('SELECT attempt_count FROM lesson_run_items WHERE lesson_run_id=$1 AND item_id=$2', [row.id,current])).rows[0] : null;
@@ -315,7 +327,7 @@ export class LessonRepository {
       run: { id: view.id, state: view.state, position: view.position, revision: view.revision, current_activity_id: view.current_activity_id, unresolved_count: view.unresolved_count, retry_available: view.retry_available } };
   }
 
-  private async writeOutbox(db: pg.PoolClient, event: { eventType: string; aggregateId: string; correlationId: string; causationId: string; profileId: string; languageId: string; payload: Record<string, unknown> }): Promise<void> {
+  async writeOutbox(db: pg.PoolClient, event: { eventType: string; aggregateId: string; correlationId: string; causationId: string; profileId: string; languageId: string; payload: Record<string, unknown> }): Promise<void> {
     const id = randomUUID(); const eventKey = `${event.eventType}:${event.aggregateId}:v${P3_VERSIONS.outbox_event}`;
     await db.query(`INSERT INTO outbox_events(id,event_key,event_type,event_version,aggregate_type,aggregate_id,correlation_id,causation_id,language_profile_id,language_id,payload)
       VALUES($1,$2,$3,$4,'learning',$5,$6,$7,$8,$9,$10) ON CONFLICT(event_key) DO NOTHING`,

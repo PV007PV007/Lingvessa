@@ -1,17 +1,11 @@
 # P5 exit evidence
 
-Status: IN PROGRESS / NOT READY for owner acceptance.
+Status: IN PROGRESS / NOT READY for owner acceptance. PR #5 OPEN DRAFT; P6 not authorized.
 
-P4 owner accepted; PR #4 merge `5027f001237b6451237d87343ebeca58cd0af007` has the tested P4 source tree. P5 branch `implementation/p5-media-speech`; PR #5 OPEN DRAFT. P6 is not authorized.
+Exact media/audio tested SHA: b3cac5d843b4a11b9b8e2d06b9e9495467cc1b6d. Hosted P5 run 36378454901/job 108788995230 passed install/baseline/check/references/audit, actual S3, PostgreSQL 18.6 bootstrap, 15 integration tests, EN/CS audio browser checks, OCI startup/degraded/recovery and P3/P4 regression summaries. Details: evidence/ci-batch-003.json. Synthetic tones/geometric assets are not linguistic QA or the M01 media library.
 
-IMP-P5-001: media identities, versioned voices/characters, requirements/jobs, immutable asset versions, human QA and publication pins; actual byte preflight and S3-compatible adapter. Hosted `789f0d400144012ae663635c343f38940167a822` passed standalone S3 protocol/auth/integrity/outage/restart gates. This verifies the portable adapter, not a production provider approval. Real PostgreSQL bootstrap passed; integration exposed a trigger variable/alias collision, corrected in this follow-up and awaiting rerun.
+Current batch adds IMP-P5-003 speech server/schema/storage/worker/API and synthetic DB tests. Local 49 unit tests, lint, root type check and Prisma schema validation passed. Its hosted PostgreSQL and OCI gates remain pending; microphone UI and browser acceptance remain pending. No new-batch runtime result is inferred from an earlier SHA.
 
-IMP-P5-002: authenticated run-scoped media delivery with byte ranges; normal/slow playback, visible speaker clock/transcript and outage alternatives. Approved slow versions pin their exact normal script/voice. Tests use original synthetic tones, not reference speech or linguistic QA. API/Chromium checks are prepared and need hosted execution.
+Remaining P5 exit conditions: complete speech lifecycle/browser/failure/cleanup evidence; all required M01 asset IDs resolve with required provenance/QA; OD-004/005/006 closure where deployment/provider/calibration approval is required; all 356 phase trace rows evaluated against actual artifacts; final exact-SHA hosted full acceptance.
 
-IMP-P5-003: pending. Required async speech lifecycle, microphone UX, exact Pronunciation evidence, bounded retries, late-callback/cancellation/TTL cleanup and worker recovery have not passed acceptance.
-
-Remaining: green PostgreSQL and P1–P4 regression/OCI on the exact final SHA; media/audio/speech browser/runtime checks; required M01 asset registry and approved QA resolution. 356 P5 trace rows are retained; no pending requirement is counted verified.
-
-OD-004/005/006 remain open under their documented safe defaults. Paid inference false, paid budget zero; no provider/voice/calibration approval invented. No governing specification change.
-
-EXC-P1-001: main is not technically protected; implementation branch, PR, green hosted CI and explicit owner milestone acceptance are process controls. PR #5 stays open. Stop before P6.
+No governing specification change. First four accepted migrations unchanged. Paid inference false/budget zero. EXC-P1-001 remains: main is not technically protected. No automatic merge or P6 advancement.

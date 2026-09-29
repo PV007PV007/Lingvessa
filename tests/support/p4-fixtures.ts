@@ -39,6 +39,6 @@ export async function p4Fixture(db:pg.Pool){
  return {identity,content,learner,other,profiles,sources,publications,activities,fixtureStatuses};
 }
 export function correctResponse(a:ActivityContract):ActivityResponse{const p=a.response.answer_policy;
- switch(p.mode){case 'exposure':return {kind:'none'};case 'single':return {kind:'single',option_id:p.accepted_option_ids![0]!};case 'set':return {kind:'set',option_ids:p.accepted_sets![0]!};case 'mapping':return {kind:'mapping',pairs:p.accepted_pairs!};case 'text':return {kind:'text',text:p.accepted_text![0]!};case 'order':return {kind:'order',option_ids:p.accepted_order!};}}
+ switch(p.mode){case 'speech':throw new TypeError('Speech uses asynchronous jobs');case 'exposure':return {kind:'none'};case 'single':return {kind:'single',option_id:p.accepted_option_ids![0]!};case 'set':return {kind:'set',option_ids:p.accepted_sets![0]!};case 'mapping':return {kind:'mapping',pairs:p.accepted_pairs!};case 'text':return {kind:'text',text:p.accepted_text![0]!};case 'order':return {kind:'order',option_ids:p.accepted_order!};}}
 export function command(run:RunView,a:ActivityContract,response:ActivityResponse=correctResponse(a),reveal=false){return {attempt_id:randomUUID(),content_version_id:run.content_version_id,item_id:a.id,client_sequence:run.client_sequence+1,
  intent:reveal?'reveal' as const:response.kind==='none'?'continue' as const:'submit' as const,response,presentation:{seed:a.runtime.presentation_seed,order:a.runtime.presentation_order},assistance:{hint_count:0,reveal}};}

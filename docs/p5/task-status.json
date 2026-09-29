@@ -429,7 +429,7 @@
         "packages/lesson-engine",
         "packages/provider-adapters/speech"
       ],
-      "status": "PLANNED_NOT_STARTED",
+      "status": "IN_PROGRESS",
       "requirement_ids": [
         "CUR-A1-010",
         "AUD-001",
@@ -789,5 +789,6 @@
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
     }
-  ]
+  ],
+  "timestamp": "2026-09-28T04:58:15.690784+00:00"
 }
