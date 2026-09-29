@@ -77,7 +77,7 @@ BEGIN
   IF NOT ((OLD.state='created' AND NEW.state='uploaded') OR (OLD.state='uploaded' AND NEW.state='queued') OR
     (OLD.state='queued' AND NEW.state='processing') OR (OLD.state='processing' AND NEW.state IN ('queued','succeeded','failed')) OR
     NEW.state IN ('unavailable','cancelled','expired')) THEN RAISE EXCEPTION 'invalid speech job transition' USING ERRCODE='23514'; END IF;
-  IF NEW.attempts IS DISTINCT FROM OLD.attempts+CASE WHEN OLD.state='queued' AND NEW.state='processing' THEN 1 ELSE 0 END THEN RAISE EXCEPTION 'speech retry counter invalid' USING ERRCODE='23514'; END IF;
+  IF NEW.attempts IS DISTINCT FROM OLD.attempts+(CASE WHEN OLD.state='queued' AND NEW.state='processing' THEN 1 ELSE 0 END) THEN RAISE EXCEPTION 'speech retry counter invalid' USING ERRCODE='23514'; END IF;
  END IF;
  IF NEW.state='uploaded' AND (NEW.audio_checksum IS NULL OR NEW.audio_bytes IS NULL OR NEW.mime IS NULL OR NOT NEW.cleanup_pending) THEN RAISE EXCEPTION 'uploaded audio receipt required' USING ERRCODE='23514'; END IF;
  IF NEW.state='processing' AND (NEW.execution_id IS NULL OR NEW.lease_until IS NULL) THEN RAISE EXCEPTION 'processing lease required' USING ERRCODE='23514'; END IF;
