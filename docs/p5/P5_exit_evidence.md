@@ -9,3 +9,5 @@ Current batch adds IMP-P5-003 speech server/schema/storage/worker/API and synthe
 Remaining P5 exit conditions: complete speech lifecycle/browser/failure/cleanup evidence; all required M01 asset IDs resolve with required provenance/QA; OD-004/005/006 closure where deployment/provider/calibration approval is required; all 356 phase trace rows evaluated against actual artifacts; final exact-SHA hosted full acceptance.
 
 No governing specification change. First four accepted migrations unchanged. Paid inference false/budget zero. EXC-P1-001 remains: main is not technically protected. No automatic merge or P6 advancement.
+
+Speech server correction: exact SHA `9d8f3de9e0e957f768534c5b0a7fc89efe1354f5` passed full hosted P5 batch (run 36521263627, job 109254424240), including all six migrations, 16 integration tests, seven speech DB/API gates and OCI regression. See evidence/ci-batch-005.json. Current microphone UI/typed client/binary proxy batch has local typecheck/lint/49 unit PASS; its two Chromium journeys remain unexecuted until the next hosted result.

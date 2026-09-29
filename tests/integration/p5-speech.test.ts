@@ -16,11 +16,12 @@ import {speechSignature} from '../../packages/provider-adapters/speech/callback.
 import {unavailableSpeechEvaluator} from '../../packages/provider-adapters/speech/unavailable.js';
 import type {SpeechEvaluator} from '../../packages/application/src/speech.js';
 import type {SpeechJobView,SpeechResult} from '../../packages/activity-schemas/src/speech.js';
-import {SpeechRepository} from '../../infra/persistence/speech.js';
+import {SpeechRepository,startSpeechLoop} from '../../infra/persistence/speech.js';
 import {ResetRepository} from '../../infra/persistence/resets.js';
 import {createApi} from '../../apps/api/src/app.js';
 import {p5SpeechFixture} from '../support/p5-speech-fixtures.js';
 import {toneWav} from '../support/p5-audio-fixtures.js';
+import {p5BrowserGate} from '../../tools/p5/browser-gate.js';
 
 test('P5 speech real PostgreSQL: idempotent settlement, exact facets, ownership, callback replay, retries and transient cleanup',{timeout:300000},async()=>{
  const base=localDatabaseUrl(process.env),admin=new pg.Client({connectionString:base}),name=`lingvessa_p5_test_${randomBytes(8).toString('hex')}`,url=new URL(base);url.pathname=`/${name}`;
@@ -108,6 +109,27 @@ test('P5 speech real PostgreSQL: idempotent settlement, exact facets, ownership,
    const before=await count('evidence_events'),j=await create('cs');await upload(j);
    await new ResetRepository(db).reset(f.learner,{request_id:randomUUID(),language_profile_id:f.runs.cs.language_profile_id,scope:'lesson',target_id:f.runs.cs.lesson_id,confirmed:true,reset_mastery:false});
    await speech.recover();const ended=await speech.get(f.learner,j.job_id);assert.equal(ended.outcome,'speech_unavailable');assert.equal(ended.reason,'context_superseded');assert.equal(await count('evidence_events'),before);assert.deepEqual(await readdir(transient),[]);
+  });
+  if(process.env.P5_BROWSER_TESTS==='true')await gate('P5-SPEECH-008 real Chromium microphone/retry/Continue/reduced-motion, shared EN/CS runtime',async()=>{
+   const browserRuns={} as Record<'en'|'cs',string>;
+   for(const language of ['en','cs'] as const){const old=f.runs[language];browserRuns[language]=(await f.lessons.start(f.learner,{language_profile_id:old.language_profile_id,publication_id:old.publication_id,lesson_id:old.lesson_id})).id;}
+   const calls={en:0,cs:0};
+   const browserEvaluator:SpeechEvaluator={code:evaluator.code,modelVersion:evaluator.modelVersion,available:true,async evaluate(input){
+    assert(input.audio.length>0);assert(input.mime.startsWith('audio/'));calls[input.language]++;
+    if(input.language==='cs'&&calls.cs>1)throw new Error('Controlled browser provider outage');
+    return {usable:true,confidence:input.language==='cs'?0.1:0.95,target_match:input.language==='en'&&calls.en!==2,error_tags:[],processing_ms:20};
+   }};
+   const browserSpeech=new SpeechRepository(db,audio,browserEvaluator,randomBytes(32));
+   const browserApp=await createApi({ready:async()=>true,close:async()=>undefined},{identity:f.identity,content:f.content,lessons:f.lessons,speech:{repository:browserSpeech}});
+   await browserApp.listen(0,'127.0.0.1');const stop=startSpeechLoop(browserSpeech);
+   try{await p5BrowserGate(await browserApp.getUrl(),browserRuns.en,browserRuns.cs,'speech');}
+   finally{stop();await browserApp.close();}
+   assert.deepEqual(calls,{en:3,cs:4});
+   assert.equal((await f.lessons.get(f.learner,browserRuns.en)).state,'completed');assert.equal((await f.lessons.get(f.learner,browserRuns.cs)).state,'completed');
+   const rows=(await db.query('SELECT j.outcome,j.reason,count(e.id)::int AS evidence FROM speech_jobs j LEFT JOIN activity_attempts a ON a.speech_job_id=j.id LEFT JOIN evidence_events e ON e.attempt_db_id=a.id WHERE j.lesson_run_id=$1 GROUP BY j.id',[browserRuns.cs])).rows;
+   assert.equal(rows.length,5);assert(rows.every(r=>r.outcome==='speech_unavailable'&&r.evidence===0));assert.deepEqual(rows.map(r=>r.reason).sort(),['mic_denied','mic_absent','low_confidence','provider_failure','user_cancelled'].sort());
+   assert.equal((await db.query('SELECT count(*) FROM speech_jobs WHERE lesson_run_id=$1',[browserRuns.en])).rows[0].count,'3');
+   assert.deepEqual(await readdir(transient),[]);
   });
   mkdirSync('artifacts/p5',{recursive:true});writeFileSync('artifacts/p5/speech-database-validation.json',JSON.stringify({phase:'P5',task:'IMP-P5-003',commit:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),source_sha:process.env.GITHUB_HEAD_SHA??null,status:'PASS',database:'PostgreSQL 18.6',synthetic_adapter_not_linguistic_calibration:true,gates},null,2)+'\n');
  }finally{await pool?.end();if(created)await admin.query(`DROP DATABASE "${name}" WITH (FORCE)`);await admin.end();await rm(root,{recursive:true,force:true});await rm(transient,{recursive:true,force:true});}

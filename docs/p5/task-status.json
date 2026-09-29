@@ -7,7 +7,7 @@
       "phase": "P5",
       "goal": "Media manifests, generated assets, QA and object-storage adapter",
       "owner_workstream": "Media/speech",
-      "source": "Plan \u00a712 p7; Appendix B p12",
+      "source": "Plan §12 p7; Appendix B p12",
       "dependencies": [
         "P4 gate"
       ],
@@ -286,7 +286,7 @@
         "CHK-N-TS-P17-T02-R05",
         "CHK-N-TS-P19-T03-R08"
       ],
-      "readiness": "Recheck Definition of Ready and owner phase authorization before execution",
+      "readiness": "Media/S3/DB/publication fixture gates hosted PASS at 9d8f3de; required reference media QA remains pending.",
       "contract_change": "None in P0; future schema/API work remains in named task",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
@@ -296,7 +296,7 @@
       "phase": "P5",
       "goal": "Normal/slow playback and voice/variety bindings",
       "owner_workstream": "Media/speech",
-      "source": "Plan \u00a712 p7; Appendix B p12",
+      "source": "Plan §12 p7; Appendix B p12",
       "dependencies": [
         "IMP-P5-001"
       ],
@@ -408,7 +408,7 @@
         "CHK-N-TS-P13-T03-R08",
         "CHK-N-TS-P16-T01-R02"
       ],
-      "readiness": "Audio foundation uses immutable P5 media contracts; hosted migration/bytes/playback checks pending. No approved production voice/provider implied.",
+      "readiness": "Shared normal/slow/speaker/fallback browser and API gates hosted PASS at 9d8f3de; approved reference voice/audio delivery remains pending.",
       "contract_change": "None in P0; future schema/API work remains in named task",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
@@ -418,7 +418,7 @@
       "phase": "P5",
       "goal": "Async speech jobs, mic UX, exact evidence settlement and cleanup",
       "owner_workstream": "Media/speech",
-      "source": "Plan \u00a712 p7; Appendix B p12",
+      "source": "Plan §12 p7; Appendix B p12",
       "dependencies": [
         "IMP-P5-001",
         "IMP-P5-002"
@@ -784,7 +784,7 @@
         "CHK-N-TS-P17-T02-R06",
         "CHK-N-TS-P18-T02-R08"
       ],
-      "readiness": "Recheck Definition of Ready and owner phase authorization before execution",
+      "readiness": "Seven speech DB/API/cleanup gates hosted PASS at 9d8f3de. Microphone UI/browser implementation prepared, hosted browser verification pending; production policy default unavailable.",
       "contract_change": "None in P0; future schema/API work remains in named task",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"

@@ -5,7 +5,7 @@ import type { AddressInfo } from 'node:net';
 import { cpSync } from 'node:fs';
 import { resolve, join } from 'node:path';
 
-export async function p5BrowserGate(apiOrigin: string, enRun: string, csRun: string): Promise<void> {
+export async function p5BrowserGate(apiOrigin: string, enRun: string, csRun: string,kind:'media'|'speech'='media'): Promise<void> {
   const server=createServer().listen(0,'127.0.0.1');await once(server,'listening');const port=(server.address() as AddressInfo).port;
   await new Promise<void>(resolve=>server.close(()=>resolve()));
   const appRoot=resolve('apps/web/.next/standalone/apps/web');
@@ -19,7 +19,7 @@ export async function p5BrowserGate(apiOrigin: string, enRun: string, csRun: str
       await new Promise(resolve=>setTimeout(resolve,250));
     }
     if(!ready)throw new Error('P5 browser web fixture failed startup');
-    const browser=spawn('pnpm',['exec','playwright','test','--config','tools/p5/playwright.config.ts'],{env:{...process.env,P5_BROWSER_ORIGIN:`http://127.0.0.1:${port}`,P5_EN_RUN:enRun,P5_CS_RUN:csRun},stdio:'inherit'});
+    const browser=spawn('pnpm',['exec','playwright','test','--config',kind==='speech'?'tools/p5/speech.playwright.config.ts':'tools/p5/playwright.config.ts'],{env:{...process.env,P5_BROWSER_ORIGIN:`http://127.0.0.1:${port}`,P5_EN_RUN:enRun,P5_CS_RUN:csRun},stdio:'inherit'});
     const [code]=await once(browser,'exit');if(code!==0)throw new Error(`P5 browser acceptance failed (${String(code)})`);
   }finally{
     web.kill('SIGTERM');const timer=setTimeout(()=>web.kill('SIGKILL'),3000);await once(web,'exit');clearTimeout(timer);

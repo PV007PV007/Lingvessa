@@ -7,6 +7,7 @@ import type { ActivityResponse } from '../../../../packages/lesson-engine/src/ev
 import { lessonPlayerReducer, mayAutoAdvance } from '../../../../packages/lesson-engine/src/state';
 import type { LessonPlayerState } from '../../../../packages/lesson-engine/src/state';
 import { MediaPanel } from './media';
+import { SpeechPanel } from './speech';
 import { ActivityRenderer } from './activity';
 import { IndexedAttemptStorage } from './queue';
 
@@ -97,12 +98,13 @@ export function LessonPlayer({runId,embedded=false,sessionCsrf}:{runId:string;em
       {run&&run.state!=='completed'&&<>{!embedded&&<p>{run.manifest.language==='en'?'English':'Čeština'} · {run.position+1} / {run.manifest.activities.length}</p>}
         {run.state==='remediation'&&<p>Повторення: невирішених вправ — {run.unresolved_count}.</p>}
         {run.manifest.activities[run.position]&&<MediaPanel key={`media:${run.id}:${run.position}`} runId={run.id} itemId={run.manifest.activities[run.position]!.id} hasMedia={run.manifest.activities[run.position]!.presentation.media_refs.length>0} csrf={()=>csrf.current}/>}
-        {run.manifest.activities[run.position]&&<ActivityRenderer key={`${run.id}:${run.position}:${result?.attempt_id??'active'}`} activity={run.manifest.activities[run.position]!} disabled={busy||result!==null||notice!==''||(!run.retry_available&&run.manifest.activities[run.position]?.response_kind!=='none')} onAnswer={response=>void answer(response)}/>}
+        {run.manifest.activities[run.position]?.response_kind==='speech'&&<SpeechPanel key={`speech:${run.id}:${run.position}`} run={run} csrf={()=>csrf.current} state={player} dispatch={dispatch} autoAdvance={autoAdvance} onNext={value=>{restore(value);setResult(null);setNotice('');}}/>}
+        {run.manifest.activities[run.position]&&run.manifest.activities[run.position]?.response_kind!=='speech'&&<ActivityRenderer key={`${run.id}:${run.position}:${result?.attempt_id??'active'}`} activity={run.manifest.activities[run.position]!} disabled={busy||result!==null||notice!==''||(!run.retry_available&&run.manifest.activities[run.position]?.response_kind!=='none')} onAnswer={response=>void answer(response)}/>}
         {result&&<div className="lesson-feedback" aria-live="polite" role="status"><strong>{result.outcome==='correct'?'Правильно':result.outcome==='incorrect'?'Спробуйте ще раз':result.outcome==='assisted'?'Завершено з допомогою':'Продовжуймо'}</strong><p>{result.feedback}</p>
           {result.outcome==='incorrect'?<button disabled={busy||!result.run.retry_available} onClick={()=>{dispatch({type:'RETRY'});setResult(null);}}>Повторити</button>:<button disabled={busy} onClick={()=>void next()}>Далі</button>}</div>}
         {result?.outcome==='incorrect'&&<button disabled={busy} onClick={async()=>{try{const r=await fetch(`/api/v1/lesson-runs/${runId}/hint`,{method:'POST',headers:{'x-csrf-token':csrf.current},credentials:'include'});if(!r.ok)throw new Error();setHint((await r.json() as {hint:string}).hint);}catch{setNotice('Не вдалося отримати підказку.');}}}>Підказка</button>}
-        {(!result||result.outcome==='incorrect')&&run.manifest.activities[run.position]?.response_kind!=='none'&&<button disabled={busy||notice!==''} onClick={()=>void answer({kind:'none'},true)}>Показати відповідь</button>}
-        {!run.retry_available&&(!result||result.outcome==='incorrect')&&<p>Спроби вичерпано. Перегляньте відповідь, щоб продовжити.</p>}
+        {(!result||result.outcome==='incorrect')&&!['none','speech'].includes(run.manifest.activities[run.position]?.response_kind??'none')&&<button disabled={busy||notice!==''} onClick={()=>void answer({kind:'none'},true)}>Показати відповідь</button>}
+        {run.manifest.activities[run.position]?.response_kind!=='speech'&&!run.retry_available&&(!result||result.outcome==='incorrect')&&<p>Спроби вичерпано. Перегляньте відповідь, щоб продовжити.</p>}
         <label><input type="checkbox" checked={autoAdvance} onChange={event=>setAutoAdvance(event.target.checked)}/>Автоматично переходити після відповіді</label>
         {run.state==='remediation'&&<button disabled={busy} onClick={()=>void exit()}>Завершити з невирішеними вправами</button>}
       </>}

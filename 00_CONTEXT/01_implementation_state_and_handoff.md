@@ -1,10 +1,10 @@
 # Lingvessa implementation state and handoff
 
-Timestamp: 2026-09-29T04:20:21.792543+00:00
+Timestamp: 2026-09-29T14:55:17.005742+00:00
 Current phase: P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED. P6 NOT AUTHORIZED.
 Branch: `implementation/p5-media-speech`. PR [#5](https://github.com/PV007PV007/Lingvessa/pull/5): OPEN DRAFT.
 Accepted main/P4 merge: `5027f001237b6451237d87343ebeca58cd0af007`.
-Last exact hosted-tested source: `b3cac5d843b4a11b9b8e2d06b9e9495467cc1b6d`: PASS for media/audio + P1–P4 regression, not full P5. Run 36378454901/job 108788995230. Local synthetic Git checkpoint IDs are never reported as hosted source.
+Last exact hosted-tested source: `9d8f3de9e0e957f768534c5b0a7fc89efe1354f5`: PASS for media/audio/speech server + P1–P4 regression, not full P5. Run 36521263627/job 109254424240; evidence/ci-batch-005.json. Local synthetic Git checkpoint IDs are never reported as hosted source.
 
 ## Batch / scope
 
@@ -22,9 +22,9 @@ Prior hosted exact SHA above: `pnpm install --frozen-lockfile`, `pnpm validate:b
 
 New batch local: `pnpm db:validate`: PASS; `pnpm lint`: PASS; `node node_modules/typescript/bin/tsc --noEmit`: PASS; `node --import tsx --test tests/unit/*.test.ts`: 49 PASS, zero failures/skips. P3 OpenAPI drift found by the regression test was corrected by `node --import tsx tools/p3/openapi.ts`. `node --import tsx tools/p5/openapi.ts` generates the speech transport contract. Required pnpm 11.19.0 comes from scratch toolchain; repository pins unchanged.
 
-Speech server commit `88413869b39cf9f91b36f41685148719e98124e6` failed hosted bootstrap (run 36520180200/job 109251100979) after install/check/S3 passed. `ci-batch-004.json` records the failure and SQLSTATE 42601 diagnosis. This correction parenthesizes the CASE expression in the unaccepted P5 speech migration and makes empty Prisma migration diagnostics actionable. All six DDL files execute in scratch-only PostgreSQL WASM diagnostics; this is not PostgreSQL 18.6 acceptance. Required hosted DB/browser/OCI rerun is PENDING. No skipped gate counted as PASS.
+Speech migration failure at `88413869…` is corrected and verified on PostgreSQL 18.6 at exact SHA `9d8f3de9e0e957f768534c5b0a7fc89efe1354f5`: all 16 integration tests, seven speech DB/API gates, eight earlier Chromium tests, actual S3 and four OCI regression gates PASS. No speech browser was present in that commit. New batch adds the shared microphone UI, binary proxy/typed client, recovery using the same attempt/job, in-memory-only recording, reduced-motion pulse, all three outcome Retry/Continue/Auto-advance, and two actual Chromium journeys with a synthetic evaluator. Local typecheck/lint/49 unit tests PASS. New speech browser execution remains PENDING hosted CI.
 
 BLOCKER: none established. IMPORTANT: speech runtime/browser acceptance and M01 asset registry/approved media QA remain pending. MINOR: inherited Node Actions/Argon2id warnings.
 EXC-P1-001: main NOT technically protected; branch/PR/green CI/owner acceptance process retained.
 Open owner decisions: OD-004 storage profile; OD-005 providers/licences/voices; OD-006 calibrated speech policy, all retain safe defaults. Paid inference false; monthly paid budget zero.
-Exact next task: rerun the corrected speech migration on hosted PostgreSQL 18.6, complete microphone/reduced-motion/Continue/Retry browser gates and reference media requirements. No P5 merge and no P6 work.
+Exact next task: run microphone browser acceptance on PR #5, fix any concrete failures, complete reference media requirements and evaluate every P5 trace row against actual evidence. No P5 merge and no P6 work.
