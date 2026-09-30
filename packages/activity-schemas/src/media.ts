@@ -43,10 +43,13 @@ export const assetVersionSchema = z.object({
   decorative: z.boolean(), alt_text: z.string().max(1000), transcript: z.string().max(12000).optional(),
   script_version: version.optional(), script_hash: digest.optional(), speed: z.enum(['normal','slow']).optional(),
   voice_id: uuid.optional(), voice_version_code: version.optional(), turns: z.array(audioTurnSchema).max(100).optional(),
+  character_id:uuid.optional(),character_version_code:version.optional(),
   normal_asset_id:uuid.optional(),normal_asset_version:z.number().int().positive().optional(),
   rights: rightsSchema,
 }).strict().superRefine((a,ctx) => {
   const error = (message:string) => ctx.addIssue({code:'custom',message});
+  if(a.kind==='avatar'&&(!a.character_id||!a.character_version_code))error('Avatar requires an exact versioned character binding');
+  if(a.kind!=='avatar'&&(a.character_id||a.character_version_code))error('Character binding belongs to avatar assets');
   if(a.kind==='audio') {
     if(!a.mime.startsWith('audio/') || !a.duration_ms || !a.codec || a.loudness_lufs===undefined || !a.transcript || !a.script_version || !a.script_hash || !a.speed || !a.voice_id || !a.voice_version_code || a.scope.variety==='common') error('Audio requires exact variety, script, transcript, voice, speed and technical metadata');
     if(a.decorative) error('Instructional audio is not decorative');

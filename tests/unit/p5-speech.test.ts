@@ -1,7 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {randomBytes,randomUUID} from 'node:crypto';
-import {mkdtemp,readFile,writeFile,rm,readdir} from 'node:fs/promises';
+import {mkdtemp,readFile,writeFile,rm,readdir,utimes} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {EncryptedTransientSpeechStore,uploadToken,validUploadToken} from '../../packages/provider-adapters/speech/transient.js';
@@ -15,6 +15,17 @@ test('P5 speech target decisions distinguish mismatch from unusable speech',()=>
  for(const result of [{...usable,usable:false},{...usable,confidence:0.1}])assert.equal(classifySpeech(result,0.8).outcome,'speech_unavailable');
  assert.equal(transitionSpeech('processing','speech_incorrect'),'speech_incorrect');assert.throws(()=>transitionSpeech('recording','speech_correct'));
  assert.equal(speechRuntime({}).evaluator.available,false);assert.throws(()=>speechRuntime({SPEECH_TRANSIENT_MODE:'tmpfs'}));
+});
+test('P5 transient publication is atomic against cleanup; abandoned partial writes expire',async()=>{
+ const root=await mkdtemp('/dev/shm/lingvessa-speech-race-'),store=new EncryptedTransientSpeechStore(root,randomBytes(32)),ids=Array.from({length:12},()=>randomUUID()),bytes=randomBytes(128*1024);
+ let done=false;
+ try{
+  const sweep=(async()=>{while(!done){await store.prune();await new Promise(r=>setImmediate(r));}})();
+  try{await Promise.all(ids.map(id=>store.put(id,bytes,new Date(Date.now()+30000))));}finally{done=true;await sweep;}
+  for(const id of ids){assert.deepEqual(await store.read(id),bytes);await store.delete(id);}
+  const part=join(root,`${randomUUID()}.${randomUUID()}.part`);await writeFile(part,Buffer.alloc(0));assert.equal(await store.prune(),0);
+  const old=new Date(Date.now()-15*60*1000);await utimes(part,old,old);assert.equal(await store.prune(),1);assert.deepEqual(await readdir(root),[]);
+ }finally{done=true;await rm(root,{recursive:true,force:true});}
 });
 test('P5 raw audio is encrypted on private tmpfs, tamper bound, deleted on TTL and never accepted on permanent fs',async()=>{
  const root=await mkdtemp('/dev/shm/lingvessa-speech-'),persistent=await mkdtemp(join(tmpdir(),'speech-denied-')),key=randomBytes(32),store=new EncryptedTransientSpeechStore(root,key),id=randomUUID(),bytes=Buffer.from('synthetic speech bytes');

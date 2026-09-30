@@ -99,6 +99,7 @@ export class MediaRepository {
       // Audio remains labelled with its real variety; the client never relabels a different voice.
       media.push(deliveredMediaSchema.parse({asset_id:a.asset_id,asset_version:a.asset_version,role:ref.role,kind:a.kind,scope:a.scope,mime:a.mime,checksum:a.checksum,byte_length:a.byte_length,
         alt_text:a.alt_text,decorative:a.decorative,...(a.duration_ms?{duration_ms:a.duration_ms}:{}),...(a.transcript?{transcript:a.transcript}:{}),...(a.speed?{speed:a.speed}:{}),
+        ...(a.character_id?{character_id:a.character_id,character_version_code:a.character_version_code}:{}),
         ...(a.voice_id?{voice_id:a.voice_id,voice_version_code:a.voice_version_code}:{}),...(a.turns?{turns:a.turns}:{}),...(a.normal_asset_id?{normal_asset_id:a.normal_asset_id,normal_asset_version:a.normal_asset_version}:{})}));
     }
     return media;

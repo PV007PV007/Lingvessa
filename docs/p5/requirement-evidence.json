@@ -20,18 +20,37 @@
       "implementation_phase": "P5",
       "source_section/page": "Requirement/acceptance table 3; p.15; p15:t3:r11",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
+      "status": "PASS",
       "followup_tasks": "Regression at applicable later milestone gates",
       "planned_code_schema": "apps/api; apps/worker; packages/lesson-engine; packages/provider-adapters/speech",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "actual_code_schema": [
+        "infra/persistence/speech.ts",
+        "apps/web/src/lesson/speech.tsx",
+        "packages/activity-schemas/src/speech.ts",
+        "packages/lesson-engine/src/speech.ts"
+      ],
+      "implementation_status": "VERIFIED",
+      "milestone_evidence": "docs/p5/evidence/ci-batch-006.json",
       "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
       "test_or_gate": "CHK-CUR-A1-010",
       "applicability": "Binding when the named optional capability is enabled; default-off/fallback restrictions always apply.",
-      "actual_test_files": [],
-      "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "actual_test_files": [
+        "tests/integration/p5-speech.test.ts",
+        "tests/browser/p5-speech.spec.ts",
+        "tests/unit/p5-speech.test.ts"
+      ],
+      "actual_gate_ids": [
+        "P5-SPEECH-001",
+        "P5-SPEECH-002",
+        "P5-SPEECH-003",
+        "P5-SPEECH-004",
+        "P5-SPEECH-005",
+        "P5-SPEECH-006",
+        "P5-SPEECH-007",
+        "P5-SPEECH-008"
+      ],
+      "verified_implementation_sha": "76aa3aedc12f31eada6e6320ec526a3fcda36cf9",
+      "verification_note": "Controlled adapter validates contract behavior; no provider/calibration approval inferred."
     },
     {
       "requirement_id": "CUR-A1-015",
@@ -51,18 +70,27 @@
       "implementation_phase": "P5",
       "source_section/page": "Requirement/acceptance table 1; p.16; p16:t1:r5",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "followup_tasks": "Regression at applicable later milestone gates",
       "planned_code_schema": "assets/specs; packages/content-tools; packages/provider-adapters/storage; apps/worker",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "actual_code_schema": [
+        "infra/persistence/media.ts",
+        "packages/activity-schemas/src/media.ts",
+        "assets/specs/p5/reference-media.source.json"
+      ],
+      "implementation_status": "IN_PROGRESS",
+      "milestone_evidence": "docs/p5/evidence/ci-batch-006.json",
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "test_or_gate": "CHK-CUR-A1-015",
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
-      "actual_test_files": [],
+      "actual_test_files": [
+        "tests/integration/p5-media.test.ts",
+        "tests/integration/p5-audio.test.ts",
+        "tests/integration/p5-speech.test.ts"
+      ],
       "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "verified_implementation_sha": null,
+      "verification_note": "Runtime media preflight works; M01 complete generated/approved assets remain open."
     },
     {
       "requirement_id": "AUD-001",
@@ -82,18 +110,27 @@
       "implementation_phase": "P5",
       "source_section/page": "Requirement/acceptance table 1; p.10; p10:t1:r2",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "followup_tasks": "Regression at applicable later milestone gates",
       "planned_code_schema": "apps/api; apps/worker; packages/lesson-engine; packages/provider-adapters/speech",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "actual_code_schema": [
+        "infra/persistence/speech.ts",
+        "apps/web/src/lesson/media.tsx",
+        "apps/web/src/lesson/speech.tsx"
+      ],
+      "implementation_status": "IN_PROGRESS",
+      "milestone_evidence": "docs/p5/evidence/ci-batch-006.json",
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "test_or_gate": "CHK-AUD-001",
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
-      "actual_test_files": [],
+      "actual_test_files": [
+        "tests/integration/p5-media.test.ts",
+        "tests/integration/p5-audio.test.ts",
+        "tests/integration/p5-speech.test.ts"
+      ],
       "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "verified_implementation_sha": null,
+      "verification_note": "Normal/slow playback proven with synthetic tones; actual reference audio duration/language QA pending."
     },
     {
       "requirement_id": "AUD-002",
@@ -113,18 +150,37 @@
       "implementation_phase": "P5",
       "source_section/page": "Requirement/acceptance table 1; p.10; p10:t1:r3",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
+      "status": "PASS",
       "followup_tasks": "Regression at applicable later milestone gates",
       "planned_code_schema": "apps/api; apps/worker; packages/lesson-engine; packages/provider-adapters/speech",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "actual_code_schema": [
+        "infra/persistence/speech.ts",
+        "apps/web/src/lesson/speech.tsx",
+        "packages/activity-schemas/src/speech.ts",
+        "packages/lesson-engine/src/speech.ts"
+      ],
+      "implementation_status": "VERIFIED",
+      "milestone_evidence": "docs/p5/evidence/ci-batch-006.json",
       "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
       "test_or_gate": "CHK-AUD-002",
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
-      "actual_test_files": [],
-      "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "actual_test_files": [
+        "tests/integration/p5-speech.test.ts",
+        "tests/browser/p5-speech.spec.ts",
+        "tests/unit/p5-speech.test.ts"
+      ],
+      "actual_gate_ids": [
+        "P5-SPEECH-001",
+        "P5-SPEECH-002",
+        "P5-SPEECH-003",
+        "P5-SPEECH-004",
+        "P5-SPEECH-005",
+        "P5-SPEECH-006",
+        "P5-SPEECH-007",
+        "P5-SPEECH-008"
+      ],
+      "verified_implementation_sha": "76aa3aedc12f31eada6e6320ec526a3fcda36cf9",
+      "verification_note": "Controlled adapter validates contract behavior; no provider/calibration approval inferred."
     },
     {
       "requirement_id": "AUD-003",
@@ -144,18 +200,27 @@
       "implementation_phase": "P5",
       "source_section/page": "Requirement/acceptance table 1; p.10; p10:t1:r4",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "followup_tasks": "Regression at applicable later milestone gates",
       "planned_code_schema": "apps/api; apps/worker; packages/lesson-engine; packages/provider-adapters/speech",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "actual_code_schema": [
+        "infra/persistence/speech.ts",
+        "apps/web/src/lesson/media.tsx",
+        "apps/web/src/lesson/speech.tsx"
+      ],
+      "implementation_status": "IN_PROGRESS",
+      "milestone_evidence": "docs/p5/evidence/ci-batch-006.json",
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "test_or_gate": "CHK-AUD-003",
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
-      "actual_test_files": [],
+      "actual_test_files": [
+        "tests/integration/p5-media.test.ts",
+        "tests/integration/p5-audio.test.ts",
+        "tests/integration/p5-speech.test.ts"
+      ],
       "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "verified_implementation_sha": null,
+      "verification_note": "Private encrypted tmpfs and no permanent audio path implemented. Added cleanup/expiry fault gates pending current CI."
     },
     {
       "requirement_id": "AUD-004",
@@ -175,18 +240,27 @@
       "implementation_phase": "P5",
       "source_section/page": "Requirement/acceptance table 1; p.10; p10:t1:r5",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "followup_tasks": "Regression at applicable later milestone gates",
       "planned_code_schema": "apps/api; apps/worker; packages/lesson-engine; packages/provider-adapters/speech",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "actual_code_schema": [
+        "infra/persistence/speech.ts",
+        "apps/web/src/lesson/media.tsx",
+        "apps/web/src/lesson/speech.tsx"
+      ],
+      "implementation_status": "IN_PROGRESS",
+      "milestone_evidence": "docs/p5/evidence/ci-batch-006.json",
       "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
       "test_or_gate": "CHK-AUD-004",
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
-      "actual_test_files": [],
+      "actual_test_files": [
+        "tests/integration/p5-media.test.ts",
+        "tests/integration/p5-audio.test.ts",
+        "tests/integration/p5-speech.test.ts"
+      ],
       "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "verified_implementation_sha": null,
+      "verification_note": "Language/variety-scoped policies enforced; real EN/US/CS calibration requires OD-005/006."
     },
     {
       "requirement_id": "AUD-005",
@@ -206,18 +280,27 @@
       "implementation_phase": "P5",
       "source_section/page": "Requirement/acceptance table 1; p.10; p10:t1:r6",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "followup_tasks": "Regression at applicable later milestone gates",
       "planned_code_schema": "apps/api; apps/worker; packages/lesson-engine; packages/provider-adapters/speech",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "actual_code_schema": [
+        "infra/persistence/speech.ts",
+        "apps/web/src/lesson/media.tsx",
+        "apps/web/src/lesson/speech.tsx"
+      ],
+      "implementation_status": "IN_PROGRESS",
+      "milestone_evidence": "docs/p5/evidence/ci-batch-006.json",
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "test_or_gate": "CHK-AUD-005",
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
-      "actual_test_files": [],
+      "actual_test_files": [
+        "tests/integration/p5-media.test.ts",
+        "tests/integration/p5-audio.test.ts",
+        "tests/integration/p5-speech.test.ts"
+      ],
       "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "verified_implementation_sha": null,
+      "verification_note": "Transcript fallback implemented; content-specific accessibility/learning-objective QA remains."
     },
     {
       "requirement_id": "AUD-006",
@@ -237,18 +320,27 @@
       "implementation_phase": "P5",
       "source_section/page": "Requirement/acceptance table 1; p.10; p10:t1:r7",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "followup_tasks": "Regression at applicable later milestone gates",
       "planned_code_schema": "apps/api; apps/worker; packages/lesson-engine; packages/provider-adapters/speech",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "actual_code_schema": [
+        "infra/persistence/speech.ts",
+        "apps/web/src/lesson/media.tsx",
+        "apps/web/src/lesson/speech.tsx"
+      ],
+      "implementation_status": "IN_PROGRESS",
+      "milestone_evidence": "docs/p5/evidence/ci-batch-006.json",
       "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
       "test_or_gate": "CHK-AUD-006",
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
-      "actual_test_files": [],
+      "actual_test_files": [
+        "tests/integration/p5-media.test.ts",
+        "tests/integration/p5-audio.test.ts",
+        "tests/integration/p5-speech.test.ts"
+      ],
       "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "verified_implementation_sha": null,
+      "verification_note": "Speech/storage ports substituted in tests; actual TTS/STT choice and licence approval remain OD-005."
     },
     {
       "requirement_id": "AUD-007",
@@ -268,18 +360,37 @@
       "implementation_phase": "P5",
       "source_section/page": "Requirement/acceptance table 1; p.10; p10:t1:r8",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
+      "status": "PASS",
       "followup_tasks": "Regression at applicable later milestone gates",
       "planned_code_schema": "apps/api; apps/worker; packages/lesson-engine; packages/provider-adapters/speech",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "actual_code_schema": [
+        "infra/persistence/speech.ts",
+        "apps/web/src/lesson/speech.tsx",
+        "packages/activity-schemas/src/speech.ts",
+        "packages/lesson-engine/src/speech.ts"
+      ],
+      "implementation_status": "VERIFIED",
+      "milestone_evidence": "docs/p5/evidence/ci-batch-006.json",
       "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
       "test_or_gate": "CHK-AUD-007",
       "applicability": "Binding when the named optional capability is enabled; default-off/fallback restrictions always apply.",
-      "actual_test_files": [],
-      "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "actual_test_files": [
+        "tests/integration/p5-speech.test.ts",
+        "tests/browser/p5-speech.spec.ts",
+        "tests/unit/p5-speech.test.ts"
+      ],
+      "actual_gate_ids": [
+        "P5-SPEECH-001",
+        "P5-SPEECH-002",
+        "P5-SPEECH-003",
+        "P5-SPEECH-004",
+        "P5-SPEECH-005",
+        "P5-SPEECH-006",
+        "P5-SPEECH-007",
+        "P5-SPEECH-008"
+      ],
+      "verified_implementation_sha": "76aa3aedc12f31eada6e6320ec526a3fcda36cf9",
+      "verification_note": "Controlled adapter validates contract behavior; no provider/calibration approval inferred."
     },
     {
       "requirement_id": "MED-001",
@@ -299,18 +410,27 @@
       "implementation_phase": "P5",
       "source_section/page": "Requirement/acceptance table 3; p.11; p11:t3:r2",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "followup_tasks": "Regression at applicable later milestone gates",
       "planned_code_schema": "assets/specs; packages/content-tools; packages/provider-adapters/storage; apps/worker",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "actual_code_schema": [
+        "infra/persistence/media.ts",
+        "packages/activity-schemas/src/media.ts",
+        "assets/specs/p5/reference-media.source.json"
+      ],
+      "implementation_status": "IN_PROGRESS",
+      "milestone_evidence": "docs/p5/evidence/ci-batch-006.json",
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "test_or_gate": "CHK-MED-001",
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
-      "actual_test_files": [],
+      "actual_test_files": [
+        "tests/integration/p5-media.test.ts",
+        "tests/integration/p5-audio.test.ts",
+        "tests/integration/p5-speech.test.ts"
+      ],
       "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "verified_implementation_sha": null,
+      "verification_note": "System media pipeline exists; complete M01 asset bytes/QA unresolved."
     },
     {
       "requirement_id": "MED-002",
@@ -330,18 +450,32 @@
       "implementation_phase": "P5",
       "source_section/page": "Requirement/acceptance table 3; p.11; p11:t3:r3",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
+      "status": "PASS",
       "followup_tasks": "Regression at applicable later milestone gates",
       "planned_code_schema": "assets/specs; packages/content-tools; packages/provider-adapters/storage; apps/worker",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "actual_code_schema": [
+        "infra/persistence/media.ts",
+        "infra/persistence/content.ts",
+        "prisma/migrations/202609260001_p5_media_foundation/migration.sql",
+        "packages/provider-adapters/storage/s3.ts"
+      ],
+      "implementation_status": "VERIFIED",
+      "milestone_evidence": "docs/p5/evidence/ci-batch-006.json",
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "test_or_gate": "CHK-MED-002",
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
-      "actual_test_files": [],
-      "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "actual_test_files": [
+        "tests/integration/p5-media.test.ts",
+        "tests/integration/p5-audio.test.ts",
+        "tools/p5/storage-gate.ts"
+      ],
+      "actual_gate_ids": [
+        "P5-MEDIA-QA-001",
+        "P5-MEDIA-BYTES-001",
+        "P5-MEDIA-VERSION-001"
+      ],
+      "verified_implementation_sha": "76aa3aedc12f31eada6e6320ec526a3fcda36cf9",
+      "verification_note": "Synthetic published fixtures prove manifest and immutable object contracts; real M01 assets still require their own QA."
     },
     {
       "requirement_id": "MED-003",
@@ -361,18 +495,27 @@
       "implementation_phase": "P5",
       "source_section/page": "Requirement/acceptance table 3; p.11; p11:t3:r4",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "followup_tasks": "Regression at applicable later milestone gates",
       "planned_code_schema": "assets/specs; packages/content-tools; packages/provider-adapters/storage; apps/worker",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "actual_code_schema": [
+        "infra/persistence/media.ts",
+        "packages/activity-schemas/src/media.ts",
+        "assets/specs/p5/reference-media.source.json"
+      ],
+      "implementation_status": "IN_PROGRESS",
+      "milestone_evidence": "docs/p5/evidence/ci-batch-006.json",
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "test_or_gate": "CHK-MED-003",
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
-      "actual_test_files": [],
+      "actual_test_files": [
+        "tests/integration/p5-media.test.ts",
+        "tests/integration/p5-audio.test.ts",
+        "tests/integration/p5-speech.test.ts"
+      ],
       "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "verified_implementation_sha": null,
+      "verification_note": "Character/voice immutable bindings exist; avatar pin closure/UI sync are new and awaiting hosted CI; real series QA pending."
     },
     {
       "requirement_id": "MED-004",
@@ -392,18 +535,32 @@
       "implementation_phase": "P5",
       "source_section/page": "Requirement/acceptance table 3; p.11; p11:t3:r5",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
+      "status": "PASS",
       "followup_tasks": "Regression at applicable later milestone gates",
       "planned_code_schema": "assets/specs; packages/content-tools; packages/provider-adapters/storage; apps/worker",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "actual_code_schema": [
+        "infra/persistence/media.ts",
+        "infra/persistence/content.ts",
+        "prisma/migrations/202609260001_p5_media_foundation/migration.sql",
+        "packages/provider-adapters/storage/s3.ts"
+      ],
+      "implementation_status": "VERIFIED",
+      "milestone_evidence": "docs/p5/evidence/ci-batch-006.json",
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "test_or_gate": "CHK-MED-004",
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
-      "actual_test_files": [],
-      "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "actual_test_files": [
+        "tests/integration/p5-media.test.ts",
+        "tests/integration/p5-audio.test.ts",
+        "tools/p5/storage-gate.ts"
+      ],
+      "actual_gate_ids": [
+        "P5-MEDIA-QA-001",
+        "P5-MEDIA-BYTES-001",
+        "P5-MEDIA-VERSION-001"
+      ],
+      "verified_implementation_sha": "76aa3aedc12f31eada6e6320ec526a3fcda36cf9",
+      "verification_note": "Synthetic published fixtures prove manifest and immutable object contracts; real M01 assets still require their own QA."
     },
     {
       "requirement_id": "MED-005",
@@ -423,18 +580,32 @@
       "implementation_phase": "P5",
       "source_section/page": "Requirement/acceptance table 3; p.11; p11:t3:r6",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
+      "status": "PASS",
       "followup_tasks": "Regression at applicable later milestone gates",
       "planned_code_schema": "assets/specs; packages/content-tools; packages/provider-adapters/storage; apps/worker",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "actual_code_schema": [
+        "infra/persistence/media.ts",
+        "infra/persistence/content.ts",
+        "prisma/migrations/202609260001_p5_media_foundation/migration.sql",
+        "packages/provider-adapters/storage/s3.ts"
+      ],
+      "implementation_status": "VERIFIED",
+      "milestone_evidence": "docs/p5/evidence/ci-batch-006.json",
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "test_or_gate": "CHK-MED-005",
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
-      "actual_test_files": [],
-      "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "actual_test_files": [
+        "tests/integration/p5-media.test.ts",
+        "tests/integration/p5-audio.test.ts",
+        "tools/p5/storage-gate.ts"
+      ],
+      "actual_gate_ids": [
+        "P5-MEDIA-QA-001",
+        "P5-MEDIA-BYTES-001",
+        "P5-MEDIA-VERSION-001"
+      ],
+      "verified_implementation_sha": "76aa3aedc12f31eada6e6320ec526a3fcda36cf9",
+      "verification_note": "Synthetic published fixtures prove manifest and immutable object contracts; real M01 assets still require their own QA."
     },
     {
       "requirement_id": "MED-006",
@@ -454,18 +625,27 @@
       "implementation_phase": "P5",
       "source_section/page": "Requirement/acceptance table 3; p.11; p11:t3:r7",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "followup_tasks": "Regression at applicable later milestone gates",
       "planned_code_schema": "assets/specs; packages/content-tools; packages/provider-adapters/storage; apps/worker",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "actual_code_schema": [
+        "infra/persistence/media.ts",
+        "packages/activity-schemas/src/media.ts",
+        "assets/specs/p5/reference-media.source.json"
+      ],
+      "implementation_status": "IN_PROGRESS",
+      "milestone_evidence": "docs/p5/evidence/ci-batch-006.json",
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "test_or_gate": "CHK-MED-006",
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
-      "actual_test_files": [],
+      "actual_test_files": [
+        "tests/integration/p5-media.test.ts",
+        "tests/integration/p5-audio.test.ts",
+        "tests/integration/p5-speech.test.ts"
+      ],
       "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "verified_implementation_sha": null,
+      "verification_note": "Baseline forbids real-person clones in schema/DB; current synthetic fixtures are original, real media rights QA pending."
     },
     {
       "requirement_id": "REF-A1-006",
@@ -485,18 +665,37 @@
       "implementation_phase": "P5",
       "source_section/page": "Requirement/acceptance table 2; p.5; p5:t2:r7",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
+      "status": "PASS",
       "followup_tasks": "Regression at applicable later milestone gates",
       "planned_code_schema": "apps/api; apps/worker; packages/lesson-engine; packages/provider-adapters/speech",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "actual_code_schema": [
+        "infra/persistence/speech.ts",
+        "apps/web/src/lesson/speech.tsx",
+        "packages/activity-schemas/src/speech.ts",
+        "packages/lesson-engine/src/speech.ts"
+      ],
+      "implementation_status": "VERIFIED",
+      "milestone_evidence": "docs/p5/evidence/ci-batch-006.json",
       "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
       "test_or_gate": "CHK-REF-A1-006",
       "applicability": "Binding when the named optional capability is enabled; default-off/fallback restrictions always apply.",
-      "actual_test_files": [],
-      "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "actual_test_files": [
+        "tests/integration/p5-speech.test.ts",
+        "tests/browser/p5-speech.spec.ts",
+        "tests/unit/p5-speech.test.ts"
+      ],
+      "actual_gate_ids": [
+        "P5-SPEECH-001",
+        "P5-SPEECH-002",
+        "P5-SPEECH-003",
+        "P5-SPEECH-004",
+        "P5-SPEECH-005",
+        "P5-SPEECH-006",
+        "P5-SPEECH-007",
+        "P5-SPEECH-008"
+      ],
+      "verified_implementation_sha": "76aa3aedc12f31eada6e6320ec526a3fcda36cf9",
+      "verification_note": "Controlled adapter validates contract behavior; no provider/calibration approval inferred."
     },
     {
       "requirement_id": "REF-A1-010",
@@ -516,18 +715,27 @@
       "implementation_phase": "P5",
       "source_section/page": "Requirement/acceptance table 2; p.5; p5:t2:r11",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "followup_tasks": "Regression at applicable later milestone gates",
       "planned_code_schema": "assets/specs; packages/content-tools; packages/provider-adapters/storage; apps/worker",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "actual_code_schema": [
+        "infra/persistence/media.ts",
+        "packages/activity-schemas/src/media.ts",
+        "assets/specs/p5/reference-media.source.json"
+      ],
+      "implementation_status": "IN_PROGRESS",
+      "milestone_evidence": "docs/p5/evidence/ci-batch-006.json",
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "test_or_gate": "CHK-REF-A1-010",
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
-      "actual_test_files": [],
+      "actual_test_files": [
+        "tests/integration/p5-media.test.ts",
+        "tests/integration/p5-audio.test.ts",
+        "tests/integration/p5-speech.test.ts"
+      ],
       "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "verified_implementation_sha": null,
+      "verification_note": "Manifest gate implemented; required reference audio/flags/QA unresolved."
     },
     {
       "requirement_id": "REF-A1-011",
@@ -547,18 +755,27 @@
       "implementation_phase": "P5",
       "source_section/page": "Requirement/acceptance table 2; p.5; p5:t2:r12",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "followup_tasks": "Regression at applicable later milestone gates",
       "planned_code_schema": "assets/specs; packages/content-tools; packages/provider-adapters/storage; apps/worker",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "actual_code_schema": [
+        "infra/persistence/media.ts",
+        "packages/activity-schemas/src/media.ts",
+        "assets/specs/p5/reference-media.source.json"
+      ],
+      "implementation_status": "IN_PROGRESS",
+      "milestone_evidence": "docs/p5/evidence/ci-batch-006.json",
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "test_or_gate": "CHK-REF-A1-011",
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
-      "actual_test_files": [],
+      "actual_test_files": [
+        "tests/integration/p5-media.test.ts",
+        "tests/integration/p5-audio.test.ts",
+        "tests/integration/p5-speech.test.ts"
+      ],
       "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "verified_implementation_sha": null,
+      "verification_note": "Synthetic paths use fictional identities/system bytes; full reference content paths remain P6/P7."
     },
     {
       "requirement_id": "TS-MEDIA-001",
@@ -578,18 +795,32 @@
       "implementation_phase": "P5",
       "source_section/page": "Requirement/acceptance table 3; p.15; p15:t3:r2",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
+      "status": "PASS",
       "followup_tasks": "Regression at applicable later milestone gates",
       "planned_code_schema": "assets/specs; packages/content-tools; packages/provider-adapters/storage; apps/worker",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "actual_code_schema": [
+        "infra/persistence/media.ts",
+        "infra/persistence/content.ts",
+        "prisma/migrations/202609260001_p5_media_foundation/migration.sql",
+        "packages/provider-adapters/storage/s3.ts"
+      ],
+      "implementation_status": "VERIFIED",
+      "milestone_evidence": "docs/p5/evidence/ci-batch-006.json",
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "test_or_gate": "CHK-TS-MEDIA-001",
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
-      "actual_test_files": [],
-      "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "actual_test_files": [
+        "tests/integration/p5-media.test.ts",
+        "tests/integration/p5-audio.test.ts",
+        "tools/p5/storage-gate.ts"
+      ],
+      "actual_gate_ids": [
+        "P5-MEDIA-QA-001",
+        "P5-MEDIA-BYTES-001",
+        "P5-MEDIA-VERSION-001"
+      ],
+      "verified_implementation_sha": "76aa3aedc12f31eada6e6320ec526a3fcda36cf9",
+      "verification_note": "Synthetic published fixtures prove manifest and immutable object contracts; real M01 assets still require their own QA."
     },
     {
       "requirement_id": "TS-MEDIA-002",
@@ -609,18 +840,32 @@
       "implementation_phase": "P5",
       "source_section/page": "Requirement/acceptance table 3; p.15; p15:t3:r3",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
+      "status": "PASS",
       "followup_tasks": "Regression at applicable later milestone gates",
       "planned_code_schema": "assets/specs; packages/content-tools; packages/provider-adapters/storage; apps/worker",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "actual_code_schema": [
+        "infra/persistence/media.ts",
+        "infra/persistence/content.ts",
+        "prisma/migrations/202609260001_p5_media_foundation/migration.sql",
+        "packages/provider-adapters/storage/s3.ts"
+      ],
+      "implementation_status": "VERIFIED",
+      "milestone_evidence": "docs/p5/evidence/ci-batch-006.json",
       "ADR_or_exception": "docs/adr/adr-d14.md; no exception",
       "test_or_gate": "CHK-TS-MEDIA-002",
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
-      "actual_test_files": [],
-      "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "actual_test_files": [
+        "tests/integration/p5-media.test.ts",
+        "tests/integration/p5-audio.test.ts",
+        "tools/p5/storage-gate.ts"
+      ],
+      "actual_gate_ids": [
+        "P5-MEDIA-QA-001",
+        "P5-MEDIA-BYTES-001",
+        "P5-MEDIA-VERSION-001"
+      ],
+      "verified_implementation_sha": "76aa3aedc12f31eada6e6320ec526a3fcda36cf9",
+      "verification_note": "Synthetic published fixtures prove manifest and immutable object contracts; real M01 assets still require their own QA."
     },
     {
       "requirement_id": "TS-MEDIA-003",
@@ -640,18 +885,27 @@
       "implementation_phase": "P5",
       "source_section/page": "Requirement/acceptance table 3; p.15; p15:t3:r4",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "followup_tasks": "Regression at applicable later milestone gates",
       "planned_code_schema": "assets/specs; packages/content-tools; packages/provider-adapters/storage; apps/worker",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "actual_code_schema": [
+        "infra/persistence/media.ts",
+        "packages/activity-schemas/src/media.ts",
+        "assets/specs/p5/reference-media.source.json"
+      ],
+      "implementation_status": "IN_PROGRESS",
+      "milestone_evidence": "docs/p5/evidence/ci-batch-006.json",
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "test_or_gate": "CHK-TS-MEDIA-003",
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
-      "actual_test_files": [],
+      "actual_test_files": [
+        "tests/integration/p5-media.test.ts",
+        "tests/integration/p5-audio.test.ts",
+        "tests/integration/p5-speech.test.ts"
+      ],
       "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "verified_implementation_sha": null,
+      "verification_note": "Raw audio transient by design and unit-tested; added expiry/cleanup/race gates pending hosted execution."
     },
     {
       "requirement_id": "TS-MEDIA-004",
@@ -671,18 +925,37 @@
       "implementation_phase": "P5",
       "source_section/page": "Requirement/acceptance table 3; p.15; p15:t3:r5",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
+      "status": "PASS",
       "followup_tasks": "Regression at applicable later milestone gates",
       "planned_code_schema": "assets/specs; packages/content-tools; packages/provider-adapters/storage; apps/worker",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "actual_code_schema": [
+        "infra/persistence/speech.ts",
+        "apps/web/src/lesson/speech.tsx",
+        "packages/activity-schemas/src/speech.ts",
+        "packages/lesson-engine/src/speech.ts"
+      ],
+      "implementation_status": "VERIFIED",
+      "milestone_evidence": "docs/p5/evidence/ci-batch-006.json",
       "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
       "test_or_gate": "CHK-TS-MEDIA-004",
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
-      "actual_test_files": [],
-      "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "actual_test_files": [
+        "tests/integration/p5-speech.test.ts",
+        "tests/browser/p5-speech.spec.ts",
+        "tests/unit/p5-speech.test.ts"
+      ],
+      "actual_gate_ids": [
+        "P5-SPEECH-001",
+        "P5-SPEECH-002",
+        "P5-SPEECH-003",
+        "P5-SPEECH-004",
+        "P5-SPEECH-005",
+        "P5-SPEECH-006",
+        "P5-SPEECH-007",
+        "P5-SPEECH-008"
+      ],
+      "verified_implementation_sha": "76aa3aedc12f31eada6e6320ec526a3fcda36cf9",
+      "verification_note": "Controlled adapter validates contract behavior; no provider/calibration approval inferred."
     },
     {
       "requirement_id": "TS-MEDIA-005",
@@ -702,18 +975,27 @@
       "implementation_phase": "P5",
       "source_section/page": "Requirement/acceptance table 3; p.15; p15:t3:r6",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "followup_tasks": "Regression at applicable later milestone gates",
       "planned_code_schema": "assets/specs; packages/content-tools; packages/provider-adapters/storage; apps/worker",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "actual_code_schema": [
+        "infra/persistence/media.ts",
+        "packages/activity-schemas/src/media.ts",
+        "assets/specs/p5/reference-media.source.json"
+      ],
+      "implementation_status": "IN_PROGRESS",
+      "milestone_evidence": "docs/p5/evidence/ci-batch-006.json",
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "test_or_gate": "CHK-TS-MEDIA-005",
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
-      "actual_test_files": [],
+      "actual_test_files": [
+        "tests/integration/p5-media.test.ts",
+        "tests/integration/p5-audio.test.ts",
+        "tests/integration/p5-speech.test.ts"
+      ],
       "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "verified_implementation_sha": null,
+      "verification_note": "Published fixture operates from stored media with providers unavailable; complete reference library still pending."
     },
     {
       "requirement_id": "N-AI-P06-T03-R09",
@@ -888,18 +1170,32 @@
       "implementation_phase": "P5",
       "source_section/page": "Controlled baseline synchronization; p.23; p23:t2:r16",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
+      "status": "PASS",
       "followup_tasks": "Regression at applicable later milestone gates",
       "planned_code_schema": "apps/api; apps/worker; packages/lesson-engine; packages/provider-adapters/speech",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "actual_code_schema": [
+        "packages/activity-schemas/src/speech.ts",
+        "packages/lesson-engine/src/speech.ts",
+        "apps/web/src/lesson/speech.tsx",
+        "infra/persistence/speech.ts"
+      ],
+      "implementation_status": "VERIFIED",
+      "milestone_evidence": "docs/p5/evidence/ci-batch-006.json",
       "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
       "test_or_gate": "CHK-AI-BL-006",
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
-      "actual_test_files": [],
-      "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "actual_test_files": [
+        "tests/unit/p5-speech.test.ts",
+        "tests/integration/p5-speech.test.ts",
+        "tests/browser/p5-speech.spec.ts"
+      ],
+      "actual_gate_ids": [
+        "P5-SPEECH-002",
+        "P5-SPEECH-004",
+        "P5-SPEECH-008"
+      ],
+      "verified_implementation_sha": "76aa3aedc12f31eada6e6320ec526a3fcda36cf9",
+      "verification_note": "Canonical three outcomes, nonblocking mismatch/unavailable and feedback dwell verified; no false success."
     },
     {
       "requirement_id": "AI-BL-007",
@@ -1942,18 +2238,32 @@
       "implementation_phase": "P5",
       "source_section/page": "Controlled baseline synchronization; p.18; p18:t1:r10",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
+      "status": "PASS",
       "followup_tasks": "Regression at applicable later milestone gates",
       "planned_code_schema": "apps/api; apps/worker; packages/lesson-engine; packages/provider-adapters/speech",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "actual_code_schema": [
+        "packages/activity-schemas/src/speech.ts",
+        "packages/lesson-engine/src/speech.ts",
+        "apps/web/src/lesson/speech.tsx",
+        "infra/persistence/speech.ts"
+      ],
+      "implementation_status": "VERIFIED",
+      "milestone_evidence": "docs/p5/evidence/ci-batch-006.json",
       "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
       "test_or_gate": "CHK-CUR-BL-006",
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
-      "actual_test_files": [],
-      "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "actual_test_files": [
+        "tests/unit/p5-speech.test.ts",
+        "tests/integration/p5-speech.test.ts",
+        "tests/browser/p5-speech.spec.ts"
+      ],
+      "actual_gate_ids": [
+        "P5-SPEECH-002",
+        "P5-SPEECH-004",
+        "P5-SPEECH-008"
+      ],
+      "verified_implementation_sha": "76aa3aedc12f31eada6e6320ec526a3fcda36cf9",
+      "verification_note": "Canonical three outcomes, nonblocking mismatch/unavailable and feedback dwell verified; no false success."
     },
     {
       "requirement_id": "CUR-BL-007",
@@ -2469,18 +2779,32 @@
       "implementation_phase": "P5",
       "source_section/page": "Controlled baseline synchronization; p.23; p23:t1:r14",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
+      "status": "PASS",
       "followup_tasks": "Regression at applicable later milestone gates",
       "planned_code_schema": "apps/api; apps/worker; packages/lesson-engine; packages/provider-adapters/speech",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "actual_code_schema": [
+        "packages/activity-schemas/src/speech.ts",
+        "packages/lesson-engine/src/speech.ts",
+        "apps/web/src/lesson/speech.tsx",
+        "infra/persistence/speech.ts"
+      ],
+      "implementation_status": "VERIFIED",
+      "milestone_evidence": "docs/p5/evidence/ci-batch-006.json",
       "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
       "test_or_gate": "CHK-FS-BL-006",
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
-      "actual_test_files": [],
-      "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "actual_test_files": [
+        "tests/unit/p5-speech.test.ts",
+        "tests/integration/p5-speech.test.ts",
+        "tests/browser/p5-speech.spec.ts"
+      ],
+      "actual_gate_ids": [
+        "P5-SPEECH-002",
+        "P5-SPEECH-004",
+        "P5-SPEECH-008"
+      ],
+      "verified_implementation_sha": "76aa3aedc12f31eada6e6320ec526a3fcda36cf9",
+      "verification_note": "Canonical three outcomes, nonblocking mismatch/unavailable and feedback dwell verified; no false success."
     },
     {
       "requirement_id": "FS-BL-007",
@@ -4205,18 +4529,32 @@
       "implementation_phase": "P5",
       "source_section/page": "Controlled baseline synchronization; p.28; p28:t1:r3",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
+      "status": "PASS",
       "followup_tasks": "Regression at applicable later milestone gates",
       "planned_code_schema": "apps/api; apps/worker; packages/lesson-engine; packages/provider-adapters/speech",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "actual_code_schema": [
+        "packages/activity-schemas/src/speech.ts",
+        "packages/lesson-engine/src/speech.ts",
+        "apps/web/src/lesson/speech.tsx",
+        "infra/persistence/speech.ts"
+      ],
+      "implementation_status": "VERIFIED",
+      "milestone_evidence": "docs/p5/evidence/ci-batch-006.json",
       "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
       "test_or_gate": "CHK-REF-BL-006",
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
-      "actual_test_files": [],
-      "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "actual_test_files": [
+        "tests/unit/p5-speech.test.ts",
+        "tests/integration/p5-speech.test.ts",
+        "tests/browser/p5-speech.spec.ts"
+      ],
+      "actual_gate_ids": [
+        "P5-SPEECH-002",
+        "P5-SPEECH-004",
+        "P5-SPEECH-008"
+      ],
+      "verified_implementation_sha": "76aa3aedc12f31eada6e6320ec526a3fcda36cf9",
+      "verification_note": "Canonical three outcomes, nonblocking mismatch/unavailable and feedback dwell verified; no false success."
     },
     {
       "requirement_id": "REF-BL-007",
@@ -5945,18 +6283,32 @@
       "implementation_phase": "P5",
       "source_section/page": "Controlled baseline synchronization; p.21; p21:t2:r16",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
+      "status": "PASS",
       "followup_tasks": "Regression at applicable later milestone gates",
       "planned_code_schema": "apps/api; apps/worker; packages/lesson-engine; packages/provider-adapters/speech",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "actual_code_schema": [
+        "packages/activity-schemas/src/speech.ts",
+        "packages/lesson-engine/src/speech.ts",
+        "apps/web/src/lesson/speech.tsx",
+        "infra/persistence/speech.ts"
+      ],
+      "implementation_status": "VERIFIED",
+      "milestone_evidence": "docs/p5/evidence/ci-batch-006.json",
       "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
       "test_or_gate": "CHK-TD-BL-006",
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
-      "actual_test_files": [],
-      "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "actual_test_files": [
+        "tests/unit/p5-speech.test.ts",
+        "tests/integration/p5-speech.test.ts",
+        "tests/browser/p5-speech.spec.ts"
+      ],
+      "actual_gate_ids": [
+        "P5-SPEECH-002",
+        "P5-SPEECH-004",
+        "P5-SPEECH-008"
+      ],
+      "verified_implementation_sha": "76aa3aedc12f31eada6e6320ec526a3fcda36cf9",
+      "verification_note": "Canonical three outcomes, nonblocking mismatch/unavailable and feedback dwell verified; no false success."
     },
     {
       "requirement_id": "TD-BL-007",
@@ -6910,18 +7262,32 @@
       "implementation_phase": "P5",
       "source_section/page": "Controlled baseline synchronization; p.25; p25:t1:r16",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
+      "status": "PASS",
       "followup_tasks": "Regression at applicable later milestone gates",
       "planned_code_schema": "apps/api; apps/worker; packages/lesson-engine; packages/provider-adapters/speech",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "actual_code_schema": [
+        "packages/activity-schemas/src/speech.ts",
+        "packages/lesson-engine/src/speech.ts",
+        "apps/web/src/lesson/speech.tsx",
+        "infra/persistence/speech.ts"
+      ],
+      "implementation_status": "VERIFIED",
+      "milestone_evidence": "docs/p5/evidence/ci-batch-006.json",
       "ADR_or_exception": "docs/adr/adr-d06.md; no exception",
       "test_or_gate": "CHK-TS-BL-006",
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
-      "actual_test_files": [],
-      "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "actual_test_files": [
+        "tests/unit/p5-speech.test.ts",
+        "tests/integration/p5-speech.test.ts",
+        "tests/browser/p5-speech.spec.ts"
+      ],
+      "actual_gate_ids": [
+        "P5-SPEECH-002",
+        "P5-SPEECH-004",
+        "P5-SPEECH-008"
+      ],
+      "verified_implementation_sha": "76aa3aedc12f31eada6e6320ec526a3fcda36cf9",
+      "verification_note": "Canonical three outcomes, nonblocking mismatch/unavailable and feedback dwell verified; no false success."
     },
     {
       "requirement_id": "TS-BL-007",
@@ -11068,5 +11434,7 @@
       "actual_gate_ids": [],
       "verified_implementation_sha": null
     }
-  ]
+  ],
+  "timestamp": "2026-09-30T10:39:03.080510+00:00",
+  "evidence_policy": "PASS rows cite executed evidence on an exact remote SHA. PARTIAL rows do not close the requirement or phase. Test-only synthetic media/evaluators are never reference-content QA."
 }

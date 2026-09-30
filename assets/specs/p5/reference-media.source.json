@@ -1,0 +1,3325 @@
+{
+  "schema_version": "p5-reference-media-source-1",
+  "version_code": "draft-1",
+  "publication_ready": false,
+  "source_document": "Lingvessa_Reference_Module_Design.pdf",
+  "source_version": "1.6",
+  "source_sections": [
+    "§5.1 pp8–9",
+    "§§6–11 pp9–14",
+    "§12.1 pp15–16",
+    "§§13–18 pp16–21",
+    "§20 p23"
+  ],
+  "scope": "P5 media preproduction only; no P6/P7 activity runtime or publication",
+  "style": "Original static vector illustration; warm teal/coral palette; fictional adults; no visible wording or copied brand/character",
+  "scenes": [
+    {
+      "id": "7cb5edb4-0727-5430-a18f-97cfb5d749f0",
+      "stable_code": "IMG_ENG_M01_CLUB_01",
+      "language": "en",
+      "kind": "image",
+      "theme": "club",
+      "alt_text": "Двоє дорослих вітаються біля входу до розмовного клубу."
+    },
+    {
+      "id": "d4d69958-e2ee-5352-80aa-f2b8093a1205",
+      "stable_code": "IMG_ENG_M01_MORNING_01",
+      "language": "en",
+      "kind": "image",
+      "theme": "morning",
+      "alt_text": "Двоє дорослих зустрічаються надворі вранці; низьке сонце й довгі тіні."
+    },
+    {
+      "id": "af38a95a-65a3-5091-b67c-5ce0b6798e71",
+      "stable_code": "IMG_ENG_M01_EVENING_01",
+      "language": "en",
+      "kind": "image",
+      "theme": "evening",
+      "alt_text": "Двоє дорослих зустрічаються біля освітленого входу ввечері; темне небо й місяць."
+    },
+    {
+      "id": "1ccd5416-98b9-56aa-b1fd-a37c83f7f6dc",
+      "stable_code": "IMG_CZE_M01_CLASS_01",
+      "language": "cs",
+      "kind": "image",
+      "theme": "class",
+      "alt_text": "Викладачка зустрічає дорослу ученицю біля відкритих дверей до класу."
+    },
+    {
+      "id": "09a8f412-880a-5f90-8c85-0f2d807417c5",
+      "stable_code": "IMG_CZE_M01_FORMAL_01",
+      "language": "cs",
+      "kind": "image",
+      "theme": "formal",
+      "alt_text": "Доросла відвідувачка звертається до працівниці за стійкою рецепції."
+    },
+    {
+      "id": "e5d6736d-bc5e-5d17-8720-4ac74364dbd1",
+      "stable_code": "IMG_CZE_M01_INFORMAL_01",
+      "language": "cs",
+      "kind": "image",
+      "theme": "informal",
+      "alt_text": "Двоє дорослих друзів невимушено вітаються біля столика."
+    }
+  ],
+  "characters": [
+    {
+      "id": "84621e38-8b2a-5b9a-931a-a8a428108603",
+      "stable_code": "AV_ENG_MAYA_01",
+      "language": "en",
+      "kind": "avatar",
+      "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+      "name": "Maya",
+      "adult": true,
+      "role": "peer",
+      "skin": "warm brown",
+      "hair": "curly",
+      "voice_code": "AUD_ENG_VOICE_F01",
+      "alt_text": "Maya — вигаданий дорослий персонаж курсу."
+    },
+    {
+      "id": "623db132-8f9b-5cfd-af48-63b723c57bee",
+      "stable_code": "AV_ENG_DANIEL_01",
+      "language": "en",
+      "kind": "avatar",
+      "character_id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+      "name": "Daniel",
+      "adult": true,
+      "role": "peer",
+      "skin": "medium brown",
+      "hair": "short",
+      "voice_code": "AUD_ENG_VOICE_M01",
+      "alt_text": "Daniel — вигаданий дорослий персонаж курсу."
+    },
+    {
+      "id": "87b4ae9f-e331-57e1-856b-175ca3d3879b",
+      "stable_code": "AV_ENG_TEACHER_01",
+      "language": "en",
+      "kind": "avatar",
+      "character_id": "c66aa126-37ef-5587-a2ed-49363ded1f55",
+      "name": "Alex",
+      "adult": true,
+      "role": "teacher",
+      "skin": "light brown",
+      "hair": "short",
+      "voice_code": "AUD_ENG_VOICE_F02",
+      "alt_text": "Alex — вигаданий дорослий персонаж курсу."
+    },
+    {
+      "id": "de5670b7-f66e-5835-b5bb-81af24f8c726",
+      "stable_code": "AV_CZE_KLARA_01",
+      "language": "cs",
+      "kind": "avatar",
+      "character_id": "074d3cc2-e358-5ef4-b8a8-fb63106343cd",
+      "name": "Klára",
+      "adult": true,
+      "role": "teacher",
+      "skin": "light brown",
+      "hair": "bob",
+      "voice_code": "AUD_CZE_VOICE_F01",
+      "alt_text": "Klára — вигаданий дорослий персонаж курсу."
+    },
+    {
+      "id": "4a526d90-8a3e-5e5d-94b7-e5574d4f677c",
+      "stable_code": "AV_CZE_ADAM_01",
+      "language": "cs",
+      "kind": "avatar",
+      "character_id": "595521da-0ee4-51ca-b445-04d5705e6a48",
+      "name": "Adam",
+      "adult": true,
+      "role": "peer",
+      "skin": "medium brown",
+      "hair": "short",
+      "voice_code": "AUD_CZE_VOICE_M01",
+      "alt_text": "Adam — вигаданий дорослий персонаж курсу."
+    },
+    {
+      "id": "fe841c18-2aaf-5b1d-b561-e3d560c0610f",
+      "stable_code": "AV_CZE_OKSANA_01",
+      "language": "cs",
+      "kind": "avatar",
+      "character_id": "a029d7cb-8f04-5509-8851-20f8bc474292",
+      "name": "Oksana",
+      "adult": true,
+      "role": "peer",
+      "skin": "warm brown",
+      "hair": "long",
+      "voice_code": "AUD_CZE_VOICE_F02",
+      "alt_text": "Oksana — вигаданий дорослий персонаж курсу."
+    }
+  ],
+  "icons": [
+    {
+      "id": "1b320540-dbca-5b9f-bc75-014a16d43d7f",
+      "stable_code": "VEC_EN_THANKS",
+      "language": "en",
+      "kind": "vector",
+      "theme": "thanks",
+      "alt_text": "Подяка: відкрита долоня поруч із серцем."
+    },
+    {
+      "id": "60830e20-3a49-5030-bf1b-9b905d82dd5c",
+      "stable_code": "VEC_EN_UNCLEAR",
+      "language": "en",
+      "kind": "vector",
+      "theme": "unclear",
+      "alt_text": "Не зрозуміло: дві перервані мовні бульбашки."
+    },
+    {
+      "id": "f9f0df04-3746-5409-97aa-bd53e039e91a",
+      "stable_code": "VEC_EN_REPEAT",
+      "language": "en",
+      "kind": "vector",
+      "theme": "repeat",
+      "alt_text": "Повторення: дві стрілки по колу."
+    },
+    {
+      "id": "0db50a86-69e7-523c-8631-96acba2d1d86",
+      "stable_code": "VEC_CS_THANKS",
+      "language": "cs",
+      "kind": "vector",
+      "theme": "thanks",
+      "alt_text": "Подяка: відкрита долоня поруч із серцем."
+    },
+    {
+      "id": "7872d213-5493-5b0d-bb92-319b72b988a7",
+      "stable_code": "VEC_CS_UNCLEAR",
+      "language": "cs",
+      "kind": "vector",
+      "theme": "unclear",
+      "alt_text": "Не зрозуміло: дві перервані мовні бульбашки."
+    },
+    {
+      "id": "03eaa727-cfa1-540d-9381-d5fda2d0bc47",
+      "stable_code": "VEC_CS_REPEAT",
+      "language": "cs",
+      "kind": "vector",
+      "theme": "repeat",
+      "alt_text": "Повторення: дві стрілки по колу."
+    }
+  ],
+  "flags": [
+    {
+      "id": "785aec4a-b2b2-59cf-b7de-3078c77f1f19",
+      "stable_code": "VEC_FLAG_GB",
+      "language": "en",
+      "kind": "vector",
+      "country": "GB",
+      "status": "pending_verified_geometry"
+    },
+    {
+      "id": "2f888ad5-38ae-5d71-be34-b77ba3e476c7",
+      "stable_code": "VEC_FLAG_UA",
+      "language": "en",
+      "kind": "vector",
+      "country": "UA",
+      "status": "pending_verified_geometry"
+    },
+    {
+      "id": "ae940034-c704-591f-897b-2669aafbe16c",
+      "stable_code": "VEC_FLAG_CZ",
+      "language": "en",
+      "kind": "vector",
+      "country": "CZ",
+      "status": "pending_verified_geometry"
+    },
+    {
+      "id": "323c6dca-a589-5cc2-aebe-2d363651c81f",
+      "stable_code": "VEC_FLAG_PL",
+      "language": "en",
+      "kind": "vector",
+      "country": "PL",
+      "status": "pending_verified_geometry"
+    },
+    {
+      "id": "f41141a3-82af-5631-bbd0-e1a2ead89144",
+      "stable_code": "VEC_FLAG_DE",
+      "language": "en",
+      "kind": "vector",
+      "country": "DE",
+      "status": "pending_verified_geometry"
+    },
+    {
+      "id": "d53fcc32-7ef0-5023-8027-119470c1954c",
+      "stable_code": "VEC_FLAG_ES",
+      "language": "en",
+      "kind": "vector",
+      "country": "ES",
+      "status": "pending_verified_geometry"
+    },
+    {
+      "id": "75663a3a-dc48-58f3-bdb5-6814e79b136b",
+      "stable_code": "VEC_FLAG_CZ",
+      "language": "cs",
+      "kind": "vector",
+      "country": "CZ",
+      "status": "pending_verified_geometry"
+    },
+    {
+      "id": "07a52e56-4e1e-5f2b-99c6-7bfc22ece164",
+      "stable_code": "VEC_FLAG_UA",
+      "language": "cs",
+      "kind": "vector",
+      "country": "UA",
+      "status": "pending_verified_geometry"
+    },
+    {
+      "id": "431b17ff-fad9-5d8a-b116-fe46d0d0f9ea",
+      "stable_code": "VEC_FLAG_PL",
+      "language": "cs",
+      "kind": "vector",
+      "country": "PL",
+      "status": "pending_verified_geometry"
+    },
+    {
+      "id": "364b3ad4-0b6b-5c2c-ac27-94f104183abb",
+      "stable_code": "VEC_FLAG_DE",
+      "language": "cs",
+      "kind": "vector",
+      "country": "DE",
+      "status": "pending_verified_geometry"
+    },
+    {
+      "id": "7f959b5a-869a-551f-8903-1ddb7692b75f",
+      "stable_code": "VEC_FLAG_SK",
+      "language": "cs",
+      "kind": "vector",
+      "country": "SK",
+      "status": "pending_verified_geometry"
+    },
+    {
+      "id": "4a5b09ff-5ebf-525f-a478-9b4c0326e208",
+      "stable_code": "VEC_FLAG_ES",
+      "language": "cs",
+      "kind": "vector",
+      "country": "ES",
+      "status": "pending_verified_geometry"
+    }
+  ],
+  "voices": [
+    {
+      "id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+      "stable_code": "AUD_ENG_VOICE_F01",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "role": "first recurring speaker",
+      "adult": true,
+      "real_person_clone": false,
+      "provider_adapter": null,
+      "model_version": null,
+      "licence_evidence": null,
+      "status": "pending_OD-005"
+    },
+    {
+      "id": "876c0431-a28a-531c-87c9-c7792f7c353d",
+      "stable_code": "AUD_ENG_VOICE_M01",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "role": "second recurring speaker",
+      "adult": true,
+      "real_person_clone": false,
+      "provider_adapter": null,
+      "model_version": null,
+      "licence_evidence": null,
+      "status": "pending_OD-005"
+    },
+    {
+      "id": "54f40978-e547-5905-9a7f-a65a0019285b",
+      "stable_code": "AUD_ENG_VOICE_F02",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "role": "third recurring speaker",
+      "adult": true,
+      "real_person_clone": false,
+      "provider_adapter": null,
+      "model_version": null,
+      "licence_evidence": null,
+      "status": "pending_OD-005"
+    },
+    {
+      "id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "stable_code": "AUD_CZE_VOICE_F01",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "role": "first recurring speaker",
+      "adult": true,
+      "real_person_clone": false,
+      "provider_adapter": null,
+      "model_version": null,
+      "licence_evidence": null,
+      "status": "pending_OD-005"
+    },
+    {
+      "id": "2c796559-b5ed-5eac-899b-840254e953bf",
+      "stable_code": "AUD_CZE_VOICE_M01",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "role": "second recurring speaker",
+      "adult": true,
+      "real_person_clone": false,
+      "provider_adapter": null,
+      "model_version": null,
+      "licence_evidence": null,
+      "status": "pending_OD-005"
+    },
+    {
+      "id": "64b3a5a4-0319-5946-9d1f-556abe7b1eae",
+      "stable_code": "AUD_CZE_VOICE_F02",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "role": "third recurring speaker",
+      "adult": true,
+      "real_person_clone": false,
+      "provider_adapter": null,
+      "model_version": null,
+      "licence_evidence": null,
+      "status": "pending_OD-005"
+    }
+  ],
+  "scripts": [
+    {
+      "id": "06bb8524-40aa-55d3-b22c-ec05031b771d",
+      "stable_code": "AUD_ENG_M01_WORDS_HELLO",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Hello."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "0e561905-6d9d-5726-99f2-8a074f5b92a0",
+      "stable_code": "AUD_ENG_M01_WORDS_HI",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Hi."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "58d57c4e-145c-5b12-92ed-b6d7d2545a1f",
+      "stable_code": "AUD_ENG_M01_WORDS_GOOD_MORNING",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Good morning."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "8708bef0-d114-5e05-a2eb-4e02fb82b2df",
+      "stable_code": "AUD_ENG_M01_WORDS_GOOD_EVENING",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Good evening."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "76979a6b-41d7-5f71-a7cc-c72b973d342f",
+      "stable_code": "AUD_ENG_M01_WORDS_GOODBYE",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Goodbye."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "1e9bd7a0-097c-5ab9-9cb9-787af4ca7b2d",
+      "stable_code": "AUD_ENG_M01_WORDS_BYE",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Bye."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "da540fed-c04b-57df-9353-c98a7bf8d1f9",
+      "stable_code": "AUD_ENG_M01_WORDS_THANK_YOU",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Thank you."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "efa963a4-7aa7-52c6-a67e-36a1b899e197",
+      "stable_code": "AUD_ENG_M01_WORDS_PLEASE",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Please."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "6cb13f43-24b0-5cb8-b385-2ef401fe5960",
+      "stable_code": "AUD_ENG_M01_WORDS_SORRY",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Sorry."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "51cbf11d-5e3a-55ba-bd5d-bd87eef46ca6",
+      "stable_code": "AUD_ENG_M01_WORDS_REPEAT",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Can you repeat, please?"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "41580372-b284-51a0-89cf-3c7173d47b0c",
+      "stable_code": "AUD_ENG_M01_WORDS_DONT_UNDERSTAND",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "I don't understand."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "7fc55205-9ef0-5724-960c-73558a4c7ca1",
+      "stable_code": "AUD_ENG_M01_WORDS_NAME_Q",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "What's your name?"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "c4d3a9f9-9ab2-5680-99c2-b06f6c7914fe",
+      "stable_code": "AUD_ENG_M01_WORDS_NAME_MAYA",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "My name's Maya."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "c1aaf33d-fa01-535f-81fe-2fa5ee4b87a8",
+      "stable_code": "AUD_ENG_M01_WORDS_IM_DANIEL",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "I'm Daniel."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "74e364af-d3b0-518c-b97e-c32b1de833b2",
+      "stable_code": "AUD_ENG_M01_WORDS_NICE_MEET",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Nice to meet you."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "6846262b-0382-503e-b495-ce3d668e0d80",
+      "stable_code": "AUD_ENG_M01_WORDS_NICE_MEET_TOO",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Nice to meet you too."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "89e8a0e3-3ecf-5c9d-b35c-da1e1f204a22",
+      "stable_code": "AUD_ENG_M01_WORDS_FROM_Q",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Where are you from?"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "450474dc-3cc7-5938-bd8a-34ba109d8127",
+      "stable_code": "AUD_ENG_M01_WORDS_FROM_UA",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "I'm from Ukraine."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "90ce6d88-25c5-5fe8-987e-bedeb45d355c",
+      "stable_code": "AUD_ENG_M01_WORDS_SPELL_Q",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "How do you spell it?"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "fc7d837b-d1b6-5424-ba76-567a86efa186",
+      "stable_code": "AUD_ENG_M01_WORDS_BE_I",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "I am."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "94d732c2-2271-5fd9-84f1-e3094facf825",
+      "stable_code": "AUD_ENG_M01_WORDS_BE_YOU",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "You are."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "44a6be79-e2c8-552f-9fe3-7cb08ccd6432",
+      "stable_code": "AUD_ENG_M01_WORDS_BE_HE",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "He is."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "8767c48c-5261-5f0e-8a1b-72e0707c5fad",
+      "stable_code": "AUD_ENG_M01_WORDS_BE_SHE",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "She is."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "eda1154b-524a-55b0-96a6-38fa35223c63",
+      "stable_code": "AUD_ENG_M01_WORDS_BE_IM",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "I'm."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "19951a82-9c33-5ce5-8e06-41bbb8c5fb62",
+      "stable_code": "AUD_ENG_M01_WORDS_BE_YOURE",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "You're."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "a1b73467-f453-5a0f-9621-fa1cad807db2",
+      "stable_code": "AUD_ENG_M01_WORDS_BE_HES",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "He's."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "4e966976-d4c9-5df2-b6f0-48b356c2bd30",
+      "stable_code": "AUD_ENG_M01_WORDS_BE_SHES",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "She's."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "aa37e0ad-f8aa-555b-a4e7-5680bbb023a0",
+      "stable_code": "AUD_ENG_M01_WORDS_ARE_YOU",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Are you a student?"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "33c58823-0cca-57f7-a03b-5a6a673698a0",
+      "stable_code": "AUD_ENG_M01_WORDS_IS_HE",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Is he a teacher?"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "e204c4be-4b70-5f95-8712-9079f3d73d37",
+      "stable_code": "AUD_ENG_M01_WORDS_IS_SHE",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Is she an engineer?"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "a677ece4-d591-57df-8025-9e1925889e91",
+      "stable_code": "AUD_ENG_M01_WORDS_YES_I_AM",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Yes, I am."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "1e5a5a82-ee24-577c-80dc-772f0b387b25",
+      "stable_code": "AUD_ENG_M01_WORDS_NO_IM_NOT",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "No, I'm not."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "c973e003-7c71-53de-901a-571b87b857d5",
+      "stable_code": "AUD_ENG_M01_WORDS_A_STUDENT",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "a student"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "d54f211b-e5b3-5c02-a64f-b9cbd338ad9c",
+      "stable_code": "AUD_ENG_M01_WORDS_A_TEACHER",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "a teacher"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "9e37070c-29a5-5286-94fe-e2385588a9ea",
+      "stable_code": "AUD_ENG_M01_WORDS_AN_ENGINEER",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "an engineer"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "2d43d1d7-9a72-5050-96f6-2b138ccfbadf",
+      "stable_code": "AUD_ENG_M01_WORDS_PRONOUN_I",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "I"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "77b7be07-4719-5934-885f-d8683869f33f",
+      "stable_code": "AUD_ENG_M01_WORDS_PRONOUN_YOU",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "you"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "06ed1d7a-6fa8-5230-b821-9bb0c2645012",
+      "stable_code": "AUD_ENG_M01_WORDS_PRONOUN_HE",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "he"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "8647314f-ff47-5c98-bae9-379aec8c7ec8",
+      "stable_code": "AUD_ENG_M01_WORDS_PRONOUN_SHE",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "she"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "78f7e56d-cd94-5db5-a4c2-7c1079a1a20d",
+      "stable_code": "AUD_ENG_M01_WORDS_COUNTRY_GB",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "the UK"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "0f69c5d8-ec9c-5e5e-b520-bcd006ab22d1",
+      "stable_code": "AUD_ENG_M01_WORDS_COUNTRY_UA",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Ukraine"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "3c4806fd-ea36-5067-8d11-16eb664874c0",
+      "stable_code": "AUD_ENG_M01_WORDS_COUNTRY_CZ",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Czechia"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "ce3eb905-4447-5809-9758-6813efb6a101",
+      "stable_code": "AUD_ENG_M01_WORDS_COUNTRY_PL",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Poland"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "fcceca80-2e9c-5a07-952a-777b695b4222",
+      "stable_code": "AUD_ENG_M01_WORDS_COUNTRY_DE",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Germany"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "90c31b17-ce22-59bf-87e7-d5c4baf53a94",
+      "stable_code": "AUD_ENG_M01_WORDS_COUNTRY_ES",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Spain"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "555d8d7c-0d9d-5675-a2a3-6560ac373dfd",
+      "stable_code": "AUD_ENG_M01_WORDS_LANG_EN",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "English"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "36acc703-0bea-5c19-b6e3-095c8bf0dd55",
+      "stable_code": "AUD_ENG_M01_WORDS_LANG_UK",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Ukrainian"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "0e2cb97f-c38a-5e7f-ac85-4e79e190739c",
+      "stable_code": "AUD_ENG_M01_WORDS_LANG_CS",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Czech"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "75a3b257-a388-5d8c-98e6-0db9b4c1f223",
+      "stable_code": "AUD_ENG_M01_WORDS_LANG_PL",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Polish"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "2f3a41f1-7138-5502-b0f5-748ac20ab55c",
+      "stable_code": "AUD_ENG_M01_WORDS_LANG_DE",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "German"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "60930030-02b1-5e26-9bed-148f0051c929",
+      "stable_code": "AUD_ENG_M01_WORDS_LANG_ES",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Spanish"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "395115b4-a6e8-5d8b-b749-1c0db810d828",
+      "stable_code": "AUD_ENG_M01_WORDS_CITY_LON",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "London"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "213b5c4e-323a-5bd7-9eec-5db45fccec76",
+      "stable_code": "AUD_ENG_M01_WORDS_CITY_PRA",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Prague"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "2be7b915-184d-5576-9668-20bc423d1c63",
+      "stable_code": "AUD_ENG_M01_WORDS_CITY_KYI",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Kyiv"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "1cf08f62-b813-5263-9e1e-e929acae6df7",
+      "stable_code": "AUD_ENG_M01_WORDS_CITY_WAR",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Warsaw"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "4bd8471a-5551-59f3-80f0-a91ebf363004",
+      "stable_code": "AUD_ENG_M01_WORDS_SPEAK_EN",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "I speak English."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "97ed4f86-d3a8-580e-a5e9-9e25c665db70",
+      "stable_code": "AUD_ENG_M01_WORDS_SELF_INTRO",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Hello. I'm Maya. I'm from Ukraine. Nice to meet you."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "1258f2cb-205d-5ebe-a080-e53d74bafd23",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_A",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "A"
+        }
+      ],
+      "performance_note": "Letter name, not the indefinite article; QA exact en-GB alphabet pronunciation."
+    },
+    {
+      "id": "b77ae32d-482e-59a1-91c1-b4567c7a4b9e",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_B",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "B"
+        }
+      ],
+      "performance_note": "Letter name, not the indefinite article; QA exact en-GB alphabet pronunciation."
+    },
+    {
+      "id": "3ecb31db-14e3-5716-ba98-f0554f843a3e",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_C",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "C"
+        }
+      ],
+      "performance_note": "Letter name, not the indefinite article; QA exact en-GB alphabet pronunciation."
+    },
+    {
+      "id": "cfd9454a-2df3-53fd-895a-708427731c2c",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_D",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "D"
+        }
+      ],
+      "performance_note": "Letter name, not the indefinite article; QA exact en-GB alphabet pronunciation."
+    },
+    {
+      "id": "e2d16749-22ff-5e72-bbbb-f34e2bd8a0f6",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_E",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "E"
+        }
+      ],
+      "performance_note": "Letter name, not the indefinite article; QA exact en-GB alphabet pronunciation."
+    },
+    {
+      "id": "d18a96f6-8241-5340-a6fe-533633e3c3ce",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_F",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "F"
+        }
+      ],
+      "performance_note": "Letter name, not the indefinite article; QA exact en-GB alphabet pronunciation."
+    },
+    {
+      "id": "0a62bc04-e83a-5c54-af18-c1d653f146ec",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_G",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "G"
+        }
+      ],
+      "performance_note": "Letter name, not the indefinite article; QA exact en-GB alphabet pronunciation."
+    },
+    {
+      "id": "f372a64c-5127-55e5-b5a6-070294389744",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_H",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "H"
+        }
+      ],
+      "performance_note": "Letter name, not the indefinite article; QA exact en-GB alphabet pronunciation."
+    },
+    {
+      "id": "ef842f25-a68b-57db-b9d5-026480beaee5",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_I",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "I"
+        }
+      ],
+      "performance_note": "Letter name, not the indefinite article; QA exact en-GB alphabet pronunciation."
+    },
+    {
+      "id": "60138e61-a631-5cbb-9fca-ddead62927f2",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_J",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "J"
+        }
+      ],
+      "performance_note": "Letter name, not the indefinite article; QA exact en-GB alphabet pronunciation."
+    },
+    {
+      "id": "5905c2a8-3214-5987-a09a-ca4eb0509605",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_K",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "K"
+        }
+      ],
+      "performance_note": "Letter name, not the indefinite article; QA exact en-GB alphabet pronunciation."
+    },
+    {
+      "id": "90aa5737-90dc-507b-9285-a76eaa625ab7",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_L",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "L"
+        }
+      ],
+      "performance_note": "Letter name, not the indefinite article; QA exact en-GB alphabet pronunciation."
+    },
+    {
+      "id": "c6ef12e5-1fb3-52e8-a248-4ed16a8fbf5d",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_M",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "M"
+        }
+      ],
+      "performance_note": "Letter name, not the indefinite article; QA exact en-GB alphabet pronunciation."
+    },
+    {
+      "id": "5f52cfc9-fb9e-5902-bce3-85ab26e4e59b",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_N",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "N"
+        }
+      ],
+      "performance_note": "Letter name, not the indefinite article; QA exact en-GB alphabet pronunciation."
+    },
+    {
+      "id": "e258d512-de17-5a22-b5d2-2a7dbbeeb54a",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_O",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "O"
+        }
+      ],
+      "performance_note": "Letter name, not the indefinite article; QA exact en-GB alphabet pronunciation."
+    },
+    {
+      "id": "973bde22-7651-53a9-b549-ae37d650a9de",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_P",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "P"
+        }
+      ],
+      "performance_note": "Letter name, not the indefinite article; QA exact en-GB alphabet pronunciation."
+    },
+    {
+      "id": "665c54e0-7c3c-5b07-8fa5-dfa0f7c218e0",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_Q",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Q"
+        }
+      ],
+      "performance_note": "Letter name, not the indefinite article; QA exact en-GB alphabet pronunciation."
+    },
+    {
+      "id": "3c041517-2138-51bd-a598-8944e730d794",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_R",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "R"
+        }
+      ],
+      "performance_note": "Letter name, not the indefinite article; QA exact en-GB alphabet pronunciation."
+    },
+    {
+      "id": "5e37a229-3c99-5db4-82d9-90e08d731b33",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_S",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "S"
+        }
+      ],
+      "performance_note": "Letter name, not the indefinite article; QA exact en-GB alphabet pronunciation."
+    },
+    {
+      "id": "7d2a7286-d186-53c4-92c7-3e3562179693",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_T",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "T"
+        }
+      ],
+      "performance_note": "Letter name, not the indefinite article; QA exact en-GB alphabet pronunciation."
+    },
+    {
+      "id": "2564bc04-714f-5fa2-a1d3-0189b712e8b4",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_U",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "U"
+        }
+      ],
+      "performance_note": "Letter name, not the indefinite article; QA exact en-GB alphabet pronunciation."
+    },
+    {
+      "id": "ac9cf827-3b90-5696-a313-add8483f40eb",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_V",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "V"
+        }
+      ],
+      "performance_note": "Letter name, not the indefinite article; QA exact en-GB alphabet pronunciation."
+    },
+    {
+      "id": "68a781d1-5ada-5468-8654-c9fb1ae2f8bb",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_W",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "W"
+        }
+      ],
+      "performance_note": "Letter name, not the indefinite article; QA exact en-GB alphabet pronunciation."
+    },
+    {
+      "id": "6c8c44bd-2b20-5ad5-9d00-7316ca35ab31",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_X",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "X"
+        }
+      ],
+      "performance_note": "Letter name, not the indefinite article; QA exact en-GB alphabet pronunciation."
+    },
+    {
+      "id": "de99431f-1e61-5677-8439-08eada59888c",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_Y",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Y"
+        }
+      ],
+      "performance_note": "Letter name, not the indefinite article; QA exact en-GB alphabet pronunciation."
+    },
+    {
+      "id": "ffbaebbc-884b-5866-a12f-8c4d8b8f5e65",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_Z",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Z"
+        }
+      ],
+      "performance_note": "Letter name, not the indefinite article; QA exact en-GB alphabet pronunciation."
+    },
+    {
+      "id": "6eea6f7d-ab89-581c-bd42-51df1719a4dd",
+      "stable_code": "AUD_CZE_M01_WORDS_DOBRY_DEN",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Dobrý den."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "4955fe86-25d5-5476-9c22-c33516466690",
+      "stable_code": "AUD_CZE_M01_WORDS_AHOJ",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Ahoj."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "3ea932ff-db1f-5d0c-a198-604377274f2d",
+      "stable_code": "AUD_CZE_M01_WORDS_NA_SHLEDANOU",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Na shledanou."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "a07e01b1-30e9-55e0-b466-3b73db8dfa09",
+      "stable_code": "AUD_CZE_M01_WORDS_DEKUJI",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Děkuji."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "f29447af-f3b9-5615-af26-c31a048a97cd",
+      "stable_code": "AUD_CZE_M01_WORDS_PROSIM",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Prosím."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "df21b3a9-7d25-5175-be2e-1e83734449ee",
+      "stable_code": "AUD_CZE_M01_WORDS_PROMINTE",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Promiňte."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "6b749fd4-e102-5301-b90e-fae53c16f24f",
+      "stable_code": "AUD_CZE_M01_WORDS_NEROZUMIM",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Nerozumím."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "4fd393ba-3691-53bc-b54a-843158804768",
+      "stable_code": "AUD_CZE_M01_WORDS_REPEAT",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Můžete to zopakovat, prosím?"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "ad627850-265e-5145-a071-6c0c5a36b45c",
+      "stable_code": "AUD_CZE_M01_WORDS_NAME_Q_FORM",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Jak se jmenujete?"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "eb99127c-8ddb-5f07-8a15-68c89e9f827f",
+      "stable_code": "AUD_CZE_M01_WORDS_NAME_Q_INF",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Jak se jmenuješ?"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "cc6f897f-31d7-5102-a23e-4c832d1725e8",
+      "stable_code": "AUD_CZE_M01_WORDS_NAME_OKSANA",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Jmenuji se Oksana."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "66e41c71-8c9b-58c7-b138-daa64eec6c62",
+      "stable_code": "AUD_CZE_M01_WORDS_NAME_ADAM",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Jmenuji se Adam."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "bdfea114-02b5-54e0-bf29-60f327d2da37",
+      "stable_code": "AUD_CZE_M01_WORDS_TESI_ME",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Těší mě."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "91248898-2660-5ae0-b29b-739f3c12fa82",
+      "stable_code": "AUD_CZE_M01_WORDS_ME_TAKE",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Mě také."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "57555a9e-460a-5357-a324-ed9c39f32dbd",
+      "stable_code": "AUD_CZE_M01_WORDS_TAKY_ME_TESI",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Taky mě těší."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "77eab895-3841-5b73-ba25-8c6389f05918",
+      "stable_code": "AUD_CZE_M01_WORDS_FROM_Q_FORM",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Odkud jste?"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "2830e078-42c4-53d6-b40b-e91751fe7a41",
+      "stable_code": "AUD_CZE_M01_WORDS_FROM_Q_INF",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Odkud jsi?"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "76732427-1490-582d-808d-fac6c2c4fedd",
+      "stable_code": "AUD_CZE_M01_WORDS_JSEM",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "jsem"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "9d12aa48-7774-5513-9871-d4826b3d1605",
+      "stable_code": "AUD_CZE_M01_WORDS_JSI",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "jsi"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "07508b8b-7d8a-5ced-8795-8e69ef6c03b7",
+      "stable_code": "AUD_CZE_M01_WORDS_JSTE",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "jste"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "8669418f-b1e1-5135-b758-7ea98caaf06a",
+      "stable_code": "AUD_CZE_M01_WORDS_JE",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "je"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "86b8a7f5-50cd-5afc-ae39-8cc27d319c99",
+      "stable_code": "AUD_CZE_M01_WORDS_STUDENT",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "student"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "732e357a-9658-5ee3-b0f8-718c0b1d3a3d",
+      "stable_code": "AUD_CZE_M01_WORDS_STUDENTKA",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "studentka"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "2cbea4a7-c451-56a1-a167-eb85d4a16ab3",
+      "stable_code": "AUD_CZE_M01_WORDS_UCITEL",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "učitel"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "7ac42817-0276-5cd8-89eb-205821cf66ae",
+      "stable_code": "AUD_CZE_M01_WORDS_UCITELKA",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "učitelka"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "a415d92c-9bca-5120-9bf6-a5422d65f2d8",
+      "stable_code": "AUD_CZE_M01_WORDS_VY_OKSANA",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Vy jste Oksana?"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "2560e4e9-0a32-5d98-935b-b65dca8650c3",
+      "stable_code": "AUD_CZE_M01_WORDS_TY_ADAM",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Ty jsi Adam."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "2879b78c-94ef-5c64-ba3d-d1de07850e78",
+      "stable_code": "AUD_CZE_M01_WORDS_ON_STUDENT",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "On je student."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "17b65361-5862-5304-b594-8645c46deda3",
+      "stable_code": "AUD_CZE_M01_WORDS_ONA_UCITELKA",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Ona je učitelka."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "49d4fafe-5ade-5d47-ba2f-e222ff5eb04f",
+      "stable_code": "AUD_CZE_M01_WORDS_COUNTRY_CZ",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Česko"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "010cc1c0-09a1-57ce-baf6-e73efca921ea",
+      "stable_code": "AUD_CZE_M01_WORDS_COUNTRY_UA",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Ukrajina"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "11ec04f5-6f1a-5ccf-b007-24535d4ff72c",
+      "stable_code": "AUD_CZE_M01_WORDS_COUNTRY_PL",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Polsko"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "617418c1-bf96-53d4-92ef-95cac08a500d",
+      "stable_code": "AUD_CZE_M01_WORDS_COUNTRY_DE",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Německo"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "4f2ec318-d9f1-50cb-b60f-bab2cfc2b3cf",
+      "stable_code": "AUD_CZE_M01_WORDS_COUNTRY_SK",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Slovensko"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "e2454ec9-404f-5ff9-afda-2bd717b7230a",
+      "stable_code": "AUD_CZE_M01_WORDS_COUNTRY_ES",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Španělsko"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "d903d061-3dc0-5aef-aeb5-6b9f5cf958ac",
+      "stable_code": "AUD_CZE_M01_WORDS_ORIGIN_CZ",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Jsem z Česka."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "cb9b205b-d4a8-5b35-a24a-021b5db052d6",
+      "stable_code": "AUD_CZE_M01_WORDS_ORIGIN_UA",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Jsem z Ukrajiny."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "e6888024-bb41-5dcf-b218-8dfba040fcdb",
+      "stable_code": "AUD_CZE_M01_WORDS_ORIGIN_PL",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Jsem z Polska."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "264e57d3-45b8-5369-9dd4-e094b80d1840",
+      "stable_code": "AUD_CZE_M01_WORDS_ORIGIN_DE",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Jsem z Německa."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "ceb1cfb1-7567-56be-9c69-443c2ee3c9f2",
+      "stable_code": "AUD_CZE_M01_WORDS_ORIGIN_SK",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Jsem ze Slovenska."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "c6284ec7-f8d3-5e8a-b3ff-8dde8815e37b",
+      "stable_code": "AUD_CZE_M01_WORDS_ORIGIN_ES",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Jsem ze Španělska."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "6bb4d0d8-54e7-5b70-a57d-9a31360379d9",
+      "stable_code": "AUD_CZE_M01_WORDS_LANG_CS",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "česky"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "1ee23a12-8eb9-5851-bd7a-d0492e3ce8f9",
+      "stable_code": "AUD_CZE_M01_WORDS_LANG_EN",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "anglicky"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "29b90d75-3445-5ac4-a308-867144e5c8d9",
+      "stable_code": "AUD_CZE_M01_WORDS_LANG_UK",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "ukrajinsky"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "dad71405-1a2a-5205-93f8-897539daf33b",
+      "stable_code": "AUD_CZE_M01_WORDS_LANG_PL",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "polsky"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "e8895ffd-1db6-51fb-94e3-0ec6ac6557de",
+      "stable_code": "AUD_CZE_M01_WORDS_LANG_DE",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "německy"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "49fd0188-c68d-5435-810a-be88f0bea635",
+      "stable_code": "AUD_CZE_M01_WORDS_LANG_ES",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "španělsky"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "ecb2acdd-5c20-52b4-b9ff-d15d42060424",
+      "stable_code": "AUD_CZE_M01_WORDS_CITY_PRA",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Praha"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "f25fed3a-eca0-57b6-b18b-c563788376a8",
+      "stable_code": "AUD_CZE_M01_WORDS_CITY_BRN",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Brno"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "55b478bb-4073-524a-b733-e9780fb35af5",
+      "stable_code": "AUD_CZE_M01_WORDS_CITY_KYI",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Kyjev"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "d2697605-05c0-55c7-9f4f-386effde6b95",
+      "stable_code": "AUD_CZE_M01_WORDS_CITY_FROM_PRA",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Jsem z Prahy."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "e1f007ef-eb54-513f-9dec-3266498f9b0d",
+      "stable_code": "AUD_CZE_M01_WORDS_CITY_FROM_BRN",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Jsem z Brna."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "cd46c4b6-9368-5d98-8589-36255873f42f",
+      "stable_code": "AUD_CZE_M01_WORDS_CITY_FROM_KYI",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Jsem z Kyjeva."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "77677498-892b-5d8a-9beb-d345df6d6645",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_00",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "nula"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "03844213-7eb1-553a-ae7b-6bc1a2d052c1",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_01",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "jedna"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "8d36430b-c5b9-555c-8e18-1b0f49a1f7e9",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_02",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "dva"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "bb88127b-8899-580f-ae8f-ea74b4803bb7",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_03",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "tři"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "e2c0c544-3f87-52e0-834b-6029d555a776",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_04",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "čtyři"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "341b3a17-5cfd-5a1e-b04f-db08532f3512",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_05",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "pět"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "dc900ff3-e68d-5a9a-affc-cc18690f511c",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_06",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "šest"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "90c333d9-8278-530c-87c3-fa76fb5eb8c2",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_07",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "sedm"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "379d9aee-9978-51d3-a284-4baa02beccb4",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_08",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "osm"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "6c8eed7d-1247-5f63-8c2b-39fc5d386a3f",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_09",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "devět"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "7fae11af-60c7-5f48-85e4-bda880351d99",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_10",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "deset"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "494bfbcf-0ec9-5735-b922-2825732d5689",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_11",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "jedenáct"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "c7014800-072b-549f-85d7-564c322a279e",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_12",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "dvanáct"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "da9bae2f-e4b7-54bb-afda-1ab37ab464e9",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_13",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "třináct"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "59e73487-721c-592a-89f2-439b609ad33d",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_14",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "čtrnáct"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "1e830b2b-1f9a-5ed4-8d11-49eacea666af",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_15",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "patnáct"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "2c8d7a0b-efb4-5313-a859-e3480cccbaf1",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_16",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "šestnáct"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "35c843d7-1ff2-57f2-9659-9b0ab48ecc82",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_17",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "sedmnáct"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "1e727094-aacf-59b8-811a-0980d9dff7df",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_18",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "osmnáct"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "ebc6b757-0d23-5081-b498-f66e6fb59ec0",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_19",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "devatenáct"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "04edb33f-9d07-58e7-8996-0dd7eede3bb6",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_20",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "dvacet"
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "c5d8fa8b-e2d2-5954-bb52-96bee32070c0",
+      "stable_code": "AUD_CZE_M01_WORDS_SPEAK_CS",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Mluvím česky."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "2b332708-4e9d-5df6-8643-53f1a64d0d7b",
+      "stable_code": "AUD_CZE_M01_WORDS_SELF_INTRO",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "word_or_chunk",
+      "turns": [
+        {
+          "speaker": "F01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Dobrý den. Jmenuji se Oksana. Jsem z Ukrajiny. Těší mě."
+        }
+      ],
+      "performance_note": "Clear adult A1 delivery; preserve ordinary stress and vowel length. Slow rendition must not change word identity."
+    },
+    {
+      "id": "38a8f36d-5f94-5cce-aa0d-cbbd1a87b114",
+      "stable_code": "AUD_ENG_M01_DIALOGUES_L01_CONTEXT",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "dialogue",
+      "turns": [
+        {
+          "speaker": "MAYA",
+          "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+          "character_asset_code": "AV_ENG_MAYA_01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Hello."
+        },
+        {
+          "speaker": "DANIEL",
+          "character_id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+          "character_asset_code": "AV_ENG_DANIEL_01",
+          "voice_code": "AUD_ENG_VOICE_M01",
+          "text": "Hi."
+        }
+      ],
+      "performance_note": "Produce each turn and full mix; timings measured from final audio, never guessed. Preserve speaker/voice identity. No background music."
+    },
+    {
+      "id": "38fafe4e-b6f1-5cbe-85ce-0e474d186948",
+      "stable_code": "AUD_ENG_M01_DIALOGUES_L01_REPAIR",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "dialogue",
+      "turns": [
+        {
+          "speaker": "TEACHER",
+          "character_id": "c66aa126-37ef-5587-a2ed-49363ded1f55",
+          "character_asset_code": "AV_ENG_TEACHER_01",
+          "voice_code": "AUD_ENG_VOICE_F02",
+          "text": "Hello. My name is Alex."
+        },
+        {
+          "speaker": "MAYA",
+          "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+          "character_asset_code": "AV_ENG_MAYA_01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Sorry. Can you repeat, please?"
+        },
+        {
+          "speaker": "TEACHER",
+          "character_id": "c66aa126-37ef-5587-a2ed-49363ded1f55",
+          "character_asset_code": "AV_ENG_TEACHER_01",
+          "voice_code": "AUD_ENG_VOICE_F02",
+          "text": "My name is Alex."
+        },
+        {
+          "speaker": "MAYA",
+          "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+          "character_asset_code": "AV_ENG_MAYA_01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Thank you."
+        }
+      ],
+      "performance_note": "Produce each turn and full mix; timings measured from final audio, never guessed. Preserve speaker/voice identity. No background music."
+    },
+    {
+      "id": "21d42bc5-e909-55f7-8480-818eb77ac6a1",
+      "stable_code": "AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "dialogue",
+      "turns": [
+        {
+          "speaker": "MAYA",
+          "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+          "character_asset_code": "AV_ENG_MAYA_01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Hello. I'm Maya."
+        },
+        {
+          "speaker": "DANIEL",
+          "character_id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+          "character_asset_code": "AV_ENG_DANIEL_01",
+          "voice_code": "AUD_ENG_VOICE_M01",
+          "text": "Hi. I'm Daniel. Where are you from?"
+        },
+        {
+          "speaker": "MAYA",
+          "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+          "character_asset_code": "AV_ENG_MAYA_01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "I'm from Ukraine. Where are you from?"
+        },
+        {
+          "speaker": "DANIEL",
+          "character_id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+          "character_asset_code": "AV_ENG_DANIEL_01",
+          "voice_code": "AUD_ENG_VOICE_M01",
+          "text": "I'm from the UK. Nice to meet you."
+        },
+        {
+          "speaker": "MAYA",
+          "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+          "character_asset_code": "AV_ENG_MAYA_01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Nice to meet you too."
+        },
+        {
+          "speaker": "DANIEL",
+          "character_id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+          "character_asset_code": "AV_ENG_DANIEL_01",
+          "voice_code": "AUD_ENG_VOICE_M01",
+          "text": "Bye."
+        }
+      ],
+      "performance_note": "Produce each turn and full mix; timings measured from final audio, never guessed. Preserve speaker/voice identity. No background music."
+    },
+    {
+      "id": "b88f39d7-c639-5804-91c6-074e205407ab",
+      "stable_code": "AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT",
+      "language": "en",
+      "variety": "en-GB",
+      "version_code": "draft-1",
+      "kind": "dialogue",
+      "turns": [
+        {
+          "speaker": "DANIEL",
+          "character_id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+          "character_asset_code": "AV_ENG_DANIEL_01",
+          "voice_code": "AUD_ENG_VOICE_M01",
+          "text": "Hello. What's your name?"
+        },
+        {
+          "speaker": "MAYA",
+          "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+          "character_asset_code": "AV_ENG_MAYA_01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "My name's Maya. Where are you from?"
+        },
+        {
+          "speaker": "DANIEL",
+          "character_id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+          "character_asset_code": "AV_ENG_DANIEL_01",
+          "voice_code": "AUD_ENG_VOICE_M01",
+          "text": "I'm from the UK. Are you a student?"
+        },
+        {
+          "speaker": "MAYA",
+          "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+          "character_asset_code": "AV_ENG_MAYA_01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Yes, I am."
+        },
+        {
+          "speaker": "DANIEL",
+          "character_id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+          "character_asset_code": "AV_ENG_DANIEL_01",
+          "voice_code": "AUD_ENG_VOICE_M01",
+          "text": "Nice to meet you."
+        },
+        {
+          "speaker": "MAYA",
+          "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+          "character_asset_code": "AV_ENG_MAYA_01",
+          "voice_code": "AUD_ENG_VOICE_F01",
+          "text": "Nice to meet you too."
+        }
+      ],
+      "performance_note": "Produce each turn and full mix; timings measured from final audio, never guessed. Preserve speaker/voice identity. No background music."
+    },
+    {
+      "id": "6f513a93-7d9f-5dcd-aafe-e398d0322fa8",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L01_CONTEXT",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "dialogue",
+      "turns": [
+        {
+          "speaker": "KLARA",
+          "character_id": "074d3cc2-e358-5ef4-b8a8-fb63106343cd",
+          "character_asset_code": "AV_CZE_KLARA_01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Dobrý den."
+        },
+        {
+          "speaker": "OKSANA",
+          "character_id": "a029d7cb-8f04-5509-8851-20f8bc474292",
+          "character_asset_code": "AV_CZE_OKSANA_01",
+          "voice_code": "AUD_CZE_VOICE_F02",
+          "text": "Dobrý den."
+        }
+      ],
+      "performance_note": "Produce each turn and full mix; timings measured from final audio, never guessed. Preserve speaker/voice identity. No background music."
+    },
+    {
+      "id": "8868e215-e384-58c6-86a0-dd4a9019f538",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L01_REPAIR",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "dialogue",
+      "turns": [
+        {
+          "speaker": "KLARA",
+          "character_id": "074d3cc2-e358-5ef4-b8a8-fb63106343cd",
+          "character_asset_code": "AV_CZE_KLARA_01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Dobrý den. Jmenuji se Klára."
+        },
+        {
+          "speaker": "OKSANA",
+          "character_id": "a029d7cb-8f04-5509-8851-20f8bc474292",
+          "character_asset_code": "AV_CZE_OKSANA_01",
+          "voice_code": "AUD_CZE_VOICE_F02",
+          "text": "Promiňte. Nerozumím. Můžete to zopakovat, prosím?"
+        },
+        {
+          "speaker": "KLARA",
+          "character_id": "074d3cc2-e358-5ef4-b8a8-fb63106343cd",
+          "character_asset_code": "AV_CZE_KLARA_01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Jmenuji se Klára."
+        },
+        {
+          "speaker": "OKSANA",
+          "character_id": "a029d7cb-8f04-5509-8851-20f8bc474292",
+          "character_asset_code": "AV_CZE_OKSANA_01",
+          "voice_code": "AUD_CZE_VOICE_F02",
+          "text": "Děkuji."
+        }
+      ],
+      "performance_note": "Produce each turn and full mix; timings measured from final audio, never guessed. Preserve speaker/voice identity. No background music."
+    },
+    {
+      "id": "6a449941-a5ea-522e-9fe4-4ddb9dcca5e1",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L04_FORMAL",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "dialogue",
+      "turns": [
+        {
+          "speaker": "KLARA",
+          "character_id": "074d3cc2-e358-5ef4-b8a8-fb63106343cd",
+          "character_asset_code": "AV_CZE_KLARA_01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Dobrý den. Jak se jmenujete?"
+        },
+        {
+          "speaker": "OKSANA",
+          "character_id": "a029d7cb-8f04-5509-8851-20f8bc474292",
+          "character_asset_code": "AV_CZE_OKSANA_01",
+          "voice_code": "AUD_CZE_VOICE_F02",
+          "text": "Dobrý den. Jmenuji se Oksana."
+        },
+        {
+          "speaker": "KLARA",
+          "character_id": "074d3cc2-e358-5ef4-b8a8-fb63106343cd",
+          "character_asset_code": "AV_CZE_KLARA_01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Odkud jste?"
+        },
+        {
+          "speaker": "OKSANA",
+          "character_id": "a029d7cb-8f04-5509-8851-20f8bc474292",
+          "character_asset_code": "AV_CZE_OKSANA_01",
+          "voice_code": "AUD_CZE_VOICE_F02",
+          "text": "Jsem z Ukrajiny."
+        },
+        {
+          "speaker": "KLARA",
+          "character_id": "074d3cc2-e358-5ef4-b8a8-fb63106343cd",
+          "character_asset_code": "AV_CZE_KLARA_01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Těší mě."
+        },
+        {
+          "speaker": "OKSANA",
+          "character_id": "a029d7cb-8f04-5509-8851-20f8bc474292",
+          "character_asset_code": "AV_CZE_OKSANA_01",
+          "voice_code": "AUD_CZE_VOICE_F02",
+          "text": "Mě také."
+        }
+      ],
+      "performance_note": "Produce each turn and full mix; timings measured from final audio, never guessed. Preserve speaker/voice identity. No background music."
+    },
+    {
+      "id": "bec3e4d8-58d0-54ae-b25e-522331cd4c82",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L04_INFORMAL",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "dialogue",
+      "turns": [
+        {
+          "speaker": "ADAM",
+          "character_id": "595521da-0ee4-51ca-b445-04d5705e6a48",
+          "character_asset_code": "AV_CZE_ADAM_01",
+          "voice_code": "AUD_CZE_VOICE_M01",
+          "text": "Ahoj. Jak se jmenuješ?"
+        },
+        {
+          "speaker": "OKSANA",
+          "character_id": "a029d7cb-8f04-5509-8851-20f8bc474292",
+          "character_asset_code": "AV_CZE_OKSANA_01",
+          "voice_code": "AUD_CZE_VOICE_F02",
+          "text": "Ahoj. Jmenuji se Oksana."
+        },
+        {
+          "speaker": "ADAM",
+          "character_id": "595521da-0ee4-51ca-b445-04d5705e6a48",
+          "character_asset_code": "AV_CZE_ADAM_01",
+          "voice_code": "AUD_CZE_VOICE_M01",
+          "text": "Odkud jsi?"
+        },
+        {
+          "speaker": "OKSANA",
+          "character_id": "a029d7cb-8f04-5509-8851-20f8bc474292",
+          "character_asset_code": "AV_CZE_OKSANA_01",
+          "voice_code": "AUD_CZE_VOICE_F02",
+          "text": "Jsem z Ukrajiny. Odkud jsi?"
+        },
+        {
+          "speaker": "ADAM",
+          "character_id": "595521da-0ee4-51ca-b445-04d5705e6a48",
+          "character_asset_code": "AV_CZE_ADAM_01",
+          "voice_code": "AUD_CZE_VOICE_M01",
+          "text": "Jsem z Česka. Těší mě."
+        },
+        {
+          "speaker": "OKSANA",
+          "character_id": "a029d7cb-8f04-5509-8851-20f8bc474292",
+          "character_asset_code": "AV_CZE_OKSANA_01",
+          "voice_code": "AUD_CZE_VOICE_F02",
+          "text": "Taky mě těší."
+        }
+      ],
+      "performance_note": "Produce each turn and full mix; timings measured from final audio, never guessed. Preserve speaker/voice identity. No background music."
+    },
+    {
+      "id": "71a081fe-7ba7-5fa4-b728-89087fe525cc",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_R01_FIRST_CONTACT",
+      "language": "cs",
+      "variety": "cs-CZ",
+      "version_code": "draft-1",
+      "kind": "dialogue",
+      "turns": [
+        {
+          "speaker": "KLARA",
+          "character_id": "074d3cc2-e358-5ef4-b8a8-fb63106343cd",
+          "character_asset_code": "AV_CZE_KLARA_01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Dobrý den. Vy jste Oksana?"
+        },
+        {
+          "speaker": "OKSANA",
+          "character_id": "a029d7cb-8f04-5509-8851-20f8bc474292",
+          "character_asset_code": "AV_CZE_OKSANA_01",
+          "voice_code": "AUD_CZE_VOICE_F02",
+          "text": "Dobrý den. Ano."
+        },
+        {
+          "speaker": "KLARA",
+          "character_id": "074d3cc2-e358-5ef4-b8a8-fb63106343cd",
+          "character_asset_code": "AV_CZE_KLARA_01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Odkud jste?"
+        },
+        {
+          "speaker": "OKSANA",
+          "character_id": "a029d7cb-8f04-5509-8851-20f8bc474292",
+          "character_asset_code": "AV_CZE_OKSANA_01",
+          "voice_code": "AUD_CZE_VOICE_F02",
+          "text": "Jsem z Ukrajiny."
+        },
+        {
+          "speaker": "KLARA",
+          "character_id": "074d3cc2-e358-5ef4-b8a8-fb63106343cd",
+          "character_asset_code": "AV_CZE_KLARA_01",
+          "voice_code": "AUD_CZE_VOICE_F01",
+          "text": "Těší mě."
+        },
+        {
+          "speaker": "OKSANA",
+          "character_id": "a029d7cb-8f04-5509-8851-20f8bc474292",
+          "character_asset_code": "AV_CZE_OKSANA_01",
+          "voice_code": "AUD_CZE_VOICE_F02",
+          "text": "Mě také. Na shledanou."
+        }
+      ],
+      "performance_note": "Produce each turn and full mix; timings measured from final audio, never guessed. Preserve speaker/voice identity. No background music."
+    }
+  ]
+}

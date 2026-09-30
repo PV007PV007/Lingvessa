@@ -7,7 +7,7 @@ import type {ContentPayload} from '../../packages/activity-schemas/src/content.j
 import {executableLessonFixtureSchema} from '../../packages/content-tools/src/p3-fixture.js';
 import {loadExecutableLessonFixture} from '../../infra/persistence/p3-fixtures.js';
 import {LessonRepository} from '../../infra/persistence/lessons.js';
-import {p5MediaFixture} from './p5-fixtures.js';
+import {p5MediaFixture,svgAsset} from './p5-fixtures.js';
 
 /** Original sine-tone PCM is a browser/storage fixture, never linguistic QA or reference speech. */
 export function toneWav(milliseconds:number):Buffer {
@@ -32,6 +32,14 @@ export async function p5AudioFixture(db:pg.Pool,store:AssetStore){
   for(let n=0;n<2;n++){
    await f.media.registerVoice(f.author,{id:voiceIds[n],stable_code:`P5_${language}_VOICE_${n}`,version_code:'fixture-1',scope:{language,variety},profile:'Synthetic tone fixture voice binding',provider_adapter_code:'programmatic_fixture',provider_external_id:`synthetic-tone-${n}`,rights});
    await f.media.registerCharacter(f.author,{id:charIds[n],stable_code:`P5_${language}_CHAR_${n}`,version_code:'fixture-1',scope:{language,variety},style_profile:'Synthetic speaker label only',allowed_contexts:['contract_test'],voice_id:voiceIds[n],voice_version_code:'fixture-1',rights});
+   const avatar=svgAsset(language);
+   Object.assign(avatar.metadata,{kind:'avatar',stable_code:`P5_${language}_AVATAR_${n}`,character_id:charIds[n],character_version_code:'fixture-1',scope:{language,variety}});
+   const requirement=randomUUID(),role=`avatar_${n}`;
+   await f.media.declareRequirement(f.author,{id:requirement,target_content_version_id:fixture.content_version_id,item_id:activity.id,role,required:true,kind:'avatar',scope:{language,variety},specification_version:'fixture-1',specification:'Synthetic avatar geometry bound to the exact fictional test character version',accessibility_role:'semantic'});
+   const job=await f.media.enqueue(f.author,requirement,randomUUID(),'programmatic_fixture',avatar.metadata.rights.generator_version);
+   await f.approve(await f.media.ingest(f.author,job,avatar.metadata,avatar.bytes));
+   const ref={asset_id:avatar.metadata.asset_id,asset_version:1,asset_stable_code:avatar.metadata.stable_code,role};
+   activity.media_refs.push(ref);activity.contract!.presentation.media_refs.push(ref);
   }
   const normalId=randomUUID(),assets:AssetVersion[]=[];
   for(const speed of ['normal','slow'] as const){

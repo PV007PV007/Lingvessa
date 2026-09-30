@@ -14,4 +14,4 @@ Authority: manifest §2.2; Technical Design v1.7 speech lifecycle; Plan v1.4 §1
 
 Schemas and paths: `infra/contracts/p5-speech.openapi.json`. New implementation migration: `202609270001_p5_speech_contract`. Earlier accepted migrations are unchanged.
 
-Current verification scope: deterministic synthetic adapter proves lifecycle/isolation/transport/cleanup, not linguistic quality or production calibration. Browser microphone/reduced-motion gates and reference asset completion remain separate acceptance evidence.
+Current verification scope: deterministic synthetic adapter proves lifecycle/isolation/transport/cleanup, not linguistic quality or production calibration. Browser microphone/reduced-motion gates passed at 76aa3aedc12f31eada6e6320ec526a3fcda36cf9 (ci-batch-006). Reference asset completion remains a separate acceptance gate. Additional cleanup/lease/cancel-race gates in this batch await hosted execution. Atomic staging publishes only complete encrypted audio; abandoned partial writes retain the same bounded TTL.

@@ -24,8 +24,15 @@ test('P5 audio: published delivery, ownership, byte ranges, support and normal/s
   const migration=spawnSync('pnpm',['db:migrate'],{env,encoding:'utf8',timeout:60000});assert.equal(migration.status,0,migration.stdout.slice(-1500)+migration.stderr.slice(-1000));await seedBootstrap(env);
   pool=createFoundationPool(url.toString());const db=pool,f=await p5AudioFixture(db,new LocalAssetStore(root));
   await gate('P5-AUDIO-DB-001 published pins preserve normal/slow script, language and voice',async()=>{
-   for(const language of ['en','cs'] as const){const list=await f.media.forRun(f.learner,f.runs[language].id,f.audio[language].itemId);assert.equal(list.length,2);assert(list.every(a=>a.scope.language===language));
+   for(const language of ['en','cs'] as const){const list=await f.media.forRun(f.learner,f.runs[language].id,f.audio[language].itemId);assert.equal(list.length,4);assert(list.every(a=>a.scope.language===language));
     const slow=list.find(a=>a.speed==='slow')!;assert.equal(slow.normal_asset_id,f.audio[language].normal.asset_id);assert.equal(slow.turns![1]!.start_ms,6000);assert(!JSON.stringify(list).includes('provider_external_id'));
+    const avatars=list.filter(a=>a.kind==='avatar');assert.equal(avatars.length,2);
+    for(const turn of slow.turns!)assert(avatars.some(a=>a.character_id===turn.character_id&&a.character_version_code===turn.character_version_code));
+    const refs=list.map(a=>({asset_id:a.asset_id,asset_version:a.asset_version}));
+    const closure=async(values:typeof refs,lang=f.sources[language].language_id)=>(await db.query('SELECT p5_avatar_closure($1::jsonb,$2::uuid) AS ok',[JSON.stringify(values),lang])).rows[0].ok;
+    assert.equal(await closure(refs),true);assert.equal(await closure(refs.filter(r=>r.asset_id!==avatars[0]!.asset_id)),false);
+    const foreignAvatar=(await f.media.forRun(f.learner,f.runs[language==='en'?'cs':'en'].id,f.audio[language==='en'?'cs':'en'].itemId)).find(a=>a.kind==='avatar')!;
+    assert.equal(await closure([...refs.filter(r=>r.asset_id!==avatars[0]!.asset_id),{asset_id:foreignAvatar.asset_id,asset_version:foreignAvatar.asset_version}]),false);
    }
    await assert.rejects(f.media.forRun(f.author,f.runs.en.id,f.audio.en.itemId),/not found/);
    await assert.rejects(f.media.forRun(f.learner,f.runs.en.id,f.audio.cs.itemId),/not in/);

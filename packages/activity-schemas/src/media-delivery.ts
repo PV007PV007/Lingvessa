@@ -9,6 +9,7 @@ export const deliveredMediaSchema=z.object({
  alt_text:z.string(),decorative:z.boolean(),duration_ms:z.number().int().positive().optional(),
  transcript:z.string().optional(),speed:z.enum(['normal','slow']).optional(),
  voice_id:uuid.optional(),voice_version_code:z.string().optional(),
+ character_id:uuid.optional(),character_version_code:z.string().optional(),
  turns:z.array(audioTurnSchema).optional(),
  normal_asset_id:uuid.optional(),normal_asset_version:z.number().int().positive().optional(),
 }).strict();

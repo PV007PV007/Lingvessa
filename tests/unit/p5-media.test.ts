@@ -28,6 +28,11 @@ test('P5 schema rejects absent alt, mismatched scope, voice clone and invalid au
  const {metadata:a}=svgAsset('cs');assert(assetVersionSchema.safeParse(a).success);
  assert(!assetVersionSchema.safeParse({...a,alt_text:''}).success);
  assert(!assetVersionSchema.safeParse({...a,scope:{language:'cs',variety:'en-GB'}}).success);
+ assert(!assetVersionSchema.safeParse({...a,kind:'avatar'}).success);
+ const avatar={...a,kind:'avatar',character_id:randomUUID(),character_version_code:'fixture-1'};
+ assert(assetVersionSchema.safeParse(avatar).success);
+ assert(!assetVersionSchema.safeParse({...avatar,character_version_code:undefined}).success);
+ assert(!assetVersionSchema.safeParse({...avatar,kind:'vector'}).success);
  const audio={...a,kind:'audio',mime:'audio/wav',scope:{language:'en',variety:'en-US'},duration_ms:2000,codec:'pcm_s16le',loudness_lufs:-20,transcript:'Hello',script_version:'1',script_hash:a.checksum,speed:'normal',voice_id:randomUUID(),voice_version_code:'1'};
  assert(assetVersionSchema.safeParse(audio).success);
  assert(!assetVersionSchema.safeParse({...audio,turns:[{speaker:'one',voice_id:audio.voice_id,voice_version_code:'1',start_ms:1500,end_ms:2200,text:'Hello'}]}).success);

@@ -286,7 +286,7 @@
         "CHK-N-TS-P17-T02-R05",
         "CHK-N-TS-P19-T03-R08"
       ],
-      "readiness": "Media/S3/DB/publication fixture gates hosted PASS at 9d8f3de; required reference media QA remains pending.",
+      "readiness": "Media/storage/publishing foundations hosted PASS. Added versioned character/avatar closure and original M01 media drafts; actual voices/audio, flags and human media QA remain open. New avatar closure hosted test PENDING.",
       "contract_change": "None in P0; future schema/API work remains in named task",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
@@ -408,7 +408,7 @@
         "CHK-N-TS-P13-T03-R08",
         "CHK-N-TS-P16-T01-R02"
       ],
-      "readiness": "Shared normal/slow/speaker/fallback browser and API gates hosted PASS at 9d8f3de; approved reference voice/audio delivery remains pending.",
+      "readiness": "Normal/slow and speaker clock hosted PASS; exact avatar sync/byte delivery assertions added, awaiting this batch CI. No approved reference audio is claimed.",
       "contract_change": "None in P0; future schema/API work remains in named task",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
@@ -784,11 +784,13 @@
         "CHK-N-TS-P17-T02-R06",
         "CHK-N-TS-P18-T02-R08"
       ],
-      "readiness": "Seven speech DB/API/cleanup gates hosted PASS at 9d8f3de. Microphone UI/browser implementation prepared, hosted browser verification pending; production policy default unavailable.",
+      "readiness": "Mic UI and 8 speech DB/API/browser gates hosted PASS at 76aa3aedc12f31eada6e6320ec526a3fcda36cf9. Added atomic transient writes and expiry/lease/cancel race/cleanup fault gates; new DB gates awaiting CI. Real scoring default unavailable under OD-005/006.",
       "contract_change": "None in P0; future schema/API work remains in named task",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
     }
   ],
-  "timestamp": "2026-09-28T04:58:15.690784+00:00"
+  "timestamp": "2026-09-30T10:39:03.080510+00:00",
+  "last_hosted_tested_sha": "76aa3aedc12f31eada6e6320ec526a3fcda36cf9",
+  "last_hosted_result": "PASS_BATCH_NOT_MILESTONE"
 }

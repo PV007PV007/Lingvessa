@@ -126,6 +126,7 @@ BEGIN
   SELECT * INTO req FROM media_requirements WHERE id=job.requirement_id;
   IF job.state<>'processing' OR req.kind IS DISTINCT FROM a.kind OR req.variety IS DISTINCT FROM a.variety THEN RAISE EXCEPTION 'asset output is outside processing job requirement' USING ERRCODE='23514'; END IF;
   IF NEW.metadata->>'kind' IS DISTINCT FROM a.kind OR NEW.metadata->>'stable_code' IS DISTINCT FROM a.stable_code OR NEW.metadata->'scope'->>'variety' IS DISTINCT FROM a.variety OR NEW.metadata->'scope'->>'language' IS DISTINCT FROM (SELECT stable_code FROM languages WHERE id=NEW.language_id) OR NEW.metadata->'rights'->>'real_person_clone' IS DISTINCT FROM 'false' THEN RAISE EXCEPTION 'asset metadata language/identity/rights mismatch' USING ERRCODE='23514'; END IF;
+  IF a.kind='avatar' AND NOT EXISTS(SELECT 1 FROM characters c WHERE c.id=(NEW.metadata->>'character_id')::uuid AND c.version_code=NEW.metadata->>'character_version_code' AND c.language_id=NEW.language_id AND a.variety IN ('common',c.variety)) THEN RAISE EXCEPTION 'avatar character version/language mismatch' USING ERRCODE='23514'; END IF;
   IF a.kind='audio' THEN
    IF NOT EXISTS(SELECT 1 FROM voices v WHERE v.id=(NEW.metadata->>'voice_id')::uuid AND v.version_code=NEW.metadata->>'voice_version_code' AND v.language_id=NEW.language_id AND v.variety=a.variety) THEN RAISE EXCEPTION 'audio voice language/variety mismatch' USING ERRCODE='23514'; END IF;
    IF NEW.metadata->>'speed'='slow' AND NOT EXISTS(
@@ -194,6 +195,18 @@ CREATE TRIGGER content_media_guard BEFORE INSERT OR UPDATE OR DELETE ON content_
 CREATE TRIGGER publication_assets_guard BEFORE INSERT OR UPDATE OR DELETE ON publication_assets FOR EACH ROW EXECUTE FUNCTION p5_binding_guard();
 CREATE TRIGGER no_truncate_media_bindings BEFORE TRUNCATE ON content_media_bindings FOR EACH STATEMENT EXECUTE FUNCTION p2_append_only();
 CREATE TRIGGER no_truncate_publication_assets BEFORE TRUNCATE ON publication_assets FOR EACH STATEMENT EXECUTE FUNCTION p2_append_only();
+CREATE FUNCTION p5_avatar_closure(refs jsonb,lang_id uuid) RETURNS boolean LANGUAGE sql STABLE AS $$
+ SELECT NOT EXISTS(
+  SELECT 1 FROM jsonb_array_elements(refs) audio_ref
+  JOIN asset_versions audio_version ON audio_version.asset_id=(audio_ref->>'asset_id')::uuid AND audio_version.version=(audio_ref->>'asset_version')::integer AND audio_version.language_id=lang_id
+  CROSS JOIN LATERAL jsonb_array_elements(coalesce(audio_version.metadata->'turns','[]')) speaker_turn
+  WHERE speaker_turn ? 'character_id' AND NOT EXISTS(
+   SELECT 1 FROM jsonb_array_elements(refs) avatar_ref
+   JOIN asset_versions avatar_version ON avatar_version.asset_id=(avatar_ref->>'asset_id')::uuid AND avatar_version.version=(avatar_ref->>'asset_version')::integer AND avatar_version.language_id=lang_id
+   WHERE avatar_version.metadata->>'kind'='avatar' AND avatar_version.metadata->>'character_id'=speaker_turn->>'character_id' AND avatar_version.metadata->>'character_version_code'=speaker_turn->>'character_version_code'
+  )
+ )
+$$;
 CREATE FUNCTION p5_publication_media_guard() RETURNS trigger LANGUAGE plpgsql AS $$
 DECLARE cv content_versions; activity jsonb; ref jsonb; actual jsonb; av asset_versions;
 BEGIN
@@ -206,6 +219,7 @@ BEGIN
     SELECT v.* INTO av FROM asset_versions v JOIN assets a ON a.id=v.asset_id WHERE v.asset_id=(ref->>'asset_id')::uuid AND v.version=(ref->>'asset_version')::integer AND v.language_id=NEW.language_id AND a.stable_code=ref->>'asset_stable_code';
     IF NOT FOUND OR NOT p5_asset_approved(av.asset_id,av.version) OR NOT EXISTS(SELECT 1 FROM content_media_bindings b WHERE b.content_version_id=cv.id AND b.item_id=(activity->>'id')::uuid AND b.asset_id=av.asset_id AND b.asset_version=av.version AND b.role=ref->>'role') OR NOT EXISTS(SELECT 1 FROM publication_assets pa WHERE pa.publication_id=NEW.id AND pa.asset_id=av.asset_id AND pa.asset_version=av.version AND pa.checksum=av.checksum AND pa.metadata_checksum=av.metadata_checksum) THEN RAISE EXCEPTION 'required media missing, unapproved or unpinned' USING ERRCODE='23514'; END IF;
    END LOOP;
+   IF NOT p5_avatar_closure(coalesce(activity->'media_refs','[]'),NEW.language_id) THEN RAISE EXCEPTION 'dialogue character requires its pinned avatar in the activity' USING ERRCODE='23514'; END IF;
    IF EXISTS(SELECT 1 FROM media_requirements mr WHERE mr.target_content_version_id=cv.id AND mr.item_id=(activity->>'id')::uuid AND mr.required AND NOT EXISTS(SELECT 1 FROM content_media_bindings b JOIN assets a ON a.id=b.asset_id WHERE b.content_version_id=cv.id AND b.item_id=mr.item_id AND b.role=mr.role AND a.kind=mr.kind AND a.variety=mr.variety)) THEN RAISE EXCEPTION 'required media declaration is not fulfilled' USING ERRCODE='23514'; END IF;
   END LOOP;
  END LOOP;

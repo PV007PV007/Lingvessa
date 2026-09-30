@@ -105,6 +105,35 @@ test('P5 speech real PostgreSQL: idempotent settlement, exact facets, ownership,
    const done=await speech.get(f.learner,j.job_id);assert.equal(done.state,'failed');assert.equal(done.outcome,'speech_unavailable');assert.equal((await db.query('SELECT attempts FROM speech_jobs WHERE id=$1',[j.job_id])).rows[0].attempts,3);
    assert.equal((await db.query('SELECT count(*) FROM activity_attempts WHERE attempt_id=$1',[j.attempt_id])).rows[0].count,'1');assert.equal(await count('evidence_events'),before);assert.deepEqual(await readdir(transient),[]);fail=false;
   });
+  await gate('P5-SPEECH-009 expired job/orphan, failed cleanup and deferred settlement recover without evidence',async()=>{
+   const before=await count('evidence_events'),j=await create('cs');
+   await reject("UPDATE speech_jobs SET state='cancelled',outcome='speech_unavailable',reason='user_cancelled',settled_at=clock_timestamp() WHERE id=$1",[j.job_id]);
+   assert.equal((await speech.get(f.learner,j.job_id)).state,'created');await speech.cancel(f.learner,j.job_id);
+   // The fixture creates a legitimately expired job; it never disables or edits a constraint.
+   const expired=randomUUID();await db.query(`INSERT INTO speech_jobs(id,attempt_id,idempotency_key,request_hash,user_id,language_profile_id,language_id,lesson_run_id,item_id,content_version_id,policy_id,policy_code,policy_version,provider_code,model_version,created_at,expires_at)
+    SELECT $2,$3,$4,request_hash,user_id,language_profile_id,language_id,lesson_run_id,item_id,content_version_id,policy_id,policy_code,policy_version,provider_code,model_version,clock_timestamp()-interval '15 minutes',clock_timestamp()-interval '2 minutes' FROM speech_jobs WHERE id=$1`,[j.job_id,expired,randomUUID(),randomUUID()]);
+   await audio.put(expired,toneWav(50),new Date(Date.now()+5000));await speech.recover();assert.equal((await speech.get(f.learner,expired)).state,'expired');assert.deepEqual(await readdir(transient),[]);
+   const cleanup=await create('cs');await upload(cleanup);let unavailable=true;
+   const faultyAudio={put:audio.put.bind(audio),read:audio.read.bind(audio),prune:audio.prune.bind(audio),async delete(id:string){if(unavailable)throw new Error('Controlled deletion outage');await audio.delete(id);}};
+   const retryCleanup=new SpeechRepository(db,faultyAudio,evaluator,randomBytes(32));assert.equal((await retryCleanup.cancel(f.learner,cleanup.job_id)).outcome,'speech_unavailable');
+   assert.equal((await db.query('SELECT cleanup_pending FROM speech_jobs WHERE id=$1',[cleanup.job_id])).rows[0].cleanup_pending,true);assert.equal((await readdir(transient)).length,1);
+   unavailable=false;await retryCleanup.recover();assert.equal((await db.query('SELECT cleanup_pending FROM speech_jobs WHERE id=$1',[cleanup.job_id])).rows[0].cleanup_pending,false);
+   assert.equal(await count('evidence_events'),before);assert.deepEqual(await readdir(transient),[]);
+  });
+  await gate('P5-SPEECH-010 worker lease recovery audits old execution; cancellation wins an in-flight result',async()=>{
+   const before=await count('evidence_events'),j=await create('cs');await upload(j);const oldExecution=randomUUID();
+   await db.query("UPDATE speech_jobs SET state='processing',attempts=attempts+1,execution_id=$2,lease_until=clock_timestamp()-interval '1 second' WHERE id=$1",[j.job_id,oldExecution]);
+   await speech.recover();assert.equal((await speech.get(f.learner,j.job_id)).state,'queued');
+   const row=(await db.query('SELECT * FROM speech_jobs WHERE id=$1',[j.job_id])).rows[0];
+   const callback={event_id:randomUUID(),job_id:j.job_id,execution_id:oldExecution,user_id:f.learner,language_profile_id:row.language_profile_id,language_id:row.language_id,provider_code:row.provider_code,model_version:row.model_version,policy_code:row.policy_code,policy_version:row.policy_version,result:{...output,confidence:0.9,target_match:true}};
+   assert.equal((await speech.callback(callback)).disposition,'stale_execution');assert.equal((await speech.get(f.learner,j.job_id)).state,'queued');await speech.cancel(f.learner,j.job_id);
+   let announce!:()=>void,release!:(result:SpeechResult)=>void;const started=new Promise<void>(r=>{announce=r;}),pending=new Promise<SpeechResult>(r=>{release=r;});
+   const held:SpeechEvaluator={code:evaluator.code,modelVersion:evaluator.modelVersion,available:true,async evaluate(){announce();return pending;}};
+   const delayed=new SpeechRepository(db,audio,held,randomBytes(32)),active=await create('cs');await upload(active);const worker=delayed.runOnce();await started;
+   await speech.cancel(f.learner,active.job_id);release({...output,confidence:0.95,target_match:true});await worker;
+   assert.equal((await speech.get(f.learner,active.job_id)).state,'cancelled');assert.equal(await count('evidence_events'),before);assert.deepEqual(await readdir(transient),[]);
+   assert.equal((await speech.callback({...callback,event_id:randomUUID()})).disposition,'late');assert.equal(await count('evidence_events'),before);
+  });
   await gate('P5-SPEECH-007 reset during processing settles neutral and cannot receive late mastery credit',async()=>{
    const before=await count('evidence_events'),j=await create('cs');await upload(j);
    await new ResetRepository(db).reset(f.learner,{request_id:randomUUID(),language_profile_id:f.runs.cs.language_profile_id,scope:'lesson',target_id:f.runs.cs.lesson_id,confirmed:true,reset_mastery:false});

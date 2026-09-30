@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-09-30T10:39:03.080510+00:00",
+  "tested_sha": "76aa3aedc12f31eada6e6320ec526a3fcda36cf9",
+  "run_id": 36586379882,
+  "job_id": 109467720069,
+  "event": "pull_request",
+  "status": "PASS_BATCH_NOT_MILESTONE",
+  "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/36586379882",
+  "artifact_id": 11042820875,
+  "artifact_sha256": "2b7c70deb2f342cadfd853a3124ad45f91a7d36bf228d5882a8829a219ea72b4",
+  "executed": [
+    "pnpm install --frozen-lockfile",
+    "pnpm validate:baseline",
+    "pnpm check: 49 unit + 4 smoke, zero failures/skips",
+    "pnpm validate:references",
+    "pnpm audit:dependencies",
+    "actual S3 immutable byte protocol and restart recovery",
+    "PostgreSQL 18.6 all six migrations/bootstrap/seed",
+    "16 integration tests, zero failures/skips",
+    "8 speech gates including P5-SPEECH-008 real Chromium journeys",
+    "10 Chromium tests: P3 4 + P4 2 + P5 audio 2 + P5 speech 2",
+    "four OCI builds/start/health/DB degradation/recovery",
+    "P3/P4 regression summaries"
+  ],
+  "speech_browser_included": true,
+  "speech_browser_cases": [
+    "English lost create/upload responses reuse job; correct -> Retry incorrect -> Continue; Auto-advance and reduced motion",
+    "Czech denied/absent/low confidence/provider failure/cancellation, neutral evidence and continuation"
+  ],
+  "production_provider_or_linguistic_qa_approved": false,
+  "all_required_steps_executed": true,
+  "diagnostics_skipped_because_success": true
+}
