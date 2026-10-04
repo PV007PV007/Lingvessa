@@ -6,10 +6,10 @@ import {mkdtemp,mkdir,rm,writeFile,readFile} from 'node:fs/promises';
 import {createServer} from 'node:net';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
-import {setTimeout as delay} from 'node:timers/promises';
 import {S3AssetStore,signedS3Headers} from '../../packages/provider-adapters/storage/s3.js';
 import {assetObjectKey} from '../../packages/provider-adapters/storage/asset-integrity.js';
 import {svgAsset} from '../../tests/support/p5-fixtures.js';
+import {waitForS3FixtureReady} from './fixture-readiness.js';
 
 // A pinned standalone protocol test server, not approval of a production provider/CDN.
 const sourceRevision='9e49d5e7a648f00e26f2246f4dc28e6b07f8c84a';
@@ -19,11 +19,19 @@ const reserve=createServer();await new Promise<void>(r=>reserve.listen(0,'127.0.
 const accessKey=randomBytes(16).toString('hex'),secretKey=randomBytes(32).toString('hex');
 const config={endpoint:`http://127.0.0.1:${port}`,region:'us-east-1',bucket:'p5-private-media',accessKey,secretKey,allowLoopbackHttp:true,timeoutMs:1500};
 const store=new S3AssetStore(config),gates:Array<{gate:string;status:'PASS'}>=[];let child:ChildProcess|undefined;
+const startupReadiness:Array<Awaited<ReturnType<typeof waitForS3FixtureReady>>>=[];
 const start=async()=>{
  child=spawn(binary,['server',join(root,'data'),'--address',`127.0.0.1:${port}`],{env:{...process.env,MINIO_ROOT_USER:accessKey,MINIO_ROOT_PASSWORD:secretKey,MINIO_BROWSER:'off',MINIO_UPDATE:'off'},stdio:'ignore'});
  let spawnError=false;child.on('error',()=>{spawnError=true;});
- for(let i=0;i<150;i++){if(spawnError||child.exitCode!==null)throw new Error('S3 test server failed to start');try{if((await fetch(config.endpoint+'/minio/health/ready',{signal:AbortSignal.timeout(500)})).ok)return;}catch{/* startup not ready */}await delay(100);}
- throw new Error('S3 test server readiness timeout');
+ const readiness=await waitForS3FixtureReady(async()=>{
+  if(spawnError||child?.exitCode!==null)throw new Error('S3 test server failed to start');
+  const url=new URL(config.endpoint+'/');
+  let response:Response;
+  try{response=await fetch(url,{headers:signedS3Headers(config,'GET',url,new Uint8Array()),signal:AbortSignal.timeout(500)});}
+  catch{return null;}
+  const status=response.status;await response.body?.cancel();return status;
+ });
+ startupReadiness.push(readiness);
 };
 const stop=async()=>{if(!child||child.exitCode!==null)return;const current=child;await new Promise<void>((resolve,reject)=>{const timer=setTimeout(()=>{current.kill('SIGKILL');reject(new Error('S3 shutdown timeout'));},5000);current.once('exit',()=>{clearTimeout(timer);resolve();});current.kill('SIGTERM');});child=undefined;};
 try{
@@ -37,6 +45,6 @@ try{
  await assert.rejects(store.readVerified(key,'0'.repeat(64),a.byte_length));await assert.rejects(store.readVerified(key,a.checksum,10));gates.push({gate:'P5-S3-002 authentication, byte integrity and bounded reads',status:'PASS'});
  await stop();await assert.rejects(store.inspect(key));await start();assert.deepEqual(Buffer.from(await store.readVerified(key,a.checksum,a.byte_length)),bytes);gates.push({gate:'P5-S3-003 outage, restart and immutable stored bytes recovery',status:'PASS'});
  const commit=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();assert.equal(commit,process.env.GITHUB_HEAD_SHA);
- await mkdir('artifacts/p5',{recursive:true});await writeFile('artifacts/p5/storage-validation.json',JSON.stringify({phase:'P5',scope:'S3 protocol adapter with synthetic local test server only',status:'PASS',commit,gates,source_revision:sourceRevision,binary_sha256:createHash('sha256').update(await readFile(binary)).digest('hex'),production_provider_approved:false,raw_learner_data_used:false},null,2)+'\n');
+ await mkdir('artifacts/p5',{recursive:true});await writeFile('artifacts/p5/storage-validation.json',JSON.stringify({phase:'P5',scope:'S3 protocol adapter with synthetic local test server only',status:'PASS',commit,gates,startup_readiness:startupReadiness,source_revision:sourceRevision,binary_sha256:createHash('sha256').update(await readFile(binary)).digest('hex'),production_provider_approved:false,raw_learner_data_used:false},null,2)+'\n');
  console.log(JSON.stringify({status:'PASS',gates}));
 }finally{await stop();await rm(root,{recursive:true,force:true});}

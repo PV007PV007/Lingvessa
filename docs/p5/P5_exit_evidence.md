@@ -24,6 +24,8 @@ The revision adding this reconciliation must pass its own workflow. `tools/p5/ac
 
 The quota final-item expectation is fixed and P5-SPEECH-011 now passes with no domain contract change. Cancellation/poll/cleanup stay available under transport quota; replay consumes no new processing slot or evidence. Exact turn UUID identity and all seven normalized flag geometries passed.
 
+The later `506a6a28...` PR run failed only at initial S3 fixture readiness (503 after a process-health success), before DB/OCI execution. This failed run is retained in `evidence/ci-batch-010.json`; it is not counted as runtime PASS. The fixture now waits for a signed S3 API response with bounded startup retries; 401/403/other HTTP failures are not retried. Four focused unit cases pass locally, with full hosted verification required on the new source. No product contract changed.
+
 ## Remaining exit conditions
 
 Plan v1.4 §12 p7: **all M01 required asset IDs resolve**. Available drafts: 18 original SVGs + 12 flags, 168 scripts / 420 audio slots, six unapproved voice profiles. Actual reference audio bytes, measured duration/loudness/turn alignment, approved cast/licences and human linguistic/semantic/accessibility/publication QA remain incomplete. Approved assets = 0. Test tones and synthetic evaluation are not a substitute.

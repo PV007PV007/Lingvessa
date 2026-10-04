@@ -286,7 +286,7 @@
         "CHK-N-TS-P17-T02-R05",
         "CHK-N-TS-P19-T03-R08"
       ],
-      "readiness": "Media/storage/immutable-publication/avatar/generation-quota runtime PASS on push and PR; original visual and flag drafts structurally valid. Actual M01 audio, approved complete voices/provenance and human media QA remain open.",
+      "readiness": "Media/storage/immutable-publication/avatar/generation-quota runtime PASS on push and PR; original visual and flag drafts structurally valid. Actual M01 audio, approved complete voices/provenance and human media QA remain open. The following reconciliation PR exposed a fixture startup race; bounded signed-S3 readiness fix awaits the new source hosted run.",
       "contract_change": "No governing contract change; P5 concrete implementation only",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
@@ -790,10 +790,11 @@
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
     }
   ],
-  "timestamp": "2026-10-04T13:06:31.839214+00:00",
-  "last_hosted_tested_sha": "79c3b4235327eb6ce289288bfcc7e051a20fb5d0",
-  "last_hosted_result": "RUNTIME_PASS_MILESTONE_NOT_READY",
+  "timestamp": "2026-10-04T13:19:05.356122+00:00",
+  "last_hosted_tested_sha": "506a6a28d5bee046d04ab095466ca5f8e852706d",
+  "last_hosted_result": "FAIL_FIXTURE_READINESS",
   "last_full_runtime_pass_sha": "79c3b4235327eb6ce289288bfcc7e051a20fb5d0",
   "ci_evidence": "docs/p5/evidence/ci-batch-009.json",
-  "current_revision_ci": "The workflow checks out the exact PR head and emits artifacts/p5/acceptance-summary.json; the PR head run is required after any later source/evidence commit."
+  "current_revision_ci": "The workflow checks out the exact PR head and emits artifacts/p5/acceptance-summary.json; the PR head run is required after any later source/evidence commit.",
+  "latest_attempt_evidence": "docs/p5/evidence/ci-batch-010.json"
 }
