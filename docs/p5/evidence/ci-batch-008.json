@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-10-04T09:00:28.088159+00:00",
+  "tested_sha": "a439952d910eaa31396f27cf78b924086c40fb7d",
+  "status": "FAIL_TEST_EXPECTATION",
+  "run_id": 37190304701,
+  "job_id": 111400889118,
+  "event": "pull_request",
+  "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/37190304701",
+  "artifact_id": 11299315953,
+  "artifact_sha256": "b46fc9782ebf53f75a49ae1f81499881bd3ed9e8c8d802b1140e0c81f1d8e7a3",
+  "passed_before_failure": [
+    "frozen install; baseline 74/74; complete pnpm check",
+    "reference/flag structural checks; zero dependency audit findings",
+    "Chromium install; actual S3 protocol and restart",
+    "PostgreSQL 18.6 six migrations/bootstrap; P1-P4 integration/regression",
+    "P5 audio DB/API and 9 browser cases: 2 audio + 7 normalized flag geometries",
+    "P5 media all 8 gates including generation quota",
+    "P5 speech 001/002/003/004/005/006/009/010/012"
+  ],
+  "failure": {
+    "file": "tests/integration/p5-speech.test.ts",
+    "line": 157,
+    "gate": "P5-SPEECH-011",
+    "actual": "final run state completed with same final ordinal",
+    "incorrect_expectation": "position increments beyond the last activity (1 !== 2)",
+    "fix": "Assert completed/current_activity_id=null, immutable ordinal, idempotent Next with no new attempt/evidence; create a fresh run before subsequent reset gate."
+  },
+  "not_executed_after_failure": [
+    "speech 007/008 in this run",
+    "OCI build/start/recovery",
+    "P3/P4 final acceptance summaries"
+  ],
+  "production_contract_changed": false,
+  "fix_hosted_validation": "PENDING next source"
+}

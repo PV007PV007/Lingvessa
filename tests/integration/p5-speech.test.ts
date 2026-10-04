@@ -154,7 +154,14 @@ test('P5 speech real PostgreSQL: idempotent settlement, exact facets, ownership,
    const used=async()=>Number((await db.query('SELECT attempts FROM auth_rate_windows WHERE key_hash=$1',[p5QuotaKey('speech_processing',f.learner)])).rows[0].attempts);
    const prior=await used();assert.equal((await speech.create(f.learner,key,input)).job_id,j.job_id);assert.equal(await used(),prior);
    assert.equal(await f.identity.allowLearningAction(f.learner),true);assert.equal(await count('evidence_events'),before);assert.deepEqual(await readdir(transient),[]);
-   const position=(await f.lessons.get(f.learner,f.runs.cs.id)).position;assert.equal((await speech.next(f.learner,f.runs.cs.id,j.job_id)).position,position+1);
+   const priorRun=await f.lessons.get(f.learner,f.runs.cs.id),attemptsBeforeNext=await count('activity_attempts');
+   assert.equal(priorRun.position,priorRun.manifest.activities.length-1,'Fixture is at its final activity');
+   const completed=await speech.next(f.learner,f.runs.cs.id,j.job_id);
+   assert.equal(completed.state,'completed');assert.equal(completed.current_activity_id,null);assert.equal(completed.position,priorRun.position);
+   assert.deepEqual(await speech.next(f.learner,f.runs.cs.id,j.job_id),completed);assert.equal(await count('activity_attempts'),attemptsBeforeNext);assert.equal(await count('evidence_events'),before);
+   // The following reset gate needs a new active run, not the completed quota fixture.
+   f.runs.cs=await f.lessons.start(f.learner,{language_profile_id:priorRun.language_profile_id,publication_id:priorRun.publication_id,lesson_id:priorRun.lesson_id});
+   assert.notEqual(f.runs.cs.id,priorRun.id);assert.equal(f.runs.cs.position,0);
    await db.query("UPDATE auth_rate_windows SET expires_at=clock_timestamp()-interval '1 second' WHERE key_hash=$1",[p5QuotaKey('speech_processing',f.learner)]);
   });
   await gate('P5-SPEECH-007 reset during processing settles neutral and cannot receive late mastery credit',async()=>{

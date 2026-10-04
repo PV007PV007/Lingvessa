@@ -784,13 +784,14 @@
         "CHK-N-TS-P17-T02-R06",
         "CHK-N-TS-P18-T02-R08"
       ],
-      "readiness": "Speech lifecycle, real mic UI, cleanup/expiry/lease/cancel races hosted push PASS. Separate processing/transport limits and neutral quota exhaustion await new CI; real scoring remains unavailable under OD-005/006.",
+      "readiness": "Speech 011 reached expected neutral completion; test incorrectly expected an out-of-range position. Corrected final-activity assertion and fresh-run setup; new full hosted run pending. Other quota/media/turn/flag gates executed and passed before that failure.",
       "contract_change": "No governing contract change; P5 concrete implementation only",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
     }
   ],
-  "timestamp": "2026-10-04T07:43:43.564060+00:00",
-  "last_hosted_tested_sha": "5e9f9e35c5b511490c3f89e91b7d8893c953d969",
-  "last_hosted_result": "PUSH_PASS_PR_CANCELLED_BATCH_NOT_MILESTONE"
+  "timestamp": "2026-10-04T09:00:28.088159+00:00",
+  "last_hosted_tested_sha": "a439952d910eaa31396f27cf78b924086c40fb7d",
+  "last_hosted_result": "FAIL_TEST_EXPECTATION",
+  "last_full_runtime_pass_sha": "5e9f9e35c5b511490c3f89e91b7d8893c953d969"
 }

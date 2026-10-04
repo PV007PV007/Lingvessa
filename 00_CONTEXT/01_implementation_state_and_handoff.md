@@ -1,14 +1,15 @@
 # Lingvessa implementation state and handoff
 
-Timestamp: 2026-10-04T07:43:43.564060+00:00
+Timestamp: 2026-10-04T09:00:28.088159+00:00
 Phase: **P5 IN PROGRESS / NOT READY**. P0–P4 ACCEPTED; P6 NOT AUTHORIZED.
 Branch: `implementation/p5-media-speech`. PR [#5](https://github.com/PV007PV007/Lingvessa/pull/5): OPEN DRAFT.
 Accepted main/P4: `5027f001237b6451237d87343ebeca58cd0af007`.
-Latest exact hosted-tested source: `5e9f9e35c5b511490c3f89e91b7d8893c953d969`. Push run 36730272286 / job 109937700024 PASS; PR run 36730280069 CANCELLED on Ubuntu APT network wait before runtime. Artifact/checksum and limits of proof: `docs/p5/evidence/ci-batch-007.json`. Local Git history is synthetic; its checkpoint SHAs are not hosted evidence. This commit's new work still requires its own CI.
+Latest exact tested source: `a439952d910eaa31396f27cf78b924086c40fb7d`. P5 PR run 37190304701 / job 111400889118 FAILED a new test expectation after successful PostgreSQL/media/flag/quota gates. Exact failure/artifact: `docs/p5/evidence/ci-batch-008.json`. The fix retains the approved final-activity completion contract and adds replay/no-extra-evidence assertions; awaiting next source CI.
+Last complete runtime PASS: `5e9f9e35c5b511490c3f89e91b7d8893c953d969`, push run 36730272286 (ci-batch-007). Local checkpoint IDs are not GitHub-tested source.
 
 ## Batch
 
-IMP-P5-001 / 002 / 003 remain IN_PROGRESS. All 356 source requirement rows retained in `docs/p5/requirement-evidence.json`; status is not blanket PASS.
+IMP-P5-001 / 002 / 003 remain IN_PROGRESS. All 356 rows reviewed and retained: 173 PASS / 31 PARTIAL / 152 PENDING. Exact gate/source linkage and compound follow-ups are in `docs/p5/requirement-evidence.json` and `trace-review.md`. No future milestone is implemented to close a compound clause.
 
 Verified previous batch: exact avatar/character/version closure and audio-clock UI, atomic encrypted transient audio writes, cleanup failure/expiry/lease/cancel-race recovery, shared EN/CS microphone journeys and neutral unavailable paths.
 
@@ -27,4 +28,5 @@ New batch: pinned Node 24.19.0 / pnpm 11.19.0; dependency audit zero findings; b
 P5 NOT READY. M01 has 18 original SVG drafts, 12 flag drafts, 168 scripts/420 audio slots and 6 voice profiles; audio bytes and human publication QA are incomplete. Approved assets = 0. Requirement trace and final exact-source acceptance remain.
 BLOCKER: none established. IMPORTANT: reference media/QA/trace and new hosted gates. MINOR: inherited Actions Node/Argon2id warnings. EXC-P1-001: main not technically protected; PR/green CI/owner review controls retained.
 Open owner decisions: OD-004 delivery profile; OD-005 providers/licences/voices; OD-006 calibrated usable speech. Paid inference false, monthly paid budget 0; unapproved scoring unavailable, no evidence.
-Exact next task: push/test the new P5 batch, inspect real logs and fix failures; complete trace closure and concrete decision inputs. Keep PR #5 open and stop before P6.
+Concrete decision inputs: `docs/p5/owner-decision-inputs.md` covers private delivery, bounded local TTS audition/voice licence gaps and calibration. No approval is inferred.
+Exact next task: push the corrected fixture assertion, repeat full hosted acceptance, update evidence; then complete approved reference media/QA decisions. Keep PR #5 open and stop before P6.
