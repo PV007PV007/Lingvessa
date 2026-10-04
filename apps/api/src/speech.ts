@@ -13,7 +13,7 @@ function token(request:Request){const found=(request.headers.cookie??'').split('
 @Controller('speech/jobs')
 export class SpeechController {
  constructor(@Inject(IDENTITY)private readonly identity:IdentityRepository,@Inject(SPEECH)private readonly services:SpeechServices){}
- private async principal(r:Request,mutation=false){const p=await this.identity.authenticate(token(r));if(mutation){this.identity.checkCsrf(p,r.headers['x-csrf-token']??'');if(!await this.identity.allowLearningAction(p.userId))throw new ContractError('RATE_LIMITED','Speech action limit reached');}return p;}
+ private async principal(r:Request,mutation=false,costLimit=true){const p=await this.identity.authenticate(token(r));if(mutation){this.identity.checkCsrf(p,r.headers['x-csrf-token']??'');if(costLimit&&!await this.identity.allowSpeechTransport(p.userId))throw new ContractError('RATE_LIMITED','Speech transport limit reached');}return p;}
  @Post() @Header('Cache-Control','private, no-store')
  async create(@Req() r:Request,@Body() body:unknown){const p=await this.principal(r,true);return this.services.repository.create(p.userId,uuid.parse(r.headers['idempotency-key']),body);}
  @Get() @Header('Cache-Control','private, no-store')
@@ -25,7 +25,7 @@ export class SpeechController {
  @Post(':id/submit') @HttpCode(200) @Header('Cache-Control','private, no-store')
  async submit(@Req() r:Request,@Param('id') id:string,@Body() body:unknown){const p=await this.principal(r,true);return this.services.repository.submit(p.userId,uuid.parse(id),body??{});}
  @Post(':id/cancel') @HttpCode(200) @Header('Cache-Control','private, no-store')
- async cancel(@Req() r:Request,@Param('id') id:string,@Body() body:unknown){const p=await this.principal(r,true);z.object({}).strict().parse(body??{});return this.services.repository.cancel(p.userId,uuid.parse(id));}
+ async cancel(@Req() r:Request,@Param('id') id:string,@Body() body:unknown){const p=await this.principal(r,true,false);z.object({}).strict().parse(body??{});return this.services.repository.cancel(p.userId,uuid.parse(id));}
 }
 @Controller('lesson-runs')
 export class SpeechNextController {

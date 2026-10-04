@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-10-04T07:43:43.564060+00:00",
+  "tested_sha": "5e9f9e35c5b511490c3f89e91b7d8893c953d969",
+  "status": "PUSH_PASS_PR_CANCELLED_NOT_MILESTONE",
+  "push": {
+    "run_id": 36730272286,
+    "job_id": 109937700024,
+    "conclusion": "success",
+    "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/36730272286",
+    "artifact_id": 11104498493,
+    "artifact_sha256": "86f4530939b35a421b70023c56a5964b2263c66892b63ed577b50aad1c5b5398",
+    "all_required_steps_executed": true
+  },
+  "pull_request": {
+    "run_id": 36730280069,
+    "job_id": 109937728416,
+    "conclusion": "cancelled",
+    "cause": "Ubuntu APT network wait during Playwright dependency installation; runtime gates did not execute in this run.",
+    "artifact_id": 11106937783,
+    "artifact_sha256": "71602db5bb0e79f4b74f30ceb2e94c802b865a5b9a70d04ba786dd842fc78c62",
+    "all_required_steps_executed": false
+  },
+  "executed_on_push": [
+    "pnpm install --frozen-lockfile",
+    "pnpm validate:baseline: 74/74",
+    "pnpm check: 50 unit + 4 smoke, zero failures/skips",
+    "pnpm validate:references",
+    "node --import tsx tools/p5/reference-media.ts --check",
+    "pnpm audit:dependencies: high/critical gate passed at run time; later disclosures supersede dependency health",
+    "MINIO_BINARY=<pinned fixture binary> node --import tsx tools/p5/storage-gate.ts: three actual S3 gates",
+    "pnpm bootstrap:local: real PostgreSQL 18.6, six migrations, seed",
+    "node --env-file=.local/runtime.env --import tsx --test tests/integration/*.test.ts: 16 passed, zero failures/skips",
+    "10 actual Chromium tests: P3 4 + P4 2 + P5 audio 2 + P5 speech 2",
+    "P5-SPEECH-001 through P5-SPEECH-010: exact evidence, idempotency, expiry/cleanup failure, lease/cancel/stale execution",
+    "pnpm test:containers: four OCI builds/start/readiness/degraded/recovery",
+    "P3/P4 acceptance-summary regressions"
+  ],
+  "production_provider_or_linguistic_qa_approved": false
+}

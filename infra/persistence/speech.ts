@@ -15,6 +15,7 @@ import {lockLearningProfile} from './learning-lock.js';
 import {LessonRepository} from './lessons.js';
 import type {RunRow,RunView} from './lessons.js';
 import {refreshMastery} from './mastery.js';
+import {takeP5Quota} from './p5-quota.js';
 
 type Job={id:string;attempt_id:string;idempotency_key:string;request_hash:string;user_id:string;language_profile_id:string;language_id:string;lesson_run_id:string;item_id:string;content_version_id:string;policy_id:string|null;policy_code:string;policy_version:string;provider_code:string;model_version:string;state:SpeechState;attempts:number;execution_id:string|null;lease_until:Date|null;expires_at:Date;mime:string|null;audio_checksum:string|null;audio_bytes:number|null;settled_at:Date|null;outcome:SpeechOutcome|null;reason:SpeechReason|null;feedback:string;cleanup_pending:boolean;audio_deleted_at:Date|null};
 type Context={db:pg.PoolClient;job:Job;run:RunRow};
@@ -49,6 +50,7 @@ export class SpeechRepository {
     VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,statement_timestamp(),statement_timestamp()+interval '14 minutes') RETURNING *`,
     [id,input.attempt_id,key,requestHash,userId,run.language_profile_id,run.language_id,run.id,input.item_id,run.content_version_id,approved?.id??null,a.response.answer_policy.id,a.response.answer_policy.version,this.evaluator.code,this.evaluator.modelVersion])).rows[0] as Job;
    if(!approved||!this.evaluator.available)await this.settle({db,job,run},'unavailable','speech_unavailable',!approved?'policy_unavailable':'provider_unavailable');
+   else if(!await takeP5Quota(db,'speech_processing',userId))await this.settle({db,job,run},'unavailable','speech_unavailable','quota_exhausted');
    return id;
   });
   return this.get(userId,id);

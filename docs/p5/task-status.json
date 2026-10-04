@@ -286,8 +286,8 @@
         "CHK-N-TS-P17-T02-R05",
         "CHK-N-TS-P19-T03-R08"
       ],
-      "readiness": "Media/storage/publishing foundations hosted PASS. Added versioned character/avatar closure and original M01 media drafts; actual voices/audio, flags and human media QA remain open. New avatar closure hosted test PENDING.",
-      "contract_change": "None in P0; future schema/API work remains in named task",
+      "readiness": "Media/storage/publication/avatar closure hosted push PASS; 18 original SVG plus 12 national-flag drafts prepared. Actual audio, approved voices and human media QA remain open. Quota/turn/flag additions await new CI.",
+      "contract_change": "No governing contract change; P5 concrete implementation only",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
     },
@@ -408,8 +408,8 @@
         "CHK-N-TS-P13-T03-R08",
         "CHK-N-TS-P16-T01-R02"
       ],
-      "readiness": "Normal/slow and speaker clock hosted PASS; exact avatar sync/byte delivery assertions added, awaiting this batch CI. No approved reference audio is claimed.",
-      "contract_change": "None in P0; future schema/API work remains in named task",
+      "readiness": "Normal/slow, exact avatar and speaker-clock hosted push PASS; mandatory turn UUID continuity and static flag geometry browser tests await new CI.",
+      "contract_change": "No governing contract change; P5 concrete implementation only",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
     },
@@ -784,13 +784,13 @@
         "CHK-N-TS-P17-T02-R06",
         "CHK-N-TS-P18-T02-R08"
       ],
-      "readiness": "Mic UI and 8 speech DB/API/browser gates hosted PASS at 76aa3aedc12f31eada6e6320ec526a3fcda36cf9. Added atomic transient writes and expiry/lease/cancel race/cleanup fault gates; new DB gates awaiting CI. Real scoring default unavailable under OD-005/006.",
-      "contract_change": "None in P0; future schema/API work remains in named task",
+      "readiness": "Speech lifecycle, real mic UI, cleanup/expiry/lease/cancel races hosted push PASS. Separate processing/transport limits and neutral quota exhaustion await new CI; real scoring remains unavailable under OD-005/006.",
+      "contract_change": "No governing contract change; P5 concrete implementation only",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
     }
   ],
-  "timestamp": "2026-09-30T10:39:03.080510+00:00",
-  "last_hosted_tested_sha": "76aa3aedc12f31eada6e6320ec526a3fcda36cf9",
-  "last_hosted_result": "PASS_BATCH_NOT_MILESTONE"
+  "timestamp": "2026-10-04T07:43:43.564060+00:00",
+  "last_hosted_tested_sha": "5e9f9e35c5b511490c3f89e91b7d8893c953d969",
+  "last_hosted_result": "PUSH_PASS_PR_CANCELLED_BATCH_NOT_MILESTONE"
 }

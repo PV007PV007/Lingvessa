@@ -1,5 +1,6 @@
 /// <reference lib="dom" />
 import {test,expect} from '@playwright/test';
+import {readFileSync} from 'node:fs';
 for(const language of ['en','cs'] as const)test(`P5 ${language} audio: explicit play, reviewed slow pin, speaker clock and failure text`,async({page})=>{
  const run=process.env[language==='en'?'P5_EN_RUN':'P5_CS_RUN'];expect(run).toBeTruthy();
  await page.goto(`/lesson/${run}`);await page.getByLabel('Email',{exact:true}).fill('p5-learner@example.invalid');await page.getByLabel('Пароль',{exact:true}).fill('Synthetic P5 learner password!');await page.getByRole('button',{name:'Увійти та відновити'}).click();
@@ -23,4 +24,19 @@ for(const language of ['en','cs'] as const)test(`P5 ${language} audio: explicit 
  await page.route('**/media?item_id=*',async route=>{const response=await route.fetch();const assets=await response.json() as Array<{speed:string}>;await route.fulfill({response,json:assets.filter(a=>a.speed!=='slow')});});
  await page.reload();await expect(audio).toHaveCount(1);await page.getByRole('button',{name:'Повільно',exact:true}).click();
  await expect.poll(()=>audio.evaluate(e=>(e as HTMLAudioElement).playbackRate)).toBe(0.75);expect(await audio.evaluate(e=>(e as HTMLAudioElement).preservesPitch)).toBe(true);
+});
+
+for(const country of ['gb','ua','cz','pl','de','sk','es'])test(`P5 flag ${country}: static normalization preserves source geometry`,async({page})=>{
+ const files=['source','normalized'].map(kind=>readFileSync(`assets/specs/p5/flags/${kind}/${country}.svg`,'utf8'));
+ const viewBox=(xml:string)=>/viewBox="([^"]+)"/u.exec(xml)![1]!.split(/\s+/u).map(Number);
+ expect(viewBox(files[1]!)).toEqual(viewBox(files[0]!));
+ await page.goto('about:blank');
+ const comparison=await page.evaluate(async values=>{
+  const images=await Promise.all(values.map(async value=>{const img=new Image();img.src=`data:image/svg+xml;base64,${value}`;await img.decode();return img;}));
+  const pixels=images.map(img=>{const c=document.createElement('canvas');c.width=300;c.height=150;const ctx=c.getContext('2d')!;ctx.fillStyle='#fff';ctx.fillRect(0,0,300,150);ctx.drawImage(img,0,0,300,150);return ctx.getImageData(0,0,300,150).data;});
+  let changed=0;for(let i=0;i<pixels[0]!.length;i+=4){if(Math.max(...[0,1,2].map(k=>Math.abs(pixels[0]![i+k]!-pixels[1]![i+k]!)))>32)changed++;}
+  return changed/(300*150);
+ },files.map(s=>Buffer.from(s).toString('base64')));
+ // Edge antialiasing may differ; lost/moved flag geometry cannot pass this bound.
+ expect(comparison).toBeLessThan(0.015);
 });

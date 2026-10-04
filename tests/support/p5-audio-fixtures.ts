@@ -1,5 +1,6 @@
 import {randomUUID,createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
 import type pg from 'pg';
 import type {AssetStore} from '../../packages/application/src/media.js';
 import type {AssetVersion} from '../../packages/activity-schemas/src/media.js';
@@ -41,15 +42,19 @@ export async function p5AudioFixture(db:pg.Pool,store:AssetStore){
    const ref={asset_id:avatar.metadata.asset_id,asset_version:1,asset_stable_code:avatar.metadata.stable_code,role};
    activity.media_refs.push(ref);activity.contract!.presentation.media_refs.push(ref);
   }
-  const normalId=randomUUID(),assets:AssetVersion[]=[];
+  const normalId=randomUUID(),turnIds=[randomUUID(),randomUUID()],assets:AssetVersion[]=[];
   for(const speed of ['normal','slow'] as const){
    const duration=speed==='normal'?8000:12000,bytes=toneWav(duration),id=speed==='normal'?normalId:randomUUID();
    const metadata:AssetVersion={asset_id:id,stable_code:`P5_${language}_${speed}_AUDIO`,asset_version:1,version_code:'fixture-1',kind:'audio',scope:{language,variety},purpose:'Synthetic PCM/timing fixture; not course audio',mime:'audio/wav',checksum:createHash('sha256').update(bytes).digest('hex'),byte_length:bytes.length,duration_ms:duration,codec:'pcm_s16le',loudness_lufs:-34,decorative:false,alt_text:'',transcript,script_version:'fixture-1',script_hash:scriptHash,speed,voice_id:voiceIds[0]!,voice_version_code:'fixture-1',rights,
     ...(speed==='slow'?{normal_asset_id:normalId,normal_asset_version:1}:{}),
-    turns:[{speaker:'A',voice_id:voiceIds[0]!,voice_version_code:'fixture-1',character_id:charIds[0],character_version_code:'fixture-1',start_ms:0,end_ms:duration/2,text:language==='en'?'Tone A.':'Tón A.'},
-     {speaker:'B',voice_id:voiceIds[1]!,voice_version_code:'fixture-1',character_id:charIds[1],character_version_code:'fixture-1',start_ms:duration/2,end_ms:duration,text:language==='en'?'Tone B.':'Tón B.'}]};
+    turns:[{turn_id:turnIds[0]!,speaker:'A',voice_id:voiceIds[0]!,voice_version_code:'fixture-1',character_id:charIds[0],character_version_code:'fixture-1',start_ms:0,end_ms:duration/2,text:language==='en'?'Tone A.':'Tón A.'},
+     {turn_id:turnIds[1]!,speaker:'B',voice_id:voiceIds[1]!,voice_version_code:'fixture-1',character_id:charIds[1],character_version_code:'fixture-1',start_ms:duration/2,end_ms:duration,text:language==='en'?'Tone B.':'Tón B.'}]};
    const requirement=randomUUID();await f.media.declareRequirement(f.author,{id:requirement,target_content_version_id:fixture.content_version_id,item_id:activity.id,role:speed,required:true,kind:'audio',scope:{language,variety},specification_version:'fixture-1',specification:'Original tone with two synthetic timing windows; no real speech or linguistic evaluation',accessibility_role:'semantic'});
    const job=await f.media.enqueue(f.author,requirement,randomUUID(),'programmatic_fixture',rights.generator_version);
+   if(speed==='slow'){
+    const mismatch=structuredClone(metadata);mismatch.turns![0]!.turn_id=randomUUID();
+    await assert.rejects(f.media.ingest(f.author,job,mismatch,bytes),{code:'23514'},'Slow audio must retain normal turn identities');
+   }
    await f.approve(await f.media.ingest(f.author,job,metadata,bytes));assets.push(metadata);
    const ref={asset_id:id,asset_version:1,asset_stable_code:metadata.stable_code,role:speed};activity.media_refs.push(ref);activity.contract!.presentation.media_refs.push(ref);
   }

@@ -4,7 +4,7 @@ const uuid=z.string().regex(UUID_PATTERN),code=z.string().regex(STABLE_CODE_PATT
 export const speechStates=['created','uploaded','queued','processing','succeeded','unavailable','failed','cancelled','expired'] as const;
 export const speechOutcomes=['speech_correct','speech_incorrect','speech_unavailable'] as const;
 export const speechStateSchema=z.enum(speechStates),speechOutcomeSchema=z.enum(speechOutcomes);
-export const speechReasonSchema=z.enum(['matched','target_mismatch','mic_denied','mic_absent','unsupported_audio','low_confidence','provider_unavailable','provider_timeout','provider_failure','policy_unavailable','invalid_result','user_cancelled','expired','context_superseded']);
+export const speechReasonSchema=z.enum(['matched','target_mismatch','mic_denied','mic_absent','unsupported_audio','low_confidence','provider_unavailable','provider_timeout','provider_failure','policy_unavailable','invalid_result','user_cancelled','expired','context_superseded','quota_exhausted']);
 export const createSpeechJobSchema=z.object({attempt_id:uuid,language_profile_id:uuid,lesson_run_id:uuid,item_id:uuid,content_version_id:uuid}).strict();
 export const submitSpeechJobSchema=z.object({client_unavailable_reason:z.enum(['mic_denied','mic_absent','unsupported_audio']).optional()}).strict();
 export const speechResultSchema=z.object({usable:z.boolean(),confidence:z.number().min(0).max(1),target_match:z.boolean(),error_tags:z.array(code).max(12),processing_ms:z.number().int().nonnegative().max(900000)}).strict();

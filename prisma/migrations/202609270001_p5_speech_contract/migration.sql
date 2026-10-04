@@ -25,7 +25,7 @@ CREATE TABLE speech_jobs (
  mime text, audio_checksum text CHECK(audio_checksum~'^[a-f0-9]{64}$'), audio_bytes integer CHECK(audio_bytes BETWEEN 1 AND 5242880),
  audio_deleted_at timestamptz, cleanup_pending boolean NOT NULL DEFAULT false,
  settled_at timestamptz, outcome text CHECK(outcome IN ('speech_correct','speech_incorrect','speech_unavailable')),
- reason text CHECK(reason IN ('matched','target_mismatch','mic_denied','mic_absent','unsupported_audio','low_confidence','provider_unavailable','provider_timeout','provider_failure','policy_unavailable','invalid_result','user_cancelled','expired','context_superseded')),
+ reason text CHECK(reason IN ('matched','target_mismatch','mic_denied','mic_absent','unsupported_audio','low_confidence','provider_unavailable','provider_timeout','provider_failure','policy_unavailable','invalid_result','user_cancelled','expired','context_superseded','quota_exhausted')),
  result jsonb, feedback text NOT NULL DEFAULT '',
  UNIQUE(user_id,attempt_id), UNIQUE(user_id,idempotency_key), UNIQUE(id,user_id), UNIQUE(id,user_id,language_profile_id,language_id),
  FOREIGN KEY(lesson_run_id,user_id,language_profile_id,language_id,item_id) REFERENCES lesson_run_items(lesson_run_id,user_id,language_profile_id,language_id,item_id),

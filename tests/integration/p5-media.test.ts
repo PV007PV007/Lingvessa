@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {randomBytes} from 'node:crypto';
+import {randomBytes,randomUUID} from 'node:crypto';
 import {spawnSync,execFileSync} from 'node:child_process';
 import {mkdirSync,writeFileSync} from 'node:fs';
 import {mkdtemp,rm,writeFile} from 'node:fs/promises';
@@ -13,6 +13,7 @@ import {seedBootstrap} from '../../prisma/seed.js';
 import {LocalAssetStore} from '../../packages/provider-adapters/storage/local.js';
 import {assetObjectKey} from '../../packages/provider-adapters/storage/asset-integrity.js';
 import {p5MediaFixture} from '../support/p5-fixtures.js';
+import {takeP5Quota,P5_QUOTAS} from '../../infra/persistence/p5-quota.js';
 
 test('P5 real PostgreSQL: media ownership, immutable versions, bytes preflight and publication pins',{timeout:240000},async()=>{
  const base=localDatabaseUrl(process.env),admin=new pg.Client({connectionString:base,connectionTimeoutMillis:2000}),name=`lingvessa_p5_test_${randomBytes(8).toString('hex')}`,url=new URL(base);url.pathname=`/${name}`;
@@ -71,6 +72,13 @@ test('P5 real PostgreSQL: media ownership, immutable versions, bytes preflight a
    await rm(path);await assert.rejects(f.content.validateVersion(cs.lesson.version_id),/metadata mismatch/);
    await store.putImmutable(key,cs.asset.bytes,a.mime,a.checksum);await f.publish('cs','media-cs-1');
    assert.equal((await db.query('SELECT count(*) FROM media_jobs')).rows[0].count,'3','Publishing never starts generation');
+  });
+  await gate('P5-MEDIA-QUOTA-001 generation quota separates work cost; replay and learning do not consume it',async()=>{
+   for(let n=0;n<P5_QUOTAS.media_generation;n++)await takeP5Quota(db,'media_generation',f.author);
+   assert.equal(await f.media.enqueue(f.author,en.requirement,en.key,'programmatic_fixture','p5-fixture-1'),en.job);
+   await assert.rejects(f.media.enqueue(f.author,en.requirement,randomUUID(),'programmatic_fixture','p5-fixture-1'),/quota exhausted/);
+   assert.equal((await db.query('SELECT count(*) FROM media_jobs')).rows[0].count,'3');
+   assert.equal(await f.identity.allowLearningAction(f.author),true);assert.equal(await f.identity.allowSpeechTransport(f.author),true);
   });
   await gate('P5-MEDIA-DB-002 clean recreation and migration/seed recovery',async()=>{
    await db.end();pool=undefined;await admin.query(`DROP DATABASE "${name}" WITH (FORCE)`);created=false;

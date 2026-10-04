@@ -26,6 +26,7 @@ test('P5 audio: published delivery, ownership, byte ranges, support and normal/s
   await gate('P5-AUDIO-DB-001 published pins preserve normal/slow script, language and voice',async()=>{
    for(const language of ['en','cs'] as const){const list=await f.media.forRun(f.learner,f.runs[language].id,f.audio[language].itemId);assert.equal(list.length,4);assert(list.every(a=>a.scope.language===language));
     const slow=list.find(a=>a.speed==='slow')!;assert.equal(slow.normal_asset_id,f.audio[language].normal.asset_id);assert.equal(slow.turns![1]!.start_ms,6000);assert(!JSON.stringify(list).includes('provider_external_id'));
+    assert.deepEqual(slow.turns!.map(t=>t.turn_id),list.find(a=>a.speed==='normal')!.turns!.map(t=>t.turn_id));
     const avatars=list.filter(a=>a.kind==='avatar');assert.equal(avatars.length,2);
     for(const turn of slow.turns!)assert(avatars.some(a=>a.character_id===turn.character_id&&a.character_version_code===turn.character_version_code));
     const refs=list.map(a=>({asset_id:a.asset_id,asset_version:a.asset_version}));

@@ -33,7 +33,7 @@ function AudioPlayer({asset,slow,avatars,runId,itemId,onPlay,onTranscript}:{asse
   <button type="button" onClick={()=>{if(audio.current){audio.current.currentTime=0;setPosition(0);}void play(rate);}}>Ще раз</button>
   {message&&<p role="status">{message}</p>}
   <details onToggle={e=>{if(e.currentTarget.open)onTranscript();}}><summary>Текст запису</summary>
-   {turns.length?<ol>{turns.map((turn,index)=><li key={index} aria-current={active===index?'true':undefined} className={active===index?'active-speaker':''}><strong>{turn.speaker}: </strong><span lang={selected.scope.variety}>{turn.text}</span></li>)}</ol>:<p lang={selected.scope.variety}>{selected.transcript}</p>}
+   {turns.length?<ol>{turns.map((turn,index)=><li key={turn.turn_id} aria-current={active===index?'true':undefined} className={active===index?'active-speaker':''}><strong>{turn.speaker}: </strong><span lang={selected.scope.variety}>{turn.text}</span></li>)}</ol>:<p lang={selected.scope.variety}>{selected.transcript}</p>}
   </details>
  </section>;
 }

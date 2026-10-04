@@ -26,6 +26,7 @@ export const characterSchema = z.object({
   voice_id: uuid, voice_version_code: version, rights: rightsSchema,
 }).strict();
 export const audioTurnSchema = z.object({
+  turn_id:uuid,
   speaker: code, voice_id: uuid, voice_version_code: version,
   character_id: uuid.optional(), character_version_code: version.optional(),
   start_ms: z.number().int().nonnegative(), end_ms: z.number().int().positive(),
@@ -55,8 +56,8 @@ export const assetVersionSchema = z.object({
     if(a.decorative) error('Instructional audio is not decorative');
     if(a.speed==='slow'&&(!a.normal_asset_id||!a.normal_asset_version))error('Slow assets must pin their normal-speed source');
     if(a.speed!=='slow'&&(a.normal_asset_id||a.normal_asset_version))error('Normal-speed linkage is only valid for a slow asset');
-    let end=0;
-    for(const t of a.turns??[]) { if(t.start_ms<end || t.end_ms>(a.duration_ms??0)) error('Audio turns overlap or exceed duration'); end=t.end_ms; }
+    let end=0;const turnIds=new Set<string>();
+    for(const t of a.turns??[]) { if(turnIds.has(t.turn_id))error('Audio turn IDs must be unique');turnIds.add(t.turn_id);if(t.start_ms<end || t.end_ms>(a.duration_ms??0)) error('Audio turns overlap or exceed duration'); end=t.end_ms; }
   } else if(!a.mime.startsWith('image/') || !a.width || !a.height || (!a.decorative && !a.alt_text.trim()) || (a.decorative && a.alt_text)) error('Image dimensions and correct alt/decorative treatment required');
 });
 export type AssetVersion = z.infer<typeof assetVersionSchema>;

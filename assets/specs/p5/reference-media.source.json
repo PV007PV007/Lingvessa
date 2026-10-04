@@ -206,7 +206,8 @@
       "language": "en",
       "kind": "vector",
       "country": "GB",
-      "status": "pending_verified_geometry"
+      "status": "draft_geometry_prepared",
+      "alt_text": "Прапор Сполученого Королівства."
     },
     {
       "id": "2f888ad5-38ae-5d71-be34-b77ba3e476c7",
@@ -214,7 +215,8 @@
       "language": "en",
       "kind": "vector",
       "country": "UA",
-      "status": "pending_verified_geometry"
+      "status": "draft_geometry_prepared",
+      "alt_text": "Прапор України."
     },
     {
       "id": "ae940034-c704-591f-897b-2669aafbe16c",
@@ -222,7 +224,8 @@
       "language": "en",
       "kind": "vector",
       "country": "CZ",
-      "status": "pending_verified_geometry"
+      "status": "draft_geometry_prepared",
+      "alt_text": "Прапор Чехії."
     },
     {
       "id": "323c6dca-a589-5cc2-aebe-2d363651c81f",
@@ -230,7 +233,8 @@
       "language": "en",
       "kind": "vector",
       "country": "PL",
-      "status": "pending_verified_geometry"
+      "status": "draft_geometry_prepared",
+      "alt_text": "Прапор Польщі."
     },
     {
       "id": "f41141a3-82af-5631-bbd0-e1a2ead89144",
@@ -238,7 +242,8 @@
       "language": "en",
       "kind": "vector",
       "country": "DE",
-      "status": "pending_verified_geometry"
+      "status": "draft_geometry_prepared",
+      "alt_text": "Прапор Німеччини."
     },
     {
       "id": "d53fcc32-7ef0-5023-8027-119470c1954c",
@@ -246,7 +251,8 @@
       "language": "en",
       "kind": "vector",
       "country": "ES",
-      "status": "pending_verified_geometry"
+      "status": "draft_geometry_prepared",
+      "alt_text": "Прапор Іспанії."
     },
     {
       "id": "75663a3a-dc48-58f3-bdb5-6814e79b136b",
@@ -254,7 +260,8 @@
       "language": "cs",
       "kind": "vector",
       "country": "CZ",
-      "status": "pending_verified_geometry"
+      "status": "draft_geometry_prepared",
+      "alt_text": "Прапор Чехії."
     },
     {
       "id": "07a52e56-4e1e-5f2b-99c6-7bfc22ece164",
@@ -262,7 +269,8 @@
       "language": "cs",
       "kind": "vector",
       "country": "UA",
-      "status": "pending_verified_geometry"
+      "status": "draft_geometry_prepared",
+      "alt_text": "Прапор України."
     },
     {
       "id": "431b17ff-fad9-5d8a-b116-fe46d0d0f9ea",
@@ -270,7 +278,8 @@
       "language": "cs",
       "kind": "vector",
       "country": "PL",
-      "status": "pending_verified_geometry"
+      "status": "draft_geometry_prepared",
+      "alt_text": "Прапор Польщі."
     },
     {
       "id": "364b3ad4-0b6b-5c2c-ac27-94f104183abb",
@@ -278,7 +287,8 @@
       "language": "cs",
       "kind": "vector",
       "country": "DE",
-      "status": "pending_verified_geometry"
+      "status": "draft_geometry_prepared",
+      "alt_text": "Прапор Німеччини."
     },
     {
       "id": "7f959b5a-869a-551f-8903-1ddb7692b75f",
@@ -286,7 +296,8 @@
       "language": "cs",
       "kind": "vector",
       "country": "SK",
-      "status": "pending_verified_geometry"
+      "status": "draft_geometry_prepared",
+      "alt_text": "Прапор Словаччини."
     },
     {
       "id": "4a5b09ff-5ebf-525f-a478-9b4c0326e208",
@@ -294,7 +305,8 @@
       "language": "cs",
       "kind": "vector",
       "country": "ES",
-      "status": "pending_verified_geometry"
+      "status": "draft_geometry_prepared",
+      "alt_text": "Прапор Іспанії."
     }
   ],
   "voices": [

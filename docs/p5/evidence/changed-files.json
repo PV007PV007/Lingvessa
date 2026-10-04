@@ -1,6 +1,6 @@
 {
   "compared_to_accepted_main": "5027f001237b6451237d87343ebeca58cd0af007",
-  "timestamp": "2026-09-30T10:39:03.080510+00:00",
+  "timestamp": "2026-10-04T07:43:43.564060+00:00",
   "files": [
     {
       "path": ".github/workflows/p5.yml",
@@ -8,6 +8,10 @@
     },
     {
       "path": "00_CONTEXT/01_implementation_state_and_handoff.md",
+      "status": "M"
+    },
+    {
+      "path": "apps/admin/package.json",
       "status": "M"
     },
     {
@@ -25,6 +29,10 @@
     {
       "path": "apps/api/src/speech.ts",
       "status": "A"
+    },
+    {
+      "path": "apps/web/package.json",
+      "status": "M"
     },
     {
       "path": "apps/web/src/app/api/v1/[...segments]/route.ts",
@@ -52,6 +60,70 @@
     },
     {
       "path": "assets/specs/p5/README.md",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/flags/UPSTREAM-README.md",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/flags/normalized/cz.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/flags/normalized/de.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/flags/normalized/es.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/flags/normalized/gb.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/flags/normalized/pl.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/flags/normalized/sk.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/flags/normalized/ua.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/flags/provenance.json",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/flags/source/cz.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/flags/source/de.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/flags/source/es.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/flags/source/gb.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/flags/source/pl.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/flags/source/sk.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/flags/source/ua.svg",
       "status": "A"
     },
     {
@@ -175,11 +247,23 @@
       "status": "A"
     },
     {
+      "path": "docs/p5/evidence/ci-batch-007.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/dependency-remediation-008.json",
+      "status": "A"
+    },
+    {
       "path": "docs/p5/evidence/local-audio-validation.json",
       "status": "A"
     },
     {
       "path": "docs/p5/evidence/local-batch-007.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/local-batch-008.json",
       "status": "A"
     },
     {
@@ -192,6 +276,10 @@
     },
     {
       "path": "docs/p5/evidence/p4-handoff-at-acceptance.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/schema-api-diff.md",
       "status": "A"
     },
     {
@@ -235,6 +323,10 @@
       "status": "M"
     },
     {
+      "path": "infra/persistence/identity.ts",
+      "status": "M"
+    },
+    {
       "path": "infra/persistence/lessons.ts",
       "status": "M"
     },
@@ -245,6 +337,10 @@
     {
       "path": "infra/persistence/p3-fixtures.ts",
       "status": "M"
+    },
+    {
+      "path": "infra/persistence/p5-quota.ts",
+      "status": "A"
     },
     {
       "path": "infra/persistence/speech.ts",
@@ -325,6 +421,14 @@
     {
       "path": "packages/provider-adapters/storage/s3.ts",
       "status": "A"
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "status": "M"
+    },
+    {
+      "path": "pnpm-workspace.yaml",
+      "status": "M"
     },
     {
       "path": "prisma/migrations/202609260001_p5_media_foundation/migration.sql",
@@ -432,6 +536,10 @@
     },
     {
       "path": "tools/p5/browser-gate.ts",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/normalize-flags.py",
       "status": "A"
     },
     {

@@ -136,8 +136,11 @@ BEGIN
      AND normal.metadata->>'speed'='normal' AND normal.metadata->>'script_hash'=NEW.metadata->>'script_hash'
      AND normal.metadata->>'voice_id'=NEW.metadata->>'voice_id' AND normal.metadata->>'voice_version_code'=NEW.metadata->>'voice_version_code'
      AND normal.metadata->>'transcript'=NEW.metadata->>'transcript'
+     AND (SELECT coalesce(jsonb_agg(t-ARRAY['start_ms','end_ms'] ORDER BY n),'[]') FROM jsonb_array_elements(coalesce(normal.metadata->'turns','[]')) WITH ORDINALITY x(t,n))
+      = (SELECT coalesce(jsonb_agg(t-ARRAY['start_ms','end_ms'] ORDER BY n),'[]') FROM jsonb_array_elements(coalesce(NEW.metadata->'turns','[]')) WITH ORDINALITY x(t,n))
    ) THEN RAISE EXCEPTION 'slow audio must pin the same script and voice at normal speed' USING ERRCODE='23514'; END IF;
    FOR turn IN SELECT value FROM jsonb_array_elements(coalesce(NEW.metadata->'turns','[]')) LOOP
+    IF turn->>'turn_id' IS NULL OR (turn->>'turn_id')::uuid IS NULL OR (SELECT count(*) FROM jsonb_array_elements(NEW.metadata->'turns') t WHERE t->>'turn_id'=turn->>'turn_id')<>1 THEN RAISE EXCEPTION 'audio requires unique UUID turn identities' USING ERRCODE='23514'; END IF;
     IF NOT EXISTS(SELECT 1 FROM voices v WHERE v.id=(turn->>'voice_id')::uuid AND v.version_code=turn->>'voice_version_code' AND v.language_id=NEW.language_id AND v.variety=a.variety) THEN RAISE EXCEPTION 'turn voice language/variety mismatch' USING ERRCODE='23514'; END IF;
     IF turn ? 'character_id' AND NOT EXISTS(SELECT 1 FROM characters c WHERE c.id=(turn->>'character_id')::uuid AND c.version_code=turn->>'character_version_code' AND c.language_id=NEW.language_id AND c.variety=a.variety AND c.voice_id=(turn->>'voice_id')::uuid AND c.voice_version_code=turn->>'voice_version_code') THEN RAISE EXCEPTION 'turn character binding mismatch' USING ERRCODE='23514'; END IF;
    END LOOP;

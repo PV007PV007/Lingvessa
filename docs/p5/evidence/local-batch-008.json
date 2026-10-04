@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-10-04T07:44:28.443462+00:00",
+  "source": "working tree based on 5e9f9e35c5b511490c3f89e91b7d8893c953d969; new remote CI pending",
+  "toolchain": {
+    "node": "24.19.0",
+    "pnpm": "11.19.0"
+  },
+  "commands": [
+    {
+      "command": "pnpm install --no-frozen-lockfile",
+      "result": "PASS; exact three security pins, reviewed lockfile diff"
+    },
+    {
+      "command": "pnpm check",
+      "result": "PASS: 50 unit + 4 smoke; no fail/skip; types/lint/boundaries/secrets/Prisma/production server/web/admin build"
+    },
+    {
+      "command": "pnpm audit --prod --json",
+      "result": "PASS: zero vulnerabilities"
+    },
+    {
+      "command": "pnpm validate:baseline",
+      "result": "PASS: 74/74"
+    },
+    {
+      "command": "python3 tools/p5/normalize-flags.py --check",
+      "result": "PASS: 7 pinned geometries"
+    },
+    {
+      "command": "node --import tsx tools/p5/reference-media.ts --check",
+      "result": "PASS structure; 18 original + 12 flags/168 scripts/420 audio slots/6 voice profiles; approved 0; publication_ready false"
+    },
+    {
+      "command": "git diff --check",
+      "result": "PASS"
+    }
+  ],
+  "test_log_sha256": "b2e6ec6e677f3d9fe891c2f49de640a5c1849c8fb906243ac1b2904a4def8bde",
+  "limitations": "No native PostgreSQL, Docker or browser execution is claimed locally; hosted gates are required."
+}

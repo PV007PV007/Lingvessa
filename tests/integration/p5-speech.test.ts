@@ -22,6 +22,7 @@ import {createApi} from '../../apps/api/src/app.js';
 import {p5SpeechFixture} from '../support/p5-speech-fixtures.js';
 import {toneWav} from '../support/p5-audio-fixtures.js';
 import {p5BrowserGate} from '../../tools/p5/browser-gate.js';
+import {takeP5Quota,p5QuotaKey,P5_QUOTAS} from '../../infra/persistence/p5-quota.js';
 
 test('P5 speech real PostgreSQL: idempotent settlement, exact facets, ownership, callback replay, retries and transient cleanup',{timeout:300000},async()=>{
  const base=localDatabaseUrl(process.env),admin=new pg.Client({connectionString:base}),name=`lingvessa_p5_test_${randomBytes(8).toString('hex')}`,url=new URL(base);url.pathname=`/${name}`;
@@ -98,6 +99,17 @@ test('P5 speech real PostgreSQL: idempotent settlement, exact facets, ownership,
     assert.equal((await db.query("SELECT count(*) FROM outbox_events WHERE event_type='speech.callback.duplicate'")).rows[0].count,'1');
     const e=(await db.query('SELECT facet FROM evidence_events WHERE attempt_id=$1',[job.attempt_id])).rows[0];assert.equal(e.facet,'intelligibility');assert.deepEqual(await readdir(transient),[]);
    });
+   await gate('P5-SPEECH-012 transport quota is separate; cancellation, cleanup and poll remain available',async()=>{
+    const j=await create('cs');await upload(j);
+    for(let n=0;n<P5_QUOTAS.speech_transport;n++)await f.identity.allowSpeechTransport(f.learner);
+    assert.equal(await f.identity.allowSpeechTransport(f.learner),false);assert.equal(await f.identity.allowLearningAction(f.learner),true);
+    const url=origin+'/api/v1/speech/jobs';
+    assert.equal((await fetch(url,{method:'POST',headers:{...headers,'idempotency-key':randomUUID()},body:JSON.stringify(await fresh('cs'))})).status,429);
+    assert.equal((await fetch(url+'/'+j.job_id,{headers})).status,200);
+    const cancel=await fetch(url+'/'+j.job_id+'/cancel',{method:'POST',headers,body:'{}'});assert.equal(cancel.status,200);assert.equal((await cancel.json()).outcome,'speech_unavailable');
+    assert.deepEqual(await readdir(transient),[]);
+    await db.query("UPDATE auth_rate_windows SET expires_at=clock_timestamp()-interval '1 second' WHERE key_hash=$1",[p5QuotaKey('speech_transport',f.learner)]);
+   });
   }finally{await app.close();}
   await gate('P5-SPEECH-006 bounded failures retry same job, then one neutral settlement',async()=>{
    const before=await count('evidence_events');fail=true;const j=await create('cs');await upload(j);
@@ -133,6 +145,17 @@ test('P5 speech real PostgreSQL: idempotent settlement, exact facets, ownership,
    await speech.cancel(f.learner,active.job_id);release({...output,confidence:0.95,target_match:true});await worker;
    assert.equal((await speech.get(f.learner,active.job_id)).state,'cancelled');assert.equal(await count('evidence_events'),before);assert.deepEqual(await readdir(transient),[]);
    assert.equal((await speech.callback({...callback,event_id:randomUUID()})).disposition,'late');assert.equal(await count('evidence_events'),before);
+  });
+  await gate('P5-SPEECH-011 processing quota settles neutral, replay is free and normal learning stays available',async()=>{
+   const before=await count('evidence_events');
+   for(let n=0;n<P5_QUOTAS.speech_processing;n++)await takeP5Quota(db,'speech_processing',f.learner);
+   const input=await fresh('cs'),key=randomUUID(),j=await speech.create(f.learner,key,input);
+   assert.equal(j.outcome,'speech_unavailable');assert.equal(j.reason,'quota_exhausted');assert.equal(j.upload_url,null);
+   const used=async()=>Number((await db.query('SELECT attempts FROM auth_rate_windows WHERE key_hash=$1',[p5QuotaKey('speech_processing',f.learner)])).rows[0].attempts);
+   const prior=await used();assert.equal((await speech.create(f.learner,key,input)).job_id,j.job_id);assert.equal(await used(),prior);
+   assert.equal(await f.identity.allowLearningAction(f.learner),true);assert.equal(await count('evidence_events'),before);assert.deepEqual(await readdir(transient),[]);
+   const position=(await f.lessons.get(f.learner,f.runs.cs.id)).position;assert.equal((await speech.next(f.learner,f.runs.cs.id,j.job_id)).position,position+1);
+   await db.query("UPDATE auth_rate_windows SET expires_at=clock_timestamp()-interval '1 second' WHERE key_hash=$1",[p5QuotaKey('speech_processing',f.learner)]);
   });
   await gate('P5-SPEECH-007 reset during processing settles neutral and cannot receive late mastery credit',async()=>{
    const before=await count('evidence_events'),j=await create('cs');await upload(j);

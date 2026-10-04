@@ -1,4 +1,5 @@
 import { randomUUID } from 'node:crypto';
+import {takeP5Quota} from './p5-quota.js';
 import type pg from 'pg';
 import { ContractError, assertUuid } from '../../packages/domain/src/identity.js';
 import { assetVersionSchema, voiceSchema, characterSchema, mediaRequirementSchema } from '../../packages/activity-schemas/src/media.js';
@@ -41,6 +42,7 @@ export class MediaRepository {
       if(prior){if(prior.request_hash!==hash)throw new ContractError('CONFLICT','Media idempotency key reused for another request');return prior.id as string;}
       const req=(await db.query('SELECT language_id FROM media_requirements WHERE id=$1',[requirementId])).rows[0];
       if(!req)throw new ContractError('NOT_FOUND','Media requirement not found');
+      if(!await takeP5Quota(db,'media_generation',actorId))throw new ContractError('RATE_LIMITED','Media generation quota exhausted');
       const id=randomUUID();
       await db.query(`INSERT INTO media_jobs(id,requirement_id,language_id,idempotency_key,request_hash,provider_adapter_code,generator_version,created_by)
         VALUES($1,$2,$3,$4,$5,$6,$7,$8)`,[id,requirementId,req.language_id,idempotencyKey,hash,adapterCode,generatorVersion,actorId]);
