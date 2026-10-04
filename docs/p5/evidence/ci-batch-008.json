@@ -31,5 +31,10 @@
     "P3/P4 final acceptance summaries"
   ],
   "production_contract_changed": false,
-  "fix_hosted_validation": "PENDING next source"
+  "fix_hosted_validation": {
+    "status": "PASS",
+    "tested_sha": "79c3b4235327eb6ce289288bfcc7e051a20fb5d0",
+    "evidence": "docs/p5/evidence/ci-batch-009.json",
+    "run_id": 37190822511
+  }
 }

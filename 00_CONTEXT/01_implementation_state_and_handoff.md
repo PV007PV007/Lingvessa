@@ -1,32 +1,36 @@
 # Lingvessa implementation state and handoff
 
-Timestamp: 2026-10-04T09:00:28.088159+00:00
+Timestamp: 2026-10-04T13:06:31.839214+00:00
 Phase: **P5 IN PROGRESS / NOT READY**. P0–P4 ACCEPTED; P6 NOT AUTHORIZED.
-Branch: `implementation/p5-media-speech`. PR [#5](https://github.com/PV007PV007/Lingvessa/pull/5): OPEN DRAFT.
+Branch: `implementation/p5-media-speech`. PR [#5](https://github.com/PV007PV007/Lingvessa/pull/5): OPEN DRAFT, do not merge.
 Accepted main/P4: `5027f001237b6451237d87343ebeca58cd0af007`.
-Latest exact tested source: `a439952d910eaa31396f27cf78b924086c40fb7d`. P5 PR run 37190304701 / job 111400889118 FAILED a new test expectation after successful PostgreSQL/media/flag/quota gates. Exact failure/artifact: `docs/p5/evidence/ci-batch-008.json`. The fix retains the approved final-activity completion contract and adds replay/no-extra-evidence assertions; awaiting next source CI.
-Last complete runtime PASS: `5e9f9e35c5b511490c3f89e91b7d8893c953d969`, push run 36730272286 (ci-batch-007). Local checkpoint IDs are not GitHub-tested source.
+Latest directly inspected full runtime PASS: `79c3b4235327eb6ce289288bfcc7e051a20fb5d0`. P5 PR [run 37190822511](https://github.com/PV007PV007/Lingvessa/actions/runs/37190822511), job 111402428729, and push run 37190818959 passed every required step. Independent P1–P4 regression is green. Exact logs-derived assertions, commands, run IDs and artifact digests: `docs/p5/evidence/ci-batch-009.json`.
 
-## Batch
+## Revision and evidence binding
 
-IMP-P5-001 / 002 / 003 remain IN_PROGRESS. All 356 rows reviewed and retained: 173 PASS / 31 PARTIAL / 152 PENDING. Exact gate/source linkage and compound follow-ups are in `docs/p5/requirement-evidence.json` and `trace-review.md`. No future milestone is implemented to close a compound clause.
+The literal SHA above is the last run observed when this record was committed. This reconciliation also adds `tools/p5/acceptance-summary.ts`; it must execute in the run for the revision carrying this file. For that revision the authoritative exact tested SHA is `tested_sha` in the hosted `artifacts/p5/acceptance-summary.json`, compared against checked-out `git rev-parse HEAD` and `GITHUB_HEAD_SHA`. The current PR Checks and artifact contain the final run result. A parent PASS or local synthetic checkpoint is never a PASS for an untested descendant. A green runtime summary remains separate from P5 milestone readiness.
 
-Verified previous batch: exact avatar/character/version closure and audio-clock UI, atomic encrypted transient audio writes, cleanup failure/expiry/lease/cancel-race recovery, shared EN/CS microphone journeys and neutral unavailable paths.
+## Batch and trace
 
-Current additions: separate processing/transport/media-generation windows; idempotent replay and cancellation availability under quota; exact turn UUID continuity; 12 flag drafts from 7 pinned source geometries with unchanged runtime SVG allowlist and Chromium geometry test; bounded hosted APT network waits; narrow upstream security updates (Next.js 16.3.8, multer 2.4.0, fast-uri 3.1.8). No new paid dependency or provider activation.
+IMP-P5-001 / 002 / 003 remain IN_PROGRESS. All 356 rows retained: 174 PASS / 30 PARTIAL / 152 PENDING. `requirement-evidence.json` and `trace-review.md` map each PASS to actual code/tests/gates and an exact remote source. Added source-clause/link validation and refreshed executed-source evidence; no blanket PASS for compound future clauses.
 
-Schema/migration/API: see `docs/p5/evidence/schema-api-diff.md`. Only unaccepted P5 migrations modified; accepted migrations and owner-locked sources unchanged. No architecture/authority change. Existing provider-neutral speech API documents 429 and quota_exhausted neutral reason. No P6 lesson implementation.
-Files added/modified/deleted: full phase list `docs/p5/evidence/changed-files.json`; this batch's code, tests, flags, lockfile, governance evidence and handoff are included; no deletions.
+Verified implementation: immutable media/version/publication closure; private S3 protocol adapter/restart; authenticated pinned byte delivery; normal/slow/voice/character/turn continuity; speaker/avatar clock; original visuals and normalized flag geometry; encrypted transient audio; exactly-once speech settlement; exact Pronunciation facets; idempotency/retry/cancellation/cleanup/late callback/lease recovery; shared EN/CS microphone and non-blocking fallback; independent processing/transport/generation cost windows.
+
+The prior P5-SPEECH-011 test expectation is resolved. At the final activity Next completes the run with null current activity and the same last ordinal; replay adds no attempt or evidence. A fresh run isolates the following reset test. No domain behavior was changed to satisfy the test.
+
+Schema/migrations/API: **No contract change in this reconciliation.** No new migration or API change. The phase's two unaccepted P5 migrations and media/speech routes are inventoried in `docs/p5/evidence/schema-api-diff.md`; accepted migrations and owner-locked sources are unchanged. No architecture/authority change. No P6/P7 lesson implementation or AI runtime.
+Files: added `docs/p5/evidence/ci-batch-009.json`, `tools/p5/acceptance-summary.ts`; modified workflow, governance validator, trace/task/evidence/handoff records. Full created/modified/deleted phase inventory: `docs/p5/evidence/changed-files.json`. No deletions.
 
 ## Executed validation
 
-Prior hosted source: `pnpm install --frozen-lockfile`; `pnpm validate:baseline` (74/74); `pnpm check` (50 unit + 4 smoke); `pnpm validate:references`; `node --import tsx tools/p5/reference-media.ts --check`; `pnpm audit:dependencies`; `MINIO_BINARY=<pinned fixture binary> node --import tsx tools/p5/storage-gate.ts`; `pnpm bootstrap:local`; `node --env-file=.local/runtime.env --import tsx --test tests/integration/*.test.ts` (16 integration / 10 Chromium); `pnpm test:containers`; `node --import tsx tools/p3/acceptance-summary.ts`; `node --import tsx tools/p4/acceptance-summary.ts`: PASS on push at SHA above. No skipped required runtime gates on that push.
-New batch: pinned Node 24.19.0 / pnpm 11.19.0; dependency audit zero findings; baseline 74/74; flag reproducibility and reference-media structure PASS. Complete check result recorded in `docs/p5/evidence/local-batch-008.json` after completion. Real PostgreSQL/OCI acceptance requires hosted run; no local runtime result fabricated.
+Exact commands and results are in ci-batch-009.json. Hosted: frozen install; baseline 74/74; complete `pnpm check` (50 unit + 4 smoke); fixture and reference-media validation; reproducible flags; dependency audit zero findings; actual S3 protocol/restart; PostgreSQL 18.6/all six migrations/bootstrap/seed/reseed/recreation; 16 integration tests; 17 Chromium cases (P3 4 + P4 2 + P5 audio/flags 9 + speech 2); four OCI build/start/health/degraded/recovery gates; P3/P4 exact-source summaries. No test failures/skips. The two newly added trace checks and P5 summary execute on the next exact source; their parent result is not fabricated.
 
-## Remaining acceptance
+## Remaining acceptance and decisions
 
-P5 NOT READY. M01 has 18 original SVG drafts, 12 flag drafts, 168 scripts/420 audio slots and 6 voice profiles; audio bytes and human publication QA are incomplete. Approved assets = 0. Requirement trace and final exact-source acceptance remain.
-BLOCKER: none established. IMPORTANT: reference media/QA/trace and new hosted gates. MINOR: inherited Actions Node/Argon2id warnings. EXC-P1-001: main not technically protected; PR/green CI/owner review controls retained.
-Open owner decisions: OD-004 delivery profile; OD-005 providers/licences/voices; OD-006 calibrated usable speech. Paid inference false, monthly paid budget 0; unapproved scoring unavailable, no evidence.
-Concrete decision inputs: `docs/p5/owner-decision-inputs.md` covers private delivery, bounded local TTS audition/voice licence gaps and calibration. No approval is inferred.
-Exact next task: push the corrected fixture assertion, repeat full hosted acceptance, update evidence; then complete approved reference media/QA decisions. Keep PR #5 open and stop before P6.
+P5 **NOT READY**. Plan v1.4 §12 p7 requires all M01 required asset IDs to resolve. Prepared: 18 original SVG drafts, 12 flag drafts, 168 scripts / 420 audio slots, six voice profiles. Actual reference audio and human publication QA remain incomplete; approved assets = 0. Structural validation and synthetic tone/evaluator fixtures do not satisfy that exit.
+
+BLOCKER: no governing contradiction or failed runtime gate remains from the inspected batch. IMPORTANT: actual M01 media/voice/provenance/QA and remaining requirement closure. MINOR: inherited Actions Node/Argon2id warnings. EXC-P1-001 remains: main is not technically protected; implementation branches, PR, green CI and owner review apply.
+
+Open decisions: OD-004 storage/delivery profile; OD-005 media tooling/licences/voice cast; OD-006 calibrated usable speech before activation. Concrete proposals, known limitations and required inputs: `docs/p5/owner-decision-inputs.md`. No provider approval is inferred. Paid inference false and monthly paid budget 0. Unapproved evaluation remains speech_unavailable without learning evidence.
+
+Exact next task: verify the reconciliation's own hosted P5 summary, then obtain the existing OD-004/005 integration decisions and complete actual M01 media/QA; resolve OD-006 before enabling usable provider evidence. Keep PR #5 open. Stop before P6.

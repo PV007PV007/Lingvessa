@@ -1,15 +1,35 @@
 # P5 exit evidence
 
-Status: **IN PROGRESS / NOT READY**. PR #5 OPEN DRAFT; P6 not authorized.
+Status: **IN PROGRESS / NOT READY**. PR #5 OPEN DRAFT. P6 not authorized.
 
-Last complete hosted runtime PASS source: `5e9f9e35c5b511490c3f89e91b7d8893c953d969`. Push run 36730272286 / job 109937700024 passed all required steps: 50 unit, 4 smoke, 16 integration and 10 Chromium tests, no failures/skips; PostgreSQL 18.6/all six migrations/bootstrap/seed/recreation; actual S3 protocol/recovery; four OCI build/start/health/degraded/recovery gates; P1–P4 regression. `evidence/ci-batch-007.json` records exact source and artifact digest. PR run 36730280069 was cancelled during Chromium APT dependency installation; its runtime gates did not execute. No PR PASS is claimed.
+## Exact verified source
 
-New unverified hosted batch: independent P5 speech-processing/transport/media-generation quotas; neutral quota-exhaustion outcome; UUID turn identity and normal/slow continuity; 12 normalized national-flag drafts from 7 pinned SVG sources with browser geometry comparisons; bounded CI APT network waits; pinned dependency security fixes. `evidence/schema-api-diff.md` and `dependency-remediation-008.json` detail changes. Local audit reports zero vulnerabilities after Next.js 16.3.8 / multer 2.4.0 / fast-uri 3.1.8 fixes. Latest source `a439952d910eaa31396f27cf78b924086c40fb7d` passed frozen install/check/audit, PostgreSQL/media/turn/quota and 7 flag geometry checks, then failed the new quota test’s final-activity position expectation. See ci-batch-008.json. Test correction and next full CI are pending; no current-head PASS claimed.
+`79c3b4235327eb6ce289288bfcc7e051a20fb5d0` passed both P5 pull_request run **37190822511** (job **111402428729**) and push run **37190818959**. Independent P1–P4 regression runs also succeeded. `evidence/ci-batch-009.json` records directly inspected logs/steps, artifact metadata and exact commands. PR artifact **11299371096**, SHA-256 `53bdc7ac05a053f174e2c6d258ffb8bae1b0b5fecadb4820350b7eaa086b0194`.
 
-Reference preparation: 18 original SVG drafts + 12 flag drafts; 168 scripts / 420 audio slots; 6 unapproved voice profiles. Actual reference audio bytes, measured speech timing/loudness and publication QA remain incomplete; approved assets = 0. Structural validity is not M01 readiness.
+The revision adding this reconciliation must pass its own workflow. `tools/p5/acceptance-summary.ts` binds all P5 reports, regression summaries and container evidence to that revision's exact GitHub head; the produced `artifacts/p5/acceptance-summary.json` is the final current-source result. The historical SHA above is not reused as proof of an untested descendant. Runtime PASS does not imply milestone PASS or P6 authorization.
 
-Remaining Plan v1.4 §12 p7 exit: all M01 required asset IDs resolve; approved provenance/voices and semantic/linguistic/accessibility QA; final requirement-by-requirement evidence; full exact-source hosted acceptance. OD-004 storage profile, OD-005 providers/licences/voice cast, OD-006 calibrated real speech remain open. Default scoring unavailable is neutral.
+## Executed gates
 
-BLOCKER: no governing contradiction established. IMPORTANT: required M01 media/QA and trace gates remain; new runtime batch awaits CI. MINOR: inherited Actions Node and Argon2id warnings. EXC-P1-001 retained: main is not technically branch-protected. No P6, no auto-merge, no governing contract change.
+| Gate | Observed result at exact source above |
+| --- | --- |
+| Frozen install, baseline, full check | PASS; baseline 74/74, 50 unit, 4 smoke |
+| Dependency audit | PASS; zero known findings |
+| Reference manifests and flags | PASS structural/reproducibility; no publication approval |
+| PostgreSQL | 18.6; all six migrations, clean DB, migration replay, bilingual seed/reseed, recreation, isolation negatives PASS |
+| P5 runtime contracts | 3 S3 + 8 media + 4 audio + 12 speech gates PASS |
+| Integration | 16 tests, zero failures/skips |
+| Real Chromium | 17 cases: P3 4; P4 2; audio/flags 9; microphone speech 2; zero failures/skips |
+| OCI | API/worker/web/admin build/start ready; DB outage => API/worker 503, liveness 200; recovery => ready 200 |
+| P1–P4 regression | All separate hosted PR workflows PASS |
 
-Trace review: 173 PASS / 31 PARTIAL / 152 PENDING of 356 unchanged source rows. Scope and exact evidence in requirement-evidence.json / trace-review.md. Concrete open-decision inputs in owner-decision-inputs.md.
+The quota final-item expectation is fixed and P5-SPEECH-011 now passes with no domain contract change. Cancellation/poll/cleanup stay available under transport quota; replay consumes no new processing slot or evidence. Exact turn UUID identity and all seven normalized flag geometries passed.
+
+## Remaining exit conditions
+
+Plan v1.4 §12 p7: **all M01 required asset IDs resolve**. Available drafts: 18 original SVGs + 12 flags, 168 scripts / 420 audio slots, six unapproved voice profiles. Actual reference audio bytes, measured duration/loudness/turn alignment, approved cast/licences and human linguistic/semantic/accessibility/publication QA remain incomplete. Approved assets = 0. Test tones and synthetic evaluation are not a substitute.
+
+Existing OD-004 storage profile and OD-005 media-provider/licence/voice decisions need completion before media integration/production. OD-006 controls calibrated real speech before usable provider evidence; default unavailable remains neutral. Reviewable inputs are in `owner-decision-inputs.md`. No architecture or paid-budget change is proposed.
+
+Trace: **174 PASS / 30 PARTIAL / 152 PENDING** out of 356 unchanged source rows. Actual-code/gate/exact-source linkage is validated; remaining whole/compound clauses are not waived. Later AI/Admin/PWA/bulk behavior is not implemented early.
+
+BLOCKER: none established in inspected runtime/contracts. IMPORTANT: M01 media/QA and remaining clause closure; latest reconciliation needs its own exact-source CI. MINOR: inherited Actions Node and Argon2id warnings. EXC-P1-001 retained: main has operational controls, no technical branch protection. No merge; no P6.

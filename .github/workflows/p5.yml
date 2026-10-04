@@ -56,6 +56,8 @@ jobs:
       - run: pnpm test:containers
       - run: node --import tsx tools/p3/acceptance-summary.ts
       - run: node --import tsx tools/p4/acceptance-summary.ts
+      - name: Bind P5 runtime evidence to the exact source and retain open media gates
+        run: node --import tsx tools/p5/acceptance-summary.ts
       - name: Sanitized migration diagnostics on failure
         if: failure()
         run: |

@@ -1,6 +1,6 @@
 {
   "compared_to_accepted_main": "5027f001237b6451237d87343ebeca58cd0af007",
-  "timestamp": "2026-10-04T09:00:28.088159+00:00",
+  "timestamp": "2026-10-04T13:06:31.839214+00:00",
   "files": [
     {
       "path": ".github/workflows/p5.yml",
@@ -252,6 +252,10 @@
     },
     {
       "path": "docs/p5/evidence/ci-batch-008.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/ci-batch-009.json",
       "status": "A"
     },
     {
@@ -545,6 +549,10 @@
     {
       "path": "tools/p4/acceptance-summary.ts",
       "status": "M"
+    },
+    {
+      "path": "tools/p5/acceptance-summary.ts",
+      "status": "A"
     },
     {
       "path": "tools/p5/browser-gate.ts",
