@@ -2,7 +2,7 @@
 
 The 356 baseline P5 rows retain exact source IDs, versions, locators, summaries, task and phase assignments. No compound requirement is collapsed or reassigned.
 
-Current status: 174 PASS / 30 PARTIAL / 152 PENDING. All PASS rows cite executed code/test/gate evidence on `79c3b4235327eb6ce289288bfcc7e051a20fb5d0` and `evidence/ci-batch-009.json`. Both push and pull_request P5 runs succeeded; independent P1–P4 PR regression succeeded. PASS means the stated contract is proved within its fixture scope, not publication/provider approval or whole-milestone acceptance.
+Current status: 174 PASS / 30 PARTIAL / 152 PENDING. All PASS rows cite executed code/test/gate evidence on `b88ba697c375237101e4f73b5fe05ddd17fa54cc` and `evidence/ci-batch-011.json`. Both push and pull_request P5 runs succeeded; independent P1–P4 PR regression succeeded. PASS means the stated contract is proved within its fixture scope, not publication/provider approval or whole-milestone acceptance.
 
 `N-REF-P24-T01-R05` now passes mandatory turn identity and normal/slow voice/character/turn continuity. `N-TS-P18-T02-R08` records verified independent P5 cost windows but remains PARTIAL for its later AI quota dependency. The final-item quota test error is corrected without changing the lesson completion contract.
 

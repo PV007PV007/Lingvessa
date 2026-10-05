@@ -2,36 +2,32 @@
 
 Status: **IN PROGRESS / NOT READY**. PR #5 OPEN DRAFT. P6 not authorized.
 
-## Exact verified source
+## Verified runtime source
 
-`79c3b4235327eb6ce289288bfcc7e051a20fb5d0` passed both P5 pull_request run **37190822511** (job **111402428729**) and push run **37190818959**. Independent P1–P4 regression runs also succeeded. `evidence/ci-batch-009.json` records directly inspected logs/steps, artifact metadata and exact commands. PR artifact **11299371096**, SHA-256 `53bdc7ac05a053f174e2c6d258ffb8bae1b0b5fecadb4820350b7eaa086b0194`.
+`b88ba697c375237101e4f73b5fe05ddd17fa54cc` passed P5 pull_request run **37205262216** / job **111445024433** and push run **37205259219** / job **111445065989**, plus separate P1–P4 PR regression. `evidence/ci-batch-011.json` records actual logs, step conclusions, artifact metadata and exact commands. PR artifact **11303949327**, SHA-256 `45f96e04697ebe14de9351771d9ca92db06674f26ef4a3e0ab760ee78e3da602`; archive and all 12 referenced runtime report hashes independently verified after download.
 
-The revision adding this reconciliation must pass its own workflow. `tools/p5/acceptance-summary.ts` binds all P5 reports, regression summaries and container evidence to that revision's exact GitHub head; the produced `artifacts/p5/acceptance-summary.json` is the final current-source result. The historical SHA above is not reused as proof of an untested descendant. Runtime PASS does not imply milestone PASS or P6 authorization.
+Each later revision must pass its own workflow. `artifacts/p5/acceptance-summary.json` binds the current run to checked-out HEAD and includes all report hashes; a prior recorded PASS is not a PASS for an untested descendant. Runtime PASS does not authorize a merge, milestone acceptance or P6.
 
-## Executed gates
-
-| Gate | Observed result at exact source above |
+| Gate | Executed result |
 | --- | --- |
-| Frozen install, baseline, full check | PASS; baseline 74/74, 50 unit, 4 smoke |
+| Frozen install / baseline / full check | PASS; baseline 76/76, 54 unit, 4 smoke |
 | Dependency audit | PASS; zero known findings |
-| Reference manifests and flags | PASS structural/reproducibility; no publication approval |
-| PostgreSQL | 18.6; all six migrations, clean DB, migration replay, bilingual seed/reseed, recreation, isolation negatives PASS |
-| P5 runtime contracts | 3 S3 + 8 media + 4 audio + 12 speech gates PASS |
+| Reference media/flags | PASS structural and source-geometry checks; no publication approval |
+| PostgreSQL | 18.6; six migrations, clean DB, replay, bilingual seed/reseed, recreation and isolation negatives PASS |
+| P5 contracts | 3 S3 + 8 media + 4 audio + 12 speech gates PASS |
 | Integration | 16 tests, zero failures/skips |
-| Real Chromium | 17 cases: P3 4; P4 2; audio/flags 9; microphone speech 2; zero failures/skips |
-| OCI | API/worker/web/admin build/start ready; DB outage => API/worker 503, liveness 200; recovery => ready 200 |
-| P1–P4 regression | All separate hosted PR workflows PASS |
+| Chromium | 17 cases: P3 4, P4 2, P5 audio/flags 9, speech 2; zero failures/skips |
+| OCI | Four images build/start/ready; DB outage => API/worker 503, liveness 200; recovery => ready 200 |
+| Historical regression | P1–P4 hosted PR workflows all PASS |
 
-The quota final-item expectation is fixed and P5-SPEECH-011 now passes with no domain contract change. Cancellation/poll/cleanup stay available under transport quota; replay consumes no new processing slot or evidence. Exact turn UUID identity and all seven normalized flag geometries passed.
+The S3 startup race from source 506a6a28 is **RESOLVED**. Actual signed-S3 readiness now runs at initial startup and restart, while wrong credentials/other HTTP errors and real outage failures are not masked. The earlier quota final-item test error is also resolved without a domain contract change. Historical failed reports are retained.
 
-The later `506a6a28...` PR run failed only at initial S3 fixture readiness (503 after a process-health success), before DB/OCI execution. This failed run is retained in `evidence/ci-batch-010.json`; it is not counted as runtime PASS. The fixture now waits for a signed S3 API response with bounded startup retries; 401/403/other HTTP failures are not retried. Four focused unit cases pass locally, with full hosted verification required on the new source. No product contract changed.
+## Open exit conditions
 
-## Remaining exit conditions
+Plan v1.4 §12 p7: **all M01 required asset IDs resolve**. Drafts: 18 original SVGs, 12 flags, 168 scripts / 420 audio slots, six voice profiles. Actual reference speech bytes, measured timing/loudness, approved voice/provenance records and human linguistic/semantic/accessibility/publication QA remain incomplete; approved assets = 0. Synthetic tones and evaluators are not reference content or production calibration.
 
-Plan v1.4 §12 p7: **all M01 required asset IDs resolve**. Available drafts: 18 original SVGs + 12 flags, 168 scripts / 420 audio slots, six unapproved voice profiles. Actual reference audio bytes, measured duration/loudness/turn alignment, approved cast/licences and human linguistic/semantic/accessibility/publication QA remain incomplete. Approved assets = 0. Test tones and synthetic evaluation are not a substitute.
+OD-004/005 integration decisions remain open; concrete candidate inputs are in `owner-decision-inputs.md`. OD-006 governs usable real-provider evidence; default unapproved scoring remains neutral/unavailable. No paid inference, AI runtime or production provider is activated by this batch.
 
-Existing OD-004 storage profile and OD-005 media-provider/licence/voice decisions need completion before media integration/production. OD-006 controls calibrated real speech before usable provider evidence; default unavailable remains neutral. Reviewable inputs are in `owner-decision-inputs.md`. No architecture or paid-budget change is proposed.
+Trace: **174 PASS / 30 PARTIAL / 152 PENDING** of 356 unchanged source rows. Whole/compound source clauses with future dependencies are not waived or implemented early. No code/schema/API/migration change in this evidence reconciliation.
 
-Trace: **174 PASS / 30 PARTIAL / 152 PENDING** out of 356 unchanged source rows. Actual-code/gate/exact-source linkage is validated; remaining whole/compound clauses are not waived. Later AI/Admin/PWA/bulk behavior is not implemented early.
-
-BLOCKER: none established in inspected runtime/contracts. IMPORTANT: M01 media/QA and remaining clause closure; latest reconciliation needs its own exact-source CI. MINOR: inherited Actions Node and Argon2id warnings. EXC-P1-001 retained: main has operational controls, no technical branch protection. No merge; no P6.
+BLOCKER: none established in verified runtime/contracts. IMPORTANT: M01 media/QA and remaining requirement closure. MINOR: inherited Actions Node and Argon2id warnings. EXC-P1-001: operational branch controls only; no technical branch protection. Keep PR #5 open; no P6.

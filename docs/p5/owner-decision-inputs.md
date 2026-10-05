@@ -33,6 +33,21 @@ Primary sources checked 2026-10-04:
 
 No complete approved Czech cast has been established. Media/speech and language leads must approve exact models/speakers/licence records after an audition; one English/Czech label or a package licence cannot substitute for that decision. Full generation waits for that review. Normal/slow speech must preserve the pedagogical target, carry measured duration/loudness/turn times, and pass script alignment, semantic, accessibility and originality/rights QA. Published references remain blocked until actual bytes and approvals resolve.
 
+### Additional local audition candidate — researched 2026-10-05, not approved
+
+A concrete experiment can address the missing Czech cast without using recordings of real people: design fictional seed voices with **MOSS-VoiceGenerator**, then evaluate the same synthetic seeds with **MOSS-TTS-Local-Transformer-v1.5** for authored English and Czech scripts. This is an experiment proposal, not evidence that the models meet Lingvessa quality or variety requirements.
+
+Primary model cards label both checkpoints Apache-2.0. VoiceGenerator describes text-prompt voice design without reference speech, but its own text input supports English/Chinese, **not Czech**. The separate Local Transformer v1.5 model card covers Czech and provides a CPU fallback example. Therefore the proposed Czech path is a downstream TTS audition using a synthetic seed; it must not be represented as direct Czech support in VoiceGenerator. English-to-Czech accent transfer, en-GB variety, Czech stress/vowel length, stable distinct voices and script accuracy all require audible testing. CPU support is not a claim that this workspace has the memory or throughput for the complete batch.
+
+Proposed bounded scope for OD-005 approval: isolated offline tooling; exact reviewed repository/model/tokenizer revisions and hashes; six fictional adult character auditions using only project-authored scripts; no learner data, real-person reference voice, cloud API, paid inference, production integration or publication. Produce WAV previews and provenance/checksum/seed records. Reject candidates that fail variety, intelligibility or voice separation; do not disguise one Czech voice with pitch shifts. Human review of the concrete auditions remains required before approving the cast and full media generation.
+
+Sources:
+- https://huggingface.co/OpenMOSS-Team/MOSS-VoiceGenerator — licence, reference-free design and English/Chinese input boundary.
+- https://huggingface.co/OpenMOSS-Team/MOSS-TTS-Local-Transformer-v1.5 — licence, supported languages and CPU fallback.
+- https://github.com/OpenMOSS/MOSS-TTS — separate model roles and isolated tooling setup.
+
+No model or dependency has been installed or adopted by this read-only assessment. Runtime remains provider-neutral and P8 AI foundation is not introduced early.
+
 ## OD-006 — Usable speech calibration
 
 Implemented: versioned policies pinned to language, variety, target, provider and model; independent `pronunciation_target` / `intelligibility` facets; neutral unavailable default; controlled test policies limited to test publications. No calibrated production evaluator is enabled.

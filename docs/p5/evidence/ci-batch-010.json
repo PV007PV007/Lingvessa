@@ -56,5 +56,11 @@
     "typecheck": "PASS",
     "eslint": "PASS",
     "hosted_result": "Requires the next exact source run."
+  },
+  "resolution": {
+    "status": "RESOLVED",
+    "tested_sha": "b88ba697c375237101e4f73b5fe05ddd17fa54cc",
+    "evidence": "docs/p5/evidence/ci-batch-011.json",
+    "domain_contract_changed": false
   }
 }

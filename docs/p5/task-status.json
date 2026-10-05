@@ -286,7 +286,7 @@
         "CHK-N-TS-P17-T02-R05",
         "CHK-N-TS-P19-T03-R08"
       ],
-      "readiness": "Media/storage/immutable-publication/avatar/generation-quota runtime PASS on push and PR; original visual and flag drafts structurally valid. Actual M01 audio, approved complete voices/provenance and human media QA remain open. The following reconciliation PR exposed a fixture startup race; bounded signed-S3 readiness fix awaits the new source hosted run.",
+      "readiness": "All media/storage/publication/ownership/quota and signed-S3 startup/restart/recovery gates PASS on push and PR. Actual M01 audio, approved complete cast/provenance and human publication QA remain open.",
       "contract_change": "No governing contract change; P5 concrete implementation only",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
@@ -408,7 +408,7 @@
         "CHK-N-TS-P13-T03-R08",
         "CHK-N-TS-P16-T01-R02"
       ],
-      "readiness": "EN/CS normal/slow audio, mandatory turn UUID continuity, avatar/speaker-clock and seven flag geometry comparisons PASS. Reference speech bytes and measured linguistic/audio QA remain open.",
+      "readiness": "EN/CS normal/slow, turn/voice/character continuity, speaker/avatar clock and all seven flag geometries PASS. Reference speech bytes and measured linguistic/audio QA remain open.",
       "contract_change": "No governing contract change; P5 concrete implementation only",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
@@ -784,17 +784,17 @@
         "CHK-N-TS-P17-T02-R06",
         "CHK-N-TS-P18-T02-R08"
       ],
-      "readiness": "All 12 speech gates PASS, including exact Pronunciation facet, lifecycle/retry/cleanup/cancel/lease races, neutral quota settlement and real microphone browser paths. Synthetic adapter is not a calibrated production evaluator; OD-006 governs activation.",
+      "readiness": "All 12 speech gates and real microphone browser paths PASS. Controlled evaluation is not production calibration; OD-006 still governs usable real-provider evidence.",
       "contract_change": "No governing contract change; P5 concrete implementation only",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
     }
   ],
-  "timestamp": "2026-10-04T13:19:05.356122+00:00",
-  "last_hosted_tested_sha": "506a6a28d5bee046d04ab095466ca5f8e852706d",
-  "last_hosted_result": "FAIL_FIXTURE_READINESS",
-  "last_full_runtime_pass_sha": "79c3b4235327eb6ce289288bfcc7e051a20fb5d0",
-  "ci_evidence": "docs/p5/evidence/ci-batch-009.json",
+  "timestamp": "2026-10-05T03:54:34.303808+00:00",
+  "last_hosted_tested_sha": "b88ba697c375237101e4f73b5fe05ddd17fa54cc",
+  "last_hosted_result": "RUNTIME_PASS_MILESTONE_NOT_READY",
+  "last_full_runtime_pass_sha": "b88ba697c375237101e4f73b5fe05ddd17fa54cc",
+  "ci_evidence": "docs/p5/evidence/ci-batch-011.json",
   "current_revision_ci": "The workflow checks out the exact PR head and emits artifacts/p5/acceptance-summary.json; the PR head run is required after any later source/evidence commit.",
-  "latest_attempt_evidence": "docs/p5/evidence/ci-batch-010.json"
+  "latest_attempt_evidence": "docs/p5/evidence/ci-batch-011.json"
 }
