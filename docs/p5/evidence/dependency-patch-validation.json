@@ -1,0 +1,52 @@
+{
+  "timestamp": "2026-10-06T10:26:04.407564+00:00",
+  "phase": "P5",
+  "issue_id": "P5-DEP-001",
+  "local_status": "PASS",
+  "hosted_status": "REQUIRES_CURRENT_REVISION_RUN",
+  "failed_remote_sha": "b1bebd29019872408cb6af4af382266ab0c76829",
+  "patches": [
+    {
+      "package": "proxy-addr",
+      "from": "2.0.7",
+      "to": "2.0.8",
+      "advisory": "GHSA-jqcg-44mw-7w3h"
+    },
+    {
+      "package": "source-map-js",
+      "from": "1.2.1",
+      "to": "1.2.2",
+      "advisory": "GHSA-68fv-2mgg-jv7q"
+    }
+  ],
+  "lockfile_sha256": "5b2064f044ea5a2c1b138e3abec9f804442f807c2efbb0f8b61c0c4ed93a7347",
+  "scope": "Only two compatible transitive patch resolutions/integrities; no direct dependency change, new override, audit ignore/threshold change, schema/API/migration or governing contract change.",
+  "commands": [
+    {
+      "command": "PATH=/workspace/scratch/3a694649f683/p5_work/toolchain/node_modules/.bin:$PATH pnpm update --recursive --lockfile-only --ignore-scripts proxy-addr source-map-js",
+      "exit_code": 0,
+      "result": "454 lock entries verified against supply-chain policies; only the two target package versions/integrities/references changed."
+    },
+    {
+      "command": "PATH=/workspace/scratch/3a694649f683/p5_work/toolchain/node_modules/.bin:$PATH pnpm install --frozen-lockfile",
+      "exit_code": 0,
+      "result": "PASS; pinned Node24.19.0/pnpm11.19.0; no lockfile re-resolution."
+    },
+    {
+      "command": "PATH=/workspace/scratch/3a694649f683/p5_work/toolchain/node_modules/.bin:$PATH pnpm audit:dependencies",
+      "exit_code": 0,
+      "result": "No known vulnerabilities found."
+    },
+    {
+      "command": "PATH=/workspace/scratch/3a694649f683/p5_work/toolchain/node_modules/.bin:$PATH pnpm validate:baseline",
+      "exit_code": 0,
+      "result": "PASS 76/76."
+    },
+    {
+      "command": "PATH=/workspace/scratch/3a694649f683/p5_work/toolchain/node_modules/.bin:$PATH pnpm check",
+      "exit_code": 0,
+      "result": "PASS: Prisma generation/validation, peers, lint/typecheck/boundaries/secrets, 54 unit tests, three production build targets and 4 smoke tests; 0 failures/skips."
+    }
+  ],
+  "closure_rule": "The child revision must execute all required hosted steps and produce an exact-HEAD-bound runtime acceptance summary; a parent PASS and these local checks are not hosted runtime evidence."
+}

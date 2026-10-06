@@ -1,6 +1,6 @@
 # Lingvessa implementation state and handoff
 
-Timestamp: 2026-10-06T05:02:49.781447+00:00
+Timestamp: 2026-10-06T10:25:29.222768+00:00
 Phase: **P5 IN PROGRESS / NOT READY**. P0–P4 ACCEPTED; P6 NOT AUTHORIZED.
 Branch: `implementation/p5-media-speech`. PR [#5](https://github.com/PV007PV007/Lingvessa/pull/5): OPEN DRAFT; do not merge.
 Accepted main/P4: `5027f001237b6451237d87343ebeca58cd0af007`.
@@ -19,9 +19,9 @@ The owner authorized the prepared bounded OD-005 local audition on 2026-10-05 (e
 
 MOSS model metadata/source/model cards were inspected and pinned only; model weights/code were not run. The standard v1.5 BF16 weights alone exceed this workspace's 8 GiB memory cap. This resource result does not rule out other hardware or reviewed quantized/offloaded experiments. No paid API, learner data, uploaded real-person reference audio, final cast adoption or publication occurred.
 
-**No contract change; no schema/API/migration/application dependency change in this batch.** Isolated authoring tooling and its CI byte/provenance validator were added. Existing phase schema/API details remain in `docs/p5/evidence/schema-api-diff.md`: only the two P5 migrations are unaccepted; all four accepted migrations and owner-locked sources remain unchanged. No P6/P7 runtime, P8 shared AI foundation or learner AI implementation was started.
+**No contract change; no schema/API/migration change.** The audition adds no application dependency. A separate audit remediation below updates only two existing transitive dependency patches. Isolated authoring tooling and its CI byte/provenance validator were added. Existing phase schema/API details remain in `docs/p5/evidence/schema-api-diff.md`: only the two P5 migrations are unaccepted; all four accepted migrations and owner-locked sources remain unchanged. No P6/P7 runtime, P8 shared AI foundation or learner AI implementation was started.
 
-Files added/modified/deleted: `docs/p5/evidence/changed-files.json` is the full phase inventory. This batch adds ci-batch-012, the audition script, eight WAVs and provenance/review records, and updates workflow, open-decision stage, owner inputs, task/trace/exit evidence and this handoff. No deletions.
+Files added/modified/deleted: `docs/p5/evidence/changed-files.json` is the full phase inventory. This batch adds ci-batch-012, the hosted audit failure/remediation records, a two-package lockfile patch, the audition script, eight WAVs and provenance/review records, and updates workflow, open-decision stage, owner inputs, task/trace/exit evidence and this handoff. No deletions.
 
 ## Exact executed validation
 
@@ -31,12 +31,18 @@ PR artifact 11354426744 SHA-256: `f26bfbf6c63edb73dc29c058b2e263dee9c4517747b382
 
 This batch's local commands/results: `docs/p5/voice-audition/local-validation.json`. Generation used the isolated Python interpreter with `tools/p5/voice-audition.py --models <verified local model root>`; verification is `python3 tools/p5/voice-audition.py --verify-only` (8 samples, 4 model/text/speaker pairs, all byte/metric checks PASS). App baseline and diff checks are recorded there. No local PostgreSQL/OCI execution is claimed; the new source still requires its own real hosted regression.
 
+## Hosted audit follow-up — P5-DEP-001
+
+The first audition commit `b1bebd29019872408cb6af4af382266ab0c76829` passed frozen install, baseline, 54 unit/4 smoke/build checks, reference/flag checks and **all eight audition WAV checks**. All seven hosted workflows then failed `pnpm audit:dependencies`: proxy-addr 2.0.7 (GHSA-jqcg-44mw-7w3h) and source-map-js 1.2.1 (GHSA-68fv-2mgg-jv7q). PostgreSQL/browser/OCI gates were not executed on that source; it is not a runtime PASS. Actual jobs/steps: `docs/p5/evidence/ci-audition-audit-failure.json`.
+
+Remediation refreshes only `proxy-addr` to 2.0.8 and `source-map-js` to 1.2.2 within existing parent ranges. No direct package version, override, audit threshold/ignore, architecture or application behavior contract changed. Exact update/install/audit/check commands and local results: `docs/p5/evidence/dependency-patch-validation.json`. Local audit is clean; the remediation revision must pass its own hosted workflow before this CI issue is closed. Its exact final source/status is the checked-out HEAD bound by the workflow's acceptance-summary artifact and PR checks, not the failed parent or last historical PASS.
+
 ## Remaining acceptance and owner decisions
 
 Plan v1.4 §12 p7 requires **all M01 required asset IDs to resolve**. Prepared: 18 original SVG drafts, 12 flag drafts, 168 scripts / 420 audio slots and six voice profiles. Eight audition clips do not resolve that full asset set. Approved publication assets = 0; complete cast, provenance/rights clearance and human linguistic/semantic/accessibility/publication QA remain incomplete.
 
-BLOCKER: no unresolved governing contradiction or failed runtime gate in the last verified source. IMPORTANT: complete actual M01 media, two remaining Czech voices, voice/provenance review and remaining requirement closure. MINOR: inherited Actions Node/Argon2id warnings and pg concurrent client.query deprecation; no current failed check. EXC-P1-001 retained: main is not technically protected; implementation branches, PR, green CI and owner review apply.
+BLOCKER: no unresolved governing contradiction; the new revision must resolve the recorded hosted dependency-audit failure before claiming runtime PASS. IMPORTANT: complete actual M01 media, two remaining Czech voices, voice/provenance review and remaining requirement closure. MINOR: inherited Actions Node/Argon2id warnings and pg concurrent client.query deprecation; no current failed check. EXC-P1-001 retained: main is not technically protected; implementation branches, PR, green CI and owner review apply.
 
 OD-004 delivery profile OPEN. OD-005 bounded audition authorized and executed, final tooling/cast/full generation approval OPEN. OD-006 remains required before usable real-provider speech evidence; unapproved evaluation stays neutral speech_unavailable. Paid inference=false; monthly paid budget=0. No production consent/licence/cast or human QA approval is inferred from successful synthesis.
 
-Exact next task: verify this revision's hosted CI, deliver/listen to the four candidate normal/slow pairs and record language/variety/voice-fit review; complete the missing Czech candidate set before final cast/full generation decision. Resolve OD-004 before hosted delivery integration and OD-006 before enabling usable provider scoring. Keep PR #5 OPEN DRAFT; no merge and no P6.
+Exact next task: verify the dependency-patched revision's hosted CI, deliver/listen to the four candidate normal/slow pairs and record language/variety/voice-fit review; complete the missing Czech candidate set before final cast/full generation decision. Resolve OD-004 before hosted delivery integration and OD-006 before enabling usable provider scoring. Keep PR #5 OPEN DRAFT; no merge and no P6.

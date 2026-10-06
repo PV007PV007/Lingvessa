@@ -17,7 +17,7 @@ These texts are concatenated from the existing project-authored M01 script recor
 
 ## What was executed
 
-Piper 1.8.0 in an isolated Python 3.12 environment, ONNX Runtime CPU, hash-verified model/config files at a fixed Hugging Face revision. Synthesis uses only local paths and a Python audit hook rejects socket connect/DNS during generation. No learner data, uploaded person reference voice, hosted inference, paid inference, database changes, provider routing or P8 AI runtime were used. The application dependency lockfile is unchanged.
+Piper 1.8.0 in an isolated Python 3.12 environment, ONNX Runtime CPU, hash-verified model/config files at a fixed Hugging Face revision. Synthesis uses only local paths and a Python audit hook rejects socket connect/DNS during generation. No learner data, uploaded person reference voice, hosted inference, paid inference, database changes, provider routing or P8 AI runtime were used. No Piper/TTS dependency was added to the application runtime. A separate subsequent security correction updates two existing transitive application packages; see `../evidence/dependency-patch-validation.json`.
 
 Each file is mono PCM16 / 22,050 Hz. Measured duration, RMS/peak dBFS, integrated LUFS, generation time and SHA-256 are in `results.json`. Seed and synthesis parameters are pinned; exact cross-hardware bit reproduction is not asserted. Retained output bytes are immutable. A subsequent audition uses a new reviewed batch rather than overwriting these files.
 
