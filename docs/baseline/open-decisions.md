@@ -22,6 +22,7 @@ Only genuinely unresolved decisions are listed. OD-001 is recorded in `docs/p1/r
 
 ## OD-005 — Image/TTS/STT providers, licences and voice cast
 
+- Stage update 2026-10-05: owner authorized the bounded local EN/CS audition in `docs/p5/voice-audition/authorization.json`. This permits the prepared offline integration experiment, not final provider/cast adoption, full media production or publication. OD-005 remains open for those acceptance decisions.
 - Source: TS §40.2 ADR-007 p22; Curriculum §19.2 p16; TD §35 p20
 - Why unresolved: Provider quality, data use, licence/consent, varieties and voice cast require the approved integration spike.
 - Latest phase: P5 / before generation/scoring integration or media batch

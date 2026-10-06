@@ -1,6 +1,6 @@
 # P5 decision inputs — not approvals
 
-Prepared 2026-10-04. The three existing decisions below remain OPEN. This file does not change the locked baseline, approve a provider, enable paid inference, or certify M01 media. Sources of the decision requirement are `docs/baseline/open-decisions.md`, Technical Specification §40.2 / Technical Design §35 and Curriculum §19.2.
+Updated 2026-10-06. OD-005 bounded local audition was owner-authorized on 2026-10-05 and executed; final provider/cast/full generation decisions remain OPEN. OD-004/006 are unchanged. This file does not change the locked baseline, approve a provider, enable paid inference, or certify M01 media. Sources of the decision requirement are `docs/baseline/open-decisions.md`, Technical Specification §40.2 / Technical Design §35 and Curriculum §19.2.
 
 ## OD-004 — Storage/delivery profile
 
@@ -16,9 +16,9 @@ Provider source checked 2026-10-04: https://developers.cloudflare.com/r2/pricing
 
 Reviewable prepared material: `assets/specs/p5/reference-media.source.json` and `.registry.json`; 18 original SVG drafts, 12 flag drafts from 7 pinned geometries, 168 scripts / 420 audio slots, and six fictional recurring voice profiles. Flag source and normalization provenance is in `assets/specs/p5/flags/`. No approval or actual reference audio byte is invented.
 
-Proposed next integration spike: local/offline TTS audition using only authored scripts, no learner data and no paid/cloud calls. Keep the tooling process outside the application runtime and export immutable WAV/derived audio plus provider/model/script/version/checksum records through the existing ingest contract. No voice cloning from an uploaded person sample.
+Owner-authorized bounded integration spike: local/offline TTS audition using only authored scripts, no learner data and no paid/cloud calls. Keep the tooling process outside the application runtime and export immutable WAV/derived audio plus provider/model/script/version/checksum records through the existing ingest contract. No voice cloning from an uploaded person sample.
 
-Specific candidates researched, not approved:
+Candidates tested locally; no final cast/production approval:
 
 | Candidate | Verified source claim | Remaining acceptance |
 | --- | --- | --- |
@@ -33,7 +33,7 @@ Primary sources checked 2026-10-04:
 
 No complete approved Czech cast has been established. Media/speech and language leads must approve exact models/speakers/licence records after an audition; one English/Czech label or a package licence cannot substitute for that decision. Full generation waits for that review. Normal/slow speech must preserve the pedagogical target, carry measured duration/loudness/turn times, and pass script alignment, semantic, accessibility and originality/rights QA. Published references remain blocked until actual bytes and approvals resolve.
 
-### Additional local audition candidate — researched 2026-10-05, not approved
+### Additional local audition candidate — resource assessment completed 2026-10-06
 
 A concrete experiment can address the missing Czech cast without using recordings of real people: design fictional seed voices with **MOSS-VoiceGenerator**, then evaluate the same synthetic seeds with **MOSS-TTS-Local-Transformer-v1.5** for authored English and Czech scripts. This is an experiment proposal, not evidence that the models meet Lingvessa quality or variety requirements.
 
@@ -46,7 +46,9 @@ Sources:
 - https://huggingface.co/OpenMOSS-Team/MOSS-TTS-Local-Transformer-v1.5 — licence, supported languages and CPU fallback.
 - https://github.com/OpenMOSS/MOSS-TTS — separate model roles and isolated tooling setup.
 
-No model or dependency has been installed or adopted by this read-only assessment. Runtime remains provider-neutral and P8 AI foundation is not introduced early.
+The owner authorized the bounded experiment (record: `voice-audition/authorization.json`). Piper 1.8.0 and pinned dependencies were installed in an isolated authoring environment; two pinned models generated eight actual WAVs: three English candidates and one Czech candidate, each normal/slow. Results, measured duration/loudness and exact model/script/speaker/checksum provenance are in `voice-audition/results.json`; audible previews and review checklist are in `voice-audition/README.md`. No application dependency or runtime integration changed.
+
+MOSS metadata/source/model cards were inspected and pinned, but weights/model code were not run. Local Transformer v1.5 BF16 weights alone exceed the current 8 GiB memory cap (9,100,859,544 bytes before codec/runtime); the standard resident path is unsuitable here. This is not a rejection of all higher-memory/quantized/offloaded options. Two Czech candidates remain missing; the bounded experiment does not approve a complete cast or full media generation. Runtime remains provider-neutral; no P8 foundation or P6 implementation.
 
 ## OD-006 — Usable speech calibration
 

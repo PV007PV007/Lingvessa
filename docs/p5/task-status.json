@@ -286,7 +286,7 @@
         "CHK-N-TS-P17-T02-R05",
         "CHK-N-TS-P19-T03-R08"
       ],
-      "readiness": "All media/storage/publication/ownership/quota and signed-S3 startup/restart/recovery gates PASS on push and PR. Actual M01 audio, approved complete cast/provenance and human publication QA remain open.",
+      "readiness": "All media/storage/publication/ownership/quota and signed-S3 startup/restart/recovery gates PASS on the recorded hosted source. OD-005 bounded local audition authorized and executed: eight actual WAVs, three EN candidates and one CS candidate. Complete cast, production rights review, M01 generation and human publication QA remain open.",
       "contract_change": "No governing contract change; P5 concrete implementation only",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
@@ -408,7 +408,7 @@
         "CHK-N-TS-P13-T03-R08",
         "CHK-N-TS-P16-T01-R02"
       ],
-      "readiness": "EN/CS normal/slow, turn/voice/character continuity, speaker/avatar clock and all seven flag geometries PASS. Reference speech bytes and measured linguistic/audio QA remain open.",
+      "readiness": "EN/CS normal/slow, turn/voice/character continuity, speaker/avatar clock and seven flag geometries PASS on the recorded hosted source. Four local candidate normal/slow pairs now have measured bytes/duration/loudness and pinned model/text/speaker provenance. Human pronunciation/variety/pace review and complete reference media remain open.",
       "contract_change": "No governing contract change; P5 concrete implementation only",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
@@ -790,11 +790,12 @@
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
     }
   ],
-  "timestamp": "2026-10-05T03:54:34.303808+00:00",
-  "last_hosted_tested_sha": "b88ba697c375237101e4f73b5fe05ddd17fa54cc",
+  "timestamp": "2026-10-06T05:02:49.781447+00:00",
+  "last_hosted_tested_sha": "23257497db6cf29497f51d6e5b2476f97e3c7c43",
   "last_hosted_result": "RUNTIME_PASS_MILESTONE_NOT_READY",
-  "last_full_runtime_pass_sha": "b88ba697c375237101e4f73b5fe05ddd17fa54cc",
-  "ci_evidence": "docs/p5/evidence/ci-batch-011.json",
+  "last_full_runtime_pass_sha": "23257497db6cf29497f51d6e5b2476f97e3c7c43",
+  "ci_evidence": "docs/p5/evidence/ci-batch-012.json",
   "current_revision_ci": "The workflow checks out the exact PR head and emits artifacts/p5/acceptance-summary.json; the PR head run is required after any later source/evidence commit.",
-  "latest_attempt_evidence": "docs/p5/evidence/ci-batch-011.json"
+  "latest_attempt_evidence": "docs/p5/evidence/ci-batch-012.json",
+  "local_audition_evidence": "docs/p5/voice-audition/results.json"
 }

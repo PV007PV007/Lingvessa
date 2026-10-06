@@ -92,7 +92,14 @@
       "actual_gate_ids": [],
       "verified_implementation_sha": null,
       "verification_note": "Runtime media preflight works; M01 complete generated/approved assets remain open.",
-      "trace_reviewed_at": "2026-10-04T08:56:01.470535+00:00"
+      "trace_reviewed_at": "2026-10-04T08:56:01.470535+00:00",
+      "audition_evidence": {
+        "path": "docs/p5/voice-audition/results.json",
+        "authorization": "docs/p5/voice-audition/authorization.json",
+        "validator": "tools/p5/voice-audition.py --verify-only",
+        "scope": "Eight actual local candidate WAVs with pinned authored text/model/speaker and measured metrics; no publication, cast, human linguistic QA or whole-requirement approval.",
+        "status": "LOCAL_TECHNICAL_PASS_HUMAN_REVIEW_PENDING"
+      }
     },
     {
       "requirement_id": "AUD-001",
@@ -133,7 +140,14 @@
       "actual_gate_ids": [],
       "verified_implementation_sha": null,
       "verification_note": "Normal/slow playback proven with synthetic tones; actual reference audio duration/language QA pending.",
-      "trace_reviewed_at": "2026-10-04T08:56:01.470535+00:00"
+      "trace_reviewed_at": "2026-10-04T08:56:01.470535+00:00",
+      "audition_evidence": {
+        "path": "docs/p5/voice-audition/results.json",
+        "authorization": "docs/p5/voice-audition/authorization.json",
+        "validator": "tools/p5/voice-audition.py --verify-only",
+        "scope": "Eight actual local candidate WAVs with pinned authored text/model/speaker and measured metrics; no publication, cast, human linguistic QA or whole-requirement approval.",
+        "status": "LOCAL_TECHNICAL_PASS_HUMAN_REVIEW_PENDING"
+      }
     },
     {
       "requirement_id": "AUD-002",
@@ -313,7 +327,14 @@
       "actual_gate_ids": [],
       "verified_implementation_sha": null,
       "verification_note": "Transcript fallback implemented; content-specific accessibility/learning-objective QA remains.",
-      "trace_reviewed_at": "2026-10-04T08:56:01.470535+00:00"
+      "trace_reviewed_at": "2026-10-04T08:56:01.470535+00:00",
+      "audition_evidence": {
+        "path": "docs/p5/voice-audition/results.json",
+        "authorization": "docs/p5/voice-audition/authorization.json",
+        "validator": "tools/p5/voice-audition.py --verify-only",
+        "scope": "Eight actual local candidate WAVs with pinned authored text/model/speaker and measured metrics; no publication, cast, human linguistic QA or whole-requirement approval.",
+        "status": "LOCAL_TECHNICAL_PASS_HUMAN_REVIEW_PENDING"
+      }
     },
     {
       "requirement_id": "AUD-006",
@@ -446,7 +467,14 @@
       "actual_gate_ids": [],
       "verified_implementation_sha": null,
       "verification_note": "System media pipeline exists; complete M01 asset bytes/QA unresolved.",
-      "trace_reviewed_at": "2026-10-04T08:56:01.470535+00:00"
+      "trace_reviewed_at": "2026-10-04T08:56:01.470535+00:00",
+      "audition_evidence": {
+        "path": "docs/p5/voice-audition/results.json",
+        "authorization": "docs/p5/voice-audition/authorization.json",
+        "validator": "tools/p5/voice-audition.py --verify-only",
+        "scope": "Eight actual local candidate WAVs with pinned authored text/model/speaker and measured metrics; no publication, cast, human linguistic QA or whole-requirement approval.",
+        "status": "LOCAL_TECHNICAL_PASS_HUMAN_REVIEW_PENDING"
+      }
     },
     {
       "requirement_id": "MED-002",
@@ -533,7 +561,14 @@
       "actual_gate_ids": [],
       "verified_implementation_sha": null,
       "verification_note": "Character/voice immutable bindings exist; avatar pin closure/UI sync are new and awaiting hosted CI; real series QA pending.",
-      "trace_reviewed_at": "2026-10-04T08:56:01.470535+00:00"
+      "trace_reviewed_at": "2026-10-04T08:56:01.470535+00:00",
+      "audition_evidence": {
+        "path": "docs/p5/voice-audition/results.json",
+        "authorization": "docs/p5/voice-audition/authorization.json",
+        "validator": "tools/p5/voice-audition.py --verify-only",
+        "scope": "Eight actual local candidate WAVs with pinned authored text/model/speaker and measured metrics; no publication, cast, human linguistic QA or whole-requirement approval.",
+        "status": "LOCAL_TECHNICAL_PASS_HUMAN_REVIEW_PENDING"
+      }
     },
     {
       "requirement_id": "MED-004",
@@ -666,7 +701,14 @@
       "actual_gate_ids": [],
       "verified_implementation_sha": null,
       "verification_note": "Default false real_person_clone schema and generated fictional drafts enforced; no cloning capability enabled. Future exception needs explicit licence/consent review.",
-      "trace_reviewed_at": "2026-10-04T08:55:11.894620+00:00"
+      "trace_reviewed_at": "2026-10-04T08:55:11.894620+00:00",
+      "audition_evidence": {
+        "path": "docs/p5/voice-audition/results.json",
+        "authorization": "docs/p5/voice-audition/authorization.json",
+        "validator": "tools/p5/voice-audition.py --verify-only",
+        "scope": "Eight actual local candidate WAVs with pinned authored text/model/speaker and measured metrics; no publication, cast, human linguistic QA or whole-requirement approval.",
+        "status": "LOCAL_TECHNICAL_PASS_HUMAN_REVIEW_PENDING"
+      }
     },
     {
       "requirement_id": "REF-A1-006",
@@ -758,7 +800,14 @@
       "actual_gate_ids": [],
       "verified_implementation_sha": null,
       "verification_note": "Manifest gate implemented; required reference audio/flags/QA unresolved.",
-      "trace_reviewed_at": "2026-10-04T08:56:01.470535+00:00"
+      "trace_reviewed_at": "2026-10-04T08:56:01.470535+00:00",
+      "audition_evidence": {
+        "path": "docs/p5/voice-audition/results.json",
+        "authorization": "docs/p5/voice-audition/authorization.json",
+        "validator": "tools/p5/voice-audition.py --verify-only",
+        "scope": "Eight actual local candidate WAVs with pinned authored text/model/speaker and measured metrics; no publication, cast, human linguistic QA or whole-requirement approval.",
+        "status": "LOCAL_TECHNICAL_PASS_HUMAN_REVIEW_PENDING"
+      }
     },
     {
       "requirement_id": "REF-A1-011",
@@ -1030,7 +1079,14 @@
       "actual_gate_ids": [],
       "verified_implementation_sha": null,
       "verification_note": "Published fixture operates from stored media with providers unavailable; complete reference library still pending.",
-      "trace_reviewed_at": "2026-10-04T08:56:01.470535+00:00"
+      "trace_reviewed_at": "2026-10-04T08:56:01.470535+00:00",
+      "audition_evidence": {
+        "path": "docs/p5/voice-audition/results.json",
+        "authorization": "docs/p5/voice-audition/authorization.json",
+        "validator": "tools/p5/voice-audition.py --verify-only",
+        "scope": "Eight actual local candidate WAVs with pinned authored text/model/speaker and measured metrics; no publication, cast, human linguistic QA or whole-requirement approval.",
+        "status": "LOCAL_TECHNICAL_PASS_HUMAN_REVIEW_PENDING"
+      }
     },
     {
       "requirement_id": "N-AI-P06-T03-R09",
@@ -10460,7 +10516,14 @@
       "actual_gate_ids": [],
       "verified_implementation_sha": null,
       "verification_note": "P5 shared media/speech contract has hosted evidence. Reference media/voices and compound P8/P9 optional AI or later operational clauses are not fully verified by controlled fixtures; no production content/provider approval inferred.",
-      "trace_reviewed_at": "2026-10-04T08:56:01.470535+00:00"
+      "trace_reviewed_at": "2026-10-04T08:56:01.470535+00:00",
+      "audition_evidence": {
+        "path": "docs/p5/voice-audition/results.json",
+        "authorization": "docs/p5/voice-audition/authorization.json",
+        "validator": "tools/p5/voice-audition.py --verify-only",
+        "scope": "Eight actual local candidate WAVs with pinned authored text/model/speaker and measured metrics; no publication, cast, human linguistic QA or whole-requirement approval.",
+        "status": "LOCAL_TECHNICAL_PASS_HUMAN_REVIEW_PENDING"
+      }
     },
     {
       "requirement_id": "N-FS-P09-B05-C04",
@@ -11396,7 +11459,14 @@
       "actual_gate_ids": [],
       "verified_implementation_sha": null,
       "verification_note": "Idempotent immutable ingest and separated generation cost window implemented. Actual provider generation/transcode, bounded provider retry, cost telemetry and approved batch still depend on OD-005; not fully verified.",
-      "trace_reviewed_at": "2026-10-04T08:55:11.894620+00:00"
+      "trace_reviewed_at": "2026-10-04T08:55:11.894620+00:00",
+      "audition_evidence": {
+        "path": "docs/p5/voice-audition/results.json",
+        "authorization": "docs/p5/voice-audition/authorization.json",
+        "validator": "tools/p5/voice-audition.py --verify-only",
+        "scope": "Eight actual local candidate WAVs with pinned authored text/model/speaker and measured metrics; no publication, cast, human linguistic QA or whole-requirement approval.",
+        "status": "LOCAL_TECHNICAL_PASS_HUMAN_REVIEW_PENDING"
+      }
     },
     {
       "requirement_id": "N-REF-P24-B03-C06",
@@ -14443,7 +14513,7 @@
       "verification_note": "P5 foundation is present or planned; the entire source clause is not proven by synthetic media fixtures. Required content/QA/operational or optional AI behavior must remain separately evidenced."
     }
   ],
-  "timestamp": "2026-10-05T03:54:34.303808+00:00",
+  "timestamp": "2026-10-06T05:02:49.781447+00:00",
   "evidence_policy": "PASS rows cite executed evidence on an exact remote SHA. PARTIAL rows do not close the requirement or phase. Test-only synthetic media/evaluators are never reference-content QA.",
   "trace_review_scope": "P5 contract gates vs synthetic fixtures/content/production approval; no later phase implemented"
 }

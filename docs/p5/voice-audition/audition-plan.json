@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "owner_authorization": "docs/p5/voice-audition/authorization.json",
+  "source_path": "assets/specs/p5/reference-media.source.json",
+  "source_sha256": "dbe4ca7b4787bd47e7b953e1162d0f03d60d3ced876a0f914fa11d3f398fde26",
+  "script_codes": {
+    "en": [
+      "AUD_ENG_M01_WORDS_HELLO",
+      "AUD_ENG_M01_WORDS_GOOD_MORNING",
+      "AUD_ENG_M01_WORDS_NAME_Q",
+      "AUD_ENG_M01_WORDS_NICE_MEET",
+      "AUD_ENG_M01_WORDS_THANK_YOU"
+    ],
+    "cs": [
+      "AUD_CZE_M01_WORDS_DOBRY_DEN",
+      "AUD_CZE_M01_WORDS_NAME_Q_FORM",
+      "AUD_CZE_M01_WORDS_TESI_ME",
+      "AUD_CZE_M01_WORDS_SPEAK_CS",
+      "AUD_CZE_M01_WORDS_DEKUJI"
+    ]
+  },
+  "candidates": [
+    {
+      "id": "en-A-p225",
+      "model": "en-vctk",
+      "language": "en",
+      "speaker_name": "p225",
+      "speaker_id": 107
+    },
+    {
+      "id": "en-B-p226",
+      "model": "en-vctk",
+      "language": "en",
+      "speaker_name": "p226",
+      "speaker_id": 95
+    },
+    {
+      "id": "en-C-p228",
+      "model": "en-vctk",
+      "language": "en",
+      "speaker_name": "p228",
+      "speaker_id": 90
+    },
+    {
+      "id": "cs-A-jirka",
+      "model": "cs-jirka",
+      "language": "cs",
+      "speaker_name": "jirka",
+      "speaker_id": 0
+    }
+  ],
+  "paces": [
+    {
+      "id": "normal",
+      "length_scale": 1.0
+    },
+    {
+      "id": "slow",
+      "length_scale": 1.35
+    }
+  ],
+  "seed": 20261006,
+  "noise_scale": 0.667,
+  "noise_w_scale": 0.8,
+  "volume": 0.8,
+  "human_review_status": "PENDING",
+  "publication_ready": false,
+  "note": "Candidate presets only; no final character binding. One Czech preset cannot satisfy three Czech voices."
+}

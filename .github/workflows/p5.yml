@@ -33,6 +33,11 @@ jobs:
         run: |
           python3 tools/p5/normalize-flags.py --check
           node --import tsx tools/p5/reference-media.ts --check
+      - name: Verify owner-authorized local voice audition bytes and language provenance
+        run: |
+          mkdir -p artifacts/p5
+          python3 tools/p5/voice-audition.py --verify-only > artifacts/p5/voice-audition-validation.json
+          cat artifacts/p5/voice-audition-validation.json
       - run: pnpm audit:dependencies
       - name: Install Chromium with bounded package-network waits
         timeout-minutes: 10

@@ -1,0 +1,32 @@
+{
+  "decision_id": "OD-005",
+  "stage": "LOCAL_AUDITION_AUTHORIZED",
+  "owner_authorization": {
+    "timestamp": "2026-10-05T20:12:29+03:00",
+    "message": "так",
+    "in_response_to": "Approval request for the prepared bounded local EN/CS voice audition, without paid APIs, learner data or publication."
+  },
+  "approved_scope": [
+    "Review and pin local model/tooling revisions and checksums",
+    "Generate bounded candidate audio from project-authored English/Czech text",
+    "Record resource suitability, model/data licence claims and audio provenance",
+    "Deliver audible previews for review"
+  ],
+  "constraints": {
+    "paid_inference_enabled": false,
+    "monthly_paid_budget": 0,
+    "learner_data": false,
+    "uploaded_person_voice_cloning": false,
+    "production_provider_adoption": false,
+    "final_voice_cast_approved": false,
+    "publication_authorized": false,
+    "p6_authorized": false
+  },
+  "decision_still_open_for": [
+    "Complete approved voice cast for en-GB and cs-CZ",
+    "Full media generation and human publication QA",
+    "Production provider/licence approval"
+  ],
+  "other_decisions_unchanged": ["OD-004", "OD-006"],
+  "contract_change": "No contract change"
+}
