@@ -25,10 +25,18 @@ The owner-authorized 2026-10-09 Pocket TTS experiment adds four Czech normal/slo
 
 All retained audio/report bytes were restored from the saved archive and not regenerated. Original ephemeral generation/ASR scripts, execution logs and YAML were absent; the current validator was reconstructed. Historical validation reports do not claim reexecution or recovery of missing scripts. Browser playback/rendering of the standalone audition page was not executed.
 
-No application dependency, schema, API, migration or production provider change is made. No model weights, learner data, human-uploaded reference, paid inference or later-phase runtime is introduced. The separate earlier transitive dependency correction is resolved on 81e6ddac; its failed parent and remediation evidence remain intact.
+No new direct application dependency, schema, API, migration or production provider change is made. The follow-up below updates an existing transitive dependency. No model weights, learner data, human-uploaded reference, paid inference or later-phase runtime is introduced. The separate earlier transitive dependency correction is resolved on 81e6ddac; its failed parent and remediation evidence remain intact.
 
 ## Open exit conditions
 
 Plan v1.4 §12 p7 requires all M01 required asset IDs to resolve. Current drafts: 18 SVGs, 12 flags, 168 scripts / 420 audio slots, six voice profiles. Audition bytes remain outside the approved publication registry. Approved assets = 0. Complete cast and rights review, full media generation, human linguistic/semantic/accessibility/publication QA and remaining compound requirements are open.
 
 OD-004 delivery OPEN; OD-005 final cast/full generation OPEN; OD-006 usable real-provider calibration OPEN with neutral speech_unavailable fallback. Trace remains **174 PASS / 30 PARTIAL / 152 PENDING**, all 356 source rows. No requirement promotion or waiver. EXC-P1-001 remains operational controls without technical main protection. Keep PR #5 OPEN DRAFT; no merge or P6.
+
+## Exact-source follow-up: P5-DEP-002
+
+The uploaded audition source `cab5af5e080c92b7607ea05f24396fbd02052cd0` passed baseline, full check/build and both audition verification steps in hosted P5 push/PR runs. All seven workflows then failed the unchanged dependency audit on sharp 0.35.4 (GHSA-wq5f-xc86-pv6w). Database/browser/OCI gates after audit did not execute on that source, so it is not a full runtime PASS. Actual run/job steps: `docs/p5/evidence/ci-pocket-audit-failure.json` (repository-root path).
+
+Remediation updates only sharp and matching platform packages 0.35.4→0.35.5, libvips packages 1.3.3→1.3.4, within Next 16.3.8's existing ^0.35.4 optional range. Direct dependencies, unrelated lock entries and audit policy are unchanged. Frozen install, zero-advisory audit, native SVG decoding with project sharp 0.35.5 / librsvg 2.63.2, baseline 76/76 and retained-audio checks pass locally. Exact evidence and the native probe's initial resolution correction: `docs/p5/evidence/sharp-patch-validation.json`.
+
+This child source still requires its own full hosted run. PR metadata and exact-source CI artifacts will record the final result without a self-referential evidence commit. P5 remains NOT READY, PR OPEN DRAFT, no merge, publication, cast acceptance or P6.

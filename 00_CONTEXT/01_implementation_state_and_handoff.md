@@ -25,7 +25,7 @@ The previous GitHub upload was blocked by automatic review. The owner's explicit
 
 ## Scope and phase gates
 
-IMP-P5-001/002/003 remain IN_PROGRESS. Trace is unchanged: 356 source rows, **174 PASS / 30 PARTIAL / 152 PENDING**. No requirement is promoted or waived by this audition. No contract, schema, API, migration, application dependency or production provider change. Full phase inventory: `docs/p5/evidence/changed-files.json`.
+IMP-P5-001/002/003 remain IN_PROGRESS. Trace is unchanged: 356 source rows, **174 PASS / 30 PARTIAL / 152 PENDING**. No requirement is promoted or waived by this audition. No contract, schema, API, migration, new direct application dependency or production provider change. The follow-up security patch below changes existing sharp transitive resolutions. Full phase inventory: `docs/p5/evidence/changed-files.json`.
 
 Plan v1.4 §12 p7 requires all M01 required asset IDs to resolve. Prepared: 18 original SVG drafts, 12 flag drafts, 168 scripts / 420 audio slots and six voice profiles. Twelve audition files do not resolve the full media set. Approved publication assets = 0. Human linguistic/semantic/accessibility/rights QA and complete cast/full generation remain open.
 
@@ -34,3 +34,11 @@ OD-004 delivery profile OPEN. OD-005 bounded audition executed; final tooling/ca
 BLOCKER: none newly identified; exact new-source CI is required before claiming its runtime PASS. IMPORTANT: full M01 media, held Czech candidates, human QA and remaining compound requirement closure. MINOR: inherited Actions Node, Argon2id and pg concurrent-client-query notices. EXC-P1-001 remains: main is not technically protected; implementation branch, PR, CI and owner review apply.
 
 Next: upload this explicitly authorized batch, verify its exact-source CI, and record final result in PR metadata. Then human audition review and candidate improvement/selection precede full generation. Keep PR #5 OPEN DRAFT; no merge; no P6.
+
+## Exact-source follow-up: P5-DEP-002
+
+The uploaded audition source `cab5af5e080c92b7607ea05f24396fbd02052cd0` passed baseline, full check/build and both audition verification steps in hosted P5 push/PR runs. All seven workflows then failed the unchanged dependency audit on sharp 0.35.4 (GHSA-wq5f-xc86-pv6w). Database/browser/OCI gates after audit did not execute on that source, so it is not a full runtime PASS. Actual run/job steps: `docs/p5/evidence/ci-pocket-audit-failure.json` (repository-root path).
+
+Remediation updates only sharp and matching platform packages 0.35.4→0.35.5, libvips packages 1.3.3→1.3.4, within Next 16.3.8's existing ^0.35.4 optional range. Direct dependencies, unrelated lock entries and audit policy are unchanged. Frozen install, zero-advisory audit, native SVG decoding with project sharp 0.35.5 / librsvg 2.63.2, baseline 76/76 and retained-audio checks pass locally. Exact evidence and the native probe's initial resolution correction: `docs/p5/evidence/sharp-patch-validation.json`.
+
+This child source still requires its own full hosted run. PR metadata and exact-source CI artifacts will record the final result without a self-referential evidence commit. P5 remains NOT READY, PR OPEN DRAFT, no merge, publication, cast acceptance or P6.

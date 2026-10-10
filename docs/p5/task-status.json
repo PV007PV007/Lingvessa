@@ -790,13 +790,13 @@
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
     }
   ],
-  "timestamp": "2026-10-10T11:32:57.449429+00:00",
-  "last_hosted_tested_sha": "81e6ddacb839abf2473630c889521442193d1d21",
-  "last_hosted_result": "RUNTIME_PASS_MILESTONE_NOT_READY",
+  "timestamp": "2026-10-10T11:44:52.403722+00:00",
+  "last_hosted_tested_sha": "cab5af5e080c92b7607ea05f24396fbd02052cd0",
+  "last_hosted_result": "FAILED_DEPENDENCY_AUDIT",
   "last_full_runtime_pass_sha": "81e6ddacb839abf2473630c889521442193d1d21",
   "ci_evidence": "docs/p5/evidence/ci-batch-013.json",
   "current_revision_ci": "The workflow checks out the exact PR head and emits artifacts/p5/acceptance-summary.json; the PR head run is required after any later source/evidence commit.",
-  "latest_attempt_evidence": "docs/p5/evidence/ci-batch-013.json",
+  "latest_attempt_evidence": "docs/p5/evidence/ci-pocket-audit-failure.json",
   "local_audition_evidence": "docs/p5/voice-audition/results.json",
   "resolved_hosted_remediation": {
     "issue_id": "P5-DEP-001",
@@ -811,5 +811,11 @@
     "human_review": "PENDING",
     "publication_ready": false,
     "new_source_ci": "REQUIRED; PR checks and exact-source artifacts determine the current revision result"
+  },
+  "pending_hosted_remediation": {
+    "issue_id": "P5-DEP-002",
+    "patch": "sharp 0.35.4→0.35.5 and matching @img platform/libvips packages, within existing Next range",
+    "local_evidence": "docs/p5/evidence/sharp-patch-validation.json",
+    "resolution_authority": "Exact current revision PR checks and hosted acceptance-summary; no parent PASS substitution"
   }
 }
