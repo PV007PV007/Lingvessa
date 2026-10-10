@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-10T11:33:51.364727+00:00",
+  "scope": "Recovered immutable audition batch; new verification-only code and handoff",
+  "base_remote_sha": "81e6ddacb839abf2473630c889521442193d1d21",
+  "base_local_sha": "beb031bea895ca7a5b05171bd6445668226ac7b9",
+  "base_tree_sha": "404e80bd9e871311f08d22453e12bb9237843328",
+  "checks": [
+    {
+      "command": "python3 tools/governance/validate_p5_baseline.py",
+      "exit_code": 0,
+      "passed": 76,
+      "total": 76
+    },
+    {
+      "command": "python3 tools/p5/voice-audition.py --verify-only",
+      "exit_code": 0,
+      "samples_verified": 8
+    },
+    {
+      "command": "python3 tools/p5/pocket-audition.py --verify-only",
+      "exit_code": 0,
+      "retained_files_verified": 29,
+      "main_samples_verified": 4,
+      "raw_turns_verified": 10,
+      "continuous_diagnostics_verified": 2,
+      "asr_bindings_verified": 14
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    },
+    {
+      "command": "node --import tsx tools/p1/scan-secrets.ts",
+      "exit_code": 0,
+      "source_files": 516,
+      "history_blobs": 790,
+      "findings": []
+    }
+  ],
+  "inference_executed_now": false,
+  "current_hosted_ci": "REQUIRED",
+  "p5_milestone": "NOT_READY",
+  "p6_authorized": false
+}

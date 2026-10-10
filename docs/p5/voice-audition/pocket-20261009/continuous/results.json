@@ -1,0 +1,30 @@
+{
+  "mode": "single continuous text instead of five separately generated turns",
+  "temperature": 0.3,
+  "outputs": [
+    {
+      "candidate_id": "cs-B-pocket-A",
+      "path": "docs/p5/voice-audition/pocket-20261009/continuous/cs-B-pocket-A-continuous.wav",
+      "sha256": "d39fd7cfacdbc7293d3d863c150d083a0b0f1de975a17fae853c35a3db4d27aa",
+      "text": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "reference_path": "docs/p5/voice-audition/samples/en-A-p225-normal.wav",
+      "reference_sha256": "436906eb0ffb3af2ac9332910e3591934a2e8e5a5cbcc83625e1b1859f9e0695",
+      "seed": 20261009,
+      "duration_seconds": 3.76,
+      "gain": 1.0
+    },
+    {
+      "candidate_id": "cs-C-pocket-C",
+      "path": "docs/p5/voice-audition/pocket-20261009/continuous/cs-C-pocket-C-continuous.wav",
+      "sha256": "743905cd62c1533880f87e27717558e3b676038ad727aabad20a612bc6c7dd2f",
+      "text": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "reference_path": "docs/p5/voice-audition/samples/en-C-p228-normal.wav",
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8",
+      "seed": 20261109,
+      "duration_seconds": 3.2,
+      "gain": 0.8330989947855084
+    }
+  ],
+  "human_review": "PENDING",
+  "publication_ready": false
+}

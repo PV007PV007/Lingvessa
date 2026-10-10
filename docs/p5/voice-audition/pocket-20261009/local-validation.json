@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-10-09T17:49:48.436704+00:00",
+  "scope": "actual offline experiment + local file/provenance/baseline validation; not hosted runtime acceptance",
+  "checks": [
+    {
+      "command": "python3 tools/p5/voice-audition.py --verify-only",
+      "exit_code": 0,
+      "output": "{\"status\": \"PASS\", \"samples_verified\": 8, \"model_text_speaker_pairs_verified\": 4, \"human_review\": \"PENDING\", \"publication_ready\": false, \"p5_milestone\": \"NOT_READY\"}"
+    },
+    {
+      "command": "python3 tools/p5/pocket-audition.py --verify-only",
+      "exit_code": 0,
+      "output": "{\"status\": \"PASS\", \"audition_files\": 4, \"raw_turns\": 10, \"source_sentences\": 5, \"continuous_diagnostic_files\": 2, \"screened_files\": 14, \"human_review\": \"PENDING\", \"linguistic_acceptance\": \"NOT_ASSERTED\", \"publication_ready\": false}"
+    },
+    {
+      "command": "python3 tools/governance/validate_p5_baseline.py",
+      "exit_code": 0,
+      "output": "{\n  \"status\": \"PASS\",\n  \"passed\": 39,\n  \"total\": 39\n}\n{\"status\": \"PASS\", \"passed\": 65, \"total\": 65, \"failures\": []}\n{\"status\": \"PASS\", \"passed\": 76, \"total\": 76, \"failures\": []}"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "runtime_code_changed": false,
+  "new_revision_hosted_ci": "REQUIRED"
+}

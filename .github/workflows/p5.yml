@@ -38,6 +38,10 @@ jobs:
           mkdir -p artifacts/p5
           python3 tools/p5/voice-audition.py --verify-only > artifacts/p5/voice-audition-validation.json
           cat artifacts/p5/voice-audition-validation.json
+      - name: Verify retained Czech Pocket audition and diagnostic provenance
+        run: |
+          python3 tools/p5/pocket-audition.py --verify-only > artifacts/p5/pocket-audition-validation.json
+          cat artifacts/p5/pocket-audition-validation.json
       - run: pnpm audit:dependencies
       - name: Install Chromium with bounded package-network waits
         timeout-minutes: 10

@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-10",
+  "owner_response": "Так",
+  "in_response_to": "Дозволяєш завантажити ці аудіозразки та супровідні зміни в PV007PV007/Lingvessa, гілку implementation/p5-media-speech — PR #5?",
+  "repository": "PV007PV007/Lingvessa",
+  "repository_id": "1370429105",
+  "visibility": "private",
+  "authenticated_owner": "PV007PV007",
+  "verified_push_permission": true,
+  "branch": "implementation/p5-media-speech",
+  "pr": 5,
+  "expected_parent_sha": "81e6ddacb839abf2473630c889521442193d1d21",
+  "approved_scope": [
+    "Upload retained candidate audio and accompanying P5 source, verification and handoff",
+    "Run exact-source hosted CI and update PR metadata"
+  ],
+  "previous_auto_review_block": "Historical upload was blocked because repository disclosure lacked explicit authorization. The owner now explicitly authorizes this destination and batch.",
+  "merge_authorized": false,
+  "final_cast_approved": false,
+  "publication_authorized": false,
+  "p6_authorized": false
+}

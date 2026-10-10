@@ -1,0 +1,8 @@
+{
+  "status": "BLOCKED_AUTO_REVIEW",
+  "branch_updated": false,
+  "new_commit_created_remotely": false,
+  "action": "Upload locally generated audio artifacts and accompanying P5 source/evidence to PV007PV007/Lingvessa PR #5",
+  "reason": "Automatic review: external disclosure of locally generated audio to an unverified GitHub repository was not explicitly authorized",
+  "safe_continuation": "Finish private reviewable audio package; retain local code and evidence; ask explicit authorization only after deliverables are ready. No alternate GitHub write route attempted."
+}

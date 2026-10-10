@@ -1,4 +1,6 @@
-# OD-005 local voice audition — 2026-10-06
+# OD-005 local voice audition — original 2026-10-06 batch
+
+Update 2026-10-10: [the retained Czech Pocket TTS batch](pocket-20261009/README.md) adds two Czech candidates, normal/slow pairs and continuous diagnostics. Both candidates remain **HOLD_FOR_REVIEW** after ASR discrepancies; final cast, human listening and P5 acceptance remain pending. The eight original Piper files below are unchanged.
 
 Owner authorized this bounded experiment on 2026-10-05; see `authorization.json`. **Eight candidate WAV files were actually synthesized locally on CPU.** The technical file/provenance checks pass. Human listening review, final character binding, full voice-cast acceptance and production/publication approval remain pending. This is not the M01 publication asset registry and does not close P5.
 
@@ -13,7 +15,7 @@ English text: “Hello. Good morning. What's your name? Nice to meet you. Thank 
 
 Czech text: “Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.”
 
-These texts are concatenated from the existing project-authored M01 script records; `results.json` retains their UUIDs, source/text hashes and language. Candidate names do not bind a preset to Maya/Daniel/Alex or Klára/Adam/Oksana. The current Czech model supplies **one** preset, so two additional Czech voices are still missing. No pitch-shift substitutes were created.
+These texts are concatenated from the existing project-authored M01 script records; `results.json` retains their UUIDs, source/text hashes and language. Candidate names do not bind a preset to Maya/Daniel/Alex or Klára/Adam/Oksana. This Piper Czech model supplies **one** preset; the later Pocket batch adds two audition candidates, without establishing an approved Czech cast. No pitch-shift substitutes were created.
 
 ## What was executed
 
@@ -46,4 +48,4 @@ MOSS alternative: metadata was pinned and inspected, but no MOSS model weights w
 
 Review each normal/slow pair for script completeness, naturalness, clicks/noise, pace and preserved voice identity. English additionally needs en-GB variety/intonation review; Czech needs first-syllable stress, vowel length, diacritics and natural phrasing. Confirm whether a candidate fits the intended adult character role only after listening. Technical measurements cannot approve these linguistic/semantic criteria.
 
-OD-005 audition authorization is fulfilled as a bounded experiment with a partial candidate set. Final cast approval remains OPEN; two Czech candidates are missing. OD-004 delivery selection and OD-006 real speech-evaluator calibration are unchanged. P5 NOT READY; PR #5 stays open; no P6.
+OD-005 audition authorization is fulfilled as a bounded experiment. The later Pocket batch fills the two additional Czech audition labels, but final cast approval remains OPEN and those candidates are held for review. OD-004 delivery selection and OD-006 real speech-evaluator calibration are unchanged. P5 NOT READY; PR #5 stays open; no P6.

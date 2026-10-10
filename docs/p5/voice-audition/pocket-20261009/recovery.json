@@ -1,0 +1,197 @@
+{
+  "date": "2026-10-10",
+  "archive": "Lingvessa_Voice_Test_2026-10-09.zip",
+  "archive_sha256": "925418497501c67d5b4ec763a85a4d728f56e2a221be2d6fbcdf8d77dc02f275",
+  "all_archive_entries_verified": 46,
+  "retained_files": [
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/MODEL_CARD.md",
+      "archive_path": "provenance/pocket/MODEL_CARD.md",
+      "bytes": 2638,
+      "sha256": "6d501cc702f5974994cbd40bee7282de84a6cff67653b223db26eb283263669c"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/archive-README.md",
+      "archive_path": "provenance/pocket/README.md",
+      "bytes": 5913,
+      "sha256": "7366aa5537b84b73d38d06a12e45a055b75e831861256eea4aabdb045e10d2b1"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/asr-model.lock.json",
+      "archive_path": "provenance/pocket/asr-model.lock.json",
+      "bytes": 868,
+      "sha256": "1bbd523bbd0bb58beccc990593fb9a0ff50202ef82987ed517b2669d1018923f"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/asr-screen.json",
+      "archive_path": "provenance/pocket/asr-screen.json",
+      "bytes": 12558,
+      "sha256": "dc9f01f116cb770544175b1852b19cbcefc8e750efe2d3275c1fe87b345368f6"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/continuous/asr-screen.json",
+      "archive_path": "provenance/pocket/continuous/asr-screen.json",
+      "bytes": 1016,
+      "sha256": "53e438a821c16fba6e872ab7c85b1d0583ba3e742eb1ab4f075825e588028abb"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/continuous/results.json",
+      "archive_path": "provenance/pocket/continuous/results.json",
+      "bytes": 1324,
+      "sha256": "8a76f74b47b4d6bdb15b0fd3ed8465d24858efc3a3df7b37076b4f4144321e51"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/local-diagnostics.json",
+      "archive_path": "provenance/pocket/local-diagnostics.json",
+      "bytes": 671,
+      "sha256": "19ea4c1ffb6815f290ad1780d27926f764277fbdb283a55c779863f50b66eeb7"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/local-validation.json",
+      "archive_path": "provenance/pocket/local-validation.json",
+      "bytes": 1370,
+      "sha256": "48044cd60b52ac435dee7c24899d538eae61b5eddfd5d45ebf74c9e809adf1fd"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/models.lock.json",
+      "archive_path": "provenance/pocket/models.lock.json",
+      "bytes": 838,
+      "sha256": "3e7f86e2acab73f4dd5d3c6852aa7eecd8c6d67d36a0988e301ae95fe102e64b"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/results.json",
+      "archive_path": "provenance/pocket/results.json",
+      "bytes": 14815,
+      "sha256": "c18c2cf22cedeeaf94e506d0415e9d5b8005c27e416caa7c94bada3b29539e7b"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/tooling-lock.json",
+      "archive_path": "provenance/pocket/tooling-lock.json",
+      "bytes": 18362,
+      "sha256": "38115b90212de6668f440af1189ff2b4f5b936031a9f45099334e8e5b9ecf1fd"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/continuous/cs-B-pocket-A-continuous.wav",
+      "archive_path": "audio/continuous/cs-B-pocket-A-continuous.wav",
+      "bytes": 180524,
+      "sha256": "d39fd7cfacdbc7293d3d863c150d083a0b0f1de975a17fae853c35a3db4d27aa"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/continuous/cs-C-pocket-C-continuous.wav",
+      "archive_path": "audio/continuous/cs-C-pocket-C-continuous.wav",
+      "bytes": 153644,
+      "sha256": "743905cd62c1533880f87e27717558e3b676038ad727aabad20a612bc6c7dd2f"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-normal.wav",
+      "archive_path": "audio/cs-B-pocket-A-normal.wav",
+      "bytes": 466604,
+      "sha256": "20bb6cb04c136f68cab28c9e24f6fbce78118dce33ee1cb24c11a314e097271a"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-slow.wav",
+      "archive_path": "audio/cs-B-pocket-A-slow.wav",
+      "bytes": 582324,
+      "sha256": "2e1bf770ef5835688f974ba6df1fdc3d39a10c0fc6803855940b13dc57595133"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-normal.wav",
+      "archive_path": "audio/cs-C-pocket-C-normal.wav",
+      "bytes": 451244,
+      "sha256": "bb9efbb0529e244b204b39ed22e5b29ab790e37de3392cac62a1dd68bb62c70e"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-slow.wav",
+      "archive_path": "audio/cs-C-pocket-C-slow.wav",
+      "bytes": 563346,
+      "sha256": "60e4435cfceb5d515309d1d1f681560d825f409f6d5743be223c50354a0163bb"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-turn-1.wav",
+      "archive_path": "audio/raw-turns/cs-B-pocket-A-turn-1.wav",
+      "bytes": 161338,
+      "sha256": "eaaff0c5da0fb3e3d5c2962a187df38d01c7dd40c82d9d0d96af71d02e63e5fa"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-turn-2.wav",
+      "archive_path": "audio/raw-turns/cs-B-pocket-A-turn-2.wav",
+      "bytes": 169018,
+      "sha256": "f712947647e80888ebffa4f188b2df62e1bcb510eab5e64fcb190ab0eeb97d87"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-turn-3.wav",
+      "archive_path": "audio/raw-turns/cs-B-pocket-A-turn-3.wav",
+      "bytes": 130618,
+      "sha256": "53f82b49f2e8838aea18ee24408de6982138693ea9cf101ece1d09e102d2ef17"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-turn-4.wav",
+      "archive_path": "audio/raw-turns/cs-B-pocket-A-turn-4.wav",
+      "bytes": 184378,
+      "sha256": "f43caa8c587ee990581ae098d7c24d2bf75ad155a34367392cc8cde3096b3bba"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-turn-5.wav",
+      "archive_path": "audio/raw-turns/cs-B-pocket-A-turn-5.wav",
+      "bytes": 153658,
+      "sha256": "72db541e703e6810f2b512ca7d7087577c49b4856d86b013e3f7181d3c51fda7"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-turn-1.wav",
+      "archive_path": "audio/raw-turns/cs-C-pocket-C-turn-1.wav",
+      "bytes": 145978,
+      "sha256": "300a36b75893d32961f36c16c6654e873e292780007de750a7765e2ba3699745"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-turn-2.wav",
+      "archive_path": "audio/raw-turns/cs-C-pocket-C-turn-2.wav",
+      "bytes": 176698,
+      "sha256": "3960f6cc5c0de642ff66b2cc190043dd2ac5d0d409f07eeb9e4b48c54058f4d3"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-turn-3.wav",
+      "archive_path": "audio/raw-turns/cs-C-pocket-C-turn-3.wav",
+      "bytes": 138298,
+      "sha256": "8cdfebd26c4e254fdd1b185f63446ef57cc78f4ff0bd1ba427955199a6059d9f"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-turn-4.wav",
+      "archive_path": "audio/raw-turns/cs-C-pocket-C-turn-4.wav",
+      "bytes": 161338,
+      "sha256": "9f0928fb80464d825b72677fad97debc73deac3c27c895068a1e75dd43b7fb7c"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-turn-5.wav",
+      "archive_path": "audio/raw-turns/cs-C-pocket-C-turn-5.wav",
+      "bytes": 145978,
+      "sha256": "a9b66723d89743769afc6f8ea088a77ebd173ca4360c767ac29a98986e61ff9a"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/archive-write-status.json",
+      "archive_path": "provenance/github-write-status.json",
+      "bytes": 576,
+      "sha256": "f2707d0850a0d1ae34aaedc1a4ee510ce3360b4bffc3f8c4711fdf136020ac44"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/archive-listening-validation.json",
+      "archive_path": "provenance/listening-validation.json",
+      "bytes": 339,
+      "sha256": "c71b70f6d80cbf1537e7710d175c47daced06db3d34ab55f905bef390139b0d5"
+    }
+  ],
+  "audio_regenerated": false,
+  "historical_reports_edited": false,
+  "missing_from_archive": [
+    "Original generation and ASR scripts",
+    "Original execution logs",
+    "czech.upstream.yaml",
+    "Temporary local commit 44dde2a97493132a83f5fc991bd34468792e4584"
+  ],
+  "reconstructed_files": [
+    "tools/p5/pocket-audition.py",
+    "requirements-local.txt",
+    "README.md",
+    "Current phase handoff and status"
+  ],
+  "boundary": "Original audio and report bytes restored exactly. Current verification tool reconstructed from retained reports and authored scripts. Historical script/log references in archive-README.md and local-validation.json describe the previous run; those executable sources and logs were not recovered. No new synthesis, ASR execution or human listening review is claimed."
+}

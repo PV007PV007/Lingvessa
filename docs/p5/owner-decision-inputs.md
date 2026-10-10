@@ -1,6 +1,8 @@
 # P5 decision inputs — not approvals
 
-Updated 2026-10-06. OD-005 bounded local audition was owner-authorized on 2026-10-05 and executed; final provider/cast/full generation decisions remain OPEN. OD-004/006 are unchanged. This file does not change the locked baseline, approve a provider, enable paid inference, or certify M01 media. Sources of the decision requirement are `docs/baseline/open-decisions.md`, Technical Specification §40.2 / Technical Design §35 and Curriculum §19.2.
+Latest audition: two additional Czech Pocket TTS candidates now have retained normal/slow audio and diagnostic retries; see [the batch and listening links](voice-audition/pocket-20261009/README.md). Both remain **HOLD_FOR_REVIEW**. Their references are existing synthetic Piper EN A/C, not newly designed MOSS voices. Blind ASR shows discrepancies and human listening is pending; the three Czech labels do not establish an approved cast. On 2026-10-10 the owner explicitly authorized uploading these samples and accompanying changes to PR #5. This does not approve final cast, publication, merge or P6. The proposals and historical resource assessment below remain context, not new execution claims.
+
+Updated 2026-10-10. OD-005 bounded local audition was owner-authorized on 2026-10-05 and executed; final provider/cast/full generation decisions remain OPEN. OD-004/006 are unchanged. This file does not change the locked baseline, approve a provider, enable paid inference, or certify M01 media. Sources of the decision requirement are `docs/baseline/open-decisions.md`, Technical Specification §40.2 / Technical Design §35 and Curriculum §19.2.
 
 ## OD-004 — Storage/delivery profile
 

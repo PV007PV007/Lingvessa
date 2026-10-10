@@ -1,0 +1,8 @@
+{
+  "embedded_wav_controls": 14,
+  "base64_and_riff_validation": "PASS",
+  "javascript_syntax": "PASS",
+  "archive_integrity_and_all_44_hashes": "PASS",
+  "browser_playback_and_visual_check": "NOT_EXECUTED: browser binary absent; Chromium download failed",
+  "limitation": "No rendered visual or actual browser playback PASS is claimed"
+}

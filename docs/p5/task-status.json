@@ -790,18 +790,26 @@
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
     }
   ],
-  "timestamp": "2026-10-06T10:25:29.223172+00:00",
-  "last_hosted_tested_sha": "b1bebd29019872408cb6af4af382266ab0c76829",
-  "last_hosted_result": "FAILED_DEPENDENCY_AUDIT",
-  "last_full_runtime_pass_sha": "23257497db6cf29497f51d6e5b2476f97e3c7c43",
-  "ci_evidence": "docs/p5/evidence/ci-batch-012.json",
+  "timestamp": "2026-10-10T11:32:57.449429+00:00",
+  "last_hosted_tested_sha": "81e6ddacb839abf2473630c889521442193d1d21",
+  "last_hosted_result": "RUNTIME_PASS_MILESTONE_NOT_READY",
+  "last_full_runtime_pass_sha": "81e6ddacb839abf2473630c889521442193d1d21",
+  "ci_evidence": "docs/p5/evidence/ci-batch-013.json",
   "current_revision_ci": "The workflow checks out the exact PR head and emits artifacts/p5/acceptance-summary.json; the PR head run is required after any later source/evidence commit.",
-  "latest_attempt_evidence": "docs/p5/evidence/ci-audition-audit-failure.json",
+  "latest_attempt_evidence": "docs/p5/evidence/ci-batch-013.json",
   "local_audition_evidence": "docs/p5/voice-audition/results.json",
-  "pending_hosted_remediation": {
+  "resolved_hosted_remediation": {
     "issue_id": "P5-DEP-001",
-    "patch": "Only proxy-addr 2.0.8 and source-map-js 1.2.2 lock entries; exact current revision must pass hosted audit/runtime gates.",
-    "local_evidence": "docs/p5/evidence/dependency-patch-validation.json",
-    "resolution_authority": "The current revision PR check URLs and artifacts/p5/acceptance-summary.json provide final exact-SHA status; never infer a pass from a parent."
+    "resolved_on_sha": "81e6ddacb839abf2473630c889521442193d1d21",
+    "evidence": "docs/p5/evidence/ci-batch-013.json"
+  },
+  "pocket_audition": {
+    "evidence": "docs/p5/voice-audition/pocket-20261009/results.json",
+    "recovery": "docs/p5/voice-audition/pocket-20261009/recovery.json",
+    "technical_bytes": "PASS",
+    "candidate_status": "HOLD_FOR_REVIEW",
+    "human_review": "PENDING",
+    "publication_ready": false,
+    "new_source_ci": "REQUIRED; PR checks and exact-source artifacts determine the current revision result"
   }
 }
