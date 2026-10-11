@@ -1,0 +1,112 @@
+{
+  "verified_date": "2026-10-11",
+  "source_sha": "6cdc635b55da0a8d38cd94a9b14d48f80640942e",
+  "tree_sha": "39dbf682ae90ff162a13abf75d02feec3d4b3365",
+  "all_seven_runs_success": [
+    38112197766,
+    38112197789,
+    38112197783,
+    38112197860,
+    38112197835,
+    38112195617,
+    38112195591
+  ],
+  "p5_artifacts": [
+    {
+      "event": "pull_request",
+      "run_id": 38112197835,
+      "job_id": 114389895234,
+      "artifact_id": 11691748771,
+      "archive_sha256": "8796881771816dd89fe0532fb56eae621c211a60ea9e3761ea73701cd1e8f1fb",
+      "tested_sha": "6cdc635b55da0a8d38cd94a9b14d48f80640942e",
+      "runtime_status": "PASS",
+      "milestone_status": "NOT_READY",
+      "acceptance_hashes_verified": 13,
+      "baseline_checks": 76,
+      "application_browser_tests": 17,
+      "case_validations": {
+        "pocket-case-validation.json": {
+          "status": "PASS",
+          "source_sha": "6cdc635b55da0a8d38cd94a9b14d48f80640942e",
+          "working_tree_dirty": false,
+          "raw_turns_verified": 20,
+          "main_clips_verified": 8,
+          "asr_bindings_verified": 14,
+          "inference_executed_now": false,
+          "human_review": "PENDING",
+          "p5_milestone": "NOT_READY",
+          "publication_ready": false,
+          "p6_authorized": false
+        },
+        "pocket-case-holdout-validation.json": {
+          "status": "PASS",
+          "source_sha": "6cdc635b55da0a8d38cd94a9b14d48f80640942e",
+          "working_tree_dirty": false,
+          "raw_turns_verified": 20,
+          "main_clips_verified": 8,
+          "asr_bindings_verified": 14,
+          "inference_executed_now": false,
+          "human_review": "PENDING",
+          "p5_milestone": "NOT_READY",
+          "publication_ready": false,
+          "p6_authorized": false
+        }
+      }
+    },
+    {
+      "event": "push",
+      "run_id": 38112195591,
+      "job_id": 114389887420,
+      "artifact_id": 11691868560,
+      "archive_sha256": "f3d3b74c31733c05ccbb8a3d0f2948099a005e6b4400924dac525a12ddfd1def",
+      "tested_sha": "6cdc635b55da0a8d38cd94a9b14d48f80640942e",
+      "runtime_status": "PASS",
+      "milestone_status": "NOT_READY",
+      "acceptance_hashes_verified": 13,
+      "baseline_checks": 76,
+      "application_browser_tests": 17,
+      "case_validations": {
+        "pocket-case-validation.json": {
+          "status": "PASS",
+          "source_sha": "6cdc635b55da0a8d38cd94a9b14d48f80640942e",
+          "working_tree_dirty": false,
+          "raw_turns_verified": 20,
+          "main_clips_verified": 8,
+          "asr_bindings_verified": 14,
+          "inference_executed_now": false,
+          "human_review": "PENDING",
+          "p5_milestone": "NOT_READY",
+          "publication_ready": false,
+          "p6_authorized": false
+        },
+        "pocket-case-holdout-validation.json": {
+          "status": "PASS",
+          "source_sha": "6cdc635b55da0a8d38cd94a9b14d48f80640942e",
+          "working_tree_dirty": false,
+          "raw_turns_verified": 20,
+          "main_clips_verified": 8,
+          "asr_bindings_verified": 14,
+          "inference_executed_now": false,
+          "human_review": "PENDING",
+          "p5_milestone": "NOT_READY",
+          "publication_ready": false,
+          "p6_authorized": false
+        }
+      }
+    }
+  ],
+  "unit_tests": 54,
+  "smoke_tests": 4,
+  "integration_tests": 16,
+  "known_production_dependency_vulnerabilities": 0,
+  "trace_counts": {
+    "PASS": 174,
+    "PARTIAL": 30,
+    "PENDING": 152
+  },
+  "human_review": "PENDING",
+  "p5_milestone": "NOT_READY",
+  "publication_ready": false,
+  "p6_authorized": false,
+  "scope": "Exact historical source only; a later listening-worksheet revision requires its own hosted CI."
+}

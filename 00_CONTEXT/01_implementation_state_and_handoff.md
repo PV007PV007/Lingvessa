@@ -5,6 +5,12 @@ Branch `implementation/p5-media-speech`; [PR #5](https://github.com/PV007PV007/L
 
 ## Exact-source runtime evidence
 
+Latest verified complete source: `6cdc635b55da0a8d38cd94a9b14d48f80640942e`, tree `39dbf682ae90ff162a13abf75d02feec3d4b3365`. All seven workflows passed. P5 PR run 38112197835 / job 114389895234; push run 38112195591 / job 114389887420. Both archive digests, all thirteen acceptance references and all original/Pocket/paired/held-out audio validators were independently verified. Both new batch validators report 20 raw turns, eight clips and fourteen ASR bindings per batch, a clean checkout and no inference during CI. Runtime PASS; milestone NOT_READY; human listening PENDING. Machine-readable record: `docs/p5/evidence/ci-case-20261011.json`.
+
+Current follow-up: an offline human-review worksheet with eight masked X/Y comparisons and two Czech A anchors. It embeds the same 18 unchanged WAVs, accepts timestamped notes/preferences, and exports/restores audio-bound feedback without approving voices. Three new browser checks exercise playback and the feedback workflow; the P5 acceptance summary binds their reports. See `docs/p5/listening-review.md`. This source needs its own hosted run; final current-source results belong in immutable CI artifacts and PR metadata.
+
+Historical predecessor evidence follows.
+
 Last inspected full runtime PASS: `c21a2a0aa65924c091a7c464094ff3de4aa2c2ee`, tree `bdd794e7b883e423eb625dfce3f6e1bd03bf6219`. All seven hosted workflows passed. P5 PR run 38049540964 / job 114205709344; push run 38049537327 / job 114205699606. Both final artifact archives were downloaded and verified against their SHA-256 digests; their acceptance summaries bind twelve runtime reports and the repository requirement-evidence hash to the exact tested source.
 
 PR artifact 11669156689 SHA-256 `f704c3b09b578f890292ba14963c3dd54dbd2dcebfb8a8e2911f03bc4c844b61`; push artifact 11668981926 SHA-256 `dd52cd5f836dd2ae8274d236fce1aedf7460e4381ef32d515d65335dfa577c06`. Exact final results remain in PR metadata and immutable workflow artifacts.
@@ -13,7 +19,7 @@ Executed there: frozen install; baseline 76/76; 54 unit + 4 smoke; audit zero fi
 
 P5-DEP-002 is resolved at that source by sharp 0.35.5 and libvips 1.3.4 within Next 16.3.8's existing range. The failed parent audit is preserved in `docs/p5/evidence/ci-pocket-audit-failure.json`; local remediation evidence is in `sharp-patch-validation.json`. P5-DEP-001 was resolved at historical source `81e6ddac` by compatible proxy-addr 2.0.8 / source-map-js 1.2.2 patches; historical full runtime evidence is in `ci-batch-013.json`. No audit waiver or suppression.
 
-**The new paired audition source needs its own hosted CI. A parent PASS does not certify it.** Current PR checks and `artifacts/p5/acceptance-summary.json` bind runtime results to checked-out HEAD. Separate audition validators bind retained bytes/provenance to the same SHA. Final immutable CI artifacts and PR metadata record the result; do not create an endless evidence-only descendant cycle to record a commit's own SHA.
+**A parent PASS does not certify a later source.** Current PR checks and `artifacts/p5/acceptance-summary.json` bind runtime results to checked-out HEAD. Separate audition validators bind retained bytes/provenance to the same SHA. Final immutable CI artifacts and PR metadata record the result; do not create an endless evidence-only descendant cycle to record a commit's own SHA.
 
 ## Retained auditions and the new controlled comparison
 
@@ -35,7 +41,7 @@ The new archive `Lingvessa_Czech_Trial_2026-10-10.zip` was successfully saved fo
 
 Automatic approval review stopped the earlier upload after 35 unreferenced blobs because the visible messages did not explicitly authorize this new payload/destination. No tree, remote commit or branch ref was created then. The concrete permission request named all 56 WAVs, accompanying changes, private `PV007PV007/Lingvessa`, `implementation/p5-media-speech`, PR #5 and exact-source CI. The owner responded **“продовжуй” on 2026-10-11**, authorizing completion of that request. Repository owner/private visibility/push permission and unchanged remote head `c21a2a0a` were reverified. Exact scope: `docs/p5/evidence/case-upload-authorization.json`.
 
-Finish the remaining authorized blob upload, require the remote tree to match the locally computed full tree, guard the branch update against the current expected head and verify all exact-source CI. Existing successful immutable blobs may be reused. P5 CI runs both new stdlib validators with bytecode writes disabled to keep the checkout clean; each covers 20 raw turns, eight clips and fourteen ASR bindings. Inference never runs in CI. PR remains OPEN DRAFT; merge, cast acceptance, publication and P6 are not authorized.
+That upload completed: all 56 WAV identities and the full 81-file change tree matched locally verified bytes; the branch advanced from the expected c21a2a0a head to 6cdc635b. P5 CI ran both new stdlib validators with bytecode writes disabled and all seven workflows passed. Inference never runs in CI. PR remains OPEN DRAFT; merge, cast acceptance, publication and P6 are not authorized.
 
 ## Scope and phase gates
 
@@ -45,4 +51,4 @@ Plan v1.4 §12 p7 requires all M01 required asset IDs to resolve. Prepared: 18 o
 
 OD-004 delivery profile OPEN. OD-005 audition executed; final tooling/cast/full generation OPEN. OD-006 usable real-provider speech calibration OPEN; default stays neutral `speech_unavailable`. Paid inference=false; monthly paid budget=0. No P6/P7/P8 runtime starts. EXC-P1-001 remains: main lacks technical branch protection; implementation branch, PR, CI and owner review apply.
 
-Next after exact-source CI: human audition review and a separately scoped improvement/selection decision before full generation. Keep P5 NOT_READY and PR #5 OPEN DRAFT.
+Next: complete the worksheet's exact-source browser/CI checks and deliver it for human audition feedback, followed by a separately scoped improvement/selection decision before full generation. Keep P5 NOT_READY and PR #5 OPEN DRAFT.

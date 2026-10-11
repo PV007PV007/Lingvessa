@@ -14,6 +14,9 @@ const baseline=read('artifacts/p5/baseline-validation.json');
 const reference=read('artifacts/p5/reference-media-validation.json');
 const mediaBrowser=read('artifacts/p5/browser-results.json');
 const speechBrowser=read('artifacts/p5/speech-browser-results.json');
+const listeningBrowser=read('artifacts/p5/listening-browser-results.json');
+const listeningPlayback=read('artifacts/p5/listening-playback-validation.json');
+const listeningManifest=read('artifacts/p5/listening-review-manifest.json');
 const p3=read('artifacts/p3/acceptance-summary.json'),p4=read('artifacts/p4/acceptance-summary.json');
 const containers=read('artifacts/p1/container-smoke.json'),build=read('artifacts/p1/container-build.json');
 for(const r of [storage,media,audio,speech,containers]){assert.equal(r.commit,commit);assert.equal(r.status,'PASS');}
@@ -27,6 +30,16 @@ assert.equal(audio.browser_executed,true);
 for(const [r,count]of [[mediaBrowser,9],[speechBrowser,2]] as const){
  assert.equal(r.stats.expected,count);for(const key of ['unexpected','skipped','flaky'])assert.equal(r.stats[key],0);
 }
+assert.equal(listeningBrowser.stats.expected,3);
+for(const key of ['unexpected','skipped','flaky'])assert.equal(listeningBrowser.stats[key],0);
+for(const r of [listeningPlayback,listeningManifest]){
+ assert.equal(r.source_sha,commit);assert.equal(r.working_tree_dirty,false);
+ assert.equal(r.publication_ready,false);assert.equal(r.p5_milestone,'NOT_READY');assert.equal(r.p6_authorized,false);
+}
+assert.equal(listeningPlayback.status,'PASS');assert.equal(listeningPlayback.clips_verified,18);
+assert.equal(listeningPlayback.external_requests,0);assert.equal(listeningPlayback.human_review,'PENDING');
+assert.equal(listeningPlayback.html_sha256,listeningManifest.html_sha256);
+assert.equal(createHash('sha256').update(readFileSync('artifacts/p5/'+listeningManifest.html_file)).digest('hex'),listeningManifest.html_sha256);
 for(const r of [p3,p4]){assert.equal(r.tested_sha,commit);assert.equal(r.status,'PASS_READY_FOR_OWNER_ACCEPTANCE');}
 assert.equal(build.commit,commit);assert.deepEqual(Object.keys(build.images).sort(),['admin','api','web','worker']);
 const authorization=read('docs/p5/authorization.json');assert.equal(authorization.p6_authorized,false);
@@ -35,11 +48,13 @@ const counts=Object.fromEntries(['PASS','PARTIAL','PENDING'].map(status=>[status
 const paths=['artifacts/p5/storage-validation.json','artifacts/p5/media-database-validation.json','artifacts/p5/audio-validation.json',
  'artifacts/p5/speech-database-validation.json','artifacts/p5/baseline-validation.json','artifacts/p5/reference-media-validation.json',
  'artifacts/p5/browser-results.json','artifacts/p5/speech-browser-results.json','artifacts/p1/container-build.json','artifacts/p1/container-smoke.json',
- 'artifacts/p3/acceptance-summary.json','artifacts/p4/acceptance-summary.json','docs/p5/requirement-evidence.json'];
+ 'artifacts/p3/acceptance-summary.json','artifacts/p4/acceptance-summary.json','docs/p5/requirement-evidence.json',
+ 'artifacts/p5/listening-browser-results.json','artifacts/p5/listening-playback-validation.json','artifacts/p5/listening-review-manifest.json'];
 const summary={phase:'P5',runtime_status:'PASS',milestone_status:'NOT_READY',tested_sha:commit,
  run_id:process.env.GITHUB_RUN_ID,event:process.env.GITHUB_EVENT_NAME,
  runtime_gates:{storage:storage.gates,media:media.gates,audio:audio.gates,speech:speech.gates},
  browser:{media:mediaBrowser.stats,speech:speechBrowser.stats,total_with_p3_p4:p3.browser.expected+p4.browser.expected+mediaBrowser.stats.expected+speechBrowser.stats.expected},
+ listening_review:{browser:listeningBrowser.stats,clips_verified:listeningPlayback.clips_verified,human_review:'PENDING',html_sha256:listeningManifest.html_sha256},
  database:media.database,storage_startup:storage.startup_readiness,container_checks:containers.checks,container_images:build.images,
  reference_media:reference,trace_counts:counts,p6_authorized:false,
  remaining:['M01 required audio bytes, complete approved voices and media publication QA','OD-004/005/006 integration decisions','Remaining compound requirement gates; no blanket PASS from synthetic fixtures'],
