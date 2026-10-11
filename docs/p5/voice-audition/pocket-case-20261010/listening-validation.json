@@ -1,0 +1,119 @@
+{
+  "status": "PASS_STATIC_EMBEDDING",
+  "html_sha256": "c405eaeed49048c6233ed2c8e00e6e7957215bdab1ee497e9aaa81aab4b1c3d1",
+  "embedded_audio_verified": 18,
+  "external_requests": 0,
+  "players": [
+    {
+      "label": "Голос B · Початковий текст · Звичайний темп",
+      "sha256": "6813c1913e3470440cbc1558abe462364d905fb0958aac532e3357fad3c56547",
+      "sample_rate": 24000,
+      "duration_seconds": 9.72
+    },
+    {
+      "label": "Голос B · Початковий текст · Повільний темп · 0,8×",
+      "sha256": "313c911ace11082f203b5552e2477c0ab5e278698d703c7c591326a88e104810",
+      "sample_rate": 24000,
+      "duration_seconds": 12.130125
+    },
+    {
+      "label": "Голос B · Текст малими літерами · Звичайний темп",
+      "sha256": "56f1ea31aae6b8fdb418fdec49c8d7b263ceab11ca92beb9f4a0d280e8e51cb8",
+      "sample_rate": 24000,
+      "duration_seconds": 9.4
+    },
+    {
+      "label": "Голос B · Текст малими літерами · Повільний темп · 0,8×",
+      "sha256": "212d9565a4f5eb9442eeb729ed4e4bf39fa49ff1cd660a5c2dafb11ad65ec0f4",
+      "sample_rate": 24000,
+      "duration_seconds": 11.732083333333334
+    },
+    {
+      "label": "Голос C · Початковий текст · Звичайний темп",
+      "sha256": "b07fda76fdebf6a4347b9114f9984b12abd02c985147d480f988f9ccf73678f2",
+      "sample_rate": 24000,
+      "duration_seconds": 9.4
+    },
+    {
+      "label": "Голос C · Початковий текст · Повільний темп · 0,8×",
+      "sha256": "d2e3eadb44467bb7e2daaae7325b8bda3b474c410e23d4f6d5b960348c83d2c4",
+      "sample_rate": 24000,
+      "duration_seconds": 11.73475
+    },
+    {
+      "label": "Голос C · Текст малими літерами · Звичайний темп",
+      "sha256": "b3776a0c5156ac72560c520e12a9b11d464ffbd051651110e396344d9bd09c21",
+      "sample_rate": 24000,
+      "duration_seconds": 9.64
+    },
+    {
+      "label": "Голос C · Текст малими літерами · Повільний темп · 0,8×",
+      "sha256": "9537769607ae3e7c6dec5cd229039a359eeba7d917147c41f9ecb2ef5053ed4a",
+      "sample_rate": 24000,
+      "duration_seconds": 12.033333333333333
+    },
+    {
+      "label": "Голос B · Початковий текст · Звичайний темп",
+      "sha256": "3e3874ceab84dd33e817964ff5c201536e5675e3f969f35e0b6384d4e89a6a54",
+      "sample_rate": 24000,
+      "duration_seconds": 9.8
+    },
+    {
+      "label": "Голос B · Початковий текст · Повільний темп · 0,8×",
+      "sha256": "fc06dfba77d20fb22bc22db0b88d622b19aa864fdf91ae03ac8aa9c3512f0ff0",
+      "sample_rate": 24000,
+      "duration_seconds": 12.241916666666667
+    },
+    {
+      "label": "Голос B · Текст малими літерами · Звичайний темп",
+      "sha256": "0aa6a554b2cb8ef46bf014442ee730548b087aad52ffc59a20cd48ea710147a7",
+      "sample_rate": 24000,
+      "duration_seconds": 11.08
+    },
+    {
+      "label": "Голос B · Текст малими літерами · Повільний темп · 0,8×",
+      "sha256": "dd8d89f8585acd3e540a4524063ac143a567848ab38d9eaac8de06833f1c5223",
+      "sample_rate": 24000,
+      "duration_seconds": 13.828125
+    },
+    {
+      "label": "Голос C · Початковий текст · Звичайний темп",
+      "sha256": "106bdf2353d3bbac35656d56e6064ae8b508afe3be47488ae2ff6f898f66161d",
+      "sample_rate": 24000,
+      "duration_seconds": 10.12
+    },
+    {
+      "label": "Голос C · Початковий текст · Повільний темп · 0,8×",
+      "sha256": "2185e0873622e7c639f87e4de9efe9065ef91324e8fd97359916da65e3867e07",
+      "sample_rate": 24000,
+      "duration_seconds": 12.6315
+    },
+    {
+      "label": "Голос C · Текст малими літерами · Звичайний темп",
+      "sha256": "08ab7fa0b682b58cc99b4d16d7c2b44b8d60e6f495de4ebf2ae75faa7078700f",
+      "sample_rate": 24000,
+      "duration_seconds": 10.76
+    },
+    {
+      "label": "Голос C · Текст малими літерами · Повільний темп · 0,8×",
+      "sha256": "f37cec0c27626c68fe77fa89c8d5dfcbe1782cea65132e13cd780101c0149cb2",
+      "sample_rate": 24000,
+      "duration_seconds": 13.433666666666667
+    },
+    {
+      "label": "Голос A · Звичайний темп",
+      "sha256": "26b1dd03c1140b7f63193482821d3e49ac97a76d4d08855c389579e34e71309b",
+      "sample_rate": 22050,
+      "duration_seconds": 6.15328798185941
+    },
+    {
+      "label": "Голос A · Повільний темп",
+      "sha256": "27bd46edba1a9ee1812c994d8b9430b822c22612ea4d206bda52a999e8551c4c",
+      "sample_rate": 22050,
+      "duration_seconds": 7.952834467120182
+    }
+  ],
+  "browser_playback": "NOT_EXECUTED",
+  "browser_limitation": "Project and primary runtime Chromium downloads failed to install; no rendering or actual browser playback is claimed. WAV decoding, exact embedded hashes and archive entry integrity were verified.",
+  "human_listening_review": "PENDING"
+}

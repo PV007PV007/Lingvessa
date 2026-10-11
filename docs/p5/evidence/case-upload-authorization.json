@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-11",
+  "owner_response": "продовжуй",
+  "owner_response_timestamp": "2026-10-11T07:25:42+03:00",
+  "in_response_to": "Дозволяєш завершити завантаження цієї партії та супровідних змін у приватний PV007PV007/Lingvessa, гілку implementation/p5-media-speech, PR #5, і перевірити CI?",
+  "interpretation": "Affirmative continuation of the immediately preceding, concrete permission request for this prepared batch and destination.",
+  "repository": "PV007PV007/Lingvessa",
+  "repository_id": 1370429105,
+  "private": true,
+  "verified_owner": "PV007PV007",
+  "verified_push_permission": true,
+  "branch": "implementation/p5-media-speech",
+  "pr": 5,
+  "expected_parent_sha": "c21a2a0aa65924c091a7c464094ff3de4aa2c2ee",
+  "audio_files": 56,
+  "archive_name": "Lingvessa_Czech_Trial_2026-10-10.zip",
+  "archive_sha256": "18c61165bb97038a37f04a40af2e2b980e1341025e7aa60aa40647bacd2e7818",
+  "approved_scope": [
+    "Complete upload of the reviewed two-batch audition: 16 PCM16 clips and 40 raw turns",
+    "Upload accompanying scripts, provenance, CI verification and handoff",
+    "Run exact-source hosted CI and update PR metadata"
+  ],
+  "prior_automatic_review_block": "The 2026-10-10 upload was rejected after 35 immutable blobs because continuation messages before the concrete request did not explicitly authorize sharing this new payload with the repository. No tree, commit or branch ref was changed. The owner now directs continuation in response to the concrete destination/batch permission request.",
+  "merge_authorized": false,
+  "final_cast_approved": false,
+  "publication_authorized": false,
+  "p6_authorized": false
+}

@@ -42,6 +42,13 @@ jobs:
         run: |
           python3 tools/p5/pocket-audition.py --verify-only > artifacts/p5/pocket-audition-validation.json
           cat artifacts/p5/pocket-audition-validation.json
+      - name: Verify bounded Czech case trial and held-out text evidence
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          python3 tools/p5/pocket-case-trial.py --verify-only > artifacts/p5/pocket-case-validation.json
+          python3 tools/p5/pocket-case-holdout.py --verify-only > artifacts/p5/pocket-case-holdout-validation.json
+          cat artifacts/p5/pocket-case-validation.json artifacts/p5/pocket-case-holdout-validation.json
       - run: pnpm audit:dependencies
       - name: Install Chromium with bounded package-network waits
         timeout-minutes: 10

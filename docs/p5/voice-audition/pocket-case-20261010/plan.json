@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "batch": "pocket-case-20261010",
+  "planned_at_utc": "2026-10-10T17:53:42.285952+00:00",
+  "source_remote_sha": "c21a2a0aa65924c091a7c464094ff3de4aa2c2ee",
+  "source_remote_tree": "bdd794e7b883e423eb625dfce3f6e1bd03bf6219",
+  "question": "Does lowercase Czech input reduce blind ASR text discrepancies under matched model, voice, seed and decoding conditions?",
+  "scope": "Bounded private audition; no production integration or acceptance",
+  "authorization_path": "docs/p5/voice-audition/authorization.json",
+  "source_path": "assets/specs/p5/reference-media.source.json",
+  "source_sha256": "dbe4ca7b4787bd47e7b953e1162d0f03d60d3ced876a0f914fa11d3f398fde26",
+  "model_lock_path": "docs/p5/voice-audition/pocket-20261009/models.lock.json",
+  "tooling_lock_path": "docs/p5/voice-audition/pocket-20261009/tooling-lock.json",
+  "asr_model_lock_path": "docs/p5/voice-audition/pocket-20261009/asr-model.lock.json",
+  "variants": [
+    {
+      "id": "control",
+      "text_transform": "identity",
+      "capitalize_first_letter": true
+    },
+    {
+      "id": "lowercase",
+      "text_transform": "str.lower; diacritics and punctuation retained",
+      "capitalize_first_letter": false
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "cs-B-pocket-A",
+      "reference_path": "docs/p5/voice-audition/samples/en-A-p225-normal.wav",
+      "reference_sha256": "436906eb0ffb3af2ac9332910e3591934a2e8e5a5cbcc83625e1b1859f9e0695",
+      "text": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "turns": [
+        {
+          "script_id": "6eea6f7d-ab89-581c-bd42-51df1719a4dd",
+          "text": "Dobrý den.",
+          "seed": 20261009
+        },
+        {
+          "script_id": "ad627850-265e-5145-a071-6c0c5a36b45c",
+          "text": "Jak se jmenujete?",
+          "seed": 20261010
+        },
+        {
+          "script_id": "bdfea114-02b5-54e0-bf29-60f327d2da37",
+          "text": "Těší mě.",
+          "seed": 20261011
+        },
+        {
+          "script_id": "c5d8fa8b-e2d2-5954-bb52-96bee32070c0",
+          "text": "Mluvím česky.",
+          "seed": 20261012
+        },
+        {
+          "script_id": "a07e01b1-30e9-55e0-b466-3b73db8dfa09",
+          "text": "Děkuji.",
+          "seed": 20261013
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-C-pocket-C",
+      "reference_path": "docs/p5/voice-audition/samples/en-C-p228-normal.wav",
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8",
+      "text": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "turns": [
+        {
+          "script_id": "6eea6f7d-ab89-581c-bd42-51df1719a4dd",
+          "text": "Dobrý den.",
+          "seed": 20261109
+        },
+        {
+          "script_id": "ad627850-265e-5145-a071-6c0c5a36b45c",
+          "text": "Jak se jmenujete?",
+          "seed": 20261110
+        },
+        {
+          "script_id": "bdfea114-02b5-54e0-bf29-60f327d2da37",
+          "text": "Těší mě.",
+          "seed": 20261111
+        },
+        {
+          "script_id": "c5d8fa8b-e2d2-5954-bb52-96bee32070c0",
+          "text": "Mluvím česky.",
+          "seed": 20261112
+        },
+        {
+          "script_id": "a07e01b1-30e9-55e0-b466-3b73db8dfa09",
+          "text": "Děkuji.",
+          "seed": 20261113
+        }
+      ]
+    }
+  ],
+  "generation": {
+    "temperature": 0.3,
+    "torch_threads": 2,
+    "torch_interop_threads": 1,
+    "copy_state": true,
+    "gap_seconds": 0.35,
+    "pcm_peak_limit": 0.9,
+    "slow_atempo": 0.8,
+    "maximum_generated_turns": 20,
+    "retries": 0
+  },
+  "screen": {
+    "language": "cs",
+    "compute_type": "int8",
+    "beam_size": 5,
+    "temperature": 0,
+    "vad_filter": false,
+    "condition_on_previous_text": false,
+    "initial_prompt": null
+  },
+  "decision_rule": "Report both conditions and old anchors in full. Consider lowercase promising only if it has fewer ASR word edits for both voices at both playback paces than this-run control. No cast selection or pronunciation acceptance from ASR; any promising result needs an independent held-out authored-text check and human listening.",
+  "paid_inference_calls": 0,
+  "learner_data_used": false,
+  "uploaded_person_reference": false,
+  "runtime_integration": false,
+  "publication_ready": false,
+  "final_cast_approved": false,
+  "human_listening_review": "PENDING",
+  "p5_milestone": "NOT_READY",
+  "p6_authorized": false
+}

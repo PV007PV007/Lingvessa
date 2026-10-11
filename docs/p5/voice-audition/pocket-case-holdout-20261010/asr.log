@@ -1,0 +1,14 @@
+{"candidate_id": "cs-B-pocket-A", "variant": "control", "pace": "normal", "transcript": "Můžete to zopakovat, prosím. Mennuji se Oksana. Odkud jste. Ona je učitelka. Nerozumím.", "word_edits": 1}
+{"candidate_id": "cs-B-pocket-A", "variant": "control", "pace": "slow", "transcript": "Můžete to zopakovat, prosím, tmenuj se Oksana, odkud jste, ona je učitelka, nerozumím.", "word_edits": 1}
+{"candidate_id": "cs-B-pocket-A", "variant": "lowercase", "pace": "normal", "transcript": "Můžete to zopakovat, prosím. Ménuji se Oksana. Odkud jste. Ona je učitelka. Nerozumím.", "word_edits": 1}
+{"candidate_id": "cs-B-pocket-A", "variant": "lowercase", "pace": "slow", "transcript": "Můžete to zopakovat prosím. Ménuji se Oksana. Odkud jste. Ona je učitelka. Nerozumím.", "word_edits": 1}
+{"candidate_id": "cs-C-pocket-C", "variant": "control", "pace": "normal", "transcript": "Můžete to zopakovat, prosím, nemenuj se Oksana, odkud jste, ona je učitelka, nerozumím.", "word_edits": 1}
+{"candidate_id": "cs-C-pocket-C", "variant": "control", "pace": "slow", "transcript": "Můžete to zopakovat, prosím. Nemenuj se Oksana. Odkud jste. Ona je učitelka. Nerozumím.", "word_edits": 1}
+{"candidate_id": "cs-C-pocket-C", "variant": "lowercase", "pace": "normal", "transcript": "Můžete to zopakovat prosím. Měnuj se Oksana. Odkud jste. Ona je učitelka. Nerozumím.", "word_edits": 1}
+{"candidate_id": "cs-C-pocket-C", "variant": "lowercase", "pace": "slow", "transcript": "Můžete to zopakovat prosím. Ménuji se Oksana. Odkud jste. Ona je učitelka. Nerozumím.", "word_edits": 1}
+{"candidate_id": "cs-B-pocket-A", "variant": "historical", "pace": "normal", "transcript": "Dobý den, jak semenujete, těší mě, uvůvím česky, děkuj.", "word_edits": 5}
+{"candidate_id": "cs-B-pocket-A", "variant": "historical", "pace": "slow", "transcript": "Dobý den, jak semenujete, těší mě, vůvím česky, děkuj.", "word_edits": 5}
+{"candidate_id": "cs-C-pocket-C", "variant": "historical", "pace": "normal", "transcript": "do býden. Jak se menujete? Těší mě. Mluvím česky. Děkuju.", "word_edits": 4}
+{"candidate_id": "cs-C-pocket-C", "variant": "historical", "pace": "slow", "transcript": "Dobí den, jak se menujete, těším mě, mluvím česky, děkuj.", "word_edits": 4}
+{"candidate_id": "cs-A-jirka", "variant": "historical", "pace": "normal", "transcript": "Dobrý den, jak se jmenujete. Češí mě. Mluvím česky. Děkuji.", "word_edits": 1}
+{"candidate_id": "cs-A-jirka", "variant": "historical", "pace": "slow", "transcript": "Dobrý den, jak se jmenujete, děší mě, mluvím česky, děkují.", "word_edits": 2}

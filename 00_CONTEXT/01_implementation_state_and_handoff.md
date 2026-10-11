@@ -1,44 +1,48 @@
 # Lingvessa implementation state and handoff
 
-Updated: 2026-10-10. **P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED; P6 NOT AUTHORIZED.**
+Updated: 2026-10-11. **P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED; P6 NOT AUTHORIZED.**
 Branch `implementation/p5-media-speech`; [PR #5](https://github.com/PV007PV007/Lingvessa/pull/5) OPEN DRAFT. Accepted main/P4: `5027f001237b6451237d87343ebeca58cd0af007`.
 
 ## Exact-source runtime evidence
 
-Last inspected full runtime PASS: `81e6ddacb839abf2473630c889521442193d1d21`, tree `404e80bd9e871311f08d22453e12bb9237843328`. P5 PR run [37449893245](https://github.com/PV007PV007/Lingvessa/actions/runs/37449893245), job 112223635448; push run 37449888853, job 112223620056. All seven hosted workflows succeeded. Exact jobs, commands, artifact verification and summaries: `docs/p5/evidence/ci-batch-013.json`.
+Last inspected full runtime PASS: `c21a2a0aa65924c091a7c464094ff3de4aa2c2ee`, tree `bdd794e7b883e423eb625dfce3f6e1bd03bf6219`. All seven hosted workflows passed. P5 PR run 38049540964 / job 114205709344; push run 38049537327 / job 114205699606. Both final artifact archives were downloaded and verified against their SHA-256 digests; their acceptance summaries bind twelve runtime reports and the repository requirement-evidence hash to the exact tested source.
 
-That evidence resolves P5-DEP-001 on the exact patched source (proxy-addr 2.0.8, source-map-js 1.2.2). Historical failed-source reports remain intact. PR artifact 11405148602 SHA-256 `c6fb696f77024cdec9cd4763c1f9cb4009e969720d66f2f2f165f45d27c1fc1a`; runtime report and requirement-evidence hashes were verified.
+PR artifact 11669156689 SHA-256 `f704c3b09b578f890292ba14963c3dd54dbd2dcebfb8a8e2911f03bc4c844b61`; push artifact 11668981926 SHA-256 `dd52cd5f836dd2ae8274d236fce1aedf7460e4381ef32d515d65335dfa577c06`. Exact final results remain in PR metadata and immutable workflow artifacts.
 
-This new audition/evidence revision must pass its own hosted CI. A parent PASS never certifies a descendant. Current PR Checks and `artifacts/p5/acceptance-summary.json` bind runtime results to checked-out HEAD; `pocket-audition-validation.json` independently binds the new byte/provenance verification to the same source. Do not create an endless evidence-only commit cycle to record a commit's own SHA; final immutable CI artifacts and PR metadata carry that result.
+Executed there: frozen install; baseline 76/76; 54 unit + 4 smoke; audit zero findings; reference/flag checks; signed-S3 restart/immutable bytes/outage; PostgreSQL 18.6 and six migrations with clean/replay/seed/reseed/recreation/isolation; 16 integration and 17 Chromium cases; four OCI build/start/health/DB-outage/recovery gates. No failed or skipped tests.
 
-Executed prior exact-source gates: frozen install; baseline 76/76; 54 unit + 4 smoke; audit 0; reference/flag checks; signed-S3 restart/immutable bytes/outage; PostgreSQL 18.6 and six migrations with clean/replay/seed/reseed/recreation/isolation; 16 integration and 17 Chromium cases; four OCI build/start/health/DB-outage/recovery gates. No test failures/skips. These are historical runtime results until the new revision completes its own run.
+P5-DEP-002 is resolved at that source by sharp 0.35.5 and libvips 1.3.4 within Next 16.3.8's existing range. The failed parent audit is preserved in `docs/p5/evidence/ci-pocket-audit-failure.json`; local remediation evidence is in `sharp-patch-validation.json`. P5-DEP-001 was resolved at historical source `81e6ddac` by compatible proxy-addr 2.0.8 / source-map-js 1.2.2 patches; historical full runtime evidence is in `ci-batch-013.json`. No audit waiver or suppression.
 
-## Retained Czech audition and recovery
+**The new paired audition source needs its own hosted CI. A parent PASS does not certify it.** Current PR checks and `artifacts/p5/acceptance-summary.json` bind runtime results to checked-out HEAD. Separate audition validators bind retained bytes/provenance to the same SHA. Final immutable CI artifacts and PR metadata record the result; do not create an endless evidence-only descendant cycle to record a commit's own SHA.
 
-The owner authorized a bounded local audition on 2026-10-05. The earlier eight Piper WAVs remain unchanged. The 2026-10-09 Pocket TTS batch adds Czech B/C conditioned on those synthetic English A/C references: four normal/slow PCM16 files, ten unmodified float32 generated turns and two continuous-text diagnostics. No uploaded human reference, learner data, paid inference, model weights or application dependency is introduced.
+## Retained auditions and the new controlled comparison
 
-`docs/p5/voice-audition/pocket-20261009/README.md` links the audio and records exact source/script/model/tooling provenance. Main normal/slow files pass technical checks, but ASR has 5/5 edits for B and 4/3 for C per ten expected words. Continuous retries each have four edits. ASR can misrecognize Czech; these are not human-confirmed pronunciation errors or omissions. Both new candidates remain HOLD_FOR_REVIEW; human listening and final cast selection are pending. These are not MOSS-designed voices or approved M01 assets.
+OD-005 authorizes bounded local audition from project-authored text, with zero paid inference, no learner data, no uploaded person's voice reference, no production adoption and no cast/publication approval. The original eight Piper WAVs and 2026-10-09 Pocket batch remain unchanged. The earlier Pocket recovery boundary, including missing historical generation/ASR scripts, remains documented in `docs/p5/voice-audition/pocket-20261009/recovery.json`.
 
-After scratch recovery, all 46 archive-entry hashes matched. Retained audio/reports were restored byte-for-byte, without generation. The previous local commit, generation/ASR scripts, execution logs and upstream YAML were absent from the saved archive. `recovery.json` explicitly lists this boundary. The byte/provenance validator and requirements were reconstructed; historical `local-validation.json` and `archive-README.md` are preserved as past records. No new inference, ASR run or browser listening-page playback is claimed.
+The 2026-10-10 paired case trial used the same pinned Pocket Czech weights, all 58 isolated dependency versions, existing synthetic Piper EN A/C references, paired seeds and authored M01 Czech text. It explicitly disabled automatic capitalization for the lowercase condition. Twenty initial turns, no retries: ASR edits per ten words improve B normal/slow 5→3 / 5→4 and C 4→1 / 3→2.
 
-The previous GitHub upload was blocked by automatic review. The owner's explicit “Так” on 2026-10-10 now authorizes this batch's upload to this private repository/branch/PR, exact-source CI and PR metadata update. Verified repository owner and push permission; `docs/p5/evidence/pocket-upload-authorization.json` records scope. Merge, publication, final cast and P6 remain unauthorized.
+A separately predeclared twenty-turn check used five disjoint authored phrases. Every pair ties at 1/13 edits: the strict held-out improvement criterion is NOT MET. No more seeds or parameter tuning. Total: **40 raw turns, 16 normal/slow PCM16 clips, 28 fresh ASR bindings, zero generation failures or paid calls**. All planned conditions, final prepared text/token IDs, source/model/tooling provenance, actual scripts and execution logs are retained:
+- `docs/p5/voice-audition/pocket-case-20261010/README.md`
+- `docs/p5/voice-audition/pocket-case-holdout-20261010/README.md`
+
+ASR is a fallible discrepancy screen, not a human pronunciation judgment. Initial controls have equal frame counts but are not bit-identical to historical synthesis (maximum PCM16 deltas B=4, C=55). Fresh ASR of unchanged historical C slow audio gives four edits; its archived screen had three. Historical bytes/reports are not overwritten.
+
+Both candidates remain **HOLD_FOR_REVIEW**; human Czech listening/linguistic review is **PENDING**. The initial improvement does not establish a reliable normalization policy or approved cast. These are synthetic-reference Pocket voices, not reference-free MOSS-designed voices. The self-contained comparison document contains sixteen new clips and two unchanged Czech A anchors. All eighteen embedded WAVs and archive entries were verified. Chromium installation failed locally, so browser playback/rendering is not claimed.
+
+## Recovery, authorization and upload boundary
+
+The new archive `Lingvessa_Czech_Trial_2026-10-10.zip` was successfully saved for review. SHA-256 `18c61165bb97038a37f04a40af2e2b980e1341025e7aa60aa40647bacd2e7818`; all 98 entry hashes matched on restoration on 2026-10-11. All 77 new repository files, including the complete generation/ASR scripts and 56 WAVs, were restored byte-for-byte. Twenty shared base files also matched. No inference or ASR was repeated. Prior local commits and unsaved handoff/workflow edits did not survive; the CI step and current handoff are reconstructed explicitly. `docs/p5/evidence/case-recovery.json` records this boundary and the prior blob identities.
+
+Automatic approval review stopped the earlier upload after 35 unreferenced blobs because the visible messages did not explicitly authorize this new payload/destination. No tree, remote commit or branch ref was created then. The concrete permission request named all 56 WAVs, accompanying changes, private `PV007PV007/Lingvessa`, `implementation/p5-media-speech`, PR #5 and exact-source CI. The owner responded **“продовжуй” on 2026-10-11**, authorizing completion of that request. Repository owner/private visibility/push permission and unchanged remote head `c21a2a0a` were reverified. Exact scope: `docs/p5/evidence/case-upload-authorization.json`.
+
+Finish the remaining authorized blob upload, require the remote tree to match the locally computed full tree, guard the branch update against the current expected head and verify all exact-source CI. Existing successful immutable blobs may be reused. P5 CI runs both new stdlib validators with bytecode writes disabled to keep the checkout clean; each covers 20 raw turns, eight clips and fourteen ASR bindings. Inference never runs in CI. PR remains OPEN DRAFT; merge, cast acceptance, publication and P6 are not authorized.
 
 ## Scope and phase gates
 
-IMP-P5-001/002/003 remain IN_PROGRESS. Trace is unchanged: 356 source rows, **174 PASS / 30 PARTIAL / 152 PENDING**. No requirement is promoted or waived by this audition. No contract, schema, API, migration, new direct application dependency or production provider change. The follow-up security patch below changes existing sharp transitive resolutions. Full phase inventory: `docs/p5/evidence/changed-files.json`.
+IMP-P5-001/002/003 remain IN_PROGRESS. Trace is unchanged: 356 source rows, **174 PASS / 30 PARTIAL / 152 PENDING**. No requirement is promoted or waived by audition or green CI. No contract, schema, API, migration, direct application dependency or production provider change. Full phase inventory: `docs/p5/evidence/changed-files.json`.
 
-Plan v1.4 §12 p7 requires all M01 required asset IDs to resolve. Prepared: 18 original SVG drafts, 12 flag drafts, 168 scripts / 420 audio slots and six voice profiles. Twelve audition files do not resolve the full media set. Approved publication assets = 0. Human linguistic/semantic/accessibility/rights QA and complete cast/full generation remain open.
+Plan v1.4 §12 p7 requires all M01 required asset IDs to resolve. Prepared: 18 original SVG drafts, 12 flag drafts, 168 scripts / 420 audio slots and six voice profiles. **Approved publication assets = 0.** Complete approved cast/rights, full media generation and human linguistic/semantic/accessibility/publication QA remain open.
 
-OD-004 delivery profile OPEN. OD-005 bounded audition executed; final tooling/cast/full generation OPEN. OD-006 usable real-provider speech calibration OPEN; default remains neutral speech_unavailable. Paid inference=false; monthly paid budget=0. No P6/P7/P8 runtime starts.
+OD-004 delivery profile OPEN. OD-005 audition executed; final tooling/cast/full generation OPEN. OD-006 usable real-provider speech calibration OPEN; default stays neutral `speech_unavailable`. Paid inference=false; monthly paid budget=0. No P6/P7/P8 runtime starts. EXC-P1-001 remains: main lacks technical branch protection; implementation branch, PR, CI and owner review apply.
 
-BLOCKER: none newly identified; exact new-source CI is required before claiming its runtime PASS. IMPORTANT: full M01 media, held Czech candidates, human QA and remaining compound requirement closure. MINOR: inherited Actions Node, Argon2id and pg concurrent-client-query notices. EXC-P1-001 remains: main is not technically protected; implementation branch, PR, CI and owner review apply.
-
-Next: upload this explicitly authorized batch, verify its exact-source CI, and record final result in PR metadata. Then human audition review and candidate improvement/selection precede full generation. Keep PR #5 OPEN DRAFT; no merge; no P6.
-
-## Exact-source follow-up: P5-DEP-002
-
-The uploaded audition source `cab5af5e080c92b7607ea05f24396fbd02052cd0` passed baseline, full check/build and both audition verification steps in hosted P5 push/PR runs. All seven workflows then failed the unchanged dependency audit on sharp 0.35.4 (GHSA-wq5f-xc86-pv6w). Database/browser/OCI gates after audit did not execute on that source, so it is not a full runtime PASS. Actual run/job steps: `docs/p5/evidence/ci-pocket-audit-failure.json` (repository-root path).
-
-Remediation updates only sharp and matching platform packages 0.35.4→0.35.5, libvips packages 1.3.3→1.3.4, within Next 16.3.8's existing ^0.35.4 optional range. Direct dependencies, unrelated lock entries and audit policy are unchanged. Frozen install, zero-advisory audit, native SVG decoding with project sharp 0.35.5 / librsvg 2.63.2, baseline 76/76 and retained-audio checks pass locally. Exact evidence and the native probe's initial resolution correction: `docs/p5/evidence/sharp-patch-validation.json`.
-
-This child source still requires its own full hosted run. PR metadata and exact-source CI artifacts will record the final result without a self-referential evidence commit. P5 remains NOT READY, PR OPEN DRAFT, no merge, publication, cast acceptance or P6.
+Next after exact-source CI: human audition review and a separately scoped improvement/selection decision before full generation. Keep P5 NOT_READY and PR #5 OPEN DRAFT.

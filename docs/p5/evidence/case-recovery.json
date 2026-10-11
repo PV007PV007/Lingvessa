@@ -1,0 +1,606 @@
+{
+  "archive_sha256": "18c61165bb97038a37f04a40af2e2b980e1341025e7aa60aa40647bacd2e7818",
+  "entries_verified": 98,
+  "restored_files": [
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/README.md",
+      "bytes": 5366,
+      "sha256": "603d66a9b11c8ebfc77deeee9c9dd1b671b10e5e2a00436b6a5835c8c0500256"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/asr-screen.json",
+      "bytes": 14516,
+      "sha256": "4ce320e71720018c3911917c150dbd5c463a39607f4fec8e1900ab8c566ed458"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/asr.log",
+      "bytes": 2443,
+      "sha256": "4bf18bf07cb97fc15c4ae33b657396fe6a1df5b8b5033136cb9f73b1e5a46a5b"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/downloads.json",
+      "bytes": 1828,
+      "sha256": "79050dd85983c26c695dac7a1b5dc36788c76c69a40d9b3d4eb96f8b6cdfe7fa"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/environment-install.log",
+      "bytes": 11214,
+      "sha256": "5fcbe911f1c84a0259fc47bcd28dd2637f40ab1ab0c0af125e475acfc5a34ec6"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/generation.log",
+      "bytes": 1360,
+      "sha256": "2462417f0f7befebef00b673c42600e38dcc77bc61cd87f9cae649cf87cf93db"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/listening-validation.json",
+      "bytes": 5230,
+      "sha256": "d7dcc28eeb67d3f53adc61deff5b5c6a482ce8c2ba8ac23fb7657c0c8c37c37b"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/plan.json",
+      "bytes": 4458,
+      "sha256": "77ed34e90fc4339d51e34350f664d1f670a567c9fcb237f1bff11de4c5a3d1b6"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/results.json",
+      "bytes": 26166,
+      "sha256": "f4efae8c24db8ef5cfa59e9b4379c57bba4f2271af46c697d2e9bd54e8f47ffc"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-control-normal.wav",
+      "bytes": 466604,
+      "sha256": "6813c1913e3470440cbc1558abe462364d905fb0958aac532e3357fad3c56547"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-control-slow.wav",
+      "bytes": 582324,
+      "sha256": "313c911ace11082f203b5552e2477c0ab5e278698d703c7c591326a88e104810"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-control-turn-1.wav",
+      "bytes": 161338,
+      "sha256": "e74a5898c956ac6154b34c52059cfcba8e745abfb1e9a0f76b64c4a3878153d4"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-control-turn-2.wav",
+      "bytes": 169018,
+      "sha256": "a49810eb8314e88b0f859f7fca6804e5a7e2dbc1ee4acc32634d609ae5e875e0"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-control-turn-3.wav",
+      "bytes": 130618,
+      "sha256": "819db615dc4d5c81debc8a2433c0c83048001fa14d2117bdd8219e367cc4d8b4"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-control-turn-4.wav",
+      "bytes": 184378,
+      "sha256": "65e229c08572c40976215e068c0bc22100e81bf37dd3198e303d0502dbcac0af"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-control-turn-5.wav",
+      "bytes": 153658,
+      "sha256": "108c7eb6e14214d03ebae0fa3ce920c53bd6e42c6ce8b5b054c7de5237fe4988"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-lowercase-normal.wav",
+      "bytes": 451244,
+      "sha256": "56f1ea31aae6b8fdb418fdec49c8d7b263ceab11ca92beb9f4a0d280e8e51cb8"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-lowercase-slow.wav",
+      "bytes": 563218,
+      "sha256": "212d9565a4f5eb9442eeb729ed4e4bf39fa49ff1cd660a5c2dafb11ad65ec0f4"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-lowercase-turn-1.wav",
+      "bytes": 138298,
+      "sha256": "4ceb749f1191ebcecb5b893a2fc81317f9fec7f015c1f93da1c3b019a52d97bd"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-lowercase-turn-2.wav",
+      "bytes": 169018,
+      "sha256": "5da1c48448ceeecaddb8083c1409a0c85c08b209adc08ac7f5180e6fd12ba3ea"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-lowercase-turn-3.wav",
+      "bytes": 130618,
+      "sha256": "94cbe29bf1fde432daa6fc391666848c2c9b099e73c411183efb50f70c7fb0b1"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-lowercase-turn-4.wav",
+      "bytes": 184378,
+      "sha256": "aa2b5947c29dc96df9fbe152a24c5f21104ea49036f490c2a83504c0ffd6ddf5"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-lowercase-turn-5.wav",
+      "bytes": 145978,
+      "sha256": "4299f8b4e2a2c8997bf345757112a610a8b07783619f6c8130a7c6d5fd91301d"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-control-normal.wav",
+      "bytes": 451244,
+      "sha256": "b07fda76fdebf6a4347b9114f9984b12abd02c985147d480f988f9ccf73678f2"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-control-slow.wav",
+      "bytes": 563346,
+      "sha256": "d2e3eadb44467bb7e2daaae7325b8bda3b474c410e23d4f6d5b960348c83d2c4"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-control-turn-1.wav",
+      "bytes": 145978,
+      "sha256": "1c87ac655262c4e75e29a27bfe38acbd9677d38cfe05e804984289f2417d7b50"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-control-turn-2.wav",
+      "bytes": 176698,
+      "sha256": "c65c0c477e9146d25e254e00c56b3c77dd371fe6bf7953f32920cfb89447b01f"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-control-turn-3.wav",
+      "bytes": 138298,
+      "sha256": "ad0afd3d814337d009e60f7492ea7fda3ca8b30e94a701b84faff43dc05c8ed7"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-control-turn-4.wav",
+      "bytes": 161338,
+      "sha256": "d2d188a2cd03ba67b74229f5cd91faee65609ca9a06144b28bac8035db795d66"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-control-turn-5.wav",
+      "bytes": 145978,
+      "sha256": "424a27e6fc7ff640fedd97f96888f13c0e688a538a987467fd9b8b5064b7371b"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-lowercase-normal.wav",
+      "bytes": 462764,
+      "sha256": "b3776a0c5156ac72560c520e12a9b11d464ffbd051651110e396344d9bd09c21"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-lowercase-slow.wav",
+      "bytes": 577678,
+      "sha256": "9537769607ae3e7c6dec5cd229039a359eeba7d917147c41f9ecb2ef5053ed4a"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-lowercase-turn-1.wav",
+      "bytes": 145978,
+      "sha256": "982ad1f7390390208b4d64e9bb7dd4be3d6619cc6cda1d96c79a84d6577e1a79"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-lowercase-turn-2.wav",
+      "bytes": 176698,
+      "sha256": "5e3e63aacdc779c3d0de76618440934f471cac23dedd626ace4777d3b7d61760"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-lowercase-turn-3.wav",
+      "bytes": 169018,
+      "sha256": "19eb17e08ca1f119d562d3e373fb432196fcf5bf4d998084e0354f68f9f14f3a"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-lowercase-turn-4.wav",
+      "bytes": 176698,
+      "sha256": "67951460f89670fd4e64269471701be86c82b1d6cd1fc11dac4dacc7e4adea50"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-lowercase-turn-5.wav",
+      "bytes": 122938,
+      "sha256": "ab54dc84b0e25d5c4fb406bfa309f53ed37e5ceae7ae8c5801432749f95cb180"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/summary.json",
+      "bytes": 4999,
+      "sha256": "d6b22bf8d00e054d1c6ef5a004fc76bb39cc6797e735587dc4743045de5a5b78"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/upstream-czech.yaml",
+      "bytes": 1407,
+      "sha256": "932f2174c40edac737841f7508c83b2eca8e51b1661a962afaa41b9b5e9688d0"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/README.md",
+      "bytes": 5279,
+      "sha256": "067886241710f5a7de6f129293b724a40053e2798df804c63da17b42d5ed49b1"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/asr-screen.json",
+      "bytes": 17549,
+      "sha256": "f806d70c157dfe662c86f48ab6c821142a9c407a4186b10f3c48c2522f79cddd"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/asr.log",
+      "bytes": 2655,
+      "sha256": "8efdbae9d1e4756abf4dfff2c02eee7a1c1aebfaca9089e82827b017b77fa5f2"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/downloads.json",
+      "bytes": 1828,
+      "sha256": "79050dd85983c26c695dac7a1b5dc36788c76c69a40d9b3d4eb96f8b6cdfe7fa"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/generation.log",
+      "bytes": 1360,
+      "sha256": "b37651d0e0802696a8b33b2c3ec9542c834c6da6db16f389aacf5ffac18994e9"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/plan.json",
+      "bytes": 4625,
+      "sha256": "d948124d3de72a43eb00abca6e3653af0e8a1d59f518a870d5db0a1039accc10"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/results.json",
+      "bytes": 27727,
+      "sha256": "9ceb0cd0839ed09e2aeefe449eeef4dd1626e9a96ebc48051f55fee2e183d6c0"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-control-normal.wav",
+      "bytes": 470444,
+      "sha256": "3e3874ceab84dd33e817964ff5c201536e5675e3f969f35e0b6384d4e89a6a54"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-control-slow.wav",
+      "bytes": 587690,
+      "sha256": "fc06dfba77d20fb22bc22db0b88d622b19aa864fdf91ae03ac8aa9c3512f0ff0"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-control-turn-1.wav",
+      "bytes": 199738,
+      "sha256": "f96ec71ccd27d82bb448f443608c447e39d96b3ad1b3abf2db44af3fd9244582"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-control-turn-2.wav",
+      "bytes": 130618,
+      "sha256": "fc89b521e2eda8412796ec71eb0350dd02465f75eede6fe1f7dcc5516851fcff"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-control-turn-3.wav",
+      "bytes": 138298,
+      "sha256": "d76feba293c64cf5c953c0f6b681af56715f10d1a433602151ebc993e795d6fd"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-control-turn-4.wav",
+      "bytes": 199738,
+      "sha256": "a25a64215526c859871576ac8a081e490fd5b60dd7ec0ac9213396baa89d821b"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-control-turn-5.wav",
+      "bytes": 138298,
+      "sha256": "b98aed4cda2e6a9bdcb23e84078f7fb2a602c2595c0852f2be5bf89e3b0c5550"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-lowercase-normal.wav",
+      "bytes": 531884,
+      "sha256": "0aa6a554b2cb8ef46bf014442ee730548b087aad52ffc59a20cd48ea710147a7"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-lowercase-slow.wav",
+      "bytes": 663828,
+      "sha256": "dd8d89f8585acd3e540a4524063ac143a567848ab38d9eaac8de06833f1c5223"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-lowercase-turn-1.wav",
+      "bytes": 238138,
+      "sha256": "edfdb4270dbe0b5f74c614389560d97b8d3d496c339f227036902b7758ea58e1"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-lowercase-turn-2.wav",
+      "bytes": 215098,
+      "sha256": "9af43d9235b8aba032ce913f76efe9cf96116b06b6db253a7b15a3c7c40a94c2"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-lowercase-turn-3.wav",
+      "bytes": 138298,
+      "sha256": "46087345969e2f40264ac34bb71a55091506f49199c9f309966030f9b9c6e4bd"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-lowercase-turn-4.wav",
+      "bytes": 199738,
+      "sha256": "a84b2abb357bea0811e35c1ff6d7c091fb2f841b0b149f225f8b7f1adc0f0300"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-lowercase-turn-5.wav",
+      "bytes": 138298,
+      "sha256": "68f4be70a7521864bed79e9127e85ab6951a0aaf90d0cd271c22ac226db2af34"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-C-pocket-C-control-normal.wav",
+      "bytes": 485804,
+      "sha256": "106bdf2353d3bbac35656d56e6064ae8b508afe3be47488ae2ff6f898f66161d"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-C-pocket-C-control-slow.wav",
+      "bytes": 606390,
+      "sha256": "2185e0873622e7c639f87e4de9efe9065ef91324e8fd97359916da65e3867e07"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-C-pocket-C-control-turn-1.wav",
+      "bytes": 199738,
+      "sha256": "092683f4125a8853172c0ba6322c24614455d217be92214a9a85b536b4a3ebdd"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-C-pocket-C-control-turn-2.wav",
+      "bytes": 145978,
+      "sha256": "64c1bb643b9aadb9fb12e66346f911b3291621397d7247da4be31d7a3e475308"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-C-pocket-C-control-turn-3.wav",
+      "bytes": 138298,
+      "sha256": "6a903cf8b08f7d49003d79446d0379722f94cf564f5c3f424ca8f3be1b0be068"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-C-pocket-C-control-turn-4.wav",
+      "bytes": 192058,
+      "sha256": "fae0983948336a3929abcfe185f93c7f5c7bbac9e05988a19dcba8a99730dbf2"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-C-pocket-C-control-turn-5.wav",
+      "bytes": 161338,
+      "sha256": "48f3318bc749109f24aa685ed7212fcdcf1a457f65750e3fbe9d8feba80b9ad9"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-C-pocket-C-lowercase-normal.wav",
+      "bytes": 516524,
+      "sha256": "08ab7fa0b682b58cc99b4d16d7c2b44b8d60e6f495de4ebf2ae75faa7078700f"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-C-pocket-C-lowercase-slow.wav",
+      "bytes": 644894,
+      "sha256": "f37cec0c27626c68fe77fa89c8d5dfcbe1782cea65132e13cd780101c0149cb2"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-C-pocket-C-lowercase-turn-1.wav",
+      "bytes": 238138,
+      "sha256": "3942dfaf73b9fc24b633fb7a9fda67bf8860dabca0b9403f523d80ee2ccd9693"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-C-pocket-C-lowercase-turn-2.wav",
+      "bytes": 169018,
+      "sha256": "6ec13f0b5a70d09060ee94f41e0a9c0d7bfcd027f5836d6f4367c93603ddc7bc"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-C-pocket-C-lowercase-turn-3.wav",
+      "bytes": 138298,
+      "sha256": "a890d0e7e7bd5a3673979d33ac74f5d10f165b426bd2421f2672e7af7de544f7"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-C-pocket-C-lowercase-turn-4.wav",
+      "bytes": 192058,
+      "sha256": "8cc5aa4f2cda84878f12c3a69aa8f4f4555b9c52496bff00bf97faa56d5b4229"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-C-pocket-C-lowercase-turn-5.wav",
+      "bytes": 161338,
+      "sha256": "96fa27854c5808189b3294edfe9a0a8c6ba81b7a90210d101bd24bee16b45d3c"
+    },
+    {
+      "path": "tools/p5/build-case-listening.py",
+      "bytes": 13059,
+      "sha256": "6db984990e2a788dac47d6281f7f36e8e3b88a221481e9a4bddf3c9cd165a1c6"
+    },
+    {
+      "path": "tools/p5/pocket-case-holdout.py",
+      "bytes": 1420,
+      "sha256": "c8b952156b654032bc17595cb38d0ce3216e4b76727867be7d237d090abfd8b6"
+    },
+    {
+      "path": "tools/p5/pocket-case-trial.py",
+      "bytes": 19167,
+      "sha256": "a110b972e6aaeb9119e17a0b6a0422ec007b607cb2d6e898a3e8d8780d356b25"
+    }
+  ],
+  "unchanged_base_files": [
+    "assets/specs/p5/reference-media.source.json",
+    "docs/p5/voice-audition/authorization.json",
+    "docs/p5/voice-audition/models.lock.json",
+    "docs/p5/voice-audition/pocket-20261009/MODEL_CARD.md",
+    "docs/p5/voice-audition/pocket-20261009/asr-model.lock.json",
+    "docs/p5/voice-audition/pocket-20261009/models.lock.json",
+    "docs/p5/voice-audition/pocket-20261009/requirements-local.txt",
+    "docs/p5/voice-audition/pocket-20261009/results.json",
+    "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-normal.wav",
+    "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-slow.wav",
+    "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-normal.wav",
+    "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-slow.wav",
+    "docs/p5/voice-audition/pocket-20261009/tooling-lock.json",
+    "docs/p5/voice-audition/requirements-local.txt",
+    "docs/p5/voice-audition/results.json",
+    "docs/p5/voice-audition/samples/cs-A-jirka-normal.wav",
+    "docs/p5/voice-audition/samples/cs-A-jirka-slow.wav",
+    "docs/p5/voice-audition/samples/en-A-p225-normal.wav",
+    "docs/p5/voice-audition/samples/en-C-p228-normal.wav",
+    "docs/p5/voice-audition/tooling-lock.json"
+  ],
+  "date": "2026-10-11",
+  "archive_name": "Lingvessa_Czech_Trial_2026-10-10.zip",
+  "audio_regenerated": false,
+  "asr_rerun": false,
+  "generation_and_asr_scripts_recovered": true,
+  "prior_local_commits_recovered": false,
+  "unrecovered_local_commits": [
+    "dcab15794ea532257fe50b6e129dc20cefcdf00a",
+    "aa31221eed872377314700a18fd82d0c824572d1"
+  ],
+  "reconstructed_accompanying_changes": [
+    "P5 CI verification step with PYTHONDONTWRITEBYTECODE=1, from visible prior patch",
+    "Current handoff and explicit owner-authorization record"
+  ],
+  "prior_uploaded_blobs": [
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-control-normal.wav",
+      "sha": "b532ae7977b284a3acd48b3ce1c66b5105f73f97",
+      "bytes": 466604
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-control-slow.wav",
+      "sha": "1083cdbf64d50039669005f7762feca65f99947e",
+      "bytes": 582324
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-control-turn-1.wav",
+      "sha": "c0a66a6bd212fc4538c01fd196fbcf149b07f9b0",
+      "bytes": 161338
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-control-turn-2.wav",
+      "sha": "023746007e47793dbe86bf6443bb57496a41db6b",
+      "bytes": 169018
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-control-turn-3.wav",
+      "sha": "00f271830f5512c314e7d16738a0c0d184e97dd1",
+      "bytes": 130618
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-control-turn-4.wav",
+      "sha": "37d62322c15369d4d72e52937f50261dccb423e0",
+      "bytes": 184378
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-control-turn-5.wav",
+      "sha": "983fb73543b0ccab002128b4a6fabe8aa5523f59",
+      "bytes": 153658
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-lowercase-normal.wav",
+      "sha": "d850099ec2b7e59a6ddc3dcb279013d1fc49fb38",
+      "bytes": 451244
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-lowercase-slow.wav",
+      "sha": "83737f6039a03f76b138f513beb33dcd5d7e9aaa",
+      "bytes": 563218
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-lowercase-turn-1.wav",
+      "sha": "a4365fe22c3a98ee73f60c8aee8f87ecfaed239a",
+      "bytes": 138298
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-lowercase-turn-2.wav",
+      "sha": "a9592bfebe3593d02fa22b098e353178e57cc3d5",
+      "bytes": 169018
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-lowercase-turn-3.wav",
+      "sha": "f5c0eeff873f837e3efeb3b2afe8c5995a7f22fd",
+      "bytes": 130618
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-lowercase-turn-4.wav",
+      "sha": "1f8f427ab6ca8c0dde6258b20c9d0c2f0ba60997",
+      "bytes": 184378
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-lowercase-turn-5.wav",
+      "sha": "cbca72955bddaf195cc1e3c9ae06d80deb651e64",
+      "bytes": 145978
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-control-normal.wav",
+      "sha": "2ac76e162b6871b67b0a4174ce3a8814299c4533",
+      "bytes": 451244
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-control-slow.wav",
+      "sha": "e0c6f0e29a35c986abd8c3302db9c672353986d4",
+      "bytes": 563346
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-control-turn-1.wav",
+      "sha": "046feb4045a314a6970d07561abd094821c581ba",
+      "bytes": 145978
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-control-turn-2.wav",
+      "sha": "21852bc3f4bc59c00f9a8c675f20422b2035bc0f",
+      "bytes": 176698
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-control-turn-3.wav",
+      "sha": "7d636e32a2ddcf67cc96a0c11593eb835681f968",
+      "bytes": 138298
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-control-turn-4.wav",
+      "sha": "722c2d969fde33a326fb8b24685ff2a2ad225429",
+      "bytes": 161338
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-control-turn-5.wav",
+      "sha": "33b46cca3c50123cab42e5c7de5a316e4af70847",
+      "bytes": 145978
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-lowercase-normal.wav",
+      "sha": "92ac2af0a8ee5e5de51022f94c63cc5fd8d831da",
+      "bytes": 462764
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-lowercase-slow.wav",
+      "sha": "5b44e5ba15cf51676d6c8c3e3126b7d8e746421b",
+      "bytes": 577678
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-lowercase-turn-1.wav",
+      "sha": "754b38ba9b7a07f15ffde831983f25e58ce8a4f3",
+      "bytes": 145978
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-lowercase-turn-2.wav",
+      "sha": "f5fe23f34d3a83844588dc91aa4c5241d3851979",
+      "bytes": 176698
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-lowercase-turn-3.wav",
+      "sha": "c92fa633fe2e2fa984baf857c9ea7370f9c9ab2a",
+      "bytes": 169018
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-lowercase-turn-4.wav",
+      "sha": "ab5fab78fada795e9e3751b1d8fa29b942da6488",
+      "bytes": 176698
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-lowercase-turn-5.wav",
+      "sha": "43f8749b38e01b212e1f48363f6a0be83f59847d",
+      "bytes": 122938
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-control-normal.wav",
+      "sha": "ca67af1f434d7d58ce8710fcddfc63debc67eeaa",
+      "bytes": 470444
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-control-slow.wav",
+      "sha": "3517d5fc5817c2ce418be849df01ec17992ae8fa",
+      "bytes": 587690
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-control-turn-1.wav",
+      "sha": "4741a20afa212b915a98cc05a547e6d7adb0844d",
+      "bytes": 199738
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-control-turn-2.wav",
+      "sha": "15efd29688a5ccdd5388eb84394f6d645bd7c804",
+      "bytes": 130618
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-control-turn-3.wav",
+      "sha": "4b645d5944fffe196c51597344df3f6807e00607",
+      "bytes": 138298
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-control-turn-4.wav",
+      "sha": "3aa97fa145fe7b39b746f4a736550fd827e3b2fb",
+      "bytes": 199738
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-control-turn-5.wav",
+      "sha": "67c63dc389e31e2084dba4b2678a8a5ef8b25c15",
+      "bytes": 138298
+    }
+  ],
+  "prior_receipt_basis": "35 successful uploads and the exact blocked next path are retained in conversation tool results. Blob IDs are recomputed from the byte-verified archive; final GitHub tree creation must resolve those objects and match the locally computed full tree.",
+  "scope": "No fresh inference or human listening is claimed; only archive restoration and fresh byte/provenance verification."
+}

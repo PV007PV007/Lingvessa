@@ -1,0 +1,486 @@
+{
+  "status": "PASS",
+  "plan_sha256": "d948124d3de72a43eb00abca6e3653af0e8a1d59f518a870d5db0a1039accc10",
+  "screen_script_sha256": "a110b972e6aaeb9119e17a0b6a0422ec007b607cb2d6e898a3e8d8780d356b25",
+  "parameters": {
+    "language": "cs",
+    "compute_type": "int8",
+    "beam_size": 5,
+    "temperature": 0,
+    "vad_filter": false,
+    "condition_on_previous_text": false,
+    "initial_prompt": null
+  },
+  "normalization": "NFC, lowercase word tokens; punctuation ignored, diacritics retained",
+  "decoding": "scipy PCM16 WAV read / resample_poly to mono float32 16000Hz; no PyAV decoding",
+  "network_guard": "Python socket connect/DNS rejected; local files only",
+  "human_listening_review": "PENDING",
+  "pronunciation_quality_asserted": false,
+  "publication_ready": false,
+  "outputs": [
+    {
+      "candidate_id": "cs-B-pocket-A",
+      "variant": "control",
+      "pace": "normal",
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-control-normal.wav",
+      "sha256": "3e3874ceab84dd33e817964ff5c201536e5675e3f969f35e0b6384d4e89a6a54",
+      "expected": "Můžete to zopakovat, prosím? Jmenuji se Oksana. Odkud jste? Ona je učitelka. Nerozumím.",
+      "transcript": "Můžete to zopakovat, prosím. Mennuji se Oksana. Odkud jste. Ona je učitelka. Nerozumím.",
+      "word_edits": 1,
+      "reference_words": 13,
+      "diagnostic_wer": 0.07692307692307693,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 10.0,
+          "text": " Můžete to zopakovat, prosím. Mennuji se Oksana. Odkud jste. Ona je učitelka. Nerozumím.",
+          "avg_logprob": -0.3294218595732342,
+          "no_speech_prob": 0.02236204780638218
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-B-pocket-A",
+      "variant": "control",
+      "pace": "slow",
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-control-slow.wav",
+      "sha256": "fc06dfba77d20fb22bc22db0b88d622b19aa864fdf91ae03ac8aa9c3512f0ff0",
+      "expected": "Můžete to zopakovat, prosím? Jmenuji se Oksana. Odkud jste? Ona je učitelka. Nerozumím.",
+      "transcript": "Můžete to zopakovat, prosím, tmenuj se Oksana, odkud jste, ona je učitelka, nerozumím.",
+      "word_edits": 1,
+      "reference_words": 13,
+      "diagnostic_wer": 0.07692307692307693,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 12.0,
+          "text": " Můžete to zopakovat, prosím, tmenuj se Oksana, odkud jste, ona je učitelka, nerozumím.",
+          "avg_logprob": -0.34138516354006393,
+          "no_speech_prob": 0.010961852967739105
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-B-pocket-A",
+      "variant": "lowercase",
+      "pace": "normal",
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-lowercase-normal.wav",
+      "sha256": "0aa6a554b2cb8ef46bf014442ee730548b087aad52ffc59a20cd48ea710147a7",
+      "expected": "Můžete to zopakovat, prosím? Jmenuji se Oksana. Odkud jste? Ona je učitelka. Nerozumím.",
+      "transcript": "Můžete to zopakovat, prosím. Ménuji se Oksana. Odkud jste. Ona je učitelka. Nerozumím.",
+      "word_edits": 1,
+      "reference_words": 13,
+      "diagnostic_wer": 0.07692307692307693,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": " Můžete to zopakovat, prosím.",
+          "avg_logprob": -0.2695024970632333,
+          "no_speech_prob": 0.058377545326948166
+        },
+        {
+          "start": 3.0,
+          "end": 5.0,
+          "text": " Ménuji se Oksana.",
+          "avg_logprob": -0.2695024970632333,
+          "no_speech_prob": 0.058377545326948166
+        },
+        {
+          "start": 5.0,
+          "end": 7.0,
+          "text": " Odkud jste.",
+          "avg_logprob": -0.2695024970632333,
+          "no_speech_prob": 0.058377545326948166
+        },
+        {
+          "start": 7.0,
+          "end": 9.0,
+          "text": " Ona je učitelka.",
+          "avg_logprob": -0.2695024970632333,
+          "no_speech_prob": 0.058377545326948166
+        },
+        {
+          "start": 9.0,
+          "end": 11.0,
+          "text": " Nerozumím.",
+          "avg_logprob": -0.2695024970632333,
+          "no_speech_prob": 0.058377545326948166
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-B-pocket-A",
+      "variant": "lowercase",
+      "pace": "slow",
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-lowercase-slow.wav",
+      "sha256": "dd8d89f8585acd3e540a4524063ac143a567848ab38d9eaac8de06833f1c5223",
+      "expected": "Můžete to zopakovat, prosím? Jmenuji se Oksana. Odkud jste? Ona je učitelka. Nerozumím.",
+      "transcript": "Můžete to zopakovat prosím. Ménuji se Oksana. Odkud jste. Ona je učitelka. Nerozumím.",
+      "word_edits": 1,
+      "reference_words": 13,
+      "diagnostic_wer": 0.07692307692307693,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 3.0,
+          "text": " Můžete to zopakovat prosím.",
+          "avg_logprob": -0.2643320782511842,
+          "no_speech_prob": 0.026123877614736557
+        },
+        {
+          "start": 4.0,
+          "end": 6.0,
+          "text": " Ménuji se Oksana.",
+          "avg_logprob": -0.2643320782511842,
+          "no_speech_prob": 0.026123877614736557
+        },
+        {
+          "start": 7.0,
+          "end": 8.0,
+          "text": " Odkud jste.",
+          "avg_logprob": -0.2643320782511842,
+          "no_speech_prob": 0.026123877614736557
+        },
+        {
+          "start": 9.0,
+          "end": 11.0,
+          "text": " Ona je učitelka.",
+          "avg_logprob": -0.2643320782511842,
+          "no_speech_prob": 0.026123877614736557
+        },
+        {
+          "start": 12.0,
+          "end": 13.0,
+          "text": " Nerozumím.",
+          "avg_logprob": -0.2643320782511842,
+          "no_speech_prob": 0.026123877614736557
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-C-pocket-C",
+      "variant": "control",
+      "pace": "normal",
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-C-pocket-C-control-normal.wav",
+      "sha256": "106bdf2353d3bbac35656d56e6064ae8b508afe3be47488ae2ff6f898f66161d",
+      "expected": "Můžete to zopakovat, prosím? Jmenuji se Oksana. Odkud jste? Ona je učitelka. Nerozumím.",
+      "transcript": "Můžete to zopakovat, prosím, nemenuj se Oksana, odkud jste, ona je učitelka, nerozumím.",
+      "word_edits": 1,
+      "reference_words": 13,
+      "diagnostic_wer": 0.07692307692307693,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 10.0,
+          "text": " Můžete to zopakovat, prosím, nemenuj se Oksana, odkud jste, ona je učitelka, nerozumím.",
+          "avg_logprob": -0.32285264619561127,
+          "no_speech_prob": 0.024735072627663612
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-C-pocket-C",
+      "variant": "control",
+      "pace": "slow",
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-C-pocket-C-control-slow.wav",
+      "sha256": "2185e0873622e7c639f87e4de9efe9065ef91324e8fd97359916da65e3867e07",
+      "expected": "Můžete to zopakovat, prosím? Jmenuji se Oksana. Odkud jste? Ona je učitelka. Nerozumím.",
+      "transcript": "Můžete to zopakovat, prosím. Nemenuj se Oksana. Odkud jste. Ona je učitelka. Nerozumím.",
+      "word_edits": 1,
+      "reference_words": 13,
+      "diagnostic_wer": 0.07692307692307693,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": " Můžete to zopakovat, prosím.",
+          "avg_logprob": -0.3384038221602346,
+          "no_speech_prob": 0.02548735775053501
+        },
+        {
+          "start": 3.0,
+          "end": 4.0,
+          "text": " Nemenuj se Oksana.",
+          "avg_logprob": -0.3384038221602346,
+          "no_speech_prob": 0.02548735775053501
+        },
+        {
+          "start": 6.0,
+          "end": 7.0,
+          "text": " Odkud jste.",
+          "avg_logprob": -0.3384038221602346,
+          "no_speech_prob": 0.02548735775053501
+        },
+        {
+          "start": 8.0,
+          "end": 9.0,
+          "text": " Ona je učitelka.",
+          "avg_logprob": -0.3384038221602346,
+          "no_speech_prob": 0.02548735775053501
+        },
+        {
+          "start": 11.0,
+          "end": 12.0,
+          "text": " Nerozumím.",
+          "avg_logprob": -0.3384038221602346,
+          "no_speech_prob": 0.02548735775053501
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-C-pocket-C",
+      "variant": "lowercase",
+      "pace": "normal",
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-C-pocket-C-lowercase-normal.wav",
+      "sha256": "08ab7fa0b682b58cc99b4d16d7c2b44b8d60e6f495de4ebf2ae75faa7078700f",
+      "expected": "Můžete to zopakovat, prosím? Jmenuji se Oksana. Odkud jste? Ona je učitelka. Nerozumím.",
+      "transcript": "Můžete to zopakovat prosím. Měnuj se Oksana. Odkud jste. Ona je učitelka. Nerozumím.",
+      "word_edits": 1,
+      "reference_words": 13,
+      "diagnostic_wer": 0.07692307692307693,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": " Můžete to zopakovat prosím.",
+          "avg_logprob": -0.23606733656397053,
+          "no_speech_prob": 0.07648240774869919
+        },
+        {
+          "start": 2.0,
+          "end": 4.0,
+          "text": " Měnuj se Oksana.",
+          "avg_logprob": -0.23606733656397053,
+          "no_speech_prob": 0.07648240774869919
+        },
+        {
+          "start": 4.0,
+          "end": 6.0,
+          "text": " Odkud jste.",
+          "avg_logprob": -0.23606733656397053,
+          "no_speech_prob": 0.07648240774869919
+        },
+        {
+          "start": 6.0,
+          "end": 8.0,
+          "text": " Ona je učitelka.",
+          "avg_logprob": -0.23606733656397053,
+          "no_speech_prob": 0.07648240774869919
+        },
+        {
+          "start": 8.0,
+          "end": 10.0,
+          "text": " Nerozumím.",
+          "avg_logprob": -0.23606733656397053,
+          "no_speech_prob": 0.07648240774869919
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-C-pocket-C",
+      "variant": "lowercase",
+      "pace": "slow",
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-C-pocket-C-lowercase-slow.wav",
+      "sha256": "f37cec0c27626c68fe77fa89c8d5dfcbe1782cea65132e13cd780101c0149cb2",
+      "expected": "Můžete to zopakovat, prosím? Jmenuji se Oksana. Odkud jste? Ona je učitelka. Nerozumím.",
+      "transcript": "Můžete to zopakovat prosím. Ménuji se Oksana. Odkud jste. Ona je učitelka. Nerozumím.",
+      "word_edits": 1,
+      "reference_words": 13,
+      "diagnostic_wer": 0.07692307692307693,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 3.0,
+          "text": " Můžete to zopakovat prosím.",
+          "avg_logprob": -0.2690141691881068,
+          "no_speech_prob": 0.12745173275470734
+        },
+        {
+          "start": 3.0,
+          "end": 6.0,
+          "text": " Ménuji se Oksana.",
+          "avg_logprob": -0.2690141691881068,
+          "no_speech_prob": 0.12745173275470734
+        },
+        {
+          "start": 6.0,
+          "end": 8.0,
+          "text": " Odkud jste.",
+          "avg_logprob": -0.2690141691881068,
+          "no_speech_prob": 0.12745173275470734
+        },
+        {
+          "start": 8.0,
+          "end": 11.0,
+          "text": " Ona je učitelka.",
+          "avg_logprob": -0.2690141691881068,
+          "no_speech_prob": 0.12745173275470734
+        },
+        {
+          "start": 11.0,
+          "end": 13.0,
+          "text": " Nerozumím.",
+          "avg_logprob": -0.2690141691881068,
+          "no_speech_prob": 0.12745173275470734
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-B-pocket-A",
+      "variant": "historical",
+      "pace": "normal",
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-normal.wav",
+      "sha256": "20bb6cb04c136f68cab28c9e24f6fbce78118dce33ee1cb24c11a314e097271a",
+      "expected": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "transcript": "Dobý den, jak semenujete, těší mě, uvůvím česky, děkuj.",
+      "word_edits": 5,
+      "reference_words": 10,
+      "diagnostic_wer": 0.5,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 10.0,
+          "text": " Dobý den, jak semenujete, těší mě, uvůvím česky, děkuj.",
+          "avg_logprob": -0.4218418236934777,
+          "no_speech_prob": 0.0772922933101654
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-B-pocket-A",
+      "variant": "historical",
+      "pace": "slow",
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-slow.wav",
+      "sha256": "2e1bf770ef5835688f974ba6df1fdc3d39a10c0fc6803855940b13dc57595133",
+      "expected": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "transcript": "Dobý den, jak semenujete, těší mě, vůvím česky, děkuj.",
+      "word_edits": 5,
+      "reference_words": 10,
+      "diagnostic_wer": 0.5,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 12.0,
+          "text": " Dobý den, jak semenujete, těší mě, vůvím česky, děkuj.",
+          "avg_logprob": -0.41062290500849485,
+          "no_speech_prob": 0.06589650362730026
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-C-pocket-C",
+      "variant": "historical",
+      "pace": "normal",
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-normal.wav",
+      "sha256": "bb9efbb0529e244b204b39ed22e5b29ab790e37de3392cac62a1dd68bb62c70e",
+      "expected": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "transcript": "do býden. Jak se menujete? Těší mě. Mluvím česky. Děkuju.",
+      "word_edits": 4,
+      "reference_words": 10,
+      "diagnostic_wer": 0.4,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": " do býden.",
+          "avg_logprob": -0.2496688540388898,
+          "no_speech_prob": 0.3767561912536621
+        },
+        {
+          "start": 2.0,
+          "end": 4.0,
+          "text": " Jak se menujete?",
+          "avg_logprob": -0.2496688540388898,
+          "no_speech_prob": 0.3767561912536621
+        },
+        {
+          "start": 4.0,
+          "end": 6.0,
+          "text": " Těší mě.",
+          "avg_logprob": -0.2496688540388898,
+          "no_speech_prob": 0.3767561912536621
+        },
+        {
+          "start": 6.0,
+          "end": 8.0,
+          "text": " Mluvím česky.",
+          "avg_logprob": -0.2496688540388898,
+          "no_speech_prob": 0.3767561912536621
+        },
+        {
+          "start": 8.0,
+          "end": 10.0,
+          "text": " Děkuju.",
+          "avg_logprob": -0.2496688540388898,
+          "no_speech_prob": 0.3767561912536621
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-C-pocket-C",
+      "variant": "historical",
+      "pace": "slow",
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-slow.wav",
+      "sha256": "60e4435cfceb5d515309d1d1f681560d825f409f6d5743be223c50354a0163bb",
+      "expected": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "transcript": "Dobí den, jak se menujete, těším mě, mluvím česky, děkuj.",
+      "word_edits": 4,
+      "reference_words": 10,
+      "diagnostic_wer": 0.4,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 12.0,
+          "text": " Dobí den, jak se menujete, těším mě, mluvím česky, děkuj.",
+          "avg_logprob": -0.46091660586270417,
+          "no_speech_prob": 0.23173213005065918
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-A-jirka",
+      "variant": "historical",
+      "pace": "normal",
+      "path": "docs/p5/voice-audition/samples/cs-A-jirka-normal.wav",
+      "sha256": "26b1dd03c1140b7f63193482821d3e49ac97a76d4d08855c389579e34e71309b",
+      "expected": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "transcript": "Dobrý den, jak se jmenujete. Češí mě. Mluvím česky. Děkuji.",
+      "word_edits": 1,
+      "reference_words": 10,
+      "diagnostic_wer": 0.1,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 6.0,
+          "text": " Dobrý den, jak se jmenujete. Češí mě. Mluvím česky. Děkuji.",
+          "avg_logprob": -0.2603124363081796,
+          "no_speech_prob": 0.013523809611797333
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-A-jirka",
+      "variant": "historical",
+      "pace": "slow",
+      "path": "docs/p5/voice-audition/samples/cs-A-jirka-slow.wav",
+      "sha256": "27bd46edba1a9ee1812c994d8b9430b822c22612ea4d206bda52a999e8551c4c",
+      "expected": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "transcript": "Dobrý den, jak se jmenujete, děší mě, mluvím česky, děkují.",
+      "word_edits": 2,
+      "reference_words": 10,
+      "diagnostic_wer": 0.2,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 7.76,
+          "text": " Dobrý den, jak se jmenujete, děší mě, mluvím česky, děkují.",
+          "avg_logprob": -0.3308091197695051,
+          "no_speech_prob": 0.0046409545466303825
+        }
+      ]
+    }
+  ],
+  "elapsed_seconds": 35.39147620299991,
+  "peak_rss_kib": 698044
+}

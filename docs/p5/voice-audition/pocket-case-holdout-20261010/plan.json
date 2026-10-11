@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "batch": "pocket-case-holdout-20261010",
+  "planned_at_utc": "2026-10-10T17:57:39.227561+00:00",
+  "source_remote_sha": "c21a2a0aa65924c091a7c464094ff3de4aa2c2ee",
+  "source_remote_tree": "bdd794e7b883e423eb625dfce3f6e1bd03bf6219",
+  "question": "Does the case-normalization improvement generalize to five disjoint authored M01 Czech phrases?",
+  "scope": "Bounded private audition; no production integration or acceptance",
+  "authorization_path": "docs/p5/voice-audition/authorization.json",
+  "source_path": "assets/specs/p5/reference-media.source.json",
+  "source_sha256": "dbe4ca7b4787bd47e7b953e1162d0f03d60d3ced876a0f914fa11d3f398fde26",
+  "model_lock_path": "docs/p5/voice-audition/pocket-20261009/models.lock.json",
+  "tooling_lock_path": "docs/p5/voice-audition/pocket-20261009/tooling-lock.json",
+  "asr_model_lock_path": "docs/p5/voice-audition/pocket-20261009/asr-model.lock.json",
+  "variants": [
+    {
+      "id": "control",
+      "text_transform": "identity",
+      "capitalize_first_letter": true
+    },
+    {
+      "id": "lowercase",
+      "text_transform": "str.lower; diacritics and punctuation retained",
+      "capitalize_first_letter": false
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "cs-B-pocket-A",
+      "reference_path": "docs/p5/voice-audition/samples/en-A-p225-normal.wav",
+      "reference_sha256": "436906eb0ffb3af2ac9332910e3591934a2e8e5a5cbcc83625e1b1859f9e0695",
+      "text": "Můžete to zopakovat, prosím? Jmenuji se Oksana. Odkud jste? Ona je učitelka. Nerozumím.",
+      "turns": [
+        {
+          "script_id": "4fd393ba-3691-53bc-b54a-843158804768",
+          "text": "Můžete to zopakovat, prosím?",
+          "seed": 20271010
+        },
+        {
+          "script_id": "cc6f897f-31d7-5102-a23e-4c832d1725e8",
+          "text": "Jmenuji se Oksana.",
+          "seed": 20271011
+        },
+        {
+          "script_id": "77eab895-3841-5b73-ba25-8c6389f05918",
+          "text": "Odkud jste?",
+          "seed": 20271012
+        },
+        {
+          "script_id": "17b65361-5862-5304-b594-8645c46deda3",
+          "text": "Ona je učitelka.",
+          "seed": 20271013
+        },
+        {
+          "script_id": "6b749fd4-e102-5301-b90e-fae53c16f24f",
+          "text": "Nerozumím.",
+          "seed": 20271014
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-C-pocket-C",
+      "reference_path": "docs/p5/voice-audition/samples/en-C-p228-normal.wav",
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8",
+      "text": "Můžete to zopakovat, prosím? Jmenuji se Oksana. Odkud jste? Ona je učitelka. Nerozumím.",
+      "turns": [
+        {
+          "script_id": "4fd393ba-3691-53bc-b54a-843158804768",
+          "text": "Můžete to zopakovat, prosím?",
+          "seed": 20271110
+        },
+        {
+          "script_id": "cc6f897f-31d7-5102-a23e-4c832d1725e8",
+          "text": "Jmenuji se Oksana.",
+          "seed": 20271111
+        },
+        {
+          "script_id": "77eab895-3841-5b73-ba25-8c6389f05918",
+          "text": "Odkud jste?",
+          "seed": 20271112
+        },
+        {
+          "script_id": "17b65361-5862-5304-b594-8645c46deda3",
+          "text": "Ona je učitelka.",
+          "seed": 20271113
+        },
+        {
+          "script_id": "6b749fd4-e102-5301-b90e-fae53c16f24f",
+          "text": "Nerozumím.",
+          "seed": 20271114
+        }
+      ]
+    }
+  ],
+  "generation": {
+    "temperature": 0.3,
+    "torch_threads": 2,
+    "torch_interop_threads": 1,
+    "copy_state": true,
+    "gap_seconds": 0.35,
+    "pcm_peak_limit": 0.9,
+    "slow_atempo": 0.8,
+    "maximum_generated_turns": 20,
+    "retries": 0
+  },
+  "screen": {
+    "language": "cs",
+    "compute_type": "int8",
+    "beam_size": 5,
+    "temperature": 0,
+    "vad_filter": false,
+    "condition_on_previous_text": false,
+    "initial_prompt": null
+  },
+  "decision_rule": "Report all results. Generalization is supported by this small diagnostic only if lowercase has fewer ASR word edits for both voices at both paces than matched controls. Any mixed/tied/worse result fails this criterion. No additional tuning/retries; no final voice selection, pronunciation acceptance or publication.",
+  "paid_inference_calls": 0,
+  "learner_data_used": false,
+  "uploaded_person_reference": false,
+  "runtime_integration": false,
+  "publication_ready": false,
+  "final_cast_approved": false,
+  "human_listening_review": "PENDING",
+  "p5_milestone": "NOT_READY",
+  "p6_authorized": false,
+  "entrypoint_sha256": "c8b952156b654032bc17595cb38d0ce3216e4b76727867be7d237d090abfd8b6"
+}

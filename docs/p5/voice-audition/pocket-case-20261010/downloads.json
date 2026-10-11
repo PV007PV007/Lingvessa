@@ -1,0 +1,74 @@
+[
+  {
+    "group": "tts",
+    "file": "czech.yaml",
+    "sha256": "932f2174c40edac737841f7508c83b2eca8e51b1661a962afaa41b9b5e9688d0",
+    "bytes": 1407,
+    "status": "PASS",
+    "seconds": 11.45
+  },
+  {
+    "group": "tts",
+    "file": "README.md",
+    "sha256": "6d501cc702f5974994cbd40bee7282de84a6cff67653b223db26eb283263669c",
+    "bytes": 2638,
+    "status": "PASS",
+    "seconds": 11.41
+  },
+  {
+    "group": "tts",
+    "file": "model.safetensors",
+    "sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+    "bytes": 438029216,
+    "status": "PASS",
+    "seconds": 18.87
+  },
+  {
+    "group": "tts",
+    "file": "tokenizer.model",
+    "sha256": "8fae9e8aa32e637f4c8f27c1f65e8cf0bdeef8f7f113f9c87275dbecf96152a2",
+    "bytes": 304158,
+    "status": "PASS",
+    "seconds": 13.18
+  },
+  {
+    "group": "asr",
+    "file": "README.md",
+    "sha256": "329373481008c7c38654aff8ecdcf0163c211557cc7ba8e2ef6f2f84b4f75ec8",
+    "bytes": 1998,
+    "status": "PASS",
+    "seconds": 10.99
+  },
+  {
+    "group": "asr",
+    "file": "config.json",
+    "sha256": "b55496ac7940a7ae47d2c01eab40edfd8701feec1229d9cce3b40014383fb828",
+    "bytes": 2370,
+    "status": "PASS",
+    "seconds": 10.95
+  },
+  {
+    "group": "asr",
+    "file": "model.bin",
+    "sha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "bytes": 483546902,
+    "status": "PASS",
+    "seconds": 12.14
+  },
+  {
+    "group": "asr",
+    "file": "tokenizer.json",
+    "sha256": "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab",
+    "bytes": 2203239,
+    "status": "PASS",
+    "seconds": 9.37
+  },
+  {
+    "group": "asr",
+    "file": "vocabulary.txt",
+    "sha256": "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913",
+    "bytes": 459861,
+    "status": "PASS",
+    "seconds": 11.97
+  }
+]
