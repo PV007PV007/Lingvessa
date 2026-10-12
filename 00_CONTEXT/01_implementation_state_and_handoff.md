@@ -3,9 +3,17 @@
 Updated: 2026-10-12. **P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED; P6 NOT AUTHORIZED.**
 Branch `implementation/p5-media-speech`; [PR #5](https://github.com/PV007PV007/Lingvessa/pull/5) OPEN DRAFT. Accepted main/P4: `5027f001237b6451237d87343ebeca58cd0af007`.
 
-## Current M01 authoring follow-up
+## Current feedback intake follow-up — 2026-10-12
 
-Current follow-up: [offline M01 reviewer](../docs/p5/m01-listening-review.md) for 216 unchanged draft files in 108 normal/slow pairs, with 204 missing slots shown separately. Per-file notes/progress, language/type/search/ASR filters, measured dialogue cue seeking and guarded JSON export/import prepare human QA. No human feedback or approvals are fabricated. Local byte verification covers every embedded M01 WAV; hosted browser tests use four existing audition WAVs under explicit UI_TEST_FIXTURE scope, plus a real 420-slot metadata catalog. The attempted local browser download failed; no local browser playback claim. This source requires its own CI.
+The [M01 feedback intake command](../docs/p5/m01-feedback-intake.md) validates the existing review form's JSON against the trusted 216-file audio bindings and creates a private follow-up report. It separates problem/uncertain/unreviewed/no-issue self-reports from the 204 missing files, ignores claimed completion and retains all approval gates. Ten stdlib tests use artificial notes; a fifth browser test connects a real fixture export to the command. No actual human feedback is received or invented. No HTML/audio regeneration, application dependency, provider, schema, publication or trace change.
+
+Local stdlib tests PASS on a verified source subset; no local full-project/browser execution is claimed. This new source requires its own hosted checks and 25 acceptance hash references. Final exact-source results belong in PR metadata and immutable CI artifacts.
+
+Completed predecessor `38ca31f0dcda7ac267893a4eb81b93a398624611`, tree `eae8f7d67d2fc2db4b26dd9716c5f0477583165b`: all seven workflows PASS, P5 PR run 38212383183 / push 38212379535. Both archive digests and all 22 acceptance references were independently verified. The saved HTML identity is `libfile_0604983dd6148191869f82f1ab91cfcf` (version 0), 17,931,485 bytes, SHA-256 `31390589234c35c49ce52f56bcc6d8a9c78c2b84cf8392d7634fa70e9fba275e`. Its unchanged form remains compatible with intake; browser validation covered four audition fixtures, and separate local byte validation covered all 216 real M01 recordings.
+
+## Completed M01 authoring/review predecessors
+
+Historical follow-up: [offline M01 reviewer](../docs/p5/m01-listening-review.md) for 216 unchanged draft files in 108 normal/slow pairs, with 204 missing slots shown separately. Per-file notes/progress, language/type/search/ASR filters, measured dialogue cue seeking and guarded JSON export/import prepare human QA. No human feedback or approvals are fabricated. Local byte verification covers every embedded M01 WAV; hosted browser tests use four existing audition WAVs under explicit UI_TEST_FIXTURE scope, plus a real 420-slot metadata catalog. The attempted local browser download failed; no local browser playback claim. This source requires its own CI.
 
 Completed predecessor `785fff956f7b7c5c017921d96103f7a0ae8f8d44`, tree `559f0fb33ffd00d18cfc3e836ba4f12d4a50b447`, passed all seven workflows. P5 PR run 38201972415 / push 38201967566; both archive digests and all 17 acceptance references verified. The saved audio ZIP has 216 final files and 532 retained WAVs. Same pinned PyTorch URL still returned 403 on 2026-10-12. Final results for this follow-up belong in PR metadata and CI artifacts, without an evidence-only descendant cycle.
 
@@ -19,7 +27,7 @@ Latest completed predecessor evidence is source `411493f095345bee3d018556c8c25f8
 
 Latest verified complete source: `6cdc635b55da0a8d38cd94a9b14d48f80640942e`, tree `39dbf682ae90ff162a13abf75d02feec3d4b3365`. All seven workflows passed. P5 PR run 38112197835 / job 114389895234; push run 38112195591 / job 114389887420. Both archive digests, all thirteen acceptance references and all original/Pocket/paired/held-out audio validators were independently verified. Both new batch validators report 20 raw turns, eight clips and fourteen ASR bindings per batch, a clean checkout and no inference during CI. Runtime PASS; milestone NOT_READY; human listening PENDING. Machine-readable record: `docs/p5/evidence/ci-case-20261011.json`.
 
-Current follow-up: an offline human-review worksheet with eight masked X/Y comparisons and two Czech A anchors. It embeds the same 18 unchanged WAVs, accepts timestamped notes/preferences, and exports/restores audio-bound feedback without approving voices. Three new browser checks exercise playback and the feedback workflow; the P5 acceptance summary binds their reports. See `docs/p5/listening-review.md`. This source needs its own hosted run; final current-source results belong in immutable CI artifacts and PR metadata.
+Historical follow-up: an offline human-review worksheet with eight masked X/Y comparisons and two Czech A anchors. It embeds the same 18 unchanged WAVs, accepts timestamped notes/preferences, and exports/restores audio-bound feedback without approving voices. Three new browser checks exercise playback and the feedback workflow; the P5 acceptance summary binds their reports. See `docs/p5/listening-review.md`. This source needs its own hosted run; final current-source results belong in immutable CI artifacts and PR metadata.
 
 Historical predecessor evidence follows.
 
@@ -63,4 +71,4 @@ Plan v1.4 §12 p7 requires all M01 required asset IDs to resolve. Prepared: 18 o
 
 OD-004 delivery profile OPEN. OD-005 audition executed; final tooling/cast/full generation OPEN. OD-006 usable real-provider speech calibration OPEN; default stays neutral `speech_unavailable`. Paid inference=false; monthly paid budget=0. No P6/P7/P8 runtime starts. EXC-P1-001 remains: main lacks technical branch protection; implementation branch, PR, CI and owner review apply.
 
-Next: validate and deliver the M01 reviewer on this exact source, collect actual human feedback, restore the exact Pocket dependency for the 204 remaining draft files, and complete human/rights/publication QA. Keep P5 NOT_READY and PR #5 OPEN DRAFT.
+Next: validate the feedback intake on its own source, process actual owner-supplied feedback when received, restore the exact Pocket dependency for the 204 remaining draft files, and complete human/rights/publication QA. Do not re-create or re-upload the already delivered HTML merely for this intake change. Keep P5 NOT_READY and PR #5 OPEN DRAFT.

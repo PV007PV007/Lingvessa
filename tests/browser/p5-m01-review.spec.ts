@@ -5,6 +5,7 @@ import {readFileSync,writeFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {pathToFileURL} from 'node:url';
 import {resolve} from 'node:path';
+import {execFileSync} from 'node:child_process';
 
 interface Slot {id:string;available:boolean;pace:string;sha256:string|null;path:string|null;duration:number|null;cues:{start:number}[]}
 interface Pair {id:string;language:string;slots:Slot[]}
@@ -29,6 +30,30 @@ const exportNotes=async(page:Page):Promise<Feedback>=>{
 };
 const importNotes=async(page:Page,value:Feedback)=>page.locator('#import').setInputFiles({
   name:'notes.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(value)),
+});
+
+test('the intake command accepts an actual browser export and keeps every approval gate open',async({page})=>{
+  await page.goto(url);
+  await page.locator('#normal-listened').check();
+  await page.locator('#normal-choice').selectOption('needs_work');
+  await page.locator('#normal-issue').selectOption('pace');
+  await page.locator('#normal-notes').fill('ТЕСТ ІНТЕРФЕЙСУ: перевірити паузу; це не людський відгук M01.');
+  const feedback=await exportNotes(page);
+  const input='artifacts/p5/m01-feedback-browser-export.json';
+  const output='artifacts/p5/m01-feedback-browser-intake.json';
+  writeFileSync(input,JSON.stringify(feedback,null,2)+'\n');
+  execFileSync('python3',['tools/p5/validate-m01-feedback.py','--test-fixture','--input',input,'--output',output],{encoding:'utf8'});
+  const report=JSON.parse(readFileSync(output,'utf8'));
+  expect(report.status).toBe('VALID');expect(report.scope).toBe('UI_TEST_FIXTURE');
+  expect(report.source_sha).toBe(manifest.source_sha);expect(report.working_tree_dirty).toBe(false);
+  expect(report.input_sha256).toBe(sha256(readFileSync(input)));
+  expect(report.counts).toEqual({available_files:4,missing_files:2,completed_attestations:1,
+    buckets:{needs_work:1,clarify:0,unreviewed:3,reported_no_issues:0}});
+  expect(report.records[0].feedback).toEqual(feedback.feedback.records[0]);
+  expect(report.review_provenance).toBe('UNVERIFIED_SELF_REPORT');
+  expect(report.feedback_status).toBe('PARTIAL');
+  expect(report.human_linguistic_approval).toBe('PENDING');expect(report.rights_approval).toBe('PENDING');
+  expect(report.publication_ready).toBe(false);expect(report.p5_milestone).toBe('NOT_READY');expect(report.p6_authorized).toBe(false);
 });
 
 test('fixture playback, cue seeking and exclusive audio remain offline; no M01 byte QA is claimed',async({page})=>{

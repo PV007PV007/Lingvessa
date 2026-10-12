@@ -2,7 +2,13 @@
 
 **IN PROGRESS / NOT READY. PR #5 OPEN DRAFT; no merge or P6 authorization.**
 
-## Current M01 review follow-up — 2026-10-12
+## Current feedback intake follow-up — 2026-10-12
+
+The [M01 feedback intake](m01-feedback-intake.md) adds trusted-catalog validation of exported notes, non-overwriting private reports and a follow-up list that preserves every audio identity and open approval gate. Ten stdlib tests passed locally against artificial feedback; the new fifth browser test will exercise an actual fixture export through the CLI. Three new reports bring exact-source acceptance references to 25. No actual human review, audio change or publication is claimed. This new source requires its own hosted result.
+
+Predecessor `38ca31f0dcda7ac267893a4eb81b93a398624611` passed all seven workflows. Both P5 archives and all 22 acceptance references were independently verified; the M01 HTML was saved and delivered. Its source/template/audio remain unchanged by this intake addition.
+
+## Completed M01 review predecessor — 2026-10-12
 
 Predecessor source 785fff956f7b7c5c017921d96103f7a0ae8f8d44 passed all seven workflows; both P5 archives and 17 acceptance references were verified. The new [offline M01 reviewer](m01-listening-review.md) adds paired listening, per-file notes, filtering, cue seeking and guarded feedback restore for the saved 216-file draft. Local verification checks exact embedded WAV bytes. Hosted UI checks use explicit four-WAV audition fixtures and a separate real 420-slot metadata catalog; external M01 audio bytes remain outside CI. Five new hash references bring acceptance evidence to 22. This change needs its own hosted results. All 216 recordings still require actual human QA; the 204 unavailable files, final cast/rights and publication remain open.
 

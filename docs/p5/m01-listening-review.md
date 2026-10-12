@@ -34,6 +34,12 @@ Every export remains `publication_ready=false`, `p5_milestone=NOT_READY`,
 `p6_authorized=false`. A complete set of notes is `RECORDED_UNAPPROVED`.
 It is not final cast, rights, linguistic/publication acceptance or permission to merge.
 
+The [feedback intake command](m01-feedback-intake.md) now checks an exported JSON
+against the trusted repository catalog and creates a private follow-up report.
+It preserves exact audio bindings and notes, recalculates progress, separates
+missing files and retains all approval gates. The already saved HTML remains
+compatible and unchanged; no actual human feedback is invented by this addition.
+
 ## Reproduction and byte evidence
 
 From the repository root:
@@ -76,11 +82,16 @@ python3 tools/p5/build-m01-review.py --mode fixture
 pnpm exec playwright test --config tools/p5/m01-review.playwright.config.ts
 ```
 
-The four new browser tests use no retries. Their reports bind source, template,
-builder, fixture bytes and open gates. Five new P5 acceptance references bring
-the total to 22. Final current-source PASS must be obtained from that commit's CI;
-the all-seven PASS on predecessor `785fff956f7b7c5c017921d96103f7a0ae8f8d44`
-does not certify a later revision.
+The four original browser tests use no retries. Source
+`38ca31f0dcda7ac267893a4eb81b93a398624611` passed all seven workflows; both P5
+archives and all 22 acceptance references were independently verified. The full
+HTML was saved as `libfile_0604983dd6148191869f82f1ab91cfcf`, version 0, unchanged
+at SHA-256 `31390589234c35c49ce52f56bcc6d8a9c78c2b84cf8392d7634fa70e9fba275e`.
+
+The feedback intake follow-up adds ten stdlib tests and a fifth browser test
+using a real fixture export, with 25 acceptance references. It needs its own
+exact-source hosted PASS. The earlier 216-file byte validation and unchanged
+four-audition-file playback scope remain separate.
 
 Source authoring metadata, 216 WAVs, 109 ASR flags, 204 blocked files and production
 registry stay as recorded. Approved publication assets remain zero. No requirement
