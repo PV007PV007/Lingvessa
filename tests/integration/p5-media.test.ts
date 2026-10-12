@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {randomBytes,randomUUID} from 'node:crypto';
+import {createHash,randomBytes,randomUUID} from 'node:crypto';
 import {spawnSync,execFileSync} from 'node:child_process';
 import {mkdirSync,writeFileSync} from 'node:fs';
 import {mkdtemp,rm,writeFile} from 'node:fs/promises';
@@ -34,6 +34,22 @@ test('P5 real PostgreSQL: media ownership, immutable versions, bytes preflight a
    assert.equal(await f.media.enqueue(f.author,en.requirement,en.key,'programmatic_fixture','p5-fixture-1'),en.job);
    await assert.rejects(f.media.enqueue(f.author,cs.requirement,en.key,'programmatic_fixture','p5-fixture-1'),/reused/);
    assert.deepEqual(await f.media.ingest(f.author,en.job,en.asset.metadata,en.asset.bytes),en.ingested);
+   const snapshot=async()=>({
+    job:(await db.query('SELECT * FROM media_jobs WHERE id=$1',[en.job])).rows,
+    versions:(await db.query('SELECT * FROM asset_versions WHERE job_id=$1',[en.job])).rows,
+    audit:(await db.query("SELECT * FROM audit_events WHERE target_id=$1 AND action='media.version_ingested'",[en.ingested.asset_id])).rows,
+   });
+   const before=await snapshot(),a=en.asset.metadata,key=assetObjectKey(a.asset_id,a.asset_version,a.checksum);
+   assert.equal(before.job[0]?.state,'succeeded');assert.equal(before.job[0]?.attempts,1);
+   assert.equal(before.versions.length,1);assert.equal(before.audit.length,1);
+   const changed=Buffer.from(en.asset.bytes.toString('utf8').replace('fill="#345"','fill="#346"'));
+   assert.equal(changed.byteLength,a.byte_length);
+   assert.notEqual(createHash('sha256').update(changed).digest('hex'),a.checksum);
+   await assert.rejects(f.media.ingest(f.author,en.job,a,changed),{code:'INVALID_INPUT',message:'Asset checksum differs from manifest'});
+   assert.deepEqual(await snapshot(),before,'A rejected replay must preserve job, immutable version and audit rows');
+   assert.deepEqual(await store.readVerified(key,a.checksum,a.byte_length),en.asset.bytes,'A rejected replay must preserve original bytes');
+   assert.deepEqual(await f.media.ingest(f.author,en.job,a,en.asset.bytes),en.ingested,'Valid replay remains idempotent after rejection');
+   assert.deepEqual(await snapshot(),before,'Valid replay must not add attempts, versions or audit events');
    await assert.rejects(f.media.ingest(f.author,en.job,{...en.asset.metadata,alt_text:'Changed'},en.asset.bytes),/immutable/);
    await reject("UPDATE media_jobs SET state='queued' WHERE id=$1",[en.job]);
    await reject('UPDATE asset_versions SET metadata=$1 WHERE asset_id=$2',[{changed:true},en.ingested.asset_id]);

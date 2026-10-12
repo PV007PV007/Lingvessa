@@ -1,4 +1,4 @@
-import { randomUUID } from 'node:crypto';
+import { createHash, randomUUID } from 'node:crypto';
 import {takeP5Quota} from './p5-quota.js';
 import type pg from 'pg';
 import { ContractError, assertUuid } from '../../packages/domain/src/identity.js';
@@ -52,6 +52,7 @@ export class MediaRepository {
   async ingest(actorId:string,jobId:string,input:unknown,bytes:Uint8Array):Promise<{asset_id:string;asset_version:number;checksum:string;metadata_checksum:string}> {
     assertUuid(actorId);assertUuid(jobId);const a=assetVersionSchema.parse(input);
     if(bytes.byteLength!==a.byte_length)throw new ContractError('INVALID_INPUT','Asset byte length differs from manifest');
+    if(createHash('sha256').update(bytes).digest('hex')!==a.checksum)throw new ContractError('INVALID_INPUT','Asset checksum differs from manifest');
     const languageId=await this.language(a.scope.language),key=`assets/${a.asset_id}/${a.asset_version}/${a.checksum}`;
     return transaction(this.pool,async db=>{
       const job=(await db.query('SELECT * FROM media_jobs WHERE id=$1 FOR UPDATE',[jobId])).rows[0];

@@ -2,7 +2,13 @@
 
 **IN PROGRESS / NOT READY. PR #5 OPEN DRAFT; no merge or P6 authorization.**
 
-## Current feedback intake follow-up — 2026-10-12
+## Current media ingestion integrity correction — 2026-10-12
+
+The [replay checksum correction](media-ingestion-integrity.md) rejects changed incoming bytes before database/storage access, even when a succeeded job has matching immutable metadata. The existing PostgreSQL replay gate now checks rejection of a same-length SVG change, preserved job/version/audit rows and stored bytes, and successful idempotent retry with the original bytes. Local actual-class reproduction with explicit schema/DB/store stubs and syntax checks passed; full hosted validation on this source is still required.
+
+Completed parent `ec76bdaa8786c5e7625fcd572e0c5d37854edafe` passed all seven workflows. P5 PR run 38258943462 and push run 38258938828, both archive digests and all 25 acceptance references were independently verified. That includes ten feedback tests and five M01 browser tests. The correction does not change the acceptance reference count, delivered HTML, audio, schema, dependencies, approvals or requirement statuses. Final new-source evidence belongs in PR metadata and immutable CI artifacts.
+
+## Completed feedback intake follow-up — 2026-10-12
 
 The [M01 feedback intake](m01-feedback-intake.md) adds trusted-catalog validation of exported notes, non-overwriting private reports and a follow-up list that preserves every audio identity and open approval gate. Ten stdlib tests passed locally against artificial feedback; the new fifth browser test will exercise an actual fixture export through the CLI. Three new reports bring exact-source acceptance references to 25. No actual human review, audio change or publication is claimed. This new source requires its own hosted result.
 

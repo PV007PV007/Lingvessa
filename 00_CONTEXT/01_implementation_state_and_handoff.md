@@ -3,7 +3,15 @@
 Updated: 2026-10-12. **P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED; P6 NOT AUTHORIZED.**
 Branch `implementation/p5-media-speech`; [PR #5](https://github.com/PV007PV007/Lingvessa/pull/5) OPEN DRAFT. Accepted main/P4: `5027f001237b6451237d87343ebeca58cd0af007`.
 
-## Current feedback intake follow-up — 2026-10-12
+## Current media ingestion integrity correction — 2026-10-12
+
+The [ingestion replay correction](../docs/p5/media-ingestion-integrity.md) rejects same-length changed bytes under an original manifest on every request, including succeeded-job replay. SHA-256 is checked before database/storage access. The existing real-PostgreSQL `P5-MEDIA-JOB-001` gate now verifies rejection, unchanged job/version/audit rows and stored bytes, then a successful exact replay. No schema, dependency, provider or approval change.
+
+A bounded local harness using the actual repository class and explicit schema/DB/store stubs reproduced parent acceptance and fixed rejection; TypeScript syntax checks passed. Full type checking and real PostgreSQL validation require this source's hosted CI. Final results belong in PR metadata and immutable artifacts.
+
+Completed predecessor `ec76bdaa8786c5e7625fcd572e0c5d37854edafe`, tree `c5a4ad440392f723283ca8ee0fe90bf409f7db12`: all seven workflows PASS, P5 PR run 38258943462 / push 38258938828. Both archive digests and all 25 acceptance references were independently verified, including ten feedback tests and five M01 browser tests. The delivered HTML and audio remain unchanged.
+
+## Completed feedback intake follow-up — 2026-10-12
 
 The [M01 feedback intake command](../docs/p5/m01-feedback-intake.md) validates the existing review form's JSON against the trusted 216-file audio bindings and creates a private follow-up report. It separates problem/uncertain/unreviewed/no-issue self-reports from the 204 missing files, ignores claimed completion and retains all approval gates. Ten stdlib tests use artificial notes; a fifth browser test connects a real fixture export to the command. No actual human feedback is received or invented. No HTML/audio regeneration, application dependency, provider, schema, publication or trace change.
 
@@ -71,4 +79,4 @@ Plan v1.4 §12 p7 requires all M01 required asset IDs to resolve. Prepared: 18 o
 
 OD-004 delivery profile OPEN. OD-005 audition executed; final tooling/cast/full generation OPEN. OD-006 usable real-provider speech calibration OPEN; default stays neutral `speech_unavailable`. Paid inference=false; monthly paid budget=0. No P6/P7/P8 runtime starts. EXC-P1-001 remains: main lacks technical branch protection; implementation branch, PR, CI and owner review apply.
 
-Next: validate the feedback intake on its own source, process actual owner-supplied feedback when received, restore the exact Pocket dependency for the 204 remaining draft files, and complete human/rights/publication QA. Do not re-create or re-upload the already delivered HTML merely for this intake change. Keep P5 NOT_READY and PR #5 OPEN DRAFT.
+Next: validate the ingestion correction on its own source, process actual owner-supplied feedback when received, restore the exact Pocket dependency for the 204 remaining draft files, and complete human/rights/publication QA. Do not re-create or re-upload the already delivered HTML for this correction. Keep P5 NOT_READY and PR #5 OPEN DRAFT.
