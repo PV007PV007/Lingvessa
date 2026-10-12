@@ -3,6 +3,14 @@
 Updated: 2026-10-11. **P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED; P6 NOT AUTHORIZED.**
 Branch `implementation/p5-media-speech`; [PR #5](https://github.com/PV007PV007/Lingvessa/pull/5) OPEN DRAFT. Accepted main/P4: `5027f001237b6451237d87343ebeca58cd0af007`.
 
+## Current M01 authoring follow-up
+
+The owner delegated working choices on 2026-10-11. Working cast: Maya A, Daniel B, Alex C; Klára C, Adam A, Oksana B. Original capitalization is retained. **104 unique Piper turns / 216 final draft files** are complete, with 216 blind ASR screens and 109 discrepancy flags; human review remains PENDING. The remaining 97 Pocket turns / 204 files are blocked by HTTP 403 for pinned PyTorch. Approved publication assets remain 0.
+
+The saved audio ZIP and all 532 WAV hashes were locally verified. The authoring record includes the initial native telemetry auto-review rejection, kernel-enforced offline continuation, two infrastructure replacements and one processing-journal repair without further synthesis. Exact scope, files and limitations: `docs/p5/m01-audio-draft-20261011/README.md`. CI checks metadata only for this external audio package and cannot claim byte-level audio QA. No application provider, dependency, schema, registry publication or trace-status change.
+
+Latest completed predecessor evidence is source `411493f095345bee3d018556c8c25f8b5698a4dc`, tree `7194729547f5fea81de1c39c6b2b73aeb1d49b3c`: all seven workflows PASS. P5 PR run 38129696671 / push 38129694015; both archive digests, all 16 acceptance references and all 18 worksheet playback clocks/hashes verified. This M01 follow-up requires its own hosted checks; final unchanged-source results belong in PR metadata and CI artifacts.
+
 ## Exact-source runtime evidence
 
 Latest verified complete source: `6cdc635b55da0a8d38cd94a9b14d48f80640942e`, tree `39dbf682ae90ff162a13abf75d02feec3d4b3365`. All seven workflows passed. P5 PR run 38112197835 / job 114389895234; push run 38112195591 / job 114389887420. Both archive digests, all thirteen acceptance references and all original/Pocket/paired/held-out audio validators were independently verified. Both new batch validators report 20 raw turns, eight clips and fourteen ASR bindings per batch, a clean checkout and no inference during CI. Runtime PASS; milestone NOT_READY; human listening PENDING. Machine-readable record: `docs/p5/evidence/ci-case-20261011.json`.
@@ -51,4 +59,4 @@ Plan v1.4 §12 p7 requires all M01 required asset IDs to resolve. Prepared: 18 o
 
 OD-004 delivery profile OPEN. OD-005 audition executed; final tooling/cast/full generation OPEN. OD-006 usable real-provider speech calibration OPEN; default stays neutral `speech_unavailable`. Paid inference=false; monthly paid budget=0. No P6/P7/P8 runtime starts. EXC-P1-001 remains: main lacks technical branch protection; implementation branch, PR, CI and owner review apply.
 
-Next: complete the worksheet's exact-source browser/CI checks and deliver it for human audition feedback, followed by a separately scoped improvement/selection decision before full generation. Keep P5 NOT_READY and PR #5 OPEN DRAFT.
+Next: complete this authoring change's exact-source CI, retain the saved 216-file draft, restore the exact Pocket dependency for the 204 remaining draft files, and complete human/rights/publication QA. Keep P5 NOT_READY and PR #5 OPEN DRAFT.

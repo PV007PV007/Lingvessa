@@ -1,0 +1,434 @@
+"""Offline unpublished M01 authoring. Never modifies the publication registry.
+
+Each unique turn has one immutable synthesis attempt. Missing engines stay explicit.
+Subcommands: inventory, generate, assemble, screen. Verification is a separate tool.
+"""
+import argparse
+import array
+import hashlib
+import importlib.metadata
+import json
+import math
+from pathlib import Path
+import platform
+import re
+import shutil
+import subprocess
+import sys
+import time
+import unicodedata
+import wave
+
+ROOT = Path(__file__).resolve().parents[2]
+BATCH = ROOT / 'docs/p5/m01-audio-draft-20261011'
+
+
+def need(value, message):
+    if not value:
+        raise ValueError(message)
+
+
+def sha(path):
+    with path.open('rb') as f:
+        return hashlib.file_digest(f, 'sha256').hexdigest()
+
+
+def read(path):
+    return json.loads(path.read_text(encoding='utf-8'))
+
+
+def write(path, data):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_suffix(path.suffix + '.tmp')
+    temporary.write_text(json.dumps(data, ensure_ascii=False, indent=2, allow_nan=False) + '\n', encoding='utf-8')
+    temporary.replace(path)
+
+
+def offline():
+    from authoring_offline import install
+    return install()
+
+
+def inputs():
+    plan = read(BATCH / 'plan.json')
+    for path, expected in plan['inputs'].items():
+        need(sha(ROOT / path) == expected, 'Input checksum changed: ' + path)
+    need(plan['constraints']['publication_ready'] is False, 'Draft only')
+    source = read(ROOT / 'assets/specs/p5/reference-media.source.json')
+    registry = read(ROOT / 'assets/specs/p5/reference-media.registry.json')
+    need(not source['publication_ready'] and not registry['publication_ready'], 'Unpublished source required')
+    cast = {c['voice_code']: c for c in plan['cast']}
+    need(len(cast) == 6, 'Six working voices required')
+    turns = {}
+    for asset in registry['audio']:
+        for turn in asset['turns']:
+            c = cast[turn['voice_code']]
+            need(c['voice_id'] == turn['voice_id'] and c['language'] == asset['language'], 'Voice identity mismatch')
+            need(turn['text'] == unicodedata.normalize('NFC', turn['text']), 'Authored text must already be NFC')
+            row = dict(turn, language=asset['language'], script_id=asset['script_id'])
+            if turn['turn_id'] in turns:
+                need(turns[turn['turn_id']] == row, 'Turn identity reused with different text/voice')
+            turns[turn['turn_id']] = row
+    need(len(source['scripts']) == 168 and len(turns) == 201 and len(registry['audio']) == 420, 'M01 inventory changed')
+    return plan, registry, turns, cast
+
+
+def environment(lock_path, exclude=()):
+    result = {}
+    for p in read(ROOT / lock_path)['packages']:
+        if p['name'] in exclude:
+            continue
+        version = importlib.metadata.version(p['name'])
+        need(version == p['version'], 'Pinned package mismatch: ' + p['name'])
+        result[p['name']] = version
+    return result
+
+
+def run_ffmpeg(args):
+    return subprocess.run(['ffmpeg', '-hide_banner', '-nostdin', '-loglevel', 'error', *args],
+                          check=True, capture_output=True, timeout=90).stdout
+
+
+def pcm(path):
+    with wave.open(str(path), 'rb') as f:
+        need((f.getnchannels(), f.getsampwidth(), f.getframerate()) == (1, 2, 24000), 'Expected mono PCM16 24 kHz')
+        frames = f.getnframes()
+        data = f.readframes(frames)
+    need(len(data) == frames * 2 and frames > 0, 'Invalid PCM frame count')
+    return data
+
+
+def wav(path, data):
+    need(not path.exists(), 'Refusing to overwrite audio: ' + str(path))
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with wave.open(str(path), 'wb') as f:
+        f.setnchannels(1)
+        f.setsampwidth(2)
+        f.setframerate(24000)
+        f.writeframes(data)
+
+
+def metrics(path):
+    data = pcm(path)
+    samples = array.array('h', data)
+    if sys.byteorder != 'little':
+        samples.byteswap()
+    peak = max(abs(x) for x in samples)
+    rms = math.sqrt(sum(x * x for x in samples) / len(samples))
+    need(peak > 1 and rms > 1 and peak < 32767, 'Silent/clipped audio')
+    return {'frames': len(samples), 'sample_rate': 24000, 'channels': 1, 'sample_width': 2,
+            'duration_seconds': len(samples) / 24000, 'peak_dbfs': 20 * math.log10(peak / 32768),
+            'rms_dbfs': 20 * math.log10(rms / 32768), 'clipped_samples': sum(abs(x) >= 32767 for x in samples)}
+
+
+def file_record(path, output, measure=False):
+    row = {'path': str(path.relative_to(output)), 'sha256': sha(path), 'bytes': path.stat().st_size}
+    if measure:
+        row['metrics'] = metrics(path)
+    return row
+
+
+def normalize(raw, normal, slow, plan):
+    import numpy as np
+    p = plan['processing']
+    raw_float = run_ffmpeg(['-i', str(raw), '-ar', '24000', '-ac', '1', '-f', 'f32le', '-'])
+    samples = np.frombuffer(raw_float, dtype='<f4').astype(np.float64)
+    need(samples.size > 0 and np.isfinite(samples).all(), 'Empty/nonfinite synthesis')
+    need(samples.size / 24000 <= plan['generation']['maximum_turn_seconds'], 'Turn exceeds planned duration cap')
+    peak = float(np.max(np.abs(samples)))
+    rms = float(np.sqrt(np.mean(samples * samples)))
+    need(peak > 0 and rms > 0, 'Silent synthesis')
+    gain = min(10 ** (p['rms_target_dbfs'] / 20) / rms, p['peak_ceiling'] / peak)
+    wav(normal, np.rint(samples * gain * 32767).astype('<i2').tobytes())
+    need(not slow.exists(), 'Refusing to overwrite slow turn')
+    run_ffmpeg(['-i', str(normal), '-af', p['slow_filter'], '-c:a', 'pcm_s16le', str(slow)])
+    need(metrics(slow)['frames'] > metrics(normal)['frames'], 'Slow turn did not get longer')
+    return {'gain': gain, 'raw_resampled_peak': peak, 'raw_resampled_rms': rms}
+
+
+def generate(output, models, engine, complete_interrupted=False):
+    plan, registry, turns, cast = inputs()
+    completion = read(BATCH / 'continuation-plan.json') if complete_interrupted else None
+    if completion:
+        need(engine == 'piper', 'Only the interrupted Piper run has a continuation plan')
+        need(completion['generator_sha256'] == sha(Path(__file__)), 'Continuation generator changed')
+        need(completion['network_guard_sha256'] == sha(Path(__file__).with_name('authoring_offline.py')), 'Network guard changed')
+        need(completion['plan_sha256'] == sha(BATCH / 'plan.json'), 'Continuation plan binding changed')
+        turns = {key: value for key, value in turns.items() if key in completion['selected_turn_ids']}
+        need(len(turns) == len(completion['selected_turn_ids']) == 28, 'Continuation scope changed')
+    job_path = output / ('generation-' + engine + '.json')
+    need(not job_path.exists(), 'This engine batch already has a run record; do not retry synthesis')
+    output.mkdir(parents=True, exist_ok=True)
+    if engine == 'piper':
+        versions = environment('docs/p5/voice-audition/tooling-lock.json')
+        from piper import PiperVoice, SynthesisConfig
+        from piper.config import PiperConfig
+        import onnxruntime as ort
+        ort.disable_telemetry_events()
+        locked = {m['id']: m for m in read(ROOT / 'docs/p5/voice-audition/models.lock.json')['models']}
+        for m in locked.values():
+            need(sha(models / m['path']) == m['sha256'], 'Piper weight mismatch')
+            need(sha(models / m['config_path']) == m['config_sha256'], 'Piper config mismatch')
+        offline()
+        engines = {}
+        for key, m in locked.items():
+            options = ort.SessionOptions()
+            options.intra_op_num_threads = 2
+            options.inter_op_num_threads = 1
+            session = ort.InferenceSession(str(models / m['path']), sess_options=options, providers=['CPUExecutionProvider'])
+            config = read(models / m['config_path'])
+            engines[key] = PiperVoice(session=session, config=PiperConfig.from_dict(config))
+            for c in cast.values():
+                if c['model'] == key and c['speaker_name']:
+                    need(config['speaker_id_map'][c['speaker_name']] == c['speaker_id'], 'Piper speaker map changed')
+        def synthesize(turn, candidate, raw, seed):
+            ort.set_seed(seed)
+            p = plan['generation']['piper']
+            syn = SynthesisConfig(speaker_id=candidate['speaker_id'], length_scale=p['length_scale'],
+                                  noise_scale=p['noise_scale'], noise_w_scale=p['noise_w_scale'],
+                                  volume=p['volume'], normalize_audio=p['normalize_audio'])
+            with wave.open(str(raw), 'wb') as f:
+                engines[candidate['model']].synthesize_wav(turn['text'], f, syn_config=syn)
+            return {'model_sha256': locked[candidate['model']]['sha256'], 'speaker_id': candidate['speaker_id']}
+    else:
+        versions = environment('docs/p5/voice-audition/pocket-20261009/tooling-lock.json')
+        import numpy as np
+        import yaml
+        import torch
+        from scipy.io import wavfile
+        from pocket_tts import TTSModel
+        from pocket_tts.models.text_chunking import prepare_text_prompt, split_into_best_sentences
+        lock = read(ROOT / 'docs/p5/voice-audition/pocket-20261009/models.lock.json')
+        for name, record in lock['files'].items():
+            need(sha(models / name) == record['sha256'], 'Pocket model mismatch: ' + name)
+        for c in cast.values():
+            if c['engine'] == 'pocket':
+                need(sha(ROOT / c['reference_path']) == c['reference_sha256'], 'Synthetic reference mismatch')
+        config = yaml.safe_load((models / 'czech.yaml').read_text())
+        config['weights_path'] = str(models / 'model.safetensors')
+        config['flow_lm']['lookup_table']['tokenizer_path'] = str(models / 'tokenizer.model')
+        local_config = output / 'local-czech.yaml'
+        local_config.write_text(yaml.safe_dump(config))
+        offline()
+        torch.set_num_threads(2)
+        torch.set_num_interop_threads(1)
+        torch.manual_seed(20261009)
+        p = plan['generation']['pocket']
+        model = TTSModel.load_model(config=local_config, temp=p['temperature'], sampler_decode_steps=p['sampler_decode_steps'],
+                                   noise_clamp=p['noise_clamp'], eos_threshold=p['eos_threshold'])
+        model.capitalize_first_letter = p['capitalize_first_letter']
+        need(model.sample_rate == 24000, 'Pocket sample rate changed')
+        states = {c['voice_code']: model.get_state_for_audio_prompt(ROOT / c['reference_path'])
+                  for c in cast.values() if c['engine'] == 'pocket'}
+        def synthesize(turn, candidate, raw, seed):
+            chunks = split_into_best_sentences(model.flow_lm.conditioner.tokenizer, turn['text'], p['max_tokens'],
+                model.pad_with_spaces_for_short_inputs, model.remove_semicolons, model.append_terminal_punctuation,
+                model.capitalize_first_letter, model.replace_characters)
+            need(len(chunks) == 1, 'Unexpected Pocket text chunk split')
+            prepared, _ = prepare_text_prompt(chunks[0], model.pad_with_spaces_for_short_inputs, model.remove_semicolons,
+                model.append_terminal_punctuation, model.capitalize_first_letter, model.replace_characters)
+            torch.manual_seed(seed)
+            samples = model.generate_audio(states[candidate['voice_code']], turn['text'], max_tokens=p['max_tokens'],
+                                           copy_state=p['copy_state']).detach().cpu().numpy().reshape(-1)
+            need(samples.size > 0 and np.isfinite(samples).all(), 'Empty/nonfinite Pocket samples')
+            wavfile.write(raw, 24000, samples.astype(np.float32))
+            return {'model_sha256': lock['files']['model.safetensors']['sha256'], 'prepared_text': prepared,
+                    'token_ids': model.flow_lm.conditioner.tokenizer(prepared)[0].tolist(),
+                    'reference_sha256': candidate['reference_sha256']}
+    job = {'status': 'RUNNING', 'engine': engine, 'plan_sha256': sha(BATCH / 'plan.json'),
+           'generator_sha256': sha(Path(__file__)), 'python': platform.python_version(), 'versions': versions,
+           'ffmpeg_version': subprocess.check_output(['ffmpeg', '-version'], text=True).splitlines()[0],
+           'ffmpeg_sha256': sha(Path(shutil.which('ffmpeg'))), 'attempts': [],
+           'network_guard': offline(), 'network_guard_sha256': sha(Path(__file__).with_name('authoring_offline.py')),
+           'onnx_telemetry_disabled': True if engine == 'piper' else None,
+           'continuation_plan_sha256': sha(BATCH / 'continuation-plan.json') if completion else None,
+           'bit_identical_reproduction_promised': False, 'constraints': plan['constraints']}
+    write(job_path, job)
+    for turn in turns.values():
+        candidate = cast[turn['voice_code']]
+        if candidate['engine'] != engine:
+            continue
+        record_path = output / 'attempts' / (turn['turn_id'] + '.json')
+        need(not record_path.exists(), 'Turn already attempted; retries are forbidden')
+        seed = (20261011 + int(turn['turn_id'][:8], 16)) % 2147483647
+        raw = output / 'raw' / (turn['turn_id'] + '.wav')
+        normal = output / 'turns' / (turn['turn_id'] + '.wav')
+        slow = output / 'turns' / (turn['turn_id'] + '-slow.wav')
+        raw.parent.mkdir(parents=True, exist_ok=True)
+        need(not raw.exists() and not normal.exists() and not slow.exists(), 'Turn output exists')
+        row = dict(turn, candidate_id=candidate['candidate_id'], engine=engine, seed=seed, status='STARTED',
+                   plan_sha256=job['plan_sha256'], generator_sha256=job['generator_sha256'],
+                   continuation_plan_sha256=job['continuation_plan_sha256'],
+                   infrastructure_retry=bool(completion and turn['turn_id'] in completion['interrupted_turn_ids']))
+        write(record_path, row)
+        began = time.monotonic()
+        try:
+            row['engine_result'] = synthesize(turn, candidate, raw, seed)
+            row['raw'] = file_record(raw, output)
+            row['normalization'] = normalize(raw, normal, slow, plan)
+            row['normal'] = file_record(normal, output, True)
+            row['slow'] = file_record(slow, output, True)
+            row['status'] = 'GENERATED_UNREVIEWED'
+        except Exception as error:
+            row.update(status='FAILED', error=type(error).__name__ + ': ' + str(error))
+        row['elapsed_seconds'] = round(time.monotonic() - began, 3)
+        write(record_path, row)
+        job['attempts'].append(turn['turn_id'])
+        write(job_path, job)
+        print(json.dumps({'turn': turn['turn_id'], 'status': row['status'], 'done': len(job['attempts'])}), flush=True)
+    job['status'] = 'COMPLETE'
+    write(job_path, job)
+
+
+def assemble(output):
+    plan, registry, turns, cast = inputs()
+    need(not (output / 'assets.json').exists(), 'Refusing to overwrite assembled batch')
+    attempts = {p.stem: read(p) for p in (output / 'attempts').glob('*.json')}
+    completion = read(BATCH / 'continuation-plan.json')
+    for path in (output / 'recovery/attempts').glob('*.json'):
+        row = read(path)
+        need(path.stem in completion['selected_turn_ids'], 'Unexpected recovery turn')
+        need(row['continuation_plan_sha256'] == sha(BATCH / 'continuation-plan.json'), 'Recovery binding mismatch')
+        if path.stem in attempts:
+            need(path.stem in completion['interrupted_turn_ids'] and attempts[path.stem]['status'] == 'STARTED', 'Cannot replace a completed attempt')
+        for field in ['raw', 'normal', 'slow']:
+            if field in row:
+                row[field]['path'] = 'recovery/' + row[field]['path']
+        attempts[path.stem] = row
+    rows = []
+    for a in registry['audio']:
+        row = {k: a[k] for k in ['asset_id', 'stable_code', 'language', 'speed', 'normal_asset_id',
+                                'script_id', 'script_hash', 'transcript']}
+        row['turn_ids'] = [t['turn_id'] for t in a['turns']]
+        missing = [t for t in row['turn_ids'] if attempts.get(t, {}).get('status') != 'GENERATED_UNREVIEWED']
+        if missing:
+            row.update(status='NOT_GENERATED', missing_turn_ids=missing)
+        else:
+            gap = plan['processing']['normal_gap_frames' if a['speed'] == 'normal' else 'slow_gap_frames']
+            data, cursor, timing = [], 0, []
+            for i, t in enumerate(a['turns']):
+                turn = attempts[t['turn_id']]
+                need(turn['plan_sha256'] == sha(BATCH / 'plan.json'), 'Turn belongs to different plan')
+                clip = turn[a['speed']]
+                path = output / clip['path']
+                need(sha(path) == clip['sha256'], 'Turn bytes changed')
+                samples = pcm(path)
+                if i:
+                    data.append(bytes(gap * 2))
+                    cursor += gap
+                timing.append({'turn_id': t['turn_id'], 'voice_id': t['voice_id'],
+                    'character_id': t.get('character_id'), 'candidate_id': turn['candidate_id'], 'text': t['text'],
+                    'start_frame': cursor, 'end_frame': cursor + len(samples) // 2,
+                    'start_ms': cursor / 24, 'end_ms': (cursor + len(samples) // 2) / 24,
+                    'turn_sha256': clip['sha256']})
+                data.append(samples)
+                cursor += len(samples) // 2
+            path = output / 'audio' / a['language'] / (a['stable_code'] + '.wav')
+            wav(path, b''.join(data))
+            row.update(status='GENERATED_UNREVIEWED', timing=timing, **file_record(path, output, True))
+            loud = subprocess.run(['ffmpeg', '-hide_banner', '-nostdin', '-i', str(path), '-af',
+                'ebur128=peak=true', '-f', 'null', '-'], check=True, capture_output=True, text=True, timeout=30)
+            matches = re.findall(r'I:\s*(-?[0-9.]+) LUFS', loud.stderr)
+            need(matches, 'Missing LUFS measurement')
+            row['integrated_lufs'] = float(matches[-1])
+            row['loudness_note'] = 'Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval.'
+        rows.append(row)
+    write(output / 'assets.json', {'plan_sha256': sha(BATCH / 'plan.json'), 'assembler_sha256': sha(Path(__file__)),
+          'constraints': plan['constraints'], 'assets': rows})
+    print(json.dumps({'generated': sum(x['status'] == 'GENERATED_UNREVIEWED' for x in rows), 'planned': len(rows)}))
+
+
+def words(text):
+    return re.findall(r"[^\W_]+(?:['’][^\W_]+)*", unicodedata.normalize('NFC', text).lower())
+
+
+def distance(reference, hypothesis):
+    previous = list(range(len(hypothesis) + 1))
+    for i, token in enumerate(reference, 1):
+        current = [i]
+        for j, other in enumerate(hypothesis, 1):
+            current.append(min(current[-1] + 1, previous[j] + 1, previous[j - 1] + (token != other)))
+        previous = current
+    return previous[-1]
+
+
+def screen(output, models):
+    plan, registry, turns, cast = inputs()
+    need(not (output / 'asr-run.json').exists(), 'Refusing to rerun the blind ASR screen')
+    versions = environment('docs/p5/voice-audition/pocket-20261009/tooling-lock.json', ('torch', 'pocket-tts'))
+    for row in read(ROOT / 'docs/p5/voice-audition/pocket-20261009/asr-model.lock.json')['files']:
+        need(sha(models / row['path']) == row['sha256'], 'ASR model checksum mismatch')
+    import numpy as np
+    from scipy.signal import resample_poly
+    import onnxruntime as ort
+    ort.disable_telemetry_events()
+    from faster_whisper import WhisperModel
+    offline()
+    model = WhisperModel(str(models), device='cpu', compute_type='int8', cpu_threads=2, num_workers=1, local_files_only=True)
+    job = {'status': 'RUNNING', 'plan_sha256': sha(BATCH / 'plan.json'), 'screen_script_sha256': sha(Path(__file__)),
+           'versions': versions, 'parameters': plan['asr'], 'assets_sha256': sha(output / 'assets.json'),
+           'decoding': 'PCM16 mono float32 / scipy resample_poly from 24000 to 16000 Hz',
+           'network_guard': offline(), 'network_guard_sha256': sha(Path(__file__).with_name('authoring_offline.py')),
+           'onnx_telemetry_disabled': True,
+           'pronunciation_quality_asserted': False, 'constraints': plan['constraints'], 'outputs': []}
+    write(output / 'asr-run.json', job)
+    for row in read(output / 'assets.json')['assets']:
+        if row['status'] != 'GENERATED_UNREVIEWED':
+            continue
+        path = output / row['path']
+        need(sha(path) == row['sha256'], 'ASR audio binding mismatch')
+        record_path = output / 'asr' / (row['asset_id'] + '.json')
+        need(not record_path.exists(), 'ASR entry already exists')
+        record = {'asset_id': row['asset_id'], 'audio_sha256': row['sha256'], 'status': 'STARTED'}
+        write(record_path, record)
+        started = time.monotonic()
+        try:
+            samples = np.frombuffer(pcm(path), dtype='<i2').astype(np.float32) / 32768
+            samples = resample_poly(samples, 2, 3)
+            # Neither expected transcript nor any source prompt is passed to the recognizer.
+            segments, info = model.transcribe(samples, language=row['language'], beam_size=5, temperature=0,
+                vad_filter=False, condition_on_previous_text=False, initial_prompt=None)
+            segments = [{'start': s.start, 'end': s.end, 'text': s.text, 'avg_logprob': s.avg_logprob,
+                         'no_speech_prob': s.no_speech_prob} for s in segments]
+            actual = ''.join(s['text'] for s in segments).strip()
+            expected = words(row['transcript'])
+            edits = distance(expected, words(actual))
+            record.update(status='SCREENED', expected=row['transcript'], transcript=actual,
+                language=row['language'], segments=segments, word_edits=edits, reference_words=len(expected),
+                diagnostic_wer=edits / len(expected), review_flag='ASR_DISCREPANCY' if edits else 'NO_ASR_DISCREPANCY',
+                human_review='PENDING', pronunciation_quality_asserted=False)
+        except Exception as error:
+            record.update(status='FAILED', error=type(error).__name__ + ': ' + str(error))
+        record['elapsed_seconds'] = round(time.monotonic() - started, 3)
+        write(record_path, record)
+        job['outputs'].append(row['asset_id'])
+        write(output / 'asr-run.json', job)
+        print(json.dumps({'done': len(job['outputs']), 'asset': row['stable_code'], 'status': record['status'],
+                          'word_edits': record.get('word_edits')}), flush=True)
+    job['status'] = 'COMPLETE'
+    write(output / 'asr-run.json', job)
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('command', choices=['inventory', 'generate', 'assemble', 'screen'])
+    parser.add_argument('--output', type=Path)
+    parser.add_argument('--models', type=Path)
+    parser.add_argument('--engine', choices=['piper', 'pocket'])
+    parser.add_argument('--complete-interrupted-batch', action='store_true')
+    args = parser.parse_args()
+    if args.command == 'inventory':
+        p, r, t, c = inputs()
+        print(json.dumps({'turns': len(t), 'slots': len(r['audio']), 'cast': len(c), 'plan_sha256': sha(BATCH / 'plan.json')}))
+    else:
+        offline()  # Before native model imports; inherited by ffmpeg and any library-created children.
+        if args.output is None or (args.command != 'assemble' and args.models is None):
+            parser.error('--output and --models are required (assemble needs only --output)')
+        if args.command == 'generate':
+            if args.engine is None:
+                parser.error('--engine is required')
+            generate(args.output.resolve(), args.models.resolve(), args.engine, args.complete_interrupted_batch)
+        elif args.command == 'assemble':
+            assemble(args.output.resolve())
+        else:
+            screen(args.output.resolve(), args.models.resolve())

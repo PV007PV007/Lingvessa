@@ -1,0 +1,13 @@
+{
+  "artifact": {
+    "file_name": "Lingvessa_M01_Audio_Draft_2026-10-11_v2.zip",
+    "bytes": 22169837,
+    "sha256": "ba5467c06504160a6bf3f6b29433bc99d037eb68183e607d610a254ae95d45f0"
+  },
+  "library_file_id": "libfile_621b10a8fac88191b69f1d8fe31ef8e2",
+  "file_id": "file_00000000b2c4820aa7b6d9752676c961",
+  "saved": true,
+  "audio_zip_not_in_git": true,
+  "local_byte_validation_path": "docs/p5/m01-audio-draft-20261011/local-byte-validation.json",
+  "local_byte_validation_sha256": "ca6f840f212f94cd2a77c8ca3d736c969a18a2cd66e7be0d73f8e34854de6f4a"
+}

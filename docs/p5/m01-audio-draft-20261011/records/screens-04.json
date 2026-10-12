@@ -1,0 +1,729 @@
+[
+  {
+    "asset_id": "910c9d4f-9956-5e52-a31b-e682ab918304",
+    "audio_sha256": "476ff0486de33bab05bb58b889a759fe8eb09b5003f63efc374168d68e543880",
+    "status": "SCREENED",
+    "expected": "I speak English.",
+    "transcript": "I speak English.",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 1.16,
+        "text": " I speak English.",
+        "avg_logprob": -0.427424567086356,
+        "no_speech_prob": 0.02240956947207451
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 3,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.716
+  },
+  {
+    "asset_id": "9182b242-c157-5587-a6da-23c8bbd89908",
+    "audio_sha256": "aedde2f8aae3fc7abea67911b33820ba63793c874bc8a594ab6024383ad5be2b",
+    "status": "SCREENED",
+    "expected": "Germany",
+    "transcript": "Germany.",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Germany.",
+        "avg_logprob": -0.9791134834289551,
+        "no_speech_prob": 0.07410658150911331
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 1,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.489
+  },
+  {
+    "asset_id": "921ca66c-6bb4-5774-974a-0a89fc5df3d4",
+    "audio_sha256": "59608f9b3d3868e740f5ca0228d0a2a5b3637f70f6433d424ab5b7a0d9bb9de9",
+    "status": "SCREENED",
+    "expected": "Sorry. Can you repeat, please?",
+    "transcript": "Sorry, can you repeat, please?",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.72,
+        "text": " Sorry, can you repeat, please?",
+        "avg_logprob": -0.5057218941775236,
+        "no_speech_prob": 0.0021557039581239223
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 5,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.677
+  },
+  {
+    "asset_id": "926d043b-850a-5e02-8795-3e119bc05437",
+    "audio_sha256": "8e15ad258cb0e0c0756e4420d4f7d5c2696b0389cb302fd4da5158027f4fbf71",
+    "status": "SCREENED",
+    "expected": "F",
+    "transcript": "Uh.",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 0.5,
+        "text": " Uh.",
+        "avg_logprob": -0.6180897712707519,
+        "no_speech_prob": 0.2900538146495819
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 1,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.58
+  },
+  {
+    "asset_id": "952811f2-df77-5b5f-8ef4-54a345c2bd9e",
+    "audio_sha256": "2067e60c8c9fb8d6d006df3c9e841c9ac99e8f9649bed8f9072002865bd72865",
+    "status": "SCREENED",
+    "expected": "he",
+    "transcript": "Hmm",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 0.5,
+        "text": " Hmm",
+        "avg_logprob": -0.7206931114196777,
+        "no_speech_prob": 0.2569718062877655
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 1,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.775
+  },
+  {
+    "asset_id": "96ac7ac8-4340-5679-b812-dd6d4af4726e",
+    "audio_sha256": "35bcdf9480651064434cf7d3287c4ecaa40e2c536012abe3a8f0c6d4516b7f08",
+    "status": "SCREENED",
+    "expected": "V",
+    "transcript": "way.",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " way.",
+        "avg_logprob": -0.8456321716308594,
+        "no_speech_prob": 0.16984063386917114
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 1,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.553
+  },
+  {
+    "asset_id": "96fbe9bb-ad37-5fb8-8dce-f5026e642620",
+    "audio_sha256": "45e900265991e37037b8bdc99850c9a6270923286651f15365c35a30a33b7bfb",
+    "status": "SCREENED",
+    "expected": "I'm from the UK. Nice to meet you.",
+    "transcript": "I'm from the UK. Nice to meet you.",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " I'm from the UK. Nice to meet you.",
+        "avg_logprob": -0.3329430328948157,
+        "no_speech_prob": 0.0061392453499138355
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 8,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.824
+  },
+  {
+    "asset_id": "9c6e3e25-83ab-5da4-b85d-78b5ee53ac4e",
+    "audio_sha256": "fcf2844415a360e00c89e6c520a62fb4137f7ad6dc66da7765de754b00c12892",
+    "status": "SCREENED",
+    "expected": "I am.",
+    "transcript": "I am.",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 0.72,
+        "text": " I am.",
+        "avg_logprob": -0.5816359321276346,
+        "no_speech_prob": 0.039332255721092224
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 2,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.596
+  },
+  {
+    "asset_id": "9fef9c24-82a4-506a-933d-ca4e7c62aacb",
+    "audio_sha256": "51fa18d09b2e506808e2b78050c4072239f3839ea0724adbfa78c00eb7a5e6c9",
+    "status": "SCREENED",
+    "expected": "K",
+    "transcript": "Bye.",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 0.84,
+        "text": " Bye.",
+        "avg_logprob": -0.5098143577575683,
+        "no_speech_prob": 0.03468465432524681
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 1,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.638
+  },
+  {
+    "asset_id": "a02bb88e-00a8-52e8-b902-b7de5798f6f7",
+    "audio_sha256": "266d5f3c20392d4bebc9bb79ae8369ae6df39be18dfd8f174905759412ab7e74",
+    "status": "SCREENED",
+    "expected": "English",
+    "transcript": "And that's...",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 0.72,
+        "text": " And that's...",
+        "avg_logprob": -0.9434845447540283,
+        "no_speech_prob": 0.09305553883314133
+      }
+    ],
+    "word_edits": 2,
+    "reference_words": 1,
+    "diagnostic_wer": 2.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.669
+  },
+  {
+    "asset_id": "a0f7957b-0b71-5d55-a12b-040faf2a8846",
+    "audio_sha256": "cd4f1aba903495bf4107e0437c385fc92f6d94635cf33c36ce3f811cbc465bdf",
+    "status": "SCREENED",
+    "expected": "Is she an engineer?",
+    "transcript": "Is she an engineer?",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 1.12,
+        "text": " Is she an engineer?",
+        "avg_logprob": -0.576377771794796,
+        "no_speech_prob": 0.016100896522402763
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 4,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.548
+  },
+  {
+    "asset_id": "a138cfeb-7c83-5e9a-94bc-3716d237f6c2",
+    "audio_sha256": "04fed8e3c429ee63081619f40d1c81312a6bcfde085a9ff9ac8646c2bec742df",
+    "status": "SCREENED",
+    "expected": "Bye.",
+    "transcript": "Why?",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 0.5,
+        "text": " Why?",
+        "avg_logprob": -0.44402456283569336,
+        "no_speech_prob": 0.06580512225627899
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 1,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.702
+  },
+  {
+    "asset_id": "a2c572e5-ca5b-546b-b0ce-15ed93f504e7",
+    "audio_sha256": "dd754132aee02da61d9dbfc1655ee1128ab56c00a0c1ab5062513e5c1a1adf13",
+    "status": "SCREENED",
+    "expected": "Czechia",
+    "transcript": "Check here.",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 0.84,
+        "text": " Check here.",
+        "avg_logprob": -0.7879044115543365,
+        "no_speech_prob": 0.04824323579668999
+      }
+    ],
+    "word_edits": 2,
+    "reference_words": 1,
+    "diagnostic_wer": 2.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.567
+  },
+  {
+    "asset_id": "a3176b3a-a78a-59c6-b71b-b05326e6897c",
+    "audio_sha256": "e54b2c8c5c4ec177ad22cf534b094a275b8e6a605a6e5a66808986c919de9bfb",
+    "status": "SCREENED",
+    "expected": "How do you spell it?",
+    "transcript": "How'd you spell it?",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 1.0,
+        "text": " How'd you spell it?",
+        "avg_logprob": -0.35135777791341144,
+        "no_speech_prob": 0.013121324591338634
+      }
+    ],
+    "word_edits": 2,
+    "reference_words": 5,
+    "diagnostic_wer": 0.4,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.642
+  },
+  {
+    "asset_id": "a3216e69-3634-5b29-bc6c-3180497bf693",
+    "audio_sha256": "6b4656eff9424503066f7cef734803fa091c3e9104af19afbbfbf5b184730f4d",
+    "status": "SCREENED",
+    "expected": "Nice to meet you too.",
+    "transcript": "Nice to meet you too.",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 1.12,
+        "text": " Nice to meet you too.",
+        "avg_logprob": -0.391271432240804,
+        "no_speech_prob": 0.006008032709360123
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 5,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.705
+  },
+  {
+    "asset_id": "a488349d-2bca-5ef2-863b-6170be330ae9",
+    "audio_sha256": "4d0f4c8e52c92b786a697887873773504876a84fb4b31cbfe2bcd7050301b44a",
+    "status": "SCREENED",
+    "expected": "Hello. I'm Maya. I'm from Ukraine. Nice to meet you.",
+    "transcript": "Hello, I'm Maya. I'm from Ukraine. Nice to meet you.",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 4.08,
+        "text": " Hello, I'm Maya. I'm from Ukraine. Nice to meet you.",
+        "avg_logprob": -0.30012538244849757,
+        "no_speech_prob": 0.008837258443236351
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 10,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 2.038
+  },
+  {
+    "asset_id": "a494f152-7775-5beb-a697-18cb2b23c1cd",
+    "audio_sha256": "a29160c3e6dba478d8441d9c6154b5757caee5d7621b1cbc4a6331e77e75d8a4",
+    "status": "SCREENED",
+    "expected": "Q",
+    "transcript": "Thank you.",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 0.5,
+        "text": " Thank you.",
+        "avg_logprob": -0.8677442868550619,
+        "no_speech_prob": 0.15548688173294067
+      }
+    ],
+    "word_edits": 2,
+    "reference_words": 1,
+    "diagnostic_wer": 2.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.929
+  },
+  {
+    "asset_id": "a5fa3fd7-77f4-5f15-8776-23bd5e1b2305",
+    "audio_sha256": "8d71c60cc4969512fefc9c4df425318961b869e06a4c0c6c78133f1b1449188f",
+    "status": "SCREENED",
+    "expected": "Nice to meet you too.",
+    "transcript": "Nice to meet you too.",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 1.34,
+        "text": " Nice to meet you too.",
+        "avg_logprob": -0.4512823952568902,
+        "no_speech_prob": 0.006778755225241184
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 5,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.581
+  },
+  {
+    "asset_id": "a676082b-2d47-5a2f-b518-638d379e9baa",
+    "audio_sha256": "789479ec7bc286686038bc8c23788df90129ada33461513613fd937db271dc69",
+    "status": "SCREENED",
+    "expected": "Hello.\nHi.",
+    "transcript": "Hello. Hi.",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 0.5,
+        "text": " Hello.",
+        "avg_logprob": -0.6982464260525174,
+        "no_speech_prob": 0.011538934893906116
+      },
+      {
+        "start": 1.2,
+        "end": 1.7,
+        "text": " Hi.",
+        "avg_logprob": -0.6982464260525174,
+        "no_speech_prob": 0.011538934893906116
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 2,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.94
+  },
+  {
+    "asset_id": "a9b66a2c-7bd6-5265-8316-5cb7bd442586",
+    "audio_sha256": "6189db46504e0133a0bca80ad2c9014225425576cb2000970b776017d531aace",
+    "status": "SCREENED",
+    "expected": "Thank you.",
+    "transcript": "Thank you.",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 0.8,
+        "text": " Thank you.",
+        "avg_logprob": -0.6887255609035492,
+        "no_speech_prob": 0.052178092300891876
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 2,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.599
+  },
+  {
+    "asset_id": "aa753efc-e155-59c2-ada7-f671e129db98",
+    "audio_sha256": "4bafafbfb207fe9136f561a40b88b4c8bd3af80fc2dd90e6c30c9c562efe6dc7",
+    "status": "SCREENED",
+    "expected": "you",
+    "transcript": "Boom.",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 0.5,
+        "text": " Boom.",
+        "avg_logprob": -0.762168025970459,
+        "no_speech_prob": 0.19533851742744446
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 1,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.661
+  },
+  {
+    "asset_id": "ab87995f-f2a6-5d0b-bb6c-fe5242258b64",
+    "audio_sha256": "437ea25b159a276e78ec9e681f42059d7f80d54f6790cc17946fa09eec2ed0a5",
+    "status": "SCREENED",
+    "expected": "the UK",
+    "transcript": "the UK.",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 0.84,
+        "text": " the UK.",
+        "avg_logprob": -0.4485701024532318,
+        "no_speech_prob": 0.2004920095205307
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 2,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.674
+  },
+  {
+    "asset_id": "acc5fcd8-5bc4-5a24-836f-9a1c173d4984",
+    "audio_sha256": "0011080d31c439e153e147a9c1d261770d101137066c18bd582625e68de6ddfa",
+    "status": "SCREENED",
+    "expected": "Ukrainian",
+    "transcript": "Ukrainian",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 0.5,
+        "text": " Ukrainian",
+        "avg_logprob": -0.6686346530914307,
+        "no_speech_prob": 0.2400689274072647
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 1,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.568
+  },
+  {
+    "asset_id": "af34b826-6579-571d-976e-f606d51b5a81",
+    "audio_sha256": "0809db38ff1edd052ca416808008277fbf361bb0d27df6059d8814152aed1567",
+    "status": "SCREENED",
+    "expected": "B",
+    "transcript": "Bye.",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 0.5,
+        "text": " Bye.",
+        "avg_logprob": -0.6738412857055665,
+        "no_speech_prob": 0.34596478939056396
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 1,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.587
+  },
+  {
+    "asset_id": "b0a88a05-a2ba-5f97-9cba-a4dbc059cbac",
+    "audio_sha256": "6681ff80d27d7a749af1759d454ec11e29683053565be08b61a8d6240ab77aaa",
+    "status": "SCREENED",
+    "expected": "Prague",
+    "transcript": "prob.",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " prob.",
+        "avg_logprob": -1.0709555625915528,
+        "no_speech_prob": 0.29698652029037476
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 1,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.502
+  },
+  {
+    "asset_id": "b39c8e40-de27-5300-8bef-848b76bcde8e",
+    "audio_sha256": "897cd77d1481c9b7a56dd522dbed86caaee1b4228ad42f67bcca781e536f8305",
+    "status": "SCREENED",
+    "expected": "M",
+    "transcript": "Bye.",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 0.5,
+        "text": " Bye.",
+        "avg_logprob": -0.704997444152832,
+        "no_speech_prob": 0.073763906955719
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 1,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.657
+  },
+  {
+    "asset_id": "b43f7dfe-2784-5d54-84e9-5bf1d471caa8",
+    "audio_sha256": "3d98a98db0dd660270f170794038d05f5ec09d35d8039bc84196a1e05d293ce8",
+    "status": "SCREENED",
+    "expected": "T",
+    "transcript": "Okay.",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 0.84,
+        "text": " Okay.",
+        "avg_logprob": -0.8520538330078125,
+        "no_speech_prob": 0.2603953778743744
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 1,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.666
+  },
+  {
+    "asset_id": "b506b6d6-fefc-5662-bffa-f7afd2ae9cd8",
+    "audio_sha256": "03988b545643287bd19d6e675593ea03a4b7beb2e25f72e86b505b99fb8cd834",
+    "status": "SCREENED",
+    "expected": "Bye.",
+    "transcript": "Bye.",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 0.5,
+        "text": " Bye.",
+        "avg_logprob": -0.6798576354980469,
+        "no_speech_prob": 0.020762914791703224
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 1,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.493
+  },
+  {
+    "asset_id": "b5f5ddd4-2163-58a7-837c-93ec0cc66e9d",
+    "audio_sha256": "68eb28e85d40b03e9e2a690942d348e09b00f24376d98edef411c6c5a1ddd992",
+    "status": "SCREENED",
+    "expected": "Hi.",
+    "transcript": "Bye.",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 0.5,
+        "text": " Bye.",
+        "avg_logprob": -0.600034236907959,
+        "no_speech_prob": 0.00936474371701479
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 1,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.656
+  },
+  {
+    "asset_id": "b6371f44-e61e-5f6a-ae25-d4985fd03587",
+    "audio_sha256": "af06681bfdc380b3df7a475364c14d39dc866ed0433d81df18fc5f80d7caf673",
+    "status": "SCREENED",
+    "expected": "D",
+    "transcript": "Stay.",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 0.84,
+        "text": " Stay.",
+        "avg_logprob": -0.6725761413574218,
+        "no_speech_prob": 0.12361499667167664
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 1,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.515
+  }
+]

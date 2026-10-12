@@ -50,6 +50,12 @@ jobs:
           python3 tools/p5/pocket-case-holdout.py --verify-only > artifacts/p5/pocket-case-holdout-validation.json
           cat artifacts/p5/pocket-case-validation.json artifacts/p5/pocket-case-holdout-validation.json
       - run: pnpm audit:dependencies
+      - name: Verify unpublished M01 authoring metadata (external WAV bytes excluded)
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          python3 tools/p5/verify-m01-audio-draft.py --metadata-only > artifacts/p5/m01-audio-draft-validation.json
+          cat artifacts/p5/m01-audio-draft-validation.json
       - name: Install Chromium with bounded package-network waits
         timeout-minutes: 10
         run: |

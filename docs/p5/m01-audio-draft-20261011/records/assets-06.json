@@ -1,0 +1,512 @@
+[
+  {
+    "asset_id": "c691d7bb-5a29-51fc-a812-f473795e9674",
+    "stable_code": "AUD_CZE_M01_WORDS_REPEAT",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "4fd393ba-3691-53bc-b54a-843158804768",
+    "script_hash": "43c86cf9bb00a5fc1e67d9e5cc0a1c5d4c17a90307160f02f502aa7bffd34412",
+    "transcript": "Můžete to zopakovat, prosím?",
+    "turn_ids": [
+      "f8abc045-5558-55b0-90d8-b47e448e0a4c"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "f8abc045-5558-55b0-90d8-b47e448e0a4c"
+    ]
+  },
+  {
+    "asset_id": "fba99cf1-489f-5fe0-b836-558eba641b68",
+    "stable_code": "AUD_CZE_M01_WORDS_REPEAT_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "c691d7bb-5a29-51fc-a812-f473795e9674",
+    "script_id": "4fd393ba-3691-53bc-b54a-843158804768",
+    "script_hash": "43c86cf9bb00a5fc1e67d9e5cc0a1c5d4c17a90307160f02f502aa7bffd34412",
+    "transcript": "Můžete to zopakovat, prosím?",
+    "turn_ids": [
+      "f8abc045-5558-55b0-90d8-b47e448e0a4c"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "f8abc045-5558-55b0-90d8-b47e448e0a4c"
+    ]
+  },
+  {
+    "asset_id": "414bc03d-8847-542d-8299-8f9c71355f7a",
+    "stable_code": "AUD_CZE_M01_WORDS_NAME_Q_FORM",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "ad627850-265e-5145-a071-6c0c5a36b45c",
+    "script_hash": "2974c7932973c48412c44fef65a124cf122f0a477df3dd02fe2fe88e16fe29c5",
+    "transcript": "Jak se jmenujete?",
+    "turn_ids": [
+      "d459739d-4b19-5b8e-be85-8496d4d1c78d"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "d459739d-4b19-5b8e-be85-8496d4d1c78d"
+    ]
+  },
+  {
+    "asset_id": "42fc4222-5ba0-51e2-a1cd-2c01a48a3e6d",
+    "stable_code": "AUD_CZE_M01_WORDS_NAME_Q_FORM_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "414bc03d-8847-542d-8299-8f9c71355f7a",
+    "script_id": "ad627850-265e-5145-a071-6c0c5a36b45c",
+    "script_hash": "2974c7932973c48412c44fef65a124cf122f0a477df3dd02fe2fe88e16fe29c5",
+    "transcript": "Jak se jmenujete?",
+    "turn_ids": [
+      "d459739d-4b19-5b8e-be85-8496d4d1c78d"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "d459739d-4b19-5b8e-be85-8496d4d1c78d"
+    ]
+  },
+  {
+    "asset_id": "a0a4a05d-b41e-566e-977e-eba4b1f29c9d",
+    "stable_code": "AUD_CZE_M01_WORDS_NAME_Q_INF",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "eb99127c-8ddb-5f07-8a15-68c89e9f827f",
+    "script_hash": "035b4d79dabc5ad9097b15ad99af4d5bc2e3cfc87695683417aec27f63f366a1",
+    "transcript": "Jak se jmenuješ?",
+    "turn_ids": [
+      "64abc22d-fa1b-5b84-a74a-1d3d0b3e53a9"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "64abc22d-fa1b-5b84-a74a-1d3d0b3e53a9"
+    ]
+  },
+  {
+    "asset_id": "f33b9f47-72a8-596b-a207-8ae54fe49e5e",
+    "stable_code": "AUD_CZE_M01_WORDS_NAME_Q_INF_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "a0a4a05d-b41e-566e-977e-eba4b1f29c9d",
+    "script_id": "eb99127c-8ddb-5f07-8a15-68c89e9f827f",
+    "script_hash": "035b4d79dabc5ad9097b15ad99af4d5bc2e3cfc87695683417aec27f63f366a1",
+    "transcript": "Jak se jmenuješ?",
+    "turn_ids": [
+      "64abc22d-fa1b-5b84-a74a-1d3d0b3e53a9"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "64abc22d-fa1b-5b84-a74a-1d3d0b3e53a9"
+    ]
+  },
+  {
+    "asset_id": "bab1bdc8-fda3-5cda-a7cc-c379cee0214e",
+    "stable_code": "AUD_CZE_M01_WORDS_NAME_OKSANA",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "cc6f897f-31d7-5102-a23e-4c832d1725e8",
+    "script_hash": "55bf8e8df2e00de00880b51a7faea2d5333100e01f887b99f0e7e25d1fc6d0e0",
+    "transcript": "Jmenuji se Oksana.",
+    "turn_ids": [
+      "37e551a4-6e2a-548d-aecc-6fd3406c9191"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "37e551a4-6e2a-548d-aecc-6fd3406c9191"
+    ]
+  },
+  {
+    "asset_id": "21f39a74-9e11-5dcb-931e-b5a83d02e4c0",
+    "stable_code": "AUD_CZE_M01_WORDS_NAME_OKSANA_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "bab1bdc8-fda3-5cda-a7cc-c379cee0214e",
+    "script_id": "cc6f897f-31d7-5102-a23e-4c832d1725e8",
+    "script_hash": "55bf8e8df2e00de00880b51a7faea2d5333100e01f887b99f0e7e25d1fc6d0e0",
+    "transcript": "Jmenuji se Oksana.",
+    "turn_ids": [
+      "37e551a4-6e2a-548d-aecc-6fd3406c9191"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "37e551a4-6e2a-548d-aecc-6fd3406c9191"
+    ]
+  },
+  {
+    "asset_id": "b6c374c9-f626-55d4-9b46-ceea7a85e3f0",
+    "stable_code": "AUD_CZE_M01_WORDS_NAME_ADAM",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "66e41c71-8c9b-58c7-b138-daa64eec6c62",
+    "script_hash": "ca0ec2f53b34defe274f888666967d22db1c51192aa84717cb681e23d92cbb47",
+    "transcript": "Jmenuji se Adam.",
+    "turn_ids": [
+      "a0f89179-1c01-5437-8938-636efe50f4fa"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "a0f89179-1c01-5437-8938-636efe50f4fa"
+    ]
+  },
+  {
+    "asset_id": "0251ed5d-0481-55c1-af50-b5a90a6d5584",
+    "stable_code": "AUD_CZE_M01_WORDS_NAME_ADAM_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "b6c374c9-f626-55d4-9b46-ceea7a85e3f0",
+    "script_id": "66e41c71-8c9b-58c7-b138-daa64eec6c62",
+    "script_hash": "ca0ec2f53b34defe274f888666967d22db1c51192aa84717cb681e23d92cbb47",
+    "transcript": "Jmenuji se Adam.",
+    "turn_ids": [
+      "a0f89179-1c01-5437-8938-636efe50f4fa"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "a0f89179-1c01-5437-8938-636efe50f4fa"
+    ]
+  },
+  {
+    "asset_id": "ba7a2ef6-d1b5-5825-8690-024264f9e331",
+    "stable_code": "AUD_CZE_M01_WORDS_TESI_ME",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "bdfea114-02b5-54e0-bf29-60f327d2da37",
+    "script_hash": "e78ea6f2cdea5a2d375ebb0ad7b04304082db0a0728d522c0fe3db18ad98d1e2",
+    "transcript": "Těší mě.",
+    "turn_ids": [
+      "64b42cc8-5ced-52f0-b43b-fa69eec7d1dc"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "64b42cc8-5ced-52f0-b43b-fa69eec7d1dc"
+    ]
+  },
+  {
+    "asset_id": "9e2bf6ef-dbfa-5c64-8749-44006458fc2d",
+    "stable_code": "AUD_CZE_M01_WORDS_TESI_ME_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "ba7a2ef6-d1b5-5825-8690-024264f9e331",
+    "script_id": "bdfea114-02b5-54e0-bf29-60f327d2da37",
+    "script_hash": "e78ea6f2cdea5a2d375ebb0ad7b04304082db0a0728d522c0fe3db18ad98d1e2",
+    "transcript": "Těší mě.",
+    "turn_ids": [
+      "64b42cc8-5ced-52f0-b43b-fa69eec7d1dc"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "64b42cc8-5ced-52f0-b43b-fa69eec7d1dc"
+    ]
+  },
+  {
+    "asset_id": "154332fb-f931-5e20-b6e7-f8964dd41ec7",
+    "stable_code": "AUD_CZE_M01_WORDS_ME_TAKE",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "91248898-2660-5ae0-b29b-739f3c12fa82",
+    "script_hash": "983369b0e94fa7a915c84b910c813e5b2288d6f445879bdfe6133613b583c682",
+    "transcript": "Mě také.",
+    "turn_ids": [
+      "ba6c8366-4980-58a3-8327-c896e82bf297"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "ba6c8366-4980-58a3-8327-c896e82bf297"
+    ]
+  },
+  {
+    "asset_id": "0b8b451a-62fa-5471-913c-3325a6c3e3f7",
+    "stable_code": "AUD_CZE_M01_WORDS_ME_TAKE_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "154332fb-f931-5e20-b6e7-f8964dd41ec7",
+    "script_id": "91248898-2660-5ae0-b29b-739f3c12fa82",
+    "script_hash": "983369b0e94fa7a915c84b910c813e5b2288d6f445879bdfe6133613b583c682",
+    "transcript": "Mě také.",
+    "turn_ids": [
+      "ba6c8366-4980-58a3-8327-c896e82bf297"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "ba6c8366-4980-58a3-8327-c896e82bf297"
+    ]
+  },
+  {
+    "asset_id": "39d7088b-0e67-5345-ab3c-e3c8a8aafc89",
+    "stable_code": "AUD_CZE_M01_WORDS_TAKY_ME_TESI",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "57555a9e-460a-5357-a324-ed9c39f32dbd",
+    "script_hash": "36c8a95c7b4d2b3d67f1f426684a49a2df3752f63f7837e4b5f693634d2e9e45",
+    "transcript": "Taky mě těší.",
+    "turn_ids": [
+      "5351319f-538a-5ff2-8ff9-46006b708ba7"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "5351319f-538a-5ff2-8ff9-46006b708ba7"
+    ]
+  },
+  {
+    "asset_id": "f60bd0aa-cb61-5643-87ed-1701eb90dac6",
+    "stable_code": "AUD_CZE_M01_WORDS_TAKY_ME_TESI_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "39d7088b-0e67-5345-ab3c-e3c8a8aafc89",
+    "script_id": "57555a9e-460a-5357-a324-ed9c39f32dbd",
+    "script_hash": "36c8a95c7b4d2b3d67f1f426684a49a2df3752f63f7837e4b5f693634d2e9e45",
+    "transcript": "Taky mě těší.",
+    "turn_ids": [
+      "5351319f-538a-5ff2-8ff9-46006b708ba7"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "5351319f-538a-5ff2-8ff9-46006b708ba7"
+    ]
+  },
+  {
+    "asset_id": "9e5b32a1-4df3-5a58-9e42-7769cb91fc13",
+    "stable_code": "AUD_CZE_M01_WORDS_FROM_Q_FORM",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "77eab895-3841-5b73-ba25-8c6389f05918",
+    "script_hash": "3247393b351ddd85b0e653222a804ce279f672703717afaab11100f6357f2aef",
+    "transcript": "Odkud jste?",
+    "turn_ids": [
+      "ebe5d6ed-2a5d-5532-b390-fae96c5efdd3"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "ebe5d6ed-2a5d-5532-b390-fae96c5efdd3"
+    ]
+  },
+  {
+    "asset_id": "8e18835a-3670-5f58-a127-7af9088f2b2b",
+    "stable_code": "AUD_CZE_M01_WORDS_FROM_Q_FORM_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "9e5b32a1-4df3-5a58-9e42-7769cb91fc13",
+    "script_id": "77eab895-3841-5b73-ba25-8c6389f05918",
+    "script_hash": "3247393b351ddd85b0e653222a804ce279f672703717afaab11100f6357f2aef",
+    "transcript": "Odkud jste?",
+    "turn_ids": [
+      "ebe5d6ed-2a5d-5532-b390-fae96c5efdd3"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "ebe5d6ed-2a5d-5532-b390-fae96c5efdd3"
+    ]
+  },
+  {
+    "asset_id": "8d8c5e21-f9f9-5982-8e90-301f00d33347",
+    "stable_code": "AUD_CZE_M01_WORDS_FROM_Q_INF",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "2830e078-42c4-53d6-b40b-e91751fe7a41",
+    "script_hash": "e1ca0b353fda3246cac7a781cd2afdd878aad314f0ed25039113d3713ff8e209",
+    "transcript": "Odkud jsi?",
+    "turn_ids": [
+      "0ea2e8b5-47cd-5877-b60b-9fece4253d50"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "0ea2e8b5-47cd-5877-b60b-9fece4253d50"
+    ]
+  },
+  {
+    "asset_id": "d6a0faae-23ce-5f9f-b32a-2a62773fb11e",
+    "stable_code": "AUD_CZE_M01_WORDS_FROM_Q_INF_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "8d8c5e21-f9f9-5982-8e90-301f00d33347",
+    "script_id": "2830e078-42c4-53d6-b40b-e91751fe7a41",
+    "script_hash": "e1ca0b353fda3246cac7a781cd2afdd878aad314f0ed25039113d3713ff8e209",
+    "transcript": "Odkud jsi?",
+    "turn_ids": [
+      "0ea2e8b5-47cd-5877-b60b-9fece4253d50"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "0ea2e8b5-47cd-5877-b60b-9fece4253d50"
+    ]
+  },
+  {
+    "asset_id": "d441e277-6cf9-53af-b852-5356648c8620",
+    "stable_code": "AUD_CZE_M01_WORDS_JSEM",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "76732427-1490-582d-808d-fac6c2c4fedd",
+    "script_hash": "b41c4d546db7c00a7ad4f575bdef542fd3c60929dc66c5432494b8322ea4c2c2",
+    "transcript": "jsem",
+    "turn_ids": [
+      "c12f7caf-ba98-5c06-80c6-948fe00901bf"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "c12f7caf-ba98-5c06-80c6-948fe00901bf"
+    ]
+  },
+  {
+    "asset_id": "39674295-7b9f-5e75-8488-d9e45f200759",
+    "stable_code": "AUD_CZE_M01_WORDS_JSEM_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "d441e277-6cf9-53af-b852-5356648c8620",
+    "script_id": "76732427-1490-582d-808d-fac6c2c4fedd",
+    "script_hash": "b41c4d546db7c00a7ad4f575bdef542fd3c60929dc66c5432494b8322ea4c2c2",
+    "transcript": "jsem",
+    "turn_ids": [
+      "c12f7caf-ba98-5c06-80c6-948fe00901bf"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "c12f7caf-ba98-5c06-80c6-948fe00901bf"
+    ]
+  },
+  {
+    "asset_id": "3e073a71-91c5-58ad-aa8a-2e56e0d99cef",
+    "stable_code": "AUD_CZE_M01_WORDS_JSI",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "9d12aa48-7774-5513-9871-d4826b3d1605",
+    "script_hash": "7ad5c6d56df5f3445b9b1d48095f6afb3176773457ed920d209b2dcc895d0335",
+    "transcript": "jsi",
+    "turn_ids": [
+      "0b6146d0-4cb5-5aed-8e70-ed17e08f407d"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "0b6146d0-4cb5-5aed-8e70-ed17e08f407d"
+    ]
+  },
+  {
+    "asset_id": "10afe2fe-5f17-5ba7-ab1b-fb8263bc234a",
+    "stable_code": "AUD_CZE_M01_WORDS_JSI_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "3e073a71-91c5-58ad-aa8a-2e56e0d99cef",
+    "script_id": "9d12aa48-7774-5513-9871-d4826b3d1605",
+    "script_hash": "7ad5c6d56df5f3445b9b1d48095f6afb3176773457ed920d209b2dcc895d0335",
+    "transcript": "jsi",
+    "turn_ids": [
+      "0b6146d0-4cb5-5aed-8e70-ed17e08f407d"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "0b6146d0-4cb5-5aed-8e70-ed17e08f407d"
+    ]
+  },
+  {
+    "asset_id": "ade3b0e7-774f-55c5-b85a-bcd82a270b14",
+    "stable_code": "AUD_CZE_M01_WORDS_JSTE",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "07508b8b-7d8a-5ced-8795-8e69ef6c03b7",
+    "script_hash": "c65e0cf67944f7d854a82721a68db3202cd51da8d7501735f0a56d02feb83ffb",
+    "transcript": "jste",
+    "turn_ids": [
+      "e6ada213-a434-5067-b066-56629ec0c259"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "e6ada213-a434-5067-b066-56629ec0c259"
+    ]
+  },
+  {
+    "asset_id": "64f21fa4-ea9b-5d20-89ac-c55edd0727ad",
+    "stable_code": "AUD_CZE_M01_WORDS_JSTE_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "ade3b0e7-774f-55c5-b85a-bcd82a270b14",
+    "script_id": "07508b8b-7d8a-5ced-8795-8e69ef6c03b7",
+    "script_hash": "c65e0cf67944f7d854a82721a68db3202cd51da8d7501735f0a56d02feb83ffb",
+    "transcript": "jste",
+    "turn_ids": [
+      "e6ada213-a434-5067-b066-56629ec0c259"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "e6ada213-a434-5067-b066-56629ec0c259"
+    ]
+  },
+  {
+    "asset_id": "3cba3fe6-664e-5a25-be23-1f1a3b8ff201",
+    "stable_code": "AUD_CZE_M01_WORDS_JE",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "8669418f-b1e1-5135-b758-7ea98caaf06a",
+    "script_hash": "c75f5d35f31e785f6e001cad6d4640b6ec4a45161d45d2e01d4868bdaba61a18",
+    "transcript": "je",
+    "turn_ids": [
+      "6f3e9674-98bf-520e-9761-cd01c426bdb4"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "6f3e9674-98bf-520e-9761-cd01c426bdb4"
+    ]
+  },
+  {
+    "asset_id": "09816699-80f1-5d30-9951-0b6bc9a98c1d",
+    "stable_code": "AUD_CZE_M01_WORDS_JE_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "3cba3fe6-664e-5a25-be23-1f1a3b8ff201",
+    "script_id": "8669418f-b1e1-5135-b758-7ea98caaf06a",
+    "script_hash": "c75f5d35f31e785f6e001cad6d4640b6ec4a45161d45d2e01d4868bdaba61a18",
+    "transcript": "je",
+    "turn_ids": [
+      "6f3e9674-98bf-520e-9761-cd01c426bdb4"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "6f3e9674-98bf-520e-9761-cd01c426bdb4"
+    ]
+  },
+  {
+    "asset_id": "bea45ef3-984b-50d8-a7af-8c0488645b2a",
+    "stable_code": "AUD_CZE_M01_WORDS_STUDENT",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "86b8a7f5-50cd-5afc-ae39-8cc27d319c99",
+    "script_hash": "cd9e77f3bbd437c10884d1e721a087d582c413b8a5572ac24e2cbcc0a9fdfc90",
+    "transcript": "student",
+    "turn_ids": [
+      "727caa2c-d8b4-539e-8d06-a6afdf8f0679"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "727caa2c-d8b4-539e-8d06-a6afdf8f0679"
+    ]
+  },
+  {
+    "asset_id": "6e9703a8-cd62-5817-98fe-85510216e6e3",
+    "stable_code": "AUD_CZE_M01_WORDS_STUDENT_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "bea45ef3-984b-50d8-a7af-8c0488645b2a",
+    "script_id": "86b8a7f5-50cd-5afc-ae39-8cc27d319c99",
+    "script_hash": "cd9e77f3bbd437c10884d1e721a087d582c413b8a5572ac24e2cbcc0a9fdfc90",
+    "transcript": "student",
+    "turn_ids": [
+      "727caa2c-d8b4-539e-8d06-a6afdf8f0679"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "727caa2c-d8b4-539e-8d06-a6afdf8f0679"
+    ]
+  }
+]

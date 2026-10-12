@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "scope": "FULL_WAV_BYTES_AND_METADATA",
+  "available_assets": 216,
+  "not_generated_assets": 204,
+  "asr_screened_assets": 216,
+  "asr_discrepancy_assets": 109,
+  "audio_bytes_verified": true,
+  "wav_files_verified": 532,
+  "human_review": "PENDING",
+  "publication_ready": false,
+  "p5_milestone": "NOT_READY",
+  "p6_authorized": false,
+  "integrity_negative_checks": 4,
+  "results_sha256": "f3b2bc74eb79e3396846bbcc0f7c17bf3bee711bae061b44728fd68ce4f889fe",
+  "verifier_sha256": "103571ef808bc1c6388a7b0139ec6bc5a55f3aabc4b3ee7e26ab3c71013ad570",
+  "source_sha": null,
+  "working_tree_dirty": null
+}

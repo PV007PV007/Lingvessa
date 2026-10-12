@@ -1,0 +1,71 @@
+{
+  "kind": "VERIFIED_PROCESSING_CHECKPOINT",
+  "original_record_sha256": "062aa93ee79a7086970ad934c17661d120acb6a4718c07b290d061473af62fa0",
+  "script_sha256": "d187af121ff97a4293253dd31c8c2b1be2c8d7b44b5b740b78a35ab112c079ea",
+  "synthesis_repeated": false,
+  "normal_and_slow_byte_identical_to_rederived": true,
+  "explanation": "Both retained processed WAVs exactly match the pinned processing of the retained raw WAV. Original STARTED record and aggregate RUNNING journal are preserved unchanged. No original completion timestamp is invented.",
+  "turn": {
+    "speaker": "ADAM",
+    "voice_code": "AUD_CZE_VOICE_M01",
+    "text": "Ahoj. Jak se jmenuješ?",
+    "character_id": "595521da-0ee4-51ca-b445-04d5705e6a48",
+    "character_asset_code": "AV_CZE_ADAM_01",
+    "turn_id": "baddc4d1-1d8b-5ea2-977f-52ae59cfd385",
+    "voice_id": "2c796559-b5ed-5eac-899b-840254e953bf",
+    "language": "cs",
+    "script_id": "bec3e4d8-58d0-54ae-b25e-522331cd4c82",
+    "candidate_id": "cs-A-jirka",
+    "engine": "piper",
+    "seed": 1007873381,
+    "status": "GENERATED_UNREVIEWED",
+    "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+    "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+    "continuation_plan_sha256": "7c43993b47f0d5384484fbeca43ab04806d20d2de2946b486ce1cdc04eb37f4b",
+    "infrastructure_retry": false,
+    "raw": {
+      "path": "recovery/raw/baddc4d1-1d8b-5ea2-977f-52ae59cfd385.wav",
+      "sha256": "bf9ca306977a781873156d03ad50e4b05e65cd3bd54ad825876ff04733d22699",
+      "bytes": 93740
+    },
+    "normal": {
+      "path": "recovery/turns/baddc4d1-1d8b-5ea2-977f-52ae59cfd385.wav",
+      "sha256": "1d155a3cfdd8454ad55ed0c5f97bbb50163d174c56bb29381fe4d97b792e9999",
+      "bytes": 102028,
+      "metrics": {
+        "frames": 50992,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 2.1246666666666667,
+        "peak_dbfs": -7.331395316629765,
+        "rms_dbfs": -22.000257289523383,
+        "clipped_samples": 0
+      }
+    },
+    "slow": {
+      "path": "recovery/turns/baddc4d1-1d8b-5ea2-977f-52ae59cfd385-slow.wav",
+      "sha256": "afb2bde75e2a0837da034cfbf34a8afaeb0fb384b82c887f3aabc57bb5af8a17",
+      "bytes": 126626,
+      "metrics": {
+        "frames": 63274,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 2.636416666666667,
+        "peak_dbfs": -7.341264945857943,
+        "rms_dbfs": -21.90899224339509,
+        "clipped_samples": 0
+      }
+    },
+    "normalization": {
+      "gain": 0.5335871221660093,
+      "raw_resampled_peak": 0.8058456778526306,
+      "raw_resampled_rms": 0.1488657056601809
+    },
+    "engine_result": {
+      "model_sha256": "cbd5c900acacc8e8cbecd64347abb8de39c00a9d3104bed06fee92e4f319efc8",
+      "speaker_id": 0
+    }
+  }
+}

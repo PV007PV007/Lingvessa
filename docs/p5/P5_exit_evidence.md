@@ -40,3 +40,9 @@ The uploaded audition source `cab5af5e080c92b7607ea05f24396fbd02052cd0` passed b
 Remediation updates only sharp and matching platform packages 0.35.4→0.35.5, libvips packages 1.3.3→1.3.4, within Next 16.3.8's existing ^0.35.4 optional range. Direct dependencies, unrelated lock entries and audit policy are unchanged. Frozen install, zero-advisory audit, native SVG decoding with project sharp 0.35.5 / librsvg 2.63.2, baseline 76/76 and retained-audio checks pass locally. Exact evidence and the native probe's initial resolution correction: `docs/p5/evidence/sharp-patch-validation.json`.
 
 This child source still requires its own full hosted run. PR metadata and exact-source CI artifacts will record the final result without a self-referential evidence commit. P5 remains NOT READY, PR OPEN DRAFT, no merge, publication, cast acceptance or P6.
+
+## Unpublished M01 working authoring — 2026-10-11
+
+Owner-delegated selection now yields 104 unique available turns and 216 final drafts (210 EN / 6 CS), with 216 blind ASR screens; 109 are flagged. The remaining 204 Czech files are blocked by pinned PyTorch HTTP 403. All 532 retained WAV hashes and exact final dialogue timing/PCM relationships passed local validation. The saved archive remains outside the publication registry and outside GitHub. The new hosted gate validates metadata only and explicitly does not claim audio-byte validation. See [complete authoring and recovery evidence](m01-audio-draft-20261011/README.md).
+
+The initial telemetry-related automatic rejection, safer kernel-isolated continuation, two infrastructure replacements and one processing-journal repair remain explicit. Zero quality retries or paid calls. Working cast choice is delegated; human QA, final rights/cast approval, full generation and publication remain open. Trace and milestone status are unchanged; PR #5 remains OPEN DRAFT.
