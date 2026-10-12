@@ -1,9 +1,13 @@
 # Lingvessa implementation state and handoff
 
-Updated: 2026-10-11. **P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED; P6 NOT AUTHORIZED.**
+Updated: 2026-10-12. **P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED; P6 NOT AUTHORIZED.**
 Branch `implementation/p5-media-speech`; [PR #5](https://github.com/PV007PV007/Lingvessa/pull/5) OPEN DRAFT. Accepted main/P4: `5027f001237b6451237d87343ebeca58cd0af007`.
 
 ## Current M01 authoring follow-up
+
+Current follow-up: [offline M01 reviewer](../docs/p5/m01-listening-review.md) for 216 unchanged draft files in 108 normal/slow pairs, with 204 missing slots shown separately. Per-file notes/progress, language/type/search/ASR filters, measured dialogue cue seeking and guarded JSON export/import prepare human QA. No human feedback or approvals are fabricated. Local byte verification covers every embedded M01 WAV; hosted browser tests use four existing audition WAVs under explicit UI_TEST_FIXTURE scope, plus a real 420-slot metadata catalog. The attempted local browser download failed; no local browser playback claim. This source requires its own CI.
+
+Completed predecessor `785fff956f7b7c5c017921d96103f7a0ae8f8d44`, tree `559f0fb33ffd00d18cfc3e836ba4f12d4a50b447`, passed all seven workflows. P5 PR run 38201972415 / push 38201967566; both archive digests and all 17 acceptance references verified. The saved audio ZIP has 216 final files and 532 retained WAVs. Same pinned PyTorch URL still returned 403 on 2026-10-12. Final results for this follow-up belong in PR metadata and CI artifacts, without an evidence-only descendant cycle.
 
 The owner delegated working choices on 2026-10-11. Working cast: Maya A, Daniel B, Alex C; Klára C, Adam A, Oksana B. Original capitalization is retained. **104 unique Piper turns / 216 final draft files** are complete, with 216 blind ASR screens and 109 discrepancy flags; human review remains PENDING. The remaining 97 Pocket turns / 204 files are blocked by HTTP 403 for pinned PyTorch. Approved publication assets remain 0.
 
@@ -59,4 +63,4 @@ Plan v1.4 §12 p7 requires all M01 required asset IDs to resolve. Prepared: 18 o
 
 OD-004 delivery profile OPEN. OD-005 audition executed; final tooling/cast/full generation OPEN. OD-006 usable real-provider speech calibration OPEN; default stays neutral `speech_unavailable`. Paid inference=false; monthly paid budget=0. No P6/P7/P8 runtime starts. EXC-P1-001 remains: main lacks technical branch protection; implementation branch, PR, CI and owner review apply.
 
-Next: complete this authoring change's exact-source CI, retain the saved 216-file draft, restore the exact Pocket dependency for the 204 remaining draft files, and complete human/rights/publication QA. Keep P5 NOT_READY and PR #5 OPEN DRAFT.
+Next: validate and deliver the M01 reviewer on this exact source, collect actual human feedback, restore the exact Pocket dependency for the 204 remaining draft files, and complete human/rights/publication QA. Keep P5 NOT_READY and PR #5 OPEN DRAFT.

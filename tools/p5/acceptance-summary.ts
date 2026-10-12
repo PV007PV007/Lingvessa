@@ -18,6 +18,10 @@ const listeningBrowser=read('artifacts/p5/listening-browser-results.json');
 const listeningPlayback=read('artifacts/p5/listening-playback-validation.json');
 const listeningManifest=read('artifacts/p5/listening-review-manifest.json');
 const m01Draft=read('artifacts/p5/m01-audio-draft-validation.json');
+const m01ReviewCatalog=read('artifacts/p5/m01-review-catalog.json');
+const m01ReviewCheck=read('artifacts/p5/m01-review-catalog-validation.json');
+const m01ReviewUI=read('artifacts/p5/m01-review-ui-validation.json');
+const m01ReviewBrowser=read('artifacts/p5/m01-review-browser-results.json');
 const p3=read('artifacts/p3/acceptance-summary.json'),p4=read('artifacts/p4/acceptance-summary.json');
 const containers=read('artifacts/p1/container-smoke.json'),build=read('artifacts/p1/container-build.json');
 for(const r of [storage,media,audio,speech,containers]){assert.equal(r.commit,commit);assert.equal(r.status,'PASS');}
@@ -46,6 +50,25 @@ assert.equal(m01Draft.audio_bytes_verified,false);assert.equal(m01Draft.availabl
 assert.equal(m01Draft.not_generated_assets,204);assert.equal(m01Draft.asr_screened_assets,216);
 assert.equal(m01Draft.integrity_negative_checks,4);assert.equal(m01Draft.human_review,'PENDING');
 assert.equal(m01Draft.publication_ready,false);assert.equal(m01Draft.p5_milestone,'NOT_READY');assert.equal(m01Draft.p6_authorized,false);
+for(const r of [m01ReviewCheck,m01ReviewUI]){
+ assert.equal(r.status,'PASS');assert.equal(r.source_sha,commit);assert.equal(r.working_tree_dirty,false);
+ assert.equal(r.human_review,'PENDING');assert.equal(r.publication_ready,false);
+ assert.equal(r.p5_milestone,'NOT_READY');assert.equal(r.p6_authorized,false);
+ assert.equal(r.m01_audio_bytes_verified,false);assert.equal(r.m01_wavs_verified,0);
+ for(const [field,path]of [['builder_sha256','tools/p5/build-m01-review.py'],['template_sha256','tools/p5/m01-review.html']]){
+  assert.equal(r[field!],createHash('sha256').update(readFileSync(path!)).digest('hex'));
+ }
+}
+assert.equal(m01ReviewCheck.scope,'CATALOG_ONLY_EXTERNAL_AUDIO');assert.equal(m01ReviewCatalog.scope,'M01_DRAFT');
+assert.deepEqual(m01ReviewCheck.counts,{slots:420,pairs:210,available:216,missing:204,flagged:109});
+assert.deepEqual(m01ReviewCatalog.counts,m01ReviewCheck.counts);
+assert.equal(m01ReviewCatalog.dataset_sha256,m01ReviewCheck.dataset_sha256);
+assert.equal(m01ReviewCheck.results_sha256,m01Draft.results_sha256);
+assert.equal(m01ReviewUI.scope,'UI_TEST_FIXTURE');assert.equal(m01ReviewUI.fixture_wavs_verified,4);
+assert.equal(m01ReviewUI.external_requests,0);
+assert.equal(m01ReviewUI.manifest_sha256,createHash('sha256').update(readFileSync('artifacts/p5/m01-review-fixture-manifest.json')).digest('hex'));
+assert.equal(m01ReviewBrowser.stats.expected,4);
+for(const key of ['unexpected','skipped','flaky'])assert.equal(m01ReviewBrowser.stats[key],0);
 assert.equal(createHash('sha256').update(readFileSync('artifacts/p5/'+listeningManifest.html_file)).digest('hex'),listeningManifest.html_sha256);
 for(const r of [p3,p4]){assert.equal(r.tested_sha,commit);assert.equal(r.status,'PASS_READY_FOR_OWNER_ACCEPTANCE');}
 assert.equal(build.commit,commit);assert.deepEqual(Object.keys(build.images).sort(),['admin','api','web','worker']);
@@ -57,13 +80,16 @@ const paths=['artifacts/p5/storage-validation.json','artifacts/p5/media-database
  'artifacts/p5/browser-results.json','artifacts/p5/speech-browser-results.json','artifacts/p1/container-build.json','artifacts/p1/container-smoke.json',
  'artifacts/p3/acceptance-summary.json','artifacts/p4/acceptance-summary.json','docs/p5/requirement-evidence.json',
  'artifacts/p5/listening-browser-results.json','artifacts/p5/listening-playback-validation.json','artifacts/p5/listening-review-manifest.json',
- 'artifacts/p5/m01-audio-draft-validation.json'];
+ 'artifacts/p5/m01-audio-draft-validation.json','artifacts/p5/m01-review-catalog.json',
+ 'artifacts/p5/m01-review-catalog-validation.json','artifacts/p5/m01-review-ui-validation.json',
+ 'artifacts/p5/m01-review-browser-results.json','artifacts/p5/m01-review-fixture-manifest.json'];
 const summary={phase:'P5',runtime_status:'PASS',milestone_status:'NOT_READY',tested_sha:commit,
  run_id:process.env.GITHUB_RUN_ID,event:process.env.GITHUB_EVENT_NAME,
  runtime_gates:{storage:storage.gates,media:media.gates,audio:audio.gates,speech:speech.gates},
  browser:{media:mediaBrowser.stats,speech:speechBrowser.stats,total_with_p3_p4:p3.browser.expected+p4.browser.expected+mediaBrowser.stats.expected+speechBrowser.stats.expected},
  listening_review:{browser:listeningBrowser.stats,clips_verified:listeningPlayback.clips_verified,human_review:'PENDING',html_sha256:listeningManifest.html_sha256},
  m01_audio_draft:m01Draft,
+ m01_review:{catalog:m01ReviewCheck,interface:m01ReviewUI,browser:m01ReviewBrowser.stats},
  database:media.database,storage_startup:storage.startup_readiness,container_checks:containers.checks,container_images:build.images,
  reference_media:reference,trace_counts:counts,p6_authorized:false,
  remaining:['204 M01 draft audio files blocked on pinned PyTorch download; all 420 still need approved voices and media publication QA','OD-004/005/006 integration decisions','Remaining compound requirement gates; no blanket PASS from synthetic fixtures'],

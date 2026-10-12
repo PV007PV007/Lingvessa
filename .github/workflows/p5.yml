@@ -69,6 +69,13 @@ jobs:
         run: |
           python3 tools/p5/build-listening-review.py
           pnpm exec playwright test --config tools/p5/listening.playwright.config.ts
+      - name: Verify M01 review catalog and exercise the interface on explicit audition fixtures
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          python3 tools/p5/build-m01-review.py --mode catalog
+          python3 tools/p5/build-m01-review.py --mode fixture
+          pnpm exec playwright test --config tools/p5/m01-review.playwright.config.ts
       - name: Build pinned standalone S3 protocol test server
         run: go install github.com/minio/minio@9e49d5e7a648f00e26f2246f4dc28e6b07f8c84a
       - name: Verify actual S3 adapter and restart recovery

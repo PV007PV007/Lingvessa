@@ -2,6 +2,10 @@
 
 **IN PROGRESS / NOT READY. PR #5 OPEN DRAFT; no merge or P6 authorization.**
 
+## Current M01 review follow-up — 2026-10-12
+
+Predecessor source 785fff956f7b7c5c017921d96103f7a0ae8f8d44 passed all seven workflows; both P5 archives and 17 acceptance references were verified. The new [offline M01 reviewer](m01-listening-review.md) adds paired listening, per-file notes, filtering, cue seeking and guarded feedback restore for the saved 216-file draft. Local verification checks exact embedded WAV bytes. Hosted UI checks use explicit four-WAV audition fixtures and a separate real 420-slot metadata catalog; external M01 audio bytes remain outside CI. Five new hash references bring acceptance evidence to 22. This change needs its own hosted results. All 216 recordings still require actual human QA; the 204 unavailable files, final cast/rights and publication remain open.
+
 ## Exact-source hosted evidence
 
 Last observed full runtime PASS: `81e6ddacb839abf2473630c889521442193d1d21`. P5 PR run 37449893245 / job 112223635448 and push run 37449888853 / job 112223620056, plus P1–P4 regression: all seven runs green. `evidence/ci-batch-013.json` retains actual steps, commands, artifact checksums and runtime summary. PR artifact 11405148602 SHA-256 `c6fb696f77024cdec9cd4763c1f9cb4009e969720d66f2f2f165f45d27c1fc1a` was downloaded and its report bindings verified.
