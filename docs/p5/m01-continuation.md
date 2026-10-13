@@ -49,7 +49,7 @@ This change prepares assembly; it does not claim the missing 204 files have been
 
 ## Verification
 
-Eleven stdlib tests use explicitly synthetic tones and temporary journals, with no model imports or inference. They verify the real metadata selection, complete and incomplete journal handling, modified bytes/text/seed/cast/provenance rejection, duplicate/extra attempts, path/link containment, exact PCM joins and frame/ms timing for both speeds, byte-identical copying, exclusive private outputs and interruption markers. Synthetic fixture journals are not retained as real generation evidence.
+Eleven stdlib tests use explicitly synthetic tones and temporary journals, with no model imports or inference. They verify the real metadata selection, complete and incomplete journal handling, modified bytes/text/seed/cast/provenance rejection, duplicate/extra attempts, path/link containment, exact PCM joins and frame/ms timing for both speeds, byte-identical copying, exclusive private outputs and interruption markers. Synthetic fixture journals are not retained as real generation evidence. Assembly and its end-to-end synthetic test require `ffmpeg` with the `ebur128` filter for measured loudness; CI installs the Ubuntu package explicitly before those tests, with bounded package-network waits.
 
 Local checks restored the original 22,169,837-byte ZIP with SHA-256 `ba5467c06504160a6bf3f6b29433bc99d037eb68183e607d610a254ae95d45f0`, verified all 532 WAVs and produced the full-byte continuation plan. All eleven tests passed. This was a source subset verified against parent `69a0cf64a9ae4a22a6ebcb0084ca9a2c734c74af`, not a local full-project or real-Pocket generation run.
 
