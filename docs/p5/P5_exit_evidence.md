@@ -2,6 +2,12 @@
 
 **IN PROGRESS / NOT READY. PR #5 OPEN DRAFT; no merge or P6 authorization.**
 
+## Current M01 continuation assembly — 2026-10-13
+
+The [continuation tool](m01-continuation.md) closes the gap between the exported partial archive and a future completed Pocket run. It verifies and retains 216 final WAVs, selects only 97 unattempted turns, and assembles the 204 missing files into a separate output after strict provenance/byte checks. It does not synthesize, screen or approve any audio. Local full-parent checks passed all 532 WAVs; eleven synthetic-tone tests passed. Hosted CI adds two bound reports, bringing acceptance references to 27. Exact-source hosted results remain required.
+
+Parent 69a0cf64 passed all seven checks after the ingestion correction (P5 PR 38269835842 / push 38269828802). The dependency remains unavailable (HTTP 403 on 2026-10-13), so the new tool is preparation for actual continuation; current audio inventory remains 216 available / 204 missing. Existing generator, exporter, archive, review HTML, registry and approval gates are unchanged.
+
 ## Current media ingestion integrity correction — 2026-10-12
 
 The [replay checksum correction](media-ingestion-integrity.md) rejects changed incoming bytes before database/storage access, even when a succeeded job has matching immutable metadata. The existing PostgreSQL replay gate now checks rejection of a same-length SVG change, preserved job/version/audit rows and stored bytes, and successful idempotent retry with the original bytes. Local actual-class reproduction with explicit schema/DB/store stubs and syntax checks passed; full hosted validation on this source is still required.

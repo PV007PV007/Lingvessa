@@ -60,6 +60,12 @@ jobs:
         env:
           PYTHONDONTWRITEBYTECODE: '1'
         run: python3 tests/unit/p5-m01-feedback.test.py --report artifacts/p5/m01-feedback-validation.json
+      - name: Verify immutable M01 continuation using synthetic tones only
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          python3 tests/unit/p5-m01-continuation.test.py --report artifacts/p5/m01-continuation-validation.json
+          python3 tools/p5/continue-m01-audio.py plan --metadata-only --output artifacts/p5/m01-continuation-plan.json
       - name: Install Chromium with bounded package-network waits
         timeout-minutes: 10
         run: |

@@ -24,6 +24,8 @@ const m01ReviewUI=read('artifacts/p5/m01-review-ui-validation.json');
 const m01ReviewBrowser=read('artifacts/p5/m01-review-browser-results.json');
 const m01Feedback=read('artifacts/p5/m01-feedback-validation.json');
 const m01FeedbackBrowser=read('artifacts/p5/m01-feedback-browser-intake.json');
+const m01Continuation=read('artifacts/p5/m01-continuation-validation.json');
+const m01ContinuationPlan=read('artifacts/p5/m01-continuation-plan.json');
 const p3=read('artifacts/p3/acceptance-summary.json'),p4=read('artifacts/p4/acceptance-summary.json');
 const containers=read('artifacts/p1/container-smoke.json'),build=read('artifacts/p1/container-build.json');
 for(const r of [storage,media,audio,speech,containers]){assert.equal(r.commit,commit);assert.equal(r.status,'PASS');}
@@ -91,6 +93,20 @@ assert.equal(m01FeedbackBrowser.feedback_status,'PARTIAL');
 assert.deepEqual(m01FeedbackBrowser.counts,{available_files:4,missing_files:2,completed_attestations:1,
  buckets:{needs_work:1,clarify:0,unreviewed:3,reported_no_issues:0}});
 assert.equal(m01FeedbackBrowser.input_sha256,createHash('sha256').update(readFileSync('artifacts/p5/m01-feedback-browser-export.json')).digest('hex'));
+assert.equal(m01Continuation.status,'PASS');assert.equal(m01Continuation.scope,'CONTINUATION_SYNTHETIC_TESTS');
+assert.equal(m01Continuation.source_sha,commit);assert.equal(m01Continuation.working_tree_dirty,false);
+assert.equal(m01Continuation.tests_run,11);
+for(const key of ['failures','errors','skipped'])assert.equal(m01Continuation[key],0);
+assert.equal(m01Continuation.real_audio_generated,false);assert.equal(m01Continuation.external_audio_bytes_verified,false);
+assert.equal(m01Continuation.publication_ready,false);assert.equal(m01Continuation.p5_milestone,'NOT_READY');assert.equal(m01Continuation.p6_authorized,false);
+assert.equal(m01Continuation.pending_turns,97);assert.equal(m01Continuation.pending_assets,204);assert.equal(m01Continuation.retained_assets,216);
+assert.equal(m01Continuation.test_sha256,createHash('sha256').update(readFileSync('tests/unit/p5-m01-continuation.test.py')).digest('hex'));
+for(const r of [m01Continuation,m01ContinuationPlan])assert.equal(r.tool_sha256,createHash('sha256').update(readFileSync('tools/p5/continue-m01-audio.py')).digest('hex'));
+assert.equal(m01ContinuationPlan.scope,'M01_POCKET_CONTINUATION');assert.equal(m01ContinuationPlan.audio_bytes_verified,false);
+assert.equal(m01ContinuationPlan.wav_files_verified,0);assert.equal(m01ContinuationPlan.synthesis_executed,false);assert.equal(m01ContinuationPlan.asr_executed,false);
+assert.equal(m01ContinuationPlan.parent_results_sha256,m01Draft.results_sha256);
+assert.equal(m01ContinuationPlan.pending_turns.length,97);assert.equal(m01ContinuationPlan.pending_asset_ids.length,204);assert.equal(m01ContinuationPlan.retained_assets.length,216);
+assert.deepEqual(m01ContinuationPlan.constraints,read('docs/p5/m01-audio-draft-20261011/plan.json').constraints);
 assert.equal(createHash('sha256').update(readFileSync('artifacts/p5/'+listeningManifest.html_file)).digest('hex'),listeningManifest.html_sha256);
 for(const r of [p3,p4]){assert.equal(r.tested_sha,commit);assert.equal(r.status,'PASS_READY_FOR_OWNER_ACCEPTANCE');}
 assert.equal(build.commit,commit);assert.deepEqual(Object.keys(build.images).sort(),['admin','api','web','worker']);
@@ -106,7 +122,8 @@ const paths=['artifacts/p5/storage-validation.json','artifacts/p5/media-database
  'artifacts/p5/m01-review-catalog-validation.json','artifacts/p5/m01-review-ui-validation.json',
  'artifacts/p5/m01-review-browser-results.json','artifacts/p5/m01-review-fixture-manifest.json',
  'artifacts/p5/m01-feedback-validation.json','artifacts/p5/m01-feedback-browser-export.json',
- 'artifacts/p5/m01-feedback-browser-intake.json'];
+ 'artifacts/p5/m01-feedback-browser-intake.json','artifacts/p5/m01-continuation-validation.json',
+ 'artifacts/p5/m01-continuation-plan.json'];
 const summary={phase:'P5',runtime_status:'PASS',milestone_status:'NOT_READY',tested_sha:commit,
  run_id:process.env.GITHUB_RUN_ID,event:process.env.GITHUB_EVENT_NAME,
  runtime_gates:{storage:storage.gates,media:media.gates,audio:audio.gates,speech:speech.gates},
@@ -116,6 +133,8 @@ const summary={phase:'P5',runtime_status:'PASS',milestone_status:'NOT_READY',tes
  m01_review:{catalog:m01ReviewCheck,interface:m01ReviewUI,browser:m01ReviewBrowser.stats},
  m01_feedback_intake:{tests:m01Feedback,browser_scope:m01FeedbackBrowser.scope,
   browser_counts:m01FeedbackBrowser.counts,real_human_feedback_processed:false},
+ m01_continuation:{tests:m01Continuation,planned_turns:97,planned_assets:204,retained_assets:216,
+  external_audio_bytes_verified:false,real_audio_generated:false},
  database:media.database,storage_startup:storage.startup_readiness,container_checks:containers.checks,container_images:build.images,
  reference_media:reference,trace_counts:counts,p6_authorized:false,
  remaining:['204 M01 draft audio files blocked on pinned PyTorch download; all 420 still need approved voices and media publication QA','OD-004/005/006 integration decisions','Remaining compound requirement gates; no blanket PASS from synthetic fixtures'],

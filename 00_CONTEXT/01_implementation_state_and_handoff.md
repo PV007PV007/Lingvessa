@@ -1,9 +1,17 @@
 # Lingvessa implementation state and handoff
 
-Updated: 2026-10-12. **P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED; P6 NOT AUTHORIZED.**
+Updated: 2026-10-13. **P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED; P6 NOT AUTHORIZED.**
 Branch `implementation/p5-media-speech`; [PR #5](https://github.com/PV007PV007/Lingvessa/pull/5) OPEN DRAFT. Accepted main/P4: `5027f001237b6451237d87343ebeca58cd0af007`.
 
-## Current media ingestion integrity correction — 2026-10-12
+## Current M01 continuation assembly — 2026-10-13
+
+The [M01 continuation tool](../docs/p5/m01-continuation.md) validates the retained partial batch and selects exactly 97 unattempted Pocket turns / 204 absent Czech assets. After a separately completed original-generator run, it copies the 216 old final WAVs unchanged and assembles missing files, including mixed old/new dialogues, into a separate directory. It rejects changed inputs, retries, incomplete/extra attempts, path escapes and output overwrite. Existing hash-bound generator/export/verifier files remain unchanged. New audio still needs blind ASR and review; no synthesis occurred in this change.
+
+The original saved ZIP was restored and its SHA-256 matched; all 532 WAVs passed the existing full-byte verifier. The new plan was run against those bytes. Eleven synthetic-tone stdlib tests passed locally. Hosted CI adds those tests and metadata planning, with 27 acceptance references; its result must be checked on this new source. The locked PyTorch wheel still returned HTTP 403 on 2026-10-13, so real new generation remains blocked. Human/rights/publication gates and trace statuses are unchanged.
+
+Parent `69a0cf64a9ae4a22a6ebcb0084ca9a2c734c74af` completed the ingestion correction: all seven checks PASS, including P5 PR run 38269835842 and push run 38269828802. Final evidence for the continuation change belongs in PR metadata and immutable CI artifacts, without an evidence-only descendant commit.
+
+## Completed media ingestion integrity correction — 2026-10-12
 
 The [ingestion replay correction](../docs/p5/media-ingestion-integrity.md) rejects same-length changed bytes under an original manifest on every request, including succeeded-job replay. SHA-256 is checked before database/storage access. The existing real-PostgreSQL `P5-MEDIA-JOB-001` gate now verifies rejection, unchanged job/version/audit rows and stored bytes, then a successful exact replay. No schema, dependency, provider or approval change.
 
@@ -79,4 +87,4 @@ Plan v1.4 §12 p7 requires all M01 required asset IDs to resolve. Prepared: 18 o
 
 OD-004 delivery profile OPEN. OD-005 audition executed; final tooling/cast/full generation OPEN. OD-006 usable real-provider speech calibration OPEN; default stays neutral `speech_unavailable`. Paid inference=false; monthly paid budget=0. No P6/P7/P8 runtime starts. EXC-P1-001 remains: main lacks technical branch protection; implementation branch, PR, CI and owner review apply.
 
-Next: validate the ingestion correction on its own source, process actual owner-supplied feedback when received, restore the exact Pocket dependency for the 204 remaining draft files, and complete human/rights/publication QA. Do not re-create or re-upload the already delivered HTML for this correction. Keep P5 NOT_READY and PR #5 OPEN DRAFT.
+Next: verify this continuation source in hosted CI; restore the exact Pocket dependency; use the unchanged generator for the 97 unattempted turns and the new assembler for the 204 missing files. Record blind ASR for new files and refresh review delivery after actual generation. Process owner-supplied feedback when available and complete final rights/cast/publication QA. Keep P5 NOT_READY and PR #5 OPEN DRAFT.
