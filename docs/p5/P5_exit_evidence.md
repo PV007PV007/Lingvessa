@@ -2,7 +2,11 @@
 
 **IN PROGRESS / NOT READY. PR #5 OPEN DRAFT; no merge or P6 authorization.**
 
-## Current M01 completion — 2026-10-14
+## Owner approval of M01 audio — 2026-10-14
+
+The owner approved all 420 delivered M01 audio files, the six-voice cast and audio rights with **“Затверджено” at 2026-10-14T13:12:30+03:00**. [The approval record](m01-completion-20261014/owner-approval.json) binds the exact tested source, dataset, ZIP and HTML hashes. Existing ASR diagnostics and the immutable delivery are retained; this direct approval is separate from individual listening-form entries. These audio decisions are closed. Actual approved media delivery/publication-registry integration, remaining visual QA, OD-004/006 and applicable compound technical requirements still need completion before P5 exit.
+
+## Completed M01 generation — 2026-10-14
 
 The dependency download block is resolved using the unchanged pinned PyTorch wheel and verified locks. All 97 Pocket turns and all 204 previously absent Czech files have been generated; final inventory is **420/420**, with 216 earlier recordings preserved unchanged. The current run is an explicitly planned infrastructure reconstruction after loss of unretained temporary outputs. A durable checkpoint and processing-recovery proofs preserve all available raw/processed bytes and original journals.
 

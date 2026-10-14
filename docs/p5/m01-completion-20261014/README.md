@@ -1,6 +1,6 @@
 # M01 complete audio draft — 2026-10-14
 
-**All 420 final files are present: 210 English and 210 Czech.** This closes the 204-file generation gap. Automatic technical verification and blind ASR are complete. Human listening and final cast/rights/publication decisions remain pending; PR #5 remains a draft and P6 is not authorized.
+**All 420 final files are present: 210 English and 210 Czech.** This closes the 204-file generation gap. Automatic technical verification and blind ASR are complete. The owner approved linguistic quality, the final cast and audio rights for this exact 420-file delivery on 2026-10-14. [The direct approval record](owner-approval.json) binds the tested source and delivery/dataset hashes. Individual listening-form attestations are not inferred from that statement. P5 technical delivery/calibration/publication conditions remain open; P6 is not authorized.
 
 ## What changed
 

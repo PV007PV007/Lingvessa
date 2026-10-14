@@ -1,4 +1,10 @@
-# P5 decision inputs — not approvals
+# P5 decision inputs and owner approvals
+
+## Recorded M01 audio approval — 2026-10-14
+
+The owner approved all 420 delivered M01 audio files, the six-voice cast and audio rights with **“Затверджено” at 2026-10-14T13:12:30+03:00**. [The approval record](m01-completion-20261014/owner-approval.json) binds the exact tested source, dataset, ZIP and HTML hashes. Existing ASR diagnostics and the immutable delivery are retained; this direct approval is separate from individual listening-form entries. These audio decisions are closed. Actual approved media delivery/publication-registry integration, remaining visual QA, OD-004/006 and applicable compound technical requirements still need completion before P5 exit.
+
+OD-005 is resolved for the delivered M01 audio cast/quality/rights and completed generation. Remaining runtime provider/tooling integration is a technical implementation condition, not a reason to reopen these accepted audio decisions. OD-004 delivery and OD-006 usable speech calibration are separate decisions. All older audition/partial-batch notes below are historical.
 
 Latest follow-up, 2026-10-12: the [M01 feedback intake](m01-feedback-intake.md) prepares a validated follow-up report from an actual reviewer export when supplied. Existing HTML delivery and exact-source CI passed on `38ca31f0`; the intake addition needs its own hosted checks. No reviewer notes have been received or invented. Working selection, final rights/cast, human QA, 204 missing files, OD-004 and OD-006 retain their existing boundaries.
 
