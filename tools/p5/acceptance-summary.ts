@@ -5,6 +5,12 @@ import assert from 'node:assert/strict';
 
 const read=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 const commit=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();
+const ownerAudio=read('docs/p5/m01-completion-20261014/owner-approval.json');
+const approvedMedia=read('artifacts/p5/approved-media-metadata-validation.json');
+const libraryContract=read('artifacts/p5/media-library-validation.json');
+assert.equal(ownerAudio.status,'OWNER_APPROVED');assert.equal(ownerAudio.approved_final_audio_files,420);
+assert.equal(approvedMedia.status,'PASS');assert.equal(approvedMedia.source_sha,commit);assert.equal(approvedMedia.audio_bytes_verified,false);
+assert.equal(libraryContract.status,'PASS');assert.equal(libraryContract.source_sha,commit);assert.equal(libraryContract.real_m01_audio_imported,false);
 assert.equal(process.env.GITHUB_HEAD_SHA,commit,'Evidence must be produced from the exact hosted source');
 const storage=read('artifacts/p5/storage-validation.json');
 const media=read('artifacts/p5/media-database-validation.json');
@@ -149,7 +155,9 @@ const paths=['artifacts/p5/storage-validation.json','artifacts/p5/media-database
  'artifacts/p5/m01-feedback-validation.json','artifacts/p5/m01-feedback-browser-export.json',
  'artifacts/p5/m01-feedback-browser-intake.json','artifacts/p5/m01-continuation-validation.json',
  'artifacts/p5/m01-continuation-plan.json','artifacts/p5/m01-completion-validation.json',
- 'artifacts/p5/m01-completion-tests.json','artifacts/p5/m01-dialogue-crosscheck-validation.json'];
+ 'artifacts/p5/m01-completion-tests.json','artifacts/p5/m01-dialogue-crosscheck-validation.json',
+ 'artifacts/p5/approved-media-metadata-validation.json','artifacts/p5/media-library-validation.json',
+ 'docs/p5/m01-completion-20261014/owner-approval.json'];
 const summary={phase:'P5',runtime_status:'PASS',milestone_status:'NOT_READY',tested_sha:commit,
  run_id:process.env.GITHUB_RUN_ID,event:process.env.GITHUB_EVENT_NAME,
  runtime_gates:{storage:storage.gates,media:media.gates,audio:audio.gates,speech:speech.gates},
@@ -157,6 +165,10 @@ const summary={phase:'P5',runtime_status:'PASS',milestone_status:'NOT_READY',tes
  listening_review:{browser:listeningBrowser.stats,clips_verified:listeningPlayback.clips_verified,human_review:'PENDING',html_sha256:listeningManifest.html_sha256},
  m01_audio_draft:m01Draft,
  m01_completion:{metadata:m01Completion,tests:m01CompletionTests,dialogue_crosscheck:m01DialogueCheck},
+ m01_owner_approval:ownerAudio,
+ approved_media_registry:approvedMedia,
+ acoustic_candidate:{provider_code:'local_acoustic_ipa',model_version:'xlsr53-espeak-2c733782da56-1',test_only:true,production_calibration_approved:false,private_evidence_transferred:false},
+ library_contract:libraryContract,
  m01_review:{catalog:m01ReviewCheck,interface:m01ReviewUI,browser:m01ReviewBrowser.stats},
  m01_feedback_intake:{tests:m01Feedback,browser_scope:m01FeedbackBrowser.scope,
   browser_counts:m01FeedbackBrowser.counts,real_human_feedback_processed:false},
@@ -164,7 +176,7 @@ const summary={phase:'P5',runtime_status:'PASS',milestone_status:'NOT_READY',tes
   external_audio_bytes_verified:false,real_audio_generated:false},
  database:media.database,storage_startup:storage.startup_readiness,container_checks:containers.checks,container_images:build.images,
  reference_media:reference,trace_counts:counts,p6_authorized:false,
- remaining:['All 420 M01 draft files are generated and automatically screened; final human listening, cast/rights decisions and publication QA remain open','OD-004/005/006 integration decisions','Remaining compound requirement gates; no blanket PASS from synthetic fixtures'],
+ remaining:['Automatic approval review requires explicit authorization for full WAV and derived private acoustic-data transfer to GitHub; complete reference-byte integration remains pending','Visual quality/rights and approved delivery profile remain open','A production speech policy requires valid labelled learner-error calibration','Remaining applicable compound P5 gates; P6 is not authorized'],
  artifacts:paths.map(path=>({path,sha256:createHash('sha256').update(readFileSync(path)).digest('hex')}))};
 // Green runtime CI is deliberately not owner acceptance or permission for P6.
 writeFileSync('artifacts/p5/acceptance-summary.json',JSON.stringify(summary,null,2)+'\n');

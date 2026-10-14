@@ -14,3 +14,9 @@ prisma/generated/
 *.oci.tar
 # Ephemeral negative dependency fixtures; an interrupted test may leave one.
 packages/domain/src/negative-*.ts
+# Private reference bytes and derived diagnostics need explicit destination authorization.
+assets/media/m01/en/*.wav
+assets/media/m01/cs/*.wav
+docs/p5/acoustic-provider/pilot-plan.json
+docs/p5/acoustic-provider/pilot-results/
+docs/p5/integration-20261014/local-evidence/

@@ -12,5 +12,7 @@ export interface SpeechEvaluator {
  readonly code:string;
  readonly modelVersion:string;
  readonly available:boolean;
+ readonly testOnly?:boolean;
+ readonly supportedFacets?:readonly string[];
  evaluate(input:{audio:Uint8Array;mime:string;language:'en'|'cs';variety:string;target_feature:string;signal:AbortSignal}):Promise<SpeechResult>;
 }

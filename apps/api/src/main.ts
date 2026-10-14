@@ -27,6 +27,7 @@ async function main() {
   for (const signal of ['SIGTERM', 'SIGINT'] as const) process.once(signal, () => {
     if (stopping) return;
     stopping = true;
+    speech.close();
     void app.close().then(() => Promise.all([probe.close(), pool.end()]));
   });
   await app.listen(config.PORT, config.HOST);

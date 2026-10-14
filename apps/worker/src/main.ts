@@ -14,17 +14,18 @@ try {
   // sink may be added later; its outage can never roll back accepted learning progress.
   const stopOutbox = startOutboxLoop(new OutboxRepository(pool), 'analytics-v1', async (event) => { console.log(JSON.stringify({ event: 'outbox_delivery', event_key: event.event_key, event_type: event.event_type, event_version: event.event_version })); });
   const speech=speechRuntime(process.env);
+  void speech.warm().catch(()=>console.error('Speech candidate warm-up failed; neutral fallback remains available.'));
   const stopSpeech=startSpeechLoop(new SpeechRepository(pool,speech.audio,speech.evaluator,speech.uploadKey));
   const server = createWorkerHealthServer(probe);
   server.requestTimeout = 5000;
   server.headersTimeout = 5000;
   for (const signal of ['SIGTERM', 'SIGINT'] as const) process.once(signal, () => {
-    stopOutbox();stopSpeech();
+    stopOutbox();stopSpeech();speech.close();
     server.close(() => { void Promise.all([probe.close(), pool.end()]); });
   });
   server.on('error', () => {
     console.error('Worker listener failed; details redacted.');
-    stopOutbox();stopSpeech();
+    stopOutbox();stopSpeech();speech.close();
     void Promise.all([probe.close(), pool.end()]);
     process.exitCode = 1;
   });

@@ -25,7 +25,7 @@ test('P5 real PostgreSQL: media ownership, immutable versions, bytes preflight a
   await admin.query(`CREATE DATABASE "${name}" TEMPLATE template0 ENCODING 'UTF8'`);created=true;migrate();await seedBootstrap(env);pool=createFoundationPool(url.toString());const db=pool,store=new LocalAssetStore(root);
   const reject=async(sql:string,args:unknown[],codes=['23503','23514','42501'])=>assert.rejects(db.query(sql,args),(e:unknown)=>Boolean(e&&typeof e==='object'&&'code'in e&&codes.includes(String(e.code))));
   await gate('P5-MEDIA-DB-001 clean migration/replay and phase boundary',async()=>{
-   migrate();await seedBootstrap(env);assert.equal((await db.query('SELECT count(*) FROM _prisma_migrations WHERE finished_at IS NOT NULL')).rows[0].count,'6');
+   migrate();await seedBootstrap(env);assert.equal((await db.query('SELECT count(*) FROM _prisma_migrations WHERE finished_at IS NOT NULL')).rows[0].count,'7');
    for(const table of ['voices','characters','media_requirements','media_jobs','assets','asset_versions','asset_approvals','content_media_bindings','publication_assets'])assert((await db.query('SELECT to_regclass($1) AS name',[table])).rows[0].name);
    assert.equal((await db.query("SELECT to_regclass('ai_runs') AS name")).rows[0].name,null);
   });

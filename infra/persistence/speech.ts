@@ -41,10 +41,10 @@ export class SpeechRepository {
    const a=run.manifest.activities[run.position];
    if(!a||a.id!==input.item_id||a.response.kind!=='speech'||a.runtime.completion_policy!=='speech_binary_nonblocking_v1')throw new ContractError('INVALID_INPUT','Current activity does not use the speech contract');
    if((await db.query('SELECT 1 FROM speech_jobs WHERE lesson_run_id=$1 AND settled_at IS NULL',[run.id])).rowCount)throw new ContractError('CONFLICT','Resume or cancel the existing speech job');
-   const approved=(await db.query(`SELECT p.* FROM speech_policies p JOIN publications pub ON pub.id=$7
+   const approved=this.evaluator.supportedFacets&&a.learning.evidence_map.some(m=>!this.evaluator.supportedFacets!.includes(m.facet))?undefined:(await db.query(`SELECT p.* FROM speech_policies p JOIN publications pub ON pub.id=$7
     WHERE p.stable_code=$1 AND p.version_code=$2 AND p.language_id=$3 AND p.variety=$4 AND p.target_feature=$5
-    AND (NOT p.test_only OR pub.channel='test') AND p.provider_code=$6 AND p.model_version=$8`,
-    [a.response.answer_policy.id,a.response.answer_policy.version,run.language_id,a.variety,a.speech!.target_feature,this.evaluator.code,run.publication_id,this.evaluator.modelVersion])).rows[0];
+    AND (NOT p.test_only OR pub.channel='test') AND (NOT $9::boolean OR pub.channel='test') AND p.provider_code=$6 AND p.model_version=$8`,
+    [a.response.answer_policy.id,a.response.answer_policy.version,run.language_id,a.variety,a.speech!.target_feature,this.evaluator.code,run.publication_id,this.evaluator.modelVersion,this.evaluator.testOnly===true])).rows[0];
    const id=randomUUID();
    const job=(await db.query(`INSERT INTO speech_jobs(id,attempt_id,idempotency_key,request_hash,user_id,language_profile_id,language_id,lesson_run_id,item_id,content_version_id,policy_id,policy_code,policy_version,provider_code,model_version,created_at,expires_at)
     VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,statement_timestamp(),statement_timestamp()+interval '14 minutes') RETURNING *`,

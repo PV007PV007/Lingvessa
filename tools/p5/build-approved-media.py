@@ -49,13 +49,13 @@ def build():
  files['assets/media/m01/registry.json']=encode({'schema_version':1,'version_code':version,'approved_dataset_sha256':approval['dataset_sha256'],'voices':voices,'characters':characters,'batches':batches,'timing_conversion':'Nearest integer millisecond (<=0.5ms); duration rounded up; source frames retained; PCM unchanged','automatic_approval_insertion':False,'production_profile_approved':False,'p6_authorized':False})
  return files,audio
 def main():
- p=argparse.ArgumentParser();p.add_argument('--check',action='store_true');args=p.parse_args();files,audio=build()
+ p=argparse.ArgumentParser();p.add_argument('--check',action='store_true');p.add_argument('--metadata-only',action='store_true');args=p.parse_args();files,audio=build()
  for name,data in files.items():
   path=ROOT/name
   if args.check:assert path.read_bytes()==data,name
   else:path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(data)
- for e in audio:
+ for e in ([] if args.metadata_only else audio):
   a=e['metadata'];path=ROOT/e['file'];assert sha(path)==a['checksum'] and path.stat().st_size==a['byte_length']
   with wave.open(str(path)) as w:assert (w.getframerate(),w.getnchannels(),w.getsampwidth(),w.getnframes())==(24000,1,2,e['source_frames']['frames'])
- print(json.dumps({'status':'PASS','audio_bytes_verified':420,'visual_drafts':30,'resynthesis':False,'approval_insertion':False}))
+ print(json.dumps({'status':'PASS','audio_bytes_verified':0 if args.metadata_only else 420,'visual_drafts':30,'resynthesis':False,'approval_insertion':False}))
 if __name__=='__main__':main()

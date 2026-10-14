@@ -84,6 +84,12 @@ jobs:
           python3 tools/p5/complete-m01-audio.py metadata --report artifacts/p5/m01-completion-validation.json
           python3 tests/unit/p5-m01-completion.test.py --report artifacts/p5/m01-completion-tests.json
           python3 tools/p5/crosscheck-m01-dialogues.py verify --report artifacts/p5/m01-dialogue-crosscheck-validation.json
+      - name: Verify approved-media registry and actual SVG bytes
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          python3 tools/p5/build-approved-media.py --check --metadata-only
+          node --import tsx tools/p5/verify-approved-media-metadata.ts
       - name: Install Chromium with bounded package-network waits
         timeout-minutes: 10
         run: pnpm exec playwright install --with-deps chromium
