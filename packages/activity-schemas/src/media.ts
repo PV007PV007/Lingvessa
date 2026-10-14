@@ -65,7 +65,12 @@ export type Voice = z.infer<typeof voiceSchema>;
 export type Character = z.infer<typeof characterSchema>;
 
 export const mediaRequirementSchema = z.object({
-  id:uuid, target_content_version_id:uuid, item_id:uuid, role:code, required:z.boolean(), kind:mediaKindSchema,
+  id:uuid, target_content_version_id:uuid.optional(), item_id:uuid.optional(), library_batch_id:uuid.optional(), role:code, required:z.boolean(), kind:mediaKindSchema,
   scope:mediaScopeSchema, specification_version:version, specification:z.string().min(1).max(8000),
   accessibility_role:z.enum(['semantic','decorative']),
-}).strict();
+}).strict().superRefine((r,ctx)=>{
+ const lesson=r.target_content_version_id!==undefined&&r.item_id!==undefined&&r.library_batch_id===undefined;
+ const library=r.library_batch_id!==undefined&&r.target_content_version_id===undefined&&r.item_id===undefined;
+ if(!lesson&&!library)ctx.addIssue({code:'custom',message:'Choose one lesson item or one library batch'});
+});
+export const mediaLibraryBatchSchema=z.object({id:uuid,stable_code:code,version_code:version,manifest_checksum:digest,authorization_checksum:digest,source_revision:z.string().regex(/^[a-f0-9]{40}$/u),expected_assets:z.number().int().min(1).max(10000),provenance:z.string().min(1).max(4000)}).strict();

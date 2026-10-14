@@ -7,11 +7,12 @@ import {S3AssetStore} from '../../packages/provider-adapters/storage/s3.js';
 
 const schema=z.object({
  LINGVESSA_ENV:z.enum(['local','preview','staging','production']),
- MEDIA_STORAGE_MODE:z.enum(['unavailable','local_fixture','s3']).default('unavailable'),
+ MEDIA_STORAGE_MODE:z.enum(['unavailable','local_fixture','private_local','s3']).default('unavailable'),
  MEDIA_LOCAL_ROOT:z.string().startsWith('/').optional(),
  MEDIA_S3_ENDPOINT:z.url().optional(),MEDIA_S3_REGION:z.string().min(1).optional(),MEDIA_S3_BUCKET:z.string().min(1).optional(),
  MEDIA_S3_ACCESS_KEY:z.string().min(1).optional(),MEDIA_S3_SECRET_KEY:z.string().min(1).optional(),
 }).superRefine((c,ctx)=>{
+ if(c.MEDIA_STORAGE_MODE==='private_local'&&(c.LINGVESSA_ENV!=='local'||!c.MEDIA_LOCAL_ROOT))ctx.addIssue({code:'custom',path:['MEDIA_STORAGE_MODE'],message:'Explicit private local scope/root required'});
  if(c.MEDIA_STORAGE_MODE==='local_fixture'&&(c.LINGVESSA_ENV!=='local'||!c.MEDIA_LOCAL_ROOT))ctx.addIssue({code:'custom',path:['MEDIA_STORAGE_MODE'],message:'Explicit local fixture root required'});
  if(c.MEDIA_STORAGE_MODE==='s3')for(const key of ['MEDIA_S3_ENDPOINT','MEDIA_S3_REGION','MEDIA_S3_BUCKET','MEDIA_S3_ACCESS_KEY','MEDIA_S3_SECRET_KEY'] as const)if(!c[key])ctx.addIssue({code:'custom',path:[key],message:'Required'});
 });
@@ -24,7 +25,7 @@ class UnavailableAssetStore implements AssetStore {
 export function mediaStore(env:NodeJS.ProcessEnv):AssetStore {
  const result=schema.safeParse(env);if(!result.success)throw new ConfigurationError([...new Set(result.error.issues.map(i=>String(i.path[0]??'media')))]);
  const c=result.data;
- if(c.MEDIA_STORAGE_MODE==='local_fixture')return new LocalAssetStore(c.MEDIA_LOCAL_ROOT!);
+ if(c.MEDIA_STORAGE_MODE==='local_fixture'||c.MEDIA_STORAGE_MODE==='private_local')return new LocalAssetStore(c.MEDIA_LOCAL_ROOT!);
  if(c.MEDIA_STORAGE_MODE==='s3')return new S3AssetStore({endpoint:c.MEDIA_S3_ENDPOINT!,region:c.MEDIA_S3_REGION!,bucket:c.MEDIA_S3_BUCKET!,accessKey:c.MEDIA_S3_ACCESS_KEY!,secretKey:c.MEDIA_S3_SECRET_KEY!});
  return new UnavailableAssetStore();
 }

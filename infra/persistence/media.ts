@@ -1,8 +1,9 @@
 import { createHash, randomUUID } from 'node:crypto';
+import {isDeepStrictEqual} from 'node:util';
 import {takeP5Quota} from './p5-quota.js';
 import type pg from 'pg';
 import { ContractError, assertUuid } from '../../packages/domain/src/identity.js';
-import { assetVersionSchema, voiceSchema, characterSchema, mediaRequirementSchema } from '../../packages/activity-schemas/src/media.js';
+import { assetVersionSchema, voiceSchema, characterSchema, mediaRequirementSchema,mediaLibraryBatchSchema } from '../../packages/activity-schemas/src/media.js';
 import type { AssetStore, MediaReference } from '../../packages/application/src/media.js';
 import { transaction } from './database.js';
 import {deliveredMediaSchema} from '../../packages/activity-schemas/src/media-delivery.js';
@@ -17,36 +18,52 @@ export class MediaRepository {
     if(!row)throw new ContractError('INVALID_INPUT','Unknown media language');
     return row.id as string;
   }
-  async registerVoice(actorId:string,input:unknown):Promise<void> {
-    assertUuid(actorId);const v=voiceSchema.parse(input),languageId=await this.language(v.scope.language);
-    await this.pool.query(`INSERT INTO voices(id,version_code,language_id,stable_code,variety,metadata,created_by)
-      VALUES($1,$2,$3,$4,$5,$6,$7)`,[v.id,v.version_code,languageId,v.stable_code,v.scope.variety,v,actorId]);
+  private async register(table:'voices'|'characters'|'media_library_batches',actor:string,input:{id:string;version_code:string},insert:(db:pg.PoolClient)=>Promise<void>){
+    await transaction(this.pool,async db=>{
+      await db.query('SELECT pg_advisory_xact_lock(hashtextextended($1,0))',[`media-registry:${table}:${input.id}:${input.version_code}`]);
+      const prior=(await db.query(`SELECT metadata,created_by FROM ${table} WHERE id=$1 AND version_code=$2`,[input.id,input.version_code])).rows[0];
+      if(prior){if(prior.created_by!==actor||!isDeepStrictEqual(prior.metadata,input))throw new ContractError('CONFLICT','Media registry version is immutable');return;}await insert(db);
+    });
   }
-  async registerCharacter(actorId:string,input:unknown):Promise<void> {
-    assertUuid(actorId);const c=characterSchema.parse(input),languageId=await this.language(c.scope.language);
-    await this.pool.query(`INSERT INTO characters(id,version_code,language_id,stable_code,variety,voice_id,voice_version_code,metadata,created_by)
-      VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9)`,[c.id,c.version_code,languageId,c.stable_code,c.scope.variety,c.voice_id,c.voice_version_code,c,actorId]);
+  async registerVoice(actor:string,input:unknown){
+    assertUuid(actor);const v=voiceSchema.parse(input),lang=await this.language(v.scope.language);
+    await this.register('voices',actor,v,async db=>{await db.query('INSERT INTO voices(id,version_code,language_id,stable_code,variety,metadata,created_by) VALUES($1,$2,$3,$4,$5,$6,$7)',[v.id,v.version_code,lang,v.stable_code,v.scope.variety,v,actor]);});
   }
-  async declareRequirement(actorId:string,input:unknown):Promise<void> {
-    assertUuid(actorId);const r=mediaRequirementSchema.parse(input),languageId=await this.language(r.scope.language);
-    await this.pool.query(`INSERT INTO media_requirements(id,target_content_version_id,item_id,language_id,role,required,kind,variety,specification_version,specification,accessibility_role,created_by)
-      VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)`,[r.id,r.target_content_version_id,r.item_id,languageId,r.role,r.required,r.kind,r.scope.variety,r.specification_version,r.specification,r.accessibility_role,actorId]);
+  async registerCharacter(actor:string,input:unknown){
+    assertUuid(actor);const c=characterSchema.parse(input),lang=await this.language(c.scope.language);
+    await this.register('characters',actor,c,async db=>{await db.query('INSERT INTO characters(id,version_code,language_id,stable_code,variety,voice_id,voice_version_code,metadata,created_by) VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9)',[c.id,c.version_code,lang,c.stable_code,c.scope.variety,c.voice_id,c.voice_version_code,c,actor]);});
   }
-  async enqueue(actorId:string,requirementId:string,idempotencyKey:string,adapterCode:string,generatorVersion:string):Promise<string> {
-    for(const v of [actorId,requirementId,idempotencyKey])assertUuid(v);
-    if(!/^[A-Za-z0-9_-]{1,80}$/u.test(adapterCode)||!generatorVersion||generatorVersion.length>80)throw new ContractError('INVALID_INPUT','Versioned generation adapter required');
+  async registerLibraryBatch(actor:string,input:unknown){
+    assertUuid(actor);const v=mediaLibraryBatchSchema.parse(input);
+    await this.register('media_library_batches',actor,v,async db=>{await db.query('INSERT INTO media_library_batches(id,stable_code,version_code,manifest_checksum,authorization_checksum,source_revision,expected_assets,metadata,created_by) VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9)',[v.id,v.stable_code,v.version_code,v.manifest_checksum,v.authorization_checksum,v.source_revision,v.expected_assets,v,actor]);});
+  }
+  async declareRequirement(actor:string,input:unknown){
+    assertUuid(actor);const r=mediaRequirementSchema.parse(input),lang=await this.language(r.scope.language);
+    await transaction(this.pool,async db=>{
+      await db.query('SELECT pg_advisory_xact_lock(hashtextextended($1,0))',[`media-requirement:${r.id}`]);
+      const prior=(await db.query('SELECT * FROM media_requirements WHERE id=$1',[r.id])).rows[0];
+      if(prior){
+        const same=mediaRequirementSchema.parse({id:prior.id,...(prior.library_batch_id?{library_batch_id:prior.library_batch_id}:{target_content_version_id:prior.target_content_version_id,item_id:prior.item_id}),role:prior.role,required:prior.required,kind:prior.kind,scope:r.scope,specification_version:prior.specification_version,specification:prior.specification,accessibility_role:prior.accessibility_role});
+        if(prior.created_by!==actor||prior.language_id!==lang||prior.variety!==r.scope.variety||!isDeepStrictEqual(same,r))throw new ContractError('CONFLICT','Media requirement is immutable');return;
+      }
+      await db.query('INSERT INTO media_requirements(id,target_content_version_id,item_id,library_batch_id,language_id,role,required,kind,variety,specification_version,specification,accessibility_role,created_by) VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13)',[r.id,r.target_content_version_id??null,r.item_id??null,r.library_batch_id??null,lang,r.role,r.required,r.kind,r.scope.variety,r.specification_version,r.specification,r.accessibility_role,actor]);
+    });
+  }
+  async enqueue(actor:string,requirement:string,key:string,adapter:string,generator:string){return this.enqueueWork(actor,requirement,key,adapter,generator,'generation');}
+  async enqueueLibraryImport(actor:string,requirement:string,key:string,generator:string){return this.enqueueWork(actor,requirement,key,'approved_media_import',generator,'library_import');}
+  private async enqueueWork(actor:string,requirement:string,key:string,adapter:string,generator:string,kind:'generation'|'library_import'):Promise<string>{
+    for(const id of [actor,requirement,key])assertUuid(id);
+    if(!/^[A-Za-z0-9_-]{1,80}$/u.test(adapter)||!generator||generator.length>80)throw new ContractError('INVALID_INPUT','Versioned generation adapter required');
     return transaction(this.pool,async db=>{
-      await db.query('SELECT pg_advisory_xact_lock(hashtextextended($1,0))',[`media:${actorId}:${idempotencyKey}`]);
-      const hash=(await db.query('SELECT p2_json_checksum($1::jsonb) AS hash',[{requirementId,adapterCode,generatorVersion}])).rows[0]?.hash as string;
-      const prior=(await db.query('SELECT id,request_hash FROM media_jobs WHERE created_by=$1 AND idempotency_key=$2',[actorId,idempotencyKey])).rows[0];
+      await db.query('SELECT pg_advisory_xact_lock(hashtextextended($1,0))',[`media:${actor}:${key}`]);
+      const hash=(await db.query('SELECT p2_json_checksum($1::jsonb) AS hash',[{requirementId:requirement,adapterCode:adapter,generatorVersion:generator,...(kind==='library_import'?{jobKind:kind}:{})}])).rows[0]?.hash;
+      const prior=(await db.query('SELECT id,request_hash FROM media_jobs WHERE created_by=$1 AND idempotency_key=$2',[actor,key])).rows[0];
       if(prior){if(prior.request_hash!==hash)throw new ContractError('CONFLICT','Media idempotency key reused for another request');return prior.id as string;}
-      const req=(await db.query('SELECT language_id FROM media_requirements WHERE id=$1',[requirementId])).rows[0];
-      if(!req)throw new ContractError('NOT_FOUND','Media requirement not found');
-      if(!await takeP5Quota(db,'media_generation',actorId))throw new ContractError('RATE_LIMITED','Media generation quota exhausted');
-      const id=randomUUID();
-      await db.query(`INSERT INTO media_jobs(id,requirement_id,language_id,idempotency_key,request_hash,provider_adapter_code,generator_version,created_by)
-        VALUES($1,$2,$3,$4,$5,$6,$7,$8)`,[id,requirementId,req.language_id,idempotencyKey,hash,adapterCode,generatorVersion,actorId]);
-      return id;
+      const r=(await db.query('SELECT language_id,library_batch_id,created_by FROM media_requirements WHERE id=$1',[requirement])).rows[0];
+      if(!r)throw new ContractError('NOT_FOUND','Media requirement not found');
+      if((kind==='library_import')!==Boolean(r.library_batch_id)||r.created_by!==actor)throw new ContractError('INVALID_INPUT','Media job kind or author differs from requirement');
+      if(!await takeP5Quota(db,kind==='library_import'?'media_import':'media_generation',actor))throw new ContractError('RATE_LIMITED',kind==='library_import'?'Media import quota exhausted':'Media generation quota exhausted');
+      const id=randomUUID();await db.query('INSERT INTO media_jobs(id,requirement_id,language_id,idempotency_key,request_hash,provider_adapter_code,generator_version,created_by,job_kind) VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9)',[id,requirement,r.language_id,key,hash,adapter,generator,actor,kind]);return id;
     });
   }
   async ingest(actorId:string,jobId:string,input:unknown,bytes:Uint8Array):Promise<{asset_id:string;asset_version:number;checksum:string;metadata_checksum:string}> {
@@ -138,3 +155,4 @@ export async function preflightMedia(db:pg.PoolClient,store:AssetStore|undefined
     await store.readVerified(row.object_key as string,row.checksum as string,row.byte_length as number);
   }
 }
+

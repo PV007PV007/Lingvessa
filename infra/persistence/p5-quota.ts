@@ -5,7 +5,7 @@ import {assertUuid} from '../../packages/domain/src/identity.js';
 /** Operational P5 cost windows, distinct from login and deterministic attempts.
  * One new job consumes one slot; replay/internal retry never consumes another.
  * These are abuse limits, not language scoring thresholds or paid AI budgets. */
-export const P5_QUOTAS={speech_processing:30,speech_transport:120,media_generation:60} as const;
+export const P5_QUOTAS={speech_processing:30,speech_transport:120,media_generation:60,media_import:1000} as const;
 export type P5Quota=keyof typeof P5_QUOTAS;
 export const p5QuotaKey=(kind:P5Quota,actorId:string)=>createHash('sha256').update(`p5:${kind}:${actorId}`).digest();
 export async function takeP5Quota(db:pg.Pool|pg.PoolClient,kind:P5Quota,actorId:string):Promise<boolean>{

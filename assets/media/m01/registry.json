@@ -1,0 +1,380 @@
+{
+  "schema_version": 1,
+  "version_code": "m01-approved-1",
+  "approved_dataset_sha256": "81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf",
+  "voices": [
+    {
+      "id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+      "stable_code": "AUD_ENG_VOICE_F01",
+      "version_code": "m01-approved-1",
+      "scope": {
+        "language": "en",
+        "variety": "en-GB"
+      },
+      "profile": "Maya; owner-approved fictional adult course voice",
+      "provider_adapter_code": "piper",
+      "provider_external_id": "en-A-p225",
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source en-A-p225; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      }
+    },
+    {
+      "id": "876c0431-a28a-531c-87c9-c7792f7c353d",
+      "stable_code": "AUD_ENG_VOICE_M01",
+      "version_code": "m01-approved-1",
+      "scope": {
+        "language": "en",
+        "variety": "en-GB"
+      },
+      "profile": "Daniel; owner-approved fictional adult course voice",
+      "provider_adapter_code": "piper",
+      "provider_external_id": "en-B-p226",
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source en-B-p226; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      }
+    },
+    {
+      "id": "54f40978-e547-5905-9a7f-a65a0019285b",
+      "stable_code": "AUD_ENG_VOICE_F02",
+      "version_code": "m01-approved-1",
+      "scope": {
+        "language": "en",
+        "variety": "en-GB"
+      },
+      "profile": "Alex; owner-approved fictional adult course voice",
+      "provider_adapter_code": "piper",
+      "provider_external_id": "en-C-p228",
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source en-C-p228; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      }
+    },
+    {
+      "id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "stable_code": "AUD_CZE_VOICE_F01",
+      "version_code": "m01-approved-1",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "profile": "Klára; owner-approved fictional adult course voice",
+      "provider_adapter_code": "pocket_tts_czech",
+      "provider_external_id": "cs-C-pocket-C",
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source cs-C-pocket-C; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      }
+    },
+    {
+      "id": "2c796559-b5ed-5eac-899b-840254e953bf",
+      "stable_code": "AUD_CZE_VOICE_M01",
+      "version_code": "m01-approved-1",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "profile": "Adam; owner-approved fictional adult course voice",
+      "provider_adapter_code": "piper",
+      "provider_external_id": "cs-A-jirka",
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source cs-A-jirka; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      }
+    },
+    {
+      "id": "64b3a5a4-0319-5946-9d1f-556abe7b1eae",
+      "stable_code": "AUD_CZE_VOICE_F02",
+      "version_code": "m01-approved-1",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "profile": "Oksana; owner-approved fictional adult course voice",
+      "provider_adapter_code": "pocket_tts_czech",
+      "provider_external_id": "cs-B-pocket-A",
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source cs-B-pocket-A; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      }
+    }
+  ],
+  "characters": [
+    {
+      "id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+      "stable_code": "AV_ENG_MAYA_01",
+      "version_code": "m01-speaker-1",
+      "scope": {
+        "language": "en",
+        "variety": "en-GB"
+      },
+      "style_profile": "Maya; fictional adult speaker; visual artwork review pending",
+      "allowed_contexts": [
+        "M01"
+      ],
+      "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+      "voice_version_code": "m01-approved-1",
+      "rights": {
+        "licence": "Original Lingvessa fictional speaker identity; visual artwork rights pending",
+        "provenance": "Original catalog; owner-approved audio cast; no real person input",
+        "source_kind": "programmatic",
+        "generator_version": "p5-speaker-1",
+        "spec_hash": "dbe4ca7b4787bd47e7b953e1162d0f03d60d3ced876a0f914fa11d3f398fde26",
+        "real_person_clone": false
+      }
+    },
+    {
+      "id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+      "stable_code": "AV_ENG_DANIEL_01",
+      "version_code": "m01-speaker-1",
+      "scope": {
+        "language": "en",
+        "variety": "en-GB"
+      },
+      "style_profile": "Daniel; fictional adult speaker; visual artwork review pending",
+      "allowed_contexts": [
+        "M01"
+      ],
+      "voice_id": "876c0431-a28a-531c-87c9-c7792f7c353d",
+      "voice_version_code": "m01-approved-1",
+      "rights": {
+        "licence": "Original Lingvessa fictional speaker identity; visual artwork rights pending",
+        "provenance": "Original catalog; owner-approved audio cast; no real person input",
+        "source_kind": "programmatic",
+        "generator_version": "p5-speaker-1",
+        "spec_hash": "dbe4ca7b4787bd47e7b953e1162d0f03d60d3ced876a0f914fa11d3f398fde26",
+        "real_person_clone": false
+      }
+    },
+    {
+      "id": "c66aa126-37ef-5587-a2ed-49363ded1f55",
+      "stable_code": "AV_ENG_TEACHER_01",
+      "version_code": "m01-speaker-1",
+      "scope": {
+        "language": "en",
+        "variety": "en-GB"
+      },
+      "style_profile": "Alex; fictional adult speaker; visual artwork review pending",
+      "allowed_contexts": [
+        "M01"
+      ],
+      "voice_id": "54f40978-e547-5905-9a7f-a65a0019285b",
+      "voice_version_code": "m01-approved-1",
+      "rights": {
+        "licence": "Original Lingvessa fictional speaker identity; visual artwork rights pending",
+        "provenance": "Original catalog; owner-approved audio cast; no real person input",
+        "source_kind": "programmatic",
+        "generator_version": "p5-speaker-1",
+        "spec_hash": "dbe4ca7b4787bd47e7b953e1162d0f03d60d3ced876a0f914fa11d3f398fde26",
+        "real_person_clone": false
+      }
+    },
+    {
+      "id": "074d3cc2-e358-5ef4-b8a8-fb63106343cd",
+      "stable_code": "AV_CZE_KLARA_01",
+      "version_code": "m01-speaker-1",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "style_profile": "Klára; fictional adult speaker; visual artwork review pending",
+      "allowed_contexts": [
+        "M01"
+      ],
+      "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "voice_version_code": "m01-approved-1",
+      "rights": {
+        "licence": "Original Lingvessa fictional speaker identity; visual artwork rights pending",
+        "provenance": "Original catalog; owner-approved audio cast; no real person input",
+        "source_kind": "programmatic",
+        "generator_version": "p5-speaker-1",
+        "spec_hash": "dbe4ca7b4787bd47e7b953e1162d0f03d60d3ced876a0f914fa11d3f398fde26",
+        "real_person_clone": false
+      }
+    },
+    {
+      "id": "595521da-0ee4-51ca-b445-04d5705e6a48",
+      "stable_code": "AV_CZE_ADAM_01",
+      "version_code": "m01-speaker-1",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "style_profile": "Adam; fictional adult speaker; visual artwork review pending",
+      "allowed_contexts": [
+        "M01"
+      ],
+      "voice_id": "2c796559-b5ed-5eac-899b-840254e953bf",
+      "voice_version_code": "m01-approved-1",
+      "rights": {
+        "licence": "Original Lingvessa fictional speaker identity; visual artwork rights pending",
+        "provenance": "Original catalog; owner-approved audio cast; no real person input",
+        "source_kind": "programmatic",
+        "generator_version": "p5-speaker-1",
+        "spec_hash": "dbe4ca7b4787bd47e7b953e1162d0f03d60d3ced876a0f914fa11d3f398fde26",
+        "real_person_clone": false
+      }
+    },
+    {
+      "id": "a029d7cb-8f04-5509-8851-20f8bc474292",
+      "stable_code": "AV_CZE_OKSANA_01",
+      "version_code": "m01-speaker-1",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "style_profile": "Oksana; fictional adult speaker; visual artwork review pending",
+      "allowed_contexts": [
+        "M01"
+      ],
+      "voice_id": "64b3a5a4-0319-5946-9d1f-556abe7b1eae",
+      "voice_version_code": "m01-approved-1",
+      "rights": {
+        "licence": "Original Lingvessa fictional speaker identity; visual artwork rights pending",
+        "provenance": "Original catalog; owner-approved audio cast; no real person input",
+        "source_kind": "programmatic",
+        "generator_version": "p5-speaker-1",
+        "spec_hash": "dbe4ca7b4787bd47e7b953e1162d0f03d60d3ced876a0f914fa11d3f398fde26",
+        "real_person_clone": false
+      }
+    }
+  ],
+  "batches": [
+    {
+      "batch": {
+        "id": "0c371f4d-a462-5ac3-8884-0a846cfc584c",
+        "stable_code": "M01_APPROVED_AUDIO",
+        "version_code": "m01-approved-1",
+        "manifest_checksum": "0e1146216717b0d7adc968afb1384add1e9f201fb85b0d4a2fa04d81f0d613bb",
+        "authorization_checksum": "292dc272ecddf962d8bc92ee2bba6ad5e9b549f44beedb8107d1504b2ace9ee0",
+        "source_revision": "e213a3f0a6c9f89fae955c8f48a8931ecb447e62",
+        "expected_assets": 420,
+        "provenance": "Owner-approved audio byte import; no synthesis"
+      },
+      "authorization_path": "docs/p5/m01-completion-20261014/owner-approval.json",
+      "records": [
+        {
+          "path": "assets/media/m01/records/audio-00.json",
+          "sha256": "841cb7f2fe04f3c99e2e695705081db3f4ef0bedef6e3faf215d5bc5172b7ca3",
+          "count": 30
+        },
+        {
+          "path": "assets/media/m01/records/audio-01.json",
+          "sha256": "e1d90ff9aa45b11ec4d278c3ccbfe255d1ea6cb14b0d3333c55dadd6a1c5bd10",
+          "count": 30
+        },
+        {
+          "path": "assets/media/m01/records/audio-02.json",
+          "sha256": "768e298186958d95e23a1eba79aebf505dc4872aceded3cc49fb0beb4ed23a12",
+          "count": 30
+        },
+        {
+          "path": "assets/media/m01/records/audio-03.json",
+          "sha256": "4a6741bd52b414f51c2321e7e5a00d232ac3ce9a710460b07b5aed8e0a0838ea",
+          "count": 30
+        },
+        {
+          "path": "assets/media/m01/records/audio-04.json",
+          "sha256": "908068dbc769dbda7e0b6096081c47be8ac8f916d2030193c336351f8aa96357",
+          "count": 30
+        },
+        {
+          "path": "assets/media/m01/records/audio-05.json",
+          "sha256": "15ded9a5c074a8e2230aac120706bb3204f61bdc1f6011dfab0548e6970fbaa9",
+          "count": 30
+        },
+        {
+          "path": "assets/media/m01/records/audio-06.json",
+          "sha256": "7beec4e00cc7da71b9148a4a2557165d62ae84124d3c43a75904f2c5773a07e5",
+          "count": 30
+        },
+        {
+          "path": "assets/media/m01/records/audio-07.json",
+          "sha256": "41fcbfc182b23fbfb511ed7e38b89780ba68958fd3ccec85cd0729caafb16cf3",
+          "count": 30
+        },
+        {
+          "path": "assets/media/m01/records/audio-08.json",
+          "sha256": "b3581d7737c58b9aa9415d7bb8c46ef5778c903a0f10df8b6fae7f7f4ab1ea85",
+          "count": 30
+        },
+        {
+          "path": "assets/media/m01/records/audio-09.json",
+          "sha256": "5db17520b38e314f8d7dbd242ce158bff0f90ac5f874ef6959d7d535567ee948",
+          "count": 30
+        },
+        {
+          "path": "assets/media/m01/records/audio-10.json",
+          "sha256": "23cef0f9bb7165cef3919db62fbc84d0d8782b24799443ff3d40ed1723481286",
+          "count": 30
+        },
+        {
+          "path": "assets/media/m01/records/audio-11.json",
+          "sha256": "b3a1d0de79cab71728337f42db140fec368de2620c810f662caf666828670f59",
+          "count": 30
+        },
+        {
+          "path": "assets/media/m01/records/audio-12.json",
+          "sha256": "f5a3048e1a56259e9ea40458fa78fb7eabfebdf98cc48d6b90a9daffda775d2e",
+          "count": 30
+        },
+        {
+          "path": "assets/media/m01/records/audio-13.json",
+          "sha256": "114fb55240f57fef59b81a7c3ee74e9008dc92dd5e287b146e4ee8a3c09ccabe",
+          "count": 30
+        }
+      ],
+      "approval_status": "OWNER_APPROVED_AUDIO"
+    },
+    {
+      "batch": {
+        "id": "2ea49d25-2c67-5a9c-8187-04af00a9211b",
+        "stable_code": "M01_VISUAL_DRAFT",
+        "version_code": "m01-visual-draft-1",
+        "manifest_checksum": "96e9ddb7ec1a80099b1abc2050be6f00e49351c4e2cd36fc284fee9b03705ed1",
+        "authorization_checksum": "661fb865eece4e6837ec3d04064bce6ec96ea7752309cda6c60a319684d53926",
+        "source_revision": "e213a3f0a6c9f89fae955c8f48a8931ecb447e62",
+        "expected_assets": 30,
+        "provenance": "Authorized SVG draft import; visual quality/rights pending"
+      },
+      "authorization_path": "docs/p5/integration-20261014/authorization.json",
+      "records": [
+        {
+          "path": "assets/media/m01/records/visual-00.json",
+          "sha256": "d2bfe1475362146d303d5703733c92fc7d3a017789d30e1c75587b6554e03e91",
+          "count": 30
+        }
+      ],
+      "approval_status": "PENDING_VISUAL_REVIEW"
+    }
+  ],
+  "timing_conversion": "Nearest integer millisecond (<=0.5ms); duration rounded up; source frames retained; PCM unchanged",
+  "automatic_approval_insertion": false,
+  "production_profile_approved": false,
+  "p6_authorized": false
+}

@@ -988,8 +988,9 @@ model characters {
 /// P5 scalar view; composite FKs, checks and immutability are SQL migration-owned.
 model media_requirements {
   id String @id @db.Uuid
-  target_content_version_id String @db.Uuid
-  item_id String @db.Uuid
+  target_content_version_id String? @db.Uuid
+  item_id String? @db.Uuid
+  library_batch_id String? @db.Uuid
   language_id String @db.Uuid
   role String
   required Boolean
@@ -1006,6 +1007,7 @@ model media_requirements {
 /// P5 scalar view; composite FKs, checks and immutability are SQL migration-owned.
 model media_jobs {
   id String @id @db.Uuid
+  job_kind String @default("generation")
   requirement_id String @db.Uuid
   language_id String @db.Uuid
   idempotency_key String @db.Uuid
@@ -1017,6 +1019,22 @@ model media_jobs {
   error_code String?
   created_by String @db.Uuid
   created_at DateTime @db.Timestamptz(6)
+  @@schema("public")
+}
+
+/// Pre-generated P5 media provenance; authority and immutability are SQL-owned.
+model media_library_batches {
+  id String @id @db.Uuid
+  stable_code String
+  version_code String
+  manifest_checksum String
+  authorization_checksum String
+  source_revision String
+  expected_assets Int
+  metadata Json
+  created_by String @db.Uuid
+  created_at DateTime @default(dbgenerated("clock_timestamp()")) @db.Timestamptz(6)
+  @@unique([stable_code,version_code])
   @@schema("public")
 }
 
