@@ -61,7 +61,7 @@ export class MediaRepository {
       if(prior){if(prior.request_hash!==hash)throw new ContractError('CONFLICT','Media idempotency key reused for another request');return prior.id as string;}
       const r=(await db.query('SELECT language_id,library_batch_id,created_by FROM media_requirements WHERE id=$1',[requirement])).rows[0];
       if(!r)throw new ContractError('NOT_FOUND','Media requirement not found');
-      if((kind==='library_import')!==Boolean(r.library_batch_id)||r.created_by!==actor)throw new ContractError('INVALID_INPUT','Media job kind or author differs from requirement');
+      if((kind==='library_import')!==Boolean(r.library_batch_id)||(kind==='library_import'&&r.created_by!==actor))throw new ContractError('INVALID_INPUT','Media job kind or author differs from requirement');
       if(!await takeP5Quota(db,kind==='library_import'?'media_import':'media_generation',actor))throw new ContractError('RATE_LIMITED',kind==='library_import'?'Media import quota exhausted':'Media generation quota exhausted');
       const id=randomUUID();await db.query('INSERT INTO media_jobs(id,requirement_id,language_id,idempotency_key,request_hash,provider_adapter_code,generator_version,created_by,job_kind) VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9)',[id,requirement,r.language_id,key,hash,adapter,generator,actor,kind]);return id;
     });
