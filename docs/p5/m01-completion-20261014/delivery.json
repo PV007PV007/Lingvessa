@@ -1,0 +1,15 @@
+{
+  "zip": {
+    "path": "Lingvessa_M01_Complete_Audio_Draft_2026-10-14.zip",
+    "sha256": "3edaeaaeb000479921a0b3ff5ec2b52042faeee54bf943eff25e4a4a0f4e516d",
+    "bytes": 63346796
+  },
+  "html": {
+    "path": "Lingvessa_M01_Complete_Listening_Review_2026-10-14.html",
+    "sha256": "664379c15b861ca9801f0cb61fbfdd611ab78e6baefbb2c5636c707ff0538e4f",
+    "bytes": 48097819
+  },
+  "dataset_sha256": "81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf",
+  "embedded_wavs": 420,
+  "payload_wavs": 1027
+}

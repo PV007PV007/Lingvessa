@@ -177,17 +177,27 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--input', required=True, type=Path, help='Private JSON exported from the listening form')
     parser.add_argument('--output', required=True, type=Path, help='New private report file; existing files are never overwritten')
-    parser.add_argument('--test-fixture', action='store_true', help='Explicit UI_TEST_FIXTURE mode, for automated tests only')
+    scope = parser.add_mutually_exclusive_group()
+    scope.add_argument('--test-fixture', action='store_true', help='Explicit UI_TEST_FIXTURE mode, for automated tests only')
+    scope.add_argument('--complete-batch', action='store_true', help='Use the completed 420-file M01 draft catalog')
     args = parser.parse_args()
     try:
         with args.input.open('rb') as stream:
             raw = stream.read(MAX_BYTES + 1)
         builder = load_builder()
-        manifest = builder.fixture()[0] if args.test_fixture else builder.catalog()[0]
+        catalog_path = ROOT / 'tools/p5/build-m01-review.py'
+        if args.complete_batch:
+            catalog_path = ROOT / 'tools/p5/complete-m01-audio.py'
+            spec = importlib.util.spec_from_file_location('m01_complete', catalog_path)
+            complete = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(complete)
+            manifest = complete.catalog()[0]
+        else:
+            manifest = builder.fixture()[0] if args.test_fixture else builder.catalog()[0]
         result = summarize(raw, manifest)
         result.update(**builder.source_state(),
                       validator_sha256=sha(Path(__file__).read_bytes()),
-                      catalog_builder_sha256=sha((ROOT / 'tools/p5/build-m01-review.py').read_bytes()))
+                      catalog_builder_sha256=sha(catalog_path.read_bytes()))
         encoded = json.dumps(result, indent=2, ensure_ascii=False, allow_nan=False) + '\n'
         # Validate everything before opening the destination. No input or catalog mutation.
         descriptor = os.open(args.output, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)

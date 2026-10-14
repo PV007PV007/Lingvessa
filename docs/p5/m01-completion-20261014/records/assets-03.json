@@ -1,0 +1,1292 @@
+[
+  {
+    "asset_id": "05efc4a6-06ec-5d95-946c-5a80842b0ffe",
+    "stable_code": "AUD_CZE_M01_WORDS_LANG_DE",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "e8895ffd-1db6-51fb-94e3-0ec6ac6557de",
+    "script_hash": "6941905b0383eac0355ea771d3d6dc64e4ce90fe9472aae7a02f2c646460a2be",
+    "transcript": "německy",
+    "status": "GENERATED_UNREVIEWED",
+    "turn_ids": [
+      "a3a86912-e78e-5058-94c1-aab5a3f19c20"
+    ],
+    "timing": [
+      {
+        "turn_id": "a3a86912-e78e-5058-94c1-aab5a3f19c20",
+        "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+        "character_id": null,
+        "candidate_id": "cs-C-pocket-C",
+        "text": "německy",
+        "start_frame": 0,
+        "end_frame": 34560,
+        "start_ms": 0.0,
+        "end_ms": 1440.0,
+        "turn_sha256": "d9fd9b055631d7cd096980f3472238f5b72dbefce9dcad2023f9474480ae7ef3"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_WORDS_LANG_DE.wav",
+    "sha256": "d9fd9b055631d7cd096980f3472238f5b72dbefce9dcad2023f9474480ae7ef3",
+    "bytes": 69164,
+    "metrics": {
+      "frames": 34560,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.44,
+      "peak_dbfs": -5.785252242396764,
+      "rms_dbfs": -22.000259904238845,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -19.8,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "b9e36495-8bf6-55a3-ac68-1a9ee0e72edd",
+    "stable_code": "AUD_CZE_M01_WORDS_LANG_DE_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "05efc4a6-06ec-5d95-946c-5a80842b0ffe",
+    "script_id": "e8895ffd-1db6-51fb-94e3-0ec6ac6557de",
+    "script_hash": "6941905b0383eac0355ea771d3d6dc64e4ce90fe9472aae7a02f2c646460a2be",
+    "transcript": "německy",
+    "status": "GENERATED_UNREVIEWED",
+    "turn_ids": [
+      "a3a86912-e78e-5058-94c1-aab5a3f19c20"
+    ],
+    "timing": [
+      {
+        "turn_id": "a3a86912-e78e-5058-94c1-aab5a3f19c20",
+        "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+        "character_id": null,
+        "candidate_id": "cs-C-pocket-C",
+        "text": "německy",
+        "start_frame": 0,
+        "end_frame": 42683,
+        "start_ms": 0.0,
+        "end_ms": 1778.4583333333333,
+        "turn_sha256": "7005a5565a249d02eace2bb19557bd2bfd1b99b1a87f66c85939d9d75138e245"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_WORDS_LANG_DE_SLOW.wav",
+    "sha256": "98b3b39bf51754c3dc29f3c2f3d1b0ab29826f53f67ff7b9d3a41ac1113e8753",
+    "bytes": 85410,
+    "metrics": {
+      "frames": 42683,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.7784583333333333,
+      "peak_dbfs": -5.801262151426295,
+      "rms_dbfs": -21.856609023092805,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -20.2,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "a95bdfc9-bae3-5fcb-b482-3ad820f4ef1b",
+    "stable_code": "AUD_CZE_M01_WORDS_LANG_ES",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "49fd0188-c68d-5435-810a-be88f0bea635",
+    "script_hash": "2e7e29f4d52e283e3b699723a02fa0114f6b499bfd986aba84f1200b1acfd139",
+    "transcript": "španělsky",
+    "status": "GENERATED_UNREVIEWED",
+    "turn_ids": [
+      "50de28c7-b3f5-5ef2-969a-20083f20874e"
+    ],
+    "timing": [
+      {
+        "turn_id": "50de28c7-b3f5-5ef2-969a-20083f20874e",
+        "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+        "character_id": null,
+        "candidate_id": "cs-C-pocket-C",
+        "text": "španělsky",
+        "start_frame": 0,
+        "end_frame": 38400,
+        "start_ms": 0.0,
+        "end_ms": 1600.0,
+        "turn_sha256": "c8552f1a076fb03d34a16ed943228b4a58399ddbb14beb278de010b433162fe4"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_WORDS_LANG_ES.wav",
+    "sha256": "c8552f1a076fb03d34a16ed943228b4a58399ddbb14beb278de010b433162fe4",
+    "bytes": 76844,
+    "metrics": {
+      "frames": 38400,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.6,
+      "peak_dbfs": -4.2649784870867204,
+      "rms_dbfs": -22.00025925990422,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -19.3,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "1b2a6730-1b1f-5cf0-b0d9-cf36029402a6",
+    "stable_code": "AUD_CZE_M01_WORDS_LANG_ES_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "a95bdfc9-bae3-5fcb-b482-3ad820f4ef1b",
+    "script_id": "49fd0188-c68d-5435-810a-be88f0bea635",
+    "script_hash": "2e7e29f4d52e283e3b699723a02fa0114f6b499bfd986aba84f1200b1acfd139",
+    "transcript": "španělsky",
+    "status": "GENERATED_UNREVIEWED",
+    "turn_ids": [
+      "50de28c7-b3f5-5ef2-969a-20083f20874e"
+    ],
+    "timing": [
+      {
+        "turn_id": "50de28c7-b3f5-5ef2-969a-20083f20874e",
+        "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+        "character_id": null,
+        "candidate_id": "cs-C-pocket-C",
+        "text": "španělsky",
+        "start_frame": 0,
+        "end_frame": 47934,
+        "start_ms": 0.0,
+        "end_ms": 1997.25,
+        "turn_sha256": "c2c8a38a45678db2bdc53d5fe138fc1f5b5a68eb0c1c2c01504e7fcc2dd4119e"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_WORDS_LANG_ES_SLOW.wav",
+    "sha256": "1b4b14cb7cb185f3e9431b0c1702db02c5e2ff7610f70b47b2d6e995c5d95f04",
+    "bytes": 95912,
+    "metrics": {
+      "frames": 47934,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.99725,
+      "peak_dbfs": -4.2727782388448245,
+      "rms_dbfs": -21.81122913049762,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -19.6,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "7c1ea1ae-b3c8-57f9-8900-41690f0dd999",
+    "stable_code": "AUD_CZE_M01_WORDS_CITY_PRA",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "ecb2acdd-5c20-52b4-b9ff-d15d42060424",
+    "script_hash": "76b93f17af6321dd22680232b564f744e5de4e90412ed5bc884022842d6cb5ab",
+    "transcript": "Praha",
+    "status": "GENERATED_UNREVIEWED",
+    "turn_ids": [
+      "322bc12d-fc55-53f1-8c7e-fee009373899"
+    ],
+    "timing": [
+      {
+        "turn_id": "322bc12d-fc55-53f1-8c7e-fee009373899",
+        "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+        "character_id": null,
+        "candidate_id": "cs-C-pocket-C",
+        "text": "Praha",
+        "start_frame": 0,
+        "end_frame": 30720,
+        "start_ms": 0.0,
+        "end_ms": 1280.0,
+        "turn_sha256": "17c18c55354f07ca6c023e824cbcca9e4a7810c352cd3a22cc7f6d09ffa172e0"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_WORDS_CITY_PRA.wav",
+    "sha256": "17c18c55354f07ca6c023e824cbcca9e4a7810c352cd3a22cc7f6d09ffa172e0",
+    "bytes": 61484,
+    "metrics": {
+      "frames": 30720,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.28,
+      "peak_dbfs": -1.904931212128432,
+      "rms_dbfs": -22.0002663715937,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -20.0,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "cef5b00e-9f5e-553b-b5a5-735b95f31410",
+    "stable_code": "AUD_CZE_M01_WORDS_CITY_PRA_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "7c1ea1ae-b3c8-57f9-8900-41690f0dd999",
+    "script_id": "ecb2acdd-5c20-52b4-b9ff-d15d42060424",
+    "script_hash": "76b93f17af6321dd22680232b564f744e5de4e90412ed5bc884022842d6cb5ab",
+    "transcript": "Praha",
+    "status": "GENERATED_UNREVIEWED",
+    "turn_ids": [
+      "322bc12d-fc55-53f1-8c7e-fee009373899"
+    ],
+    "timing": [
+      {
+        "turn_id": "322bc12d-fc55-53f1-8c7e-fee009373899",
+        "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+        "character_id": null,
+        "candidate_id": "cs-C-pocket-C",
+        "text": "Praha",
+        "start_frame": 0,
+        "end_frame": 38006,
+        "start_ms": 0.0,
+        "end_ms": 1583.5833333333333,
+        "turn_sha256": "3b547d3100925ca898e231d913e1f205df81db2641b067065249978919e6f17f"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_WORDS_CITY_PRA_SLOW.wav",
+    "sha256": "ff05c8001d926d6eeb38b847768e0e2cbda0dbe1832614584d29a82db198f41c",
+    "bytes": 76056,
+    "metrics": {
+      "frames": 38006,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.5835833333333333,
+      "peak_dbfs": -2.0011839355428833,
+      "rms_dbfs": -21.69386495736211,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -18.7,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "69f68fd6-4b46-570a-b5ad-434ae62c9df4",
+    "stable_code": "AUD_CZE_M01_WORDS_CITY_BRN",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "f25fed3a-eca0-57b6-b18b-c563788376a8",
+    "script_hash": "cc5648ac30cd45cc05671c94f07278d6120dfb87d4a38dc9e68c9194b9b24950",
+    "transcript": "Brno",
+    "status": "GENERATED_UNREVIEWED",
+    "turn_ids": [
+      "2ecc1114-1ea4-569e-b591-080d01071535"
+    ],
+    "timing": [
+      {
+        "turn_id": "2ecc1114-1ea4-569e-b591-080d01071535",
+        "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+        "character_id": null,
+        "candidate_id": "cs-C-pocket-C",
+        "text": "Brno",
+        "start_frame": 0,
+        "end_frame": 28800,
+        "start_ms": 0.0,
+        "end_ms": 1200.0,
+        "turn_sha256": "4c6ab8460007a27d4951c4d4e2608886ebabfb96c3a29d45327829273f900d19"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_WORDS_CITY_BRN.wav",
+    "sha256": "4c6ab8460007a27d4951c4d4e2608886ebabfb96c3a29d45327829273f900d19",
+    "bytes": 57644,
+    "metrics": {
+      "frames": 28800,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.2,
+      "peak_dbfs": -4.237734380849389,
+      "rms_dbfs": -22.000268672675872,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -19.7,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "6fad342a-6cdc-573a-9088-305e3b97dae7",
+    "stable_code": "AUD_CZE_M01_WORDS_CITY_BRN_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "69f68fd6-4b46-570a-b5ad-434ae62c9df4",
+    "script_id": "f25fed3a-eca0-57b6-b18b-c563788376a8",
+    "script_hash": "cc5648ac30cd45cc05671c94f07278d6120dfb87d4a38dc9e68c9194b9b24950",
+    "transcript": "Brno",
+    "status": "GENERATED_UNREVIEWED",
+    "turn_ids": [
+      "2ecc1114-1ea4-569e-b591-080d01071535"
+    ],
+    "timing": [
+      {
+        "turn_id": "2ecc1114-1ea4-569e-b591-080d01071535",
+        "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+        "character_id": null,
+        "candidate_id": "cs-C-pocket-C",
+        "text": "Brno",
+        "start_frame": 0,
+        "end_frame": 35632,
+        "start_ms": 0.0,
+        "end_ms": 1484.6666666666667,
+        "turn_sha256": "b5ac0c723a73a07d6bf074dfea54d1497e0fb4d27dc90da2d175b600e127aa88"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_WORDS_CITY_BRN_SLOW.wav",
+    "sha256": "1b4d0c3c548c632028bcc7182a2ba890d73a6237c5e4cc9c903f27faca9369f7",
+    "bytes": 71308,
+    "metrics": {
+      "frames": 35632,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.4846666666666666,
+      "peak_dbfs": -4.250264705097038,
+      "rms_dbfs": -21.975787495248515,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -19.4,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "72b74df5-cab9-5078-99df-3a08dc489329",
+    "stable_code": "AUD_CZE_M01_WORDS_CITY_KYI",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "55b478bb-4073-524a-b733-e9780fb35af5",
+    "script_hash": "dcf60f7222885159ebb0a519ddd25d3979f0ba9c39dd3d0eb10ffbea31833b04",
+    "transcript": "Kyjev",
+    "status": "GENERATED_UNREVIEWED",
+    "turn_ids": [
+      "704258f9-70ed-5875-a86b-bb3b4742388a"
+    ],
+    "timing": [
+      {
+        "turn_id": "704258f9-70ed-5875-a86b-bb3b4742388a",
+        "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+        "character_id": null,
+        "candidate_id": "cs-C-pocket-C",
+        "text": "Kyjev",
+        "start_frame": 0,
+        "end_frame": 34560,
+        "start_ms": 0.0,
+        "end_ms": 1440.0,
+        "turn_sha256": "de4e54ca1b5f57bf425080d007b572f4fb831a1348562b710397cad43136937f"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_WORDS_CITY_KYI.wav",
+    "sha256": "de4e54ca1b5f57bf425080d007b572f4fb831a1348562b710397cad43136937f",
+    "bytes": 69164,
+    "metrics": {
+      "frames": 34560,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.44,
+      "peak_dbfs": -3.9866550292162577,
+      "rms_dbfs": -22.000261314757637,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -18.2,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "b299e900-f77b-5e43-92f6-5be6bd06cada",
+    "stable_code": "AUD_CZE_M01_WORDS_CITY_KYI_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "72b74df5-cab9-5078-99df-3a08dc489329",
+    "script_id": "55b478bb-4073-524a-b733-e9780fb35af5",
+    "script_hash": "dcf60f7222885159ebb0a519ddd25d3979f0ba9c39dd3d0eb10ffbea31833b04",
+    "transcript": "Kyjev",
+    "status": "GENERATED_UNREVIEWED",
+    "turn_ids": [
+      "704258f9-70ed-5875-a86b-bb3b4742388a"
+    ],
+    "timing": [
+      {
+        "turn_id": "704258f9-70ed-5875-a86b-bb3b4742388a",
+        "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+        "character_id": null,
+        "candidate_id": "cs-C-pocket-C",
+        "text": "Kyjev",
+        "start_frame": 0,
+        "end_frame": 42850,
+        "start_ms": 0.0,
+        "end_ms": 1785.4166666666667,
+        "turn_sha256": "316f0ddda3c6c9077e0210d242c9febd294b1dec1da2195f54002ae3c3762da0"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_WORDS_CITY_KYI_SLOW.wav",
+    "sha256": "901231f95193f6448dfd758244787b797bb2bb3b1688981438834d820a2fa7a8",
+    "bytes": 85744,
+    "metrics": {
+      "frames": 42850,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.7854166666666667,
+      "peak_dbfs": -4.03038944852511,
+      "rms_dbfs": -21.669868375503164,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -17.7,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "1a06ace3-bd66-55e8-8066-b4f8372b2639",
+    "stable_code": "AUD_CZE_M01_WORDS_CITY_FROM_PRA",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "d2697605-05c0-55c7-9f4f-386effde6b95",
+    "script_hash": "c6e6a97be26eabb99a0cbdf42c4217eb174ab03a1e6dda040acee3915163dd27",
+    "transcript": "Jsem z Prahy.",
+    "status": "GENERATED_UNREVIEWED",
+    "turn_ids": [
+      "6488cfb7-bfe3-5e5e-8269-463a34b6db0a"
+    ],
+    "timing": [
+      {
+        "turn_id": "6488cfb7-bfe3-5e5e-8269-463a34b6db0a",
+        "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+        "character_id": null,
+        "candidate_id": "cs-C-pocket-C",
+        "text": "Jsem z Prahy.",
+        "start_frame": 0,
+        "end_frame": 36480,
+        "start_ms": 0.0,
+        "end_ms": 1520.0,
+        "turn_sha256": "8a8cd150457c6b5b3665b2c98487db65a7e54fc48efa1b08551b3ee10eb78060"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_WORDS_CITY_FROM_PRA.wav",
+    "sha256": "8a8cd150457c6b5b3665b2c98487db65a7e54fc48efa1b08551b3ee10eb78060",
+    "bytes": 73004,
+    "metrics": {
+      "frames": 36480,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.52,
+      "peak_dbfs": -4.49095204131946,
+      "rms_dbfs": -22.000262012711552,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -20.5,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "31a990dd-6e22-5c67-ad9f-2846eb986d33",
+    "stable_code": "AUD_CZE_M01_WORDS_CITY_FROM_PRA_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "1a06ace3-bd66-55e8-8066-b4f8372b2639",
+    "script_id": "d2697605-05c0-55c7-9f4f-386effde6b95",
+    "script_hash": "c6e6a97be26eabb99a0cbdf42c4217eb174ab03a1e6dda040acee3915163dd27",
+    "transcript": "Jsem z Prahy.",
+    "status": "GENERATED_UNREVIEWED",
+    "turn_ids": [
+      "6488cfb7-bfe3-5e5e-8269-463a34b6db0a"
+    ],
+    "timing": [
+      {
+        "turn_id": "6488cfb7-bfe3-5e5e-8269-463a34b6db0a",
+        "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+        "character_id": null,
+        "candidate_id": "cs-C-pocket-C",
+        "text": "Jsem z Prahy.",
+        "start_frame": 0,
+        "end_frame": 45204,
+        "start_ms": 0.0,
+        "end_ms": 1883.5,
+        "turn_sha256": "441d3e4023eb4a83452ed57f9a5dea108d92ccd6a59f9ab4e1556f5102d89f40"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_WORDS_CITY_FROM_PRA_SLOW.wav",
+    "sha256": "d0fbae2cfb1ce1570485dd53f126e80c28e4fd4cfd5d1ba4f72e563da5b9a902",
+    "bytes": 90452,
+    "metrics": {
+      "frames": 45204,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.8835,
+      "peak_dbfs": -4.5087519136035255,
+      "rms_dbfs": -21.62654973451881,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -19.6,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "3786b067-6685-5fd8-817c-539974ac2875",
+    "stable_code": "AUD_CZE_M01_WORDS_CITY_FROM_BRN",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "e1f007ef-eb54-513f-9dec-3266498f9b0d",
+    "script_hash": "f7754f2e5e30ea9f4f69b15595c53134240fc396b7a30a7d85fa7823e0c8ac72",
+    "transcript": "Jsem z Brna.",
+    "status": "GENERATED_UNREVIEWED",
+    "turn_ids": [
+      "0443c82d-057b-5cf2-b1ea-85973eaba174"
+    ],
+    "timing": [
+      {
+        "turn_id": "0443c82d-057b-5cf2-b1ea-85973eaba174",
+        "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+        "character_id": null,
+        "candidate_id": "cs-C-pocket-C",
+        "text": "Jsem z Brna.",
+        "start_frame": 0,
+        "end_frame": 34560,
+        "start_ms": 0.0,
+        "end_ms": 1440.0,
+        "turn_sha256": "191ee4546437998d496755846d71b5bf6cf8eda0afaddf5694a039769823e176"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_WORDS_CITY_FROM_BRN.wav",
+    "sha256": "191ee4546437998d496755846d71b5bf6cf8eda0afaddf5694a039769823e176",
+    "bytes": 69164,
+    "metrics": {
+      "frames": 34560,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.44,
+      "peak_dbfs": -4.838325096168404,
+      "rms_dbfs": -22.000260267349073,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -20.3,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "cc5ddfd0-4f07-5f75-8eaf-85b159739b05",
+    "stable_code": "AUD_CZE_M01_WORDS_CITY_FROM_BRN_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "3786b067-6685-5fd8-817c-539974ac2875",
+    "script_id": "e1f007ef-eb54-513f-9dec-3266498f9b0d",
+    "script_hash": "f7754f2e5e30ea9f4f69b15595c53134240fc396b7a30a7d85fa7823e0c8ac72",
+    "transcript": "Jsem z Brna.",
+    "status": "GENERATED_UNREVIEWED",
+    "turn_ids": [
+      "0443c82d-057b-5cf2-b1ea-85973eaba174"
+    ],
+    "timing": [
+      {
+        "turn_id": "0443c82d-057b-5cf2-b1ea-85973eaba174",
+        "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+        "character_id": null,
+        "candidate_id": "cs-C-pocket-C",
+        "text": "Jsem z Brna.",
+        "start_frame": 0,
+        "end_frame": 42686,
+        "start_ms": 0.0,
+        "end_ms": 1778.5833333333333,
+        "turn_sha256": "8c2dfacb6c021bc1c1833c04ff3dfacf3c74284bd4fe2143941c0e7b8ca96427"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_WORDS_CITY_FROM_BRN_SLOW.wav",
+    "sha256": "6d914cf5a96d806ae705feb7acb33d4394700115491935e1ee966c7ece9a0a85",
+    "bytes": 85416,
+    "metrics": {
+      "frames": 42686,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.7785833333333334,
+      "peak_dbfs": -4.901478594953917,
+      "rms_dbfs": -21.59076123705251,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -20.0,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "c01843c8-165f-51a1-9d92-c5a1145b3be4",
+    "stable_code": "AUD_CZE_M01_WORDS_CITY_FROM_KYI",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "cd46c4b6-9368-5d98-8589-36255873f42f",
+    "script_hash": "a831aba2382f32730fb10d65d70f57d408b5cab9019645f98fa43cfa4bea4565",
+    "transcript": "Jsem z Kyjeva.",
+    "status": "GENERATED_UNREVIEWED",
+    "turn_ids": [
+      "0aacb5e1-67b5-565a-8a88-334eec027ce7"
+    ],
+    "timing": [
+      {
+        "turn_id": "0aacb5e1-67b5-565a-8a88-334eec027ce7",
+        "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+        "character_id": null,
+        "candidate_id": "cs-C-pocket-C",
+        "text": "Jsem z Kyjeva.",
+        "start_frame": 0,
+        "end_frame": 40320,
+        "start_ms": 0.0,
+        "end_ms": 1680.0,
+        "turn_sha256": "14d9dc952a32d722352da6c9a9a98e73f1b6bc4cbe7f491d3c45c568b51234de"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_WORDS_CITY_FROM_KYI.wav",
+    "sha256": "14d9dc952a32d722352da6c9a9a98e73f1b6bc4cbe7f491d3c45c568b51234de",
+    "bytes": 80684,
+    "metrics": {
+      "frames": 40320,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.68,
+      "peak_dbfs": -3.3799831490004633,
+      "rms_dbfs": -22.00027277825547,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -19.5,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "e34eead2-af24-5d3a-8996-4537ab55436d",
+    "stable_code": "AUD_CZE_M01_WORDS_CITY_FROM_KYI_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "c01843c8-165f-51a1-9d92-c5a1145b3be4",
+    "script_id": "cd46c4b6-9368-5d98-8589-36255873f42f",
+    "script_hash": "a831aba2382f32730fb10d65d70f57d408b5cab9019645f98fa43cfa4bea4565",
+    "transcript": "Jsem z Kyjeva.",
+    "status": "GENERATED_UNREVIEWED",
+    "turn_ids": [
+      "0aacb5e1-67b5-565a-8a88-334eec027ce7"
+    ],
+    "timing": [
+      {
+        "turn_id": "0aacb5e1-67b5-565a-8a88-334eec027ce7",
+        "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+        "character_id": null,
+        "candidate_id": "cs-C-pocket-C",
+        "text": "Jsem z Kyjeva.",
+        "start_frame": 0,
+        "end_frame": 49925,
+        "start_ms": 0.0,
+        "end_ms": 2080.2083333333335,
+        "turn_sha256": "91093993edb2ffd0f3c6ca23f07f1249adc2ff939733366a5795a88cbbccbb2c"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_WORDS_CITY_FROM_KYI_SLOW.wav",
+    "sha256": "f133ef5ca8f2ab56eb05a7683f04d64efe06a1f8183e466c6de5adee06e5548e",
+    "bytes": 99894,
+    "metrics": {
+      "frames": 49925,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 2.080208333333333,
+      "peak_dbfs": -3.3858526545541916,
+      "rms_dbfs": -21.587100914959237,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -19.2,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "93cb08ff-3f01-5a46-94e1-df4b9b7c9023",
+    "stable_code": "AUD_CZE_M01_WORDS_NUM_00",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "77677498-892b-5d8a-9beb-d345df6d6645",
+    "script_hash": "a7c266f7e2830f378f2fcee9bcb29832bd54f16f2ceec7961b5a42dc18fbef9c",
+    "transcript": "nula",
+    "status": "GENERATED_UNREVIEWED",
+    "turn_ids": [
+      "7b209904-ebfa-528d-88b0-05d73e61bd2d"
+    ],
+    "timing": [
+      {
+        "turn_id": "7b209904-ebfa-528d-88b0-05d73e61bd2d",
+        "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+        "character_id": null,
+        "candidate_id": "cs-C-pocket-C",
+        "text": "nula",
+        "start_frame": 0,
+        "end_frame": 32640,
+        "start_ms": 0.0,
+        "end_ms": 1360.0,
+        "turn_sha256": "e6a6f302357eaf36bd792e0145ccc719ebbe841abc7fb60155f1dfd302ac1c68"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_WORDS_NUM_00.wav",
+    "sha256": "e6a6f302357eaf36bd792e0145ccc719ebbe841abc7fb60155f1dfd302ac1c68",
+    "bytes": 65324,
+    "metrics": {
+      "frames": 32640,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.36,
+      "peak_dbfs": -5.532025091947615,
+      "rms_dbfs": -22.00026708963485,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -19.3,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "9b524368-69c3-594a-ae2f-33d887a1f7b1",
+    "stable_code": "AUD_CZE_M01_WORDS_NUM_00_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "93cb08ff-3f01-5a46-94e1-df4b9b7c9023",
+    "script_id": "77677498-892b-5d8a-9beb-d345df6d6645",
+    "script_hash": "a7c266f7e2830f378f2fcee9bcb29832bd54f16f2ceec7961b5a42dc18fbef9c",
+    "transcript": "nula",
+    "status": "GENERATED_UNREVIEWED",
+    "turn_ids": [
+      "7b209904-ebfa-528d-88b0-05d73e61bd2d"
+    ],
+    "timing": [
+      {
+        "turn_id": "7b209904-ebfa-528d-88b0-05d73e61bd2d",
+        "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+        "character_id": null,
+        "candidate_id": "cs-C-pocket-C",
+        "text": "nula",
+        "start_frame": 0,
+        "end_frame": 40425,
+        "start_ms": 0.0,
+        "end_ms": 1684.375,
+        "turn_sha256": "83630db31d8205cb19dfcc7ba0deaee487c38c769de627a8357aac6c780967b8"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_WORDS_NUM_00_SLOW.wav",
+    "sha256": "2fb98cba965860aaea45e846e1e996169c763c35fd911fc05a7dd46b8192a0cd",
+    "bytes": 80894,
+    "metrics": {
+      "frames": 40425,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.684375,
+      "peak_dbfs": -5.548578725675387,
+      "rms_dbfs": -21.718665199308496,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -18.8,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "108fda64-3d51-561d-8921-2b84657fdd5e",
+    "stable_code": "AUD_CZE_M01_WORDS_NUM_01",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "03844213-7eb1-553a-ae7b-6bc1a2d052c1",
+    "script_hash": "632b3f60cf75ab5b659138159be845227e59cae2467b549955eeccf143da1e30",
+    "transcript": "jedna",
+    "status": "GENERATED_UNREVIEWED",
+    "turn_ids": [
+      "24cc8713-b643-532e-a337-04808e166927"
+    ],
+    "timing": [
+      {
+        "turn_id": "24cc8713-b643-532e-a337-04808e166927",
+        "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+        "character_id": null,
+        "candidate_id": "cs-C-pocket-C",
+        "text": "jedna",
+        "start_frame": 0,
+        "end_frame": 30720,
+        "start_ms": 0.0,
+        "end_ms": 1280.0,
+        "turn_sha256": "0592f8b86e00e5b513cd4f93cf59d69ebe2569ba7faed833c2a64031ce34d406"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_WORDS_NUM_01.wav",
+    "sha256": "0592f8b86e00e5b513cd4f93cf59d69ebe2569ba7faed833c2a64031ce34d406",
+    "bytes": 61484,
+    "metrics": {
+      "frames": 30720,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.28,
+      "peak_dbfs": -4.147105658348099,
+      "rms_dbfs": -22.000265770165463,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -20.2,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "65f55db7-46b0-539b-bb61-43e34ad14723",
+    "stable_code": "AUD_CZE_M01_WORDS_NUM_01_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "108fda64-3d51-561d-8921-2b84657fdd5e",
+    "script_id": "03844213-7eb1-553a-ae7b-6bc1a2d052c1",
+    "script_hash": "632b3f60cf75ab5b659138159be845227e59cae2467b549955eeccf143da1e30",
+    "transcript": "jedna",
+    "status": "GENERATED_UNREVIEWED",
+    "turn_ids": [
+      "24cc8713-b643-532e-a337-04808e166927"
+    ],
+    "timing": [
+      {
+        "turn_id": "24cc8713-b643-532e-a337-04808e166927",
+        "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+        "character_id": null,
+        "candidate_id": "cs-C-pocket-C",
+        "text": "jedna",
+        "start_frame": 0,
+        "end_frame": 38072,
+        "start_ms": 0.0,
+        "end_ms": 1586.3333333333333,
+        "turn_sha256": "3749be4558955e7018b5835f4ced5774a2d43f9271ed7f230630a48d762359a5"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_WORDS_NUM_01_SLOW.wav",
+    "sha256": "a26e3d893d2f7f4a63ad5bd044b8bea595bced8df8e98634fc4b20a3d89b08bd",
+    "bytes": 76188,
+    "metrics": {
+      "frames": 38072,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.5863333333333334,
+      "peak_dbfs": -4.3428559526242,
+      "rms_dbfs": -21.770747786946778,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -19.0,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "e6de0344-1669-52fa-84a8-8c903e27c651",
+    "stable_code": "AUD_CZE_M01_WORDS_NUM_02",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "8d36430b-c5b9-555c-8e18-1b0f49a1f7e9",
+    "script_hash": "27bb152beb39c278dede20e86c43e6c21169b26984aa64661ea50c86f8cfee7e",
+    "transcript": "dva",
+    "status": "GENERATED_UNREVIEWED",
+    "turn_ids": [
+      "3ddc28c1-d8f9-5bd1-97b4-ae91a5050a5a"
+    ],
+    "timing": [
+      {
+        "turn_id": "3ddc28c1-d8f9-5bd1-97b4-ae91a5050a5a",
+        "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+        "character_id": null,
+        "candidate_id": "cs-C-pocket-C",
+        "text": "dva",
+        "start_frame": 0,
+        "end_frame": 28800,
+        "start_ms": 0.0,
+        "end_ms": 1200.0,
+        "turn_sha256": "ebb9c3e4e4940505798744f48e77af92d8fb239c6bf007ac06cbca9ee0e8be26"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_WORDS_NUM_02.wav",
+    "sha256": "ebb9c3e4e4940505798744f48e77af92d8fb239c6bf007ac06cbca9ee0e8be26",
+    "bytes": 57644,
+    "metrics": {
+      "frames": 28800,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.2,
+      "peak_dbfs": -2.653533787460312,
+      "rms_dbfs": -22.000265794634398,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -18.8,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "1b39572f-6202-587e-a9ff-acff38ca1f63",
+    "stable_code": "AUD_CZE_M01_WORDS_NUM_02_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "e6de0344-1669-52fa-84a8-8c903e27c651",
+    "script_id": "8d36430b-c5b9-555c-8e18-1b0f49a1f7e9",
+    "script_hash": "27bb152beb39c278dede20e86c43e6c21169b26984aa64661ea50c86f8cfee7e",
+    "transcript": "dva",
+    "status": "GENERATED_UNREVIEWED",
+    "turn_ids": [
+      "3ddc28c1-d8f9-5bd1-97b4-ae91a5050a5a"
+    ],
+    "timing": [
+      {
+        "turn_id": "3ddc28c1-d8f9-5bd1-97b4-ae91a5050a5a",
+        "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+        "character_id": null,
+        "candidate_id": "cs-C-pocket-C",
+        "text": "dva",
+        "start_frame": 0,
+        "end_frame": 35457,
+        "start_ms": 0.0,
+        "end_ms": 1477.375,
+        "turn_sha256": "b678f96e45342520567b502b02a7beaacad6bcf27344e03f488f3538b55fa7af"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_WORDS_NUM_02_SLOW.wav",
+    "sha256": "63989aacff83de583baadbdc10601b453e56a0e108997d42532a6789b38b37ef",
+    "bytes": 70958,
+    "metrics": {
+      "frames": 35457,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.477375,
+      "peak_dbfs": -2.6852525665110534,
+      "rms_dbfs": -21.95190121213736,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -18.6,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "ee302fc2-6b2c-5d0b-99a5-e09416c3b0ee",
+    "stable_code": "AUD_CZE_M01_WORDS_NUM_03",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "bb88127b-8899-580f-ae8f-ea74b4803bb7",
+    "script_hash": "11b801fc1caca85e1dc1d4d15807aa9a9477c4011db6ae013d63767a089fee29",
+    "transcript": "tři",
+    "status": "GENERATED_UNREVIEWED",
+    "turn_ids": [
+      "b1e17a52-6df7-5e54-9fb3-c1444365dde3"
+    ],
+    "timing": [
+      {
+        "turn_id": "b1e17a52-6df7-5e54-9fb3-c1444365dde3",
+        "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+        "character_id": null,
+        "candidate_id": "cs-C-pocket-C",
+        "text": "tři",
+        "start_frame": 0,
+        "end_frame": 26880,
+        "start_ms": 0.0,
+        "end_ms": 1120.0,
+        "turn_sha256": "91b4e3bac63d2e0808f86f097d54299b4b2b24e926a7aad60061a6b9e5e3faa4"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_WORDS_NUM_03.wav",
+    "sha256": "91b4e3bac63d2e0808f86f097d54299b4b2b24e926a7aad60061a6b9e5e3faa4",
+    "bytes": 53804,
+    "metrics": {
+      "frames": 26880,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.12,
+      "peak_dbfs": -4.474963284594739,
+      "rms_dbfs": -22.00027593967406,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -19.2,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "97446b01-19bf-5d29-8ffc-022dedc66d4b",
+    "stable_code": "AUD_CZE_M01_WORDS_NUM_03_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "ee302fc2-6b2c-5d0b-99a5-e09416c3b0ee",
+    "script_id": "bb88127b-8899-580f-ae8f-ea74b4803bb7",
+    "script_hash": "11b801fc1caca85e1dc1d4d15807aa9a9477c4011db6ae013d63767a089fee29",
+    "transcript": "tři",
+    "status": "GENERATED_UNREVIEWED",
+    "turn_ids": [
+      "b1e17a52-6df7-5e54-9fb3-c1444365dde3"
+    ],
+    "timing": [
+      {
+        "turn_id": "b1e17a52-6df7-5e54-9fb3-c1444365dde3",
+        "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+        "character_id": null,
+        "candidate_id": "cs-C-pocket-C",
+        "text": "tři",
+        "start_frame": 0,
+        "end_frame": 33135,
+        "start_ms": 0.0,
+        "end_ms": 1380.625,
+        "turn_sha256": "e02fe096e939c980835333460b8cb7cac8fafbdc1e78ef05c025dd573e068f62"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_WORDS_NUM_03_SLOW.wav",
+    "sha256": "80755403648288743b83ec59c4ff0e99bc54d47c6fb44db5a3129b136a5ba40c",
+    "bytes": 66314,
+    "metrics": {
+      "frames": 33135,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.380625,
+      "peak_dbfs": -4.551621025623153,
+      "rms_dbfs": -21.72313494968879,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -18.8,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "38aaf170-0dd9-5682-9176-097728cfea6a",
+    "stable_code": "AUD_CZE_M01_WORDS_NUM_04",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "e2c0c544-3f87-52e0-834b-6029d555a776",
+    "script_hash": "d873ba7778af3969c71f92a70a28cb6d1d081f062e160ad3424a02b7ef99eddc",
+    "transcript": "čtyři",
+    "status": "GENERATED_UNREVIEWED",
+    "turn_ids": [
+      "bdac882a-2787-55e3-89e2-22e5b9446a32"
+    ],
+    "timing": [
+      {
+        "turn_id": "bdac882a-2787-55e3-89e2-22e5b9446a32",
+        "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+        "character_id": null,
+        "candidate_id": "cs-C-pocket-C",
+        "text": "čtyři",
+        "start_frame": 0,
+        "end_frame": 34560,
+        "start_ms": 0.0,
+        "end_ms": 1440.0,
+        "turn_sha256": "0d27077217ec9bda0c9538e94adceffe91613303a0b5b0254be725f9bb9a701d"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_WORDS_NUM_04.wav",
+    "sha256": "0d27077217ec9bda0c9538e94adceffe91613303a0b5b0254be725f9bb9a701d",
+    "bytes": 69164,
+    "metrics": {
+      "frames": 34560,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.44,
+      "peak_dbfs": -4.043468386213309,
+      "rms_dbfs": -22.00026592695695,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -19.0,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "f41902f1-ecec-547d-b2a9-bae8e8eb06bf",
+    "stable_code": "AUD_CZE_M01_WORDS_NUM_04_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "38aaf170-0dd9-5682-9176-097728cfea6a",
+    "script_id": "e2c0c544-3f87-52e0-834b-6029d555a776",
+    "script_hash": "d873ba7778af3969c71f92a70a28cb6d1d081f062e160ad3424a02b7ef99eddc",
+    "transcript": "čtyři",
+    "status": "GENERATED_UNREVIEWED",
+    "turn_ids": [
+      "bdac882a-2787-55e3-89e2-22e5b9446a32"
+    ],
+    "timing": [
+      {
+        "turn_id": "bdac882a-2787-55e3-89e2-22e5b9446a32",
+        "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+        "character_id": null,
+        "candidate_id": "cs-C-pocket-C",
+        "text": "čtyři",
+        "start_frame": 0,
+        "end_frame": 42811,
+        "start_ms": 0.0,
+        "end_ms": 1783.7916666666667,
+        "turn_sha256": "29c2cc527dd3c5d8e9eff72606b21df51120f5cf366dff40cd67495037c2f3ca"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_WORDS_NUM_04_SLOW.wav",
+    "sha256": "6b79cb36c2337855348bdd5629ae1225cc81dbd81878fdff3dc66cca44c17762",
+    "bytes": 85666,
+    "metrics": {
+      "frames": 42811,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.7837916666666667,
+      "peak_dbfs": -4.101080818989842,
+      "rms_dbfs": -21.66979104748706,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -18.4,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "f676e83d-3b24-5324-bc9a-57db48d7fcb9",
+    "stable_code": "AUD_CZE_M01_WORDS_NUM_05",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "341b3a17-5cfd-5a1e-b04f-db08532f3512",
+    "script_hash": "b3fdecd8b287dc91cd41a5e39180bf8858db007a4c4ea4a2db0766d6eb77132c",
+    "transcript": "pět",
+    "status": "GENERATED_UNREVIEWED",
+    "turn_ids": [
+      "89687ef5-a227-52ff-8bf2-afdad08c3ef6"
+    ],
+    "timing": [
+      {
+        "turn_id": "89687ef5-a227-52ff-8bf2-afdad08c3ef6",
+        "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+        "character_id": null,
+        "candidate_id": "cs-C-pocket-C",
+        "text": "pět",
+        "start_frame": 0,
+        "end_frame": 32640,
+        "start_ms": 0.0,
+        "end_ms": 1360.0,
+        "turn_sha256": "e38d0c861b58e00e4d7bec90dcd62779332d7c91e5eaf6cf8ab6cb39cd6fd8a9"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_WORDS_NUM_05.wav",
+    "sha256": "e38d0c861b58e00e4d7bec90dcd62779332d7c91e5eaf6cf8ab6cb39cd6fd8a9",
+    "bytes": 65324,
+    "metrics": {
+      "frames": 32640,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.36,
+      "peak_dbfs": -2.513985522444233,
+      "rms_dbfs": -22.000273506394507,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -18.3,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "abe105d5-18d9-5c67-b0f6-8ae04c87c845",
+    "stable_code": "AUD_CZE_M01_WORDS_NUM_05_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "f676e83d-3b24-5324-bc9a-57db48d7fcb9",
+    "script_id": "341b3a17-5cfd-5a1e-b04f-db08532f3512",
+    "script_hash": "b3fdecd8b287dc91cd41a5e39180bf8858db007a4c4ea4a2db0766d6eb77132c",
+    "transcript": "pět",
+    "status": "GENERATED_UNREVIEWED",
+    "turn_ids": [
+      "89687ef5-a227-52ff-8bf2-afdad08c3ef6"
+    ],
+    "timing": [
+      {
+        "turn_id": "89687ef5-a227-52ff-8bf2-afdad08c3ef6",
+        "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+        "character_id": null,
+        "candidate_id": "cs-C-pocket-C",
+        "text": "pět",
+        "start_frame": 0,
+        "end_frame": 40343,
+        "start_ms": 0.0,
+        "end_ms": 1680.9583333333333,
+        "turn_sha256": "44cb234d01fe79bf9b489813482f541af3d18b965309778816bc9d037e5589ee"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_WORDS_NUM_05_SLOW.wav",
+    "sha256": "c20c48f5f0a3fe73c776885a5456dd55f8b0fef8f4ff7c5f851353cc38319571",
+    "bytes": 80730,
+    "metrics": {
+      "frames": 40343,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.6809583333333333,
+      "peak_dbfs": -2.6578522610186415,
+      "rms_dbfs": -21.668648126185598,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -17.8,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "3075d45f-9184-52e5-994b-7d2a4799857e",
+    "stable_code": "AUD_CZE_M01_WORDS_NUM_06",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "dc900ff3-e68d-5a9a-affc-cc18690f511c",
+    "script_hash": "a57d309d7c8ba31396208bef7db394e0499eaac85868006dfdf4ab9b4f6d21fb",
+    "transcript": "šest",
+    "status": "GENERATED_UNREVIEWED",
+    "turn_ids": [
+      "ba705179-482f-597f-9cb5-81449542935b"
+    ],
+    "timing": [
+      {
+        "turn_id": "ba705179-482f-597f-9cb5-81449542935b",
+        "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+        "character_id": null,
+        "candidate_id": "cs-C-pocket-C",
+        "text": "šest",
+        "start_frame": 0,
+        "end_frame": 36480,
+        "start_ms": 0.0,
+        "end_ms": 1520.0,
+        "turn_sha256": "2d1076e601e07e3f64b0605188833d2fa69fb660f5ef3158c4b4fa5dbe31f14a"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_WORDS_NUM_06.wav",
+    "sha256": "2d1076e601e07e3f64b0605188833d2fa69fb660f5ef3158c4b4fa5dbe31f14a",
+    "bytes": 73004,
+    "metrics": {
+      "frames": 36480,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.52,
+      "peak_dbfs": -1.4018972179049685,
+      "rms_dbfs": -22.000269908746436,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -17.8,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "7b3ea339-910f-5acb-a680-b47c687e8bed",
+    "stable_code": "AUD_CZE_M01_WORDS_NUM_06_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "3075d45f-9184-52e5-994b-7d2a4799857e",
+    "script_id": "dc900ff3-e68d-5a9a-affc-cc18690f511c",
+    "script_hash": "a57d309d7c8ba31396208bef7db394e0499eaac85868006dfdf4ab9b4f6d21fb",
+    "transcript": "šest",
+    "status": "GENERATED_UNREVIEWED",
+    "turn_ids": [
+      "ba705179-482f-597f-9cb5-81449542935b"
+    ],
+    "timing": [
+      {
+        "turn_id": "ba705179-482f-597f-9cb5-81449542935b",
+        "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+        "character_id": null,
+        "candidate_id": "cs-C-pocket-C",
+        "text": "šest",
+        "start_frame": 0,
+        "end_frame": 45263,
+        "start_ms": 0.0,
+        "end_ms": 1885.9583333333333,
+        "turn_sha256": "cae92c2e93aa678947223c1e816c64fb637b17c991b18fd9abbf92cd8b77b26a"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_WORDS_NUM_06_SLOW.wav",
+    "sha256": "ceca09f9bd3cfc57d6f74f52fa2fec2654e2b382c45a84b5a4f8903f47fd8c14",
+    "bytes": 90570,
+    "metrics": {
+      "frames": 45263,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.8859583333333334,
+      "peak_dbfs": -1.4343538711624233,
+      "rms_dbfs": -21.747823501461507,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -17.4,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  }
+]

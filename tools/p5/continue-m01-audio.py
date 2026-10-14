@@ -98,12 +98,32 @@ def validate_continuation(root, selection, plan, cast):
     m.need({p.name for p in (root / 'attempts').iterdir()} == {key + '.json' for key in ids},
            'Attempt inventory differs from selected turns')
     model = m.read(m.ROOT / 'docs/p5/voice-audition/pocket-20261009/models.lock.json')
+    recovered = {}
+    recovery_path = root / 'processing-recovery.json'
+    if recovery_path.exists():
+        recovery = m.read(checked_file(root, 'processing-recovery.json'))
+        m.need(recovery['kind'] == 'VERIFIED_PROCESSING_CHECKPOINT' and recovery['synthesis_repeated'] is False,
+               'Invalid processing recovery')
+        m.need(recovery['journal_sha256'] == m.sha(job_path) and
+               recovery['script_sha256'] == m.sha(Path(__file__).with_name('recover-m01-pocket-journal.py')),
+               'Processing recovery provenance changed')
+        for proof in recovery['turns']:
+            key = proof['turn']['turn_id']
+            m.need(key in ids and key not in recovered and proof['normal_and_slow_byte_identical_to_rederived'] is True,
+                   'Duplicate, out-of-scope or unverified processing recovery')
+            original_path = checked_file(root, 'attempts/' + key + '.json')
+            original = m.read(original_path)
+            m.need(original['status'] == 'STARTED' and m.sha(original_path) == proof['original_record_sha256'],
+                   'Original processing record changed')
+            m.need(all(proof['turn'].get(k) == v for k, v in original.items() if k != 'status')
+                   and 'elapsed_seconds' not in proof['turn'], 'Recovery changed source or invented completion timing')
+            recovered[key] = proof['turn']
     rows = {}
     records = []
     for expected in pending:
         key = expected['turn_id']
         path = checked_file(root, 'attempts/' + key + '.json')
-        row = m.read(path)
+        row = recovered.get(key, m.read(path))
         m.need(all(row.get(k) == v for k, v in expected.items()), 'Turn text, identity, cast or seed changed')
         m.need(row['engine'] == 'pocket' and row['status'] == 'GENERATED_UNREVIEWED', 'Turn is not complete')
         m.need(row['infrastructure_retry'] is False and row['continuation_plan_sha256'] is None, 'Retry not permitted')
@@ -125,7 +145,10 @@ def validate_continuation(root, selection, plan, cast):
                'Turn exceeds duration limit')
         rows[key] = row
         records.append({'path': 'attempts/' + key + '.json', 'sha256': m.sha(path)})
-    return rows, {'journal_sha256': m.sha(job_path), 'attempt_records': records}
+    provenance = {'journal_sha256': m.sha(job_path), 'attempt_records': records}
+    if recovered:
+        provenance.update(processing_recovery_sha256=m.sha(recovery_path), recovered_turn_ids=list(recovered), synthesis_repeated=False)
+    return rows, provenance
 
 
 def asset_pcm(asset, completed, roots, plan):

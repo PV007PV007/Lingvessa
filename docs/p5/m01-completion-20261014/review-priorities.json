@@ -1,0 +1,3699 @@
+{
+  "scope": "AUTOMATIC_TRIAGE_NOT_HUMAN_REVIEW",
+  "flagged_files": 243,
+  "rows": [
+    {
+      "asset_id": "b5f5ddd4-2163-58a7-837c-93ec0cc66e9d",
+      "stable_code": "AUD_ENG_M01_WORDS_HI",
+      "audio_sha256": "68eb28e85d40b03e9e2a690942d348e09b00f24376d98edef411c6c5a1ddd992",
+      "language": "en",
+      "speed": "normal",
+      "expected": "Hi.",
+      "small_asr": "Bye.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "f34bdcd7-9ef3-5f4b-bb6a-319aab610428"
+      ]
+    },
+    {
+      "asset_id": "05b33953-9d28-5087-b13d-c6071efd2ae0",
+      "stable_code": "AUD_ENG_M01_WORDS_HI_SLOW",
+      "audio_sha256": "2ff1e074ab8a1b5834d23f73f3f11b05ae93c4fba4d011a6066e2ae69e554dbb",
+      "language": "en",
+      "speed": "slow",
+      "expected": "Hi.",
+      "small_asr": "Bye.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "f34bdcd7-9ef3-5f4b-bb6a-319aab610428"
+      ]
+    },
+    {
+      "asset_id": "7dfd60bb-998f-53ae-8ff0-5d1c1dbb1c0b",
+      "stable_code": "AUD_ENG_M01_WORDS_GOOD_EVENING_SLOW",
+      "audio_sha256": "c83df1877850ef2213154bf156e8caae13ad5e52958b98fc0bd44f00a46a7dca",
+      "language": "en",
+      "speed": "slow",
+      "expected": "Good evening.",
+      "small_asr": "Brodieving",
+      "word_edits": 2,
+      "reference_words": 2,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "93585dc3-c0ef-55dd-b794-a8f39d166f98"
+      ]
+    },
+    {
+      "asset_id": "85176529-1d14-582f-a76b-e48978c46f0a",
+      "stable_code": "AUD_ENG_M01_WORDS_GOODBYE",
+      "audio_sha256": "0059d6d10dc78b85e6e4377ae83e9a42ef655c8966e25b71648864073ce6781a",
+      "language": "en",
+      "speed": "normal",
+      "expected": "Goodbye.",
+      "small_asr": "Buh-bye.",
+      "word_edits": 2,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "44427884-2ffc-5eaa-b2b0-e815630fedd5"
+      ]
+    },
+    {
+      "asset_id": "b8a73775-fdda-56a1-bf88-ca7d22c1b685",
+      "stable_code": "AUD_ENG_M01_WORDS_GOODBYE_SLOW",
+      "audio_sha256": "2aa7b6519ae45d8a6ea84c169cb364dda17b3cda0cba42d10456bd64338089dd",
+      "language": "en",
+      "speed": "slow",
+      "expected": "Goodbye.",
+      "small_asr": "Buh-bye.",
+      "word_edits": 2,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "44427884-2ffc-5eaa-b2b0-e815630fedd5"
+      ]
+    },
+    {
+      "asset_id": "d6adb066-545b-5543-8280-b1b28c5b5408",
+      "stable_code": "AUD_ENG_M01_WORDS_NAME_MAYA",
+      "audio_sha256": "1284c298a66ce5ae9644ecb41e352b5a4d0a923a3183ba44f798dc3d7c07656e",
+      "language": "en",
+      "speed": "normal",
+      "expected": "My name's Maya.",
+      "small_asr": "My name's Moe.",
+      "word_edits": 1,
+      "reference_words": 3,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "540a42f8-dcae-5558-8099-fba1cf4f18dc"
+      ]
+    },
+    {
+      "asset_id": "b7b90007-463a-5ff9-940f-d488a8502c22",
+      "stable_code": "AUD_ENG_M01_WORDS_NAME_MAYA_SLOW",
+      "audio_sha256": "63925706cefdac76be54675d02a8f66daa1af53c65750adbef44cd0799d8d573",
+      "language": "en",
+      "speed": "slow",
+      "expected": "My name's Maya.",
+      "small_asr": "My name's Moa.",
+      "word_edits": 1,
+      "reference_words": 3,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "540a42f8-dcae-5558-8099-fba1cf4f18dc"
+      ]
+    },
+    {
+      "asset_id": "0ea483e4-92e0-5537-93c8-e2497fb735a6",
+      "stable_code": "AUD_ENG_M01_WORDS_IM_DANIEL",
+      "audio_sha256": "6e21a3fb6348a82df7f1d68eb06ba8fba03fbaf6c5d07d1c2a3ff8eefe021660",
+      "language": "en",
+      "speed": "normal",
+      "expected": "I'm Daniel.",
+      "small_asr": "I'm Danyelle.",
+      "word_edits": 1,
+      "reference_words": 2,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "eba1dd80-42f8-55c1-8e49-a3ebce704b36"
+      ]
+    },
+    {
+      "asset_id": "523a27d6-342c-51bc-a8d1-e1827fcdbe88",
+      "stable_code": "AUD_ENG_M01_WORDS_IM_DANIEL_SLOW",
+      "audio_sha256": "b00e4be109ed3f4298f2e273ebc150dfb41f7613a225100d0d0aaeb6b796055a",
+      "language": "en",
+      "speed": "slow",
+      "expected": "I'm Daniel.",
+      "small_asr": "And I know",
+      "word_edits": 3,
+      "reference_words": 2,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "eba1dd80-42f8-55c1-8e49-a3ebce704b36"
+      ]
+    },
+    {
+      "asset_id": "a3176b3a-a78a-59c6-b71b-b05326e6897c",
+      "stable_code": "AUD_ENG_M01_WORDS_SPELL_Q",
+      "audio_sha256": "e54b2c8c5c4ec177ad22cf534b094a275b8e6a605a6e5a66808986c919de9bfb",
+      "language": "en",
+      "speed": "normal",
+      "expected": "How do you spell it?",
+      "small_asr": "How'd you spell it?",
+      "word_edits": 2,
+      "reference_words": 5,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "4e75298a-7b90-5ee5-8162-05ff041c2388"
+      ]
+    },
+    {
+      "asset_id": "12aedb8d-861c-53bd-a74a-e3914d32428c",
+      "stable_code": "AUD_ENG_M01_WORDS_BE_YOU",
+      "audio_sha256": "5cce78f5ecaec64a8710dda69d967e226b97f88fae9fc0de7a9430c140008bc7",
+      "language": "en",
+      "speed": "normal",
+      "expected": "You are.",
+      "small_asr": "You all.",
+      "word_edits": 1,
+      "reference_words": 2,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "58b945de-d57e-5931-9c96-d11fda5babe0"
+      ]
+    },
+    {
+      "asset_id": "4bd40da6-6f0c-5c2c-8ec6-6d1e57a4ce3b",
+      "stable_code": "AUD_ENG_M01_WORDS_BE_HE",
+      "audio_sha256": "b0db4085161e79e8f5d804f18c4a665a4c4e7025ef5cd2d954f26f31b5c21fa6",
+      "language": "en",
+      "speed": "normal",
+      "expected": "He is.",
+      "small_asr": "Yes.",
+      "word_edits": 2,
+      "reference_words": 2,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "cc7253e9-53a3-53d5-ba3e-ce07843eb0a6"
+      ]
+    },
+    {
+      "asset_id": "2c8bad20-6132-51b8-8cf6-a7fb78db98f9",
+      "stable_code": "AUD_ENG_M01_WORDS_BE_HE_SLOW",
+      "audio_sha256": "bd17dc4048f52126d2780410d556338c7c80c5008e662a46a97818f4ba60ef53",
+      "language": "en",
+      "speed": "slow",
+      "expected": "He is.",
+      "small_asr": "Yes.",
+      "word_edits": 2,
+      "reference_words": 2,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "cc7253e9-53a3-53d5-ba3e-ce07843eb0a6"
+      ]
+    },
+    {
+      "asset_id": "eea255c6-39f1-5101-803e-55f3d790f674",
+      "stable_code": "AUD_ENG_M01_WORDS_BE_SHE",
+      "audio_sha256": "6c4e55428c91b944100184c42e895ce6e56532db966fec94eff158b1b0bcc341",
+      "language": "en",
+      "speed": "normal",
+      "expected": "She is.",
+      "small_asr": "Cheers!",
+      "word_edits": 2,
+      "reference_words": 2,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "adb57b7a-84c4-539d-be7d-f448b8cddc25"
+      ]
+    },
+    {
+      "asset_id": "45712d3a-dfc4-5a05-a48f-0a6e2ec93370",
+      "stable_code": "AUD_ENG_M01_WORDS_BE_IM",
+      "audio_sha256": "a207ba373c091c0093d48d828aec54aac1fbe2d7ee8f69c60deeb09ae07c3224",
+      "language": "en",
+      "speed": "normal",
+      "expected": "I'm.",
+      "small_asr": "Bye.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "7efaf8ce-aef6-58fb-b85d-d7ff0f06f19f"
+      ]
+    },
+    {
+      "asset_id": "c6b932fd-c5e0-5402-9616-57a1d851a990",
+      "stable_code": "AUD_ENG_M01_WORDS_BE_IM_SLOW",
+      "audio_sha256": "ef75dbce6647344a06e2c8863e59d0784abfff28085a640900503d83ddef0727",
+      "language": "en",
+      "speed": "slow",
+      "expected": "I'm.",
+      "small_asr": "Bye.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "7efaf8ce-aef6-58fb-b85d-d7ff0f06f19f"
+      ]
+    },
+    {
+      "asset_id": "1a21d7ac-70af-5c53-8f01-fbf96d565a89",
+      "stable_code": "AUD_ENG_M01_WORDS_BE_YOURE",
+      "audio_sha256": "40db1172dad03806613a5a5e3ab85a08012663c4cdb46adf736e3ead094f4546",
+      "language": "en",
+      "speed": "normal",
+      "expected": "You're.",
+      "small_asr": "Boo.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "4f0a3c58-8141-531d-b2cf-319697890d8a"
+      ]
+    },
+    {
+      "asset_id": "e8c0398a-104d-5eff-8155-7e89bed46785",
+      "stable_code": "AUD_ENG_M01_WORDS_BE_YOURE_SLOW",
+      "audio_sha256": "c59bdd6f6dbaec733d72e2a9bf49631836644f1c483487afa96bacb02da62941",
+      "language": "en",
+      "speed": "slow",
+      "expected": "You're.",
+      "small_asr": "Whoa.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "4f0a3c58-8141-531d-b2cf-319697890d8a"
+      ]
+    },
+    {
+      "asset_id": "724fe1e9-4360-540a-9409-27db40e9b466",
+      "stable_code": "AUD_ENG_M01_WORDS_BE_HES",
+      "audio_sha256": "001ffcce2279e70e57a0a5f5a6f500cd3521c34fc55b63dc14fa7fca334b13a7",
+      "language": "en",
+      "speed": "normal",
+      "expected": "He's.",
+      "small_asr": "Peace.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "2eb16c07-944b-53e9-acc6-9e551deb30d9"
+      ]
+    },
+    {
+      "asset_id": "38423ef4-0391-5209-b27d-9051c3623ea2",
+      "stable_code": "AUD_ENG_M01_WORDS_BE_HES_SLOW",
+      "audio_sha256": "32ac5091bf00f49d15e63778d6fa58854686641aacfb4681dabdaf4819359182",
+      "language": "en",
+      "speed": "slow",
+      "expected": "He's.",
+      "small_asr": "Peace.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "2eb16c07-944b-53e9-acc6-9e551deb30d9"
+      ]
+    },
+    {
+      "asset_id": "16c9981b-1db9-57b1-97db-6da909c8bd29",
+      "stable_code": "AUD_ENG_M01_WORDS_BE_SHES",
+      "audio_sha256": "5ad57b9600b06ae77f6cc792c35062d95ac36ff6f05b4dbe904af00de0c91495",
+      "language": "en",
+      "speed": "normal",
+      "expected": "She's.",
+      "small_asr": "Cheers",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "a0172db5-76b1-5fc8-9041-aff74b725cfc"
+      ]
+    },
+    {
+      "asset_id": "d7464116-34ca-51b9-af32-f46ee8e0b41a",
+      "stable_code": "AUD_ENG_M01_WORDS_BE_SHES_SLOW",
+      "audio_sha256": "769140d17db472b753117056dc6b59ad526d4c761d08669cdd751cef830f41a2",
+      "language": "en",
+      "speed": "slow",
+      "expected": "She's.",
+      "small_asr": "Cheers",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "a0172db5-76b1-5fc8-9041-aff74b725cfc"
+      ]
+    },
+    {
+      "asset_id": "53e19422-672e-5995-a8c9-2b38d17eafa3",
+      "stable_code": "AUD_ENG_M01_WORDS_IS_HE",
+      "audio_sha256": "9d2aeb2bb90afa1fe4cac8fe1897f6a42207e03475fd2f214539a9996052b0ea",
+      "language": "en",
+      "speed": "normal",
+      "expected": "Is he a teacher?",
+      "small_asr": "You see the teacher?",
+      "word_edits": 3,
+      "reference_words": 4,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "66ead54b-7ced-5e74-b292-21b323c4b925"
+      ]
+    },
+    {
+      "asset_id": "6f0e2932-2f54-5c9e-b7ac-e233bf433a22",
+      "stable_code": "AUD_ENG_M01_WORDS_IS_HE_SLOW",
+      "audio_sha256": "2150c072c17013f60aeec1e13098a3c7a8b310f6c7564740fd45ed3b5954562a",
+      "language": "en",
+      "speed": "slow",
+      "expected": "Is he a teacher?",
+      "small_asr": "You see the teacher?",
+      "word_edits": 3,
+      "reference_words": 4,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "66ead54b-7ced-5e74-b292-21b323c4b925"
+      ]
+    },
+    {
+      "asset_id": "e79f7305-4a52-5812-b8fa-8e382600650c",
+      "stable_code": "AUD_ENG_M01_WORDS_PRONOUN_I",
+      "audio_sha256": "8f85c98b3629729c96a3fd3e82f065681cf8caeae076c4fd4c07800e3d76159e",
+      "language": "en",
+      "speed": "normal",
+      "expected": "I",
+      "small_asr": "Oh.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "260d1ab7-5f7a-5c21-8d33-62b4d7273202"
+      ]
+    },
+    {
+      "asset_id": "6c87ed47-8573-5e25-8c57-86f22a5e4002",
+      "stable_code": "AUD_ENG_M01_WORDS_PRONOUN_I_SLOW",
+      "audio_sha256": "a3eeda5793619d8d2ef9b1e2200036bf109f75b7b35a5312ab7e956d67c04b31",
+      "language": "en",
+      "speed": "slow",
+      "expected": "I",
+      "small_asr": "Oh.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "260d1ab7-5f7a-5c21-8d33-62b4d7273202"
+      ]
+    },
+    {
+      "asset_id": "4ac5161a-e2d7-58d5-858c-ec0603b4878f",
+      "stable_code": "AUD_ENG_M01_WORDS_PRONOUN_YOU",
+      "audio_sha256": "6d7a711f583d18d91263427b57c189ec545bbadcc71c8eb700250cad7a69cd0c",
+      "language": "en",
+      "speed": "normal",
+      "expected": "you",
+      "small_asr": "Boom.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "56254d01-b7a2-55ba-a146-fff93e81afdb"
+      ]
+    },
+    {
+      "asset_id": "aa753efc-e155-59c2-ada7-f671e129db98",
+      "stable_code": "AUD_ENG_M01_WORDS_PRONOUN_YOU_SLOW",
+      "audio_sha256": "4bafafbfb207fe9136f561a40b88b4c8bd3af80fc2dd90e6c30c9c562efe6dc7",
+      "language": "en",
+      "speed": "slow",
+      "expected": "you",
+      "small_asr": "Boom.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "56254d01-b7a2-55ba-a146-fff93e81afdb"
+      ]
+    },
+    {
+      "asset_id": "5f0161ab-76d9-5c88-b573-e8bedb84e144",
+      "stable_code": "AUD_ENG_M01_WORDS_PRONOUN_HE",
+      "audio_sha256": "9858ef4ac3070de78f865295330435999cd6e0f94c99707f8c3d89c0021e010f",
+      "language": "en",
+      "speed": "normal",
+      "expected": "he",
+      "small_asr": "Hmm.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "68496b94-6147-5e10-90c3-10882bf1a7c5"
+      ]
+    },
+    {
+      "asset_id": "952811f2-df77-5b5f-8ef4-54a345c2bd9e",
+      "stable_code": "AUD_ENG_M01_WORDS_PRONOUN_HE_SLOW",
+      "audio_sha256": "2067e60c8c9fb8d6d006df3c9e841c9ac99e8f9649bed8f9072002865bd72865",
+      "language": "en",
+      "speed": "slow",
+      "expected": "he",
+      "small_asr": "Hmm",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "68496b94-6147-5e10-90c3-10882bf1a7c5"
+      ]
+    },
+    {
+      "asset_id": "d0af7365-58b0-52d8-abbc-ced19cd3aefe",
+      "stable_code": "AUD_ENG_M01_WORDS_PRONOUN_SHE",
+      "audio_sha256": "d01853247661067661694c0b3f2cbe84774e3aff2cf12cc6ad2c58b0e0177f96",
+      "language": "en",
+      "speed": "normal",
+      "expected": "she",
+      "small_asr": "Choo.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "ce08c9b1-05f3-53b2-912d-547cdb994db9"
+      ]
+    },
+    {
+      "asset_id": "e6b1c313-20f4-5901-adfb-c99faefdf6ca",
+      "stable_code": "AUD_ENG_M01_WORDS_PRONOUN_SHE_SLOW",
+      "audio_sha256": "b1b6066e9d724c418f16083919db72da70e7edbf9be9ec39a75bf754f5e8107b",
+      "language": "en",
+      "speed": "slow",
+      "expected": "she",
+      "small_asr": "Choo.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "ce08c9b1-05f3-53b2-912d-547cdb994db9"
+      ]
+    },
+    {
+      "asset_id": "16f4b606-e809-5a2c-9c70-573a7f57a9ad",
+      "stable_code": "AUD_ENG_M01_WORDS_COUNTRY_CZ",
+      "audio_sha256": "0fc98a16e6d3d8b27517bd4e35b15217a9f7b940e8fea6b367bdf4880dd60060",
+      "language": "en",
+      "speed": "normal",
+      "expected": "Czechia",
+      "small_asr": "Check her.",
+      "word_edits": 2,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "b5efbd8c-4500-56ae-91dc-0360c786eec5"
+      ]
+    },
+    {
+      "asset_id": "a2c572e5-ca5b-546b-b0ce-15ed93f504e7",
+      "stable_code": "AUD_ENG_M01_WORDS_COUNTRY_CZ_SLOW",
+      "audio_sha256": "dd754132aee02da61d9dbfc1655ee1128ab56c00a0c1ab5062513e5c1a1adf13",
+      "language": "en",
+      "speed": "slow",
+      "expected": "Czechia",
+      "small_asr": "Check here.",
+      "word_edits": 2,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "b5efbd8c-4500-56ae-91dc-0360c786eec5"
+      ]
+    },
+    {
+      "asset_id": "41cac4f4-b651-59a2-aa44-0d8dc755acd1",
+      "stable_code": "AUD_ENG_M01_WORDS_COUNTRY_DE_SLOW",
+      "audio_sha256": "570b6871d2af5385157d44db02e445a8171e7ed1bed892e532b09a4034662539",
+      "language": "en",
+      "speed": "slow",
+      "expected": "Germany",
+      "small_asr": "Ciao, Manny.",
+      "word_edits": 2,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "d0ad0066-5d45-56fb-9bfc-3d547bdc9425"
+      ]
+    },
+    {
+      "asset_id": "2b6e035c-9d21-5242-ac59-d069a877d4e3",
+      "stable_code": "AUD_ENG_M01_WORDS_LANG_EN",
+      "audio_sha256": "9b648c8edc36dd3537febcf4880e8724b45ad9787fdd9a360fe8431e205169ed",
+      "language": "en",
+      "speed": "normal",
+      "expected": "English",
+      "small_asr": "And that's it.",
+      "word_edits": 3,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "12a5b66f-1417-52ef-be81-6c15411c7604"
+      ]
+    },
+    {
+      "asset_id": "a02bb88e-00a8-52e8-b902-b7de5798f6f7",
+      "stable_code": "AUD_ENG_M01_WORDS_LANG_EN_SLOW",
+      "audio_sha256": "266d5f3c20392d4bebc9bb79ae8369ae6df39be18dfd8f174905759412ab7e74",
+      "language": "en",
+      "speed": "slow",
+      "expected": "English",
+      "small_asr": "And that's...",
+      "word_edits": 2,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "12a5b66f-1417-52ef-be81-6c15411c7604"
+      ]
+    },
+    {
+      "asset_id": "17c84232-067b-5e5f-be27-02621a556f91",
+      "stable_code": "AUD_ENG_M01_WORDS_LANG_CS",
+      "audio_sha256": "ed5dbbcb4fa361d7f17143e2780aa2795d1d221d684beffc53d448ad69699333",
+      "language": "en",
+      "speed": "normal",
+      "expected": "Czech",
+      "small_asr": "Bye.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "3f37c28c-74ab-5441-a48e-288f6441cb96"
+      ]
+    },
+    {
+      "asset_id": "beefcc48-4de5-5602-add9-f2640240b40e",
+      "stable_code": "AUD_ENG_M01_WORDS_LANG_CS_SLOW",
+      "audio_sha256": "78d8ab0f8febfe2bca63c7b7aa94a437322589485a6ba02409356de0e9d37814",
+      "language": "en",
+      "speed": "slow",
+      "expected": "Czech",
+      "small_asr": "Bye.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "3f37c28c-74ab-5441-a48e-288f6441cb96"
+      ]
+    },
+    {
+      "asset_id": "0305df41-18ed-5361-b48a-eb5330217d5d",
+      "stable_code": "AUD_ENG_M01_WORDS_LANG_DE",
+      "audio_sha256": "08e2acc09beb762e5785deba12a29477ba57e8c8645a3fa3f87413c3bf212718",
+      "language": "en",
+      "speed": "normal",
+      "expected": "German",
+      "small_asr": "Gentlemen.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "8bb446e6-08b4-544d-a004-8cd887a333ef"
+      ]
+    },
+    {
+      "asset_id": "0607ef48-3ab7-55e7-addd-682e820342fe",
+      "stable_code": "AUD_ENG_M01_WORDS_LANG_DE_SLOW",
+      "audio_sha256": "f4c228b9ce663c7670c2c8fde5a2a9ce7a1031e838e2da2d353342d6e298b9d1",
+      "language": "en",
+      "speed": "slow",
+      "expected": "German",
+      "small_asr": "gentlemen.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "8bb446e6-08b4-544d-a004-8cd887a333ef"
+      ]
+    },
+    {
+      "asset_id": "d90a3e7d-703f-5131-be5f-1808c16ac056",
+      "stable_code": "AUD_ENG_M01_WORDS_LANG_ES",
+      "audio_sha256": "9a0183bafcbd7f4ac23851e29e0b5df7ce4f35afb400909161549c8a72800f11",
+      "language": "en",
+      "speed": "normal",
+      "expected": "Spanish",
+      "small_asr": "It's funny.",
+      "word_edits": 2,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "736d1620-fc1e-5c02-8230-5bf9191a0beb"
+      ]
+    },
+    {
+      "asset_id": "5da21627-455e-53a8-adf1-0bf2731a7385",
+      "stable_code": "AUD_ENG_M01_WORDS_CITY_LON",
+      "audio_sha256": "b56f99f8041337ed19af43f42a9038aa730ce80bcb1cee01c3c52749edf26f83",
+      "language": "en",
+      "speed": "normal",
+      "expected": "London",
+      "small_asr": "one doom.",
+      "word_edits": 2,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "cc07a2e0-8da2-5e61-b466-0abb1b2467e7"
+      ]
+    },
+    {
+      "asset_id": "3346eba6-0aa2-559d-95ff-3e1a4208a3cf",
+      "stable_code": "AUD_ENG_M01_WORDS_CITY_LON_SLOW",
+      "audio_sha256": "6368cea9945401701e38f371265047cdda210564af431bdd49a61bdfcc4ee7fe",
+      "language": "en",
+      "speed": "slow",
+      "expected": "London",
+      "small_asr": "Wonder",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "cc07a2e0-8da2-5e61-b466-0abb1b2467e7"
+      ]
+    },
+    {
+      "asset_id": "b0a88a05-a2ba-5f97-9cba-a4dbc059cbac",
+      "stable_code": "AUD_ENG_M01_WORDS_CITY_PRA",
+      "audio_sha256": "6681ff80d27d7a749af1759d454ec11e29683053565be08b61a8d6240ab77aaa",
+      "language": "en",
+      "speed": "normal",
+      "expected": "Prague",
+      "small_asr": "prob.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "0668cc19-8bde-5eb5-9350-5e5466a68c1c"
+      ]
+    },
+    {
+      "asset_id": "4d03f857-d7f3-503c-ad75-2d62601781fe",
+      "stable_code": "AUD_ENG_M01_WORDS_CITY_PRA_SLOW",
+      "audio_sha256": "7bb30399fcf72e8a3d951a7781a59dc16af3879c6d4df8d3836048448469cc0a",
+      "language": "en",
+      "speed": "slow",
+      "expected": "Prague",
+      "small_asr": "probe.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "0668cc19-8bde-5eb5-9350-5e5466a68c1c"
+      ]
+    },
+    {
+      "asset_id": "4acb9784-f078-5452-951f-91bccc9336cb",
+      "stable_code": "AUD_ENG_M01_WORDS_CITY_KYI",
+      "audio_sha256": "6f0ebe3319aa02acda3905ef94607db17e942e6ea919ef7584dff136b1f1d684",
+      "language": "en",
+      "speed": "normal",
+      "expected": "Kyiv",
+      "small_asr": "safe.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "3b90b1ab-98bf-52b9-b9d5-ef2055ca89a5"
+      ]
+    },
+    {
+      "asset_id": "cf16c80e-0502-5da5-a33a-d8b10e14af0b",
+      "stable_code": "AUD_ENG_M01_WORDS_CITY_KYI_SLOW",
+      "audio_sha256": "24c6577fd50e27872b8bbc93599704c6146109ef58c4eee0954954d7fb99e188",
+      "language": "en",
+      "speed": "slow",
+      "expected": "Kyiv",
+      "small_asr": "faith.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "3b90b1ab-98bf-52b9-b9d5-ef2055ca89a5"
+      ]
+    },
+    {
+      "asset_id": "5f32b3d3-3ed2-5685-a3a9-e819878f6aad",
+      "stable_code": "AUD_ENG_M01_WORDS_CITY_WAR",
+      "audio_sha256": "1ea46a77e9773ce35a79e215e7156432168f99dc6383583f9ce7360a60bf97b7",
+      "language": "en",
+      "speed": "normal",
+      "expected": "Warsaw",
+      "small_asr": "Also",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "6cd8056c-1bb8-5228-b1be-43536ae8d4a8"
+      ]
+    },
+    {
+      "asset_id": "50ca7fa6-537c-5b45-bea8-23991cbd8a6b",
+      "stable_code": "AUD_ENG_M01_WORDS_CITY_WAR_SLOW",
+      "audio_sha256": "60138d5b43e8370ae64f7e58ec040e83e57d0cf76e19a360235d0cbe8f0e5a66",
+      "language": "en",
+      "speed": "slow",
+      "expected": "Warsaw",
+      "small_asr": "Also",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "6cd8056c-1bb8-5228-b1be-43536ae8d4a8"
+      ]
+    },
+    {
+      "asset_id": "11ae9b3b-d814-59a4-b680-7925b57d2e3e",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_A",
+      "audio_sha256": "f9c60c39285031729f3f97161e1102308a2cfb4430b9155348a9bfd32675a11d",
+      "language": "en",
+      "speed": "normal",
+      "expected": "A",
+      "small_asr": "Bye.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "384afb11-b448-5716-a9e1-a4971f845822"
+      ]
+    },
+    {
+      "asset_id": "5b51bbcf-3215-593b-a23d-c6d4c34b35ba",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_A_SLOW",
+      "audio_sha256": "788494256b96dd7752b3ecc392e3f3086f40a045a7d780c9b08e7da67813de42",
+      "language": "en",
+      "speed": "slow",
+      "expected": "A",
+      "small_asr": "Bye!",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "384afb11-b448-5716-a9e1-a4971f845822"
+      ]
+    },
+    {
+      "asset_id": "af34b826-6579-571d-976e-f606d51b5a81",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_B",
+      "audio_sha256": "0809db38ff1edd052ca416808008277fbf361bb0d27df6059d8814152aed1567",
+      "language": "en",
+      "speed": "normal",
+      "expected": "B",
+      "small_asr": "Bye.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "4a883b12-02bd-569f-bd4f-0543abae9de0"
+      ]
+    },
+    {
+      "asset_id": "d52e6d70-35ca-54b0-a430-7a14ca33bf49",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_B_SLOW",
+      "audio_sha256": "28145b0c09c4b8b56cec1121f1dcde5dea06f1665b894fd8a332691cd18c7453",
+      "language": "en",
+      "speed": "slow",
+      "expected": "B",
+      "small_asr": "Bye.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "4a883b12-02bd-569f-bd4f-0543abae9de0"
+      ]
+    },
+    {
+      "asset_id": "fdbd6f70-87dd-586a-93ec-0f4bb2cb2dc4",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_C",
+      "audio_sha256": "db8768e89000f5b2af332bab4788e9c11f96ae7d5b37b3c4e89f597efd599d16",
+      "language": "en",
+      "speed": "normal",
+      "expected": "C",
+      "small_asr": "See?",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "77d5009c-2169-57a4-abcc-e60f0e582f6a"
+      ]
+    },
+    {
+      "asset_id": "06247eab-1cc2-554f-ac3c-40038f1bb4a4",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_C_SLOW",
+      "audio_sha256": "a37ba978791e5173a5678bac6db971485c6a79c1873861f5dd4169d0778bd8df",
+      "language": "en",
+      "speed": "slow",
+      "expected": "C",
+      "small_asr": "See?",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "77d5009c-2169-57a4-abcc-e60f0e582f6a"
+      ]
+    },
+    {
+      "asset_id": "b6371f44-e61e-5f6a-ae25-d4985fd03587",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_D",
+      "audio_sha256": "af06681bfdc380b3df7a475364c14d39dc866ed0433d81df18fc5f80d7caf673",
+      "language": "en",
+      "speed": "normal",
+      "expected": "D",
+      "small_asr": "Stay.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "2a5c7c17-a9fe-56a5-be97-711cf2b9f3e9"
+      ]
+    },
+    {
+      "asset_id": "e19d6d4c-3630-5972-a695-5ea0a94c61c3",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_D_SLOW",
+      "audio_sha256": "beab8f7ed47134ad9ee15f95a17233dc7ea051074dd6696392ac3fc95171f0c3",
+      "language": "en",
+      "speed": "slow",
+      "expected": "D",
+      "small_asr": "Stay.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "2a5c7c17-a9fe-56a5-be97-711cf2b9f3e9"
+      ]
+    },
+    {
+      "asset_id": "e8329dd9-32ed-5a24-8114-426065f9b573",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_E",
+      "audio_sha256": "773d6622c6086abd75cd9c179aea67ba7d667b2c9582abd6f4c7fadc2f565d44",
+      "language": "en",
+      "speed": "normal",
+      "expected": "E",
+      "small_asr": "in.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "38ab8a4c-7c51-57fa-b05b-648a28f9392d"
+      ]
+    },
+    {
+      "asset_id": "8b05a065-4a93-584f-a85b-01826ae221d0",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_E_SLOW",
+      "audio_sha256": "a446c7717e94ecfb6c090051ffc24c24891f545b91a744e8859b30fc53b3f284",
+      "language": "en",
+      "speed": "slow",
+      "expected": "E",
+      "small_asr": "in.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "38ab8a4c-7c51-57fa-b05b-648a28f9392d"
+      ]
+    },
+    {
+      "asset_id": "2d964e37-c16b-527e-a70a-1fa1792b59b6",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_F",
+      "audio_sha256": "ea5189833eb1e04825ad04addbd35c5f8ebd3d0ce2e459f0c0a126ed956fa7f1",
+      "language": "en",
+      "speed": "normal",
+      "expected": "F",
+      "small_asr": "Uh.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "4002a8db-e8b2-5837-9a10-8a7dd862fedb"
+      ]
+    },
+    {
+      "asset_id": "926d043b-850a-5e02-8795-3e119bc05437",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_F_SLOW",
+      "audio_sha256": "8e15ad258cb0e0c0756e4420d4f7d5c2696b0389cb302fd4da5158027f4fbf71",
+      "language": "en",
+      "speed": "slow",
+      "expected": "F",
+      "small_asr": "Uh.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "4002a8db-e8b2-5837-9a10-8a7dd862fedb"
+      ]
+    },
+    {
+      "asset_id": "23397796-3640-5979-bb9a-0f808ef803c9",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_G",
+      "audio_sha256": "1be9093f4a05108c46d4c390e846561008492f573ff2bea63290a6d9e38b03ed",
+      "language": "en",
+      "speed": "normal",
+      "expected": "G",
+      "small_asr": "Jai.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "72bee2e3-d67b-52aa-a5d9-78a587eade64"
+      ]
+    },
+    {
+      "asset_id": "b8851870-81aa-568e-9812-6bd8c373fc28",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_G_SLOW",
+      "audio_sha256": "0ca37213ded106ac0184633ccd826581abe7edca5044515f8bc256c35356cb86",
+      "language": "en",
+      "speed": "slow",
+      "expected": "G",
+      "small_asr": "Jai.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "72bee2e3-d67b-52aa-a5d9-78a587eade64"
+      ]
+    },
+    {
+      "asset_id": "3b6928f3-e45d-5efd-9efb-84dfe95601be",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_I",
+      "audio_sha256": "51d652a7e8bbd3be2be534174287d85215fb85eb8202fafe0b6b62ebae0b53a0",
+      "language": "en",
+      "speed": "normal",
+      "expected": "I",
+      "small_asr": "Bye.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "d8b85275-9790-53a1-a5ea-94e6eed932a2"
+      ]
+    },
+    {
+      "asset_id": "bf9a361e-0b24-5ecc-89a9-ad672c1bcb73",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_I_SLOW",
+      "audio_sha256": "78f6d262405b665c4261c055e6f63f08a24b215fe98fac49853a1896916853b4",
+      "language": "en",
+      "speed": "slow",
+      "expected": "I",
+      "small_asr": "Bye.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "d8b85275-9790-53a1-a5ea-94e6eed932a2"
+      ]
+    },
+    {
+      "asset_id": "583040fa-f4f7-55e8-a3c1-497b25903e13",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_J",
+      "audio_sha256": "d6315136a9b1c267a97f6be34c904b2a8f22b24f334326ef5017c6c85fc4a137",
+      "language": "en",
+      "speed": "normal",
+      "expected": "J",
+      "small_asr": "Bye.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "fb151816-6e89-5559-97cb-f670cfc3b3c0"
+      ]
+    },
+    {
+      "asset_id": "1a741267-8518-5de5-b502-5bc0acd6b14a",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_J_SLOW",
+      "audio_sha256": "46c13537bed1aa968e8584e00e60c619a78724cc320d214988cd45e714a7ede1",
+      "language": "en",
+      "speed": "slow",
+      "expected": "J",
+      "small_asr": "Bye.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "fb151816-6e89-5559-97cb-f670cfc3b3c0"
+      ]
+    },
+    {
+      "asset_id": "73369f9e-dc19-536a-9f9a-2536f9d5437a",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_K",
+      "audio_sha256": "a0b963464c5af377cedf4c4ea31e94b369deed80ef436141ea2c6cebf8e151c2",
+      "language": "en",
+      "speed": "normal",
+      "expected": "K",
+      "small_asr": "Bye.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "f5c65b5b-40cb-53b2-b9fd-33a9d660924e"
+      ]
+    },
+    {
+      "asset_id": "9fef9c24-82a4-506a-933d-ca4e7c62aacb",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_K_SLOW",
+      "audio_sha256": "51fa18d09b2e506808e2b78050c4072239f3839ea0724adbfa78c00eb7a5e6c9",
+      "language": "en",
+      "speed": "slow",
+      "expected": "K",
+      "small_asr": "Bye.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "f5c65b5b-40cb-53b2-b9fd-33a9d660924e"
+      ]
+    },
+    {
+      "asset_id": "02df2ef7-c5f0-5a73-8dfc-9109fe120c38",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_L",
+      "audio_sha256": "204b655a2084dadee551ef7b73558e12ffd836cef4e213e5bc0a64ff927549df",
+      "language": "en",
+      "speed": "normal",
+      "expected": "L",
+      "small_asr": "Oh",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "f7dc56ad-eff5-55a0-91cb-026001c6599a"
+      ]
+    },
+    {
+      "asset_id": "c26def9e-1cb8-5cae-b1d6-6e4cdf557ce8",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_L_SLOW",
+      "audio_sha256": "df887ff22e7d7a0d1c848d448d37d45a581250c5606d7ff78d213ada190b6118",
+      "language": "en",
+      "speed": "slow",
+      "expected": "L",
+      "small_asr": "Oh",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "f7dc56ad-eff5-55a0-91cb-026001c6599a"
+      ]
+    },
+    {
+      "asset_id": "7fc7475b-8ca8-5adb-ae6a-6f07f1eae2ae",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_M",
+      "audio_sha256": "16f6e6bd25aa58ec4da3cb90bfcd6b61ddc244f6bd0d604ab04faf6b943e188f",
+      "language": "en",
+      "speed": "normal",
+      "expected": "M",
+      "small_asr": "Bye.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "e84d8377-f242-5354-a2f0-7a6b77e8bb20"
+      ]
+    },
+    {
+      "asset_id": "b39c8e40-de27-5300-8bef-848b76bcde8e",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_M_SLOW",
+      "audio_sha256": "897cd77d1481c9b7a56dd522dbed86caaee1b4228ad42f67bcca781e536f8305",
+      "language": "en",
+      "speed": "slow",
+      "expected": "M",
+      "small_asr": "Bye.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "e84d8377-f242-5354-a2f0-7a6b77e8bb20"
+      ]
+    },
+    {
+      "asset_id": "0028ade5-4c3f-5b01-becb-078e9a1b07d0",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_N",
+      "audio_sha256": "4a014269c84c9cd6b5742e23c26d1e8c0b1b8c91af21e28d7fd5c096e431e511",
+      "language": "en",
+      "speed": "normal",
+      "expected": "N",
+      "small_asr": "Bye.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "50d12e89-b0d4-5552-9c64-26b6b846da32"
+      ]
+    },
+    {
+      "asset_id": "d8638e57-cbce-5305-9669-83cf5a5187ac",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_N_SLOW",
+      "audio_sha256": "f3006983139a5e20fd73a3c7fd32abceeb745baeb74a34eeeb495920492375eb",
+      "language": "en",
+      "speed": "slow",
+      "expected": "N",
+      "small_asr": "Bye.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "50d12e89-b0d4-5552-9c64-26b6b846da32"
+      ]
+    },
+    {
+      "asset_id": "c58a1cd2-bf12-5530-a7e6-6f07de77c648",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_O",
+      "audio_sha256": "829ce61af840448d6ff192eaa92b68f9378e6b787710a65ab0421032e0a4802b",
+      "language": "en",
+      "speed": "normal",
+      "expected": "O",
+      "small_asr": "Oh.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "3fe8d4f2-310c-5b8e-bcef-b2ac213fa72e"
+      ]
+    },
+    {
+      "asset_id": "24919540-ddd8-5dce-bbbc-426e80fe6f10",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_O_SLOW",
+      "audio_sha256": "0cb4431e72f41bf7981c7f30c118e87573db863600dc393853f8d109e90e981e",
+      "language": "en",
+      "speed": "slow",
+      "expected": "O",
+      "small_asr": "Oh.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "3fe8d4f2-310c-5b8e-bcef-b2ac213fa72e"
+      ]
+    },
+    {
+      "asset_id": "f1b3f22f-d0b3-5b00-9e22-03cccad83563",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_P",
+      "audio_sha256": "dcc0ccd41e421701dcaf02fbdcf0cb217b0b25647c3d2b776fa87b51fbf1f9b6",
+      "language": "en",
+      "speed": "normal",
+      "expected": "P",
+      "small_asr": "Okay.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "d42ae6ed-4314-5222-b5b1-15be2cd1c3cf"
+      ]
+    },
+    {
+      "asset_id": "e6bc93fd-a638-5777-bce4-4e67c64b8172",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_P_SLOW",
+      "audio_sha256": "c09c25602ee75df4e5d0a7029b4aafd25ba74fdf9a7567e3ff268147cec18b8f",
+      "language": "en",
+      "speed": "slow",
+      "expected": "P",
+      "small_asr": "Who?",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "d42ae6ed-4314-5222-b5b1-15be2cd1c3cf"
+      ]
+    },
+    {
+      "asset_id": "a494f152-7775-5beb-a697-18cb2b23c1cd",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_Q",
+      "audio_sha256": "a29160c3e6dba478d8441d9c6154b5757caee5d7621b1cbc4a6331e77e75d8a4",
+      "language": "en",
+      "speed": "normal",
+      "expected": "Q",
+      "small_asr": "Thank you.",
+      "word_edits": 2,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "c2ced8b9-dc2d-59ec-bb23-94a7367538bd"
+      ]
+    },
+    {
+      "asset_id": "cfaf35b2-3be3-500d-82a1-f4ccbb506968",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_Q_SLOW",
+      "audio_sha256": "dbf55b80be7cc45a4e8151b40042f17a89543d46ec41d20f2128743f26cb4cbe",
+      "language": "en",
+      "speed": "slow",
+      "expected": "Q",
+      "small_asr": "Thank you.",
+      "word_edits": 2,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "c2ced8b9-dc2d-59ec-bb23-94a7367538bd"
+      ]
+    },
+    {
+      "asset_id": "82705291-ad05-5980-b897-da5480673bb6",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_R",
+      "audio_sha256": "d7f6012e494a310c30e9e8fd31eae661833ceceb64463a0e42e0066b64ee32d4",
+      "language": "en",
+      "speed": "normal",
+      "expected": "R",
+      "small_asr": "Oh",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "985ab778-4819-5d46-a19d-97154deda213"
+      ]
+    },
+    {
+      "asset_id": "f54c7d0f-e7f2-5e13-8923-460d3ddfa749",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_R_SLOW",
+      "audio_sha256": "dd7fd02ee00cbd32b96f5f78433f4d0d0af8c82ccc87d0b87014d7096a442285",
+      "language": "en",
+      "speed": "slow",
+      "expected": "R",
+      "small_asr": "Oh.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "985ab778-4819-5d46-a19d-97154deda213"
+      ]
+    },
+    {
+      "asset_id": "653dcadd-6641-5f2c-89ee-373d563b3e3f",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_S",
+      "audio_sha256": "03a6efcf8b7e647ddc932287012a706dfac7793ce27f933b38813a20acff7b17",
+      "language": "en",
+      "speed": "normal",
+      "expected": "S",
+      "small_asr": "Oh.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "74476c51-8531-5275-8d19-18032e3cc328"
+      ]
+    },
+    {
+      "asset_id": "db728471-7f1b-5b56-a3cb-863a12d8bfca",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_S_SLOW",
+      "audio_sha256": "f6aea7dad51b13b015a746e6c2ec69199a29bbbb211f6e192e25b48663b0120f",
+      "language": "en",
+      "speed": "slow",
+      "expected": "S",
+      "small_asr": "Um.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "74476c51-8531-5275-8d19-18032e3cc328"
+      ]
+    },
+    {
+      "asset_id": "b43f7dfe-2784-5d54-84e9-5bf1d471caa8",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_T",
+      "audio_sha256": "3d98a98db0dd660270f170794038d05f5ec09d35d8039bc84196a1e05d293ce8",
+      "language": "en",
+      "speed": "normal",
+      "expected": "T",
+      "small_asr": "Okay.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "fc53e6ac-bf4e-5d33-a42f-483a3415d63d"
+      ]
+    },
+    {
+      "asset_id": "03784ece-5895-5197-bcd2-c219049aa0fe",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_T_SLOW",
+      "audio_sha256": "6ec54cee9558ea497039ceeaa5976bbc8b7dd7b48ffebd06353f94701ac41319",
+      "language": "en",
+      "speed": "slow",
+      "expected": "T",
+      "small_asr": "Okay.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "fc53e6ac-bf4e-5d33-a42f-483a3415d63d"
+      ]
+    },
+    {
+      "asset_id": "230e7b7d-ce7f-5c9d-8e60-d60906261abf",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_U",
+      "audio_sha256": "e03d422c26b19076f70c76d7993c142978e339f5d3499f95b89013e37eec8ea2",
+      "language": "en",
+      "speed": "normal",
+      "expected": "U",
+      "small_asr": "Boom.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "4e5a7063-4656-5959-b93b-deafe99133be"
+      ]
+    },
+    {
+      "asset_id": "4a28e179-792e-5cda-86e1-9ec58939e9f5",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_U_SLOW",
+      "audio_sha256": "49750d75286e9823d2d4431a78821ad0dfa27f8f1b37e0522f7d6532c23f061a",
+      "language": "en",
+      "speed": "slow",
+      "expected": "U",
+      "small_asr": "Bye.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "4e5a7063-4656-5959-b93b-deafe99133be"
+      ]
+    },
+    {
+      "asset_id": "ffaf0c91-7960-5f75-b7d8-8769697ceca6",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_V",
+      "audio_sha256": "a612c359cf7f8ed03e3fe77654954ad234e59226e4d0a8a379684cbe9de8526a",
+      "language": "en",
+      "speed": "normal",
+      "expected": "V",
+      "small_asr": "Bye.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "b694a5b1-79cd-59c2-aa4d-d17accd8f8d5"
+      ]
+    },
+    {
+      "asset_id": "96ac7ac8-4340-5679-b812-dd6d4af4726e",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_V_SLOW",
+      "audio_sha256": "35bcdf9480651064434cf7d3287c4ecaa40e2c536012abe3a8f0c6d4516b7f08",
+      "language": "en",
+      "speed": "slow",
+      "expected": "V",
+      "small_asr": "way.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "b694a5b1-79cd-59c2-aa4d-d17accd8f8d5"
+      ]
+    },
+    {
+      "asset_id": "e56f5e2e-1911-51cd-83c9-9a092da1092b",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_X",
+      "audio_sha256": "f0cd0927ead8e47b323bb8ebd76c9c95a2bcaf00f9cba2684c297572288fbade",
+      "language": "en",
+      "speed": "normal",
+      "expected": "X",
+      "small_asr": "out.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "7fb6e0f4-06ef-5748-9066-ecacf2008087"
+      ]
+    },
+    {
+      "asset_id": "53c5c248-6ca5-5b3e-beab-efa9106261cc",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_X_SLOW",
+      "audio_sha256": "a822d7f05bf710bc703bf56c1d6d4cca30b5c5c54ace793304ba440c14e45802",
+      "language": "en",
+      "speed": "slow",
+      "expected": "X",
+      "small_asr": "at",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "7fb6e0f4-06ef-5748-9066-ecacf2008087"
+      ]
+    },
+    {
+      "asset_id": "1317adef-847f-5484-bb03-2b63e248e8f2",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_Y",
+      "audio_sha256": "5efae13e11de320c6f8a4465683b1be2dca1d4b035bb1cf9fca64e7a8d3a8b90",
+      "language": "en",
+      "speed": "normal",
+      "expected": "Y",
+      "small_asr": "Why?",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "04a80785-687d-56c4-8679-d315a1d54406"
+      ]
+    },
+    {
+      "asset_id": "419b6344-5399-5059-8cd5-ae92ebf540a7",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_Y_SLOW",
+      "audio_sha256": "ee6a3f842d78f2217d984763a9b8609903e7250b957e09365b4c8edcf6310b00",
+      "language": "en",
+      "speed": "slow",
+      "expected": "Y",
+      "small_asr": "Bye.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "04a80785-687d-56c4-8679-d315a1d54406"
+      ]
+    },
+    {
+      "asset_id": "c423ca97-19cf-5ce7-b622-d3eb9fbe2d3d",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_Z",
+      "audio_sha256": "d5bc2b0c14578701ee16e936a9540a8cacb36dfb83f48d54145d4f7e09d80819",
+      "language": "en",
+      "speed": "normal",
+      "expected": "Z",
+      "small_asr": "though.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "6ff36af6-5633-58ca-96b2-e988e4a979de"
+      ]
+    },
+    {
+      "asset_id": "296abb88-78d8-5c0c-a35a-68638b055066",
+      "stable_code": "AUD_ENG_M01_WORDS_LETTER_Z_SLOW",
+      "audio_sha256": "1376e7be00964137e71a6a61d21e89ca7e59b1f8bb50d0d544776e6d7d079f1f",
+      "language": "en",
+      "speed": "slow",
+      "expected": "Z",
+      "small_asr": "the",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "6ff36af6-5633-58ca-96b2-e988e4a979de"
+      ]
+    },
+    {
+      "asset_id": "ee63dc05-9ee1-5588-83ed-ce624a033245",
+      "stable_code": "AUD_CZE_M01_WORDS_DOBRY_DEN",
+      "audio_sha256": "3d9116c281bea7d8f062a2199f17724a924aaf5154126d31393991f723c43c88",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Dobrý den.",
+      "small_asr": "Do býden.",
+      "word_edits": 2,
+      "reference_words": 2,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "4e2ab334-e4d2-5494-875f-1781cd8f440f"
+      ]
+    },
+    {
+      "asset_id": "fe781f4d-6d55-56c1-96a3-c900c0254274",
+      "stable_code": "AUD_CZE_M01_WORDS_DOBRY_DEN_SLOW",
+      "audio_sha256": "bdd6c07ceb25e1539530e7867008ae163bfff04420d8ccf67bb6a28f6c356cba",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Dobrý den.",
+      "small_asr": "Byl být den.",
+      "word_edits": 2,
+      "reference_words": 2,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "4e2ab334-e4d2-5494-875f-1781cd8f440f"
+      ]
+    },
+    {
+      "asset_id": "6cc269a2-8da1-5c6e-951a-b75c83861048",
+      "stable_code": "AUD_CZE_M01_WORDS_NA_SHLEDANOU",
+      "audio_sha256": "5d5b322afd314bf2a5c2f197ee79bd68d4cd1ed8da73f47268569fa71f30687d",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Na shledanou.",
+      "small_asr": "Nasledanou.",
+      "word_edits": 2,
+      "reference_words": 2,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "68f20a7b-576c-5d37-bb01-8e6b164db8af"
+      ]
+    },
+    {
+      "asset_id": "5b0954f3-d1a7-5332-a444-fedc1b717463",
+      "stable_code": "AUD_CZE_M01_WORDS_NA_SHLEDANOU_SLOW",
+      "audio_sha256": "27cc1b60c133cec380493807b454555550b6a21e28a62e57f2cd7f9ff5903c4d",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Na shledanou.",
+      "small_asr": "Naschledanou.",
+      "word_edits": 2,
+      "reference_words": 2,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "68f20a7b-576c-5d37-bb01-8e6b164db8af"
+      ]
+    },
+    {
+      "asset_id": "6dc192a7-7382-59ac-b2f0-867d14875cc8",
+      "stable_code": "AUD_CZE_M01_WORDS_DEKUJI",
+      "audio_sha256": "c87edcfeaa5f0858d54179cad0860acda38e0a84f73633934a682961c0028414",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Děkuji.",
+      "small_asr": "Děkuj.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "8a2d65f3-5682-58d8-9344-6e280091319a"
+      ]
+    },
+    {
+      "asset_id": "9fa571e9-1323-5cf6-bb04-082c54c19e68",
+      "stable_code": "AUD_CZE_M01_WORDS_DEKUJI_SLOW",
+      "audio_sha256": "cb6d4db8f623d62255eabf6cd3609d716a1d3a4d644a2d63094f715de1bbad74",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Děkuji.",
+      "small_asr": "Děkuj.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "8a2d65f3-5682-58d8-9344-6e280091319a"
+      ]
+    },
+    {
+      "asset_id": "9b4e9eac-20cb-56e3-88e6-55703f171233",
+      "stable_code": "AUD_CZE_M01_WORDS_PROSIM",
+      "audio_sha256": "f995bbda823ab1e63e5d8872e430201d24bc8004a634f50caeab1259704086c7",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Prosím.",
+      "small_asr": "Pro sím.",
+      "word_edits": 2,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "c07eace3-b818-5bcd-929e-e2eee8e1e688"
+      ]
+    },
+    {
+      "asset_id": "0b728afd-56e1-5ec6-9858-be9fedaeb097",
+      "stable_code": "AUD_CZE_M01_WORDS_PROSIM_SLOW",
+      "audio_sha256": "859a0ec8937d5aa831873e68110ff72ba31bab68f88564aa2b92a9ed93490437",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Prosím.",
+      "small_asr": "Pro sím.",
+      "word_edits": 2,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "c07eace3-b818-5bcd-929e-e2eee8e1e688"
+      ]
+    },
+    {
+      "asset_id": "9f2ba75b-e1f2-522b-8810-a50349db21d9",
+      "stable_code": "AUD_CZE_M01_WORDS_PROMINTE",
+      "audio_sha256": "7e70a5ace5e4fa6dfe319238362a52ef97d638efdd29428d9e13bcdbb361141d",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Promiňte.",
+      "small_asr": "Promete.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "b75eb094-5b39-5b11-b4e4-01989084cc1a"
+      ]
+    },
+    {
+      "asset_id": "64662e0b-91be-5588-8326-7e5e20a630fd",
+      "stable_code": "AUD_CZE_M01_WORDS_PROMINTE_SLOW",
+      "audio_sha256": "0aec4a93ea11589ae837122d448cfb518aa18240169fd6b1b24d009b6f0bdcf3",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Promiňte.",
+      "small_asr": "Prominte.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "b75eb094-5b39-5b11-b4e4-01989084cc1a"
+      ]
+    },
+    {
+      "asset_id": "414bc03d-8847-542d-8299-8f9c71355f7a",
+      "stable_code": "AUD_CZE_M01_WORDS_NAME_Q_FORM",
+      "audio_sha256": "7ccf2575e46229cf1356412705f255bed8236c965c9e9e562054d4c69319d9cf",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Jak se jmenujete?",
+      "small_asr": "jak se menujete.",
+      "word_edits": 1,
+      "reference_words": 3,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "d459739d-4b19-5b8e-be85-8496d4d1c78d"
+      ]
+    },
+    {
+      "asset_id": "42fc4222-5ba0-51e2-a1cd-2c01a48a3e6d",
+      "stable_code": "AUD_CZE_M01_WORDS_NAME_Q_FORM_SLOW",
+      "audio_sha256": "bea5e0965bbde3ef847726a1f76d370ae1213384051e7e1d18318e89f2dd16b4",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Jak se jmenujete?",
+      "small_asr": "jak se menujete.",
+      "word_edits": 1,
+      "reference_words": 3,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "d459739d-4b19-5b8e-be85-8496d4d1c78d"
+      ]
+    },
+    {
+      "asset_id": "a0a4a05d-b41e-566e-977e-eba4b1f29c9d",
+      "stable_code": "AUD_CZE_M01_WORDS_NAME_Q_INF",
+      "audio_sha256": "ebe1e89114dacf55fa70e6395d4b872d8fbe2570b90e896d4a6c85428189d2ea",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Jak se jmenuješ?",
+      "small_asr": "Jak se menu ještě.",
+      "word_edits": 2,
+      "reference_words": 3,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "64abc22d-fa1b-5b84-a74a-1d3d0b3e53a9"
+      ]
+    },
+    {
+      "asset_id": "f33b9f47-72a8-596b-a207-8ae54fe49e5e",
+      "stable_code": "AUD_CZE_M01_WORDS_NAME_Q_INF_SLOW",
+      "audio_sha256": "5d3b087a95ef12fa84d3f1a17e8e6e4c692e6d0db054e985103e8787023cca8f",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Jak se jmenuješ?",
+      "small_asr": "Jak se menu ještě.",
+      "word_edits": 2,
+      "reference_words": 3,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "64abc22d-fa1b-5b84-a74a-1d3d0b3e53a9"
+      ]
+    },
+    {
+      "asset_id": "bab1bdc8-fda3-5cda-a7cc-c379cee0214e",
+      "stable_code": "AUD_CZE_M01_WORDS_NAME_OKSANA",
+      "audio_sha256": "4841b8e00e890c0c8df554d5a4b77efc7eec2dddde31c8198f4ece7ffc984219",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Jmenuji se Oksana.",
+      "small_asr": "Menuj se Oksana.",
+      "word_edits": 1,
+      "reference_words": 3,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "37e551a4-6e2a-548d-aecc-6fd3406c9191"
+      ]
+    },
+    {
+      "asset_id": "21f39a74-9e11-5dcb-931e-b5a83d02e4c0",
+      "stable_code": "AUD_CZE_M01_WORDS_NAME_OKSANA_SLOW",
+      "audio_sha256": "d2d9c840007dd06188b05ef954be7da4e668a0f8ef7d28d3ee8491696ca7668f",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Jmenuji se Oksana.",
+      "small_asr": "Menuj se oxana.",
+      "word_edits": 2,
+      "reference_words": 3,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "37e551a4-6e2a-548d-aecc-6fd3406c9191"
+      ]
+    },
+    {
+      "asset_id": "b6c374c9-f626-55d4-9b46-ceea7a85e3f0",
+      "stable_code": "AUD_CZE_M01_WORDS_NAME_ADAM",
+      "audio_sha256": "308756b811b473a5995b012dca11fbce231159ed3e52f977fef62e8dbb4a12ff",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Jmenuji se Adam.",
+      "small_asr": "Menuj se, Adam.",
+      "word_edits": 1,
+      "reference_words": 3,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "a0f89179-1c01-5437-8938-636efe50f4fa"
+      ]
+    },
+    {
+      "asset_id": "0251ed5d-0481-55c1-af50-b5a90a6d5584",
+      "stable_code": "AUD_CZE_M01_WORDS_NAME_ADAM_SLOW",
+      "audio_sha256": "eddfeba49814463b5c4bb3e4607bfc78d3941731befa98fd3b1b35b770f288e8",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Jmenuji se Adam.",
+      "small_asr": "Menuj se, Adam.",
+      "word_edits": 1,
+      "reference_words": 3,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "a0f89179-1c01-5437-8938-636efe50f4fa"
+      ]
+    },
+    {
+      "asset_id": "ba7a2ef6-d1b5-5825-8690-024264f9e331",
+      "stable_code": "AUD_CZE_M01_WORDS_TESI_ME",
+      "audio_sha256": "4e7105f6ecddb2027892cc4a34848804a25719f680385d5aa185b2c1bd6ecbd5",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Těší mě.",
+      "small_asr": "Děši mě.",
+      "word_edits": 1,
+      "reference_words": 2,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "64b42cc8-5ced-52f0-b43b-fa69eec7d1dc"
+      ]
+    },
+    {
+      "asset_id": "9e2bf6ef-dbfa-5c64-8749-44006458fc2d",
+      "stable_code": "AUD_CZE_M01_WORDS_TESI_ME_SLOW",
+      "audio_sha256": "fe922ba92b78dc6324d81309178ce971a8eebef7dd95bf5fd1c5b935315f622b",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Těší mě.",
+      "small_asr": "Děši mě.",
+      "word_edits": 1,
+      "reference_words": 2,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "64b42cc8-5ced-52f0-b43b-fa69eec7d1dc"
+      ]
+    },
+    {
+      "asset_id": "154332fb-f931-5e20-b6e7-f8964dd41ec7",
+      "stable_code": "AUD_CZE_M01_WORDS_ME_TAKE",
+      "audio_sha256": "3fc20351d8202ec83e57e2e43325d3e063975150a4e8326dfa1846af3924f373",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Mě také.",
+      "small_asr": "Nětaké.",
+      "word_edits": 2,
+      "reference_words": 2,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "ba6c8366-4980-58a3-8327-c896e82bf297"
+      ]
+    },
+    {
+      "asset_id": "0b8b451a-62fa-5471-913c-3325a6c3e3f7",
+      "stable_code": "AUD_CZE_M01_WORDS_ME_TAKE_SLOW",
+      "audio_sha256": "6903751f78b43d67523e79e9d0395e8e1b16e9395bfff81513975669a5df39f2",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Mě také.",
+      "small_asr": "Nětaké.",
+      "word_edits": 2,
+      "reference_words": 2,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "ba6c8366-4980-58a3-8327-c896e82bf297"
+      ]
+    },
+    {
+      "asset_id": "8d8c5e21-f9f9-5982-8e90-301f00d33347",
+      "stable_code": "AUD_CZE_M01_WORDS_FROM_Q_INF",
+      "audio_sha256": "b16f5984dd6a6e33f6ea408011a61c83373eb3ddab5b6bb6d473d7d376d2bf33",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Odkud jsi?",
+      "small_asr": "Odkud si.",
+      "word_edits": 1,
+      "reference_words": 2,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "0ea2e8b5-47cd-5877-b60b-9fece4253d50"
+      ]
+    },
+    {
+      "asset_id": "d6a0faae-23ce-5f9f-b32a-2a62773fb11e",
+      "stable_code": "AUD_CZE_M01_WORDS_FROM_Q_INF_SLOW",
+      "audio_sha256": "5eacb7166abdecacc3fc27a42da4c923814f5aabce387569f436c84a8289c80d",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Odkud jsi?",
+      "small_asr": "Odkud si.",
+      "word_edits": 1,
+      "reference_words": 2,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "0ea2e8b5-47cd-5877-b60b-9fece4253d50"
+      ]
+    },
+    {
+      "asset_id": "d441e277-6cf9-53af-b852-5356648c8620",
+      "stable_code": "AUD_CZE_M01_WORDS_JSEM",
+      "audio_sha256": "c75040740853583f84ed5e24b076240e50c1e171590d90ed0b64638e54dff64c",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "jsem",
+      "small_asr": "Sem.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "c12f7caf-ba98-5c06-80c6-948fe00901bf"
+      ]
+    },
+    {
+      "asset_id": "39674295-7b9f-5e75-8488-d9e45f200759",
+      "stable_code": "AUD_CZE_M01_WORDS_JSEM_SLOW",
+      "audio_sha256": "3d0d98bf42c312c93b0fc2f009ecff32b171ab8001a1861515db27ab80b9fbd2",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "jsem",
+      "small_asr": "Sem.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "c12f7caf-ba98-5c06-80c6-948fe00901bf"
+      ]
+    },
+    {
+      "asset_id": "3e073a71-91c5-58ad-aa8a-2e56e0d99cef",
+      "stable_code": "AUD_CZE_M01_WORDS_JSI",
+      "audio_sha256": "71fe838f9bed62968790d18d68cc72fb712b87e05c1af4d1955b54df416fab23",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "jsi",
+      "small_asr": "Easy.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "0b6146d0-4cb5-5aed-8e70-ed17e08f407d"
+      ]
+    },
+    {
+      "asset_id": "10afe2fe-5f17-5ba7-ab1b-fb8263bc234a",
+      "stable_code": "AUD_CZE_M01_WORDS_JSI_SLOW",
+      "audio_sha256": "c215ccba952d111f420bf0e4989c1dce5e0b3f05256fffc08ddf775a7a3ab7fd",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "jsi",
+      "small_asr": "Easy.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "0b6146d0-4cb5-5aed-8e70-ed17e08f407d"
+      ]
+    },
+    {
+      "asset_id": "ade3b0e7-774f-55c5-b85a-bcd82a270b14",
+      "stable_code": "AUD_CZE_M01_WORDS_JSTE",
+      "audio_sha256": "8df924a36d23764082eaf1d4ee23de3e0b6e562b36062f1303623a9243ac2c1d",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "jste",
+      "small_asr": "Ste.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "e6ada213-a434-5067-b066-56629ec0c259"
+      ]
+    },
+    {
+      "asset_id": "64f21fa4-ea9b-5d20-89ac-c55edd0727ad",
+      "stable_code": "AUD_CZE_M01_WORDS_JSTE_SLOW",
+      "audio_sha256": "7f74cb4fb313f163c01e3f5cd812c0bdb8a385d38c652eb0762dae4eaacb1559",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "jste",
+      "small_asr": "Ste.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "e6ada213-a434-5067-b066-56629ec0c259"
+      ]
+    },
+    {
+      "asset_id": "3cba3fe6-664e-5a25-be23-1f1a3b8ff201",
+      "stable_code": "AUD_CZE_M01_WORDS_JE",
+      "audio_sha256": "361bd9c7c34de8c0340c082d1d3092e9256857e5512d831ddba84ea7f784e689",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "je",
+      "small_asr": "Jé.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "6f3e9674-98bf-520e-9761-cd01c426bdb4"
+      ]
+    },
+    {
+      "asset_id": "09816699-80f1-5d30-9951-0b6bc9a98c1d",
+      "stable_code": "AUD_CZE_M01_WORDS_JE_SLOW",
+      "audio_sha256": "089f14cadaf93fab0621a9078f3eea4b14670b8cdff63ea4bd84a05fb6dd4829",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "je",
+      "small_asr": "Jé.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "6f3e9674-98bf-520e-9761-cd01c426bdb4"
+      ]
+    },
+    {
+      "asset_id": "3acac059-e90d-51eb-bd47-38bcc8354999",
+      "stable_code": "AUD_CZE_M01_WORDS_UCITEL_SLOW",
+      "audio_sha256": "e379d9a2e99b0e6248851407a70a9eaf77a4734eadb0481afff4b04b898d0b54",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "učitel",
+      "small_asr": "Učitev.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "def0ecb6-3103-5435-ae35-31dc5509ac88"
+      ]
+    },
+    {
+      "asset_id": "8fc8b4d8-4d30-53d8-aeb2-2a121fcc679f",
+      "stable_code": "AUD_CZE_M01_WORDS_VY_OKSANA",
+      "audio_sha256": "11e6c96bc1e6c9d864be642e74b5ee0f63ca80fa02679171883242815a99d832",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Vy jste Oksana?",
+      "small_asr": "Vy jste oxana.",
+      "word_edits": 1,
+      "reference_words": 3,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "6f12d416-2fbb-5e78-b09b-4a2c69392311"
+      ]
+    },
+    {
+      "asset_id": "3e22e5cb-de60-547d-8d89-73603158f888",
+      "stable_code": "AUD_CZE_M01_WORDS_VY_OKSANA_SLOW",
+      "audio_sha256": "1aa2d30119ac349a92b7afe9d9966f29a5e7d47108f55872243bd4caec018a7f",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Vy jste Oksana?",
+      "small_asr": "Vy jste oxana.",
+      "word_edits": 1,
+      "reference_words": 3,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "6f12d416-2fbb-5e78-b09b-4a2c69392311"
+      ]
+    },
+    {
+      "asset_id": "7ac6c00a-dbbb-53b2-99ff-8065d7d4432a",
+      "stable_code": "AUD_CZE_M01_WORDS_TY_ADAM",
+      "audio_sha256": "539a680beba7a443c645e02080e7c8179c0775dd1071eac9d9383ef5b9e68ff9",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Ty jsi Adam.",
+      "small_asr": "Dysi Adam.",
+      "word_edits": 2,
+      "reference_words": 3,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "10c23d9a-f110-52fd-81c0-25f246fabefc"
+      ]
+    },
+    {
+      "asset_id": "4ec0e33a-cd82-5f6e-b947-e65fba6ada0a",
+      "stable_code": "AUD_CZE_M01_WORDS_TY_ADAM_SLOW",
+      "audio_sha256": "0a26572197ee9201ba3156062bb3e3c997ac3ae72c427abbfd34284f5ee4480e",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Ty jsi Adam.",
+      "small_asr": "DC Adam.",
+      "word_edits": 2,
+      "reference_words": 3,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "10c23d9a-f110-52fd-81c0-25f246fabefc"
+      ]
+    },
+    {
+      "asset_id": "d3a9bdeb-8e63-58cf-845e-f46acd6a77b4",
+      "stable_code": "AUD_CZE_M01_WORDS_COUNTRY_UA",
+      "audio_sha256": "33a5fc0732372e09aba34d17223f8b883dea141c959fd3eaaedc11a233b62bd0",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Ukrajina",
+      "small_asr": "Ukraina.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "37562d14-5b67-522b-b1f5-6e22c488fd13"
+      ]
+    },
+    {
+      "asset_id": "02a22a84-5f01-5877-98ed-c399d1484e09",
+      "stable_code": "AUD_CZE_M01_WORDS_COUNTRY_UA_SLOW",
+      "audio_sha256": "42b72fbf61b99fd161728bb1e3971d60ffbaccba868ace552b63660d97cb161c",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Ukrajina",
+      "small_asr": "Ukraina",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "37562d14-5b67-522b-b1f5-6e22c488fd13"
+      ]
+    },
+    {
+      "asset_id": "4f3fdd89-1a80-5285-a976-b325bbfe1351",
+      "stable_code": "AUD_CZE_M01_WORDS_COUNTRY_DE",
+      "audio_sha256": "00bc2c312c92c233c7a79533bf6a165b4d2880087ff3a811ea577d2ef30663c7",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Německo",
+      "small_asr": "Měmecku.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "d507c202-76e4-5637-bbc9-e63c65080e6c"
+      ]
+    },
+    {
+      "asset_id": "4c07319b-a8b8-5649-9073-5f0db4267a70",
+      "stable_code": "AUD_CZE_M01_WORDS_COUNTRY_DE_SLOW",
+      "audio_sha256": "7fe0a152ead7a37f686d7e780c925090bff6231085bbb1cfa68207a77040875d",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Německo",
+      "small_asr": "Měmecku.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "d507c202-76e4-5637-bbc9-e63c65080e6c"
+      ]
+    },
+    {
+      "asset_id": "33dd5e0c-7429-5f89-96ec-09e3a9a3279b",
+      "stable_code": "AUD_CZE_M01_WORDS_COUNTRY_SK",
+      "audio_sha256": "b1b58fe5a75a00d1184a7198146e1dc1224b1438089d6045cbe424936bfa568a",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Slovensko",
+      "small_asr": "Slovenskou.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "b41adfac-b5ac-5d76-9dcb-8e36ba50c3fd"
+      ]
+    },
+    {
+      "asset_id": "ed840a9b-e522-5cef-94cc-156f51a48ead",
+      "stable_code": "AUD_CZE_M01_WORDS_COUNTRY_SK_SLOW",
+      "audio_sha256": "cfaa646974bf578dd7e389ae9bee4beb38be24336fcd0d405e56e0763cb2131e",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Slovensko",
+      "small_asr": "slovenskou.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "b41adfac-b5ac-5d76-9dcb-8e36ba50c3fd"
+      ]
+    },
+    {
+      "asset_id": "298be826-2eb6-5060-aada-53f0db36ece0",
+      "stable_code": "AUD_CZE_M01_WORDS_COUNTRY_ES",
+      "audio_sha256": "9fd8b1d14f9a785e01de257c1690e63a8c68921af2dc73e6089d70e20eae8900",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Španělsko",
+      "small_asr": "Španiálskou.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "ed398621-4fcd-5a72-a2ff-01bc1931a04f"
+      ]
+    },
+    {
+      "asset_id": "f840696b-5d31-5382-895c-70c6f424c8e2",
+      "stable_code": "AUD_CZE_M01_WORDS_COUNTRY_ES_SLOW",
+      "audio_sha256": "6372d058514a22d2272bd880208086bc9a89b6114f475ef0391631832a0c41d0",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Španělsko",
+      "small_asr": "Španiáusko.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "ed398621-4fcd-5a72-a2ff-01bc1931a04f"
+      ]
+    },
+    {
+      "asset_id": "b8300ce0-d67b-5c4e-8f0c-04162c1ee43f",
+      "stable_code": "AUD_CZE_M01_WORDS_ORIGIN_CZ",
+      "audio_sha256": "7a2d20e600a3bac4adf76dfd5854b2b3f9b03d3ef5ea0f147554e8ce74cc8361",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Jsem z Česka.",
+      "small_asr": "Sem z Česka.",
+      "word_edits": 1,
+      "reference_words": 3,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "23b2e7ab-0576-50ce-9a4d-9ff07a2f6799"
+      ]
+    },
+    {
+      "asset_id": "72375d37-8d91-58ac-b464-d0f94ae59bd5",
+      "stable_code": "AUD_CZE_M01_WORDS_ORIGIN_CZ_SLOW",
+      "audio_sha256": "24066173516b138240e5bc0f3f36fecd49dc1ffc627d3af474d77c2b0d35fb01",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Jsem z Česka.",
+      "small_asr": "SEMS ČESKA",
+      "word_edits": 2,
+      "reference_words": 3,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "23b2e7ab-0576-50ce-9a4d-9ff07a2f6799"
+      ]
+    },
+    {
+      "asset_id": "91ac33d3-451e-52f4-bfa3-99eb81ea9198",
+      "stable_code": "AUD_CZE_M01_WORDS_ORIGIN_UA",
+      "audio_sha256": "16dd789156713c6609b0a4740f6539531b6316d0ee6d191ba342502735efad51",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Jsem z Ukrajiny.",
+      "small_asr": "jsem z Ukrainy.",
+      "word_edits": 1,
+      "reference_words": 3,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "3de8d8d0-28af-5ec1-ab10-eb6314b26748"
+      ]
+    },
+    {
+      "asset_id": "5b69b14a-93be-5fb2-ae9c-17a09a96b313",
+      "stable_code": "AUD_CZE_M01_WORDS_ORIGIN_UA_SLOW",
+      "audio_sha256": "aaef380e0d0ab92e085fabccb502db6fb30f156f32bc58167c7ec694540df2ef",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Jsem z Ukrajiny.",
+      "small_asr": "Sem z Ukrainy.",
+      "word_edits": 2,
+      "reference_words": 3,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "3de8d8d0-28af-5ec1-ab10-eb6314b26748"
+      ]
+    },
+    {
+      "asset_id": "884768b1-dc11-590f-aaf7-bd9a404a272d",
+      "stable_code": "AUD_CZE_M01_WORDS_ORIGIN_ES",
+      "audio_sha256": "604dd118f2fedb17ce0cb67c441c28d9d3a9a5ce1a8631679cdf689f3ea6f10e",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Jsem ze Španělska.",
+      "small_asr": "Jsem ze Španiálska.",
+      "word_edits": 1,
+      "reference_words": 3,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "46017cc6-554f-553b-add0-aecaca936555"
+      ]
+    },
+    {
+      "asset_id": "7d1c5f1b-1732-5206-bb58-95100d6ce49f",
+      "stable_code": "AUD_CZE_M01_WORDS_ORIGIN_ES_SLOW",
+      "audio_sha256": "f6a2004828a3b698ffc8d39f8de1e510cad30a5ef39a45439d5a2eff5b299c78",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Jsem ze Španělska.",
+      "small_asr": "Jsem ze Španiálska.",
+      "word_edits": 1,
+      "reference_words": 3,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "46017cc6-554f-553b-add0-aecaca936555"
+      ]
+    },
+    {
+      "asset_id": "8a45440e-59ff-579b-98c1-cc0c1c242920",
+      "stable_code": "AUD_CZE_M01_WORDS_LANG_EN",
+      "audio_sha256": "ec75e2e314d3c3eba27d35e51255f0ea01f3719df860e4af366f9e587196a2fe",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "anglicky",
+      "small_asr": "anglický",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "0085ee02-2e9e-58ca-afa1-da1c2c72300f"
+      ]
+    },
+    {
+      "asset_id": "b523e398-6da9-51ef-9cae-19a0436db1d3",
+      "stable_code": "AUD_CZE_M01_WORDS_LANG_EN_SLOW",
+      "audio_sha256": "79cfeafd522ddefbdf550ed559b2e711a566882059101ac63e561421b76084c9",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "anglicky",
+      "small_asr": "anglický",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "0085ee02-2e9e-58ca-afa1-da1c2c72300f"
+      ]
+    },
+    {
+      "asset_id": "826752a0-acae-51fc-bf02-8c14ad76ec66",
+      "stable_code": "AUD_CZE_M01_WORDS_LANG_UK",
+      "audio_sha256": "fc9cbaa9bd1d7b9775b3d6e48c39639e5d6f0a4dee19d69a0c3a99b44b8c415f",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "ukrajinsky",
+      "small_asr": "Ukraїnský.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "86910ff7-2d27-5f07-bc2b-a7ae1e9cdb36"
+      ]
+    },
+    {
+      "asset_id": "bb9d6a8c-54ea-500b-9520-6c96bf3fea78",
+      "stable_code": "AUD_CZE_M01_WORDS_LANG_UK_SLOW",
+      "audio_sha256": "e8d940ac60b49906e0bde5d28d93a4f500693d974b8cb13990805da083ffab2b",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "ukrajinsky",
+      "small_asr": "Ukraїnský.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "86910ff7-2d27-5f07-bc2b-a7ae1e9cdb36"
+      ]
+    },
+    {
+      "asset_id": "02b7f0f7-475b-5ab7-8ddd-baad8966c7f9",
+      "stable_code": "AUD_CZE_M01_WORDS_LANG_PL",
+      "audio_sha256": "3f1bc51342df455e946bb111691fc0e18b5eb45c7906d8630f3d81a526bff4d3",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "polsky",
+      "small_asr": "povzky",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "ba136816-a51a-50b6-9ee2-885d445182be"
+      ]
+    },
+    {
+      "asset_id": "05efc4a6-06ec-5d95-946c-5a80842b0ffe",
+      "stable_code": "AUD_CZE_M01_WORDS_LANG_DE",
+      "audio_sha256": "d9fd9b055631d7cd096980f3472238f5b72dbefce9dcad2023f9474480ae7ef3",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "německy",
+      "small_asr": "Nemecky.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "a3a86912-e78e-5058-94c1-aab5a3f19c20"
+      ]
+    },
+    {
+      "asset_id": "a95bdfc9-bae3-5fcb-b482-3ad820f4ef1b",
+      "stable_code": "AUD_CZE_M01_WORDS_LANG_ES",
+      "audio_sha256": "c8552f1a076fb03d34a16ed943228b4a58399ddbb14beb278de010b433162fe4",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "španělsky",
+      "small_asr": "Španiausky.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "50de28c7-b3f5-5ef2-969a-20083f20874e"
+      ]
+    },
+    {
+      "asset_id": "1b2a6730-1b1f-5cf0-b0d9-cf36029402a6",
+      "stable_code": "AUD_CZE_M01_WORDS_LANG_ES_SLOW",
+      "audio_sha256": "1b4b14cb7cb185f3e9431b0c1702db02c5e2ff7610f70b47b2d6e995c5d95f04",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "španělsky",
+      "small_asr": "Španiausky.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "50de28c7-b3f5-5ef2-969a-20083f20874e"
+      ]
+    },
+    {
+      "asset_id": "cef5b00e-9f5e-553b-b5a5-735b95f31410",
+      "stable_code": "AUD_CZE_M01_WORDS_CITY_PRA_SLOW",
+      "audio_sha256": "ff05c8001d926d6eeb38b847768e0e2cbda0dbe1832614584d29a82db198f41c",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Praha",
+      "small_asr": "Braha!",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "322bc12d-fc55-53f1-8c7e-fee009373899"
+      ]
+    },
+    {
+      "asset_id": "72b74df5-cab9-5078-99df-3a08dc489329",
+      "stable_code": "AUD_CZE_M01_WORDS_CITY_KYI",
+      "audio_sha256": "de4e54ca1b5f57bf425080d007b572f4fb831a1348562b710397cad43136937f",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Kyjev",
+      "small_asr": "KIF",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "704258f9-70ed-5875-a86b-bb3b4742388a"
+      ]
+    },
+    {
+      "asset_id": "b299e900-f77b-5e43-92f6-5be6bd06cada",
+      "stable_code": "AUD_CZE_M01_WORDS_CITY_KYI_SLOW",
+      "audio_sha256": "901231f95193f6448dfd758244787b797bb2bb3b1688981438834d820a2fa7a8",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Kyjev",
+      "small_asr": "ký je",
+      "word_edits": 2,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "704258f9-70ed-5875-a86b-bb3b4742388a"
+      ]
+    },
+    {
+      "asset_id": "cc5ddfd0-4f07-5f75-8eaf-85b159739b05",
+      "stable_code": "AUD_CZE_M01_WORDS_CITY_FROM_BRN_SLOW",
+      "audio_sha256": "6d914cf5a96d806ae705feb7acb33d4394700115491935e1ee966c7ece9a0a85",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Jsem z Brna.",
+      "small_asr": "Sem zbrná.",
+      "word_edits": 3,
+      "reference_words": 3,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "0443c82d-057b-5cf2-b1ea-85973eaba174"
+      ]
+    },
+    {
+      "asset_id": "c01843c8-165f-51a1-9d92-c5a1145b3be4",
+      "stable_code": "AUD_CZE_M01_WORDS_CITY_FROM_KYI",
+      "audio_sha256": "14d9dc952a32d722352da6c9a9a98e73f1b6bc4cbe7f491d3c45c568b51234de",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Jsem z Kyjeva.",
+      "small_asr": "Semsky jeva.",
+      "word_edits": 3,
+      "reference_words": 3,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "0aacb5e1-67b5-565a-8a88-334eec027ce7"
+      ]
+    },
+    {
+      "asset_id": "e34eead2-af24-5d3a-8996-4537ab55436d",
+      "stable_code": "AUD_CZE_M01_WORDS_CITY_FROM_KYI_SLOW",
+      "audio_sha256": "f133ef5ca8f2ab56eb05a7683f04d64efe06a1f8183e466c6de5adee06e5548e",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Jsem z Kyjeva.",
+      "small_asr": "Semsky Eva.",
+      "word_edits": 3,
+      "reference_words": 3,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "0aacb5e1-67b5-565a-8a88-334eec027ce7"
+      ]
+    },
+    {
+      "asset_id": "93cb08ff-3f01-5a46-94e1-df4b9b7c9023",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_00",
+      "audio_sha256": "e6a6f302357eaf36bd792e0145ccc719ebbe841abc7fb60155f1dfd302ac1c68",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "nula",
+      "small_asr": "No a...",
+      "word_edits": 2,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "7b209904-ebfa-528d-88b0-05d73e61bd2d"
+      ]
+    },
+    {
+      "asset_id": "9b524368-69c3-594a-ae2f-33d887a1f7b1",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_00_SLOW",
+      "audio_sha256": "2fb98cba965860aaea45e846e1e996169c763c35fd911fc05a7dd46b8192a0cd",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "nula",
+      "small_asr": "No a?",
+      "word_edits": 2,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "7b209904-ebfa-528d-88b0-05d73e61bd2d"
+      ]
+    },
+    {
+      "asset_id": "97446b01-19bf-5d29-8ffc-022dedc66d4b",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_03_SLOW",
+      "audio_sha256": "80755403648288743b83ec59c4ff0e99bc54d47c6fb44db5a3129b136a5ba40c",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "tři",
+      "small_asr": "Že.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "b1e17a52-6df7-5e54-9fb3-c1444365dde3"
+      ]
+    },
+    {
+      "asset_id": "38aaf170-0dd9-5682-9176-097728cfea6a",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_04",
+      "audio_sha256": "0d27077217ec9bda0c9538e94adceffe91613303a0b5b0254be725f9bb9a701d",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "čtyři",
+      "small_asr": "Stěži.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "bdac882a-2787-55e3-89e2-22e5b9446a32"
+      ]
+    },
+    {
+      "asset_id": "f41902f1-ecec-547d-b2a9-bae8e8eb06bf",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_04_SLOW",
+      "audio_sha256": "6b79cb36c2337855348bdd5629ae1225cc81dbd81878fdff3dc66cca44c17762",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "čtyři",
+      "small_asr": "Stěží.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "bdac882a-2787-55e3-89e2-22e5b9446a32"
+      ]
+    },
+    {
+      "asset_id": "3075d45f-9184-52e5-994b-7d2a4799857e",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_06",
+      "audio_sha256": "2d1076e601e07e3f64b0605188833d2fa69fb660f5ef3158c4b4fa5dbe31f14a",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "šest",
+      "small_asr": "Čest",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "ba705179-482f-597f-9cb5-81449542935b"
+      ]
+    },
+    {
+      "asset_id": "7b3ea339-910f-5acb-a680-b47c687e8bed",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_06_SLOW",
+      "audio_sha256": "ceca09f9bd3cfc57d6f74f52fa2fec2654e2b382c45a84b5a4f8903f47fd8c14",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "šest",
+      "small_asr": "Čest",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "ba705179-482f-597f-9cb5-81449542935b"
+      ]
+    },
+    {
+      "asset_id": "bc11c66a-003f-59b1-8f14-b4d7bb37d09e",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_08",
+      "audio_sha256": "dbb5cc7d9fc1d04823706acacbf59a20c861ad0d0d8e574f2aded2cbda95b820",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "osm",
+      "small_asr": "Osma.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "db90bc68-234e-5f1c-ad4a-bf15b4baf953"
+      ]
+    },
+    {
+      "asset_id": "4dc3ed12-a348-508f-a2b7-3925c9657f6d",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_08_SLOW",
+      "audio_sha256": "e5641e58804b387b7e8343b4e2b5c29c5fefd711c874d98ba77c431ca55909ea",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "osm",
+      "small_asr": "Osma.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "db90bc68-234e-5f1c-ad4a-bf15b4baf953"
+      ]
+    },
+    {
+      "asset_id": "a43ffc1d-2f23-5607-82f6-6f250dafe52d",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_09",
+      "audio_sha256": "0b65ac545c0ca5e69de6d274202b31fc6accdc2a2222efb26ebe23aff97ef8c4",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "devět",
+      "small_asr": "Débět!",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "a508b594-52c5-5956-b65b-9d39f5041119"
+      ]
+    },
+    {
+      "asset_id": "a079d75e-4a1a-51d0-a52d-9c6b665d49be",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_10_SLOW",
+      "audio_sha256": "3c2799bc46923dca9f71d6b67ae3b3e1ddb9178b6a9dd2a460724dd90d6c3d97",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "deset",
+      "small_asr": "Dezet.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "5082c403-097c-5e45-99ab-ffd5341885e1"
+      ]
+    },
+    {
+      "asset_id": "9229043a-5ffa-5364-8674-b5e650a45ac9",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_11",
+      "audio_sha256": "ae4e6c53481b06aa4ad2d3b7c67697ae82e821c4649253dc3c41d9c715ca2bb8",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "jedenáct",
+      "small_asr": "Jedináct.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "acf4fef9-5b8b-56d8-97f8-9a5e37ac7eb6"
+      ]
+    },
+    {
+      "asset_id": "b908baa1-aeca-587e-892c-6e2e228859cc",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_11_SLOW",
+      "audio_sha256": "4b08faa812ba770cc799c744c0793f7a40ce9d4b39cc39e8682820489520d641",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "jedenáct",
+      "small_asr": "Jedináct.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "acf4fef9-5b8b-56d8-97f8-9a5e37ac7eb6"
+      ]
+    },
+    {
+      "asset_id": "1554531a-d55c-5c1e-85b2-1fab1c237f31",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_12",
+      "audio_sha256": "5b53271c8caa6e90563471155686cef50322f019a91e6b7e92923d61512455ae",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "dvanáct",
+      "small_asr": "12.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "bdfc6717-d4ad-51eb-abf7-3363cafb40a9"
+      ]
+    },
+    {
+      "asset_id": "6a994e9f-65d1-5bbe-b055-c307627492f0",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_12_SLOW",
+      "audio_sha256": "e034cd1af950917597601f446656006ecc1ddce842cc96d43bc1d1bf295da10c",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "dvanáct",
+      "small_asr": "12.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "bdfc6717-d4ad-51eb-abf7-3363cafb40a9"
+      ]
+    },
+    {
+      "asset_id": "2477e4c1-5b99-5f6a-b603-024a17c7cfa5",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_13_SLOW",
+      "audio_sha256": "b1fd4606f621ac8df259ca0bd881b12c1fa9841a46b80c1bd92e8d41ae32febf",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "třináct",
+      "small_asr": "Činast.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "1d86faa0-6557-58b3-9c31-1f2318bb3edc"
+      ]
+    },
+    {
+      "asset_id": "c1e29559-851b-5bb8-a3c8-ab6e7f228768",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_14",
+      "audio_sha256": "1192de127b35b80f3e80b70333443837e0043c0b6ef5c18fa67c9d5d770731f2",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "čtrnáct",
+      "small_asr": "14.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "17d6545c-96fb-5b8e-b832-6d039ec1b664"
+      ]
+    },
+    {
+      "asset_id": "4d454f61-a0da-5bea-b494-b0f796e4959c",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_14_SLOW",
+      "audio_sha256": "61943937d6a742a6192d5ab1167e7e4010aa729a8a05c04315ac6e158b8759ad",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "čtrnáct",
+      "small_asr": "čty náct.",
+      "word_edits": 2,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "17d6545c-96fb-5b8e-b832-6d039ec1b664"
+      ]
+    },
+    {
+      "asset_id": "aedee6ec-c29d-5015-8f09-b89924d827bd",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_15_SLOW",
+      "audio_sha256": "326ca38e1c3b2b93ae690965a8b0da49851d7fcd75cfe6e89459b7320432d9e9",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "patnáct",
+      "small_asr": "15.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "d227eafe-7fa5-58fd-9dbb-9c682bb3765b"
+      ]
+    },
+    {
+      "asset_id": "3bbfcf7a-2b06-5193-bca5-6505cd3c8e89",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_16",
+      "audio_sha256": "938f34daba9f9354aa1d8a88ff7fd10ffb8f88d31868701eaefa2685954e7d5e",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "šestnáct",
+      "small_asr": "Čestnáct.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "b3aba1f4-4f10-5509-9334-8b1bb3659f05"
+      ]
+    },
+    {
+      "asset_id": "c4759df2-62f9-5433-b42d-62c724cfd895",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_16_SLOW",
+      "audio_sha256": "584dc13674d0f06b152ca59eca6db9f0d21f80aa53716fb0e77e9f4157037797",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "šestnáct",
+      "small_asr": "Čestnáct.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "b3aba1f4-4f10-5509-9334-8b1bb3659f05"
+      ]
+    },
+    {
+      "asset_id": "1618687e-a9ce-53d7-b8e1-fbca89cb72c5",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_17",
+      "audio_sha256": "3d770044c0ac8e9c6f1aefe3182f2051e02310d3a3c6d1c6aab14985dc759dbb",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "sedmnáct",
+      "small_asr": "se dnáct.",
+      "word_edits": 2,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "a88a8d55-f99e-5c90-a352-8580d5ee7ece"
+      ]
+    },
+    {
+      "asset_id": "3c6bc54e-86d4-55dc-ad9f-3fb7ac1075f9",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_17_SLOW",
+      "audio_sha256": "a86c73acc66e75362be1bcbfd76a97bac7b0d02b7e7d7ae4052282bf55c39a18",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "sedmnáct",
+      "small_asr": "se dnáct.",
+      "word_edits": 2,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "a88a8d55-f99e-5c90-a352-8580d5ee7ece"
+      ]
+    },
+    {
+      "asset_id": "18283c92-8321-543c-9a21-81ec9f0d607c",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_18",
+      "audio_sha256": "961c32680ab1ba6894aef0f6d673f07a49aff3bf4516ba1c9a4c65ff9cf52a53",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "osmnáct",
+      "small_asr": "18.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "f1091939-58ce-5105-814d-10a82d894903"
+      ]
+    },
+    {
+      "asset_id": "c1da8ab5-b7fb-59a1-9df4-d75ff3b21052",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_18_SLOW",
+      "audio_sha256": "5f0ecdc27967244292a5285e75b2c0a7d64f905dccf048950d7628256d052671",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "osmnáct",
+      "small_asr": "18.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "f1091939-58ce-5105-814d-10a82d894903"
+      ]
+    },
+    {
+      "asset_id": "ff67a929-d08e-5e4c-9088-21ffdeae470a",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_20",
+      "audio_sha256": "265dd24c18b110fe9fba6343bc0175881728c35290641290781084f9858b5b79",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "dvacet",
+      "small_asr": "20.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "1494b14c-498f-52f6-b18a-4af99f403b13"
+      ]
+    },
+    {
+      "asset_id": "b4120e55-6c26-5f55-8f96-f0d0aca6c7ff",
+      "stable_code": "AUD_CZE_M01_WORDS_NUM_20_SLOW",
+      "audio_sha256": "597beb1dbb8a6d34d44df8f53489b8ce993031c53df7852a36859c8f6161b02a",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "dvacet",
+      "small_asr": "20.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "1494b14c-498f-52f6-b18a-4af99f403b13"
+      ]
+    },
+    {
+      "asset_id": "1086686d-c34d-5ec3-a663-9a156a068e7e",
+      "stable_code": "AUD_CZE_M01_WORDS_SELF_INTRO",
+      "audio_sha256": "4814a51c086b8c767169a4f55b1d9a95d7e3b4613867a6a3523da138031eab6f",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Dobrý den. Jmenuji se Oksana. Jsem z Ukrajiny. Těší mě.",
+      "small_asr": "Dobrý den, minuj se Oksana, jsem z Ukrainy, těší mě.",
+      "word_edits": 2,
+      "reference_words": 10,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "fa40983b-d2c4-59a6-b631-525fe6fcef2b"
+      ]
+    },
+    {
+      "asset_id": "168cd5d0-9e6e-59f8-86c1-d4f6a324be43",
+      "stable_code": "AUD_CZE_M01_WORDS_SELF_INTRO_SLOW",
+      "audio_sha256": "59dc5fc1702e9df1cd818ed41e21d9dbdda616495170596110a4f4f924e6affb",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Dobrý den. Jmenuji se Oksana. Jsem z Ukrajiny. Těší mě.",
+      "small_asr": "Doblý den, menuj se Oksana, jsem z Ukrainy těší mě.",
+      "word_edits": 3,
+      "reference_words": 10,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "fa40983b-d2c4-59a6-b631-525fe6fcef2b"
+      ]
+    },
+    {
+      "asset_id": "83cb0058-6ac4-5121-9da3-0fdb5495be05",
+      "stable_code": "AUD_ENG_M01_DIALOGUES_L01_CONTEXT_TURN_02",
+      "audio_sha256": "2471321d3b5cb6c3047665c18e2efe5477b0ba2c55a392ef22b3754afdd0b6fa",
+      "language": "en",
+      "speed": "normal",
+      "expected": "Hi.",
+      "small_asr": "Bye.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "8679dadf-54aa-5a4d-8999-e99c1db8bd22"
+      ]
+    },
+    {
+      "asset_id": "3d1e3ea4-4e31-54b8-91b2-cee4154b951f",
+      "stable_code": "AUD_ENG_M01_DIALOGUES_L01_CONTEXT_TURN_02_SLOW",
+      "audio_sha256": "d56ec67ca172bc9cfcc076d2ed194ae3498fa87193a4a9f305bc51fec07b3339",
+      "language": "en",
+      "speed": "slow",
+      "expected": "Hi.",
+      "small_asr": "Bye.",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "8679dadf-54aa-5a4d-8999-e99c1db8bd22"
+      ]
+    },
+    {
+      "asset_id": "04d258c0-1623-58cb-9d9b-dfeccc602e49",
+      "stable_code": "AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT",
+      "audio_sha256": "969182c7623de9b7951f253b1aaa690064fc8904423a4b8141497abd57e52724",
+      "language": "en",
+      "speed": "normal",
+      "expected": "Hello. I'm Maya.\nHi. I'm Daniel. Where are you from?\nI'm from Ukraine. Where are you from?\nI'm from the UK. Nice to meet you.\nNice to meet you too.\nBye.",
+      "small_asr": "Hello, I'm Maya. Hi, I'm Daniel. Where are you from? I'm from Ukraine. Where are you from? I'm from the UK. Nice to meet you. Nice to meet you too. Why?",
+      "word_edits": 1,
+      "reference_words": 31,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "a771d57a-558c-55e7-947b-f466e5c7a893",
+        "92ce1222-e6e7-585b-8487-3aa6aa2dc94e",
+        "4ce1f705-68c6-5606-8f10-0048012589df",
+        "4578ae70-2d5d-562c-af8f-dd8520647fc5",
+        "1c2b2dfc-a627-50aa-a30f-1be9f45869b4",
+        "2beae5b6-681f-53ed-b24d-afcddd4438a4"
+      ]
+    },
+    {
+      "asset_id": "0d68b714-696c-561b-a644-e7fe006d1c2f",
+      "stable_code": "AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_SLOW",
+      "audio_sha256": "e74b93de47fbdce126e340de91844021f371bd3a78a40ad73ffdcc64eec86aa0",
+      "language": "en",
+      "speed": "slow",
+      "expected": "Hello. I'm Maya.\nHi. I'm Daniel. Where are you from?\nI'm from Ukraine. Where are you from?\nI'm from the UK. Nice to meet you.\nNice to meet you too.\nBye.",
+      "small_asr": "Hello, I'm Maya. Hi, I'm Daniel. Where are you from? I'm from Ukraine. Where are you from? I'm from the UK. Nice to meet you. Nice to meet you too. Why?",
+      "word_edits": 1,
+      "reference_words": 31,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "a771d57a-558c-55e7-947b-f466e5c7a893",
+        "92ce1222-e6e7-585b-8487-3aa6aa2dc94e",
+        "4ce1f705-68c6-5606-8f10-0048012589df",
+        "4578ae70-2d5d-562c-af8f-dd8520647fc5",
+        "1c2b2dfc-a627-50aa-a30f-1be9f45869b4",
+        "2beae5b6-681f-53ed-b24d-afcddd4438a4"
+      ]
+    },
+    {
+      "asset_id": "670398f4-4e84-5617-8883-c2474c39b9d6",
+      "stable_code": "AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_04_SLOW",
+      "audio_sha256": "848f0be8bbb6a5b4e3984a7ed17a59e54e1294acda8ddafb97f7c56d54218f2e",
+      "language": "en",
+      "speed": "slow",
+      "expected": "I'm from the UK. Nice to meet you.",
+      "small_asr": "I am from the UK. Nice to meet you.",
+      "word_edits": 2,
+      "reference_words": 8,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "4578ae70-2d5d-562c-af8f-dd8520647fc5"
+      ]
+    },
+    {
+      "asset_id": "a138cfeb-7c83-5e9a-94bc-3716d237f6c2",
+      "stable_code": "AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_06",
+      "audio_sha256": "04fed8e3c429ee63081619f40d1c81312a6bcfde085a9ff9ac8646c2bec742df",
+      "language": "en",
+      "speed": "normal",
+      "expected": "Bye.",
+      "small_asr": "Why?",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "2beae5b6-681f-53ed-b24d-afcddd4438a4"
+      ]
+    },
+    {
+      "asset_id": "59e70595-3224-5fef-a876-1fe22f97b603",
+      "stable_code": "AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_06_SLOW",
+      "audio_sha256": "7e9eb3ce10f900505eda72abacd31051a4e5fa7bae2a071046ef84d5ec119b19",
+      "language": "en",
+      "speed": "slow",
+      "expected": "Bye.",
+      "small_asr": "Why?",
+      "word_edits": 1,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "2beae5b6-681f-53ed-b24d-afcddd4438a4"
+      ]
+    },
+    {
+      "asset_id": "fe8d6802-a3af-53f9-a20b-f24eb8d92e41",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L01_CONTEXT",
+      "audio_sha256": "1e4e3149ffa6f038fe34a12238307d4b14bc695cebf27f7e72f23b400f72299f",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Dobrý den.\nDobrý den.",
+      "small_asr": "Dobí den. Dobí den.",
+      "word_edits": 2,
+      "reference_words": 4,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "4dd9d221-69c1-5137-8549-4f86e796a26e",
+        "aa3f7723-6ea0-5d30-a8a5-8fa2da7a3574"
+      ]
+    },
+    {
+      "asset_id": "d1cc5e4f-c9cd-5c6f-a7fe-fd2ab8794bdf",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L01_CONTEXT_SLOW",
+      "audio_sha256": "297942524997526ad284d5f5fe8c2c3d9c992813d5a3e4bb32e0bdc8949b5c2c",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Dobrý den.\nDobrý den.",
+      "small_asr": "Dobí den. Dobí den.",
+      "word_edits": 2,
+      "reference_words": 4,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "4dd9d221-69c1-5137-8549-4f86e796a26e",
+        "aa3f7723-6ea0-5d30-a8a5-8fa2da7a3574"
+      ]
+    },
+    {
+      "asset_id": "3caa4858-e369-5b7e-80c6-83babb3646a8",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L01_CONTEXT_TURN_01",
+      "audio_sha256": "95f0813bfa96a2d6e28c2b0be9ea88aac9a7ed7463226fd357ec3f95a17eab23",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Dobrý den.",
+      "small_asr": "Dobí den.",
+      "word_edits": 1,
+      "reference_words": 2,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "4dd9d221-69c1-5137-8549-4f86e796a26e"
+      ]
+    },
+    {
+      "asset_id": "5984a02d-0913-5a65-b867-ac8fde4b3f0b",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L01_CONTEXT_TURN_01_SLOW",
+      "audio_sha256": "2adf41b5490be3afbe8417b474e74bb1b959ee5c4698ef7abfa19b1f31d55d6b",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Dobrý den.",
+      "small_asr": "doby den.",
+      "word_edits": 1,
+      "reference_words": 2,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "4dd9d221-69c1-5137-8549-4f86e796a26e"
+      ]
+    },
+    {
+      "asset_id": "8c911c00-e52a-5603-b1ad-462588375fc2",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L01_CONTEXT_TURN_02",
+      "audio_sha256": "d4c30c76a803d80fa8118f0212e440f096b47d60902e4663e33a41a04aac712b",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Dobrý den.",
+      "small_asr": "Do býden!",
+      "word_edits": 2,
+      "reference_words": 2,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "aa3f7723-6ea0-5d30-a8a5-8fa2da7a3574"
+      ]
+    },
+    {
+      "asset_id": "ad913b13-8d88-598d-89c0-3c836402e859",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L01_REPAIR",
+      "audio_sha256": "8608b4edc109dca8dc48ce16cf563457ea0b6a7db39b21c7b1af903c344a2120",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Dobrý den. Jmenuji se Klára.\nPromiňte. Nerozumím. Můžete to zopakovat, prosím?\nJmenuji se Klára.\nDěkuji.",
+      "small_asr": "Dobí den, menuj se kvára. Promínte, nerozumím, můžete to zopakovat, prosím. Menuj se kvára. Tykuj.",
+      "word_edits": 7,
+      "reference_words": 15,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "94b4764e-0274-5e24-b0ab-34715feb6b2e",
+        "90796f07-1b9d-5b36-8b6b-7465bcc591f9",
+        "9036dda4-89d5-521d-8f72-a98fd1319bd8",
+        "393077b9-92c8-5865-96d2-de9749e83e99"
+      ]
+    },
+    {
+      "asset_id": "7d20a6ec-8d14-5448-b0d6-2b8706fd7826",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L01_REPAIR_SLOW",
+      "audio_sha256": "cb7f6613767257a59c6847222741ad5853eba7ed4d943dd645f9d6b8a923029d",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Dobrý den. Jmenuji se Klára.\nPromiňte. Nerozumím. Můžete to zopakovat, prosím?\nJmenuji se Klára.\nDěkuji.",
+      "small_asr": "Do býden, menuj se kvára. Promínte, nerozumím, můžete to zopakovat, prosím. Menuj se kvára. Tykuj.",
+      "word_edits": 8,
+      "reference_words": 15,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "94b4764e-0274-5e24-b0ab-34715feb6b2e",
+        "90796f07-1b9d-5b36-8b6b-7465bcc591f9",
+        "9036dda4-89d5-521d-8f72-a98fd1319bd8",
+        "393077b9-92c8-5865-96d2-de9749e83e99"
+      ]
+    },
+    {
+      "asset_id": "6975642d-68ac-579d-9ac8-92dd7d1f44a1",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L01_REPAIR_TURN_01",
+      "audio_sha256": "e3241b8ee14181f029a0346cf09e842c1a11af76fd522238b051136145c1ed6f",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Dobrý den. Jmenuji se Klára.",
+      "small_asr": "Do býden, menový sekláda.",
+      "word_edits": 5,
+      "reference_words": 5,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "94b4764e-0274-5e24-b0ab-34715feb6b2e"
+      ]
+    },
+    {
+      "asset_id": "4582d1fb-c14a-5950-8ad2-2592f84c6fe6",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L01_REPAIR_TURN_01_SLOW",
+      "audio_sha256": "3ca0c910ea1f9a86fcc42a6c911fe2d3b0835c79776d37080d76f1c63c90d1a6",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Dobrý den. Jmenuji se Klára.",
+      "small_asr": "Do býden, menu i se klára.",
+      "word_edits": 4,
+      "reference_words": 5,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "94b4764e-0274-5e24-b0ab-34715feb6b2e"
+      ]
+    },
+    {
+      "asset_id": "55ea49c8-036b-5259-9836-401210fcf31b",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L01_REPAIR_TURN_03",
+      "audio_sha256": "c26ae09d1801ae439b71639692a59cbf360f351737420a08817aeadf6a7c0e68",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Jmenuji se Klára.",
+      "small_asr": "Menuj se kvára.",
+      "word_edits": 2,
+      "reference_words": 3,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "9036dda4-89d5-521d-8f72-a98fd1319bd8"
+      ]
+    },
+    {
+      "asset_id": "05bede88-eda0-50e3-bc6d-a10146d6f0fb",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L01_REPAIR_TURN_03_SLOW",
+      "audio_sha256": "35a530b398fef63aaba72ddb45926882a84372ed193f43f1e335cd635dd687bc",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Jmenuji se Klára.",
+      "small_asr": "Menu i se kvára.",
+      "word_edits": 3,
+      "reference_words": 3,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "9036dda4-89d5-521d-8f72-a98fd1319bd8"
+      ]
+    },
+    {
+      "asset_id": "a9063723-2194-58c7-b48e-33c4ac6c3df2",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L01_REPAIR_TURN_04",
+      "audio_sha256": "2c252ec6bc0bd45f6b0777bf31df7b4b44d31921aef74348ae855dcb06e8edac",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Děkuji.",
+      "small_asr": "Ty kuj.",
+      "word_edits": 2,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "393077b9-92c8-5865-96d2-de9749e83e99"
+      ]
+    },
+    {
+      "asset_id": "3c2e23d3-c64c-5f08-a690-8c2e67fdaf75",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L01_REPAIR_TURN_04_SLOW",
+      "audio_sha256": "60044833100159c029dabb9ce5b5cf0535df7d736f97141433ac97dcefb737f7",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Děkuji.",
+      "small_asr": "I kuj.",
+      "word_edits": 2,
+      "reference_words": 1,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "393077b9-92c8-5865-96d2-de9749e83e99"
+      ]
+    },
+    {
+      "asset_id": "5e6fde4d-45c3-5e75-afb3-23654571ed44",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L04_FORMAL",
+      "audio_sha256": "d90b2c80bfac155171734ac719dc14a4a7b7c2901842ad6386a9160d411fc379",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Dobrý den. Jak se jmenujete?\nDobrý den. Jmenuji se Oksana.\nOdkud jste?\nJsem z Ukrajiny.\nTěší mě.\nMě také.",
+      "small_asr": "Dobí den, jak se menujete, ne? Dobí den, menuj se Oksana. Odkud jste. Jsem z Ukrainy. Kěši mě. Mě také.",
+      "word_edits": 7,
+      "reference_words": 19,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "03fc95ba-e1fa-5512-bcc9-bd4d63214aaa",
+        "d0c6667f-9bfd-57bf-84f5-90e39951484e",
+        "b6de6fd8-de32-59a4-84b5-e91f37ee4293",
+        "10dbb5af-0f40-5129-8784-83ae84b52c09",
+        "06d9a621-1566-52a7-829c-98a2aaf0bfc1",
+        "c2df5141-295a-55a7-874a-bb16a90f4e64"
+      ]
+    },
+    {
+      "asset_id": "3c87893a-d814-54d8-a17b-44eb3974668b",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L04_FORMAL_SLOW",
+      "audio_sha256": "1fe4e4f28f0e738421e666c9e7961c32c67def2f80f78935517812b85201ed1c",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Dobrý den. Jak se jmenujete?\nDobrý den. Jmenuji se Oksana.\nOdkud jste?\nJsem z Ukrajiny.\nTěší mě.\nMě také.",
+      "small_asr": "Dobí den, jak se menujete? Ne. Dobí den, menuj se Oksana. Odkud jste. Jsem z Ukrainy. Těším mě. Mě také.",
+      "word_edits": 7,
+      "reference_words": 19,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "03fc95ba-e1fa-5512-bcc9-bd4d63214aaa",
+        "d0c6667f-9bfd-57bf-84f5-90e39951484e",
+        "b6de6fd8-de32-59a4-84b5-e91f37ee4293",
+        "10dbb5af-0f40-5129-8784-83ae84b52c09",
+        "06d9a621-1566-52a7-829c-98a2aaf0bfc1",
+        "c2df5141-295a-55a7-874a-bb16a90f4e64"
+      ]
+    },
+    {
+      "asset_id": "3c46f211-bd2c-5971-9885-c3b316edbee0",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L04_FORMAL_TURN_01",
+      "audio_sha256": "155f8787b7123e46a19ce92f1e3df592893332c8cdf7eaa0ef60b3c272b445b1",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Dobrý den. Jak se jmenujete?",
+      "small_asr": "dobí den jak se menilte.",
+      "word_edits": 2,
+      "reference_words": 5,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "03fc95ba-e1fa-5512-bcc9-bd4d63214aaa"
+      ]
+    },
+    {
+      "asset_id": "2c056ee2-8724-507e-884e-2371b0c6cae4",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L04_FORMAL_TURN_01_SLOW",
+      "audio_sha256": "b27acc5ef55c4cf298e0ad63b4ea65cf41c4ecad79bc2fd5d36f5b8039df691f",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Dobrý den. Jak se jmenujete?",
+      "small_asr": "Dobí den, jak se meníte.",
+      "word_edits": 2,
+      "reference_words": 5,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "03fc95ba-e1fa-5512-bcc9-bd4d63214aaa"
+      ]
+    },
+    {
+      "asset_id": "77e6fb64-357a-5c26-909f-29d365437f4d",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L04_FORMAL_TURN_02",
+      "audio_sha256": "5223e178f4c84651a465d68c25970cbac97d6a6f4c6f9982d2f0aee915ed66fb",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Dobrý den. Jmenuji se Oksana.",
+      "small_asr": "Robí den, menu jsi oxana.",
+      "word_edits": 4,
+      "reference_words": 5,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "d0c6667f-9bfd-57bf-84f5-90e39951484e"
+      ]
+    },
+    {
+      "asset_id": "a2246b80-aad7-5f5c-ac09-1c520dd33d1a",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L04_FORMAL_TURN_02_SLOW",
+      "audio_sha256": "aff586e24dc48d70d51355b5f944f2ecd2b55d06969a636f712d11b99b188c8d",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Dobrý den. Jmenuji se Oksana.",
+      "small_asr": "a ho být jen menu i se oksana.",
+      "word_edits": 6,
+      "reference_words": 5,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "d0c6667f-9bfd-57bf-84f5-90e39951484e"
+      ]
+    },
+    {
+      "asset_id": "8f1d8fc2-48f7-58e5-942d-c3ab1c69b873",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L04_FORMAL_TURN_04",
+      "audio_sha256": "d90724696f5621992459729268450c6344b9f9103e998b5af6d1b7152d2a6589",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Jsem z Ukrajiny.",
+      "small_asr": "jsem z Ukrainy",
+      "word_edits": 1,
+      "reference_words": 3,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "10dbb5af-0f40-5129-8784-83ae84b52c09"
+      ]
+    },
+    {
+      "asset_id": "068bd362-0a3d-5dd6-979f-c065fb3c5286",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L04_FORMAL_TURN_04_SLOW",
+      "audio_sha256": "4f352084c2daa7068af977871078c5521f79d53ea3fa2fa2a5923cdd5caf21b3",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Jsem z Ukrajiny.",
+      "small_asr": "jsem z Ukrainy",
+      "word_edits": 1,
+      "reference_words": 3,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "10dbb5af-0f40-5129-8784-83ae84b52c09"
+      ]
+    },
+    {
+      "asset_id": "82366a09-d244-55af-813c-d51c77a4a946",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L04_FORMAL_TURN_05",
+      "audio_sha256": "22f640e1395586e07afd43890b713728dbb66ee29e548db91dc078813002017c",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Těší mě.",
+      "small_asr": "Keši mě.",
+      "word_edits": 1,
+      "reference_words": 2,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "06d9a621-1566-52a7-829c-98a2aaf0bfc1"
+      ]
+    },
+    {
+      "asset_id": "fa683040-575c-5ccc-bc94-9a604c2e6723",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L04_FORMAL_TURN_05_SLOW",
+      "audio_sha256": "b0a4c93898c1f8b172e54e77bdb02dbd22f999b89af4bb80cf774729026234a6",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Těší mě.",
+      "small_asr": "Těši mě.",
+      "word_edits": 1,
+      "reference_words": 2,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "06d9a621-1566-52a7-829c-98a2aaf0bfc1"
+      ]
+    },
+    {
+      "asset_id": "ab67408b-074a-5956-a90b-38c1d52908b0",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L04_INFORMAL",
+      "audio_sha256": "e07c448d60b1e8bdbd5c33ad453f9e76840220d42ffd682f5410e6fde1846358",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Ahoj. Jak se jmenuješ?\nAhoj. Jmenuji se Oksana.\nOdkud jsi?\nJsem z Ukrajiny. Odkud jsi?\nJsem z Česka. Těší mě.\nTaky mě těší.",
+      "small_asr": "Ahoj, jak se jmenuješ? Ahoj, jmenuj se Oksana. Odkutí si. Jsem z Ukrainy, odkutí si. Jsem z Česka, těší mě. Taky mě těší.",
+      "word_edits": 6,
+      "reference_words": 23,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "baddc4d1-1d8b-5ea2-977f-52ae59cfd385",
+        "213d1a1e-69d0-51c4-ac2c-9504403fd593",
+        "b6a30bc9-e055-5ba0-ba7c-8cff202d59d1",
+        "70bd5ce7-62b3-5533-acec-4ac681c06707",
+        "45edc579-9c5d-5ff0-ab55-5624ac30cdef",
+        "47acdd9e-8359-5fdc-9341-158c31efe365"
+      ]
+    },
+    {
+      "asset_id": "fa51fd78-8148-5d79-90d4-be124448efa2",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L04_INFORMAL_SLOW",
+      "audio_sha256": "41c99e2a6b01e5e2cd0bf750f0e8cb5069d5404b23bc52d5a9649f1cc40c1300",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Ahoj. Jak se jmenuješ?\nAhoj. Jmenuji se Oksana.\nOdkud jsi?\nJsem z Ukrajiny. Odkud jsi?\nJsem z Česka. Těší mě.\nTaky mě těší.",
+      "small_asr": "Ahoj, jak se jmenuješ? Ahoj, jmenuj se Oksana. Odkutí si. Jsem z Ukrainy, odkutí si. Jsem z Česka, těší mě. Taky mě těší.",
+      "word_edits": 6,
+      "reference_words": 23,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "baddc4d1-1d8b-5ea2-977f-52ae59cfd385",
+        "213d1a1e-69d0-51c4-ac2c-9504403fd593",
+        "b6a30bc9-e055-5ba0-ba7c-8cff202d59d1",
+        "70bd5ce7-62b3-5533-acec-4ac681c06707",
+        "45edc579-9c5d-5ff0-ab55-5624ac30cdef",
+        "47acdd9e-8359-5fdc-9341-158c31efe365"
+      ]
+    },
+    {
+      "asset_id": "dda70ffd-a268-5df6-984a-fb393ef685a7",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L04_INFORMAL_TURN_02",
+      "audio_sha256": "18dc6a83253a19c69a1a174f7ac8fb3831fd00aeffadf6c8b5b7de7acce3fad7",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Ahoj. Jmenuji se Oksana.",
+      "small_asr": "Ahoj. Menuj se oxana.",
+      "word_edits": 2,
+      "reference_words": 4,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "213d1a1e-69d0-51c4-ac2c-9504403fd593"
+      ]
+    },
+    {
+      "asset_id": "be991c99-1bff-5944-8246-5602c5f51bb4",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L04_INFORMAL_TURN_02_SLOW",
+      "audio_sha256": "eba8790c7d125a5e4536d0dfdcb8558cfa43fcdafa4d0f66396d91e21e4e50ad",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Ahoj. Jmenuji se Oksana.",
+      "small_asr": "Ahoj, menuj se oxana.",
+      "word_edits": 2,
+      "reference_words": 4,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "213d1a1e-69d0-51c4-ac2c-9504403fd593"
+      ]
+    },
+    {
+      "asset_id": "4292974e-619a-5e4a-a67f-7302b923a140",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L04_INFORMAL_TURN_03",
+      "audio_sha256": "ee25550da49e2451fc5d0fc2c3a5c7e0510a5da53892acec23616112f234a424",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Odkud jsi?",
+      "small_asr": "od koty si.",
+      "word_edits": 3,
+      "reference_words": 2,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "b6a30bc9-e055-5ba0-ba7c-8cff202d59d1"
+      ]
+    },
+    {
+      "asset_id": "2abd182e-2343-58fa-bb3c-4b8e5a7ce825",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L04_INFORMAL_TURN_03_SLOW",
+      "audio_sha256": "7a3f889dc1f67b0e632061fa4288ab2beac493a702d4cf29e45b1d1dbd951126",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Odkud jsi?",
+      "small_asr": "Od kouty si.",
+      "word_edits": 3,
+      "reference_words": 2,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "b6a30bc9-e055-5ba0-ba7c-8cff202d59d1"
+      ]
+    },
+    {
+      "asset_id": "d464b575-a90f-54af-a6a1-36fa4655f8ae",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L04_INFORMAL_TURN_04",
+      "audio_sha256": "8a6b74ba4b250ef00073083dcd7e37153a6249a19cd2cdf7ff8bbff66b5d707f",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Jsem z Ukrajiny. Odkud jsi?",
+      "small_asr": "s Ukrainy. Odkuď si.",
+      "word_edits": 5,
+      "reference_words": 5,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "70bd5ce7-62b3-5533-acec-4ac681c06707"
+      ]
+    },
+    {
+      "asset_id": "bcc99cae-5f6f-5a81-8e62-f62031400ff5",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L04_INFORMAL_TURN_04_SLOW",
+      "audio_sha256": "fa8d1dff8ee754cf615834ecbadbbde6b9d616be1a17dececbd060514b952653",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Jsem z Ukrajiny. Odkud jsi?",
+      "small_asr": "z Ukrainy. Odkuď si.",
+      "word_edits": 4,
+      "reference_words": 5,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "70bd5ce7-62b3-5533-acec-4ac681c06707"
+      ]
+    },
+    {
+      "asset_id": "344541e2-2ec4-5648-a82d-58917ee6bef8",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L04_INFORMAL_TURN_05",
+      "audio_sha256": "e1b2abf84c472d94adb09e499a3b10e88868cec6e841405df61d517f4f851776",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Jsem z Česka. Těší mě.",
+      "small_asr": "I jsem z Česká. Těší mě.",
+      "word_edits": 2,
+      "reference_words": 5,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "45edc579-9c5d-5ff0-ab55-5624ac30cdef"
+      ]
+    },
+    {
+      "asset_id": "8951330f-fa2a-537d-9697-d1f830ab7fef",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L04_INFORMAL_TURN_05_SLOW",
+      "audio_sha256": "e56bb36bf6e81abd345c6f89e7ae7c5383e2463c241607c6824b48123fcbd18a",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Jsem z Česka. Těší mě.",
+      "small_asr": "I jsem z Česka. Těší mě.",
+      "word_edits": 1,
+      "reference_words": 5,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "45edc579-9c5d-5ff0-ab55-5624ac30cdef"
+      ]
+    },
+    {
+      "asset_id": "16f5c1c3-75e4-5374-878d-953cb1d94154",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_R01_FIRST_CONTACT",
+      "audio_sha256": "afc44ee2ce424435a007ecce5f8ea112d75676217b6b270ce9b400f5efbc09c4",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Dobrý den. Vy jste Oksana?\nDobrý den. Ano.\nOdkud jste?\nJsem z Ukrajiny.\nTěší mě.\nMě také. Na shledanou.",
+      "small_asr": "Doblý den, vojste Oksana. Doblý den, ano. Odkudste. Jsem z Ukrainy. Kěží mě. Nětaké, nás chledanou.",
+      "word_edits": 12,
+      "reference_words": 19,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "e87be03b-9ab6-5dbf-8a17-7387090f9f9e",
+        "e2bff562-3b0c-5847-afa4-ec27f182c604",
+        "b49fa698-b185-5b92-a402-8c88c086122a",
+        "e24b86d3-d1da-5e33-94c3-ccf17b93cca4",
+        "348f64b4-abfb-5b27-bd9f-5f218b6a4455",
+        "e068e2b8-68c3-5d4d-9fc2-53e276eb7268"
+      ]
+    },
+    {
+      "asset_id": "a84fa870-8fda-5c10-8908-97187a0c7c91",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_R01_FIRST_CONTACT_SLOW",
+      "audio_sha256": "8412bc0ed89fab2cf62d20d0434f5c8ec06c7466c293ca5300eb4ed38703b840",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Dobrý den. Vy jste Oksana?\nDobrý den. Ano.\nOdkud jste?\nJsem z Ukrajiny.\nTěší mě.\nMě také. Na shledanou.",
+      "small_asr": "Doblý den, vojste Oksana. Doblý den, ano. Odkud jste. Jsem z Ukrainy. Kěží mě. Nětaké, nás chledanou.",
+      "word_edits": 10,
+      "reference_words": 19,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "e87be03b-9ab6-5dbf-8a17-7387090f9f9e",
+        "e2bff562-3b0c-5847-afa4-ec27f182c604",
+        "b49fa698-b185-5b92-a402-8c88c086122a",
+        "e24b86d3-d1da-5e33-94c3-ccf17b93cca4",
+        "348f64b4-abfb-5b27-bd9f-5f218b6a4455",
+        "e068e2b8-68c3-5d4d-9fc2-53e276eb7268"
+      ]
+    },
+    {
+      "asset_id": "70bff2f5-59dc-57c1-939c-fa616aeff771",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_01",
+      "audio_sha256": "8a6e90b502ea909b1399483b09d0ddb0c0495eda18b7958e8399e026ad9e44d8",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Dobrý den. Vy jste Oksana?",
+      "small_asr": "Do býden. Vy jste oxana.",
+      "word_edits": 3,
+      "reference_words": 5,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "e87be03b-9ab6-5dbf-8a17-7387090f9f9e"
+      ]
+    },
+    {
+      "asset_id": "56ed4446-c40c-5b38-961f-ce3facd238d8",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_01_SLOW",
+      "audio_sha256": "a88452c0a89febad37b1572ebd12fdb959e0c8e781d6b34eca4a3954262aefb4",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Dobrý den. Vy jste Oksana?",
+      "small_asr": "Do býden. Vy jste oxana.",
+      "word_edits": 3,
+      "reference_words": 5,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "e87be03b-9ab6-5dbf-8a17-7387090f9f9e"
+      ]
+    },
+    {
+      "asset_id": "73cef992-d44c-5ea3-ab67-3facc861ea42",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_02_SLOW",
+      "audio_sha256": "5fe3d539810e74df207ce9dc961e3dd336b399018ae371073bc2b13dc5e5548e",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Dobrý den. Ano.",
+      "small_asr": "Vy bude jen... Ano...",
+      "word_edits": 3,
+      "reference_words": 3,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "e2bff562-3b0c-5847-afa4-ec27f182c604"
+      ]
+    },
+    {
+      "asset_id": "f3027fce-c26b-585e-8400-b109fd3f6262",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_04",
+      "audio_sha256": "ef016d2e62fd02fbfdadc33bbe96bc2fdb3b89c0b303305e75a78dac79192fde",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Jsem z Ukrajiny.",
+      "small_asr": "jsem z Ukrainy",
+      "word_edits": 1,
+      "reference_words": 3,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "e24b86d3-d1da-5e33-94c3-ccf17b93cca4"
+      ]
+    },
+    {
+      "asset_id": "4b36fe5d-e577-5eef-a645-6e35d5127088",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_04_SLOW",
+      "audio_sha256": "c602afe2e8bce27d7592a33f701bdd5da1a14437ed926142a507b65efa0efb91",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Jsem z Ukrajiny.",
+      "small_asr": "Sem z Ukrainy.",
+      "word_edits": 2,
+      "reference_words": 3,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "e24b86d3-d1da-5e33-94c3-ccf17b93cca4"
+      ]
+    },
+    {
+      "asset_id": "a1500c19-3a4b-5b11-aaa1-b357b33076f2",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_05",
+      "audio_sha256": "31dbbb93716a819cf8f064e3bd6b64a1d9cdcb1d7e5d808e8761410c4768a83b",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Těší mě.",
+      "small_asr": "Kěši mě.",
+      "word_edits": 1,
+      "reference_words": 2,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "348f64b4-abfb-5b27-bd9f-5f218b6a4455"
+      ]
+    },
+    {
+      "asset_id": "9e9d0ece-e968-57ee-afa9-bd2ec15a46c6",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_05_SLOW",
+      "audio_sha256": "6b15fb50c6b637042763820f3d852c49254e0df95b829d3993aaeab6ee9c5c54",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Těší mě.",
+      "small_asr": "Kěši mě.",
+      "word_edits": 1,
+      "reference_words": 2,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "348f64b4-abfb-5b27-bd9f-5f218b6a4455"
+      ]
+    },
+    {
+      "asset_id": "207d4b49-7bae-5e60-9299-9bbc27d380ec",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_06",
+      "audio_sha256": "0d1abbef9aa18309bc918674c3e9a0e80e142209263fcc84164cad145dec1ef5",
+      "language": "cs",
+      "speed": "normal",
+      "expected": "Mě také. Na shledanou.",
+      "small_asr": "Nétake na schodanou.",
+      "word_edits": 3,
+      "reference_words": 4,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "e068e2b8-68c3-5d4d-9fc2-53e276eb7268"
+      ]
+    },
+    {
+      "asset_id": "c2f1eb5c-f8c0-58ef-ac49-e5cc7d4ece3f",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_06_SLOW",
+      "audio_sha256": "fa429b9b33779a4176d8c23bcfd02a899c7e4c8727beca8afc3a423e632713fb",
+      "language": "cs",
+      "speed": "slow",
+      "expected": "Mě také. Na shledanou.",
+      "small_asr": "Nětaké, naschledanou.",
+      "word_edits": 4,
+      "reference_words": 4,
+      "human_review": "PENDING",
+      "turn_ids": [
+        "e068e2b8-68c3-5d4d-9fc2-53e276eb7268"
+      ]
+    }
+  ]
+}

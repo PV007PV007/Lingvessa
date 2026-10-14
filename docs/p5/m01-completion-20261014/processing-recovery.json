@@ -1,0 +1,226 @@
+{
+  "kind": "VERIFIED_PROCESSING_CHECKPOINT",
+  "script_sha256": "e3d520263f37f414739d03f401a7ecdfbfb3a2cbdd53ccf793ad7e0aea17504b",
+  "journal_sha256": "2949dd22a2a88804519ffb46cf452e185064d581832546d4c063c67b8c57dad1",
+  "synthesis_repeated": false,
+  "explanation": "Original STARTED journals retained. Exact re-derivation of both processed WAVs from retained raw bytes. Token preparation independently reconstructed from locked model. No elapsed/completion time invented.",
+  "turns": [
+    {
+      "original_record_sha256": "b8338f13922b05f4dcd8e09ddd4b17311e3d4301761f20b46b810973dbff5e69",
+      "normal_and_slow_byte_identical_to_rederived": true,
+      "turn": {
+        "speaker": "F01",
+        "voice_code": "AUD_CZE_VOICE_F01",
+        "text": "Česko",
+        "turn_id": "bc2cec0a-7f1e-5dc9-8ddb-b2d811acba4b",
+        "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+        "language": "cs",
+        "script_id": "49d4fafe-5ade-5d47-ba2f-e222ff5eb04f",
+        "candidate_id": "cs-C-pocket-C",
+        "engine": "pocket",
+        "seed": 1029837982,
+        "status": "GENERATED_UNREVIEWED",
+        "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+        "continuation_plan_sha256": null,
+        "infrastructure_retry": false,
+        "normalization": {
+          "gain": 0.9644052493346628,
+          "raw_resampled_peak": 0.7271038293838501,
+          "raw_resampled_rms": 0.0823645697980474
+        },
+        "raw": {
+          "path": "raw/bc2cec0a-7f1e-5dc9-8ddb-b2d811acba4b.wav",
+          "sha256": "f4a11f1be4e11d39b73b0f534d52eb8d9945e80d51db557d4f94debf8a87707b",
+          "bytes": 138298
+        },
+        "normal": {
+          "path": "turns/bc2cec0a-7f1e-5dc9-8ddb-b2d811acba4b.wav",
+          "sha256": "9414651da2c298c30916faaa6dcff078c2fa6c8c9d11f9788f953bcfd8e63056",
+          "bytes": 69164,
+          "metrics": {
+            "frames": 34560,
+            "sample_rate": 24000,
+            "channels": 1,
+            "sample_width": 2,
+            "duration_seconds": 1.44,
+            "peak_dbfs": -3.0831322143228546,
+            "rms_dbfs": -22.000271474995504,
+            "clipped_samples": 0
+          }
+        },
+        "slow": {
+          "path": "turns/bc2cec0a-7f1e-5dc9-8ddb-b2d811acba4b-slow.wav",
+          "sha256": "0b0fa0e2b92c9f522b5d218372e0bfe2074c0efc4ebad0c47fdc3c880225fdd1",
+          "bytes": 85798,
+          "metrics": {
+            "frames": 42860,
+            "sample_rate": 24000,
+            "channels": 1,
+            "sample_width": 2,
+            "duration_seconds": 1.7858333333333334,
+            "peak_dbfs": -3.0903176682266276,
+            "rms_dbfs": -21.646097188923147,
+            "clipped_samples": 0
+          }
+        },
+        "engine_result": {
+          "model_sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+          "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8",
+          "prepared_text": "Česko.",
+          "token_ids": [
+            303,
+            1423,
+            3917
+          ]
+        }
+      }
+    },
+    {
+      "original_record_sha256": "7e66d08a7d387ddd4de9f1fa1cc0961552ef60b2e3a3188fcb0355617af4a77b",
+      "normal_and_slow_byte_identical_to_rederived": true,
+      "turn": {
+        "speaker": "F01",
+        "voice_code": "AUD_CZE_VOICE_F01",
+        "text": "osm",
+        "turn_id": "db90bc68-234e-5f1c-ad4a-bf15b4baf953",
+        "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+        "language": "cs",
+        "script_id": "379d9aee-9978-51d3-a284-4baa02beccb4",
+        "candidate_id": "cs-C-pocket-C",
+        "engine": "pocket",
+        "seed": 1556473084,
+        "status": "GENERATED_UNREVIEWED",
+        "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+        "continuation_plan_sha256": null,
+        "infrastructure_retry": false,
+        "normalization": {
+          "gain": 0.9802328386907686,
+          "raw_resampled_peak": 0.8022903800010681,
+          "raw_resampled_rms": 0.08103464843977401
+        },
+        "raw": {
+          "path": "raw/db90bc68-234e-5f1c-ad4a-bf15b4baf953.wav",
+          "sha256": "ee19fb2e44c8732e145aed65bc43e6cdf3863d599f9e7b205ede5032976c5562",
+          "bytes": 122938
+        },
+        "normal": {
+          "path": "turns/db90bc68-234e-5f1c-ad4a-bf15b4baf953.wav",
+          "sha256": "dbb5cc7d9fc1d04823706acacbf59a20c861ad0d0d8e574f2aded2cbda95b820",
+          "bytes": 61484,
+          "metrics": {
+            "frames": 30720,
+            "sample_rate": 24000,
+            "channels": 1,
+            "sample_width": 2,
+            "duration_seconds": 1.28,
+            "peak_dbfs": -2.0870473890287893,
+            "rms_dbfs": -22.000260027072585,
+            "clipped_samples": 0
+          }
+        },
+        "slow": {
+          "path": "turns/db90bc68-234e-5f1c-ad4a-bf15b4baf953-slow.wav",
+          "sha256": "226b5a3e6f8cf08bc368c0d8a58765b0024f99ab854cb3a17b3c0c7f029be759",
+          "bytes": 76304,
+          "metrics": {
+            "frames": 38113,
+            "sample_rate": 24000,
+            "channels": 1,
+            "sample_width": 2,
+            "duration_seconds": 1.5880416666666666,
+            "peak_dbfs": -2.103241711165146,
+            "rms_dbfs": -21.707488518288503,
+            "clipped_samples": 0
+          }
+        },
+        "engine_result": {
+          "model_sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+          "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8",
+          "prepared_text": "Osm.",
+          "token_ids": [
+            271,
+            3897,
+            3902,
+            3917
+          ]
+        }
+      }
+    },
+    {
+      "original_record_sha256": "b1aeafaa43d4e47d32065a161f9387d01524b6968cff9341ac844e9d5365bcab",
+      "normal_and_slow_byte_identical_to_rederived": true,
+      "turn": {
+        "speaker": "KLARA",
+        "voice_code": "AUD_CZE_VOICE_F01",
+        "text": "Odkud jste?",
+        "character_id": "074d3cc2-e358-5ef4-b8a8-fb63106343cd",
+        "character_asset_code": "AV_CZE_KLARA_01",
+        "turn_id": "b6de6fd8-de32-59a4-84b5-e91f37ee4293",
+        "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+        "language": "cs",
+        "script_id": "6a449941-a5ea-522e-9fe4-4ddb9dcca5e1",
+        "candidate_id": "cs-C-pocket-C",
+        "engine": "pocket",
+        "seed": 940808300,
+        "status": "GENERATED_UNREVIEWED",
+        "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+        "continuation_plan_sha256": null,
+        "infrastructure_retry": false,
+        "normalization": {
+          "gain": 1.198161104665718,
+          "raw_resampled_peak": 0.7111713886260986,
+          "raw_resampled_rms": 0.06629561180304679
+        },
+        "raw": {
+          "path": "raw/b6de6fd8-de32-59a4-84b5-e91f37ee4293.wav",
+          "sha256": "0b7c06945b15cbe89acd604b0fb267bd3798244255050191c3874cb20f0c641e",
+          "bytes": 138298
+        },
+        "normal": {
+          "path": "turns/b6de6fd8-de32-59a4-84b5-e91f37ee4293.wav",
+          "sha256": "ac2f6a5e04fc82d31c866019396159f63f90ea7a821ffd1278638c592a95fa73",
+          "bytes": 69164,
+          "metrics": {
+            "frames": 34560,
+            "sample_rate": 24000,
+            "channels": 1,
+            "sample_width": 2,
+            "duration_seconds": 1.44,
+            "peak_dbfs": -1.3903793265439455,
+            "rms_dbfs": -22.000264239025732,
+            "clipped_samples": 0
+          }
+        },
+        "slow": {
+          "path": "turns/b6de6fd8-de32-59a4-84b5-e91f37ee4293-slow.wav",
+          "sha256": "f1b01e3b3ff4b5b5072d2d91f424facef540f2f6cb2f29848d2d4dfcd22492bc",
+          "bytes": 85778,
+          "metrics": {
+            "frames": 42850,
+            "sample_rate": 24000,
+            "channels": 1,
+            "sample_width": 2,
+            "duration_seconds": 1.7854166666666667,
+            "peak_dbfs": -1.5141365883944995,
+            "rms_dbfs": -21.56461162236871,
+            "clipped_samples": 0
+          }
+        },
+        "engine_result": {
+          "model_sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+          "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8",
+          "prepared_text": "Odkud jste?",
+          "token_ids": [
+            2113,
+            386,
+            411,
+            3940
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,9 +1,17 @@
 # Lingvessa implementation state and handoff
 
-Updated: 2026-10-13. **P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED; P6 NOT AUTHORIZED.**
+Updated: 2026-10-14. **P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED; P6 NOT AUTHORIZED.**
 Branch `implementation/p5-media-speech`; [PR #5](https://github.com/PV007PV007/Lingvessa/pull/5) OPEN DRAFT. Accepted main/P4: `5027f001237b6451237d87343ebeca58cd0af007`.
 
-## Current M01 continuation assembly — 2026-10-13
+## Current M01 completion — 2026-10-14
+
+The pinned PyTorch URL is now HTTP 200; all 67 locked dependency/model files were downloaded or restored and SHA-256 verified. The exact 58-package environment was installed offline. The 97 Pocket turns have been reconstructed with the unchanged generator, text, cast, seed and processing plan, yielding all **204 previously missing Czech assets / 420 total final WAVs**. The original 216 final files remain byte-identical. The prior temporary 2026-10-13 full run was lost before retention; its reported results are not reused as evidence. The pre-generation infrastructure reconstruction plan documents this explicitly.
+
+A durable checkpoint retains all 291 new raw/normal/slow WAVs and journals: `libfile_7fecc92d04d0819189edc358d6397070`, version 0, SHA-256 `caa25f1bf3fbf59528fc9d94b4e25ef5afa153cb690ef22eb044f01926dcdf15`. Three stale STARTED journals were recovered by exact re-derivation of processed audio from retained raw bytes, with the original records kept and no repeated synthesis or invented completion time. A stale assembly marker is retained with a separate proof that every final PCM stream and cue matches its validated source.
+
+Current completion evidence and commands are in [the completion record](../docs/p5/m01-completion-20261014/README.md). Automated ASR discrepancy flags are diagnostics, not human pronunciation approval. Human listening, cast/rights/publication decisions and OD-004/005/006 remain open. New exact-source CI belongs in PR metadata and immutable artifacts; the historical sections below describe predecessor states, including resolved dependency failures.
+
+## Historical M01 continuation assembly — 2026-10-13
 
 The [M01 continuation tool](../docs/p5/m01-continuation.md) validates the retained partial batch and selects exactly 97 unattempted Pocket turns / 204 absent Czech assets. After a separately completed original-generator run, it copies the 216 old final WAVs unchanged and assembles missing files, including mixed old/new dialogues, into a separate directory. It rejects changed inputs, retries, incomplete/extra attempts, path escapes and output overwrite. Existing hash-bound generator/export/verifier files remain unchanged. New audio still needs blind ASR and review; no synthesis occurred in this change.
 

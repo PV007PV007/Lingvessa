@@ -1,0 +1,466 @@
+{
+  "status": "PASS",
+  "verified": [
+    {
+      "path": "wheels/torch-2.8.0+cpu-cp312-cp312-manylinux_2_28_x86_64.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 183914597,
+      "sha256": "cb9a8ba8137ab24e36bf1742cb79a1294bd374db570f09fc15a5e1318160db4e"
+    },
+    {
+      "path": "wheels/pocket_tts-3.3.0-py3-none-any.whl",
+      "status": "VERIFIED_CACHE",
+      "bytes": 86452,
+      "sha256": "77b2eb5554cb710e92888f84e28816f2361dba075e0ace47108458794db99111"
+    },
+    {
+      "path": "wheels/soundfile-0.13.1-py2.py3-none-manylinux_2_28_x86_64.whl",
+      "status": "VERIFIED_CACHE",
+      "bytes": 1313646,
+      "sha256": "03267c4e493315294834a0870f31dbb3b28a95561b80b134f0bd3cf2d5f0e618"
+    },
+    {
+      "path": "wheels/faster_whisper-1.2.1-py3-none-any.whl",
+      "status": "VERIFIED_CACHE",
+      "bytes": 1118909,
+      "sha256": "79a66ad50688c0b794dd501dc340a736992a6342f7f95e5811be60b5224a26a7"
+    },
+    {
+      "path": "wheels/av-19.0.1-cp312-abi3-manylinux_2_28_x86_64.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 34983451,
+      "sha256": "1bea5b6134209305199bce7627ac3d33964de2cf2b09c77d08e7f67cf8bd4170"
+    },
+    {
+      "path": "wheels/cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "status": "VERIFIED_CACHE",
+      "bytes": 221822,
+      "sha256": "c1453022f490d2459a11819d83ad1d586e9ff65a12ac3e705ffebd46d3685dcf"
+    },
+    {
+      "path": "wheels/ctranslate2-4.8.2-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 39555908,
+      "sha256": "554a0b2abf098a11c66ef7930c0a05b3de683a455e8ea3f2e6ab6966aaabc136"
+    },
+    {
+      "path": "wheels/einops-0.8.2-py3-none-any.whl",
+      "status": "VERIFIED_CACHE",
+      "bytes": 65638,
+      "sha256": "54058201ac7087911181bfec4af6091bb59380360f069276601256a76af08193"
+    },
+    {
+      "path": "wheels/fastapi-0.143.0-py3-none-any.whl",
+      "status": "VERIFIED_CACHE",
+      "bytes": 144665,
+      "sha256": "3e9395fd35276425b61b516a31fdd7c77fe2af83e41b4da22e30696fb1304c5d"
+    },
+    {
+      "path": "wheels/huggingface_hub-2.2.0-py3-none-any.whl",
+      "status": "VERIFIED_CACHE",
+      "bytes": 839884,
+      "sha256": "1667f145dc56dc210d60966069397df9ecfca9607a5d43db88b308c89dae56b3"
+    },
+    {
+      "path": "wheels/filelock-4.0.12-py3-none-any.whl",
+      "status": "VERIFIED_CACHE",
+      "bytes": 111732,
+      "sha256": "5f17ee83ecee8a6f3e389c75822fb70a1c2f0506b99438a6dffa1d56793588c8"
+    },
+    {
+      "path": "wheels/fsspec-2026.9.0-py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 221738,
+      "sha256": "8dd6e646e99ea382bd85f97a45e6b526a442d79423a7dc673f1e2756d05fcb5f"
+    },
+    {
+      "path": "wheels/numpy-2.5.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 16717410,
+      "sha256": "b7e18c623bb5c95acb3b3328861272816ba199fb531921c5d6d0b675f1fde9e3"
+    },
+    {
+      "path": "wheels/onnxruntime-1.31.0-cp312-cp312-manylinux_2_28_x86_64.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 23760984,
+      "sha256": "5e129d6c56abd53e659cb70f00a108d6824086470ff99c2e47a82e5786563db3"
+    },
+    {
+      "path": "wheels/pydantic-2.14.0-py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 487109,
+      "sha256": "15fab1bea6f1dc5003b54fc2ecab230c1fd1dbade2acd4addc52d81e32416d4b"
+    },
+    {
+      "path": "wheels/pydantic_core-2.50.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 2160358,
+      "sha256": "f187030fc3d62c668feb0f09e92852e0eb414d7fcefc4748f2e67d245aade37e"
+    },
+    {
+      "path": "wheels/python_multipart-0.0.32-py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 30042,
+      "sha256": "ff6d3f776f16878c894e52e107296ffc890e913c611b1a4ec6c44e2821fe2e23"
+    },
+    {
+      "path": "wheels/requests-2.34.2-py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 73075,
+      "sha256": "2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0"
+    },
+    {
+      "path": "wheels/safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 516040,
+      "sha256": "fd6f3f93c9a0a7cc2788ee63fb763353d4bd2e89b0751bc78fcf7dda00bea774"
+    },
+    {
+      "path": "wheels/scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 35344199,
+      "sha256": "f55fa87b6c612ecd6b058f167c53231b1d14e412efe361d3d6e38b3631c73218"
+    },
+    {
+      "path": "wheels/sentencepiece-0.2.2-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 1397736,
+      "sha256": "c8a168b040bc61681293f79a949b5d911c8e25086f4260285b8d97ab5f1195da"
+    },
+    {
+      "path": "wheels/sympy-1.14.0-py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 6299353,
+      "sha256": "e091cc3e99d2141a0ba2847328f5479b05d94a6635cb96148ccb3f34671bd8f5"
+    },
+    {
+      "path": "wheels/tokenizers-0.23.3-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 3396193,
+      "sha256": "376851d22bcf9d650a5c3090bb83e6cf9e895fbf0595369fa4cd43c1f69b5f87"
+    },
+    {
+      "path": "wheels/tqdm-4.70.1-py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 80199,
+      "sha256": "c293e525e6fef9c20e8728fd4612df02a0aa31bb5fe91ecd93e123b1b7bffa73"
+    },
+    {
+      "path": "wheels/typer-0.27.3-py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 123312,
+      "sha256": "e50022f28b82a86313e54501317a1db64bf8f8d036ff8cfe5ca7e47675454aff"
+    },
+    {
+      "path": "wheels/typing_extensions-4.16.0-py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 45571,
+      "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8"
+    },
+    {
+      "path": "wheels/uvicorn-0.54.0-py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 87427,
+      "sha256": "505bdb0f318731d45f1f712071fc781a8981f6847a31c902c9f5e652d4f67faf"
+    },
+    {
+      "path": "wheels/jinja2-3.1.6-py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 134899,
+      "sha256": "85ece4451f492d0c13c5dd7c13a64681a86afae63a5f347908daf103ce6d2f67"
+    },
+    {
+      "path": "wheels/networkx-3.7-py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 2142205,
+      "sha256": "e3fd2c13a7814cee3746340d8d7f8598a67f16a58bf47fb7f8793fab6efca1b0"
+    },
+    {
+      "path": "wheels/setuptools-84.0.0-py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 818216,
+      "sha256": "51a52592b3b99e102b609654876bd65f19f999935166d1352678931132b0c670"
+    },
+    {
+      "path": "wheels/annotated_doc-0.0.5-py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 5302,
+      "sha256": "117bac03a25ede5df5440e855b32d556049ca169ead221505badf432fed4b101"
+    },
+    {
+      "path": "wheels/annotated_types-0.8.0-py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 13427,
+      "sha256": "f072f4d804ea359e4eaf198b1af7a8b0943881a87f31bb764f8bf219bb9419e0"
+    },
+    {
+      "path": "wheels/certifi-2026.7.22-py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 136983,
+      "sha256": "62f22742b58a1a33014a2b6b706588a8d7e2a88ae7bd1a6ebe8c992928483775"
+    },
+    {
+      "path": "wheels/charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 257601,
+      "sha256": "3d31298449090ab8d47b7b1b2a555ff73cac7ed438a08b7ac160980c7ebed649"
+    },
+    {
+      "path": "wheels/click-8.5.0-py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 125251,
+      "sha256": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360"
+    },
+    {
+      "path": "wheels/h11-0.16.0-py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 37515,
+      "sha256": "63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86"
+    },
+    {
+      "path": "wheels/hf_xet-1.7.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 4212180,
+      "sha256": "2814a6e999d13464c4d679b788cc5d784eb5a4edfc638a31f10e9a11ab531ef8"
+    },
+    {
+      "path": "wheels/httpx2-2.13.1-py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 95597,
+      "sha256": "6dff50fabc270ee5fd25d845d0b078ed20564579744d6d962850975996d2f9a4"
+    },
+    {
+      "path": "wheels/httpcore2-2.13.1-py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 83423,
+      "sha256": "e1e05d4f25f7d7d496bfb96748f6f4b67657b03da069b3a68c36069f3db73d0a"
+    },
+    {
+      "path": "wheels/idna-3.20-py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 69583,
+      "sha256": "ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c"
+    },
+    {
+      "path": "wheels/markupsafe-3.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 22985,
+      "sha256": "8e124f974786f831d6043728e38296969d3579db8896fe004682f5758e613581"
+    },
+    {
+      "path": "wheels/mpmath-1.3.0-py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 536198,
+      "sha256": "a0b2b9fe80bbcd81a6647ff13108738cfb482d481d826cc0e02f5b35e5c88d2c"
+    },
+    {
+      "path": "wheels/opentelemetry_api-1.45.1-py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 60256,
+      "sha256": "b31553efa588ae44bc306f863c785c5333a9ecc091248c6ee68b4b6c87fdedfb"
+    },
+    {
+      "path": "wheels/packaging-26.3-py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 129956,
+      "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c"
+    },
+    {
+      "path": "wheels/protobuf-7.36.2-cp310-abi3-manylinux2014_x86_64.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 343223,
+      "sha256": "89f23aa53c24553a2416fd4fd1ec06f74fa42b14b546d8883128813f775bbfd2"
+    },
+    {
+      "path": "wheels/pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 807870,
+      "sha256": "ba1cc08a7ccde2d2ec775841541641e4548226580ab850948cbfda66a1befcdc"
+    },
+    {
+      "path": "wheels/rich-15.0.0-py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 310654,
+      "sha256": "33bd4ef74232fb73fe9279a257718407f169c09b78a87ad3d296f548e27de0bb"
+    },
+    {
+      "path": "wheels/shellingham-1.5.4-py2.py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 9755,
+      "sha256": "7ecfff8f2fd72616f7481040475a65b2bf8af90a56c89140852d1120324e8686"
+    },
+    {
+      "path": "wheels/starlette-1.7.0-py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 78980,
+      "sha256": "67f8e99895493dd2911a03f11314af6ceebeae4e704bb9f43dfc6a9db151c93e"
+    },
+    {
+      "path": "wheels/typing_inspection-0.4.4-py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 14750,
+      "sha256": "65b8397ba37ccbce054456aaccddfc91e6e3083c92824df348d96ca832f3f147"
+    },
+    {
+      "path": "wheels/urllib3-2.8.0-py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 135717,
+      "sha256": "0cf3cae568d36aa9576b28dfb35f11328f1cb974ca7647d9475ebb86c75ac6e3"
+    },
+    {
+      "path": "wheels/flatbuffers-25.12.19-py2.py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 26661,
+      "sha256": "7634f50c427838bb021c2d66a3d1168e9d199b0607e6329399f04846d42e20b4"
+    },
+    {
+      "path": "wheels/pycparser-3.11-py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 51178,
+      "sha256": "51d5a8ba2be0bbe440b99d2112604c95bbbc3c2748a64260186c541e1729cd80"
+    },
+    {
+      "path": "wheels/anyio-4.15.1-py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 132079,
+      "sha256": "6152fdbbf9a77fdec97731721bebf7c4c44f7c29b424b0065826173efc7ed101"
+    },
+    {
+      "path": "wheels/markdown_it_py-4.2.0-py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 91687,
+      "sha256": "9f7ebbcd14fe59494226453aed97c1070d83f8d24b6fc3a3bcf9a38092641c4a"
+    },
+    {
+      "path": "wheels/pygments-2.21.0-py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 1250147,
+      "sha256": "2363c69b61c4a97c838da3b130dcd6468f4848992b21a82f2a63ec34377137d9"
+    },
+    {
+      "path": "wheels/truststore-0.10.4-py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 18660,
+      "sha256": "adaeaecf1cbb5f4de3b1959b42d41f6fab57b2b1666adb59e89cb0b53361d981"
+    },
+    {
+      "path": "wheels/mdurl-0.1.2-py3-none-any.whl",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 9979,
+      "sha256": "84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8"
+    },
+    {
+      "path": "pocket-model/czech.yaml",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 1407,
+      "sha256": "932f2174c40edac737841f7508c83b2eca8e51b1661a962afaa41b9b5e9688d0"
+    },
+    {
+      "path": "pocket-model/README.md",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 2638,
+      "sha256": "6d501cc702f5974994cbd40bee7282de84a6cff67653b223db26eb283263669c"
+    },
+    {
+      "path": "pocket-model/model.safetensors",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 438029216,
+      "sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333"
+    },
+    {
+      "path": "pocket-model/tokenizer.model",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 304158,
+      "sha256": "8fae9e8aa32e637f4c8f27c1f65e8cf0bdeef8f7f113f9c87275dbecf96152a2"
+    },
+    {
+      "path": "asr-model/README.md",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 1998,
+      "sha256": "329373481008c7c38654aff8ecdcf0163c211557cc7ba8e2ef6f2f84b4f75ec8"
+    },
+    {
+      "path": "asr-model/config.json",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 2370,
+      "sha256": "b55496ac7940a7ae47d2c01eab40edfd8701feec1229d9cce3b40014383fb828"
+    },
+    {
+      "path": "asr-model/model.bin",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 483546902,
+      "sha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671"
+    },
+    {
+      "path": "asr-model/tokenizer.json",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 2203239,
+      "sha256": "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab"
+    },
+    {
+      "path": "asr-model/vocabulary.txt",
+      "status": "DOWNLOADED_VERIFIED",
+      "http_status": 200,
+      "bytes": 459861,
+      "sha256": "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913"
+    }
+  ]
+}

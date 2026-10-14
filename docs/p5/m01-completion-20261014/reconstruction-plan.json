@@ -1,0 +1,21 @@
+{
+  "scope": "M01_POCKET_INFRASTRUCTURE_RECONSTRUCTION",
+  "date": "2026-10-14",
+  "source_sha": "378d8cbed3f7724ffb5e05a14106d83c4fbec0cb",
+  "reason": "The prior temporary workspace reported 97 generated Pocket turns and 204 assembled Czech assets on 2026-10-13, but none of that run's audio, journals, completion source changes or secondary ASR results survived the workspace restoration. GitHub and Library were checked; the latest retained artifacts are the original partial batch. Prior reported results are not independently verifiable and are not reused as current evidence.",
+  "authorization": "Owner repeatedly requested continuation and resolution of the remaining 204 Czech audio files and quality verification, most recently 2026-10-14.",
+  "selected_scope": "All 97 Pocket turns selected by the unchanged continuation tool; all 204 missing assets, without quality-based selection.",
+  "original_plan": "docs/p5/m01-audio-draft-20261011/plan.json",
+  "generator_unchanged": true,
+  "text_cast_seed_processing_and_dependency_locks_unchanged": true,
+  "retained_parent_final_assets": 216,
+  "current_attempts_per_turn": 1,
+  "quality_retries": 0,
+  "prior_lost_synthesis_reported": true,
+  "prior_lost_bytes_available": false,
+  "bit_identical_reproduction_promised": false,
+  "human_review": "PENDING",
+  "publication_ready": false,
+  "p5_milestone": "NOT_READY",
+  "p6_authorized": false
+}

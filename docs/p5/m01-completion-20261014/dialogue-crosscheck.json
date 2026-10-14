@@ -1,0 +1,542 @@
+{
+  "status": "COMPLETE",
+  "scope": "ALL_TEN_CZECH_DIALOGUES_BOTH_SPEEDS",
+  "plan_sha256": "ac6fb14b15d6d339d89cc170b6660490c0bab258951bd5736c0dadf1c8781f45",
+  "script_sha256": "e4d25889fa68faf60c8b8690bc6021073d35c83c791665119d856e12e2bbd0bd",
+  "versions": {
+    "torch": "2.8.0+cpu",
+    "pocket-tts": "3.3.0",
+    "soundfile": "0.13.1",
+    "faster-whisper": "1.2.1",
+    "av": "19.0.1",
+    "cffi": "2.1.1",
+    "ctranslate2": "4.8.2",
+    "einops": "0.8.2",
+    "fastapi": "0.143.0",
+    "huggingface_hub": "2.2.0",
+    "filelock": "4.0.12",
+    "fsspec": "2026.9.0",
+    "numpy": "2.5.3",
+    "onnxruntime": "1.31.0",
+    "pydantic": "2.14.0",
+    "pydantic_core": "2.50.0",
+    "python-multipart": "0.0.32",
+    "requests": "2.34.2",
+    "safetensors": "0.8.0",
+    "scipy": "1.18.1",
+    "sentencepiece": "0.2.2",
+    "sympy": "1.14.0",
+    "tokenizers": "0.23.3",
+    "tqdm": "4.70.1",
+    "typer": "0.27.3",
+    "typing_extensions": "4.16.0",
+    "uvicorn": "0.54.0",
+    "Jinja2": "3.1.6",
+    "networkx": "3.7",
+    "setuptools": "84.0.0",
+    "annotated-doc": "0.0.5",
+    "annotated-types": "0.8.0",
+    "certifi": "2026.7.22",
+    "charset-normalizer": "3.5.2",
+    "click": "8.5.0",
+    "h11": "0.16.0",
+    "hf-xet": "1.7.0",
+    "httpx2": "2.13.1",
+    "httpcore2": "2.13.1",
+    "idna": "3.20",
+    "MarkupSafe": "3.0.4",
+    "mpmath": "1.3.0",
+    "opentelemetry-api": "1.45.1",
+    "packaging": "26.3",
+    "protobuf": "7.36.2",
+    "PyYAML": "6.0.3",
+    "rich": "15.0.0",
+    "shellingham": "1.5.4",
+    "starlette": "1.7.0",
+    "typing-inspection": "0.4.4",
+    "urllib3": "2.8.0",
+    "flatbuffers": "25.12.19",
+    "pycparser": "3.11",
+    "anyio": "4.15.1",
+    "markdown-it-py": "4.2.0",
+    "Pygments": "2.21.0",
+    "truststore": "0.10.4",
+    "mdurl": "0.1.2"
+  },
+  "network_guard": {
+    "kernel": "Linux seccomp",
+    "denied_syscalls": [
+      "socket",
+      "socketpair",
+      "connect",
+      "sendto",
+      "sendmsg",
+      "sendmmsg"
+    ],
+    "native_socket_probe": "EPERM",
+    "inherited_by_children": true,
+    "python_socket_and_dns_audit": true
+  },
+  "onnx_telemetry_disabled": true,
+  "human_review": "PENDING",
+  "pronunciation_quality_asserted": false,
+  "same_model_family_as_primary": true,
+  "outputs": [
+    {
+      "asset_id": "fe8d6802-a3af-53f9-a20b-f24eb8d92e41",
+      "audio_sha256": "1e4e3149ffa6f038fe34a12238307d4b14bc695cebf27f7e72f23b400f72299f",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L01_CONTEXT",
+      "expected": "Dobrý den.\nDobrý den.",
+      "transcript": "Dobý den. Dobý den.",
+      "word_edits": 2,
+      "reference_words": 4,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": " Dobý den.",
+          "avg_logprob": -0.40136220821967494,
+          "no_speech_prob": 0.04997669905424118
+        },
+        {
+          "start": 2.0,
+          "end": 4.0,
+          "text": " Dobý den.",
+          "avg_logprob": -0.40136220821967494,
+          "no_speech_prob": 0.04997669905424118
+        }
+      ],
+      "elapsed_seconds": 5.792
+    },
+    {
+      "asset_id": "d1cc5e4f-c9cd-5c6f-a7fe-fd2ab8794bdf",
+      "audio_sha256": "297942524997526ad284d5f5fe8c2c3d9c992813d5a3e4bb32e0bdc8949b5c2c",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L01_CONTEXT_SLOW",
+      "expected": "Dobrý den.\nDobrý den.",
+      "transcript": "Dobý den. Dobý den.",
+      "word_edits": 2,
+      "reference_words": 4,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": " Dobý den.",
+          "avg_logprob": -0.41912200817695033,
+          "no_speech_prob": 0.2783031761646271
+        },
+        {
+          "start": 3.0,
+          "end": 4.0,
+          "text": " Dobý den.",
+          "avg_logprob": -0.41912200817695033,
+          "no_speech_prob": 0.2783031761646271
+        }
+      ],
+      "elapsed_seconds": 5.129
+    },
+    {
+      "asset_id": "ad913b13-8d88-598d-89c0-3c836402e859",
+      "audio_sha256": "8608b4edc109dca8dc48ce16cf563457ea0b6a7db39b21c7b1af903c344a2120",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L01_REPAIR",
+      "expected": "Dobrý den. Jmenuji se Klára.\nPromiňte. Nerozumím. Můžete to zopakovat, prosím?\nJmenuji se Klára.\nDěkuji.",
+      "transcript": "Dobý den, jmenuji se Klara. Promiňte, nerozumím, můžete to zopakovat, prosím. Jmenuji se Klara. Díkuj.",
+      "word_edits": 4,
+      "reference_words": 15,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": " Dobý den, jmenuji se Klara.",
+          "avg_logprob": -0.22768735127933956,
+          "no_speech_prob": 0.05272270739078522
+        },
+        {
+          "start": 2.0,
+          "end": 6.0,
+          "text": " Promiňte, nerozumím, můžete to zopakovat, prosím.",
+          "avg_logprob": -0.22768735127933956,
+          "no_speech_prob": 0.05272270739078522
+        },
+        {
+          "start": 6.0,
+          "end": 8.0,
+          "text": " Jmenuji se Klara.",
+          "avg_logprob": -0.22768735127933956,
+          "no_speech_prob": 0.05272270739078522
+        },
+        {
+          "start": 8.0,
+          "end": 10.0,
+          "text": " Díkuj.",
+          "avg_logprob": -0.22768735127933956,
+          "no_speech_prob": 0.05272270739078522
+        }
+      ],
+      "elapsed_seconds": 9.552
+    },
+    {
+      "asset_id": "7d20a6ec-8d14-5448-b0d6-2b8706fd7826",
+      "audio_sha256": "cb7f6613767257a59c6847222741ad5853eba7ed4d943dd645f9d6b8a923029d",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L01_REPAIR_SLOW",
+      "expected": "Dobrý den. Jmenuji se Klára.\nPromiňte. Nerozumím. Můžete to zopakovat, prosím?\nJmenuji se Klára.\nDěkuji.",
+      "transcript": "Dobý den, jmenuj se Klara. Promiňte, nerozumím, můžete to zopakovat, prosím. Jmenuj se Klara. Díkuj.",
+      "word_edits": 6,
+      "reference_words": 15,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": " Dobý den, jmenuj se Klara.",
+          "avg_logprob": -0.3067343235015869,
+          "no_speech_prob": 0.045311346650123596
+        },
+        {
+          "start": 2.84,
+          "end": 6.5600000000000005,
+          "text": " Promiňte, nerozumím, můžete to zopakovat, prosím.",
+          "avg_logprob": -0.3067343235015869,
+          "no_speech_prob": 0.045311346650123596
+        },
+        {
+          "start": 7.36,
+          "end": 8.44,
+          "text": " Jmenuj se Klara.",
+          "avg_logprob": -0.3067343235015869,
+          "no_speech_prob": 0.045311346650123596
+        },
+        {
+          "start": 10.24,
+          "end": 10.74,
+          "text": " Díkuj.",
+          "avg_logprob": -0.3067343235015869,
+          "no_speech_prob": 0.045311346650123596
+        }
+      ],
+      "elapsed_seconds": 8.361
+    },
+    {
+      "asset_id": "5e6fde4d-45c3-5e75-afb3-23654571ed44",
+      "audio_sha256": "d90b2c80bfac155171734ac719dc14a4a7b7c2901842ad6386a9160d411fc379",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L04_FORMAL",
+      "expected": "Dobrý den. Jak se jmenujete?\nDobrý den. Jmenuji se Oksana.\nOdkud jste?\nJsem z Ukrajiny.\nTěší mě.\nMě také.",
+      "transcript": "Dobý den, jak se jmenujete, ne? Dobý den, jmenuji se Oksana. Odkud jste? Jsem z Ukrajiny. Těší mě. Mě také.",
+      "word_edits": 3,
+      "reference_words": 19,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": " Dobý den, jak se jmenujete, ne?",
+          "avg_logprob": -0.18849928937261068,
+          "no_speech_prob": 0.10398472100496292
+        },
+        {
+          "start": 2.0,
+          "end": 4.0,
+          "text": " Dobý den, jmenuji se Oksana.",
+          "avg_logprob": -0.18849928937261068,
+          "no_speech_prob": 0.10398472100496292
+        },
+        {
+          "start": 5.0,
+          "end": 6.0,
+          "text": " Odkud jste?",
+          "avg_logprob": -0.18849928937261068,
+          "no_speech_prob": 0.10398472100496292
+        },
+        {
+          "start": 6.0,
+          "end": 8.0,
+          "text": " Jsem z Ukrajiny.",
+          "avg_logprob": -0.18849928937261068,
+          "no_speech_prob": 0.10398472100496292
+        },
+        {
+          "start": 9.0,
+          "end": 10.0,
+          "text": " Těší mě.",
+          "avg_logprob": -0.18849928937261068,
+          "no_speech_prob": 0.10398472100496292
+        },
+        {
+          "start": 11.0,
+          "end": 12.0,
+          "text": " Mě také.",
+          "avg_logprob": -0.18849928937261068,
+          "no_speech_prob": 0.10398472100496292
+        }
+      ],
+      "elapsed_seconds": 8.549
+    },
+    {
+      "asset_id": "3c87893a-d814-54d8-a17b-44eb3974668b",
+      "audio_sha256": "1fe4e4f28f0e738421e666c9e7961c32c67def2f80f78935517812b85201ed1c",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L04_FORMAL_SLOW",
+      "expected": "Dobrý den. Jak se jmenujete?\nDobrý den. Jmenuji se Oksana.\nOdkud jste?\nJsem z Ukrajiny.\nTěší mě.\nMě také.",
+      "transcript": "Dobý den, jak se jmenujete? Dobý den, jmenuji se Oksana. Odkud jste? Jsem z Ukrainy. Těší mě. Mě také.",
+      "word_edits": 3,
+      "reference_words": 19,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": " Dobý den, jak se jmenujete?",
+          "avg_logprob": -0.3291739987545326,
+          "no_speech_prob": 0.14618638157844543
+        },
+        {
+          "start": 2.64,
+          "end": 4.64,
+          "text": " Dobý den, jmenuji se Oksana.",
+          "avg_logprob": -0.3291739987545326,
+          "no_speech_prob": 0.14618638157844543
+        },
+        {
+          "start": 6.36,
+          "end": 7.36,
+          "text": " Odkud jste?",
+          "avg_logprob": -0.3291739987545326,
+          "no_speech_prob": 0.14618638157844543
+        },
+        {
+          "start": 8.4,
+          "end": 9.4,
+          "text": " Jsem z Ukrainy.",
+          "avg_logprob": -0.3291739987545326,
+          "no_speech_prob": 0.14618638157844543
+        },
+        {
+          "start": 11.200000000000001,
+          "end": 12.200000000000001,
+          "text": " Těší mě.",
+          "avg_logprob": -0.3291739987545326,
+          "no_speech_prob": 0.14618638157844543
+        },
+        {
+          "start": 13.6,
+          "end": 14.6,
+          "text": " Mě také.",
+          "avg_logprob": -0.3291739987545326,
+          "no_speech_prob": 0.14618638157844543
+        }
+      ],
+      "elapsed_seconds": 8.315
+    },
+    {
+      "asset_id": "ab67408b-074a-5956-a90b-38c1d52908b0",
+      "audio_sha256": "e07c448d60b1e8bdbd5c33ad453f9e76840220d42ffd682f5410e6fde1846358",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L04_INFORMAL",
+      "expected": "Ahoj. Jak se jmenuješ?\nAhoj. Jmenuji se Oksana.\nOdkud jsi?\nJsem z Ukrajiny. Odkud jsi?\nJsem z Česka. Těší mě.\nTaky mě těší.",
+      "transcript": "Ahoj, jak se jmenuješ? Ahoj, jmenuji se Oksana. Odkud ty jsi? Jsem z Ukrajiny, odkud jsi? Jsem z Česka, těší mě. Taky mě těší.",
+      "word_edits": 1,
+      "reference_words": 23,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": " Ahoj, jak se jmenuješ?",
+          "avg_logprob": -0.2580743515038792,
+          "no_speech_prob": 0.18207775056362152
+        },
+        {
+          "start": 2.44,
+          "end": 4.44,
+          "text": " Ahoj, jmenuji se Oksana.",
+          "avg_logprob": -0.2580743515038792,
+          "no_speech_prob": 0.18207775056362152
+        },
+        {
+          "start": 5.12,
+          "end": 6.12,
+          "text": " Odkud ty jsi?",
+          "avg_logprob": -0.2580743515038792,
+          "no_speech_prob": 0.18207775056362152
+        },
+        {
+          "start": 6.6000000000000005,
+          "end": 8.24,
+          "text": " Jsem z Ukrajiny, odkud jsi?",
+          "avg_logprob": -0.2580743515038792,
+          "no_speech_prob": 0.18207775056362152
+        },
+        {
+          "start": 8.76,
+          "end": 11.24,
+          "text": " Jsem z Česka, těší mě.",
+          "avg_logprob": -0.2580743515038792,
+          "no_speech_prob": 0.18207775056362152
+        },
+        {
+          "start": 12.44,
+          "end": 13.44,
+          "text": " Taky mě těší.",
+          "avg_logprob": -0.2580743515038792,
+          "no_speech_prob": 0.18207775056362152
+        }
+      ],
+      "elapsed_seconds": 9.197
+    },
+    {
+      "asset_id": "fa51fd78-8148-5d79-90d4-be124448efa2",
+      "audio_sha256": "41c99e2a6b01e5e2cd0bf750f0e8cb5069d5404b23bc52d5a9649f1cc40c1300",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_L04_INFORMAL_SLOW",
+      "expected": "Ahoj. Jak se jmenuješ?\nAhoj. Jmenuji se Oksana.\nOdkud jsi?\nJsem z Ukrajiny. Odkud jsi?\nJsem z Česka. Těší mě.\nTaky mě těší.",
+      "transcript": "Ahoj, jak se jmenuješ? Ahoj, jmenuji se Oksana. Odkud jsi? Jsem z Ukrajiny, odkud jsi? Jsem z Česka, těší mě. Taky mě těší.",
+      "word_edits": 0,
+      "reference_words": 23,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": " Ahoj, jak se jmenuješ?",
+          "avg_logprob": -0.15568573887531573,
+          "no_speech_prob": 0.1486770361661911
+        },
+        {
+          "start": 3.0,
+          "end": 5.0,
+          "text": " Ahoj, jmenuji se Oksana.",
+          "avg_logprob": -0.15568573887531573,
+          "no_speech_prob": 0.1486770361661911
+        },
+        {
+          "start": 6.0,
+          "end": 7.0,
+          "text": " Odkud jsi?",
+          "avg_logprob": -0.15568573887531573,
+          "no_speech_prob": 0.1486770361661911
+        },
+        {
+          "start": 8.0,
+          "end": 10.0,
+          "text": " Jsem z Ukrajiny, odkud jsi?",
+          "avg_logprob": -0.15568573887531573,
+          "no_speech_prob": 0.1486770361661911
+        },
+        {
+          "start": 11.0,
+          "end": 14.0,
+          "text": " Jsem z Česka, těší mě.",
+          "avg_logprob": -0.15568573887531573,
+          "no_speech_prob": 0.1486770361661911
+        },
+        {
+          "start": 15.0,
+          "end": 17.0,
+          "text": " Taky mě těší.",
+          "avg_logprob": -0.15568573887531573,
+          "no_speech_prob": 0.1486770361661911
+        }
+      ],
+      "elapsed_seconds": 10.038
+    },
+    {
+      "asset_id": "16f5c1c3-75e4-5374-878d-953cb1d94154",
+      "audio_sha256": "afc44ee2ce424435a007ecce5f8ea112d75676217b6b270ce9b400f5efbc09c4",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_R01_FIRST_CONTACT",
+      "expected": "Dobrý den. Vy jste Oksana?\nDobrý den. Ano.\nOdkud jste?\nJsem z Ukrajiny.\nTěší mě.\nMě také. Na shledanou.",
+      "transcript": "Dobrý den, voj jste Oksana? Dobrý den, ano. Odkud jste? Jsem z Ukrainy. Těší mě. Mě také, na shledanou.",
+      "word_edits": 2,
+      "reference_words": 19,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": " Dobrý den, voj jste Oksana?",
+          "avg_logprob": -0.24014446706998915,
+          "no_speech_prob": 0.11080346256494522
+        },
+        {
+          "start": 3.0,
+          "end": 5.0,
+          "text": " Dobrý den, ano.",
+          "avg_logprob": -0.24014446706998915,
+          "no_speech_prob": 0.11080346256494522
+        },
+        {
+          "start": 5.0,
+          "end": 6.0,
+          "text": " Odkud jste?",
+          "avg_logprob": -0.24014446706998915,
+          "no_speech_prob": 0.11080346256494522
+        },
+        {
+          "start": 6.0,
+          "end": 8.0,
+          "text": " Jsem z Ukrainy.",
+          "avg_logprob": -0.24014446706998915,
+          "no_speech_prob": 0.11080346256494522
+        },
+        {
+          "start": 8.0,
+          "end": 10.0,
+          "text": " Těší mě.",
+          "avg_logprob": -0.24014446706998915,
+          "no_speech_prob": 0.11080346256494522
+        },
+        {
+          "start": 10.0,
+          "end": 12.0,
+          "text": " Mě také, na shledanou.",
+          "avg_logprob": -0.24014446706998915,
+          "no_speech_prob": 0.11080346256494522
+        }
+      ],
+      "elapsed_seconds": 8.405
+    },
+    {
+      "asset_id": "a84fa870-8fda-5c10-8908-97187a0c7c91",
+      "audio_sha256": "8412bc0ed89fab2cf62d20d0434f5c8ec06c7466c293ca5300eb4ed38703b840",
+      "stable_code": "AUD_CZE_M01_DIALOGUES_R01_FIRST_CONTACT_SLOW",
+      "expected": "Dobrý den. Vy jste Oksana?\nDobrý den. Ano.\nOdkud jste?\nJsem z Ukrajiny.\nTěší mě.\nMě také. Na shledanou.",
+      "transcript": "Dobrý den. Vy jste Oksana? Dobrý den. Ano. Odkud jste? Jsem z Ukrainy. Těší mě. Mě také. Naschledanou.",
+      "word_edits": 3,
+      "reference_words": 19,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": " Dobrý den. Vy jste Oksana?",
+          "avg_logprob": -0.30328395729884505,
+          "no_speech_prob": 0.2374366670846939
+        },
+        {
+          "start": 3.8000000000000003,
+          "end": 5.2,
+          "text": " Dobrý den. Ano.",
+          "avg_logprob": -0.30328395729884505,
+          "no_speech_prob": 0.2374366670846939
+        },
+        {
+          "start": 6.2,
+          "end": 7.0,
+          "text": " Odkud jste?",
+          "avg_logprob": -0.30328395729884505,
+          "no_speech_prob": 0.2374366670846939
+        },
+        {
+          "start": 8.3,
+          "end": 9.3,
+          "text": " Jsem z Ukrainy.",
+          "avg_logprob": -0.30328395729884505,
+          "no_speech_prob": 0.2374366670846939
+        },
+        {
+          "start": 10.9,
+          "end": 11.700000000000001,
+          "text": " Těší mě.",
+          "avg_logprob": -0.30328395729884505,
+          "no_speech_prob": 0.2374366670846939
+        },
+        {
+          "start": 12.6,
+          "end": 14.6,
+          "text": " Mě také. Naschledanou.",
+          "avg_logprob": -0.30328395729884505,
+          "no_speech_prob": 0.2374366670846939
+        }
+      ],
+      "elapsed_seconds": 8.63
+    }
+  ]
+}

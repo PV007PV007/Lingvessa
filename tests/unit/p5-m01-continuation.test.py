@@ -98,6 +98,30 @@ class ContinuationTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'Audio bytes changed'):
             self.validate()
 
+    def test_explicit_processing_recovery_preserves_original_and_rejects_false_proof(self):
+        derived = copy.deepcopy(self.rows[0])
+        original = {k:v for k,v in derived.items() if k not in ['engine_result','raw','normal','slow']}
+        original['status'] = 'STARTED'
+        path = self.new / 'attempts' / (original['turn_id'] + '.json')
+        c.m.write(path, original)
+        proof = {'kind':'VERIFIED_PROCESSING_CHECKPOINT','synthesis_repeated':False,
+            'journal_sha256':c.m.sha(self.new/'generation-pocket.json'),
+            'script_sha256':c.m.sha(ROOT/'tools/p5/recover-m01-pocket-journal.py'),
+            'turns':[{'turn':derived,'original_record_sha256':c.m.sha(path),'normal_and_slow_byte_identical_to_rederived':True}]}
+        recovery = self.new/'processing-recovery.json'
+        c.m.write(recovery,proof)
+        rows,provenance=self.validate()
+        self.assertEqual(rows[derived['turn_id']],derived)
+        self.assertEqual(c.m.read(path),original)
+        self.assertFalse(provenance['synthesis_repeated'])
+        changes=[lambda p:p.update(synthesis_repeated=True),lambda p:p['turns'].append(p['turns'][0]),
+                 lambda p:p['turns'][0].update(normal_and_slow_byte_identical_to_rederived=False),
+                 lambda p:p['turns'][0]['turn'].update(elapsed_seconds=1),
+                 lambda p:p['turns'][0]['turn'].update(text='changed')]
+        for change in changes:
+            bad=copy.deepcopy(proof);change(bad);c.m.write(recovery,bad)
+            with self.assertRaises(ValueError):self.validate()
+
     def test_turn_identity_seed_retry_and_metrics_are_bound(self):
         row = self.rows[0]
         changes = [{'text': 'altered'}, {'language': 'en'}, {'seed': row['seed'] + 1},

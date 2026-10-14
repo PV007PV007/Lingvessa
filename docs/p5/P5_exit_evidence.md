@@ -2,7 +2,13 @@
 
 **IN PROGRESS / NOT READY. PR #5 OPEN DRAFT; no merge or P6 authorization.**
 
-## Current M01 continuation assembly — 2026-10-13
+## Current M01 completion — 2026-10-14
+
+The dependency download block is resolved using the unchanged pinned PyTorch wheel and verified locks. All 97 Pocket turns and all 204 previously absent Czech files have been generated; final inventory is **420/420**, with 216 earlier recordings preserved unchanged. The current run is an explicitly planned infrastructure reconstruction after loss of unretained temporary outputs. A durable checkpoint and processing-recovery proofs preserve all available raw/processed bytes and original journals.
+
+See [M01 completion](m01-completion-20261014/README.md) for blind ASR, the all-dialogue crosscheck, complete delivery, full local byte verification and new metadata-only CI gates. Hosted CI does not have these external WAVs and must not claim their playback. No human listening or final cast, rights, publication or milestone approval is fabricated. Historical partial-batch evidence remains unchanged and is superseded for current inventory only.
+
+## Historical M01 continuation assembly — 2026-10-13
 
 The [continuation tool](m01-continuation.md) closes the gap between the exported partial archive and a future completed Pocket run. It verifies and retains 216 final WAVs, selects only 97 unattempted turns, and assembles the 204 missing files into a separate output after strict provenance/byte checks. It does not synthesize, screen or approve any audio. Local full-parent checks passed all 532 WAVs; eleven synthetic-tone tests passed. Hosted CI adds two bound reports, bringing acceptance references to 27. Exact-source hosted results remain required.
 

@@ -1,0 +1,722 @@
+[
+  {
+    "asset_id": "9e5b32a1-4df3-5a58-9e42-7769cb91fc13",
+    "audio_sha256": "1b524caa8de031561fa69a229812b542c8da938f2958d99ad75aa4e0712bd05f",
+    "status": "SCREENED",
+    "expected": "Odkud jste?",
+    "transcript": "Odkud jste.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Odkud jste.",
+        "avg_logprob": -0.4549021191067166,
+        "no_speech_prob": 0.22460444271564484
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 2,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.828
+  },
+  {
+    "asset_id": "8e18835a-3670-5f58-a127-7af9088f2b2b",
+    "audio_sha256": "180856c49bd624f0cdfe158e6e363148270c282c748ee3ae318201f9508e8cba",
+    "status": "SCREENED",
+    "expected": "Odkud jste?",
+    "transcript": "Odkud jste.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Odkud jste.",
+        "avg_logprob": -0.4821310043334961,
+        "no_speech_prob": 0.2263331562280655
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 2,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 2.129
+  },
+  {
+    "asset_id": "8d8c5e21-f9f9-5982-8e90-301f00d33347",
+    "audio_sha256": "b16f5984dd6a6e33f6ea408011a61c83373eb3ddab5b6bb6d473d7d376d2bf33",
+    "status": "SCREENED",
+    "expected": "Odkud jsi?",
+    "transcript": "Odkud si.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Odkud si.",
+        "avg_logprob": -0.542722649872303,
+        "no_speech_prob": 0.3381147086620331
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 2,
+    "diagnostic_wer": 0.5,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.89
+  },
+  {
+    "asset_id": "d6a0faae-23ce-5f9f-b32a-2a62773fb11e",
+    "audio_sha256": "5eacb7166abdecacc3fc27a42da4c923814f5aabce387569f436c84a8289c80d",
+    "status": "SCREENED",
+    "expected": "Odkud jsi?",
+    "transcript": "Odkud si.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Odkud si.",
+        "avg_logprob": -0.7443157881498337,
+        "no_speech_prob": 0.3444173038005829
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 2,
+    "diagnostic_wer": 0.5,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 2.017
+  },
+  {
+    "asset_id": "d441e277-6cf9-53af-b852-5356648c8620",
+    "audio_sha256": "c75040740853583f84ed5e24b076240e50c1e171590d90ed0b64638e54dff64c",
+    "status": "SCREENED",
+    "expected": "jsem",
+    "transcript": "Sem.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Sem.",
+        "avg_logprob": -0.7130497932434082,
+        "no_speech_prob": 0.3074863851070404
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 1,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.539
+  },
+  {
+    "asset_id": "39674295-7b9f-5e75-8488-d9e45f200759",
+    "audio_sha256": "3d0d98bf42c312c93b0fc2f009ecff32b171ab8001a1861515db27ab80b9fbd2",
+    "status": "SCREENED",
+    "expected": "jsem",
+    "transcript": "Sem.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Sem.",
+        "avg_logprob": -0.6908118247985839,
+        "no_speech_prob": 0.356330931186676
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 1,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.713
+  },
+  {
+    "asset_id": "3e073a71-91c5-58ad-aa8a-2e56e0d99cef",
+    "audio_sha256": "71fe838f9bed62968790d18d68cc72fb712b87e05c1af4d1955b54df416fab23",
+    "status": "SCREENED",
+    "expected": "jsi",
+    "transcript": "Easy.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Easy.",
+        "avg_logprob": -0.8910898208618164,
+        "no_speech_prob": 0.1544492542743683
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 1,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.752
+  },
+  {
+    "asset_id": "10afe2fe-5f17-5ba7-ab1b-fb8263bc234a",
+    "audio_sha256": "c215ccba952d111f420bf0e4989c1dce5e0b3f05256fffc08ddf775a7a3ab7fd",
+    "status": "SCREENED",
+    "expected": "jsi",
+    "transcript": "Easy.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Easy.",
+        "avg_logprob": -0.8214372634887696,
+        "no_speech_prob": 0.11102364957332611
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 1,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.842
+  },
+  {
+    "asset_id": "ade3b0e7-774f-55c5-b85a-bcd82a270b14",
+    "audio_sha256": "8df924a36d23764082eaf1d4ee23de3e0b6e562b36062f1303623a9243ac2c1d",
+    "status": "SCREENED",
+    "expected": "jste",
+    "transcript": "Ste.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Ste.",
+        "avg_logprob": -0.720596170425415,
+        "no_speech_prob": 0.23833119869232178
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 1,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.973
+  },
+  {
+    "asset_id": "64f21fa4-ea9b-5d20-89ac-c55edd0727ad",
+    "audio_sha256": "7f74cb4fb313f163c01e3f5cd812c0bdb8a385d38c652eb0762dae4eaacb1559",
+    "status": "SCREENED",
+    "expected": "jste",
+    "transcript": "Ste.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Ste.",
+        "avg_logprob": -0.7133710384368896,
+        "no_speech_prob": 0.23410376906394958
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 1,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.882
+  },
+  {
+    "asset_id": "3cba3fe6-664e-5a25-be23-1f1a3b8ff201",
+    "audio_sha256": "361bd9c7c34de8c0340c082d1d3092e9256857e5512d831ddba84ea7f784e689",
+    "status": "SCREENED",
+    "expected": "je",
+    "transcript": "Jé.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 1.0,
+        "text": " Jé.",
+        "avg_logprob": -0.766889899969101,
+        "no_speech_prob": 0.11701597273349762
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 1,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.732
+  },
+  {
+    "asset_id": "09816699-80f1-5d30-9951-0b6bc9a98c1d",
+    "audio_sha256": "089f14cadaf93fab0621a9078f3eea4b14670b8cdff63ea4bd84a05fb6dd4829",
+    "status": "SCREENED",
+    "expected": "je",
+    "transcript": "Jé.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 1.0,
+        "text": " Jé.",
+        "avg_logprob": -0.8096928397814432,
+        "no_speech_prob": 0.08800646662712097
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 1,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.578
+  },
+  {
+    "asset_id": "bea45ef3-984b-50d8-a7af-8c0488645b2a",
+    "audio_sha256": "b29e56390fb8dec7a4c5f6eb1f61b06e5548c19dac4833909cdbb4abeffb4eb0",
+    "status": "SCREENED",
+    "expected": "student",
+    "transcript": "student.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " student.",
+        "avg_logprob": -0.735416316986084,
+        "no_speech_prob": 0.07591697573661804
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 1,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.735
+  },
+  {
+    "asset_id": "6e9703a8-cd62-5817-98fe-85510216e6e3",
+    "audio_sha256": "24ecc4181c447d668db4e334015ec56fed45fd04e4830261d70912522256c0c6",
+    "status": "SCREENED",
+    "expected": "student",
+    "transcript": "student.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " student.",
+        "avg_logprob": -0.6159650325775147,
+        "no_speech_prob": 0.12116656452417374
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 1,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.751
+  },
+  {
+    "asset_id": "cb07fee8-fa13-5bda-895a-99f86ac10418",
+    "audio_sha256": "0e28f9405c32aaad83585663672f093cccb704b16a492570989fd22bb82cbce3",
+    "status": "SCREENED",
+    "expected": "studentka",
+    "transcript": "studentka.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " studentka.",
+        "avg_logprob": -0.6026845673720042,
+        "no_speech_prob": 0.07251742482185364
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 1,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.987
+  },
+  {
+    "asset_id": "6c7e0e15-69c9-5aeb-8918-455945a4aeda",
+    "audio_sha256": "252e01ad21e66aa3fe135ab8b6b28a846b94c123b9e8c7581753d4071824004f",
+    "status": "SCREENED",
+    "expected": "studentka",
+    "transcript": "studentka.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " studentka.",
+        "avg_logprob": -0.5638529360294342,
+        "no_speech_prob": 0.13889870047569275
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 1,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.804
+  },
+  {
+    "asset_id": "71d3d3dd-d4a2-5a0f-8e45-892d46a0f3c4",
+    "audio_sha256": "396d927180569f3174dbac80b8285a5ec0cd38539119263a4079842f9e1fe35b",
+    "status": "SCREENED",
+    "expected": "učitel",
+    "transcript": "Učitel.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Učitel.",
+        "avg_logprob": -0.4798377411706107,
+        "no_speech_prob": 0.5075446963310242
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 1,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.668
+  },
+  {
+    "asset_id": "3acac059-e90d-51eb-bd47-38bcc8354999",
+    "audio_sha256": "e379d9a2e99b0e6248851407a70a9eaf77a4734eadb0481afff4b04b898d0b54",
+    "status": "SCREENED",
+    "expected": "učitel",
+    "transcript": "Učitev.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Učitev.",
+        "avg_logprob": -0.5030398219823837,
+        "no_speech_prob": 0.4753536283969879
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 1,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.578
+  },
+  {
+    "asset_id": "2b8306e1-ef83-5e23-be51-436de408480b",
+    "audio_sha256": "5a822ed249ead50859ebc823b08a045e4fcdb6de5c5fc70796603b0a17e0facf",
+    "status": "SCREENED",
+    "expected": "učitelka",
+    "transcript": "Učitelka.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Učitelka.",
+        "avg_logprob": -0.39527852088212967,
+        "no_speech_prob": 0.4980441927909851
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 1,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.565
+  },
+  {
+    "asset_id": "0125a785-23c3-5594-8345-86e2a2474a49",
+    "audio_sha256": "cffee41c7432e1913200d83ed8201351b97f0341cc27679b0fe9cf9dbd52d540",
+    "status": "SCREENED",
+    "expected": "učitelka",
+    "transcript": "Učitelka.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Učitelka.",
+        "avg_logprob": -0.38927923887968063,
+        "no_speech_prob": 0.5035335421562195
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 1,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.586
+  },
+  {
+    "asset_id": "8fc8b4d8-4d30-53d8-aeb2-2a121fcc679f",
+    "audio_sha256": "11e6c96bc1e6c9d864be642e74b5ee0f63ca80fa02679171883242815a99d832",
+    "status": "SCREENED",
+    "expected": "Vy jste Oksana?",
+    "transcript": "Vy jste oxana.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Vy jste oxana.",
+        "avg_logprob": -0.48239791989326475,
+        "no_speech_prob": 0.24340298771858215
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 3,
+    "diagnostic_wer": 0.3333333333333333,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.86
+  },
+  {
+    "asset_id": "3e22e5cb-de60-547d-8d89-73603158f888",
+    "audio_sha256": "1aa2d30119ac349a92b7afe9d9966f29a5e7d47108f55872243bd4caec018a7f",
+    "status": "SCREENED",
+    "expected": "Vy jste Oksana?",
+    "transcript": "Vy jste oxana.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Vy jste oxana.",
+        "avg_logprob": -0.4512652516365051,
+        "no_speech_prob": 0.28736263513565063
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 3,
+    "diagnostic_wer": 0.3333333333333333,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.734
+  },
+  {
+    "asset_id": "7ac6c00a-dbbb-53b2-99ff-8065d7d4432a",
+    "audio_sha256": "539a680beba7a443c645e02080e7c8179c0775dd1071eac9d9383ef5b9e68ff9",
+    "status": "SCREENED",
+    "expected": "Ty jsi Adam.",
+    "transcript": "Dysi Adam.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Dysi Adam.",
+        "avg_logprob": -0.5741887092590332,
+        "no_speech_prob": 0.1474996954202652
+      }
+    ],
+    "word_edits": 2,
+    "reference_words": 3,
+    "diagnostic_wer": 0.6666666666666666,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.681
+  },
+  {
+    "asset_id": "4ec0e33a-cd82-5f6e-b947-e65fba6ada0a",
+    "audio_sha256": "0a26572197ee9201ba3156062bb3e3c997ac3ae72c427abbfd34284f5ee4480e",
+    "status": "SCREENED",
+    "expected": "Ty jsi Adam.",
+    "transcript": "DC Adam.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " DC Adam.",
+        "avg_logprob": -0.5997022986412048,
+        "no_speech_prob": 0.2652200162410736
+      }
+    ],
+    "word_edits": 2,
+    "reference_words": 3,
+    "diagnostic_wer": 0.6666666666666666,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.757
+  },
+  {
+    "asset_id": "cc7432ce-377c-5a9f-9335-1a6f10d6eb2b",
+    "audio_sha256": "11766f83f686444be0c54ac3f62c68542dadae2bad39da490234bc66cd7e213c",
+    "status": "SCREENED",
+    "expected": "On je student.",
+    "transcript": "On je student.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " On je student.",
+        "avg_logprob": -0.2943792598588126,
+        "no_speech_prob": 0.0844128280878067
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 3,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.87
+  },
+  {
+    "asset_id": "b8ac65fa-0021-5224-b5ea-524e831a2e4b",
+    "audio_sha256": "b5a43abd08f02c31b42de279cec95a58f30b80d132c1b1038e23d0b1079bac43",
+    "status": "SCREENED",
+    "expected": "On je student.",
+    "transcript": "On je student.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " On je student.",
+        "avg_logprob": -0.3086001787866865,
+        "no_speech_prob": 0.10513025522232056
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 3,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.91
+  },
+  {
+    "asset_id": "4f7d5de5-4a12-5e4d-9179-e6a735a428e3",
+    "audio_sha256": "b9201f0c29af665697dd5124298641867cd1fac576fae911c4e3f0eb71635e26",
+    "status": "SCREENED",
+    "expected": "Ona je učitelka.",
+    "transcript": "Ona je učitelka.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Ona je učitelka.",
+        "avg_logprob": -0.23921144306659697,
+        "no_speech_prob": 0.08138173818588257
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 3,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.931
+  },
+  {
+    "asset_id": "af6f90b5-e58e-5705-b2b3-ed41e802ffea",
+    "audio_sha256": "595edcfcdae7d78a13ebfadba0f7c2b525a94d5e4f9c86a12335dbac99ce39c4",
+    "status": "SCREENED",
+    "expected": "Ona je učitelka.",
+    "transcript": "Ona je učitelka.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Ona je učitelka.",
+        "avg_logprob": -0.3363828331232071,
+        "no_speech_prob": 0.08376738429069519
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 3,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 2.203
+  },
+  {
+    "asset_id": "4a68bcc0-056e-57af-8264-b50ed5f351ea",
+    "audio_sha256": "9414651da2c298c30916faaa6dcff078c2fa6c8c9d11f9788f953bcfd8e63056",
+    "status": "SCREENED",
+    "expected": "Česko",
+    "transcript": "Česko.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Česko.",
+        "avg_logprob": -0.47016680240631104,
+        "no_speech_prob": 0.22414390742778778
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 1,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.868
+  },
+  {
+    "asset_id": "f97acd24-5473-5c27-8547-258cdb67224a",
+    "audio_sha256": "8226a66f72aa33233ab02fd79ace11b7a5f0def923ac5c018eb3d171b70f6d0d",
+    "status": "SCREENED",
+    "expected": "Česko",
+    "transcript": "Česko.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Česko.",
+        "avg_logprob": -0.38584619760513306,
+        "no_speech_prob": 0.2081468105316162
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 1,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.475
+  }
+]

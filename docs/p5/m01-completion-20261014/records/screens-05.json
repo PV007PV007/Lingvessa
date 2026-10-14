@@ -1,0 +1,855 @@
+[
+  {
+    "asset_id": "1086686d-c34d-5ec3-a663-9a156a068e7e",
+    "audio_sha256": "4814a51c086b8c767169a4f55b1d9a95d7e3b4613867a6a3523da138031eab6f",
+    "status": "SCREENED",
+    "expected": "Dobrý den. Jmenuji se Oksana. Jsem z Ukrajiny. Těší mě.",
+    "transcript": "Dobrý den, minuj se Oksana, jsem z Ukrainy, těší mě.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 5.0,
+        "text": " Dobrý den, minuj se Oksana, jsem z Ukrainy, těší mě.",
+        "avg_logprob": -0.25810386957945647,
+        "no_speech_prob": 0.14463238418102264
+      }
+    ],
+    "word_edits": 2,
+    "reference_words": 10,
+    "diagnostic_wer": 0.2,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 2.071
+  },
+  {
+    "asset_id": "168cd5d0-9e6e-59f8-86c1-d4f6a324be43",
+    "audio_sha256": "59dc5fc1702e9df1cd818ed41e21d9dbdda616495170596110a4f4f924e6affb",
+    "status": "SCREENED",
+    "expected": "Dobrý den. Jmenuji se Oksana. Jsem z Ukrajiny. Těší mě.",
+    "transcript": "Doblý den, menuj se Oksana, jsem z Ukrainy těší mě.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 6.0,
+        "text": " Doblý den, menuj se Oksana, jsem z Ukrainy těší mě.",
+        "avg_logprob": -0.3283764880437117,
+        "no_speech_prob": 0.14095188677310944
+      }
+    ],
+    "word_edits": 3,
+    "reference_words": 10,
+    "diagnostic_wer": 0.3,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 2.029
+  },
+  {
+    "asset_id": "fe8d6802-a3af-53f9-a20b-f24eb8d92e41",
+    "audio_sha256": "1e4e3149ffa6f038fe34a12238307d4b14bc695cebf27f7e72f23b400f72299f",
+    "status": "SCREENED",
+    "expected": "Dobrý den.\nDobrý den.",
+    "transcript": "Dobí den. Dobí den.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Dobí den.",
+        "avg_logprob": -0.562286743750939,
+        "no_speech_prob": 0.2743965685367584
+      },
+      {
+        "start": 2.0,
+        "end": 4.0,
+        "text": " Dobí den.",
+        "avg_logprob": -0.562286743750939,
+        "no_speech_prob": 0.2743965685367584
+      }
+    ],
+    "word_edits": 2,
+    "reference_words": 4,
+    "diagnostic_wer": 0.5,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.838
+  },
+  {
+    "asset_id": "d1cc5e4f-c9cd-5c6f-a7fe-fd2ab8794bdf",
+    "audio_sha256": "297942524997526ad284d5f5fe8c2c3d9c992813d5a3e4bb32e0bdc8949b5c2c",
+    "status": "SCREENED",
+    "expected": "Dobrý den.\nDobrý den.",
+    "transcript": "Dobí den. Dobí den.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Dobí den.",
+        "avg_logprob": -0.5795142283806434,
+        "no_speech_prob": 0.25840768218040466
+      },
+      {
+        "start": 2.0,
+        "end": 4.0,
+        "text": " Dobí den.",
+        "avg_logprob": -0.5795142283806434,
+        "no_speech_prob": 0.25840768218040466
+      }
+    ],
+    "word_edits": 2,
+    "reference_words": 4,
+    "diagnostic_wer": 0.5,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.834
+  },
+  {
+    "asset_id": "3caa4858-e369-5b7e-80c6-83babb3646a8",
+    "audio_sha256": "95f0813bfa96a2d6e28c2b0be9ea88aac9a7ed7463226fd357ec3f95a17eab23",
+    "status": "SCREENED",
+    "expected": "Dobrý den.",
+    "transcript": "Dobí den.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Dobí den.",
+        "avg_logprob": -0.6957006965364728,
+        "no_speech_prob": 0.25471293926239014
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 2,
+    "diagnostic_wer": 0.5,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.562
+  },
+  {
+    "asset_id": "5984a02d-0913-5a65-b867-ac8fde4b3f0b",
+    "audio_sha256": "2adf41b5490be3afbe8417b474e74bb1b959ee5c4698ef7abfa19b1f31d55d6b",
+    "status": "SCREENED",
+    "expected": "Dobrý den.",
+    "transcript": "doby den.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " doby den.",
+        "avg_logprob": -0.652843747820173,
+        "no_speech_prob": 0.3473184108734131
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 2,
+    "diagnostic_wer": 0.5,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.712
+  },
+  {
+    "asset_id": "8c911c00-e52a-5603-b1ad-462588375fc2",
+    "audio_sha256": "d4c30c76a803d80fa8118f0212e440f096b47d60902e4663e33a41a04aac712b",
+    "status": "SCREENED",
+    "expected": "Dobrý den.",
+    "transcript": "Do býden!",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Do býden!",
+        "avg_logprob": -0.8182201832532883,
+        "no_speech_prob": 0.13323716819286346
+      }
+    ],
+    "word_edits": 2,
+    "reference_words": 2,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.837
+  },
+  {
+    "asset_id": "5194b120-0893-51aa-b87f-7d56d18264a1",
+    "audio_sha256": "22cebed85f53bf78249d8bc93c5f66bf03c3952ad8cc44386f1a152acb143f79",
+    "status": "SCREENED",
+    "expected": "Dobrý den.",
+    "transcript": "Dobrý den.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Dobrý den.",
+        "avg_logprob": -0.8642655462026596,
+        "no_speech_prob": 0.14551110565662384
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 2,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.9
+  },
+  {
+    "asset_id": "ad913b13-8d88-598d-89c0-3c836402e859",
+    "audio_sha256": "8608b4edc109dca8dc48ce16cf563457ea0b6a7db39b21c7b1af903c344a2120",
+    "status": "SCREENED",
+    "expected": "Dobrý den. Jmenuji se Klára.\nPromiňte. Nerozumím. Můžete to zopakovat, prosím?\nJmenuji se Klára.\nDěkuji.",
+    "transcript": "Dobí den, menuj se kvára. Promínte, nerozumím, můžete to zopakovat, prosím. Menuj se kvára. Tykuj.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Dobí den, menuj se kvára.",
+        "avg_logprob": -0.47096181926982744,
+        "no_speech_prob": 0.03534993156790733
+      },
+      {
+        "start": 2.24,
+        "end": 5.5,
+        "text": " Promínte, nerozumím, můžete to zopakovat, prosím.",
+        "avg_logprob": -0.47096181926982744,
+        "no_speech_prob": 0.03534993156790733
+      },
+      {
+        "start": 5.88,
+        "end": 7.38,
+        "text": " Menuj se kvára.",
+        "avg_logprob": -0.47096181926982744,
+        "no_speech_prob": 0.03534993156790733
+      },
+      {
+        "start": 8.16,
+        "end": 9.16,
+        "text": " Tykuj.",
+        "avg_logprob": -0.47096181926982744,
+        "no_speech_prob": 0.03534993156790733
+      }
+    ],
+    "word_edits": 7,
+    "reference_words": 15,
+    "diagnostic_wer": 0.4666666666666667,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 3.269
+  },
+  {
+    "asset_id": "7d20a6ec-8d14-5448-b0d6-2b8706fd7826",
+    "audio_sha256": "cb7f6613767257a59c6847222741ad5853eba7ed4d943dd645f9d6b8a923029d",
+    "status": "SCREENED",
+    "expected": "Dobrý den. Jmenuji se Klára.\nPromiňte. Nerozumím. Můžete to zopakovat, prosím?\nJmenuji se Klára.\nDěkuji.",
+    "transcript": "Do býden, menuj se kvára. Promínte, nerozumím, můžete to zopakovat, prosím. Menuj se kvára. Tykuj.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.6,
+        "text": " Do býden, menuj se kvára.",
+        "avg_logprob": -0.4178194542016302,
+        "no_speech_prob": 0.039564426988363266
+      },
+      {
+        "start": 2.8000000000000003,
+        "end": 7.2,
+        "text": " Promínte, nerozumím, můžete to zopakovat, prosím.",
+        "avg_logprob": -0.4178194542016302,
+        "no_speech_prob": 0.039564426988363266
+      },
+      {
+        "start": 7.4,
+        "end": 10.0,
+        "text": " Menuj se kvára.",
+        "avg_logprob": -0.4178194542016302,
+        "no_speech_prob": 0.039564426988363266
+      },
+      {
+        "start": 10.200000000000001,
+        "end": 12.200000000000001,
+        "text": " Tykuj.",
+        "avg_logprob": -0.4178194542016302,
+        "no_speech_prob": 0.039564426988363266
+      }
+    ],
+    "word_edits": 8,
+    "reference_words": 15,
+    "diagnostic_wer": 0.5333333333333333,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 3.093
+  },
+  {
+    "asset_id": "6975642d-68ac-579d-9ac8-92dd7d1f44a1",
+    "audio_sha256": "e3241b8ee14181f029a0346cf09e842c1a11af76fd522238b051136145c1ed6f",
+    "status": "SCREENED",
+    "expected": "Dobrý den. Jmenuji se Klára.",
+    "transcript": "Do býden, menový sekláda.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Do býden, menový sekláda.",
+        "avg_logprob": -0.6564738973975182,
+        "no_speech_prob": 0.25800374150276184
+      }
+    ],
+    "word_edits": 5,
+    "reference_words": 5,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 2.016
+  },
+  {
+    "asset_id": "4582d1fb-c14a-5950-8ad2-2592f84c6fe6",
+    "audio_sha256": "3ca0c910ea1f9a86fcc42a6c911fe2d3b0835c79776d37080d76f1c63c90d1a6",
+    "status": "SCREENED",
+    "expected": "Dobrý den. Jmenuji se Klára.",
+    "transcript": "Do býden, menu i se klára.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Do býden, menu i se klára.",
+        "avg_logprob": -0.583530105650425,
+        "no_speech_prob": 0.16587209701538086
+      }
+    ],
+    "word_edits": 4,
+    "reference_words": 5,
+    "diagnostic_wer": 0.8,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 2.206
+  },
+  {
+    "asset_id": "59f294e0-9aaa-5219-aa70-0bf07a86718a",
+    "audio_sha256": "6d1060bfc82cd29ec6dada1871cfe65cc9cce3e7c06c04679931f12a2f201083",
+    "status": "SCREENED",
+    "expected": "Promiňte. Nerozumím. Můžete to zopakovat, prosím?",
+    "transcript": "Promiňte, nerozumím, můžete to zopakovat, prosím.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 3.0,
+        "text": " Promiňte, nerozumím, můžete to zopakovat, prosím.",
+        "avg_logprob": -0.2899992891720363,
+        "no_speech_prob": 0.08916507661342621
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 6,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 2.167
+  },
+  {
+    "asset_id": "6f987afe-102d-5cce-97e5-847229386221",
+    "audio_sha256": "c5d46a7704ce84a5eb6e45275521e917abe45b61b625bb074ccb1b5f5d5631b1",
+    "status": "SCREENED",
+    "expected": "Promiňte. Nerozumím. Můžete to zopakovat, prosím?",
+    "transcript": "Promiňte, nerozumím, můžete to zopakovat, prosím.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 4.0,
+        "text": " Promiňte, nerozumím, můžete to zopakovat, prosím.",
+        "avg_logprob": -0.29475043217341107,
+        "no_speech_prob": 0.042883820831775665
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 6,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 2.121
+  },
+  {
+    "asset_id": "55ea49c8-036b-5259-9836-401210fcf31b",
+    "audio_sha256": "c26ae09d1801ae439b71639692a59cbf360f351737420a08817aeadf6a7c0e68",
+    "status": "SCREENED",
+    "expected": "Jmenuji se Klára.",
+    "transcript": "Menuj se kvára.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Menuj se kvára.",
+        "avg_logprob": -0.4605465585535223,
+        "no_speech_prob": 0.11782483011484146
+      }
+    ],
+    "word_edits": 2,
+    "reference_words": 3,
+    "diagnostic_wer": 0.6666666666666666,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.703
+  },
+  {
+    "asset_id": "05bede88-eda0-50e3-bc6d-a10146d6f0fb",
+    "audio_sha256": "35a530b398fef63aaba72ddb45926882a84372ed193f43f1e335cd635dd687bc",
+    "status": "SCREENED",
+    "expected": "Jmenuji se Klára.",
+    "transcript": "Menu i se kvára.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Menu i se kvára.",
+        "avg_logprob": -0.6449069927136103,
+        "no_speech_prob": 0.059640415012836456
+      }
+    ],
+    "word_edits": 3,
+    "reference_words": 3,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.795
+  },
+  {
+    "asset_id": "a9063723-2194-58c7-b48e-33c4ac6c3df2",
+    "audio_sha256": "2c252ec6bc0bd45f6b0777bf31df7b4b44d31921aef74348ae855dcb06e8edac",
+    "status": "SCREENED",
+    "expected": "Děkuji.",
+    "transcript": "Ty kuj.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Ty kuj.",
+        "avg_logprob": -0.7807468516486031,
+        "no_speech_prob": 0.35289233922958374
+      }
+    ],
+    "word_edits": 2,
+    "reference_words": 1,
+    "diagnostic_wer": 2.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.692
+  },
+  {
+    "asset_id": "3c2e23d3-c64c-5f08-a690-8c2e67fdaf75",
+    "audio_sha256": "60044833100159c029dabb9ce5b5cf0535df7d736f97141433ac97dcefb737f7",
+    "status": "SCREENED",
+    "expected": "Děkuji.",
+    "transcript": "I kuj.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " I kuj.",
+        "avg_logprob": -0.590641839163644,
+        "no_speech_prob": 0.30886775255203247
+      }
+    ],
+    "word_edits": 2,
+    "reference_words": 1,
+    "diagnostic_wer": 2.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.621
+  },
+  {
+    "asset_id": "5e6fde4d-45c3-5e75-afb3-23654571ed44",
+    "audio_sha256": "d90b2c80bfac155171734ac719dc14a4a7b7c2901842ad6386a9160d411fc379",
+    "status": "SCREENED",
+    "expected": "Dobrý den. Jak se jmenujete?\nDobrý den. Jmenuji se Oksana.\nOdkud jste?\nJsem z Ukrajiny.\nTěší mě.\nMě také.",
+    "transcript": "Dobí den, jak se menujete, ne? Dobí den, menuj se Oksana. Odkud jste. Jsem z Ukrainy. Kěši mě. Mě také.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Dobí den, jak se menujete, ne?",
+        "avg_logprob": -0.3413537193517216,
+        "no_speech_prob": 0.033816058188676834
+      },
+      {
+        "start": 2.0,
+        "end": 4.0,
+        "text": " Dobí den, menuj se Oksana.",
+        "avg_logprob": -0.3413537193517216,
+        "no_speech_prob": 0.033816058188676834
+      },
+      {
+        "start": 5.0,
+        "end": 6.0,
+        "text": " Odkud jste.",
+        "avg_logprob": -0.3413537193517216,
+        "no_speech_prob": 0.033816058188676834
+      },
+      {
+        "start": 7.0,
+        "end": 8.0,
+        "text": " Jsem z Ukrainy.",
+        "avg_logprob": -0.3413537193517216,
+        "no_speech_prob": 0.033816058188676834
+      },
+      {
+        "start": 9.0,
+        "end": 10.0,
+        "text": " Kěši mě.",
+        "avg_logprob": -0.3413537193517216,
+        "no_speech_prob": 0.033816058188676834
+      },
+      {
+        "start": 11.0,
+        "end": 12.0,
+        "text": " Mě také.",
+        "avg_logprob": -0.3413537193517216,
+        "no_speech_prob": 0.033816058188676834
+      }
+    ],
+    "word_edits": 7,
+    "reference_words": 19,
+    "diagnostic_wer": 0.3684210526315789,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 2.916
+  },
+  {
+    "asset_id": "3c87893a-d814-54d8-a17b-44eb3974668b",
+    "audio_sha256": "1fe4e4f28f0e738421e666c9e7961c32c67def2f80f78935517812b85201ed1c",
+    "status": "SCREENED",
+    "expected": "Dobrý den. Jak se jmenujete?\nDobrý den. Jmenuji se Oksana.\nOdkud jste?\nJsem z Ukrajiny.\nTěší mě.\nMě také.",
+    "transcript": "Dobí den, jak se menujete? Ne. Dobí den, menuj se Oksana. Odkud jste. Jsem z Ukrainy. Těším mě. Mě také.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Dobí den, jak se menujete?",
+        "avg_logprob": -0.48011331047330585,
+        "no_speech_prob": 0.029638687148690224
+      },
+      {
+        "start": 2.0,
+        "end": 2.5,
+        "text": " Ne.",
+        "avg_logprob": -0.48011331047330585,
+        "no_speech_prob": 0.029638687148690224
+      },
+      {
+        "start": 2.5,
+        "end": 5.0,
+        "text": " Dobí den, menuj se Oksana.",
+        "avg_logprob": -0.48011331047330585,
+        "no_speech_prob": 0.029638687148690224
+      },
+      {
+        "start": 6.3,
+        "end": 7.3,
+        "text": " Odkud jste.",
+        "avg_logprob": -0.48011331047330585,
+        "no_speech_prob": 0.029638687148690224
+      },
+      {
+        "start": 8.3,
+        "end": 9.5,
+        "text": " Jsem z Ukrainy.",
+        "avg_logprob": -0.48011331047330585,
+        "no_speech_prob": 0.029638687148690224
+      },
+      {
+        "start": 11.1,
+        "end": 12.1,
+        "text": " Těším mě.",
+        "avg_logprob": -0.48011331047330585,
+        "no_speech_prob": 0.029638687148690224
+      },
+      {
+        "start": 13.5,
+        "end": 14.5,
+        "text": " Mě také.",
+        "avg_logprob": -0.48011331047330585,
+        "no_speech_prob": 0.029638687148690224
+      }
+    ],
+    "word_edits": 7,
+    "reference_words": 19,
+    "diagnostic_wer": 0.3684210526315789,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 2.93
+  },
+  {
+    "asset_id": "3c46f211-bd2c-5971-9885-c3b316edbee0",
+    "audio_sha256": "155f8787b7123e46a19ce92f1e3df592893332c8cdf7eaa0ef60b3c272b445b1",
+    "status": "SCREENED",
+    "expected": "Dobrý den. Jak se jmenujete?",
+    "transcript": "dobí den jak se menilte.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 1.52,
+        "text": " dobí den jak se menilte.",
+        "avg_logprob": -0.7239523117358868,
+        "no_speech_prob": 0.49002301692962646
+      }
+    ],
+    "word_edits": 2,
+    "reference_words": 5,
+    "diagnostic_wer": 0.4,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.594
+  },
+  {
+    "asset_id": "2c056ee2-8724-507e-884e-2371b0c6cae4",
+    "audio_sha256": "b27acc5ef55c4cf298e0ad63b4ea65cf41c4ecad79bc2fd5d36f5b8039df691f",
+    "status": "SCREENED",
+    "expected": "Dobrý den. Jak se jmenujete?",
+    "transcript": "Dobí den, jak se meníte.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Dobí den, jak se meníte.",
+        "avg_logprob": -0.723377356162438,
+        "no_speech_prob": 0.5080026388168335
+      }
+    ],
+    "word_edits": 2,
+    "reference_words": 5,
+    "diagnostic_wer": 0.4,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.59
+  },
+  {
+    "asset_id": "77e6fb64-357a-5c26-909f-29d365437f4d",
+    "audio_sha256": "5223e178f4c84651a465d68c25970cbac97d6a6f4c6f9982d2f0aee915ed66fb",
+    "status": "SCREENED",
+    "expected": "Dobrý den. Jmenuji se Oksana.",
+    "transcript": "Robí den, menu jsi oxana.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Robí den, menu jsi oxana.",
+        "avg_logprob": -0.6842124547277179,
+        "no_speech_prob": 0.09676694869995117
+      }
+    ],
+    "word_edits": 4,
+    "reference_words": 5,
+    "diagnostic_wer": 0.8,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.629
+  },
+  {
+    "asset_id": "a2246b80-aad7-5f5c-ac09-1c520dd33d1a",
+    "audio_sha256": "aff586e24dc48d70d51355b5f944f2ecd2b55d06969a636f712d11b99b188c8d",
+    "status": "SCREENED",
+    "expected": "Dobrý den. Jmenuji se Oksana.",
+    "transcript": "a ho být jen menu i se oksana.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.44,
+        "text": " a ho být jen menu i se oksana.",
+        "avg_logprob": -0.8474312027295431,
+        "no_speech_prob": 0.06708671152591705
+      }
+    ],
+    "word_edits": 6,
+    "reference_words": 5,
+    "diagnostic_wer": 1.2,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.687
+  },
+  {
+    "asset_id": "687f48ab-bc09-5a02-8cdd-034188545cad",
+    "audio_sha256": "ac2f6a5e04fc82d31c866019396159f63f90ea7a821ffd1278638c592a95fa73",
+    "status": "SCREENED",
+    "expected": "Odkud jste?",
+    "transcript": "Odkud jste.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Odkud jste.",
+        "avg_logprob": -0.5167528788248698,
+        "no_speech_prob": 0.3922926187515259
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 2,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.57
+  },
+  {
+    "asset_id": "890cd32e-c346-5204-832b-274c6c2d6001",
+    "audio_sha256": "cca8890abbc02862274c616b7aa8657831fe7eda81b19910cf49045474c9b157",
+    "status": "SCREENED",
+    "expected": "Odkud jste?",
+    "transcript": "Odkud jste.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Odkud jste.",
+        "avg_logprob": -0.49571333991156685,
+        "no_speech_prob": 0.20680980384349823
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 2,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.605
+  },
+  {
+    "asset_id": "8f1d8fc2-48f7-58e5-942d-c3ab1c69b873",
+    "audio_sha256": "d90724696f5621992459729268450c6344b9f9103e998b5af6d1b7152d2a6589",
+    "status": "SCREENED",
+    "expected": "Jsem z Ukrajiny.",
+    "transcript": "jsem z Ukrainy",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " jsem z Ukrainy",
+        "avg_logprob": -0.31349416822195053,
+        "no_speech_prob": 0.10790900141000748
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 3,
+    "diagnostic_wer": 0.3333333333333333,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.558
+  },
+  {
+    "asset_id": "068bd362-0a3d-5dd6-979f-c065fb3c5286",
+    "audio_sha256": "4f352084c2daa7068af977871078c5521f79d53ea3fa2fa2a5923cdd5caf21b3",
+    "status": "SCREENED",
+    "expected": "Jsem z Ukrajiny.",
+    "transcript": "jsem z Ukrainy",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " jsem z Ukrainy",
+        "avg_logprob": -0.3794504143297672,
+        "no_speech_prob": 0.16057762503623962
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 3,
+    "diagnostic_wer": 0.3333333333333333,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.669
+  },
+  {
+    "asset_id": "82366a09-d244-55af-813c-d51c77a4a946",
+    "audio_sha256": "22f640e1395586e07afd43890b713728dbb66ee29e548db91dc078813002017c",
+    "status": "SCREENED",
+    "expected": "Těší mě.",
+    "transcript": "Keši mě.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Keši mě.",
+        "avg_logprob": -0.6979161898295084,
+        "no_speech_prob": 0.3420141041278839
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 2,
+    "diagnostic_wer": 0.5,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.742
+  },
+  {
+    "asset_id": "fa683040-575c-5ccc-bc94-9a604c2e6723",
+    "audio_sha256": "b0a4c93898c1f8b172e54e77bdb02dbd22f999b89af4bb80cf774729026234a6",
+    "status": "SCREENED",
+    "expected": "Těší mě.",
+    "transcript": "Těši mě.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Těši mě.",
+        "avg_logprob": -0.6067772626876831,
+        "no_speech_prob": 0.26809799671173096
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 2,
+    "diagnostic_wer": 0.5,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.799
+  }
+]
