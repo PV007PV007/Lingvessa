@@ -1,0 +1,842 @@
+[
+  {
+    "asset_id": "b6371f44-e61e-5f6a-ae25-d4985fd03587",
+    "file": "assets/media/m01/en/AUD_ENG_M01_WORDS_LETTER_D.wav",
+    "sha256": "af06681bfdc380b3df7a475364c14d39dc866ed0433d81df18fc5f80d7caf673",
+    "language": "en",
+    "variety": "en-GB",
+    "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+    "turn_family": "2a5c7c17-a9fe-56a5-be97-711cf2b9f3e9",
+    "speed": "normal",
+    "split": "training",
+    "labels": {
+      "en_th_unvoiced": false
+    },
+    "results": {
+      "en_th_unvoiced": {
+        "usable": false,
+        "confidence": 0.4333838224411011,
+        "target_match": false,
+        "error_tags": [
+          "TARGET_PHONE_ABSENT"
+        ],
+        "processing_ms": 342
+      }
+    },
+    "target_phone_maxima": {
+      "en_th_unvoiced": 0.0023170176427811384
+    }
+  },
+  {
+    "asset_id": "e19d6d4c-3630-5972-a695-5ea0a94c61c3",
+    "file": "assets/media/m01/en/AUD_ENG_M01_WORDS_LETTER_D_SLOW.wav",
+    "sha256": "beab8f7ed47134ad9ee15f95a17233dc7ea051074dd6696392ac3fc95171f0c3",
+    "language": "en",
+    "variety": "en-GB",
+    "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+    "turn_family": "2a5c7c17-a9fe-56a5-be97-711cf2b9f3e9",
+    "speed": "slow",
+    "split": "training",
+    "labels": {
+      "en_th_unvoiced": false
+    },
+    "results": {
+      "en_th_unvoiced": {
+        "usable": false,
+        "confidence": 0.29136955738067627,
+        "target_match": false,
+        "error_tags": [
+          "TARGET_PHONE_ABSENT"
+        ],
+        "processing_ms": 353
+      }
+    },
+    "target_phone_maxima": {
+      "en_th_unvoiced": 0.006944010965526104
+    }
+  },
+  {
+    "asset_id": "e8329dd9-32ed-5a24-8114-426065f9b573",
+    "file": "assets/media/m01/en/AUD_ENG_M01_WORDS_LETTER_E.wav",
+    "sha256": "773d6622c6086abd75cd9c179aea67ba7d667b2c9582abd6f4c7fadc2f565d44",
+    "language": "en",
+    "variety": "en-GB",
+    "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+    "turn_family": "38ab8a4c-7c51-57fa-b05b-648a28f9392d",
+    "speed": "normal",
+    "split": "training",
+    "labels": {
+      "en_th_unvoiced": false
+    },
+    "results": {
+      "en_th_unvoiced": {
+        "usable": false,
+        "confidence": 0.0,
+        "target_match": false,
+        "error_tags": [
+          "UNUSABLE_SIGNAL"
+        ],
+        "processing_ms": 46
+      }
+    },
+    "target_phone_maxima": {
+      "en_th_unvoiced": null
+    }
+  },
+  {
+    "asset_id": "8b05a065-4a93-584f-a85b-01826ae221d0",
+    "file": "assets/media/m01/en/AUD_ENG_M01_WORDS_LETTER_E_SLOW.wav",
+    "sha256": "a446c7717e94ecfb6c090051ffc24c24891f545b91a744e8859b30fc53b3f284",
+    "language": "en",
+    "variety": "en-GB",
+    "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+    "turn_family": "38ab8a4c-7c51-57fa-b05b-648a28f9392d",
+    "speed": "slow",
+    "split": "training",
+    "labels": {
+      "en_th_unvoiced": false
+    },
+    "results": {
+      "en_th_unvoiced": {
+        "usable": false,
+        "confidence": 0.0,
+        "target_match": false,
+        "error_tags": [
+          "UNUSABLE_SIGNAL"
+        ],
+        "processing_ms": 45
+      }
+    },
+    "target_phone_maxima": {
+      "en_th_unvoiced": null
+    }
+  },
+  {
+    "asset_id": "2d964e37-c16b-527e-a70a-1fa1792b59b6",
+    "file": "assets/media/m01/en/AUD_ENG_M01_WORDS_LETTER_F.wav",
+    "sha256": "ea5189833eb1e04825ad04addbd35c5f8ebd3d0ce2e459f0c0a126ed956fa7f1",
+    "language": "en",
+    "variety": "en-GB",
+    "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+    "turn_family": "4002a8db-e8b2-5837-9a10-8a7dd862fedb",
+    "speed": "normal",
+    "split": "training",
+    "labels": {
+      "en_th_unvoiced": false
+    },
+    "results": {
+      "en_th_unvoiced": {
+        "usable": false,
+        "confidence": 0.0,
+        "target_match": false,
+        "error_tags": [
+          "UNUSABLE_SIGNAL"
+        ],
+        "processing_ms": 235
+      }
+    },
+    "target_phone_maxima": {
+      "en_th_unvoiced": null
+    }
+  },
+  {
+    "asset_id": "926d043b-850a-5e02-8795-3e119bc05437",
+    "file": "assets/media/m01/en/AUD_ENG_M01_WORDS_LETTER_F_SLOW.wav",
+    "sha256": "8e15ad258cb0e0c0756e4420d4f7d5c2696b0389cb302fd4da5158027f4fbf71",
+    "language": "en",
+    "variety": "en-GB",
+    "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+    "turn_family": "4002a8db-e8b2-5837-9a10-8a7dd862fedb",
+    "speed": "slow",
+    "split": "training",
+    "labels": {
+      "en_th_unvoiced": false
+    },
+    "results": {
+      "en_th_unvoiced": {
+        "usable": false,
+        "confidence": 0.0,
+        "target_match": false,
+        "error_tags": [
+          "UNUSABLE_SIGNAL"
+        ],
+        "processing_ms": 245
+      }
+    },
+    "target_phone_maxima": {
+      "en_th_unvoiced": null
+    }
+  },
+  {
+    "asset_id": "23397796-3640-5979-bb9a-0f808ef803c9",
+    "file": "assets/media/m01/en/AUD_ENG_M01_WORDS_LETTER_G.wav",
+    "sha256": "1be9093f4a05108c46d4c390e846561008492f573ff2bea63290a6d9e38b03ed",
+    "language": "en",
+    "variety": "en-GB",
+    "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+    "turn_family": "72bee2e3-d67b-52aa-a5d9-78a587eade64",
+    "speed": "normal",
+    "split": "heldout",
+    "labels": {
+      "en_th_unvoiced": false
+    },
+    "results": {
+      "en_th_unvoiced": {
+        "usable": false,
+        "confidence": 0.375485360622406,
+        "target_match": false,
+        "error_tags": [
+          "TARGET_PHONE_ABSENT"
+        ],
+        "processing_ms": 567
+      }
+    },
+    "target_phone_maxima": {
+      "en_th_unvoiced": 0.0012800247641280293
+    }
+  },
+  {
+    "asset_id": "b8851870-81aa-568e-9812-6bd8c373fc28",
+    "file": "assets/media/m01/en/AUD_ENG_M01_WORDS_LETTER_G_SLOW.wav",
+    "sha256": "0ca37213ded106ac0184633ccd826581abe7edca5044515f8bc256c35356cb86",
+    "language": "en",
+    "variety": "en-GB",
+    "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+    "turn_family": "72bee2e3-d67b-52aa-a5d9-78a587eade64",
+    "speed": "slow",
+    "split": "heldout",
+    "labels": {
+      "en_th_unvoiced": false
+    },
+    "results": {
+      "en_th_unvoiced": {
+        "usable": false,
+        "confidence": 0.5409151315689087,
+        "target_match": false,
+        "error_tags": [
+          "TARGET_PHONE_ABSENT"
+        ],
+        "processing_ms": 625
+      }
+    },
+    "target_phone_maxima": {
+      "en_th_unvoiced": 0.002360439160838723
+    }
+  },
+  {
+    "asset_id": "1dcffd57-d44c-596f-be3e-0e9d0ac745d9",
+    "file": "assets/media/m01/en/AUD_ENG_M01_WORDS_LETTER_H.wav",
+    "sha256": "b72731bdb7c3fa242c1f173a602eb660f23f3888e2c2dcfa93d6e1a39276f6d1",
+    "language": "en",
+    "variety": "en-GB",
+    "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+    "turn_family": "87347158-b05d-5926-aacd-f6c79d317ac8",
+    "speed": "normal",
+    "split": "training",
+    "labels": {
+      "en_th_unvoiced": false
+    },
+    "results": {
+      "en_th_unvoiced": {
+        "usable": false,
+        "confidence": 0.6115117073059082,
+        "target_match": false,
+        "error_tags": [
+          "TARGET_PHONE_ABSENT"
+        ],
+        "processing_ms": 338
+      }
+    },
+    "target_phone_maxima": {
+      "en_th_unvoiced": 0.003556642448529601
+    }
+  },
+  {
+    "asset_id": "4bd8218c-454a-56b2-940b-202f4e30bb66",
+    "file": "assets/media/m01/en/AUD_ENG_M01_WORDS_LETTER_H_SLOW.wav",
+    "sha256": "34a3762c006efb05b15dd754fd9782cff17ff7d359c215e128f52dfd13d4d201",
+    "language": "en",
+    "variety": "en-GB",
+    "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+    "turn_family": "87347158-b05d-5926-aacd-f6c79d317ac8",
+    "speed": "slow",
+    "split": "training",
+    "labels": {
+      "en_th_unvoiced": false
+    },
+    "results": {
+      "en_th_unvoiced": {
+        "usable": false,
+        "confidence": 0.3720511794090271,
+        "target_match": false,
+        "error_tags": [
+          "TARGET_PHONE_ABSENT"
+        ],
+        "processing_ms": 444
+      }
+    },
+    "target_phone_maxima": {
+      "en_th_unvoiced": 0.0031866685021668673
+    }
+  },
+  {
+    "asset_id": "3b6928f3-e45d-5efd-9efb-84dfe95601be",
+    "file": "assets/media/m01/en/AUD_ENG_M01_WORDS_LETTER_I.wav",
+    "sha256": "51d652a7e8bbd3be2be534174287d85215fb85eb8202fafe0b6b62ebae0b53a0",
+    "language": "en",
+    "variety": "en-GB",
+    "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+    "turn_family": "d8b85275-9790-53a1-a5ea-94e6eed932a2",
+    "speed": "normal",
+    "split": "training",
+    "labels": {
+      "en_th_unvoiced": false
+    },
+    "results": {
+      "en_th_unvoiced": {
+        "usable": false,
+        "confidence": 0.5417348742485046,
+        "target_match": false,
+        "error_tags": [
+          "TARGET_PHONE_ABSENT"
+        ],
+        "processing_ms": 443
+      }
+    },
+    "target_phone_maxima": {
+      "en_th_unvoiced": 0.016590282320976257
+    }
+  },
+  {
+    "asset_id": "bf9a361e-0b24-5ecc-89a9-ad672c1bcb73",
+    "file": "assets/media/m01/en/AUD_ENG_M01_WORDS_LETTER_I_SLOW.wav",
+    "sha256": "78f6d262405b665c4261c055e6f63f08a24b215fe98fac49853a1896916853b4",
+    "language": "en",
+    "variety": "en-GB",
+    "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+    "turn_family": "d8b85275-9790-53a1-a5ea-94e6eed932a2",
+    "speed": "slow",
+    "split": "training",
+    "labels": {
+      "en_th_unvoiced": false
+    },
+    "results": {
+      "en_th_unvoiced": {
+        "usable": false,
+        "confidence": 0.48455655574798584,
+        "target_match": false,
+        "error_tags": [
+          "TARGET_PHONE_ABSENT"
+        ],
+        "processing_ms": 497
+      }
+    },
+    "target_phone_maxima": {
+      "en_th_unvoiced": 0.00287888222374022
+    }
+  },
+  {
+    "asset_id": "583040fa-f4f7-55e8-a3c1-497b25903e13",
+    "file": "assets/media/m01/en/AUD_ENG_M01_WORDS_LETTER_J.wav",
+    "sha256": "d6315136a9b1c267a97f6be34c904b2a8f22b24f334326ef5017c6c85fc4a137",
+    "language": "en",
+    "variety": "en-GB",
+    "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+    "turn_family": "fb151816-6e89-5559-97cb-f670cfc3b3c0",
+    "speed": "normal",
+    "split": "training",
+    "labels": {
+      "en_th_unvoiced": false
+    },
+    "results": {
+      "en_th_unvoiced": {
+        "usable": false,
+        "confidence": 0.1994970440864563,
+        "target_match": false,
+        "error_tags": [
+          "TARGET_PHONE_ABSENT"
+        ],
+        "processing_ms": 417
+      }
+    },
+    "target_phone_maxima": {
+      "en_th_unvoiced": 0.01912541873753071
+    }
+  },
+  {
+    "asset_id": "1a741267-8518-5de5-b502-5bc0acd6b14a",
+    "file": "assets/media/m01/en/AUD_ENG_M01_WORDS_LETTER_J_SLOW.wav",
+    "sha256": "46c13537bed1aa968e8584e00e60c619a78724cc320d214988cd45e714a7ede1",
+    "language": "en",
+    "variety": "en-GB",
+    "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+    "turn_family": "fb151816-6e89-5559-97cb-f670cfc3b3c0",
+    "speed": "slow",
+    "split": "training",
+    "labels": {
+      "en_th_unvoiced": false
+    },
+    "results": {
+      "en_th_unvoiced": {
+        "usable": false,
+        "confidence": 0.0,
+        "target_match": false,
+        "error_tags": [
+          "UNUSABLE_SIGNAL"
+        ],
+        "processing_ms": 526
+      }
+    },
+    "target_phone_maxima": {
+      "en_th_unvoiced": null
+    }
+  },
+  {
+    "asset_id": "73369f9e-dc19-536a-9f9a-2536f9d5437a",
+    "file": "assets/media/m01/en/AUD_ENG_M01_WORDS_LETTER_K.wav",
+    "sha256": "a0b963464c5af377cedf4c4ea31e94b369deed80ef436141ea2c6cebf8e151c2",
+    "language": "en",
+    "variety": "en-GB",
+    "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+    "turn_family": "f5c65b5b-40cb-53b2-b9fd-33a9d660924e",
+    "speed": "normal",
+    "split": "training",
+    "labels": {
+      "en_th_unvoiced": false
+    },
+    "results": {
+      "en_th_unvoiced": {
+        "usable": false,
+        "confidence": 0.6538772583007812,
+        "target_match": false,
+        "error_tags": [
+          "TARGET_PHONE_ABSENT"
+        ],
+        "processing_ms": 480
+      }
+    },
+    "target_phone_maxima": {
+      "en_th_unvoiced": 0.002040828811004758
+    }
+  },
+  {
+    "asset_id": "9fef9c24-82a4-506a-933d-ca4e7c62aacb",
+    "file": "assets/media/m01/en/AUD_ENG_M01_WORDS_LETTER_K_SLOW.wav",
+    "sha256": "51fa18d09b2e506808e2b78050c4072239f3839ea0724adbfa78c00eb7a5e6c9",
+    "language": "en",
+    "variety": "en-GB",
+    "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+    "turn_family": "f5c65b5b-40cb-53b2-b9fd-33a9d660924e",
+    "speed": "slow",
+    "split": "training",
+    "labels": {
+      "en_th_unvoiced": false
+    },
+    "results": {
+      "en_th_unvoiced": {
+        "usable": false,
+        "confidence": 0.6105568408966064,
+        "target_match": false,
+        "error_tags": [
+          "TARGET_PHONE_ABSENT"
+        ],
+        "processing_ms": 424
+      }
+    },
+    "target_phone_maxima": {
+      "en_th_unvoiced": 0.0017089634202420712
+    }
+  },
+  {
+    "asset_id": "02df2ef7-c5f0-5a73-8dfc-9109fe120c38",
+    "file": "assets/media/m01/en/AUD_ENG_M01_WORDS_LETTER_L.wav",
+    "sha256": "204b655a2084dadee551ef7b73558e12ffd836cef4e213e5bc0a64ff927549df",
+    "language": "en",
+    "variety": "en-GB",
+    "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+    "turn_family": "f7dc56ad-eff5-55a0-91cb-026001c6599a",
+    "speed": "normal",
+    "split": "training",
+    "labels": {
+      "en_th_unvoiced": false
+    },
+    "results": {
+      "en_th_unvoiced": {
+        "usable": false,
+        "confidence": 0.0,
+        "target_match": false,
+        "error_tags": [
+          "UNUSABLE_SIGNAL"
+        ],
+        "processing_ms": 336
+      }
+    },
+    "target_phone_maxima": {
+      "en_th_unvoiced": null
+    }
+  },
+  {
+    "asset_id": "c26def9e-1cb8-5cae-b1d6-6e4cdf557ce8",
+    "file": "assets/media/m01/en/AUD_ENG_M01_WORDS_LETTER_L_SLOW.wav",
+    "sha256": "df887ff22e7d7a0d1c848d448d37d45a581250c5606d7ff78d213ada190b6118",
+    "language": "en",
+    "variety": "en-GB",
+    "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+    "turn_family": "f7dc56ad-eff5-55a0-91cb-026001c6599a",
+    "speed": "slow",
+    "split": "training",
+    "labels": {
+      "en_th_unvoiced": false
+    },
+    "results": {
+      "en_th_unvoiced": {
+        "usable": false,
+        "confidence": 0.0,
+        "target_match": false,
+        "error_tags": [
+          "UNUSABLE_SIGNAL"
+        ],
+        "processing_ms": 541
+      }
+    },
+    "target_phone_maxima": {
+      "en_th_unvoiced": null
+    }
+  },
+  {
+    "asset_id": "7fc7475b-8ca8-5adb-ae6a-6f07f1eae2ae",
+    "file": "assets/media/m01/en/AUD_ENG_M01_WORDS_LETTER_M.wav",
+    "sha256": "16f6e6bd25aa58ec4da3cb90bfcd6b61ddc244f6bd0d604ab04faf6b943e188f",
+    "language": "en",
+    "variety": "en-GB",
+    "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+    "turn_family": "e84d8377-f242-5354-a2f0-7a6b77e8bb20",
+    "speed": "normal",
+    "split": "training",
+    "labels": {
+      "en_th_unvoiced": false
+    },
+    "results": {
+      "en_th_unvoiced": {
+        "usable": false,
+        "confidence": 0.0,
+        "target_match": false,
+        "error_tags": [
+          "UNUSABLE_SIGNAL"
+        ],
+        "processing_ms": 322
+      }
+    },
+    "target_phone_maxima": {
+      "en_th_unvoiced": null
+    }
+  },
+  {
+    "asset_id": "b39c8e40-de27-5300-8bef-848b76bcde8e",
+    "file": "assets/media/m01/en/AUD_ENG_M01_WORDS_LETTER_M_SLOW.wav",
+    "sha256": "897cd77d1481c9b7a56dd522dbed86caaee1b4228ad42f67bcca781e536f8305",
+    "language": "en",
+    "variety": "en-GB",
+    "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+    "turn_family": "e84d8377-f242-5354-a2f0-7a6b77e8bb20",
+    "speed": "slow",
+    "split": "training",
+    "labels": {
+      "en_th_unvoiced": false
+    },
+    "results": {
+      "en_th_unvoiced": {
+        "usable": false,
+        "confidence": 0.0,
+        "target_match": false,
+        "error_tags": [
+          "UNUSABLE_SIGNAL"
+        ],
+        "processing_ms": 409
+      }
+    },
+    "target_phone_maxima": {
+      "en_th_unvoiced": null
+    }
+  },
+  {
+    "asset_id": "0028ade5-4c3f-5b01-becb-078e9a1b07d0",
+    "file": "assets/media/m01/en/AUD_ENG_M01_WORDS_LETTER_N.wav",
+    "sha256": "4a014269c84c9cd6b5742e23c26d1e8c0b1b8c91af21e28d7fd5c096e431e511",
+    "language": "en",
+    "variety": "en-GB",
+    "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+    "turn_family": "50d12e89-b0d4-5552-9c64-26b6b846da32",
+    "speed": "normal",
+    "split": "training",
+    "labels": {
+      "en_th_unvoiced": false
+    },
+    "results": {
+      "en_th_unvoiced": {
+        "usable": false,
+        "confidence": 0.5593923926353455,
+        "target_match": false,
+        "error_tags": [
+          "TARGET_PHONE_ABSENT"
+        ],
+        "processing_ms": 258
+      }
+    },
+    "target_phone_maxima": {
+      "en_th_unvoiced": 0.012542527168989182
+    }
+  },
+  {
+    "asset_id": "d8638e57-cbce-5305-9669-83cf5a5187ac",
+    "file": "assets/media/m01/en/AUD_ENG_M01_WORDS_LETTER_N_SLOW.wav",
+    "sha256": "f3006983139a5e20fd73a3c7fd32abceeb745baeb74a34eeeb495920492375eb",
+    "language": "en",
+    "variety": "en-GB",
+    "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+    "turn_family": "50d12e89-b0d4-5552-9c64-26b6b846da32",
+    "speed": "slow",
+    "split": "training",
+    "labels": {
+      "en_th_unvoiced": false
+    },
+    "results": {
+      "en_th_unvoiced": {
+        "usable": false,
+        "confidence": 0.5883536338806152,
+        "target_match": false,
+        "error_tags": [
+          "TARGET_PHONE_ABSENT"
+        ],
+        "processing_ms": 296
+      }
+    },
+    "target_phone_maxima": {
+      "en_th_unvoiced": 0.003049952443689108
+    }
+  },
+  {
+    "asset_id": "c58a1cd2-bf12-5530-a7e6-6f07de77c648",
+    "file": "assets/media/m01/en/AUD_ENG_M01_WORDS_LETTER_O.wav",
+    "sha256": "829ce61af840448d6ff192eaa92b68f9378e6b787710a65ab0421032e0a4802b",
+    "language": "en",
+    "variety": "en-GB",
+    "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+    "turn_family": "3fe8d4f2-310c-5b8e-bcef-b2ac213fa72e",
+    "speed": "normal",
+    "split": "heldout",
+    "labels": {
+      "en_th_unvoiced": false
+    },
+    "results": {
+      "en_th_unvoiced": {
+        "usable": false,
+        "confidence": 0.0,
+        "target_match": false,
+        "error_tags": [
+          "UNUSABLE_SIGNAL"
+        ],
+        "processing_ms": 278
+      }
+    },
+    "target_phone_maxima": {
+      "en_th_unvoiced": null
+    }
+  },
+  {
+    "asset_id": "24919540-ddd8-5dce-bbbc-426e80fe6f10",
+    "file": "assets/media/m01/en/AUD_ENG_M01_WORDS_LETTER_O_SLOW.wav",
+    "sha256": "0cb4431e72f41bf7981c7f30c118e87573db863600dc393853f8d109e90e981e",
+    "language": "en",
+    "variety": "en-GB",
+    "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+    "turn_family": "3fe8d4f2-310c-5b8e-bcef-b2ac213fa72e",
+    "speed": "slow",
+    "split": "heldout",
+    "labels": {
+      "en_th_unvoiced": false
+    },
+    "results": {
+      "en_th_unvoiced": {
+        "usable": false,
+        "confidence": 0.0,
+        "target_match": false,
+        "error_tags": [
+          "UNUSABLE_SIGNAL"
+        ],
+        "processing_ms": 425
+      }
+    },
+    "target_phone_maxima": {
+      "en_th_unvoiced": null
+    }
+  },
+  {
+    "asset_id": "f1b3f22f-d0b3-5b00-9e22-03cccad83563",
+    "file": "assets/media/m01/en/AUD_ENG_M01_WORDS_LETTER_P.wav",
+    "sha256": "dcc0ccd41e421701dcaf02fbdcf0cb217b0b25647c3d2b776fa87b51fbf1f9b6",
+    "language": "en",
+    "variety": "en-GB",
+    "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+    "turn_family": "d42ae6ed-4314-5222-b5b1-15be2cd1c3cf",
+    "speed": "normal",
+    "split": "heldout",
+    "labels": {
+      "en_th_unvoiced": false
+    },
+    "results": {
+      "en_th_unvoiced": {
+        "usable": false,
+        "confidence": 0.6335451602935791,
+        "target_match": false,
+        "error_tags": [
+          "TARGET_PHONE_ABSENT"
+        ],
+        "processing_ms": 332
+      }
+    },
+    "target_phone_maxima": {
+      "en_th_unvoiced": 0.0019761763978749514
+    }
+  },
+  {
+    "asset_id": "e6bc93fd-a638-5777-bce4-4e67c64b8172",
+    "file": "assets/media/m01/en/AUD_ENG_M01_WORDS_LETTER_P_SLOW.wav",
+    "sha256": "c09c25602ee75df4e5d0a7029b4aafd25ba74fdf9a7567e3ff268147cec18b8f",
+    "language": "en",
+    "variety": "en-GB",
+    "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+    "turn_family": "d42ae6ed-4314-5222-b5b1-15be2cd1c3cf",
+    "speed": "slow",
+    "split": "heldout",
+    "labels": {
+      "en_th_unvoiced": false
+    },
+    "results": {
+      "en_th_unvoiced": {
+        "usable": false,
+        "confidence": 0.5993211269378662,
+        "target_match": false,
+        "error_tags": [
+          "TARGET_PHONE_ABSENT"
+        ],
+        "processing_ms": 352
+      }
+    },
+    "target_phone_maxima": {
+      "en_th_unvoiced": 0.002755704801529646
+    }
+  },
+  {
+    "asset_id": "a494f152-7775-5beb-a697-18cb2b23c1cd",
+    "file": "assets/media/m01/en/AUD_ENG_M01_WORDS_LETTER_Q.wav",
+    "sha256": "a29160c3e6dba478d8441d9c6154b5757caee5d7621b1cbc4a6331e77e75d8a4",
+    "language": "en",
+    "variety": "en-GB",
+    "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+    "turn_family": "c2ced8b9-dc2d-59ec-bb23-94a7367538bd",
+    "speed": "normal",
+    "split": "training",
+    "labels": {
+      "en_th_unvoiced": false
+    },
+    "results": {
+      "en_th_unvoiced": {
+        "usable": false,
+        "confidence": 0.5310108065605164,
+        "target_match": false,
+        "error_tags": [
+          "TARGET_PHONE_ABSENT"
+        ],
+        "processing_ms": 309
+      }
+    },
+    "target_phone_maxima": {
+      "en_th_unvoiced": 0.0052847047336399555
+    }
+  },
+  {
+    "asset_id": "cfaf35b2-3be3-500d-82a1-f4ccbb506968",
+    "file": "assets/media/m01/en/AUD_ENG_M01_WORDS_LETTER_Q_SLOW.wav",
+    "sha256": "dbf55b80be7cc45a4e8151b40042f17a89543d46ec41d20f2128743f26cb4cbe",
+    "language": "en",
+    "variety": "en-GB",
+    "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+    "turn_family": "c2ced8b9-dc2d-59ec-bb23-94a7367538bd",
+    "speed": "slow",
+    "split": "training",
+    "labels": {
+      "en_th_unvoiced": false
+    },
+    "results": {
+      "en_th_unvoiced": {
+        "usable": false,
+        "confidence": 0.363321453332901,
+        "target_match": false,
+        "error_tags": [
+          "TARGET_PHONE_ABSENT"
+        ],
+        "processing_ms": 419
+      }
+    },
+    "target_phone_maxima": {
+      "en_th_unvoiced": 0.005996849853545427
+    }
+  },
+  {
+    "asset_id": "82705291-ad05-5980-b897-da5480673bb6",
+    "file": "assets/media/m01/en/AUD_ENG_M01_WORDS_LETTER_R.wav",
+    "sha256": "d7f6012e494a310c30e9e8fd31eae661833ceceb64463a0e42e0066b64ee32d4",
+    "language": "en",
+    "variety": "en-GB",
+    "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+    "turn_family": "985ab778-4819-5d46-a19d-97154deda213",
+    "speed": "normal",
+    "split": "training",
+    "labels": {
+      "en_th_unvoiced": false
+    },
+    "results": {
+      "en_th_unvoiced": {
+        "usable": false,
+        "confidence": 0.0,
+        "target_match": false,
+        "error_tags": [
+          "UNUSABLE_SIGNAL"
+        ],
+        "processing_ms": 335
+      }
+    },
+    "target_phone_maxima": {
+      "en_th_unvoiced": null
+    }
+  },
+  {
+    "asset_id": "f54c7d0f-e7f2-5e13-8923-460d3ddfa749",
+    "file": "assets/media/m01/en/AUD_ENG_M01_WORDS_LETTER_R_SLOW.wav",
+    "sha256": "dd7fd02ee00cbd32b96f5f78433f4d0d0af8c82ccc87d0b87014d7096a442285",
+    "language": "en",
+    "variety": "en-GB",
+    "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+    "turn_family": "985ab778-4819-5d46-a19d-97154deda213",
+    "speed": "slow",
+    "split": "training",
+    "labels": {
+      "en_th_unvoiced": false
+    },
+    "results": {
+      "en_th_unvoiced": {
+        "usable": false,
+        "confidence": 0.0,
+        "target_match": false,
+        "error_tags": [
+          "UNUSABLE_SIGNAL"
+        ],
+        "processing_ms": 322
+      }
+    },
+    "target_phone_maxima": {
+      "en_th_unvoiced": null
+    }
+  }
+]

@@ -1,0 +1,259 @@
+{
+  "status": "COMPLETE",
+  "scope": "SYNTHETIC_REFERENCE_ACOUSTIC_PILOT",
+  "recordings": 402,
+  "actual_acoustic_inference": true,
+  "targets": [
+    {
+      "target_feature": "en_th_unvoiced",
+      "positive_reference_families": 2,
+      "positive_voices": 1,
+      "heldout_positive_families": 0,
+      "metrics": {
+        "exploratory": {
+          "files": 8,
+          "true_positive": 0,
+          "false_negative": 4,
+          "false_positive": 0,
+          "true_negative": 4,
+          "unavailable": 8,
+          "recall": 0.0,
+          "false_positive_rate": 0.0
+        },
+        "training": {
+          "files": 160,
+          "true_positive": 0,
+          "false_negative": 0,
+          "false_positive": 0,
+          "true_negative": 160,
+          "unavailable": 160,
+          "recall": null,
+          "false_positive_rate": 0.0
+        },
+        "heldout": {
+          "files": 34,
+          "true_positive": 0,
+          "false_negative": 0,
+          "false_positive": 0,
+          "true_negative": 34,
+          "unavailable": 34,
+          "recall": null,
+          "false_positive_rate": 0.0
+        }
+      },
+      "production_status": "REJECTED_INSUFFICIENT_CALIBRATION"
+    },
+    {
+      "target_feature": "cs_r_raised",
+      "positive_reference_families": 3,
+      "positive_voices": 1,
+      "heldout_positive_families": 0,
+      "metrics": {
+        "exploratory": {
+          "files": 8,
+          "true_positive": 0,
+          "false_negative": 6,
+          "false_positive": 0,
+          "true_negative": 2,
+          "unavailable": 8,
+          "recall": 0.0,
+          "false_positive_rate": 0.0
+        },
+        "training": {
+          "files": 146,
+          "true_positive": 0,
+          "false_negative": 0,
+          "false_positive": 0,
+          "true_negative": 146,
+          "unavailable": 136,
+          "recall": null,
+          "false_positive_rate": 0.0
+        },
+        "heldout": {
+          "files": 46,
+          "true_positive": 0,
+          "false_negative": 0,
+          "false_positive": 0,
+          "true_negative": 46,
+          "unavailable": 44,
+          "recall": null,
+          "false_positive_rate": 0.0
+        }
+      },
+      "production_status": "REJECTED_INSUFFICIENT_CALIBRATION"
+    },
+    {
+      "target_feature": "cs_long_a",
+      "positive_reference_families": 11,
+      "positive_voices": 1,
+      "heldout_positive_families": 1,
+      "metrics": {
+        "exploratory": {
+          "files": 8,
+          "true_positive": 0,
+          "false_negative": 4,
+          "false_positive": 0,
+          "true_negative": 4,
+          "unavailable": 8,
+          "recall": 0.0,
+          "false_positive_rate": 0.0
+        },
+        "training": {
+          "files": 146,
+          "true_positive": 0,
+          "false_negative": 16,
+          "false_positive": 0,
+          "true_negative": 130,
+          "unavailable": 136,
+          "recall": 0.0,
+          "false_positive_rate": 0.0
+        },
+        "heldout": {
+          "files": 46,
+          "true_positive": 0,
+          "false_negative": 2,
+          "false_positive": 0,
+          "true_negative": 44,
+          "unavailable": 44,
+          "recall": 0.0,
+          "false_positive_rate": 0.0
+        }
+      },
+      "production_status": "REJECTED_INSUFFICIENT_CALIBRATION"
+    }
+  ],
+  "controls": [
+    {
+      "name": "silence",
+      "sha256": "20eaebffe1816e0ffa6f7f854f5ef4ea80d5349faaf0ce1fec1b713e7fde58fa",
+      "result": {
+        "usable": false,
+        "confidence": 0.0,
+        "target_match": false,
+        "error_tags": [
+          "UNUSABLE_SIGNAL"
+        ],
+        "processing_ms": 54
+      }
+    },
+    {
+      "name": "white_noise",
+      "sha256": "b5aa804ff27d745249d46b8ff25f305ad1fe03cbaeca637721377abb70ae2c7e",
+      "result": {
+        "usable": false,
+        "confidence": 0.0,
+        "target_match": false,
+        "error_tags": [
+          "UNUSABLE_SIGNAL"
+        ],
+        "processing_ms": 52
+      }
+    },
+    {
+      "name": "pure_tone",
+      "sha256": "5616007eaecdbb29f4d6821c169e72c73abea9f97e344058a925c87bc4b468d2",
+      "result": {
+        "usable": false,
+        "confidence": 0.0,
+        "target_match": false,
+        "error_tags": [
+          "UNUSABLE_SIGNAL"
+        ],
+        "processing_ms": 54
+      }
+    }
+  ],
+  "normal_slow_family_leakage": false,
+  "learner_recordings_used": 0,
+  "production_approved": false,
+  "speech_policies_inserted": 0,
+  "reason": "Insufficient positive voice/family coverage and no labelled real-learner errors. Keep candidate test-only; production scoring remains neutral.",
+  "plan_sha256": "ad1d060e16e6ebbeb012fcf868fc9c4b00cc11c00d2d7b99506acf651820214a",
+  "records": [
+    {
+      "path": "results-00.json",
+      "sha256": "12bf321f97fe355eab0bf90e9abd63e297db005b35451f920426527f6e16dd99",
+      "count": 30
+    },
+    {
+      "path": "results-01.json",
+      "sha256": "00f54487a66a95e97284945a65c4cd903287acbb86d68f2ca293ccdc8b4efa52",
+      "count": 30
+    },
+    {
+      "path": "results-02.json",
+      "sha256": "a5c0336535164719e5c2f1259fd6fb3e22d8ebfdce21b651822d836e3bd621e0",
+      "count": 30
+    },
+    {
+      "path": "results-03.json",
+      "sha256": "52710217e761395ee4f0e0fa8f3b9b4720fb2f809c4bd3d20ed38111b22f7a19",
+      "count": 30
+    },
+    {
+      "path": "results-04.json",
+      "sha256": "840be4c5a3e97afcca3c115830b8be21be388f9837689486384dec68f9f31fc7",
+      "count": 30
+    },
+    {
+      "path": "results-05.json",
+      "sha256": "d460ab8223476ec0fcdfd1a107e400e086fe63a0a7b4a4bba6a58279c7f8df66",
+      "count": 30
+    },
+    {
+      "path": "results-06.json",
+      "sha256": "aee179c0b1c1c734c309e482ce189bc3f61153ae144178e7b83284769b7397b0",
+      "count": 30
+    },
+    {
+      "path": "results-07.json",
+      "sha256": "2ba4ee630387315c467e2ec426f2a99e90b7f3941d0cb63e213ccd78610d6321",
+      "count": 30
+    },
+    {
+      "path": "results-08.json",
+      "sha256": "dcee921313e0e9221bf873811d009c0ccc1eb73b3e11d895f9ad83c87eecbedf",
+      "count": 30
+    },
+    {
+      "path": "results-09.json",
+      "sha256": "7182dbb19569a3800c6d87b45b70f5e15bec93597783b46ba8a93621000149f6",
+      "count": 30
+    },
+    {
+      "path": "results-10.json",
+      "sha256": "c1f703ed876c2f0dd8a275b12ef3f0ea2d55c04ebfb8a9c8e58f90dc473d9f3c",
+      "count": 30
+    },
+    {
+      "path": "results-11.json",
+      "sha256": "1f47735e2a8649f01df10e3773b7e6e277a57ef05cd6ee47b1cde7922f0e57e3",
+      "count": 30
+    },
+    {
+      "path": "results-12.json",
+      "sha256": "207e9c7cc48f01f5e5d833da5230911f2af8f80198d5849bb0c12334cd9b5bdf",
+      "count": 30
+    },
+    {
+      "path": "results-13.json",
+      "sha256": "eee635588fbdec694ca8fda0cac4b87f5a371ebcf02f58b084c9aa68c26541a8",
+      "count": 12
+    }
+  ],
+  "network_guard": {
+    "kernel": "Linux seccomp",
+    "denied_syscalls": [
+      "socket",
+      "socketpair",
+      "connect",
+      "sendto",
+      "sendmsg",
+      "sendmmsg"
+    ],
+    "native_socket_probe": "EPERM",
+    "inherited_by_children": true,
+    "python_socket_and_dns_audit": true
+  },
+  "engine_sha256": "958f1ef20b2a0fe46708c8654d2f09625e7302923264e5e372e108491aa1dcd4"
+}

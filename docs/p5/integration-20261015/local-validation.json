@@ -1,0 +1,31 @@
+{
+  "status": "PASS_LOCAL_SCOPE_ONLY",
+  "base_sha": "b53ef44ef6a8389b9680586817c101008e186027",
+  "typescript": "PASS",
+  "eslint": "PASS",
+  "media_library_unit_tests": {
+    "passed": 3,
+    "failed": 0,
+    "skipped": 0,
+    "external_audio_supplied": true
+  },
+  "archive_staging": "420 approved WAVs checked and staged outside checkout",
+  "archive_negative_checks": [
+    "wrong archive rejected before writes",
+    "existing destination rejected without overwrite"
+  ],
+  "postgresql_executed": false,
+  "s3_executed": false,
+  "hosted_ci_for_resulting_commit": "REQUIRED_SEPARATE_EVIDENCE",
+  "code_bindings": {
+    "tools/p5/verify-m01-s3-import.ts": "07a144f7328b221601561fe40107e2a381f9b8a7c03e08ff474e2870b6a93ab9",
+    "tools/p5/s3-test-fixture.ts": "676d1a7df61b3a0b5903dfa919584ae82088122409aaffaa7fd18bccb90c3570",
+    "tools/p5/stage-m01-audio.py": "d8d6a920d3b15da486be26fa88a6997318d09a2da96a1cd024eede9961ce0973",
+    "tools/p5/verify-external-m01.ts": "988217170d01184f2d732fc905b7b67789360e32355fbb1eab0aff1695c7e291",
+    "tools/p5/import-approved-media.ts": "7e4b3dda2b47de821ef9a139023ddaa426658c744280b32c3c20c0bda8b2947c",
+    "tools/p5/acceptance-summary.ts": "57688db6c3f04a3fdac8847f06e849d54103f14ed90549c48312f7146e292b8b",
+    ".github/workflows/p5.yml": "c02f46ee858bce99482d845419ea561ad6359f37b266209f09cc4e8b08a1c873"
+  },
+  "dependency_boundaries": "PASS",
+  "full_local_secret_scan": "NOT_COMPLETED: governing PDFs are not materialized in recovered source subset; required hosted gate retained"
+}

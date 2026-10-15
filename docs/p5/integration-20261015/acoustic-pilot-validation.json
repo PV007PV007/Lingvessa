@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "scope": "ACOUSTIC_PILOT_INTEGRITY_ONLY",
+  "recordings": 402,
+  "actual_acoustic_results_verified": true,
+  "production_calibration_passed": false,
+  "plan_sha256": "ad1d060e16e6ebbeb012fcf868fc9c4b00cc11c00d2d7b99506acf651820214a",
+  "summary_sha256": "5cd2b9936cd6bda985c1e301a3108005e934ba72acc9343ce9b7f959b3003d6b"
+}

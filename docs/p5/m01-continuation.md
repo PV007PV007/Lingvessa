@@ -1,4 +1,6 @@
-# Completing the unpublished M01 audio batch
+# Historical M01 continuation procedure (completed 2026-10-14)
+
+This document records the former partial-batch procedure. All 420 final WAVs now exist and are owner-approved; **do not run generation or assembly again**. Current next steps are [external-byte ingestion and integration](integration-20261015/README.md). Historical commands and observations below are retained for reproducibility, not future work.
 
 The retained authoring script generates the Pocket turns into a fresh directory, but its original assembler expects the pre-export Piper journals and refuses an already assembled batch. The delivered archive retains the WAVs; authoritative turn journals are in the repository. Re-running the original assembly against either directory alone cannot complete the mixed Piper/Pocket dialogues.
 
@@ -20,9 +22,9 @@ CI uses `plan --metadata-only` and explicitly reports zero external WAVs verifie
 
 ## Generate, then assemble
 
-Generation remains blocked until the exact locked Pocket environment and model files are available. The pinned PyTorch wheel still returned HTTP 403 during the 2026-10-13 availability check. No replacement, alternate access path, paid call or new voice choice is introduced here.
+At the time, generation was blocked until the exact locked Pocket environment and model files are available. The pinned PyTorch wheel returned HTTP 403 during the 2026-10-13 availability check. No replacement, alternate access path, paid call or new voice choice is introduced here.
 
-Once that environment is restored, use the **unchanged** generator, in that environment, with a fresh output directory:
+The historical recovery used the **unchanged** generator in the restored environment with a fresh output directory:
 
 ```bash
 PYTHONDONTWRITEBYTECODE=1 python3 tools/p5/m01-audio-draft.py generate \
@@ -32,7 +34,7 @@ PYTHONDONTWRITEBYTECODE=1 python3 tools/p5/m01-audio-draft.py generate \
 
 The generator installs its existing kernel network guard before native imports and preserves the original one-attempt rule. Do not retry a started/failed run or delete its journal. An interruption requires an explicit, separately scoped recovery; the new assembler rejects incomplete runs.
 
-After all 97 turns succeed, assemble into another new directory, outside the repository and both input directories:
+After all 97 turns succeeded, assembly used another new directory outside the repository and both input directories:
 
 ```bash
 PYTHONDONTWRITEBYTECODE=1 python3 tools/p5/continue-m01-audio.py assemble \
@@ -45,7 +47,7 @@ Before writing, the command verifies the entire parent, complete generation jour
 
 `assembly.json` records all 420 files, parent and continuation provenance, copied parent ASR records, and **204 pending new ASR screens**. It retains every existing approval gate. An interrupted assembly retains `INCOMPLETE.json` and cannot overwrite an existing output directory on rerun. Keep the original archive and new generation directory: their raw and intermediate evidence is not duplicated in the final-audio directory.
 
-This change prepares assembly; it does not claim the missing 204 files have been generated, screened or approved. A completed future assembly still requires a separately recorded blind screen for only the new files, refreshed review delivery and final linguistic/rights/publication review. Do not reuse the historical fixed-216 exporter to replace its retained batch.
+The original change only prepared assembly. The subsequent 2026-10-14 completion and owner-approval records supersede its missing-file and pending linguistic/rights statements. Do not reuse the historical fixed-216 exporter to replace its retained batch.
 
 ## Verification
 

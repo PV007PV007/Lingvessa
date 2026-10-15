@@ -1,7 +1,15 @@
 # Lingvessa implementation state and handoff
 
-Updated: 2026-10-14. **P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED; P6 NOT AUTHORIZED.**
+Updated: 2026-10-15. **P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED; P6 NOT AUTHORIZED.**
 Branch `implementation/p5-media-speech`; [PR #5](https://github.com/PV007PV007/Lingvessa/pull/5) OPEN DRAFT. Accepted main/P4: `5027f001237b6451237d87343ebeca58cd0af007`.
+
+## Current recovery and ingestion — 2026-10-15
+
+Recovery baseline `b53ef44ef6a8389b9680586817c101008e186027` had seven successful checks and zero committed M01 WAVs. The interrupted operation left 41 historical blob receipts, no new commit. All 420 approved WAVs were reverified against immutable records; the acoustic pilot covers 402 single-turn files, with 18 verified dialogue files outside that pilot. See [recovery, byte evidence and exact next command](../docs/p5/integration-20261015/README.md).
+
+P5 now has an explicit PostgreSQL/S3 importer/replay/restart test route and a checksum-bound external archive staging route. Synthetic CI results must never be reported as real M01 ingestion. Actual M01 PostgreSQL/S3 execution requires the approved external bytes in a permitted runtime: this editor's process/network controls prevented local execution, and hosted CI has no configured input established here. The exact current commit's check runs and acceptance artifact in PR #5 determine CI status; parent PASS is not substituted.
+
+The 2026-10-14 quality, six-voice and audio-rights approval is retained. No regeneration or repeat approval. Large media stays external, with S3-compatible development/test scope only. OD-004 and OD-006 remain OPEN. Visual QA and applicable compound requirements remain open. PR #5 stays OPEN DRAFT; no merge and no P6.
 
 ## Current owner approval — 2026-10-14
 
@@ -99,6 +107,6 @@ IMP-P5-001/002/003 remain IN_PROGRESS. Trace is unchanged: 356 source rows, **17
 
 Plan v1.4 §12 p7 requires all M01 required asset IDs to resolve. Prepared: 18 original SVG drafts, 12 flag drafts, 168 scripts / 420 audio slots and six voice profiles. **Approved publication assets = 0.** Complete approved cast/rights, full media generation and human linguistic/semantic/accessibility/publication QA remain open.
 
-OD-004 delivery profile OPEN. OD-005 audition executed; final tooling/cast/full generation OPEN. OD-006 usable real-provider speech calibration OPEN; default stays neutral `speech_unavailable`. Paid inference=false; monthly paid budget=0. No P6/P7/P8 runtime starts. EXC-P1-001 remains: main lacks technical branch protection; implementation branch, PR, CI and owner review apply.
+OD-004 delivery profile OPEN. Final audio tooling/cast/generation and audio rights were approved on 2026-10-14; older audition records below/above remain historical. OD-006 usable real-provider speech calibration OPEN; default stays neutral `speech_unavailable`. Paid inference=false; monthly paid budget=0. No P6/P7/P8 runtime starts. EXC-P1-001 remains: main lacks technical branch protection; implementation branch, PR, CI and owner review apply.
 
-Next: verify this continuation source in hosted CI; restore the exact Pocket dependency; use the unchanged generator for the 97 unattempted turns and the new assembler for the 204 missing files. Record blind ASR for new files and refresh review delivery after actual generation. Process owner-supplied feedback when available and complete final rights/cast/publication QA. Keep P5 NOT_READY and PR #5 OPEN DRAFT.
+Next: run the approved external M01 corpus through `tools/p5/verify-m01-s3-import.ts --real-m01` in a permitted PostgreSQL/S3 test runtime, using the exact command and byte bindings in the 2026-10-15 recovery record. Verify every required CI gate on the resulting HEAD; keep P5 NOT_READY, PR #5 OPEN DRAFT and P6 unauthorized.

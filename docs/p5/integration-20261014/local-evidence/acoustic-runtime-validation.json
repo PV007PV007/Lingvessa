@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "scope": "REAL_LOCAL_ACOUSTIC_ADAPTER_RUNTIME",
+  "gates": [
+    "verified_offline_model_handshake",
+    "real_acoustic_contract_and_serial_execution",
+    "unsupported_variety_neutral",
+    "malformed_audio_neutral",
+    "cancelled_work_rejected",
+    "child_disposed"
+  ],
+  "provider": "local_acoustic_ipa",
+  "model_version": "xlsr53-espeak-2c733782da56-1",
+  "test_only": true,
+  "production_calibration_approved": false,
+  "raw_audio_or_transcripts_retained": false,
+  "duration_ms": 7924
+}

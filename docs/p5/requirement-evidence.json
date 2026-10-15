@@ -99,7 +99,13 @@
         "validator": "tools/p5/voice-audition.py --verify-only",
         "scope": "Eight actual local candidate WAVs with pinned authored text/model/speaker and measured metrics; no publication, cast, human linguistic QA or whole-requirement approval.",
         "status": "LOCAL_TECHNICAL_PASS_HUMAN_REVIEW_PENDING"
-      }
+      },
+      "supplementary_evidence": [
+        "docs/p5/m01-completion-20261014/owner-approval.json",
+        "docs/p5/integration-20261015/external-m01-byte-validation.json",
+        "docs/p5/integration-20261015/README.md"
+      ],
+      "current_followup": "No audio regeneration/reapproval. Execute real M01 PostgreSQL/S3 import with external bytes; complete actual publication/visual requirements and OD-004. Synthetic runtime evidence does not close these compound clauses."
     },
     {
       "requirement_id": "AUD-001",
@@ -474,7 +480,13 @@
         "validator": "tools/p5/voice-audition.py --verify-only",
         "scope": "Eight actual local candidate WAVs with pinned authored text/model/speaker and measured metrics; no publication, cast, human linguistic QA or whole-requirement approval.",
         "status": "LOCAL_TECHNICAL_PASS_HUMAN_REVIEW_PENDING"
-      }
+      },
+      "supplementary_evidence": [
+        "docs/p5/m01-completion-20261014/owner-approval.json",
+        "docs/p5/integration-20261015/external-m01-byte-validation.json",
+        "docs/p5/integration-20261015/README.md"
+      ],
+      "current_followup": "No audio regeneration/reapproval. Execute real M01 PostgreSQL/S3 import with external bytes; complete actual publication/visual requirements and OD-004. Synthetic runtime evidence does not close these compound clauses."
     },
     {
       "requirement_id": "MED-002",
@@ -520,7 +532,13 @@
       ],
       "verified_implementation_sha": "b88ba697c375237101e4f73b5fe05ddd17fa54cc",
       "verification_note": "Synthetic published fixtures prove manifest and immutable object contracts; real M01 assets still require their own QA.",
-      "trace_reviewed_at": "2026-10-05T03:54:34.303808+00:00"
+      "trace_reviewed_at": "2026-10-05T03:54:34.303808+00:00",
+      "supplementary_evidence": [
+        "docs/p5/m01-completion-20261014/owner-approval.json",
+        "docs/p5/integration-20261015/external-m01-byte-validation.json",
+        "docs/p5/integration-20261015/README.md"
+      ],
+      "current_followup": "No audio regeneration/reapproval. Execute real M01 PostgreSQL/S3 import with external bytes; complete actual publication/visual requirements and OD-004. Synthetic runtime evidence does not close these compound clauses."
     },
     {
       "requirement_id": "MED-003",
@@ -568,7 +586,13 @@
         "validator": "tools/p5/voice-audition.py --verify-only",
         "scope": "Eight actual local candidate WAVs with pinned authored text/model/speaker and measured metrics; no publication, cast, human linguistic QA or whole-requirement approval.",
         "status": "LOCAL_TECHNICAL_PASS_HUMAN_REVIEW_PENDING"
-      }
+      },
+      "supplementary_evidence": [
+        "docs/p5/m01-completion-20261014/owner-approval.json",
+        "docs/p5/integration-20261015/external-m01-byte-validation.json",
+        "docs/p5/integration-20261015/README.md"
+      ],
+      "current_followup": "No audio regeneration/reapproval. Execute real M01 PostgreSQL/S3 import with external bytes; complete actual publication/visual requirements and OD-004. Synthetic runtime evidence does not close these compound clauses."
     },
     {
       "requirement_id": "MED-004",
@@ -614,7 +638,13 @@
       ],
       "verified_implementation_sha": "b88ba697c375237101e4f73b5fe05ddd17fa54cc",
       "verification_note": "Synthetic published fixtures prove manifest and immutable object contracts; real M01 assets still require their own QA.",
-      "trace_reviewed_at": "2026-10-05T03:54:34.303808+00:00"
+      "trace_reviewed_at": "2026-10-05T03:54:34.303808+00:00",
+      "supplementary_evidence": [
+        "docs/p5/m01-completion-20261014/owner-approval.json",
+        "docs/p5/integration-20261015/external-m01-byte-validation.json",
+        "docs/p5/integration-20261015/README.md"
+      ],
+      "current_followup": "No audio regeneration/reapproval. Execute real M01 PostgreSQL/S3 import with external bytes; complete actual publication/visual requirements and OD-004. Synthetic runtime evidence does not close these compound clauses."
     },
     {
       "requirement_id": "MED-005",
@@ -660,7 +690,13 @@
       ],
       "verified_implementation_sha": "b88ba697c375237101e4f73b5fe05ddd17fa54cc",
       "verification_note": "Synthetic published fixtures prove manifest and immutable object contracts; real M01 assets still require their own QA.",
-      "trace_reviewed_at": "2026-10-05T03:54:34.303808+00:00"
+      "trace_reviewed_at": "2026-10-05T03:54:34.303808+00:00",
+      "supplementary_evidence": [
+        "docs/p5/m01-completion-20261014/owner-approval.json",
+        "docs/p5/integration-20261015/external-m01-byte-validation.json",
+        "docs/p5/integration-20261015/README.md"
+      ],
+      "current_followup": "No audio regeneration/reapproval. Execute real M01 PostgreSQL/S3 import with external bytes; complete actual publication/visual requirements and OD-004. Synthetic runtime evidence does not close these compound clauses."
     },
     {
       "requirement_id": "MED-006",
@@ -708,7 +744,13 @@
         "validator": "tools/p5/voice-audition.py --verify-only",
         "scope": "Eight actual local candidate WAVs with pinned authored text/model/speaker and measured metrics; no publication, cast, human linguistic QA or whole-requirement approval.",
         "status": "LOCAL_TECHNICAL_PASS_HUMAN_REVIEW_PENDING"
-      }
+      },
+      "supplementary_evidence": [
+        "docs/p5/m01-completion-20261014/owner-approval.json",
+        "docs/p5/integration-20261015/external-m01-byte-validation.json",
+        "docs/p5/integration-20261015/README.md"
+      ],
+      "current_followup": "No audio regeneration/reapproval. Execute real M01 PostgreSQL/S3 import with external bytes; complete actual publication/visual requirements and OD-004. Synthetic runtime evidence does not close these compound clauses."
     },
     {
       "requirement_id": "REF-A1-006",
@@ -807,7 +849,13 @@
         "validator": "tools/p5/voice-audition.py --verify-only",
         "scope": "Eight actual local candidate WAVs with pinned authored text/model/speaker and measured metrics; no publication, cast, human linguistic QA or whole-requirement approval.",
         "status": "LOCAL_TECHNICAL_PASS_HUMAN_REVIEW_PENDING"
-      }
+      },
+      "supplementary_evidence": [
+        "docs/p5/m01-completion-20261014/owner-approval.json",
+        "docs/p5/integration-20261015/external-m01-byte-validation.json",
+        "docs/p5/integration-20261015/README.md"
+      ],
+      "current_followup": "No audio regeneration/reapproval. Execute real M01 PostgreSQL/S3 import with external bytes; complete actual publication/visual requirements and OD-004. Synthetic runtime evidence does not close these compound clauses."
     },
     {
       "requirement_id": "REF-A1-011",
@@ -848,7 +896,13 @@
       "actual_gate_ids": [],
       "verified_implementation_sha": null,
       "verification_note": "Synthetic paths use fictional identities/system bytes; full reference content paths remain P6/P7.",
-      "trace_reviewed_at": "2026-10-04T08:56:01.470535+00:00"
+      "trace_reviewed_at": "2026-10-04T08:56:01.470535+00:00",
+      "supplementary_evidence": [
+        "docs/p5/m01-completion-20261014/owner-approval.json",
+        "docs/p5/integration-20261015/external-m01-byte-validation.json",
+        "docs/p5/integration-20261015/README.md"
+      ],
+      "current_followup": "No audio regeneration/reapproval. Execute real M01 PostgreSQL/S3 import with external bytes; complete actual publication/visual requirements and OD-004. Synthetic runtime evidence does not close these compound clauses."
     },
     {
       "requirement_id": "TS-MEDIA-001",
@@ -894,7 +948,13 @@
       ],
       "verified_implementation_sha": "b88ba697c375237101e4f73b5fe05ddd17fa54cc",
       "verification_note": "Synthetic published fixtures prove manifest and immutable object contracts; real M01 assets still require their own QA.",
-      "trace_reviewed_at": "2026-10-05T03:54:34.303808+00:00"
+      "trace_reviewed_at": "2026-10-05T03:54:34.303808+00:00",
+      "supplementary_evidence": [
+        "docs/p5/m01-completion-20261014/owner-approval.json",
+        "docs/p5/integration-20261015/external-m01-byte-validation.json",
+        "docs/p5/integration-20261015/README.md"
+      ],
+      "current_followup": "No audio regeneration/reapproval. Execute real M01 PostgreSQL/S3 import with external bytes; complete actual publication/visual requirements and OD-004. Synthetic runtime evidence does not close these compound clauses."
     },
     {
       "requirement_id": "TS-MEDIA-002",
@@ -940,7 +1000,13 @@
       ],
       "verified_implementation_sha": "b88ba697c375237101e4f73b5fe05ddd17fa54cc",
       "verification_note": "Synthetic published fixtures prove manifest and immutable object contracts; real M01 assets still require their own QA.",
-      "trace_reviewed_at": "2026-10-05T03:54:34.303808+00:00"
+      "trace_reviewed_at": "2026-10-05T03:54:34.303808+00:00",
+      "supplementary_evidence": [
+        "docs/p5/m01-completion-20261014/owner-approval.json",
+        "docs/p5/integration-20261015/external-m01-byte-validation.json",
+        "docs/p5/integration-20261015/README.md"
+      ],
+      "current_followup": "No audio regeneration/reapproval. Execute real M01 PostgreSQL/S3 import with external bytes; complete actual publication/visual requirements and OD-004. Synthetic runtime evidence does not close these compound clauses."
     },
     {
       "requirement_id": "TS-MEDIA-003",
@@ -987,7 +1053,13 @@
       "verified_implementation_sha": "b88ba697c375237101e4f73b5fe05ddd17fa54cc",
       "verification_note": "Private encrypted tmpfs only, max 14 minutes, terminal deletion with durable recovery; policy/config deny permanent filesystem and default provider unavailable. No generic LLM route or raw-audio DB/object-store persistence.",
       "trace_review_group": "transient_audio",
-      "trace_reviewed_at": "2026-10-05T03:54:34.303808+00:00"
+      "trace_reviewed_at": "2026-10-05T03:54:34.303808+00:00",
+      "supplementary_evidence": [
+        "docs/p5/m01-completion-20261014/owner-approval.json",
+        "docs/p5/integration-20261015/external-m01-byte-validation.json",
+        "docs/p5/integration-20261015/README.md"
+      ],
+      "current_followup": "No audio regeneration/reapproval. Execute real M01 PostgreSQL/S3 import with external bytes; complete actual publication/visual requirements and OD-004. Synthetic runtime evidence does not close these compound clauses."
     },
     {
       "requirement_id": "TS-MEDIA-004",
@@ -1038,7 +1110,13 @@
       ],
       "verified_implementation_sha": "b88ba697c375237101e4f73b5fe05ddd17fa54cc",
       "verification_note": "Controlled adapter validates contract behavior; no provider/calibration approval inferred.",
-      "trace_reviewed_at": "2026-10-05T03:54:34.303808+00:00"
+      "trace_reviewed_at": "2026-10-05T03:54:34.303808+00:00",
+      "supplementary_evidence": [
+        "docs/p5/m01-completion-20261014/owner-approval.json",
+        "docs/p5/integration-20261015/external-m01-byte-validation.json",
+        "docs/p5/integration-20261015/README.md"
+      ],
+      "current_followup": "No audio regeneration/reapproval. Execute real M01 PostgreSQL/S3 import with external bytes; complete actual publication/visual requirements and OD-004. Synthetic runtime evidence does not close these compound clauses."
     },
     {
       "requirement_id": "TS-MEDIA-005",
@@ -1086,7 +1164,13 @@
         "validator": "tools/p5/voice-audition.py --verify-only",
         "scope": "Eight actual local candidate WAVs with pinned authored text/model/speaker and measured metrics; no publication, cast, human linguistic QA or whole-requirement approval.",
         "status": "LOCAL_TECHNICAL_PASS_HUMAN_REVIEW_PENDING"
-      }
+      },
+      "supplementary_evidence": [
+        "docs/p5/m01-completion-20261014/owner-approval.json",
+        "docs/p5/integration-20261015/external-m01-byte-validation.json",
+        "docs/p5/integration-20261015/README.md"
+      ],
+      "current_followup": "No audio regeneration/reapproval. Execute real M01 PostgreSQL/S3 import with external bytes; complete actual publication/visual requirements and OD-004. Synthetic runtime evidence does not close these compound clauses."
     },
     {
       "requirement_id": "N-AI-P06-T03-R09",
@@ -14513,7 +14597,8 @@
       "verification_note": "P5 foundation is present or planned; the entire source clause is not proven by synthetic media fixtures. Required content/QA/operational or optional AI behavior must remain separately evidenced."
     }
   ],
-  "timestamp": "2026-10-06T05:02:49.781447+00:00",
+  "timestamp": "2026-10-15T00:00:00Z",
   "evidence_policy": "PASS rows cite executed evidence on an exact remote SHA. PARTIAL rows do not close the requirement or phase. Test-only synthetic media/evaluators are never reference-content QA.",
-  "trace_review_scope": "P5 contract gates vs synthetic fixtures/content/production approval; no later phase implemented"
+  "trace_review_scope": "All 356 locked clauses retained; prior PASS/PARTIAL/PENDING statuses unchanged. New actual-corpus byte proof is local-only; hosted synthetic S3/PG and actual M01 import must remain separate.",
+  "recovery_evidence": "docs/p5/integration-20261015/README.md"
 }

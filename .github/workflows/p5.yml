@@ -90,6 +90,8 @@ jobs:
         run: |
           python3 tools/p5/build-approved-media.py --check --metadata-only
           node --import tsx tools/p5/verify-approved-media-metadata.ts
+      - name: Verify retained acoustic pilot (402 single-turn files, no inference)
+        run: python3 tools/p5/calibrate-acoustic.py verify --report artifacts/p5/acoustic-pilot-validation.json
       - name: Install Chromium with bounded package-network waits
         timeout-minutes: 10
         run: pnpm exec playwright install --with-deps chromium
@@ -109,6 +111,17 @@ jobs:
       - name: Verify actual S3 adapter and restart recovery
         run: MINIO_BINARY="$(go env GOPATH)/bin/minio" node --import tsx tools/p5/storage-gate.ts
       - run: pnpm bootstrap:local
+      - name: Exercise importer with PostgreSQL and restarted S3 (explicit synthetic vectors)
+        run: MINIO_BINARY="$(go env GOPATH)/bin/minio" node --env-file=.local/runtime.env --import tsx tools/p5/verify-m01-s3-import.ts --synthetic
+      - name: Stage checksum-approved external M01 package if configured
+        env:
+          P5_M01_AUDIO_ARCHIVE_URL: ${{ secrets.P5_M01_AUDIO_ARCHIVE_URL }}
+        run: python3 tools/p5/stage-m01-audio.py
+      - name: Verify actual M01 bytes, PostgreSQL import and S3 recovery
+        if: env.P5_M01_AUDIO_ROOT != ''
+        run: |
+          node --import tsx tools/p5/verify-external-m01.ts
+          MINIO_BINARY="$(go env GOPATH)/bin/minio" node --env-file=.local/runtime.env --import tsx tools/p5/verify-m01-s3-import.ts --real-m01
       - run: node --env-file=.local/runtime.env --import tsx --test tests/integration/*.test.ts
         env:
           P3_BROWSER_TESTS: 'true'

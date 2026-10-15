@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "scope": "EXTERNAL_M01_BYTES_AND_LOCAL_ADAPTER_ONLY",
+  "approved_dataset_sha256": "81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf",
+  "files": 420,
+  "audio_bytes": 35876788,
+  "languages": {
+    "en": {
+      "final_files": 210,
+      "pilot_single_turns": 202,
+      "dialogue_files": 8
+    },
+    "cs": {
+      "final_files": 210,
+      "pilot_single_turns": 200,
+      "dialogue_files": 10
+    }
+  },
+  "pilot_files": 402,
+  "pilot_excludes_dialogue_files": 18,
+  "controls_are_final_assets": false,
+  "visual_drafts": 30,
+  "registry_versions_verified": 450,
+  "pcm_and_frame_cues_verified": true,
+  "six_voice_bindings_verified": true,
+  "normal_slow_bindings_verified": true,
+  "local_adapter_recreated": true,
+  "all_stored_bytes_verified": true,
+  "exact_replay": true,
+  "changed_bytes_rejected": true,
+  "postgresql_executed": false,
+  "s3_executed": false,
+  "audio_regenerated": false,
+  "production_calibration_approved": false,
+  "p6_authorized": false,
+  "code_bindings": {
+    "tools/p5/verify-external-m01.ts": "988217170d01184f2d732fc905b7b67789360e32355fbb1eab0aff1695c7e291",
+    "tools/p5/media-library.ts": "129031a66ebe737a235bb238de4990a9297f78bd2d666a55a590232f257e0d4f",
+    "assets/media/m01/registry.json": "2a5e8632987beec7bf34d31fc1f5552dee95f56eb0b971d6caac847bbffdea3d",
+    "assets/media/m01/source-all-assets.json": "21664c1f8bdadb9aef0694854edc50214835d7919078d96749814c661ea29293",
+    "docs/p5/m01-completion-20261014/owner-approval.json": "292dc272ecddf962d8bc92ee2bba6ad5e9b549f44beedb8107d1504b2ace9ee0",
+    "docs/p5/acoustic-provider/pilot-plan.json": "ad1d060e16e6ebbeb012fcf868fc9c4b00cc11c00d2d7b99506acf651820214a",
+    "docs/p5/acoustic-provider/pilot-results/summary.json": "5cd2b9936cd6bda985c1e301a3108005e934ba72acc9343ce9b7f959b3003d6b"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "scope": "LOCAL_EVIDENCE_CODE_BINDINGS",
+  "files": [
+    {
+      "path": "infra/persistence/media.ts",
+      "sha256": "217d806c2c29e3bc044c6f58ebf680e91e8f72d0b7389791665a152eeef4b15b"
+    },
+    {
+      "path": "infra/persistence/speech.ts",
+      "sha256": "277da9ee2c99415c2c59141383ba38aa00b2eb691c359543270dfefb80b1ce27"
+    },
+    {
+      "path": "infra/config/media.ts",
+      "sha256": "9a0a418b51c9e20b75523892cc171413d8edd1ef05cf4aedfa04881132935844"
+    },
+    {
+      "path": "infra/config/speech.ts",
+      "sha256": "87c729531d4023afce84399363bb6daad86459b7f4ab4208ff89881bc26f3c1a"
+    },
+    {
+      "path": "packages/activity-schemas/src/media.ts",
+      "sha256": "1400072a7a75a65caf71931e0690ebb312caf24f50076bbf9d3a521ffaba93dd"
+    },
+    {
+      "path": "packages/provider-adapters/speech/local-acoustic.ts",
+      "sha256": "9c1f7b0eaf1241bddebd65a572e1bacdc5f85d7b42616267549bdfd2f4451ee5"
+    },
+    {
+      "path": "tools/p5/acoustic-engine.py",
+      "sha256": "958f1ef20b2a0fe46708c8654d2f09625e7302923264e5e372e108491aa1dcd4"
+    },
+    {
+      "path": "tools/p5/calibrate-acoustic.py",
+      "sha256": "2d2584de91bd702400317e7629f833f2888a57391b60464a71a1775389e5ba81"
+    },
+    {
+      "path": "tools/p5/media-library.ts",
+      "sha256": "129031a66ebe737a235bb238de4990a9297f78bd2d666a55a590232f257e0d4f"
+    },
+    {
+      "path": "tools/p5/verify-acoustic-runtime.ts",
+      "sha256": "7dd83fd35c7506dd0c01bd464c548e4a1b38260f4ba78ead32d0e4312f41b671"
+    },
+    {
+      "path": "tests/unit/p5-media-library.test.ts",
+      "sha256": "439091cc30a5618605a91f33819b3fe0bb3e65a8cb24fbb207e3cc736e3879b4"
+    }
+  ]
+}

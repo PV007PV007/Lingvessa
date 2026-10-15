@@ -286,7 +286,7 @@
         "CHK-N-TS-P17-T02-R05",
         "CHK-N-TS-P19-T03-R08"
       ],
-      "readiness": "All media/storage/publication/ownership/quota and signed-S3 startup/restart/recovery gates PASS on the recorded hosted source. OD-005 bounded local audition authorized and executed: eight actual WAVs, three EN candidates and one CS candidate. Complete cast, production rights review, M01 generation and human publication QA remain open.",
+      "readiness": "420 approved WAVs and 30 draft SVGs verified locally; real M01 PostgreSQL/S3 run remains unexecuted. Explicit synthetic PG/S3 publication/delivery runner requires exact-source hosted verification. OD-004 and visual QA remain open.",
       "contract_change": "No governing contract change; P5 concrete implementation only",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
@@ -790,32 +790,49 @@
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
     }
   ],
-  "timestamp": "2026-10-10T11:44:52.403722+00:00",
-  "last_hosted_tested_sha": "cab5af5e080c92b7607ea05f24396fbd02052cd0",
-  "last_hosted_result": "FAILED_DEPENDENCY_AUDIT",
-  "last_full_runtime_pass_sha": "81e6ddacb839abf2473630c889521442193d1d21",
-  "ci_evidence": "docs/p5/evidence/ci-batch-013.json",
-  "current_revision_ci": "The workflow checks out the exact PR head and emits artifacts/p5/acceptance-summary.json; the PR head run is required after any later source/evidence commit.",
-  "latest_attempt_evidence": "docs/p5/evidence/ci-pocket-audit-failure.json",
+  "timestamp": "2026-10-15T00:00:00Z",
+  "last_hosted_tested_sha": "b53ef44ef6a8389b9680586817c101008e186027",
+  "last_hosted_result": "PARENT_ALL_SEVEN_PASS_NOT_CURRENT_CHANGE_EVIDENCE",
+  "last_full_runtime_pass_sha": "b53ef44ef6a8389b9680586817c101008e186027",
+  "ci_evidence": "docs/p5/integration-20261015/parent-ci.json",
+  "current_revision_ci": "Required on exact resulting HEAD; acceptance distinguishes synthetic PG/S3 from real M01 input and remains NOT_READY",
+  "latest_attempt_evidence": "PR #5 exact current HEAD checks and artifacts/p5/acceptance-summary.json",
   "local_audition_evidence": "docs/p5/voice-audition/results.json",
   "resolved_hosted_remediation": {
     "issue_id": "P5-DEP-001",
     "resolved_on_sha": "81e6ddacb839abf2473630c889521442193d1d21",
     "evidence": "docs/p5/evidence/ci-batch-013.json"
   },
-  "pocket_audition": {
-    "evidence": "docs/p5/voice-audition/pocket-20261009/results.json",
-    "recovery": "docs/p5/voice-audition/pocket-20261009/recovery.json",
-    "technical_bytes": "PASS",
-    "candidate_status": "HOLD_FOR_REVIEW",
-    "human_review": "PENDING",
-    "publication_ready": false,
-    "new_source_ci": "REQUIRED; PR checks and exact-source artifacts determine the current revision result"
+  "historical_pre_recovery_status": {
+    "timestamp": "2026-10-10T11:44:52.403722+00:00",
+    "last_hosted_tested_sha": "cab5af5e080c92b7607ea05f24396fbd02052cd0",
+    "last_hosted_result": "FAILED_DEPENDENCY_AUDIT",
+    "last_full_runtime_pass_sha": "81e6ddacb839abf2473630c889521442193d1d21",
+    "latest_attempt_evidence": "docs/p5/evidence/ci-pocket-audit-failure.json",
+    "pending_hosted_remediation": {
+      "issue_id": "P5-DEP-002",
+      "patch": "sharp 0.35.4→0.35.5 and matching @img platform/libvips packages, within existing Next range",
+      "local_evidence": "docs/p5/evidence/sharp-patch-validation.json",
+      "resolution_authority": "Exact current revision PR checks and hosted acceptance-summary; no parent PASS substitution"
+    },
+    "pocket_audition": {
+      "evidence": "docs/p5/voice-audition/pocket-20261009/results.json",
+      "recovery": "docs/p5/voice-audition/pocket-20261009/recovery.json",
+      "technical_bytes": "PASS",
+      "candidate_status": "HOLD_FOR_REVIEW",
+      "human_review": "PENDING",
+      "publication_ready": false,
+      "new_source_ci": "REQUIRED; PR checks and exact-source artifacts determine the current revision result"
+    }
   },
-  "pending_hosted_remediation": {
-    "issue_id": "P5-DEP-002",
-    "patch": "sharp 0.35.4→0.35.5 and matching @img platform/libvips packages, within existing Next range",
-    "local_evidence": "docs/p5/evidence/sharp-patch-validation.json",
-    "resolution_authority": "Exact current revision PR checks and hosted acceptance-summary; no parent PASS substitution"
-  }
+  "recovery_evidence": "docs/p5/integration-20261015/recovery-state.json",
+  "audio_integrity_evidence": "docs/p5/integration-20261015/external-m01-byte-validation.json",
+  "owner_audio_approval": "docs/p5/m01-completion-20261014/owner-approval.json",
+  "remaining": [
+    "Actual M01 PostgreSQL/S3 execution with external input",
+    "Required publication integration and visual QA",
+    "OD-004 production delivery profile",
+    "OD-006 labelled learner speech calibration",
+    "Remaining applicable compound P5 requirements"
+  ]
 }
