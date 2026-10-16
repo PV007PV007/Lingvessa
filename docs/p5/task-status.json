@@ -795,7 +795,7 @@
   "last_hosted_result": "PARENT_ALL_SEVEN_PASS_NOT_CURRENT_CHANGE_EVIDENCE",
   "last_full_runtime_pass_sha": "d7feb7d00cd4fc78ad7a16c58725b7ba29e98bdf",
   "ci_evidence": "docs/p5/integration-20261016/parent-ci.json",
-  "current_revision_ci": "Exact new HEAD required: read-only access to private draft input, eight transport security tests, real M01 PG/S3 and all 420 owner-scoped test deliveries only when the archive is actually present; no synthetic substitution.",
+  "current_revision_ci": "Exact new HEAD required: isolated private-draft transport, same-run one-day private relay to a read-only test job, 8 transport + 6 relay security tests, real M01 PG/S3 and 420 test deliveries only when approved input is actually uploaded. No synthetic substitution.",
   "latest_attempt_evidence": "PR #5 exact current HEAD checks and artifacts/p5/acceptance-summary.json",
   "local_audition_evidence": "docs/p5/voice-audition/results.json",
   "resolved_hosted_remediation": {

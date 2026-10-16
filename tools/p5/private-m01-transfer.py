@@ -5,7 +5,6 @@ import hashlib
 import json
 import os
 from pathlib import Path
-import tempfile
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -114,7 +113,7 @@ def prepare(token, repo):
     validate_release(release)
     output('release_id', release['id'])
     print(json.dumps({'status': 'PRIVATE_DRAFT_READY', 'release_id': release['id'], 'draft': True,
-                      'archive_upload_attempted': False, 'note': 'Asset availability is independently checked by the read-only test job'}))
+                      'archive_upload_attempted': False, 'note': 'Asset availability is independently checked by the isolated transport job'}))
 
 
 def redirect_url(value):
@@ -152,7 +151,19 @@ def download_asset(token, asset, destination):
         raise TransferError('Private archive download/verification failed; credentials and response suppressed') from None
 
 
+def transfer_directory():
+    directory = Path(os.environ['P5_M01_TRANSFER_DIR'])
+    if not directory.is_absolute():
+        raise TransferError('Private relay requires an absolute directory')
+    directory = directory.resolve()
+    if directory.is_relative_to(ROOT):
+        raise TransferError('Private relay must remain outside the checkout')
+    directory.mkdir(mode=0o700, parents=True, exist_ok=True)
+    return directory
+
+
 def download(token, release_id):
+    directory = transfer_directory()
     if not release_id or not release_id.isdecimal():
         result = {'status': 'NO_AUTHORIZED_INPUT_SLOT', 'archive_downloaded': False}
     else:
@@ -165,22 +176,54 @@ def download(token, release_id):
             raise TransferError('Ambiguous private input assets')
         result = {'status': 'AWAITING_PRIVATE_UPLOAD', 'release_id': int(release_id),
                   'repository_private_verified': True, 'release_draft_verified': True,
-                  'read_only_release_access_verified': True, 'archive_downloaded': False,
+                  'draft_asset_access_verified': True, 'archive_downloaded': False,
                   'expected_archive_sha256': EXPECTED['sha256'], 'expected_archive_bytes': EXPECTED['bytes']}
         if candidates:
             asset = candidates[0]
             if (asset.get('state') != 'uploaded' or asset.get('size') != EXPECTED['bytes']
                     or asset.get('digest') not in (None, 'sha256:' + EXPECTED['sha256'])):
                 raise TransferError('Private input asset metadata mismatch')
-            directory = Path(tempfile.mkdtemp(prefix='lingvessa-private-m01-'))
             destination = directory / EXPECTED['filename']
             download_asset(token, asset, destination)
             output('P5_M01_ARCHIVE_PATH', destination, 'GITHUB_ENV')
             result.update(status='ARCHIVE_VERIFIED', archive_downloaded=True, asset_id=asset['id'])
+    report = directory / 'm01-private-transfer.json'
+    result.update(source_sha=os.environ.get('GITHUB_HEAD_SHA'), real_m01_postgresql_executed=False,
+                  production_delivery_profile_approved=False, p6_authorized=False,
+                  transport_token_scope='ISOLATED_INPUT_JOB_CONTENTS_WRITE', relay_retention_days=1)
+    report.write_text(json.dumps(result, indent=2) + '\n')
+    print(json.dumps(result))
+
+
+def receive():
+    directory = transfer_directory()
     report = ROOT / 'artifacts/p5/m01-private-transfer.json'
     report.parent.mkdir(parents=True, exist_ok=True)
-    result.update(source_sha=os.environ.get('GITHUB_HEAD_SHA'), real_m01_postgresql_executed=False,
-                  production_delivery_profile_approved=False, p6_authorized=False)
+    release_id = os.environ.get('P5_M01_RELEASE_ID', '')
+    if not release_id:
+        result = {'status': 'NO_AUTHORIZED_INPUT_SLOT', 'archive_downloaded': False,
+                  'source_sha': os.environ.get('GITHUB_HEAD_SHA'), 'real_m01_postgresql_executed': False,
+                  'production_delivery_profile_approved': False, 'p6_authorized': False}
+    else:
+        result = json.loads((directory / 'm01-private-transfer.json').read_text())
+        if not (str(result.get('release_id')) == release_id and result.get('source_sha') == os.environ.get('GITHUB_HEAD_SHA')
+                and result.get('status') in {'AWAITING_PRIVATE_UPLOAD', 'ARCHIVE_VERIFIED'}
+                and result.get('repository_private_verified') is True and result.get('release_draft_verified') is True
+                and result.get('draft_asset_access_verified') is True
+                and result.get('expected_archive_sha256') == EXPECTED['sha256']
+                and result.get('expected_archive_bytes') == EXPECTED['bytes']):
+            raise TransferError('Private relay provenance/identity mismatch')
+        archive = directory / EXPECTED['filename']
+        if result['status'] == 'ARCHIVE_VERIFIED':
+            with archive.open('rb') as stream:
+                checksum = hashlib.file_digest(stream, 'sha256').hexdigest()
+            if archive.stat().st_size != EXPECTED['bytes'] or checksum != EXPECTED['sha256']:
+                raise TransferError('Private relay archive checksum/length mismatch')
+            output('P5_M01_ARCHIVE_PATH', archive, 'GITHUB_ENV')
+        elif archive.exists():
+            raise TransferError('Unexpected archive accompanying missing-input status')
+        result['relay_received_and_source_bound'] = True
+        result['test_job_needs_no_release_token'] = True
     report.write_text(json.dumps(result, indent=2) + '\n')
     print(json.dumps(result))
 
@@ -188,8 +231,11 @@ def download(token, release_id):
 def main():
     os.umask(0o077)
     parser = argparse.ArgumentParser()
-    parser.add_argument('mode', choices=['prepare', 'download'])
+    parser.add_argument('mode', choices=['prepare', 'download', 'receive'])
     args = parser.parse_args()
+    if args.mode == 'receive':
+        receive()
+        return
     token = os.environ.get('GH_TOKEN', '')
     if not token:
         raise TransferError('Ephemeral GitHub token is required')

@@ -1743,6 +1743,10 @@
       "status": "A"
     },
     {
+      "path": "tests/unit/p5-private-relay.test.py",
+      "status": "A"
+    },
+    {
       "path": "tests/unit/p5-private-transfer.test.py",
       "status": "A"
     },
