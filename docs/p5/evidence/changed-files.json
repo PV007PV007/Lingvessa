@@ -1,6 +1,6 @@
 {
   "compared_to_accepted_main": "5027f001237b6451237d87343ebeca58cd0af007",
-  "timestamp": "2026-10-15T13:56:00.784505+00:00",
+  "timestamp": "2026-10-16T00:00:00Z",
   "files": [
     {
       "path": ".gitattributes",
@@ -548,6 +548,18 @@
     },
     {
       "path": "docs/p5/integration-20261015/recovery-state.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261016/README.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261016/attached-archive-verification.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261016/parent-ci.json",
       "status": "A"
     },
     {
@@ -1731,6 +1743,10 @@
       "status": "A"
     },
     {
+      "path": "tests/unit/p5-private-transfer.test.py",
+      "status": "A"
+    },
+    {
       "path": "tests/unit/p5-speech.test.ts",
       "status": "A"
     },
@@ -1872,6 +1888,10 @@
     },
     {
       "path": "tools/p5/pocket-case-trial.py",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/private-m01-transfer.py",
       "status": "A"
     },
     {

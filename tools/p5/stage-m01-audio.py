@@ -61,6 +61,8 @@ def main():
     parser.add_argument('--archive', type=Path)
     parser.add_argument('--destination', type=Path)
     args = parser.parse_args()
+    if not args.archive and os.environ.get('P5_M01_ARCHIVE_PATH'):
+        args.archive = Path(os.environ['P5_M01_ARCHIVE_PATH'])
     report = ROOT / 'artifacts/p5/m01-input-status.json'
     report.parent.mkdir(parents=True, exist_ok=True)
     url = os.environ.get('P5_M01_AUDIO_ARCHIVE_URL', '')

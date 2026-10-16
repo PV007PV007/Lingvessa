@@ -18,13 +18,19 @@ assert.equal(libraryS3.scope,'SYNTHETIC_POSTGRESQL_S3_IMPORT_NOT_M01');assert.eq
 assert.equal(libraryS3.imported_versions,450);assert.equal(libraryS3.test_publications,2);
 for(const key of ['exact_replay','immutable_update_and_delete_rejected','changed_bytes_rejected','database_pool_recreated','storage_adapter_restart_verified','storage_server_restart_verified','all_stored_bytes_verified','anonymous_access_denied'])assert.equal(libraryS3[key],true);
 const pilot=read('artifacts/p5/acoustic-pilot-validation.json');assert.equal(pilot.status,'PASS');assert.equal(pilot.recordings,402);assert.equal(pilot.production_calibration_passed,false);
+const transfer=read('artifacts/p5/m01-private-transfer.json');assert.equal(transfer.source_sha,commit);
+assert(['ARCHIVE_VERIFIED','AWAITING_PRIVATE_UPLOAD','NO_AUTHORIZED_INPUT_SLOT'].includes(transfer.status));
 const m01Input=read('artifacts/p5/m01-input-status.json');
+if(transfer.status==='ARCHIVE_VERIFIED')assert.equal(m01Input.status,'VERIFIED');
 let m01Import=null;
 if(m01Input.status==='VERIFIED'){
  m01Import=read('artifacts/p5/m01-library-import-validation.json');
  assert.equal(m01Import.status,'PASS');assert.equal(m01Import.commit,commit);assert.equal(m01Import.source_sha,commit);
  assert.equal(m01Import.scope,'REAL_M01_BYTES_POSTGRESQL_S3_IMPORT');assert.equal(m01Import.real_m01_audio_imported,true);
- assert.equal(m01Import.audio_assets,420);assert.equal(m01Import.visual_drafts,30);assert.equal(m01Import.test_publications,0);
+ assert.equal(m01Import.audio_assets,420);assert.equal(m01Import.visual_drafts,30);assert.equal(m01Import.test_publications,2);
+ assert.equal(m01Import.delivered_real_m01_audio_assets,420);assert.equal(m01Import.test_fixture_asset_approvals,2520);
+ assert.equal(m01Import.import_inserted_approvals,0);assert.equal(m01Import.production_publication_created,false);
+ assert.equal(m01Import.foreign_user_and_activity_denied,true);
  for(const key of ['exact_replay','immutable_update_and_delete_rejected','changed_bytes_rejected','database_pool_recreated','storage_adapter_restart_verified','storage_server_restart_verified','all_stored_bytes_verified'])assert.equal(m01Import[key],true);
 }else{
  assert.equal(m01Input.status,'NOT_PROVIDED');assert.equal(m01Input.audio_bytes_verified,false);
@@ -163,7 +169,7 @@ assert.equal(build.commit,commit);assert.deepEqual(Object.keys(build.images).sor
 const authorization=read('docs/p5/authorization.json');assert.equal(authorization.p6_authorized,false);
 const trace=read('docs/p5/requirement-evidence.json').requirements as Array<{status:string}>;
 const counts=Object.fromEntries(['PASS','PARTIAL','PENDING'].map(status=>[status,trace.filter(r=>r.status===status).length]));
-const paths=['artifacts/p5/library-s3-validation.json','artifacts/p5/acoustic-pilot-validation.json','artifacts/p5/m01-input-status.json',...(m01Import?['artifacts/p5/m01-library-import-validation.json','artifacts/p5/external-m01-byte-validation.json']:[]),'artifacts/p5/storage-validation.json','artifacts/p5/media-database-validation.json','artifacts/p5/audio-validation.json',
+const paths=['artifacts/p5/m01-private-transfer.json','artifacts/p5/library-s3-validation.json','artifacts/p5/acoustic-pilot-validation.json','artifacts/p5/m01-input-status.json',...(m01Import?['artifacts/p5/m01-library-import-validation.json','artifacts/p5/external-m01-byte-validation.json']:[]),'artifacts/p5/storage-validation.json','artifacts/p5/media-database-validation.json','artifacts/p5/audio-validation.json',
  'artifacts/p5/speech-database-validation.json','artifacts/p5/baseline-validation.json','artifacts/p5/reference-media-validation.json',
  'artifacts/p5/browser-results.json','artifacts/p5/speech-browser-results.json','artifacts/p1/container-build.json','artifacts/p1/container-smoke.json',
  'artifacts/p3/acceptance-summary.json','artifacts/p4/acceptance-summary.json','docs/p5/requirement-evidence.json',
@@ -189,6 +195,7 @@ const summary={phase:'P5',runtime_status:'PASS',milestone_status:'NOT_READY',tes
  acoustic_candidate:{provider_code:'local_acoustic_ipa',model_version:'xlsr53-espeak-2c733782da56-1',test_only:true,production_calibration_approved:false,private_evidence_transferred:true,integrity:pilot},
  library_contract:libraryContract,
  library_s3:libraryS3,
+ private_m01_transfer:transfer,
  real_m01_import:m01Import??{status:'NOT_EXECUTED_EXTERNAL_INPUT_MISSING',real_m01_audio_imported:false},
  m01_review:{catalog:m01ReviewCheck,interface:m01ReviewUI,browser:m01ReviewBrowser.stats},
  m01_feedback_intake:{tests:m01Feedback,browser_scope:m01FeedbackBrowser.scope,

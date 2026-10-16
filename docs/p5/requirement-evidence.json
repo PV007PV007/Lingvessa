@@ -14597,8 +14597,9 @@
       "verification_note": "P5 foundation is present or planned; the entire source clause is not proven by synthetic media fixtures. Required content/QA/operational or optional AI behavior must remain separately evidenced."
     }
   ],
-  "timestamp": "2026-10-15T00:00:00Z",
+  "timestamp": "2026-10-16T00:00:00Z",
   "evidence_policy": "PASS rows cite executed evidence on an exact remote SHA. PARTIAL rows do not close the requirement or phase. Test-only synthetic media/evaluators are never reference-content QA.",
-  "trace_review_scope": "All 356 locked clauses retained; prior PASS/PARTIAL/PENDING statuses unchanged. New actual-corpus byte proof is local-only; hosted synthetic S3/PG and actual M01 import must remain separate.",
-  "recovery_evidence": "docs/p5/integration-20261015/README.md"
+  "trace_review_scope": "All 356 locked clauses and statuses retained. Attached 420-file byte proof is not PostgreSQL evidence. Current-source hosted real M01 import and owner-scoped test delivery require the private archive input. Disposable fixture permission rows are not new human/production approvals.",
+  "recovery_evidence": "docs/p5/integration-20261015/README.md",
+  "private_input_evidence": "docs/p5/integration-20261016/README.md"
 }

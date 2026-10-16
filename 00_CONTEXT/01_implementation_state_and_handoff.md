@@ -1,9 +1,17 @@
 # Lingvessa implementation state and handoff
 
-Updated: 2026-10-15. **P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED; P6 NOT AUTHORIZED.**
+Updated: 2026-10-16. **P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED; P6 NOT AUTHORIZED.**
 Branch `implementation/p5-media-speech`; [PR #5](https://github.com/PV007PV007/Lingvessa/pull/5) OPEN DRAFT. Accepted main/P4: `5027f001237b6451237d87343ebeca58cd0af007`.
 
-## Current recovery and ingestion — 2026-10-15
+## Current private input and real integration continuation — 2026-10-16
+
+The newly attached archive is 63,346,796 bytes with SHA-256 `3edaeaaeb000479921a0b3ff5ec2b52042faeee54bf943eff25e4a4a0f4e516d`. All 420 WAVs (210 EN + 210 CS) match immutable records, PCM/frame counts and authorization/manifest bindings. The 402 acoustic results cover single turns; the remaining 18 final files are dialogues, also byte-verified. [Current transfer instructions and truthful execution boundary](../docs/p5/integration-20261016/README.md).
+
+Parent `d7feb7d00cd4fc78ad7a16c58725b7ba29e98bdf` passed all seven required checks; its real M01 step was skipped because Actions had no input. This change prepares a private, unpublished draft release attachment outside Git, with an isolated write-token preparation job and read-only test-job download. The exact archive and every WAV are checked again before real import. The connector cannot upload release assets; no archive upload is claimed until asset metadata and bytes are verified.
+
+The real integration runner now checks all 420 approved WAV deliveries from two disposable EN/CS test publications after S3/server/adapter/database-pool restart. Import alone still inserts zero approvals/publications; explicit fixture permission rows are used only to exercise the test delivery path, never as human or production review. Real execution remains pending until the input is transferred and the exact HEAD run passes. No production profile, paid service, merge or P6 is authorized. OD-004, OD-006, visual approvals and remaining compound requirements stay open.
+
+## Recovery and ingestion checkpoint — 2026-10-15
 
 Recovery baseline `b53ef44ef6a8389b9680586817c101008e186027` had seven successful checks and zero committed M01 WAVs. The interrupted operation left 41 historical blob receipts, no new commit. All 420 approved WAVs were reverified against immutable records; the acoustic pilot covers 402 single-turn files, with 18 verified dialogue files outside that pilot. See [recovery, byte evidence and exact next command](../docs/p5/integration-20261015/README.md).
 

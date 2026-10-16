@@ -84,22 +84,32 @@ try{
   assert.equal(row.checksum,m.checksum);assert.equal(Number(row.byte_length),m.byte_length);assert.equal(row.object_key,k);assert.deepEqual(row.metadata,m);
  }
  assert.deepEqual(await importMediaLibrary(media,f.author,library),outputs);assert.deepEqual(await before(),snapshot);
- let testPublications=0;
- // Publication exercises only synthetic vectors; real M01 never acquires invented approvals.
- if(!real)for(const language of ['en','cs'] as const){
-  const source=f.sources[language],entry=library.entries.find(e=>e.metadata.scope.language===language)!;
+ let testPublications=0,deliveredAssets=0,testFixtureApprovals=0;
+ // Disposable test publications use fixture approvals, never new human/production approvals.
+ // The importer above must still insert zero approvals/publications. Approved M01 bytes/metadata are unchanged.
+ for(const language of ['en','cs'] as const){
+  const source=f.sources[language],entries=real
+   ?library.entries.filter(e=>e.metadata.kind==='audio'&&e.metadata.scope.language===language)
+   :[library.entries.find(e=>e.metadata.scope.language===language)!];
+  assert.equal(entries.length,real?210:1);
   const executable=executableLessonFixtureSchema.parse(JSON.parse(await readFile('content/fixtures/p3/'+language+'-lesson.json','utf8')));
   await loadExecutableLessonFixture(pool,f.author,executable);
   const payload=(await pool.query('SELECT payload FROM content_versions WHERE id=$1',[executable.content_version_id])).rows[0].payload as ContentPayload;
-  const ref={asset_id:entry.metadata.asset_id,asset_stable_code:entry.metadata.stable_code,asset_version:1,role:'imported_vector'},activity=payload.activities![0]!;
-  activity.media_refs.push(ref);activity.contract!.presentation.media_refs.push(ref);
+  const activity=payload.activities![0]!;
+  for(const entry of entries){
+   const ref={asset_id:entry.metadata.asset_id,asset_stable_code:entry.metadata.stable_code,asset_version:entry.metadata.asset_version,role:real?'test_imported_audio':'imported_vector'};
+   activity.media_refs.push(ref);activity.contract!.presentation.media_refs.push(ref);
+  }
   const revision=(await pool.query('SELECT revision FROM content_versions WHERE id=$1',[executable.content_version_id])).rows[0].revision as number;
   // The fixture's repositories used the closed pool; use the recovered pool explicitly.
   const content=new ContentRepository(pool,restarted);
   await content.saveDraft(f.author,source.language_id,payload,revision);
   await assert.rejects(content.validateVersion(executable.content_version_id),/unapproved/);
-  const out=outputs.find(o=>o.asset_id===entry.metadata.asset_id)!;
-  for(const gate of mediaApprovalGates)await media.approve(f.reviewer,out.asset_id,out.asset_version,out.checksum,out.metadata_checksum,gate,'approved','Synthetic test-only import/publication integration; not M01 or production QA');
+  const pins=entries.map(entry=>outputs.find(o=>o.asset_id===entry.metadata.asset_id)!);
+  for(const out of pins)for(const gate of mediaApprovalGates){
+   await media.approve(f.reviewer,out.asset_id,out.asset_version,out.checksum,out.metadata_checksum,gate,'approved','DISPOSABLE_TEST_FIXTURE_ONLY: exercise publication/delivery permission path; not a human review, production approval, or change to retained owner approval');
+   testFixtureApprovals++;
+  }
   const replacements=new Map([[executable.lesson_id,executable.content_version_id],...executable.ancestor_versions.map(a=>[a.entity_id,a.content_version_id] as const)]);
   const versionIds=source.entities.map(e=>replacements.get(e.id)??e.version_id);
   for(const id of versionIds){
@@ -107,17 +117,26 @@ try{
    for(const gate of ['linguistic','pedagogical','technical','accessibility','media','originality'])await content.approve(f.reviewer,id,v.checksum,v.revision,gate,'approved','Synthetic test-only publication');
   }
   const publication=await content.publish({id:randomUUID(),actorId:f.reviewer,courseId:source.entities.find(e=>e.kind==='course')!.id,languageId:source.language_id,channel:'test',versionCode:'s3-import-'+language,versionIds});
-  const pin: typeof out=(await pool.query('SELECT asset_id,asset_version,checksum,metadata_checksum FROM publication_assets WHERE publication_id=$1',[publication.id])).rows[0];assert.deepEqual(pin,out);
+  const storedPins:Array<{asset_id:string;asset_version:number;checksum:string;metadata_checksum:string}>=(await pool.query('SELECT asset_id,asset_version,checksum,metadata_checksum FROM publication_assets WHERE publication_id=$1 ORDER BY asset_id',[publication.id])).rows;
+  assert.deepEqual(storedPins,pins.toSorted((a,b)=>a.asset_id.localeCompare(b.asset_id)));
   const profile=randomUUID();await pool.query('INSERT INTO language_profiles(id,user_id,language_id,variant_id) SELECT $1,$2,$3,id FROM variants WHERE language_id=$3 AND is_default',[profile,f.learner,source.language_id]);
   const run=await new LessonRepository(pool).start(f.learner,{language_profile_id:profile,publication_id:publication.id,lesson_id:executable.lesson_id});
-  const delivered=await media.bytesForRun(f.learner,run.id,activity.id,entry.metadata.asset_id,1);
-  assert.deepEqual(Buffer.from(delivered.bytes),entry.bytes);assert.equal(delivered.metadata.checksum,out.checksum);
-  await assert.rejects(media.bytesForRun(f.author,run.id,activity.id,entry.metadata.asset_id,1),{code:'NOT_FOUND'});
+  for(const entry of entries){
+   const delivered=await media.bytesForRun(f.learner,run.id,activity.id,entry.metadata.asset_id,entry.metadata.asset_version);
+   assert.deepEqual(Buffer.from(delivered.bytes),entry.bytes);assert.equal(delivered.metadata.checksum,entry.metadata.checksum);
+   assert.equal(delivered.metadata.scope.language,language);deliveredAssets++;
+  }
+  const firstEntry=entries[0]!;
+  await assert.rejects(media.bytesForRun(f.author,run.id,activity.id,firstEntry.metadata.asset_id,1),{code:'NOT_FOUND'});
+  await assert.rejects(media.bytesForRun(f.learner,run.id,randomUUID(),firstEntry.metadata.asset_id,1),{code:'NOT_FOUND'});
   await assert.rejects(pool.query('UPDATE publication_assets SET checksum=$1 WHERE publication_id=$2',['0'.repeat(64),publication.id]),{code:'23514'});testPublications++;
  }
  assert.equal((await pool.query("SELECT count(*) FROM media_jobs WHERE job_kind='generation'")).rows[0].count,'0');
+ assert.equal(testPublications,2);assert.equal(deliveredAssets,real?420:2);
+ assert.equal(testFixtureApprovals,deliveredAssets*mediaApprovalGates.length);
+ assert.equal(Number((await pool.query('SELECT count(*) FROM asset_approvals')).rows[0].count),testFixtureApprovals);
  const paths=['tools/p5/verify-m01-s3-import.ts','tools/p5/s3-test-fixture.ts','tools/p5/media-library.ts','infra/persistence/media.ts','infra/persistence/content.ts','packages/provider-adapters/storage/s3.ts'];
- const report={status:'PASS',scope:real?'REAL_M01_BYTES_POSTGRESQL_S3_IMPORT':'SYNTHETIC_POSTGRESQL_S3_IMPORT_NOT_M01',commit,source_sha:process.env.GITHUB_HEAD_SHA??null,database:'PostgreSQL 18.6',imported_versions:450,audio_assets:real?420:0,visual_drafts:real?30:0,synthetic_vectors:real?0:450,real_m01_audio_imported:real,exact_replay:true,immutable_update_and_delete_rejected:true,changed_bytes_rejected:true,database_pool_recreated:true,storage_adapter_restart_verified:true,storage_server_restart_verified:true,all_stored_bytes_verified:true,anonymous_access_denied:true,import_inserted_approvals:0,test_publications:testPublications,production_publication_created:false,production_delivery_profile_approved:false,p6_authorized:false,test_server_source_revision:minioTestRevision,test_server_binary_sha256:storage.binary_sha256,code_bindings:Object.fromEntries(await Promise.all(paths.map(async path=>[path,createHash('sha256').update(await readFile(path)).digest('hex')])))};
+ const report={status:'PASS',scope:real?'REAL_M01_BYTES_POSTGRESQL_S3_IMPORT':'SYNTHETIC_POSTGRESQL_S3_IMPORT_NOT_M01',commit,source_sha:process.env.GITHUB_HEAD_SHA??null,database:'PostgreSQL 18.6',imported_versions:450,audio_assets:real?420:0,visual_drafts:real?30:0,synthetic_vectors:real?0:450,real_m01_audio_imported:real,exact_replay:true,immutable_update_and_delete_rejected:true,changed_bytes_rejected:true,database_pool_recreated:true,storage_adapter_restart_verified:true,storage_server_restart_verified:true,all_stored_bytes_verified:true,anonymous_access_denied:true,import_inserted_approvals:0,test_publications:testPublications,test_fixture_asset_approvals:testFixtureApprovals,test_approval_scope:'DISPOSABLE_TEST_FIXTURE_ONLY_NOT_OWNER_OR_PRODUCTION_APPROVAL',delivered_assets:deliveredAssets,delivered_real_m01_audio_assets:real?deliveredAssets:0,delivery_scope:'MEDIA_REPOSITORY_OWNER_SCOPED_TEST_LESSON_AFTER_S3_RESTART',foreign_user_and_activity_denied:true,production_publication_created:false,production_delivery_profile_approved:false,p6_authorized:false,test_server_source_revision:minioTestRevision,test_server_binary_sha256:storage.binary_sha256,code_bindings:Object.fromEntries(await Promise.all(paths.map(async path=>[path,createHash('sha256').update(await readFile(path)).digest('hex')])))};
  await mkdir('artifacts/p5',{recursive:true});await writeFile('artifacts/p5/'+(real?'m01-library-import-validation.json':'library-s3-validation.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));
 }finally{
  await pool?.end();try{if(created)await admin.query('DROP DATABASE "'+name+'" WITH (FORCE)');}finally{await admin.end();await storage?.close();}

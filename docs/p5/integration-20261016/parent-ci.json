@@ -1,0 +1,79 @@
+{
+  "head": "d7feb7d00cd4fc78ad7a16c58725b7ba29e98bdf",
+  "pr": 5,
+  "status": "IN_PROGRESS_NOT_READY",
+  "checks": [
+    {
+      "id": 116473925764,
+      "name": "p5-exit",
+      "head_sha": "d7feb7d00cd4fc78ad7a16c58725b7ba29e98bdf",
+      "conclusion": "success",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/38750096899/job/116473925764"
+    },
+    {
+      "id": 116473925756,
+      "name": "p3-exit",
+      "head_sha": "d7feb7d00cd4fc78ad7a16c58725b7ba29e98bdf",
+      "conclusion": "success",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/38750096543/job/116473925756"
+    },
+    {
+      "id": 116473925361,
+      "name": "p2-exit",
+      "head_sha": "d7feb7d00cd4fc78ad7a16c58725b7ba29e98bdf",
+      "conclusion": "success",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/38750096573/job/116473925361"
+    },
+    {
+      "id": 116473923800,
+      "name": "p1-exit",
+      "head_sha": "d7feb7d00cd4fc78ad7a16c58725b7ba29e98bdf",
+      "conclusion": "success",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/38750096389/job/116473923800"
+    },
+    {
+      "id": 116473923316,
+      "name": "p4-exit",
+      "head_sha": "d7feb7d00cd4fc78ad7a16c58725b7ba29e98bdf",
+      "conclusion": "success",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/38750096356/job/116473923316"
+    },
+    {
+      "id": 116473894714,
+      "name": "p5-exit",
+      "head_sha": "d7feb7d00cd4fc78ad7a16c58725b7ba29e98bdf",
+      "conclusion": "success",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/38750086988/job/116473894714"
+    },
+    {
+      "id": 116473894195,
+      "name": "p1-exit",
+      "head_sha": "d7feb7d00cd4fc78ad7a16c58725b7ba29e98bdf",
+      "conclusion": "success",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/38750087069/job/116473894195"
+    }
+  ],
+  "p5_artifact_metadata": [
+    {
+      "id": 11980889006,
+      "name": "p5-d7feb7d00cd4fc78ad7a16c58725b7ba29e98bdf-pull_request",
+      "size": 7674763,
+      "digest": "sha256:85ee74ade30fab21063b673eaaf8a834aac29580feae18a640401a9ae2d32674"
+    },
+    {
+      "id": 11982056531,
+      "name": "p5-d7feb7d00cd4fc78ad7a16c58725b7ba29e98bdf-push",
+      "size": 7330586,
+      "digest": "sha256:be36b1f1dfcead6435f154f1186f624edf33c25700a748dee9902f723a3f4516"
+    }
+  ],
+  "actual_m01_import": {
+    "status": "NOT_EXECUTED_EXTERNAL_INPUT_MISSING",
+    "real_m01_audio_imported": false
+  },
+  "last_successful_action": "Verified both P5 job logs and updated PR #5 with exact-source CI evidence; all seven checks pass",
+  "next_command": "P5_M01_AUDIO_ROOT=/absolute/path/outside-checkout/verified-m01/audio MINIO_BINARY=/absolute/path/to/pinned/minio node --env-file=.local/runtime.env --import tsx tools/p5/verify-m01-s3-import.ts --real-m01",
+  "pr_merge_performed": false,
+  "p6_started": false,
+  "scope": "PARENT_CI_ONLY_NOT_EVIDENCE_FOR_DESCENDANT_CHANGES"
+}

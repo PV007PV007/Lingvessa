@@ -286,7 +286,7 @@
         "CHK-N-TS-P17-T02-R05",
         "CHK-N-TS-P19-T03-R08"
       ],
-      "readiness": "420 approved WAVs and 30 draft SVGs verified locally; real M01 PostgreSQL/S3 run remains unexecuted. Explicit synthetic PG/S3 publication/delivery runner requires exact-source hosted verification. OD-004 and visual QA remain open.",
+      "readiness": "Attached approved ZIP and all 420 WAV immutable checksums PASS locally. Private GitHub draft asset transfer and real PostgreSQL/S3 replay/restart plus 420 test deliveries are implemented but require exact-source hosted execution with uploaded bytes. Import itself inserts zero approvals; disposable test permission fixtures do not approve production. OD-004 and visual QA remain open.",
       "contract_change": "No governing contract change; P5 concrete implementation only",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
@@ -408,7 +408,7 @@
         "CHK-N-TS-P13-T03-R08",
         "CHK-N-TS-P16-T01-R02"
       ],
-      "readiness": "EN/CS normal/slow, turn/voice/character continuity, speaker/avatar clock and seven flag geometries PASS on the recorded hosted source. Four local candidate normal/slow pairs now have measured bytes/duration/loudness and pinned model/text/speaker provenance. Human pronunciation/variety/pace review and complete reference media remain open.",
+      "readiness": "Owner approved linguistic quality, six voices and audio rights for all 420 final WAVs on 2026-10-14; no repeat generation/review requested. All attached WAV bytes match immutable records. Recorded hosted UI/clock/normal-slow contracts remain evidence on their tested source; actual corpus delivery must be executed on current HEAD.",
       "contract_change": "No governing contract change; P5 concrete implementation only",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
@@ -790,12 +790,12 @@
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
     }
   ],
-  "timestamp": "2026-10-15T00:00:00Z",
-  "last_hosted_tested_sha": "b53ef44ef6a8389b9680586817c101008e186027",
+  "timestamp": "2026-10-16T00:00:00Z",
+  "last_hosted_tested_sha": "d7feb7d00cd4fc78ad7a16c58725b7ba29e98bdf",
   "last_hosted_result": "PARENT_ALL_SEVEN_PASS_NOT_CURRENT_CHANGE_EVIDENCE",
-  "last_full_runtime_pass_sha": "b53ef44ef6a8389b9680586817c101008e186027",
-  "ci_evidence": "docs/p5/integration-20261015/parent-ci.json",
-  "current_revision_ci": "Required on exact resulting HEAD; acceptance distinguishes synthetic PG/S3 from real M01 input and remains NOT_READY",
+  "last_full_runtime_pass_sha": "d7feb7d00cd4fc78ad7a16c58725b7ba29e98bdf",
+  "ci_evidence": "docs/p5/integration-20261016/parent-ci.json",
+  "current_revision_ci": "Exact new HEAD required: read-only access to private draft input, eight transport security tests, real M01 PG/S3 and all 420 owner-scoped test deliveries only when the archive is actually present; no synthetic substitution.",
   "latest_attempt_evidence": "PR #5 exact current HEAD checks and artifacts/p5/acceptance-summary.json",
   "local_audition_evidence": "docs/p5/voice-audition/results.json",
   "resolved_hosted_remediation": {
@@ -826,7 +826,7 @@
     }
   },
   "recovery_evidence": "docs/p5/integration-20261015/recovery-state.json",
-  "audio_integrity_evidence": "docs/p5/integration-20261015/external-m01-byte-validation.json",
+  "audio_integrity_evidence": "docs/p5/integration-20261016/attached-archive-verification.json",
   "owner_audio_approval": "docs/p5/m01-completion-20261014/owner-approval.json",
   "remaining": [
     "Actual M01 PostgreSQL/S3 execution with external input",
@@ -834,5 +834,6 @@
     "OD-004 production delivery profile",
     "OD-006 labelled learner speech calibration",
     "Remaining applicable compound P5 requirements"
-  ]
+  ],
+  "private_input_transfer": "docs/p5/integration-20261016/README.md"
 }
