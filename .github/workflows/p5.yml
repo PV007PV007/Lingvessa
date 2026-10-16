@@ -62,6 +62,8 @@ jobs:
       - run: pnpm validate:baseline
       - run: pnpm check
       - name: Verify private transfer credential and integrity boundaries
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
         run: python3 tests/unit/p5-private-transfer.test.py
       - name: Read approved private draft asset with read-only token if uploaded
         env:
