@@ -56,3 +56,9 @@ The editor's previously observed PostgreSQL privilege rejection and MinIO `netli
 - **MINOR:** the old 41 unreferenced Git blob receipts remain historical; text-only connector limitations prevent remote byte revalidation. The new path does not depend on them.
 
 If interrupted: fetch branch HEAD, draft metadata, current-HEAD jobs and retained reports before acting. Reuse the draft and uploaded matching asset; never overwrite/re-upload blindly. The next idempotent action after upload is rerunning `p5-exit` on that exact HEAD. If no asset is present, wait for that single upload; do not regenerate or execute the historical 420-blob upload plan. P5 remains NOT_READY, PR #5 remains draft, OD-004/OD-006 remain open, and P6 is not authorized.
+
+## Exact false-positive remediation
+
+The first hosted attempts at `5dd8ec6720e69a534c87ba8b686582ee69772ab6` failed the credential-URL detector before runtime tests. This was the artificial URL in the negative redirect test, not a real credential or an upload failure. The complete reviewed fixture is bound to SHA-256 `6136de229e691719b1cf63d8edc2c264007960545d7955ee1020ebf55c014a97` (Git blob `780657b0034437044e2caca6a187b99d751edab2`). Only that exact path/content/rule is classified as a known non-secret fixture; the scanner reports its classification for both working source and history. All other rules and the full reachable-history scan remain active. Tests prove that another path or any byte change cannot inherit it. No history rewrite or broad exclusion is used.
+
+The private draft was created successfully before that failed gate: release ID `414560160`, unpublished, no uploaded assets when inspected. [Verified draft URL](https://github.com/PV007PV007/Lingvessa/releases/tag/untagged-5f0c6c85421eb1b84741). The read-only download step was skipped in those failed attempts, so they do not establish read access or actual input transfer.

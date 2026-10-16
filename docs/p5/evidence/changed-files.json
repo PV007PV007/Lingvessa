@@ -1747,6 +1747,10 @@
       "status": "A"
     },
     {
+      "path": "tests/unit/p5-reviewed-secret-fixture.test.ts",
+      "status": "A"
+    },
+    {
       "path": "tests/unit/p5-speech.test.ts",
       "status": "A"
     },
@@ -1761,6 +1765,14 @@
     {
       "path": "tools/governance/validate_p5_baseline.py",
       "status": "A"
+    },
+    {
+      "path": "tools/p1/reviewed-secret-fixtures.ts",
+      "status": "A"
+    },
+    {
+      "path": "tools/p1/scan-secrets.ts",
+      "status": "M"
     },
     {
       "path": "tools/p2/sql-diagnostics.ts",
