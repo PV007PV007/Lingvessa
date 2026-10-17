@@ -11,6 +11,8 @@ The owner requests transfer through the existing GitHub connection and does not 
 
 Parent `c0f10126db2da1506d377ce34476988f877fe2c8` passed all seven workflows and both P5 artifact checks (74 references total), with real M01 explicitly skipped for missing input. This descendant requires its own evidence. The exact current-HEAD checks, source-bound acceptance artifact and PR #5 determine actual transfer/import status. Preparation never counts as upload or real test execution.
 
+Private transfer completed on `d1f3795`: release asset `649769507` has the exact approved checksum and size; the isolated input job independently downloaded and verified it. [Transfer receipt](../docs/p5/integration-20261017/transfer-receipt.json). Reruns reuse this asset; do not ask for or upload another ZIP. This proves private transfer, not real import.
+
 Real integration must verify 420 approved WAVs + 30 SVG drafts, replay, immutable versions, restart and all 420 original audio deliveries through two disposable EN/CS test publications. Test fixture permission rows do not assert new human/visual/production approval. OD-004, OD-006, visual QA and remaining applicable compound requirements remain open; P5 stays NOT_READY, with no merge/P6.
 
 ## Recovery and ingestion checkpoint — 2026-10-15

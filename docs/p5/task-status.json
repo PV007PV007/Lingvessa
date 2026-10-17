@@ -835,5 +835,10 @@
     "OD-006 labelled learner speech calibration",
     "Remaining applicable compound P5 requirements"
   ],
-  "private_input_transfer": "docs/p5/integration-20261017/README.md"
+  "private_input_transfer": "docs/p5/integration-20261017/README.md",
+  "private_input_result": {
+    "status": "TRANSFER_AND_INDEPENDENT_DOWNLOAD_VERIFIED",
+    "receipt": "docs/p5/integration-20261017/transfer-receipt.json",
+    "real_import_status": "CURRENT_HEAD_EXECUTION_REPORT_REQUIRED"
+  }
 }

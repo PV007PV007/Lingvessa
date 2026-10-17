@@ -8,6 +8,10 @@ P5 IN PROGRESS / NOT READY. PR #5 remains OPEN DRAFT. No merge or P6. The owner 
 
 Parent `c0f10126db2da1506d377ce34476988f877fe2c8` passed seven workflows. Both P5 artifacts and all 74 referenced checksums were independently verified. Its actual M01 run was **NOT_EXECUTED_EXTERNAL_INPUT_MISSING**. `parent-ci.json` preserves that historical evidence, not a claim about this descendant.
 
+## Verified transfer result — 2026-10-17
+
+On source `d1f3795fe92595b50a146d3e5754d6c25b6d93c0`, the exact envelope PUT returned HTTP 201. Bridge job `117331297765` verified the received envelope/archive and successfully attached asset `649769507` to existing private draft release `414560160`. GitHub reports 63,346,796 bytes and the exact approved SHA-256. Input job `117331547311` independently downloaded and verified the release bytes, then created the one-day relay. The PR bridge job `117331307503` reused the same asset successfully. [Credential-free receipt](transfer-receipt.json). No additional archive upload is needed; reruns reuse this verified asset. Real import is separately established by current-HEAD execution reports, not this receipt.
+
 ## Private bridge
 
 The serial `p5-private-bridge` job runs only on the authorized branch or same-repository PR #5. It checks repository privacy and the identity of existing unpublished release `414560160`, with the existing restricted `contents: write` token. A matching uploaded asset is reused; subsequent download verifies the actual bytes. Conflicting metadata is an error. No overwrite, deletion, publication or new release is performed.

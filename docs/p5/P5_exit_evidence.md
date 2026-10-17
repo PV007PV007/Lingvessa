@@ -59,7 +59,15 @@ All retained audio/report bytes were restored from the saved archive and not reg
 
 No new direct application dependency, schema, API, migration or production provider change is made. The follow-up below updates an existing transitive dependency. No model weights, learner data, human-uploaded reference, paid inference or later-phase runtime is introduced. The separate earlier transitive dependency correction is resolved on 81e6ddac; its failed parent and remediation evidence remain intact.
 
-## Open exit conditions
+## Current open exit conditions — 2026-10-17
+
+All 420 M01 WAVs, the six voices and audio rights are approved; no regeneration or repeat audio approval. The unchanged archive was uploaded through the existing GitHub connection to private draft release 414560160, asset 649769507; GitHub reports the exact approved size and SHA-256. The isolated input job independently downloaded and verified the bytes. See [transfer receipt and real-gate boundary](integration-20261017/README.md).
+
+Plan v1.4 §12 p7 still requires all required M01 asset IDs to resolve through the appropriate publication path. The real PostgreSQL/S3 test must prove 420 audio + 30 draft visual imports, replay, immutable versions, restart and 420 owner-scoped test deliveries on the exact current HEAD. Transport success is not test success or approval of the 30 visual drafts. Current-source CI and acceptance artifacts in PR #5 determine execution status.
+
+OD-004 production delivery and OD-006 labelled learner calibration remain OPEN. OD-005 is resolved for approved M01 audio cast/quality/rights and completed generation; runtime tooling integration is a separate technical condition. Visual semantic/accessibility/rights QA, required reference publication and applicable compound requirements remain open. Trace retains 174 PASS / 30 PARTIAL / 152 PENDING until specific complete clauses are evidenced. No merge or P6.
+
+## Historical exit-condition snapshot — superseded by approval and current input evidence
 
 Plan v1.4 §12 p7 requires all M01 required asset IDs to resolve. Current drafts: 18 SVGs, 12 flags, 168 scripts / 420 audio slots, six voice profiles. Audition bytes remain outside the approved publication registry. Approved assets = 0. Complete cast and rights review, full media generation, human linguistic/semantic/accessibility/publication QA and remaining compound requirements are open.
 

@@ -6659,8 +6659,9 @@
       "actual_test_files": [],
       "actual_gate_ids": [],
       "verified_implementation_sha": null,
-      "verification_note": "Idempotent immutable ingest and separated generation cost window implemented. Actual provider generation/transcode, bounded provider retry, cost telemetry and approved batch still depend on OD-005; not fully verified.",
-      "trace_reviewed_at": "2026-10-04T08:55:11.894620+00:00"
+      "verification_note": "Idempotent immutable ingest and generation-cost separation have historical runtime evidence. The 420-file M01 batch, cast/quality/rights and completed generation were approved on 2026-10-14; do not reopen these decisions. Remaining provider/transcode/retry/cost-telemetry integration and the entire compound clause still require applicable executed evidence. Private transfer receipt is not real import or production approval.",
+      "trace_reviewed_at": "2026-10-04T08:55:11.894620+00:00",
+      "historical_verification_note_before_20261014_approval": "Idempotent immutable ingest and separated generation cost window implemented. Actual provider generation/transcode, bounded provider retry, cost telemetry and approved batch still depend on OD-005; not fully verified."
     },
     {
       "requirement_id": "N-TD-P14-T04-R04",
@@ -8908,8 +8909,9 @@
       "actual_test_files": [],
       "actual_gate_ids": [],
       "verified_implementation_sha": null,
-      "verification_note": "Idempotent immutable ingest and separated generation cost window implemented. Actual provider generation/transcode, bounded provider retry, cost telemetry and approved batch still depend on OD-005; not fully verified.",
-      "trace_reviewed_at": "2026-10-04T08:55:11.894620+00:00"
+      "verification_note": "Idempotent immutable ingest and generation-cost separation have historical runtime evidence. The 420-file M01 batch, cast/quality/rights and completed generation were approved on 2026-10-14; do not reopen these decisions. Remaining provider/transcode/retry/cost-telemetry integration and the entire compound clause still require applicable executed evidence. Private transfer receipt is not real import or production approval.",
+      "trace_reviewed_at": "2026-10-04T08:55:11.894620+00:00",
+      "historical_verification_note_before_20261014_approval": "Idempotent immutable ingest and separated generation cost window implemented. Actual provider generation/transcode, bounded provider retry, cost telemetry and approved batch still depend on OD-005; not fully verified."
     },
     {
       "requirement_id": "TS-BL-006",
@@ -11542,7 +11544,7 @@
       "actual_test_files": [],
       "actual_gate_ids": [],
       "verified_implementation_sha": null,
-      "verification_note": "Idempotent immutable ingest and separated generation cost window implemented. Actual provider generation/transcode, bounded provider retry, cost telemetry and approved batch still depend on OD-005; not fully verified.",
+      "verification_note": "Idempotent immutable ingest and generation-cost separation have historical runtime evidence. The 420-file M01 batch, cast/quality/rights and completed generation were approved on 2026-10-14; do not reopen these decisions. Remaining provider/transcode/retry/cost-telemetry integration and the entire compound clause still require applicable executed evidence. Private transfer receipt is not real import or production approval.",
       "trace_reviewed_at": "2026-10-04T08:55:11.894620+00:00",
       "audition_evidence": {
         "path": "docs/p5/voice-audition/results.json",
@@ -11550,7 +11552,8 @@
         "validator": "tools/p5/voice-audition.py --verify-only",
         "scope": "Eight actual local candidate WAVs with pinned authored text/model/speaker and measured metrics; no publication, cast, human linguistic QA or whole-requirement approval.",
         "status": "LOCAL_TECHNICAL_PASS_HUMAN_REVIEW_PENDING"
-      }
+      },
+      "historical_verification_note_before_20261014_approval": "Idempotent immutable ingest and separated generation cost window implemented. Actual provider generation/transcode, bounded provider retry, cost telemetry and approved batch still depend on OD-005; not fully verified."
     },
     {
       "requirement_id": "N-REF-P24-B03-C06",
@@ -14163,8 +14166,9 @@
       "actual_test_files": [],
       "actual_gate_ids": [],
       "verified_implementation_sha": null,
-      "verification_note": "Idempotent immutable ingest and separated generation cost window implemented. Actual provider generation/transcode, bounded provider retry, cost telemetry and approved batch still depend on OD-005; not fully verified.",
-      "trace_reviewed_at": "2026-10-04T08:55:11.894620+00:00"
+      "verification_note": "Idempotent immutable ingest and generation-cost separation have historical runtime evidence. The 420-file M01 batch, cast/quality/rights and completed generation were approved on 2026-10-14; do not reopen these decisions. Remaining provider/transcode/retry/cost-telemetry integration and the entire compound clause still require applicable executed evidence. Private transfer receipt is not real import or production approval.",
+      "trace_reviewed_at": "2026-10-04T08:55:11.894620+00:00",
+      "historical_verification_note_before_20261014_approval": "Idempotent immutable ingest and separated generation cost window implemented. Actual provider generation/transcode, bounded provider retry, cost telemetry and approved batch still depend on OD-005; not fully verified."
     },
     {
       "requirement_id": "N-TS-P14-T02-R05",
@@ -14601,5 +14605,6 @@
   "evidence_policy": "PASS rows cite executed evidence on an exact remote SHA. PARTIAL rows do not close the requirement or phase. Test-only synthetic media/evaluators are never reference-content QA.",
   "trace_review_scope": "All 356 locked clauses and statuses retained. All 420 immutable WAV byte checks and prior audio approval are retained. The autonomous private bridge is transport only; current-HEAD real M01 PostgreSQL/S3 and 420 disposable test deliveries require executed evidence. Test fixture permissions do not close visual QA, OD-004, OD-006 or compound clauses.",
   "recovery_evidence": "docs/p5/integration-20261015/README.md",
-  "private_input_evidence": "docs/p5/integration-20261017/README.md"
+  "private_input_evidence": "docs/p5/integration-20261017/README.md",
+  "private_input_transfer_receipt": "docs/p5/integration-20261017/transfer-receipt.json"
 }
