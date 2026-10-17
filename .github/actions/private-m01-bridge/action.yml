@@ -1,0 +1,5 @@
+name: Private approved M01 input bridge
+description: Receive one checksum-bound private artifact and attach it to the existing unpublished input container
+runs:
+  using: node24
+  main: bridge.mjs

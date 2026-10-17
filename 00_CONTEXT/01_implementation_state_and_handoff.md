@@ -1,15 +1,17 @@
 # Lingvessa implementation state and handoff
 
-Updated: 2026-10-16. **P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED; P6 NOT AUTHORIZED.**
+Updated: 2026-10-17. **P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED; P6 NOT AUTHORIZED.**
 Branch `implementation/p5-media-speech`; [PR #5](https://github.com/PV007PV007/Lingvessa/pull/5) OPEN DRAFT. Accepted main/P4: `5027f001237b6451237d87343ebeca58cd0af007`.
 
-## Current private input and real integration continuation — 2026-10-16
+## Current private input continuation — 2026-10-17
 
-The newly attached archive is 63,346,796 bytes with SHA-256 `3edaeaaeb000479921a0b3ff5ec2b52042faeee54bf943eff25e4a4a0f4e516d`. All 420 WAVs (210 EN + 210 CS) match immutable records, PCM/frame counts and authorization/manifest bindings. The 402 acoustic results cover single turns; the remaining 18 final files are dialogues, also byte-verified. [Current transfer instructions and truthful execution boundary](../docs/p5/integration-20261016/README.md).
+The approved archive is retained locally: 63,346,796 bytes, SHA-256 `3edaeaaeb000479921a0b3ff5ec2b52042faeee54bf943eff25e4a4a0f4e516d`. All 420 final WAVs (210 EN + 210 CS) match immutable records. The 402 acoustic single-turn results plus 18 dialogue files account for all final files. The 2026-10-14 quality, six-voice and audio-rights approval remains valid; no regeneration or repeat approval.
 
-Parent `d7feb7d00cd4fc78ad7a16c58725b7ba29e98bdf` passed all seven required checks; its real M01 step was skipped because Actions had no input. This change prepares a private, unpublished draft release attachment outside Git, with an isolated write-token input job and a one-day private Actions relay to the read-only test job. Direct read-only draft access returned HTTP 403 on `bdb2c7c`; draft access stays confined to the input job. The exact archive and every WAV are checked again before real import. The connector cannot upload release assets; no archive upload is claimed until asset metadata and bytes are verified.
+The owner requests transfer through the existing GitHub connection and does not have another ZIP. [Current autonomous transfer and restart instructions](../docs/p5/integration-20261017/README.md) replace the manual-upload request. The private serial bridge exposes only a short-lived single-object upload capability via a private one-day artifact, receives a text-only acknowledgement through the connector, verifies both envelope and original archive bytes, and attaches the approved archive to the existing private draft release. General GitHub/runtime tokens stay in the isolated runner. No media is added to Git; no new service, production profile or payment.
 
-The real integration runner now checks all 420 approved WAV deliveries from two disposable EN/CS test publications after S3/server/adapter/database-pool restart. Import alone still inserts zero approvals/publications; explicit fixture permission rows are used only to exercise the test delivery path, never as human or production review. Real execution remains pending until the input is transferred and the exact HEAD run passes. No production profile, paid service, merge or P6 is authorized. OD-004, OD-006, visual approvals and remaining compound requirements stay open.
+Parent `c0f10126db2da1506d377ce34476988f877fe2c8` passed all seven workflows and both P5 artifact checks (74 references total), with real M01 explicitly skipped for missing input. This descendant requires its own evidence. The exact current-HEAD checks, source-bound acceptance artifact and PR #5 determine actual transfer/import status. Preparation never counts as upload or real test execution.
+
+Real integration must verify 420 approved WAVs + 30 SVG drafts, replay, immutable versions, restart and all 420 original audio deliveries through two disposable EN/CS test publications. Test fixture permission rows do not assert new human/visual/production approval. OD-004, OD-006, visual QA and remaining applicable compound requirements remain open; P5 stays NOT_READY, with no merge/P6.
 
 ## Recovery and ingestion checkpoint — 2026-10-15
 

@@ -7,7 +7,7 @@
       "phase": "P5",
       "goal": "Media manifests, generated assets, QA and object-storage adapter",
       "owner_workstream": "Media/speech",
-      "source": "Plan §12 p7; Appendix B p12",
+      "source": "Plan \u00a712 p7; Appendix B p12",
       "dependencies": [
         "P4 gate"
       ],
@@ -296,7 +296,7 @@
       "phase": "P5",
       "goal": "Normal/slow playback and voice/variety bindings",
       "owner_workstream": "Media/speech",
-      "source": "Plan §12 p7; Appendix B p12",
+      "source": "Plan \u00a712 p7; Appendix B p12",
       "dependencies": [
         "IMP-P5-001"
       ],
@@ -418,7 +418,7 @@
       "phase": "P5",
       "goal": "Async speech jobs, mic UX, exact evidence settlement and cleanup",
       "owner_workstream": "Media/speech",
-      "source": "Plan §12 p7; Appendix B p12",
+      "source": "Plan \u00a712 p7; Appendix B p12",
       "dependencies": [
         "IMP-P5-001",
         "IMP-P5-002"
@@ -790,12 +790,12 @@
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
     }
   ],
-  "timestamp": "2026-10-16T00:00:00Z",
-  "last_hosted_tested_sha": "d7feb7d00cd4fc78ad7a16c58725b7ba29e98bdf",
+  "timestamp": "2026-10-17T00:00:00Z",
+  "last_hosted_tested_sha": "c0f10126db2da1506d377ce34476988f877fe2c8",
   "last_hosted_result": "PARENT_ALL_SEVEN_PASS_NOT_CURRENT_CHANGE_EVIDENCE",
-  "last_full_runtime_pass_sha": "d7feb7d00cd4fc78ad7a16c58725b7ba29e98bdf",
-  "ci_evidence": "docs/p5/integration-20261016/parent-ci.json",
-  "current_revision_ci": "Exact new HEAD required: isolated private-draft transport, same-run one-day private relay to a read-only test job, 8 transport + 6 relay security tests, real M01 PG/S3 and 420 test deliveries only when approved input is actually uploaded. No synthetic substitution.",
+  "last_full_runtime_pass_sha": "c0f10126db2da1506d377ce34476988f877fe2c8",
+  "ci_evidence": "docs/p5/integration-20261017/parent-ci.json",
+  "current_revision_ci": "Exact current HEAD required: autonomous single-object private input bridge; real M01 PostgreSQL/S3, replay, immutable versions, restart and all 420 deliveries. Parent c0f1012 passed seven workflows but real input was missing. No synthetic substitution.",
   "latest_attempt_evidence": "PR #5 exact current HEAD checks and artifacts/p5/acceptance-summary.json",
   "local_audition_evidence": "docs/p5/voice-audition/results.json",
   "resolved_hosted_remediation": {
@@ -811,7 +811,7 @@
     "latest_attempt_evidence": "docs/p5/evidence/ci-pocket-audit-failure.json",
     "pending_hosted_remediation": {
       "issue_id": "P5-DEP-002",
-      "patch": "sharp 0.35.4→0.35.5 and matching @img platform/libvips packages, within existing Next range",
+      "patch": "sharp 0.35.4\u21920.35.5 and matching @img platform/libvips packages, within existing Next range",
       "local_evidence": "docs/p5/evidence/sharp-patch-validation.json",
       "resolution_authority": "Exact current revision PR checks and hosted acceptance-summary; no parent PASS substitution"
     },
@@ -835,5 +835,5 @@
     "OD-006 labelled learner speech calibration",
     "Remaining applicable compound P5 requirements"
   ],
-  "private_input_transfer": "docs/p5/integration-20261016/README.md"
+  "private_input_transfer": "docs/p5/integration-20261017/README.md"
 }
