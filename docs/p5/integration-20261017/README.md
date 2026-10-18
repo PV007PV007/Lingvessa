@@ -31,7 +31,11 @@ This is temporary private transfer within existing GitHub Actions, not productio
 5. Through the existing connector, create only the UTF-8 text blob from `<private-receipt>.ack.txt` and check its returned SHA against the receipt. This exact operation is idempotent. It does not update a branch or trigger extra CI.
 6. Observe `PRIVATE_ARCHIVE_ATTACHED`, then independently inspect asset metadata and real report. A timeout/failed PUT/finalization never counts as upload or real integration success. Rerun the bridge job on the same source if its session expired; inspect existing release assets first.
 
-The existing real command is `MINIO_BINARY="$(go env GOPATH)/bin/minio" node --env-file=.local/runtime.env --import tsx tools/p5/verify-m01-s3-import.ts --real-m01`, after authenticated input staging as specified in the 2026-10-15 integration instructions. Required actual evidence: 420 audio + 30 SVG draft versions; idempotent replay; immutable row/byte rejection; private object access; storage process/adapter/database-pool restart; 450 readbacks; two disposable test publications with all 420 original audio deliveries; wrong user/activity and immutable pin rejection. The 2,520 permission rows are explicitly disposable test fixtures, not new owner/visual/production approvals. Import inserts zero approvals/publications.
+The existing real command is `MINIO_BINARY="$(go env GOPATH)/bin/minio" node --env-file=.local/runtime.env --import tsx tools/p5/verify-m01-s3-import.ts --real-m01`, after authenticated input staging as specified in the 2026-10-15 integration instructions. Required actual evidence: 420 audio + 30 SVG draft versions; idempotent replay; immutable row/byte rejection; private object access; storage process/adapter/database-pool restart; 450 readbacks; two disposable test publications with all 420 original audio deliveries; wrong user/activity and immutable pin rejection. The 2,556 permission rows are explicitly disposable test fixtures, not new owner/visual/production approvals. Import inserts zero approvals/publications.
+
+## Current dependency correction
+
+The 2026-10-18 correction includes six required versioned avatar pins in disposable test publications. It verifies 420 WAV + six avatar deliveries and 2,556 fixture permissions; actual visual approval remains open. See [real-mode correction](../integration-20261018/README.md).
 
 ## Remaining gates
 

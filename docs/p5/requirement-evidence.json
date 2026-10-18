@@ -14601,10 +14601,11 @@
       "verification_note": "P5 foundation is present or planned; the entire source clause is not proven by synthetic media fixtures. Required content/QA/operational or optional AI behavior must remain separately evidenced."
     }
   ],
-  "timestamp": "2026-10-17T00:00:00Z",
+  "timestamp": "2026-10-18T00:00:00Z",
   "evidence_policy": "PASS rows cite executed evidence on an exact remote SHA. PARTIAL rows do not close the requirement or phase. Test-only synthetic media/evaluators are never reference-content QA.",
   "trace_review_scope": "All 356 locked clauses and statuses retained. All 420 immutable WAV byte checks and prior audio approval are retained. The autonomous private bridge is transport only; current-HEAD real M01 PostgreSQL/S3 and 420 disposable test deliveries require executed evidence. Test fixture permissions do not close visual QA, OD-004, OD-006 or compound clauses.",
   "recovery_evidence": "docs/p5/integration-20261015/README.md",
   "private_input_evidence": "docs/p5/integration-20261017/README.md",
-  "private_input_transfer_receipt": "docs/p5/integration-20261017/transfer-receipt.json"
+  "private_input_transfer_receipt": "docs/p5/integration-20261017/transfer-receipt.json",
+  "real_import_execution_evidence": "docs/p5/integration-20261018/README.md; exact current-HEAD PR #5 acceptance artifact is authoritative; prior real failure retained"
 }

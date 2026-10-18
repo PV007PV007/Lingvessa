@@ -790,13 +790,13 @@
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
     }
   ],
-  "timestamp": "2026-10-17T00:00:00Z",
-  "last_hosted_tested_sha": "c0f10126db2da1506d377ce34476988f877fe2c8",
-  "last_hosted_result": "PARENT_ALL_SEVEN_PASS_NOT_CURRENT_CHANGE_EVIDENCE",
+  "timestamp": "2026-10-18T00:00:00Z",
+  "last_hosted_tested_sha": "35dced61a8f9ae36f77379860f414e012de20997",
+  "last_hosted_result": "REAL_M01_FAILED_MISSING_TEST_AVATAR_BINDINGS",
   "last_full_runtime_pass_sha": "c0f10126db2da1506d377ce34476988f877fe2c8",
   "ci_evidence": "docs/p5/integration-20261017/parent-ci.json",
-  "current_revision_ci": "Exact current HEAD required: autonomous single-object private input bridge; real M01 PostgreSQL/S3, replay, immutable versions, restart and all 420 deliveries. Parent c0f1012 passed seven workflows but real input was missing. No synthetic substitution.",
-  "latest_attempt_evidence": "PR #5 exact current HEAD checks and artifacts/p5/acceptance-summary.json",
+  "current_revision_ci": "Exact current-HEAD CI and acceptance artifact in PR #5 govern the avatar-dependency correction: 420 audio + 6 avatar delivery reads, two publications, 2556 disposable fixture permissions, negative closure and actual-version authorization denials. No synthetic substitution or visual approval.",
+  "latest_attempt_evidence": "docs/p5/integration-20261018/prior-real-failure.json",
   "local_audition_evidence": "docs/p5/voice-audition/results.json",
   "resolved_hosted_remediation": {
     "issue_id": "P5-DEP-001",
@@ -839,6 +839,6 @@
   "private_input_result": {
     "status": "TRANSFER_AND_INDEPENDENT_DOWNLOAD_VERIFIED",
     "receipt": "docs/p5/integration-20261017/transfer-receipt.json",
-    "real_import_status": "CURRENT_HEAD_EXECUTION_REPORT_REQUIRED"
+    "real_import_status": "See current-HEAD acceptance artifact; prior failure and correction documented in docs/p5/integration-20261018/README.md"
   }
 }

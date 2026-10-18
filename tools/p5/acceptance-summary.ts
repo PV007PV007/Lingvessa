@@ -28,7 +28,9 @@ if(m01Input.status==='VERIFIED'){
  assert.equal(m01Import.status,'PASS');assert.equal(m01Import.commit,commit);assert.equal(m01Import.source_sha,commit);
  assert.equal(m01Import.scope,'REAL_M01_BYTES_POSTGRESQL_S3_IMPORT');assert.equal(m01Import.real_m01_audio_imported,true);
  assert.equal(m01Import.audio_assets,420);assert.equal(m01Import.visual_drafts,30);assert.equal(m01Import.test_publications,2);
- assert.equal(m01Import.delivered_real_m01_audio_assets,420);assert.equal(m01Import.test_fixture_asset_approvals,2520);
+ assert.equal(m01Import.delivered_real_m01_audio_assets,420);assert.equal(m01Import.test_fixture_asset_approvals,2556);
+ assert.equal(m01Import.delivered_test_avatar_assets,6);assert.equal(m01Import.delivered_assets,426);
+ assert.equal(m01Import.same_language_versioned_avatar_closure_checks,2);
  assert.equal(m01Import.import_inserted_approvals,0);assert.equal(m01Import.production_publication_created,false);
  assert.equal(m01Import.foreign_user_and_activity_denied,true);
  for(const key of ['exact_replay','immutable_update_and_delete_rejected','changed_bytes_rejected','database_pool_recreated','storage_adapter_restart_verified','storage_server_restart_verified','all_stored_bytes_verified'])assert.equal(m01Import[key],true);

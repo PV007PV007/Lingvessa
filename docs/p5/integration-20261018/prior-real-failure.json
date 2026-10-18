@@ -1,0 +1,35 @@
+{
+  "source_sha": "35dced61a8f9ae36f77379860f414e012de20997",
+  "status": "FAILED_REAL_TEST_PUBLICATION_NOT_AUDIO_INTEGRITY",
+  "runs": [
+    {
+      "id": 39010532789,
+      "job_id": 117332230624,
+      "event": "pull_request"
+    },
+    {
+      "id": 39010530655,
+      "job_id": 117332178471,
+      "event": "push"
+    }
+  ],
+  "successful_preceding_steps": [
+    "private release download and source-bound relay",
+    "approved archive staging",
+    "all 420 immutable WAV and 450 registry-version checks",
+    "synthetic PostgreSQL/S3 import/replay/restart"
+  ],
+  "real_step_executed": true,
+  "real_step_pass": false,
+  "failing_operation": "ContentRepository.publish for disposable dialogue/audio test publication",
+  "error_code": "23514",
+  "error": "dialogue character requires its pinned avatar in the activity",
+  "constraint_function": "p5_publication_media_guard",
+  "test_runner_location": "tools/p5/verify-m01-s3-import.ts:119",
+  "cause": "Test activity bound 210 real WAVs per language but omitted three required same-language/version avatar dependencies",
+  "correction": "Include the existing six immutable draft avatars in disposable test refs/pins/permissions and delivery; assert missing-avatar closure remains rejected; never relax the database guard",
+  "audio_changed": false,
+  "owner_audio_approval_reopened": false,
+  "production_visual_approval": false,
+  "p6_authorized": false
+}

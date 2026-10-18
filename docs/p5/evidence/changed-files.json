@@ -1,6 +1,6 @@
 {
   "compared_to_accepted_main": "5027f001237b6451237d87343ebeca58cd0af007",
-  "timestamp": "2026-10-17T00:00:00Z",
+  "timestamp": "2026-10-18T00:00:00Z",
   "files": [
     {
       "path": ".gitattributes",
@@ -584,6 +584,14 @@
     },
     {
       "path": "docs/p5/integration-20261017/transfer-receipt.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261018/README.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261018/prior-real-failure.json",
       "status": "A"
     },
     {

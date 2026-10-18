@@ -45,9 +45,13 @@ The runner uses PostgreSQL 18.6 and a pinned S3-compatible server bound to loopb
 
 A subsequent, separate test stage creates two disposable EN/CS publications from existing P3 test content and immutable pins for the 420 imported WAVs. The permission rows are explicitly `DISPOSABLE_TEST_FIXTURE_ONLY`: they exercise the permission path and do not assert new human, visual or production approval. They do not overwrite the retained owner approval or approve the 30 SVG drafts. All 420 original WAVs must be returned byte-identically by `MediaRepository.bytesForRun` after restart; foreign users/activities and publication-pin mutations must be rejected. This is repository-level owner-scoped test delivery, not production HTTP/CDN delivery or pedagogical approval of M01 course content.
 
-The real report must bind the exact source SHA and code hashes, `audio_assets=420`, `visual_drafts=30`, `test_publications=2`, `delivered_real_m01_audio_assets=420`, `import_inserted_approvals=0`, and `test_fixture_asset_approvals=2520`. Both publications and all fixture permissions disappear with the disposable database. No report is accepted if real mode was skipped; synthetic mode is explicitly separate.
+The real report must bind the exact source SHA and code hashes, `audio_assets=420`, `visual_drafts=30`, `test_publications=2`, `delivered_real_m01_audio_assets=420`, `import_inserted_approvals=0`, and `test_fixture_asset_approvals=2556`. Both publications and all fixture permissions disappear with the disposable database. No report is accepted if real mode was skipped; synthetic mode is explicitly separate.
 
 The editor's previously observed PostgreSQL privilege rejection and MinIO `netlinkrib` restriction are not bypassed. Hosted execution is required here. No claim of actual import/delivery is made before the corresponding real report passes.
+
+## Current dependency correction
+
+The 2026-10-18 correction includes six required versioned avatar pins in disposable test publications. It verifies 420 WAV + six avatar deliveries and 2,556 fixture permissions; actual visual approval remains open. See [real-mode correction](../integration-20261018/README.md).
 
 ## Remaining gates and restart checkpoint
 

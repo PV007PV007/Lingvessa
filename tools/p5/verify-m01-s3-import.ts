@@ -84,21 +84,31 @@ try{
   assert.equal(row.checksum,m.checksum);assert.equal(Number(row.byte_length),m.byte_length);assert.equal(row.object_key,k);assert.deepEqual(row.metadata,m);
  }
  assert.deepEqual(await importMediaLibrary(media,f.author,library),outputs);assert.deepEqual(await before(),snapshot);
- let testPublications=0,deliveredAssets=0,testFixtureApprovals=0;
+ let testPublications=0,deliveredAssets=0,deliveredAudioAssets=0,deliveredAvatarAssets=0,testFixtureApprovals=0,avatarClosureChecks=0;
  // Disposable test publications use fixture approvals, never new human/production approvals.
  // The importer above must still insert zero approvals/publications. Approved M01 bytes/metadata are unchanged.
  for(const language of ['en','cs'] as const){
-  const source=f.sources[language],entries=real
+  const source=f.sources[language],audioEntries=real
    ?library.entries.filter(e=>e.metadata.kind==='audio'&&e.metadata.scope.language===language)
    :[library.entries.find(e=>e.metadata.scope.language===language)!];
-  assert.equal(entries.length,real?210:1);
+  assert.equal(audioEntries.length,real?210:1);
+  const avatars=real?library.entries.filter(e=>e.metadata.kind==='avatar'&&e.metadata.scope.language===language):[];
+  assert.equal(avatars.length,real?3:0);
+  const entries=[...audioEntries,...avatars];
   const executable=executableLessonFixtureSchema.parse(JSON.parse(await readFile('content/fixtures/p3/'+language+'-lesson.json','utf8')));
   await loadExecutableLessonFixture(pool,f.author,executable);
   const payload=(await pool.query('SELECT payload FROM content_versions WHERE id=$1',[executable.content_version_id])).rows[0].payload as ContentPayload;
   const activity=payload.activities![0]!;
   for(const entry of entries){
-   const ref={asset_id:entry.metadata.asset_id,asset_stable_code:entry.metadata.stable_code,asset_version:entry.metadata.asset_version,role:real?'test_imported_audio':'imported_vector'};
+   const ref={asset_id:entry.metadata.asset_id,asset_stable_code:entry.metadata.stable_code,asset_version:entry.metadata.asset_version,role:real?(entry.metadata.kind==='avatar'?'test_dialogue_avatar':'test_imported_audio'):'imported_vector'};
    activity.media_refs.push(ref);activity.contract!.presentation.media_refs.push(ref);
+  }
+  if(real){
+   const audioRefs=activity.media_refs.filter(ref=>ref.role!=='test_dialogue_avatar');
+   const closure=async(refs:typeof audioRefs)=>(await pool!.query('SELECT p5_avatar_closure($1::jsonb,$2::uuid) AS complete',[JSON.stringify(refs),source.language_id])).rows[0].complete;
+   assert.equal(await closure(audioRefs),false,'Real dialogue references must fail without their versioned avatars');
+   assert.equal(await closure(activity.media_refs),true,'Each dialogue speaker must resolve to its same-language/version avatar');
+   avatarClosureChecks++;
   }
   const revision=(await pool.query('SELECT revision FROM content_versions WHERE id=$1',[executable.content_version_id])).rows[0].revision as number;
   // The fixture's repositories used the closed pool; use the recovered pool explicitly.
@@ -125,18 +135,21 @@ try{
    const delivered=await media.bytesForRun(f.learner,run.id,activity.id,entry.metadata.asset_id,entry.metadata.asset_version);
    assert.deepEqual(Buffer.from(delivered.bytes),entry.bytes);assert.equal(delivered.metadata.checksum,entry.metadata.checksum);
    assert.equal(delivered.metadata.scope.language,language);deliveredAssets++;
+   if(entry.metadata.kind==='audio')deliveredAudioAssets++;
+   if(entry.metadata.kind==='avatar')deliveredAvatarAssets++;
   }
   const firstEntry=entries[0]!;
-  await assert.rejects(media.bytesForRun(f.author,run.id,activity.id,firstEntry.metadata.asset_id,1),{code:'NOT_FOUND'});
-  await assert.rejects(media.bytesForRun(f.learner,run.id,randomUUID(),firstEntry.metadata.asset_id,1),{code:'NOT_FOUND'});
+  await assert.rejects(media.bytesForRun(f.author,run.id,activity.id,firstEntry.metadata.asset_id,firstEntry.metadata.asset_version),{code:'NOT_FOUND'});
+  await assert.rejects(media.bytesForRun(f.learner,run.id,randomUUID(),firstEntry.metadata.asset_id,firstEntry.metadata.asset_version),{code:'NOT_FOUND'});
   await assert.rejects(pool.query('UPDATE publication_assets SET checksum=$1 WHERE publication_id=$2',['0'.repeat(64),publication.id]),{code:'23514'});testPublications++;
  }
  assert.equal((await pool.query("SELECT count(*) FROM media_jobs WHERE job_kind='generation'")).rows[0].count,'0');
- assert.equal(testPublications,2);assert.equal(deliveredAssets,real?420:2);
+ assert.equal(testPublications,2);assert.equal(deliveredAssets,real?426:2);
+ assert.equal(deliveredAudioAssets,real?420:0);assert.equal(deliveredAvatarAssets,real?6:0);assert.equal(avatarClosureChecks,real?2:0);
  assert.equal(testFixtureApprovals,deliveredAssets*mediaApprovalGates.length);
  assert.equal(Number((await pool.query('SELECT count(*) FROM asset_approvals')).rows[0].count),testFixtureApprovals);
  const paths=['tools/p5/verify-m01-s3-import.ts','tools/p5/s3-test-fixture.ts','tools/p5/media-library.ts','infra/persistence/media.ts','infra/persistence/content.ts','packages/provider-adapters/storage/s3.ts'];
- const report={status:'PASS',scope:real?'REAL_M01_BYTES_POSTGRESQL_S3_IMPORT':'SYNTHETIC_POSTGRESQL_S3_IMPORT_NOT_M01',commit,source_sha:process.env.GITHUB_HEAD_SHA??null,database:'PostgreSQL 18.6',imported_versions:450,audio_assets:real?420:0,visual_drafts:real?30:0,synthetic_vectors:real?0:450,real_m01_audio_imported:real,exact_replay:true,immutable_update_and_delete_rejected:true,changed_bytes_rejected:true,database_pool_recreated:true,storage_adapter_restart_verified:true,storage_server_restart_verified:true,all_stored_bytes_verified:true,anonymous_access_denied:true,import_inserted_approvals:0,test_publications:testPublications,test_fixture_asset_approvals:testFixtureApprovals,test_approval_scope:'DISPOSABLE_TEST_FIXTURE_ONLY_NOT_OWNER_OR_PRODUCTION_APPROVAL',delivered_assets:deliveredAssets,delivered_real_m01_audio_assets:real?deliveredAssets:0,delivery_scope:'MEDIA_REPOSITORY_OWNER_SCOPED_TEST_LESSON_AFTER_S3_RESTART',foreign_user_and_activity_denied:true,production_publication_created:false,production_delivery_profile_approved:false,p6_authorized:false,test_server_source_revision:minioTestRevision,test_server_binary_sha256:storage.binary_sha256,code_bindings:Object.fromEntries(await Promise.all(paths.map(async path=>[path,createHash('sha256').update(await readFile(path)).digest('hex')])))};
+ const report={status:'PASS',scope:real?'REAL_M01_BYTES_POSTGRESQL_S3_IMPORT':'SYNTHETIC_POSTGRESQL_S3_IMPORT_NOT_M01',commit,source_sha:process.env.GITHUB_HEAD_SHA??null,database:'PostgreSQL 18.6',imported_versions:450,audio_assets:real?420:0,visual_drafts:real?30:0,synthetic_vectors:real?0:450,real_m01_audio_imported:real,exact_replay:true,immutable_update_and_delete_rejected:true,changed_bytes_rejected:true,database_pool_recreated:true,storage_adapter_restart_verified:true,storage_server_restart_verified:true,all_stored_bytes_verified:true,anonymous_access_denied:true,import_inserted_approvals:0,test_publications:testPublications,test_fixture_asset_approvals:testFixtureApprovals,test_approval_scope:'DISPOSABLE_TEST_FIXTURE_ONLY_NOT_OWNER_OR_PRODUCTION_APPROVAL',delivered_assets:deliveredAssets,delivered_real_m01_audio_assets:deliveredAudioAssets,delivered_test_avatar_assets:deliveredAvatarAssets,same_language_versioned_avatar_closure_checks:avatarClosureChecks,delivery_scope:'MEDIA_REPOSITORY_OWNER_SCOPED_TEST_LESSON_AFTER_S3_RESTART',foreign_user_and_activity_denied:true,production_publication_created:false,production_delivery_profile_approved:false,p6_authorized:false,test_server_source_revision:minioTestRevision,test_server_binary_sha256:storage.binary_sha256,code_bindings:Object.fromEntries(await Promise.all(paths.map(async path=>[path,createHash('sha256').update(await readFile(path)).digest('hex')])))};
  await mkdir('artifacts/p5',{recursive:true});await writeFile('artifacts/p5/'+(real?'m01-library-import-validation.json':'library-s3-validation.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));
 }finally{
  await pool?.end();try{if(created)await admin.query('DROP DATABASE "'+name+'" WITH (FORCE)');}finally{await admin.end();await storage?.close();}

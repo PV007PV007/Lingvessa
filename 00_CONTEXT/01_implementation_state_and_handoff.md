@@ -1,7 +1,11 @@
 # Lingvessa implementation state and handoff
 
-Updated: 2026-10-17. **P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED; P6 NOT AUTHORIZED.**
+Updated: 2026-10-18. **P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED; P6 NOT AUTHORIZED.**
 Branch `implementation/p5-media-speech`; [PR #5](https://github.com/PV007PV007/Lingvessa/pull/5) OPEN DRAFT. Accepted main/P4: `5027f001237b6451237d87343ebeca58cd0af007`.
+
+## Current real-test correction — 2026-10-18
+
+Private transfer and all 420 immutable WAV checks succeeded. Both real PostgreSQL/S3 runs on `35dced61` stopped at the disposable publication's missing avatar dependencies (`23514`), so no end-to-end PASS was claimed. The test now binds the existing three exact-version avatars per language, preserves a negative avatar-closure assertion, and checks actual-version authorization denials. Expected delivery is 420 audio + six avatars, with 2,556 clearly labelled disposable fixture permissions and zero import-created approvals. [Current evidence and restart boundary](../docs/p5/integration-20261018/README.md). Exact current-HEAD CI/acceptance artifacts in PR #5 decide success. No archive re-upload, regeneration, repeat owner approval, database-guard relaxation, merge or P6.
 
 ## Current private input continuation — 2026-10-17
 

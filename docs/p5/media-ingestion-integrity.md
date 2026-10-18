@@ -14,4 +14,4 @@ A bounded local harness executed the fetched repository class with explicit sche
 
 The parent passed all seven workflows, including P5 PR run 38258943462 and push run 38258938828. Their archive digests and all 25 acceptance references were independently verified. A parent PASS does not certify this correction. Final new-source run IDs and verified artifact digests belong in PR #5 metadata, without an evidence-only descendant commit.
 
-P5 remains NOT_READY and PR #5 OPEN DRAFT. Human media QA, the 204 missing draft recordings, rights/cast decisions and publication gates remain open.
+P5 remains NOT_READY and PR #5 OPEN DRAFT. This 2026-10-12 snapshot predates completion and owner audio approval. All 420 final WAVs and audio cast/quality/rights were approved on 2026-10-14; do not regenerate the former 204 missing files. Current remaining conditions are visual QA, applicable publication/delivery gates, OD-004 and OD-006; see integration-20261018/README.md.
