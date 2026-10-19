@@ -3,11 +3,23 @@
 Updated: 2026-10-18. **P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED; P6 NOT AUTHORIZED.**
 Branch `implementation/p5-media-speech`; [PR #5](https://github.com/PV007PV007/Lingvessa/pull/5) OPEN DRAFT. Accepted main/P4: `5027f001237b6451237d87343ebeca58cd0af007`.
 
-## Current real-test correction — 2026-10-18
+## Verified real M01 execution — 2026-10-18
+
+Both P5 PR and push runs passed on `460aab052115f6fe168d180b4ac44369afaab09d`, together with all five P1–P4 runs. Both ordinary evidence archives were independently downloaded; their digests, CRC, 39 references each and source/code bindings matched. [Durable exact-source evidence](../docs/p5/integration-20261018/verified-ci-460aab0.json).
+
+Executed: 450 immutable imports (420 approved WAVs + 30 visual drafts), exact replay, changed-byte/immutable-update/delete rejection, database-pool and S3 server/adapter recreation, all stored-byte readbacks, anonymous/foreign-owner/activity denial, two disposable publications and 426 delivery reads (420 audio + six avatars). Negative and positive same-language/avatar-version closure checks passed. Import inserts zero approvals; 2,556 permission rows exist only in the disposable test fixture. This is repository-level delivery in development/test, not production HTTP/CDN or pedagogical course publication.
+
+The ZIP remains private draft release asset `649769507`, SHA-256 `3edaeaaeb000479921a0b3ff5ec2b52042faeee54bf943eff25e4a4a0f4e516d`; no upload or audio generation is needed. Owner audio approval remains valid. The 402 acoustic single-turn files (202 EN + 200 CS) and 18 final dialogues (8 EN + 10 CS) account for all 420 checksum-verified WAVs.
+
+The current report now separates the immutable historical preproduction registry from the later approved audio inventory. Historical placeholders do not reopen OD-005 or authorize regeneration. Its own exact-HEAD CI/acceptance artifacts in PR #5 determine this reporting revision's result; do not create a self-referential evidence-only descendant.
+
+P5 stays IN PROGRESS / NOT READY; PR #5 OPEN DRAFT. OD-004 and OD-006 remain OPEN. [Remaining gates and next action](../docs/p5/integration-20261018/remaining-gates.md). The 30-SVG assistant render inspection is preparation for visual review, not human or rights approval. No merge or P6.
+
+## Historical real-test correction — 2026-10-18
 
 Private transfer and all 420 immutable WAV checks succeeded. Both real PostgreSQL/S3 runs on `35dced61` stopped at the disposable publication's missing avatar dependencies (`23514`), so no end-to-end PASS was claimed. The test now binds the existing three exact-version avatars per language, preserves a negative avatar-closure assertion, and checks actual-version authorization denials. Expected delivery is 420 audio + six avatars, with 2,556 clearly labelled disposable fixture permissions and zero import-created approvals. [Current evidence and restart boundary](../docs/p5/integration-20261018/README.md). Exact current-HEAD CI/acceptance artifacts in PR #5 decide success. No archive re-upload, regeneration, repeat owner approval, database-guard relaxation, merge or P6.
 
-## Current private input continuation — 2026-10-17
+## Historical private input continuation — 2026-10-17
 
 The approved archive is retained locally: 63,346,796 bytes, SHA-256 `3edaeaaeb000479921a0b3ff5ec2b52042faeee54bf943eff25e4a4a0f4e516d`. All 420 final WAVs (210 EN + 210 CS) match immutable records. The 402 acoustic single-turn results plus 18 dialogue files account for all final files. The 2026-10-14 quality, six-voice and audio-rights approval remains valid; no regeneration or repeat approval.
 
@@ -125,4 +137,4 @@ Plan v1.4 §12 p7 requires all M01 required asset IDs to resolve. Prepared: 18 o
 
 OD-004 delivery profile OPEN. Final audio tooling/cast/generation and audio rights were approved on 2026-10-14; older audition records below/above remain historical. OD-006 usable real-provider speech calibration OPEN; default stays neutral `speech_unavailable`. Paid inference=false; monthly paid budget=0. No P6/P7/P8 runtime starts. EXC-P1-001 remains: main lacks technical branch protection; implementation branch, PR, CI and owner review apply.
 
-Next: run the approved external M01 corpus through `tools/p5/verify-m01-s3-import.ts --real-m01` in a permitted PostgreSQL/S3 test runtime, using the exact command and byte bindings in the 2026-10-15 recovery record. Verify every required CI gate on the resulting HEAD; keep P5 NOT_READY, PR #5 OPEN DRAFT and P6 unauthorized.
+Next: apply the remaining-gate plan linked above. The real corpus run is complete on 460aab0; subsequent revisions reuse the private asset automatically for exact-source CI. Do not restart old missing-audio work.

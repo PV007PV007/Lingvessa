@@ -2,6 +2,20 @@
 
 **IN PROGRESS / NOT READY. PR #5 OPEN DRAFT; no merge or P6 authorization.**
 
+## Verified real M01 execution — 2026-10-18
+
+Both P5 PR and push runs passed on `460aab052115f6fe168d180b4ac44369afaab09d`, together with all five P1–P4 runs. Both ordinary evidence archives were independently downloaded; their digests, CRC, 39 references each and source/code bindings matched. [Durable exact-source evidence](integration-20261018/verified-ci-460aab0.json).
+
+Executed: 450 immutable imports (420 approved WAVs + 30 visual drafts), exact replay, changed-byte/immutable-update/delete rejection, database-pool and S3 server/adapter recreation, all stored-byte readbacks, anonymous/foreign-owner/activity denial, two disposable publications and 426 delivery reads (420 audio + six avatars). Negative and positive same-language/avatar-version closure checks passed. Import inserts zero approvals; 2,556 permission rows exist only in the disposable test fixture. This is repository-level delivery in development/test, not production HTTP/CDN or pedagogical course publication.
+
+The ZIP remains private draft release asset `649769507`, SHA-256 `3edaeaaeb000479921a0b3ff5ec2b52042faeee54bf943eff25e4a4a0f4e516d`; no upload or audio generation is needed. Owner audio approval remains valid. The 402 acoustic single-turn files (202 EN + 200 CS) and 18 final dialogues (8 EN + 10 CS) account for all 420 checksum-verified WAVs.
+
+The current report now separates the immutable historical preproduction registry from the later approved audio inventory. Historical placeholders do not reopen OD-005 or authorize regeneration. Its own exact-HEAD CI/acceptance artifacts in PR #5 determine this reporting revision's result; do not create a self-referential evidence-only descendant.
+
+P5 stays IN PROGRESS / NOT READY; PR #5 OPEN DRAFT. OD-004 and OD-006 remain OPEN. [Remaining gates and next action](integration-20261018/remaining-gates.md). The 30-SVG assistant render inspection is preparation for visual review, not human or rights approval. No merge or P6.
+
+The dated execution snapshots below are historical. Their missing-input, generation and approval statements are superseded by the current evidence above.
+
 ## Owner approval of M01 audio — 2026-10-14
 
 The owner approved all 420 delivered M01 audio files, the six-voice cast and audio rights with **“Затверджено” at 2026-10-14T13:12:30+03:00**. [The approval record](m01-completion-20261014/owner-approval.json) binds the exact tested source, dataset, ZIP and HTML hashes. Existing ASR diagnostics and the immutable delivery are retained; this direct approval is separate from individual listening-form entries. These audio decisions are closed. Actual approved media delivery/publication-registry integration, remaining visual QA, OD-004/006 and applicable compound technical requirements still need completion before P5 exit.
@@ -59,7 +73,7 @@ All retained audio/report bytes were restored from the saved archive and not reg
 
 No new direct application dependency, schema, API, migration or production provider change is made. The follow-up below updates an existing transitive dependency. No model weights, learner data, human-uploaded reference, paid inference or later-phase runtime is introduced. The separate earlier transitive dependency correction is resolved on 81e6ddac; its failed parent and remediation evidence remain intact.
 
-## Current open exit conditions — 2026-10-17
+## Historical open exit conditions — 2026-10-17
 
 All 420 M01 WAVs, the six voices and audio rights are approved; no regeneration or repeat audio approval. The unchanged archive was uploaded through the existing GitHub connection to private draft release 414560160, asset 649769507; GitHub reports the exact approved size and SHA-256. The isolated input job independently downloaded and verified the bytes. See [transfer receipt and real-gate boundary](integration-20261017/README.md).
 

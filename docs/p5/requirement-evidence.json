@@ -91,7 +91,7 @@
       ],
       "actual_gate_ids": [],
       "verified_implementation_sha": null,
-      "verification_note": "Runtime media preflight works; M01 complete generated/approved assets remain open.",
+      "verification_note": "All approved M01 audio is present and the real 450-version storage/import test passed on 460aab0. Complete required reference publication, remaining visuals and applicable accessibility/rights QA remain open.",
       "trace_reviewed_at": "2026-10-04T08:56:01.470535+00:00",
       "audition_evidence": {
         "path": "docs/p5/voice-audition/results.json",
@@ -103,9 +103,11 @@
       "supplementary_evidence": [
         "docs/p5/m01-completion-20261014/owner-approval.json",
         "docs/p5/integration-20261015/external-m01-byte-validation.json",
-        "docs/p5/integration-20261015/README.md"
+        "docs/p5/integration-20261015/README.md",
+        "docs/p5/integration-20261018/verified-ci-460aab0.json"
       ],
-      "current_followup": "No audio regeneration/reapproval. Execute real M01 PostgreSQL/S3 import with external bytes; complete actual publication/visual requirements and OD-004. Synthetic runtime evidence does not close these compound clauses."
+      "current_followup": "420 approved WAVs passed actual PostgreSQL/S3 import, replay, immutable versions, restart and scoped delivery on 460aab0 in both PR/push runs. See docs/p5/integration-20261018/verified-ci-460aab0.json. No audio regeneration/reapproval. Complete required reference publication, visual/accessibility QA and OD-004; test fixture permissions do not approve production.",
+      "historical_verification_note": "Runtime media preflight works; M01 complete generated/approved assets remain open."
     },
     {
       "requirement_id": "AUD-001",
@@ -145,7 +147,7 @@
       ],
       "actual_gate_ids": [],
       "verified_implementation_sha": null,
-      "verification_note": "Normal/slow playback proven with synthetic tones; actual reference audio duration/language QA pending.",
+      "verification_note": "All 420 approved normal/slow WAV bytes passed actual import and delivery on 460aab0; audio quality/voices/rights were approved on 2026-10-14. Complete activity-specific reference publication remains.",
       "trace_reviewed_at": "2026-10-04T08:56:01.470535+00:00",
       "audition_evidence": {
         "path": "docs/p5/voice-audition/results.json",
@@ -153,7 +155,11 @@
         "validator": "tools/p5/voice-audition.py --verify-only",
         "scope": "Eight actual local candidate WAVs with pinned authored text/model/speaker and measured metrics; no publication, cast, human linguistic QA or whole-requirement approval.",
         "status": "LOCAL_TECHNICAL_PASS_HUMAN_REVIEW_PENDING"
-      }
+      },
+      "historical_verification_note": "Normal/slow playback proven with synthetic tones; actual reference audio duration/language QA pending.",
+      "supplementary_evidence": [
+        "docs/p5/integration-20261018/verified-ci-460aab0.json"
+      ]
     },
     {
       "requirement_id": "AUD-002",
@@ -291,8 +297,12 @@
       ],
       "actual_gate_ids": [],
       "verified_implementation_sha": null,
-      "verification_note": "Language/variety-scoped policies enforced; real EN/US/CS calibration requires OD-005/006.",
-      "trace_reviewed_at": "2026-10-04T08:56:01.470535+00:00"
+      "verification_note": "Language/variety policies are enforced. Approved model audio is not labelled learner-error calibration; OD-006 remains open.",
+      "trace_reviewed_at": "2026-10-04T08:56:01.470535+00:00",
+      "historical_verification_note": "Language/variety-scoped policies enforced; real EN/US/CS calibration requires OD-005/006.",
+      "supplementary_evidence": [
+        "docs/p5/integration-20261018/verified-ci-460aab0.json"
+      ]
     },
     {
       "requirement_id": "AUD-005",
@@ -332,7 +342,7 @@
       ],
       "actual_gate_ids": [],
       "verified_implementation_sha": null,
-      "verification_note": "Transcript fallback implemented; content-specific accessibility/learning-objective QA remains.",
+      "verification_note": "Transcript fallback is implemented and approved audio is delivered in the real storage test. Activity-specific accessibility/learning-objective QA remains.",
       "trace_reviewed_at": "2026-10-04T08:56:01.470535+00:00",
       "audition_evidence": {
         "path": "docs/p5/voice-audition/results.json",
@@ -340,7 +350,11 @@
         "validator": "tools/p5/voice-audition.py --verify-only",
         "scope": "Eight actual local candidate WAVs with pinned authored text/model/speaker and measured metrics; no publication, cast, human linguistic QA or whole-requirement approval.",
         "status": "LOCAL_TECHNICAL_PASS_HUMAN_REVIEW_PENDING"
-      }
+      },
+      "historical_verification_note": "Transcript fallback implemented; content-specific accessibility/learning-objective QA remains.",
+      "supplementary_evidence": [
+        "docs/p5/integration-20261018/verified-ci-460aab0.json"
+      ]
     },
     {
       "requirement_id": "AUD-006",
@@ -380,8 +394,12 @@
       ],
       "actual_gate_ids": [],
       "verified_implementation_sha": null,
-      "verification_note": "Speech adapter has real lifecycle tests; actual TTS/STT provider integration awaits OD-005.",
-      "trace_reviewed_at": "2026-10-04T08:55:11.894620+00:00"
+      "verification_note": "Approved offline M01 generation is complete; it does not prove every online TTS/STT provider-adapter integration. Do not reopen the approved cast/quality/rights decision.",
+      "trace_reviewed_at": "2026-10-04T08:55:11.894620+00:00",
+      "historical_verification_note": "Speech adapter has real lifecycle tests; actual TTS/STT provider integration awaits OD-005.",
+      "supplementary_evidence": [
+        "docs/p5/integration-20261018/verified-ci-460aab0.json"
+      ]
     },
     {
       "requirement_id": "AUD-007",
@@ -472,7 +490,7 @@
       ],
       "actual_gate_ids": [],
       "verified_implementation_sha": null,
-      "verification_note": "System media pipeline exists; complete M01 asset bytes/QA unresolved.",
+      "verification_note": "All approved M01 audio is present and the real 450-version storage/import test passed on 460aab0. Complete required reference publication, remaining visuals and applicable accessibility/rights QA remain open.",
       "trace_reviewed_at": "2026-10-04T08:56:01.470535+00:00",
       "audition_evidence": {
         "path": "docs/p5/voice-audition/results.json",
@@ -484,9 +502,11 @@
       "supplementary_evidence": [
         "docs/p5/m01-completion-20261014/owner-approval.json",
         "docs/p5/integration-20261015/external-m01-byte-validation.json",
-        "docs/p5/integration-20261015/README.md"
+        "docs/p5/integration-20261015/README.md",
+        "docs/p5/integration-20261018/verified-ci-460aab0.json"
       ],
-      "current_followup": "No audio regeneration/reapproval. Execute real M01 PostgreSQL/S3 import with external bytes; complete actual publication/visual requirements and OD-004. Synthetic runtime evidence does not close these compound clauses."
+      "current_followup": "420 approved WAVs passed actual PostgreSQL/S3 import, replay, immutable versions, restart and scoped delivery on 460aab0 in both PR/push runs. See docs/p5/integration-20261018/verified-ci-460aab0.json. No audio regeneration/reapproval. Complete required reference publication, visual/accessibility QA and OD-004; test fixture permissions do not approve production.",
+      "historical_verification_note": "System media pipeline exists; complete M01 asset bytes/QA unresolved."
     },
     {
       "requirement_id": "MED-002",
@@ -538,7 +558,7 @@
         "docs/p5/integration-20261015/external-m01-byte-validation.json",
         "docs/p5/integration-20261015/README.md"
       ],
-      "current_followup": "No audio regeneration/reapproval. Execute real M01 PostgreSQL/S3 import with external bytes; complete actual publication/visual requirements and OD-004. Synthetic runtime evidence does not close these compound clauses."
+      "current_followup": "420 approved WAVs passed actual PostgreSQL/S3 import, replay, immutable versions, restart and scoped delivery on 460aab0 in both PR/push runs. See docs/p5/integration-20261018/verified-ci-460aab0.json. No audio regeneration/reapproval. Complete required reference publication, visual/accessibility QA and OD-004; test fixture permissions do not approve production."
     },
     {
       "requirement_id": "MED-003",
@@ -578,7 +598,7 @@
       ],
       "actual_gate_ids": [],
       "verified_implementation_sha": null,
-      "verification_note": "Character/voice immutable bindings exist; avatar pin closure/UI sync are new and awaiting hosted CI; real series QA pending.",
+      "verification_note": "Existing immutable avatar/voice/version bindings and both real audio/avatar closure checks passed on 460aab0. Human visual/series QA and actual reference publication remain.",
       "trace_reviewed_at": "2026-10-04T08:56:01.470535+00:00",
       "audition_evidence": {
         "path": "docs/p5/voice-audition/results.json",
@@ -590,9 +610,11 @@
       "supplementary_evidence": [
         "docs/p5/m01-completion-20261014/owner-approval.json",
         "docs/p5/integration-20261015/external-m01-byte-validation.json",
-        "docs/p5/integration-20261015/README.md"
+        "docs/p5/integration-20261015/README.md",
+        "docs/p5/integration-20261018/verified-ci-460aab0.json"
       ],
-      "current_followup": "No audio regeneration/reapproval. Execute real M01 PostgreSQL/S3 import with external bytes; complete actual publication/visual requirements and OD-004. Synthetic runtime evidence does not close these compound clauses."
+      "current_followup": "420 approved WAVs passed actual PostgreSQL/S3 import, replay, immutable versions, restart and scoped delivery on 460aab0 in both PR/push runs. See docs/p5/integration-20261018/verified-ci-460aab0.json. No audio regeneration/reapproval. Complete required reference publication, visual/accessibility QA and OD-004; test fixture permissions do not approve production.",
+      "historical_verification_note": "Character/voice immutable bindings exist; avatar pin closure/UI sync are new and awaiting hosted CI; real series QA pending."
     },
     {
       "requirement_id": "MED-004",
@@ -644,7 +666,7 @@
         "docs/p5/integration-20261015/external-m01-byte-validation.json",
         "docs/p5/integration-20261015/README.md"
       ],
-      "current_followup": "No audio regeneration/reapproval. Execute real M01 PostgreSQL/S3 import with external bytes; complete actual publication/visual requirements and OD-004. Synthetic runtime evidence does not close these compound clauses."
+      "current_followup": "420 approved WAVs passed actual PostgreSQL/S3 import, replay, immutable versions, restart and scoped delivery on 460aab0 in both PR/push runs. See docs/p5/integration-20261018/verified-ci-460aab0.json. No audio regeneration/reapproval. Complete required reference publication, visual/accessibility QA and OD-004; test fixture permissions do not approve production."
     },
     {
       "requirement_id": "MED-005",
@@ -696,7 +718,7 @@
         "docs/p5/integration-20261015/external-m01-byte-validation.json",
         "docs/p5/integration-20261015/README.md"
       ],
-      "current_followup": "No audio regeneration/reapproval. Execute real M01 PostgreSQL/S3 import with external bytes; complete actual publication/visual requirements and OD-004. Synthetic runtime evidence does not close these compound clauses."
+      "current_followup": "420 approved WAVs passed actual PostgreSQL/S3 import, replay, immutable versions, restart and scoped delivery on 460aab0 in both PR/push runs. See docs/p5/integration-20261018/verified-ci-460aab0.json. No audio regeneration/reapproval. Complete required reference publication, visual/accessibility QA and OD-004; test fixture permissions do not approve production."
     },
     {
       "requirement_id": "MED-006",
@@ -750,7 +772,7 @@
         "docs/p5/integration-20261015/external-m01-byte-validation.json",
         "docs/p5/integration-20261015/README.md"
       ],
-      "current_followup": "No audio regeneration/reapproval. Execute real M01 PostgreSQL/S3 import with external bytes; complete actual publication/visual requirements and OD-004. Synthetic runtime evidence does not close these compound clauses."
+      "current_followup": "420 approved WAVs passed actual PostgreSQL/S3 import, replay, immutable versions, restart and scoped delivery on 460aab0 in both PR/push runs. See docs/p5/integration-20261018/verified-ci-460aab0.json. No audio regeneration/reapproval. Complete required reference publication, visual/accessibility QA and OD-004; test fixture permissions do not approve production."
     },
     {
       "requirement_id": "REF-A1-006",
@@ -841,7 +863,7 @@
       ],
       "actual_gate_ids": [],
       "verified_implementation_sha": null,
-      "verification_note": "Manifest gate implemented; required reference audio/flags/QA unresolved.",
+      "verification_note": "All approved M01 audio is present and the real 450-version storage/import test passed on 460aab0. Complete required reference publication, remaining visuals and applicable accessibility/rights QA remain open.",
       "trace_reviewed_at": "2026-10-04T08:56:01.470535+00:00",
       "audition_evidence": {
         "path": "docs/p5/voice-audition/results.json",
@@ -853,9 +875,11 @@
       "supplementary_evidence": [
         "docs/p5/m01-completion-20261014/owner-approval.json",
         "docs/p5/integration-20261015/external-m01-byte-validation.json",
-        "docs/p5/integration-20261015/README.md"
+        "docs/p5/integration-20261015/README.md",
+        "docs/p5/integration-20261018/verified-ci-460aab0.json"
       ],
-      "current_followup": "No audio regeneration/reapproval. Execute real M01 PostgreSQL/S3 import with external bytes; complete actual publication/visual requirements and OD-004. Synthetic runtime evidence does not close these compound clauses."
+      "current_followup": "420 approved WAVs passed actual PostgreSQL/S3 import, replay, immutable versions, restart and scoped delivery on 460aab0 in both PR/push runs. See docs/p5/integration-20261018/verified-ci-460aab0.json. No audio regeneration/reapproval. Complete required reference publication, visual/accessibility QA and OD-004; test fixture permissions do not approve production.",
+      "historical_verification_note": "Manifest gate implemented; required reference audio/flags/QA unresolved."
     },
     {
       "requirement_id": "REF-A1-011",
@@ -902,7 +926,7 @@
         "docs/p5/integration-20261015/external-m01-byte-validation.json",
         "docs/p5/integration-20261015/README.md"
       ],
-      "current_followup": "No audio regeneration/reapproval. Execute real M01 PostgreSQL/S3 import with external bytes; complete actual publication/visual requirements and OD-004. Synthetic runtime evidence does not close these compound clauses."
+      "current_followup": "420 approved WAVs passed actual PostgreSQL/S3 import, replay, immutable versions, restart and scoped delivery on 460aab0 in both PR/push runs. See docs/p5/integration-20261018/verified-ci-460aab0.json. No audio regeneration/reapproval. Complete required reference publication, visual/accessibility QA and OD-004; test fixture permissions do not approve production."
     },
     {
       "requirement_id": "TS-MEDIA-001",
@@ -954,7 +978,7 @@
         "docs/p5/integration-20261015/external-m01-byte-validation.json",
         "docs/p5/integration-20261015/README.md"
       ],
-      "current_followup": "No audio regeneration/reapproval. Execute real M01 PostgreSQL/S3 import with external bytes; complete actual publication/visual requirements and OD-004. Synthetic runtime evidence does not close these compound clauses."
+      "current_followup": "420 approved WAVs passed actual PostgreSQL/S3 import, replay, immutable versions, restart and scoped delivery on 460aab0 in both PR/push runs. See docs/p5/integration-20261018/verified-ci-460aab0.json. No audio regeneration/reapproval. Complete required reference publication, visual/accessibility QA and OD-004; test fixture permissions do not approve production."
     },
     {
       "requirement_id": "TS-MEDIA-002",
@@ -1006,7 +1030,7 @@
         "docs/p5/integration-20261015/external-m01-byte-validation.json",
         "docs/p5/integration-20261015/README.md"
       ],
-      "current_followup": "No audio regeneration/reapproval. Execute real M01 PostgreSQL/S3 import with external bytes; complete actual publication/visual requirements and OD-004. Synthetic runtime evidence does not close these compound clauses."
+      "current_followup": "420 approved WAVs passed actual PostgreSQL/S3 import, replay, immutable versions, restart and scoped delivery on 460aab0 in both PR/push runs. See docs/p5/integration-20261018/verified-ci-460aab0.json. No audio regeneration/reapproval. Complete required reference publication, visual/accessibility QA and OD-004; test fixture permissions do not approve production."
     },
     {
       "requirement_id": "TS-MEDIA-003",
@@ -1059,7 +1083,7 @@
         "docs/p5/integration-20261015/external-m01-byte-validation.json",
         "docs/p5/integration-20261015/README.md"
       ],
-      "current_followup": "No audio regeneration/reapproval. Execute real M01 PostgreSQL/S3 import with external bytes; complete actual publication/visual requirements and OD-004. Synthetic runtime evidence does not close these compound clauses."
+      "current_followup": "420 approved WAVs passed actual PostgreSQL/S3 import, replay, immutable versions, restart and scoped delivery on 460aab0 in both PR/push runs. See docs/p5/integration-20261018/verified-ci-460aab0.json. No audio regeneration/reapproval. Complete required reference publication, visual/accessibility QA and OD-004; test fixture permissions do not approve production."
     },
     {
       "requirement_id": "TS-MEDIA-004",
@@ -1116,7 +1140,7 @@
         "docs/p5/integration-20261015/external-m01-byte-validation.json",
         "docs/p5/integration-20261015/README.md"
       ],
-      "current_followup": "No audio regeneration/reapproval. Execute real M01 PostgreSQL/S3 import with external bytes; complete actual publication/visual requirements and OD-004. Synthetic runtime evidence does not close these compound clauses."
+      "current_followup": "420 approved WAVs passed actual PostgreSQL/S3 import, replay, immutable versions, restart and scoped delivery on 460aab0 in both PR/push runs. See docs/p5/integration-20261018/verified-ci-460aab0.json. No audio regeneration/reapproval. Complete required reference publication, visual/accessibility QA and OD-004; test fixture permissions do not approve production."
     },
     {
       "requirement_id": "TS-MEDIA-005",
@@ -1156,7 +1180,7 @@
       ],
       "actual_gate_ids": [],
       "verified_implementation_sha": null,
-      "verification_note": "Published fixture operates from stored media with providers unavailable; complete reference library still pending.",
+      "verification_note": "All approved M01 audio is present and the real 450-version storage/import test passed on 460aab0. Complete required reference publication, remaining visuals and applicable accessibility/rights QA remain open.",
       "trace_reviewed_at": "2026-10-04T08:56:01.470535+00:00",
       "audition_evidence": {
         "path": "docs/p5/voice-audition/results.json",
@@ -1168,9 +1192,11 @@
       "supplementary_evidence": [
         "docs/p5/m01-completion-20261014/owner-approval.json",
         "docs/p5/integration-20261015/external-m01-byte-validation.json",
-        "docs/p5/integration-20261015/README.md"
+        "docs/p5/integration-20261015/README.md",
+        "docs/p5/integration-20261018/verified-ci-460aab0.json"
       ],
-      "current_followup": "No audio regeneration/reapproval. Execute real M01 PostgreSQL/S3 import with external bytes; complete actual publication/visual requirements and OD-004. Synthetic runtime evidence does not close these compound clauses."
+      "current_followup": "420 approved WAVs passed actual PostgreSQL/S3 import, replay, immutable versions, restart and scoped delivery on 460aab0 in both PR/push runs. See docs/p5/integration-20261018/verified-ci-460aab0.json. No audio regeneration/reapproval. Complete required reference publication, visual/accessibility QA and OD-004; test fixture permissions do not approve production.",
+      "historical_verification_note": "Published fixture operates from stored media with providers unavailable; complete reference library still pending."
     },
     {
       "requirement_id": "N-AI-P06-T03-R09",
@@ -14603,9 +14629,9 @@
   ],
   "timestamp": "2026-10-18T00:00:00Z",
   "evidence_policy": "PASS rows cite executed evidence on an exact remote SHA. PARTIAL rows do not close the requirement or phase. Test-only synthetic media/evaluators are never reference-content QA.",
-  "trace_review_scope": "All 356 locked clauses and statuses retained. All 420 immutable WAV byte checks and prior audio approval are retained. The autonomous private bridge is transport only; current-HEAD real M01 PostgreSQL/S3 and 420 disposable test deliveries require executed evidence. Test fixture permissions do not close visual QA, OD-004, OD-006 or compound clauses.",
+  "trace_review_scope": "All 356 clauses/statuses retained. Both exact-source 460aab0 real M01 PostgreSQL/S3 runs passed; all 420 original WAVs and 30 SVG drafts imported/replayed/read back after restart. Test publications/delivery do not close reference publication, visual QA, OD-004, OD-006 or compound clauses.",
   "recovery_evidence": "docs/p5/integration-20261015/README.md",
   "private_input_evidence": "docs/p5/integration-20261017/README.md",
   "private_input_transfer_receipt": "docs/p5/integration-20261017/transfer-receipt.json",
-  "real_import_execution_evidence": "docs/p5/integration-20261018/README.md; exact current-HEAD PR #5 acceptance artifact is authoritative; prior real failure retained"
+  "real_import_execution_evidence": "docs/p5/integration-20261018/verified-ci-460aab0.json"
 }

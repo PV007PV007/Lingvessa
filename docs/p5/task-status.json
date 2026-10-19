@@ -286,7 +286,7 @@
         "CHK-N-TS-P17-T02-R05",
         "CHK-N-TS-P19-T03-R08"
       ],
-      "readiness": "Attached approved ZIP and all 420 WAV immutable checksums PASS locally. Private GitHub draft asset transfer and real PostgreSQL/S3 replay/restart plus 420 test deliveries are implemented but require exact-source hosted execution with uploaded bytes. Import itself inserts zero approvals; disposable test permission fixtures do not approve production. OD-004 and visual QA remain open.",
+      "readiness": "Real 420-WAV plus 30 visual-draft PostgreSQL/S3 import, replay, immutable versions, restart and 420 audio + 6 avatar deliveries passed on 460aab0 in both PR/push runs. Import inserts zero approvals; 2556 disposable fixture permissions are not human/visual/production approval. Required reference publication, visual QA/rights and OD-004 remain open.",
       "contract_change": "No governing contract change; P5 concrete implementation only",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
@@ -408,7 +408,7 @@
         "CHK-N-TS-P13-T03-R08",
         "CHK-N-TS-P16-T01-R02"
       ],
-      "readiness": "Owner approved linguistic quality, six voices and audio rights for all 420 final WAVs on 2026-10-14; no repeat generation/review requested. All attached WAV bytes match immutable records. Recorded hosted UI/clock/normal-slow contracts remain evidence on their tested source; actual corpus delivery must be executed on current HEAD.",
+      "readiness": "Owner quality, six-voice and audio-rights approval remains valid for all 420 final WAVs. Exact-source real delivery and independent checksums passed on 460aab0; normal/slow/playback/browser contracts also passed. Activity-specific accessibility and complete reference publication remain open; no repeat audio approval or generation.",
       "contract_change": "No governing contract change; P5 concrete implementation only",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
@@ -791,12 +791,12 @@
     }
   ],
   "timestamp": "2026-10-18T00:00:00Z",
-  "last_hosted_tested_sha": "35dced61a8f9ae36f77379860f414e012de20997",
-  "last_hosted_result": "REAL_M01_FAILED_MISSING_TEST_AVATAR_BINDINGS",
-  "last_full_runtime_pass_sha": "c0f10126db2da1506d377ce34476988f877fe2c8",
-  "ci_evidence": "docs/p5/integration-20261017/parent-ci.json",
-  "current_revision_ci": "Exact current-HEAD CI and acceptance artifact in PR #5 govern the avatar-dependency correction: 420 audio + 6 avatar delivery reads, two publications, 2556 disposable fixture permissions, negative closure and actual-version authorization denials. No synthetic substitution or visual approval.",
-  "latest_attempt_evidence": "docs/p5/integration-20261018/prior-real-failure.json",
+  "last_hosted_tested_sha": "460aab052115f6fe168d180b4ac44369afaab09d",
+  "last_hosted_result": "PASS_REAL_M01_POSTGRESQL_S3_AND_ALL_SEVEN_WORKFLOWS",
+  "last_full_runtime_pass_sha": "460aab052115f6fe168d180b4ac44369afaab09d",
+  "ci_evidence": "docs/p5/integration-20261018/verified-ci-460aab0.json",
+  "current_revision_ci": "This source corrects stale approval reporting and carries independently verified 460aab0 evidence. Its own exact-HEAD PR checks and acceptance artifacts remain authoritative; no parent PASS substitution or evidence-only descendant loop.",
+  "latest_attempt_evidence": "docs/p5/integration-20261018/verified-ci-460aab0.json",
   "local_audition_evidence": "docs/p5/voice-audition/results.json",
   "resolved_hosted_remediation": {
     "issue_id": "P5-DEP-001",
@@ -829,16 +829,31 @@
   "audio_integrity_evidence": "docs/p5/integration-20261016/attached-archive-verification.json",
   "owner_audio_approval": "docs/p5/m01-completion-20261014/owner-approval.json",
   "remaining": [
-    "Actual M01 PostgreSQL/S3 execution with external input",
-    "Required publication integration and visual QA",
+    "Required M01 reference publication and activity-specific accessibility, distinct from disposable test publication",
+    "Human semantic/accessibility/rights review for 30 immutable visual drafts",
     "OD-004 production delivery profile",
-    "OD-006 labelled learner speech calibration",
-    "Remaining applicable compound P5 requirements"
+    "OD-006 labelled learner speech calibration; neutral fallback remains default",
+    "Remaining applicable compound P5 clauses; no P6/P8/P9 implementation"
   ],
   "private_input_transfer": "docs/p5/integration-20261017/README.md",
   "private_input_result": {
     "status": "TRANSFER_AND_INDEPENDENT_DOWNLOAD_VERIFIED",
     "receipt": "docs/p5/integration-20261017/transfer-receipt.json",
-    "real_import_status": "See current-HEAD acceptance artifact; prior failure and correction documented in docs/p5/integration-20261018/README.md"
-  }
+    "real_import_status": "PASS on 460aab0; docs/p5/integration-20261018/verified-ci-460aab0.json"
+  },
+  "historical_before_real_m01_pass": {
+    "last_hosted_tested_sha": "35dced61a8f9ae36f77379860f414e012de20997",
+    "last_hosted_result": "REAL_M01_FAILED_MISSING_TEST_AVATAR_BINDINGS",
+    "last_full_runtime_pass_sha": "c0f10126db2da1506d377ce34476988f877fe2c8",
+    "ci_evidence": "docs/p5/integration-20261017/parent-ci.json",
+    "remaining": [
+      "Actual M01 PostgreSQL/S3 execution with external input",
+      "Required publication integration and visual QA",
+      "OD-004 production delivery profile",
+      "OD-006 labelled learner speech calibration",
+      "Remaining applicable compound P5 requirements"
+    ]
+  },
+  "visual_preflight": "docs/p5/integration-20261018/visual-preflight.json",
+  "remaining_gate_plan": "docs/p5/integration-20261018/remaining-gates.md"
 }
