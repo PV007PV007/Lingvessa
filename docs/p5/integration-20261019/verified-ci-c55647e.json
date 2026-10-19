@@ -1,0 +1,642 @@
+{
+  "schema_version": 1,
+  "tested_sha": "c55647e22d7ac1918db596ae2c4a398fee3b12bd",
+  "scope": "INDEPENDENTLY_DOWNLOADED_EXACT_SOURCE_P5_EVIDENCE",
+  "workflows": [
+    {
+      "id": 39249363505,
+      "name": "P1 foundation",
+      "event": "pull_request",
+      "head_sha": "c55647e22d7ac1918db596ae2c4a398fee3b12bd",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/39249363505"
+    },
+    {
+      "id": 39249363387,
+      "name": "P2 data foundation",
+      "event": "pull_request",
+      "head_sha": "c55647e22d7ac1918db596ae2c4a398fee3b12bd",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/39249363387"
+    },
+    {
+      "id": 39249363442,
+      "name": "P4 mastery and Review",
+      "event": "pull_request",
+      "head_sha": "c55647e22d7ac1918db596ae2c4a398fee3b12bd",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/39249363442"
+    },
+    {
+      "id": 39249363530,
+      "name": "P5 media and speech",
+      "event": "pull_request",
+      "head_sha": "c55647e22d7ac1918db596ae2c4a398fee3b12bd",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/39249363530"
+    },
+    {
+      "id": 39249363458,
+      "name": "P3 lesson engine",
+      "event": "pull_request",
+      "head_sha": "c55647e22d7ac1918db596ae2c4a398fee3b12bd",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/39249363458"
+    },
+    {
+      "id": 39249354922,
+      "name": "P1 foundation",
+      "event": "push",
+      "head_sha": "c55647e22d7ac1918db596ae2c4a398fee3b12bd",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/39249354922"
+    },
+    {
+      "id": 39249355014,
+      "name": "P5 media and speech",
+      "event": "push",
+      "head_sha": "c55647e22d7ac1918db596ae2c4a398fee3b12bd",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/39249355014"
+    }
+  ],
+  "pr": {
+    "artifact_id": 12185881140,
+    "artifact_sha256": "ce50748558ea519f8fb7e6a07f7b06cbcecd5b5af2571c3c7dc3d1310fb9c129",
+    "archive_crc_verified": true,
+    "archive_entries": 62,
+    "audio_or_input_zip_entries": 0,
+    "tested_sha": "c55647e22d7ac1918db596ae2c4a398fee3b12bd",
+    "run_id": "39249363530",
+    "event": "pull_request",
+    "runtime_status": "PASS",
+    "milestone_status": "NOT_READY",
+    "references_verified": 39,
+    "artifact_references": [
+      {
+        "path": "artifacts/p5/m01-private-transfer.json",
+        "sha256": "64b650f491a3af1c3102267b5b7c91d644437bbb22158c6e58d257e6a542f6ed"
+      },
+      {
+        "path": "artifacts/p5/library-s3-validation.json",
+        "sha256": "6013143487420e85e86b270d602845984d5a156a7fa0a755f4ac510b998e4426"
+      },
+      {
+        "path": "artifacts/p5/acoustic-pilot-validation.json",
+        "sha256": "3791b4114630aef18f900a5942bd23b69663c151c5e8c60a53a5174210c7b726"
+      },
+      {
+        "path": "artifacts/p5/m01-input-status.json",
+        "sha256": "d85eff4fdf310a5a1158ac923c7357de2199b76285c04f292daaf8ee10f250d0"
+      },
+      {
+        "path": "artifacts/p5/m01-library-import-validation.json",
+        "sha256": "86a94f886d5d302b159dc6f3b3bfb00fab72efa4953063c713880dec4cbf1d74"
+      },
+      {
+        "path": "artifacts/p5/external-m01-byte-validation.json",
+        "sha256": "dc8a678594b766ed3b38b5d4bcffe21ab3933f0d48a6414566f2067468761bd1"
+      },
+      {
+        "path": "artifacts/p5/storage-validation.json",
+        "sha256": "d4cc7203ed7b2aa4da1400dbf73f0fbe1880f0b7717d6497abc6d7ff6e7eb727"
+      },
+      {
+        "path": "artifacts/p5/media-database-validation.json",
+        "sha256": "824c52fca60e93b9a59cb565d7bdae7b99ab266df136228ceb9900b525d31df1"
+      },
+      {
+        "path": "artifacts/p5/audio-validation.json",
+        "sha256": "30050f95c7ffe9baf9aa8f28c836f685642c9d2a00e506e12c75c75f742c4537"
+      },
+      {
+        "path": "artifacts/p5/speech-database-validation.json",
+        "sha256": "1b0eaba52a800016908e3238d822ad3f4468c07f55637cbef1a19f3d0fa75605"
+      },
+      {
+        "path": "artifacts/p5/baseline-validation.json",
+        "sha256": "d4921a8902b6b76dd13f71896efe066321316509da5c4bb2c9b4c8bf55db6310"
+      },
+      {
+        "path": "artifacts/p5/reference-media-validation.json",
+        "sha256": "e70151a423d6468803040197c5489e147035062d8ae0a810caf485d846369adf"
+      },
+      {
+        "path": "artifacts/p5/browser-results.json",
+        "sha256": "a6ad34c121835c17d430cba637193a4da34354907f92fea9d3e61f32699742b3"
+      },
+      {
+        "path": "artifacts/p5/speech-browser-results.json",
+        "sha256": "210c2b5a6c47f00a93fdc995ebfa5a7a1fe1b4c9a929b2b348a2499f4999e8d6"
+      },
+      {
+        "path": "artifacts/p1/container-build.json",
+        "sha256": "0d357a324dbd4ff6978d9581a3a90df3615ee6ad8fced20d2126b95b68a5b3da"
+      },
+      {
+        "path": "artifacts/p1/container-smoke.json",
+        "sha256": "fc65dcaa690735e7b9f8a8e167063a7737bfb3254428c41aac00d590e178be56"
+      },
+      {
+        "path": "artifacts/p3/acceptance-summary.json",
+        "sha256": "1f9239d6fcc4dc95984a53e1b5b1404c6c0149d0a9a9c57ab5126b8ba2e9fc31"
+      },
+      {
+        "path": "artifacts/p4/acceptance-summary.json",
+        "sha256": "4c668bdfab78816936ce5ffd1c8e5ff1c551f88ad6a6e09372dba573a3464e55"
+      },
+      {
+        "path": "docs/p5/requirement-evidence.json",
+        "sha256": "572da2a14b5020ffdf4d6f44a14318baf90649f17180ec1ae2f9b0c7b463bc4f"
+      },
+      {
+        "path": "artifacts/p5/listening-browser-results.json",
+        "sha256": "92a6ea0ee34db641203895d858c97be7cd843ed67913e55e10566dd1d1708772"
+      },
+      {
+        "path": "artifacts/p5/listening-playback-validation.json",
+        "sha256": "4185601480c06188511df9207076e8ac99943505ad1f724a9eaedbf1d40a9cb4"
+      },
+      {
+        "path": "artifacts/p5/listening-review-manifest.json",
+        "sha256": "9a955402e0ac87422b62dca83b3362a8678873971a6931c8f3d61f467210fd17"
+      },
+      {
+        "path": "artifacts/p5/m01-audio-draft-validation.json",
+        "sha256": "be68b29ac1ae63ace754e70e9618beaef2aeded2d1c3809a45865123acc1af96"
+      },
+      {
+        "path": "artifacts/p5/m01-review-catalog.json",
+        "sha256": "534a78cc4524e1394c225b6d03e013da859ec702f4aee0b0f63fd4d74b131f8d"
+      },
+      {
+        "path": "artifacts/p5/m01-review-catalog-validation.json",
+        "sha256": "03d2897406408c94714b074c346180eaf839b36cd23f2d02da2a4ad01dea9065"
+      },
+      {
+        "path": "artifacts/p5/m01-review-ui-validation.json",
+        "sha256": "7e48be91e70cb4760f52a9bfb8b4073325ac2daa3e7ceede1851dc27acae1f2c"
+      },
+      {
+        "path": "artifacts/p5/m01-review-browser-results.json",
+        "sha256": "88fa6175a27afd7cad03ee4223b40cf3e5ede3b78e57287b65d0726b4430a836"
+      },
+      {
+        "path": "artifacts/p5/m01-review-fixture-manifest.json",
+        "sha256": "ef532a78f7e6e8841d13bfbd043c06a236eaac6cee13d53dc4fe87bab61800f4"
+      },
+      {
+        "path": "artifacts/p5/m01-feedback-validation.json",
+        "sha256": "086a1c47542736a04989667add232d7e23c698f5323a08fcad5f845510889681"
+      },
+      {
+        "path": "artifacts/p5/m01-feedback-browser-export.json",
+        "sha256": "7a95e9abf256384f9398dff5b88f286ba6984187bd489e833c846e4c2ecb088f"
+      },
+      {
+        "path": "artifacts/p5/m01-feedback-browser-intake.json",
+        "sha256": "39e4521c20e12635213b2600033183cf1cb1585947c7876e4eef16ed4f05a848"
+      },
+      {
+        "path": "artifacts/p5/m01-continuation-validation.json",
+        "sha256": "5291975c8bc0274e1440fe1a19d534631cc7e4c470a232d62ee7488507d2b249"
+      },
+      {
+        "path": "artifacts/p5/m01-continuation-plan.json",
+        "sha256": "7029261146299e7af7815ff6640790a6a997185ad38ce266a6d4444818fa323a"
+      },
+      {
+        "path": "artifacts/p5/m01-completion-validation.json",
+        "sha256": "b2d879068e224f43568077337af4334f0b28c129ca4fc98848e678587e192b34"
+      },
+      {
+        "path": "artifacts/p5/m01-completion-tests.json",
+        "sha256": "41198024f1d68b15b3d5b7a7d320579d5ac02f8b9c25c2c14ecf5695b5ea8983"
+      },
+      {
+        "path": "artifacts/p5/m01-dialogue-crosscheck-validation.json",
+        "sha256": "1b73681857cf1d526c59f69fa74030ee228ab791944a88548183bff2fafcb040"
+      },
+      {
+        "path": "artifacts/p5/approved-media-metadata-validation.json",
+        "sha256": "0da59625c5d9f12cccec0fd1f6305c53c57783a078f04a73f9ca7c28a70fcea3"
+      },
+      {
+        "path": "artifacts/p5/media-library-validation.json",
+        "sha256": "be9c862e6e37f9c329e5aebfe5bb4298ab04d5ac4d9fb2c5e38a646e1478f000"
+      },
+      {
+        "path": "docs/p5/m01-completion-20261014/owner-approval.json",
+        "sha256": "292dc272ecddf962d8bc92ee2bba6ad5e9b549f44beedb8107d1504b2ace9ee0"
+      }
+    ],
+    "real_m01_import": {
+      "status": "PASS",
+      "scope": "REAL_M01_BYTES_POSTGRESQL_S3_IMPORT",
+      "commit": "c55647e22d7ac1918db596ae2c4a398fee3b12bd",
+      "source_sha": "c55647e22d7ac1918db596ae2c4a398fee3b12bd",
+      "database": "PostgreSQL 18.6",
+      "imported_versions": 450,
+      "audio_assets": 420,
+      "visual_drafts": 30,
+      "synthetic_vectors": 0,
+      "real_m01_audio_imported": true,
+      "exact_replay": true,
+      "immutable_update_and_delete_rejected": true,
+      "changed_bytes_rejected": true,
+      "database_pool_recreated": true,
+      "storage_adapter_restart_verified": true,
+      "storage_server_restart_verified": true,
+      "all_stored_bytes_verified": true,
+      "anonymous_access_denied": true,
+      "import_inserted_approvals": 0,
+      "test_publications": 2,
+      "test_fixture_asset_approvals": 2556,
+      "test_approval_scope": "DISPOSABLE_TEST_FIXTURE_ONLY_NOT_OWNER_OR_PRODUCTION_APPROVAL",
+      "delivered_assets": 426,
+      "delivered_real_m01_audio_assets": 420,
+      "delivered_test_avatar_assets": 6,
+      "same_language_versioned_avatar_closure_checks": 2,
+      "delivery_scope": "MEDIA_REPOSITORY_OWNER_SCOPED_TEST_LESSON_AFTER_S3_RESTART",
+      "foreign_user_and_activity_denied": true,
+      "production_publication_created": false,
+      "production_delivery_profile_approved": false,
+      "p6_authorized": false,
+      "test_server_source_revision": "9e49d5e7a648f00e26f2246f4dc28e6b07f8c84a",
+      "test_server_binary_sha256": "d971ad945e567ee3093a2d9ec46a65e903f3b5a90077890444f36f60139030e2",
+      "code_bindings": {
+        "tools/p5/verify-m01-s3-import.ts": "24640f15ae94f63489205a9feef417979a1c309277734e1ec86410d460b65e91",
+        "tools/p5/s3-test-fixture.ts": "676d1a7df61b3a0b5903dfa919584ae82088122409aaffaa7fd18bccb90c3570",
+        "tools/p5/media-library.ts": "129031a66ebe737a235bb238de4990a9297f78bd2d666a55a590232f257e0d4f",
+        "infra/persistence/media.ts": "e9d4aaa9f1c6f8f2d88c43dd3e7a08fdfed27afe2527861e63f730be2db79655",
+        "infra/persistence/content.ts": "2affc4bd3632de892b9bb2c9deea3b151db902022d6b18e2553cbd1b2929895a",
+        "packages/provider-adapters/storage/s3.ts": "1375a84fb2b0e5a21b3e96c45a50dfc0a95c0e7ad65daf5c69b99aab02aa148c"
+      }
+    },
+    "private_m01_transfer": {
+      "status": "ARCHIVE_VERIFIED",
+      "release_id": 414560160,
+      "repository_private_verified": true,
+      "release_draft_verified": true,
+      "draft_asset_access_verified": true,
+      "archive_downloaded": true,
+      "expected_archive_sha256": "3edaeaaeb000479921a0b3ff5ec2b52042faeee54bf943eff25e4a4a0f4e516d",
+      "expected_archive_bytes": 63346796,
+      "asset_id": 649769507,
+      "source_sha": "c55647e22d7ac1918db596ae2c4a398fee3b12bd",
+      "real_m01_postgresql_executed": false,
+      "production_delivery_profile_approved": false,
+      "p6_authorized": false,
+      "transport_token_scope": "ISOLATED_INPUT_JOB_CONTENTS_WRITE",
+      "relay_retention_days": 1,
+      "relay_received_and_source_bound": true,
+      "test_job_needs_no_release_token": true
+    },
+    "external_byte_check": {
+      "status": "PASS",
+      "scope": "EXTERNAL_M01_BYTES_AND_LOCAL_ADAPTER_ONLY",
+      "approved_dataset_sha256": "81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf",
+      "files": 420,
+      "audio_bytes": 35876788,
+      "languages": {
+        "en": {
+          "final_files": 210,
+          "pilot_single_turns": 202,
+          "dialogue_files": 8
+        },
+        "cs": {
+          "final_files": 210,
+          "pilot_single_turns": 200,
+          "dialogue_files": 10
+        }
+      },
+      "pilot_files": 402,
+      "pilot_excludes_dialogue_files": 18,
+      "controls_are_final_assets": false,
+      "visual_drafts": 30,
+      "registry_versions_verified": 450,
+      "pcm_and_frame_cues_verified": true,
+      "six_voice_bindings_verified": true,
+      "normal_slow_bindings_verified": true,
+      "local_adapter_recreated": true,
+      "all_stored_bytes_verified": true,
+      "exact_replay": true,
+      "changed_bytes_rejected": true,
+      "postgresql_executed": false,
+      "s3_executed": false,
+      "audio_regenerated": false,
+      "production_calibration_approved": false,
+      "p6_authorized": false,
+      "code_bindings": {
+        "tools/p5/verify-external-m01.ts": "988217170d01184f2d732fc905b7b67789360e32355fbb1eab0aff1695c7e291",
+        "tools/p5/media-library.ts": "129031a66ebe737a235bb238de4990a9297f78bd2d666a55a590232f257e0d4f",
+        "assets/media/m01/registry.json": "2a5e8632987beec7bf34d31fc1f5552dee95f56eb0b971d6caac847bbffdea3d",
+        "assets/media/m01/source-all-assets.json": "21664c1f8bdadb9aef0694854edc50214835d7919078d96749814c661ea29293",
+        "docs/p5/m01-completion-20261014/owner-approval.json": "292dc272ecddf962d8bc92ee2bba6ad5e9b549f44beedb8107d1504b2ace9ee0",
+        "docs/p5/acoustic-provider/pilot-plan.json": "ad1d060e16e6ebbeb012fcf868fc9c4b00cc11c00d2d7b99506acf651820214a",
+        "docs/p5/acoustic-provider/pilot-results/summary.json": "5cd2b9936cd6bda985c1e301a3108005e934ba72acc9343ce9b7f959b3003d6b"
+      }
+    },
+    "trace_counts": {
+      "PASS": 174,
+      "PARTIAL": 30,
+      "PENDING": 152
+    },
+    "p6_authorized": false
+  },
+  "push": {
+    "artifact_id": 12186295658,
+    "artifact_sha256": "e8cab55628f9e2cd6678aa8fae915dd46c8b745bfdfaca550a12e80179c13837",
+    "archive_crc_verified": true,
+    "archive_entries": 62,
+    "audio_or_input_zip_entries": 0,
+    "tested_sha": "c55647e22d7ac1918db596ae2c4a398fee3b12bd",
+    "run_id": "39249355014",
+    "event": "push",
+    "runtime_status": "PASS",
+    "milestone_status": "NOT_READY",
+    "references_verified": 39,
+    "artifact_references": [
+      {
+        "path": "artifacts/p5/m01-private-transfer.json",
+        "sha256": "64b650f491a3af1c3102267b5b7c91d644437bbb22158c6e58d257e6a542f6ed"
+      },
+      {
+        "path": "artifacts/p5/library-s3-validation.json",
+        "sha256": "6013143487420e85e86b270d602845984d5a156a7fa0a755f4ac510b998e4426"
+      },
+      {
+        "path": "artifacts/p5/acoustic-pilot-validation.json",
+        "sha256": "3791b4114630aef18f900a5942bd23b69663c151c5e8c60a53a5174210c7b726"
+      },
+      {
+        "path": "artifacts/p5/m01-input-status.json",
+        "sha256": "7faf88cf9a7b7f359f0d39fb648bbafb6e53f1d7a439bcdf03f184cf07a325ea"
+      },
+      {
+        "path": "artifacts/p5/m01-library-import-validation.json",
+        "sha256": "86a94f886d5d302b159dc6f3b3bfb00fab72efa4953063c713880dec4cbf1d74"
+      },
+      {
+        "path": "artifacts/p5/external-m01-byte-validation.json",
+        "sha256": "dc8a678594b766ed3b38b5d4bcffe21ab3933f0d48a6414566f2067468761bd1"
+      },
+      {
+        "path": "artifacts/p5/storage-validation.json",
+        "sha256": "12028aeb825c6d63138a1a821f22f1620e4fe3784b939c7a1023845d966b2a5c"
+      },
+      {
+        "path": "artifacts/p5/media-database-validation.json",
+        "sha256": "824c52fca60e93b9a59cb565d7bdae7b99ab266df136228ceb9900b525d31df1"
+      },
+      {
+        "path": "artifacts/p5/audio-validation.json",
+        "sha256": "30050f95c7ffe9baf9aa8f28c836f685642c9d2a00e506e12c75c75f742c4537"
+      },
+      {
+        "path": "artifacts/p5/speech-database-validation.json",
+        "sha256": "1b0eaba52a800016908e3238d822ad3f4468c07f55637cbef1a19f3d0fa75605"
+      },
+      {
+        "path": "artifacts/p5/baseline-validation.json",
+        "sha256": "2c344913601e44f3dd48042ebc04ee55e1733e334c02c2089ee0186397cab193"
+      },
+      {
+        "path": "artifacts/p5/reference-media-validation.json",
+        "sha256": "e70151a423d6468803040197c5489e147035062d8ae0a810caf485d846369adf"
+      },
+      {
+        "path": "artifacts/p5/browser-results.json",
+        "sha256": "728af3b6db03d0cd0c4b0ba1cf428b84659d98c48053644df9de4ad25b1edb5b"
+      },
+      {
+        "path": "artifacts/p5/speech-browser-results.json",
+        "sha256": "412d69091366621bd01754d4ced7cd0622100fb08bdce5e70487376633653b56"
+      },
+      {
+        "path": "artifacts/p1/container-build.json",
+        "sha256": "851461be63c207c8bf14c0a02767972f9919feb1d090a1d2e1435f72e54994ad"
+      },
+      {
+        "path": "artifacts/p1/container-smoke.json",
+        "sha256": "fc65dcaa690735e7b9f8a8e167063a7737bfb3254428c41aac00d590e178be56"
+      },
+      {
+        "path": "artifacts/p3/acceptance-summary.json",
+        "sha256": "20291ba4696486370214e43599f607b116274f8d8bd48517def7fb5ef24bc4e1"
+      },
+      {
+        "path": "artifacts/p4/acceptance-summary.json",
+        "sha256": "1e6f8d236eb57a4de970b1efe985070e7c6a5245be12afc9e8216294f188af23"
+      },
+      {
+        "path": "docs/p5/requirement-evidence.json",
+        "sha256": "572da2a14b5020ffdf4d6f44a14318baf90649f17180ec1ae2f9b0c7b463bc4f"
+      },
+      {
+        "path": "artifacts/p5/listening-browser-results.json",
+        "sha256": "c63ae122d0b35699740d283cbc772f1d0be22ef23c70ab14088dac40de12a5bf"
+      },
+      {
+        "path": "artifacts/p5/listening-playback-validation.json",
+        "sha256": "7eb430c7a5cba6182b0c281c97acca848024f0069fce37608fede035ca687ba1"
+      },
+      {
+        "path": "artifacts/p5/listening-review-manifest.json",
+        "sha256": "9a955402e0ac87422b62dca83b3362a8678873971a6931c8f3d61f467210fd17"
+      },
+      {
+        "path": "artifacts/p5/m01-audio-draft-validation.json",
+        "sha256": "be68b29ac1ae63ace754e70e9618beaef2aeded2d1c3809a45865123acc1af96"
+      },
+      {
+        "path": "artifacts/p5/m01-review-catalog.json",
+        "sha256": "534a78cc4524e1394c225b6d03e013da859ec702f4aee0b0f63fd4d74b131f8d"
+      },
+      {
+        "path": "artifacts/p5/m01-review-catalog-validation.json",
+        "sha256": "03d2897406408c94714b074c346180eaf839b36cd23f2d02da2a4ad01dea9065"
+      },
+      {
+        "path": "artifacts/p5/m01-review-ui-validation.json",
+        "sha256": "4dbe8a0d0763b2f80dd3538c76995420256e22f3a01d9959d2d4c6041d04bae0"
+      },
+      {
+        "path": "artifacts/p5/m01-review-browser-results.json",
+        "sha256": "384e4af671601edd6cb1ed0b30cc4c848b08e558a96f58a5e3a8312749bcdc0b"
+      },
+      {
+        "path": "artifacts/p5/m01-review-fixture-manifest.json",
+        "sha256": "ef532a78f7e6e8841d13bfbd043c06a236eaac6cee13d53dc4fe87bab61800f4"
+      },
+      {
+        "path": "artifacts/p5/m01-feedback-validation.json",
+        "sha256": "086a1c47542736a04989667add232d7e23c698f5323a08fcad5f845510889681"
+      },
+      {
+        "path": "artifacts/p5/m01-feedback-browser-export.json",
+        "sha256": "8bc7961f02d542d498c343ef926e1dd6bdb2d749c2680593f727f0cd5312594a"
+      },
+      {
+        "path": "artifacts/p5/m01-feedback-browser-intake.json",
+        "sha256": "a66cd2db4dbf6117fdd842018744c6a627da903bdd1c156632385fffdb60c6b9"
+      },
+      {
+        "path": "artifacts/p5/m01-continuation-validation.json",
+        "sha256": "5291975c8bc0274e1440fe1a19d534631cc7e4c470a232d62ee7488507d2b249"
+      },
+      {
+        "path": "artifacts/p5/m01-continuation-plan.json",
+        "sha256": "7029261146299e7af7815ff6640790a6a997185ad38ce266a6d4444818fa323a"
+      },
+      {
+        "path": "artifacts/p5/m01-completion-validation.json",
+        "sha256": "b2d879068e224f43568077337af4334f0b28c129ca4fc98848e678587e192b34"
+      },
+      {
+        "path": "artifacts/p5/m01-completion-tests.json",
+        "sha256": "41198024f1d68b15b3d5b7a7d320579d5ac02f8b9c25c2c14ecf5695b5ea8983"
+      },
+      {
+        "path": "artifacts/p5/m01-dialogue-crosscheck-validation.json",
+        "sha256": "1b73681857cf1d526c59f69fa74030ee228ab791944a88548183bff2fafcb040"
+      },
+      {
+        "path": "artifacts/p5/approved-media-metadata-validation.json",
+        "sha256": "0da59625c5d9f12cccec0fd1f6305c53c57783a078f04a73f9ca7c28a70fcea3"
+      },
+      {
+        "path": "artifacts/p5/media-library-validation.json",
+        "sha256": "be9c862e6e37f9c329e5aebfe5bb4298ab04d5ac4d9fb2c5e38a646e1478f000"
+      },
+      {
+        "path": "docs/p5/m01-completion-20261014/owner-approval.json",
+        "sha256": "292dc272ecddf962d8bc92ee2bba6ad5e9b549f44beedb8107d1504b2ace9ee0"
+      }
+    ],
+    "real_m01_import": {
+      "status": "PASS",
+      "scope": "REAL_M01_BYTES_POSTGRESQL_S3_IMPORT",
+      "commit": "c55647e22d7ac1918db596ae2c4a398fee3b12bd",
+      "source_sha": "c55647e22d7ac1918db596ae2c4a398fee3b12bd",
+      "database": "PostgreSQL 18.6",
+      "imported_versions": 450,
+      "audio_assets": 420,
+      "visual_drafts": 30,
+      "synthetic_vectors": 0,
+      "real_m01_audio_imported": true,
+      "exact_replay": true,
+      "immutable_update_and_delete_rejected": true,
+      "changed_bytes_rejected": true,
+      "database_pool_recreated": true,
+      "storage_adapter_restart_verified": true,
+      "storage_server_restart_verified": true,
+      "all_stored_bytes_verified": true,
+      "anonymous_access_denied": true,
+      "import_inserted_approvals": 0,
+      "test_publications": 2,
+      "test_fixture_asset_approvals": 2556,
+      "test_approval_scope": "DISPOSABLE_TEST_FIXTURE_ONLY_NOT_OWNER_OR_PRODUCTION_APPROVAL",
+      "delivered_assets": 426,
+      "delivered_real_m01_audio_assets": 420,
+      "delivered_test_avatar_assets": 6,
+      "same_language_versioned_avatar_closure_checks": 2,
+      "delivery_scope": "MEDIA_REPOSITORY_OWNER_SCOPED_TEST_LESSON_AFTER_S3_RESTART",
+      "foreign_user_and_activity_denied": true,
+      "production_publication_created": false,
+      "production_delivery_profile_approved": false,
+      "p6_authorized": false,
+      "test_server_source_revision": "9e49d5e7a648f00e26f2246f4dc28e6b07f8c84a",
+      "test_server_binary_sha256": "d971ad945e567ee3093a2d9ec46a65e903f3b5a90077890444f36f60139030e2",
+      "code_bindings": {
+        "tools/p5/verify-m01-s3-import.ts": "24640f15ae94f63489205a9feef417979a1c309277734e1ec86410d460b65e91",
+        "tools/p5/s3-test-fixture.ts": "676d1a7df61b3a0b5903dfa919584ae82088122409aaffaa7fd18bccb90c3570",
+        "tools/p5/media-library.ts": "129031a66ebe737a235bb238de4990a9297f78bd2d666a55a590232f257e0d4f",
+        "infra/persistence/media.ts": "e9d4aaa9f1c6f8f2d88c43dd3e7a08fdfed27afe2527861e63f730be2db79655",
+        "infra/persistence/content.ts": "2affc4bd3632de892b9bb2c9deea3b151db902022d6b18e2553cbd1b2929895a",
+        "packages/provider-adapters/storage/s3.ts": "1375a84fb2b0e5a21b3e96c45a50dfc0a95c0e7ad65daf5c69b99aab02aa148c"
+      }
+    },
+    "private_m01_transfer": {
+      "status": "ARCHIVE_VERIFIED",
+      "release_id": 414560160,
+      "repository_private_verified": true,
+      "release_draft_verified": true,
+      "draft_asset_access_verified": true,
+      "archive_downloaded": true,
+      "expected_archive_sha256": "3edaeaaeb000479921a0b3ff5ec2b52042faeee54bf943eff25e4a4a0f4e516d",
+      "expected_archive_bytes": 63346796,
+      "asset_id": 649769507,
+      "source_sha": "c55647e22d7ac1918db596ae2c4a398fee3b12bd",
+      "real_m01_postgresql_executed": false,
+      "production_delivery_profile_approved": false,
+      "p6_authorized": false,
+      "transport_token_scope": "ISOLATED_INPUT_JOB_CONTENTS_WRITE",
+      "relay_retention_days": 1,
+      "relay_received_and_source_bound": true,
+      "test_job_needs_no_release_token": true
+    },
+    "external_byte_check": {
+      "status": "PASS",
+      "scope": "EXTERNAL_M01_BYTES_AND_LOCAL_ADAPTER_ONLY",
+      "approved_dataset_sha256": "81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf",
+      "files": 420,
+      "audio_bytes": 35876788,
+      "languages": {
+        "en": {
+          "final_files": 210,
+          "pilot_single_turns": 202,
+          "dialogue_files": 8
+        },
+        "cs": {
+          "final_files": 210,
+          "pilot_single_turns": 200,
+          "dialogue_files": 10
+        }
+      },
+      "pilot_files": 402,
+      "pilot_excludes_dialogue_files": 18,
+      "controls_are_final_assets": false,
+      "visual_drafts": 30,
+      "registry_versions_verified": 450,
+      "pcm_and_frame_cues_verified": true,
+      "six_voice_bindings_verified": true,
+      "normal_slow_bindings_verified": true,
+      "local_adapter_recreated": true,
+      "all_stored_bytes_verified": true,
+      "exact_replay": true,
+      "changed_bytes_rejected": true,
+      "postgresql_executed": false,
+      "s3_executed": false,
+      "audio_regenerated": false,
+      "production_calibration_approved": false,
+      "p6_authorized": false,
+      "code_bindings": {
+        "tools/p5/verify-external-m01.ts": "988217170d01184f2d732fc905b7b67789360e32355fbb1eab0aff1695c7e291",
+        "tools/p5/media-library.ts": "129031a66ebe737a235bb238de4990a9297f78bd2d666a55a590232f257e0d4f",
+        "assets/media/m01/registry.json": "2a5e8632987beec7bf34d31fc1f5552dee95f56eb0b971d6caac847bbffdea3d",
+        "assets/media/m01/source-all-assets.json": "21664c1f8bdadb9aef0694854edc50214835d7919078d96749814c661ea29293",
+        "docs/p5/m01-completion-20261014/owner-approval.json": "292dc272ecddf962d8bc92ee2bba6ad5e9b549f44beedb8107d1504b2ace9ee0",
+        "docs/p5/acoustic-provider/pilot-plan.json": "ad1d060e16e6ebbeb012fcf868fc9c4b00cc11c00d2d7b99506acf651820214a",
+        "docs/p5/acoustic-provider/pilot-results/summary.json": "5cd2b9936cd6bda985c1e301a3108005e934ba72acc9343ce9b7f959b3003d6b"
+      }
+    },
+    "trace_counts": {
+      "PASS": 174,
+      "PARTIAL": 30,
+      "PENDING": 152
+    },
+    "p6_authorized": false
+  },
+  "references_verified": 78,
+  "milestone_status": "NOT_READY",
+  "p6_authorized": false,
+  "merge_authorized": false
+}

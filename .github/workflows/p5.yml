@@ -192,11 +192,16 @@ jobs:
         run: |
           python3 tools/p5/build-approved-media.py --check --metadata-only
           node --import tsx tools/p5/verify-approved-media-metadata.ts
+          node --import tsx tools/p5/prepare-m01-publication.ts
       - name: Verify retained acoustic pilot (402 single-turn files, no inference)
         run: python3 tools/p5/calibrate-acoustic.py verify --report artifacts/p5/acoustic-pilot-validation.json
       - name: Install Chromium with bounded package-network waits
         timeout-minutes: 10
         run: pnpm exec playwright install --with-deps chromium
+      - name: Build and exercise the unchanged 30-item visual review packet
+        run: |
+          python3 tools/p5/build-visual-review.py
+          pnpm exec playwright test --config tools/p5/visual-review.playwright.config.ts
       - name: Build and exercise the offline human listening worksheet
         run: |
           python3 tools/p5/build-listening-review.py

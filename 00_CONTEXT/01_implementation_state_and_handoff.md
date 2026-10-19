@@ -1,9 +1,17 @@
 # Lingvessa implementation state and handoff
 
-Updated: 2026-10-18. **P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED; P6 NOT AUTHORIZED.**
+Updated: 2026-10-19. **P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED; P6 NOT AUTHORIZED.**
 Branch `implementation/p5-media-speech`; [PR #5](https://github.com/PV007PV007/Lingvessa/pull/5) OPEN DRAFT. Accepted main/P4: `5027f001237b6451237d87343ebeca58cd0af007`.
 
-## Verified real M01 execution — 2026-10-18
+## Publication bindings and visual review continuation — 2026-10-19
+
+Previous HEAD `c55647e22d7ac1918db596ae2c4a398fee3b12bd` passed all seven workflows / eleven jobs and both independent artifact audits (78 references). [Retained evidence](../docs/p5/integration-20261019/verified-ci-c55647e.json). Its 426 successful delivery reads are historical; this revision requires a new exact-HEAD run for the expanded 450-delivery test.
+
+All 450 required catalog identities now resolve to immutable media versions, including 210 normal/slow pairs and exact voice/character/avatar dependencies. The real PostgreSQL/S3 test expands delivery to all 420 approved WAVs + all 30 unchanged visual drafts, with 2,700 explicitly disposable fixture permissions, zero import-created approvals and retained authorization/closure failures. An offline, hash-bound 30-item visual worksheet supports semantic/accessibility/rights comments without automatic approval. [Current commands, evidence and boundaries](../docs/p5/integration-20261019/README.md).
+
+The original private release archive remains verified and reusable. No generation, re-upload, WAV Git storage, repeated audio approval, merge or P6. Visual human/rights decisions, required reference publication, OD-004, OD-006 and applicable compound clauses remain open. Current-source results belong in PR #5 and its exact-source CI artifacts; do not claim this revision passed from parent evidence.
+
+## Historical verified real M01 execution — 2026-10-18
 
 Both P5 PR and push runs passed on `460aab052115f6fe168d180b4ac44369afaab09d`, together with all five P1–P4 runs. Both ordinary evidence archives were independently downloaded; their digests, CRC, 39 references each and source/code bindings matched. [Durable exact-source evidence](../docs/p5/integration-20261018/verified-ci-460aab0.json).
 

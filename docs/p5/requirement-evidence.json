@@ -14627,11 +14627,30 @@
       "verification_note": "P5 foundation is present or planned; the entire source clause is not proven by synthetic media fixtures. Required content/QA/operational or optional AI behavior must remain separately evidenced."
     }
   ],
-  "timestamp": "2026-10-18T00:00:00Z",
+  "timestamp": "2026-10-19T00:00:00Z",
   "evidence_policy": "PASS rows cite executed evidence on an exact remote SHA. PARTIAL rows do not close the requirement or phase. Test-only synthetic media/evaluators are never reference-content QA.",
-  "trace_review_scope": "All 356 clauses/statuses retained. Both exact-source 460aab0 real M01 PostgreSQL/S3 runs passed; all 420 original WAVs and 30 SVG drafts imported/replayed/read back after restart. Test publications/delivery do not close reference publication, visual QA, OD-004, OD-006 or compound clauses.",
+  "trace_review_scope": "All 356 clauses/statuses retained. Both exact-source c55647e real M01 PostgreSQL/S3 runs passed; all 420 original WAVs and 30 SVG drafts imported/replayed/read back after restart. Test publications/delivery do not close reference publication, visual QA, OD-004, OD-006 or compound clauses.",
   "recovery_evidence": "docs/p5/integration-20261015/README.md",
   "private_input_evidence": "docs/p5/integration-20261017/README.md",
   "private_input_transfer_receipt": "docs/p5/integration-20261017/transfer-receipt.json",
-  "real_import_execution_evidence": "docs/p5/integration-20261018/verified-ci-460aab0.json"
+  "real_import_execution_evidence": "docs/p5/integration-20261019/verified-ci-c55647e.json",
+  "current_publication_preparation": {
+    "documentation": "docs/p5/integration-20261019/README.md",
+    "code": [
+      "tools/p5/m01-publication-bindings.ts",
+      "tools/p5/prepare-m01-publication.ts",
+      "tools/p5/verify-m01-s3-import.ts",
+      "tools/p5/build-visual-review.py"
+    ],
+    "tests": [
+      "tests/unit/p5-publication-bindings.test.ts",
+      "tests/browser/p5-visual-review.spec.ts"
+    ],
+    "expected_catalog_bindings": 450,
+    "expected_delivery_reads": 450,
+    "approval_scope": "DISPOSABLE_TEST_FIXTURE_ONLY",
+    "human_visual_review": "PENDING",
+    "requirement_statuses_promoted": 0,
+    "execution_evidence": "Exact current-HEAD P5 acceptance artifact and PR #5; parent evidence is historical only"
+  }
 }

@@ -286,7 +286,7 @@
         "CHK-N-TS-P17-T02-R05",
         "CHK-N-TS-P19-T03-R08"
       ],
-      "readiness": "Real 420-WAV plus 30 visual-draft PostgreSQL/S3 import, replay, immutable versions, restart and 420 audio + 6 avatar deliveries passed on 460aab0 in both PR/push runs. Import inserts zero approvals; 2556 disposable fixture permissions are not human/visual/production approval. Required reference publication, visual QA/rights and OD-004 remain open.",
+      "readiness": "Real 420-WAV plus 30 visual-draft PostgreSQL/S3 import, replay, immutable versions, restart and 420 audio + 6 avatar deliveries passed on c55647e in both PR/push runs. Import inserts zero approvals; 2556 disposable fixture permissions are not human/visual/production approval. Required reference publication, visual QA/rights and OD-004 remain open.",
       "contract_change": "No governing contract change; P5 concrete implementation only",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
@@ -408,7 +408,7 @@
         "CHK-N-TS-P13-T03-R08",
         "CHK-N-TS-P16-T01-R02"
       ],
-      "readiness": "Owner quality, six-voice and audio-rights approval remains valid for all 420 final WAVs. Exact-source real delivery and independent checksums passed on 460aab0; normal/slow/playback/browser contracts also passed. Activity-specific accessibility and complete reference publication remain open; no repeat audio approval or generation.",
+      "readiness": "Owner quality, six-voice and audio-rights approval remains valid for all 420 final WAVs. Exact-source real delivery and independent checksums passed on c55647e; normal/slow/playback/browser contracts also passed. Activity-specific accessibility and complete reference publication remain open; no repeat audio approval or generation.",
       "contract_change": "No governing contract change; P5 concrete implementation only",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
@@ -790,13 +790,13 @@
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
     }
   ],
-  "timestamp": "2026-10-18T00:00:00Z",
-  "last_hosted_tested_sha": "460aab052115f6fe168d180b4ac44369afaab09d",
+  "timestamp": "2026-10-19T00:00:00Z",
+  "last_hosted_tested_sha": "c55647e22d7ac1918db596ae2c4a398fee3b12bd",
   "last_hosted_result": "PASS_REAL_M01_POSTGRESQL_S3_AND_ALL_SEVEN_WORKFLOWS",
-  "last_full_runtime_pass_sha": "460aab052115f6fe168d180b4ac44369afaab09d",
-  "ci_evidence": "docs/p5/integration-20261018/verified-ci-460aab0.json",
-  "current_revision_ci": "This source corrects stale approval reporting and carries independently verified 460aab0 evidence. Its own exact-HEAD PR checks and acceptance artifacts remain authoritative; no parent PASS substitution or evidence-only descendant loop.",
-  "latest_attempt_evidence": "docs/p5/integration-20261018/verified-ci-460aab0.json",
+  "last_full_runtime_pass_sha": "c55647e22d7ac1918db596ae2c4a398fee3b12bd",
+  "ci_evidence": "docs/p5/integration-20261019/verified-ci-c55647e.json",
+  "current_revision_ci": "This revision prepares all 450 catalog bindings and expands real delivery from 426 to 450 assets, with a 30-item visual worksheet. Its exact-HEAD checks/artifacts in PR #5 determine success. Prior c55647e evidence is retained separately; no source result is inferred from parent CI.",
+  "latest_attempt_evidence": "docs/p5/integration-20261019/verified-ci-c55647e.json",
   "local_audition_evidence": "docs/p5/voice-audition/results.json",
   "resolved_hosted_remediation": {
     "issue_id": "P5-DEP-001",
@@ -839,7 +839,7 @@
   "private_input_result": {
     "status": "TRANSFER_AND_INDEPENDENT_DOWNLOAD_VERIFIED",
     "receipt": "docs/p5/integration-20261017/transfer-receipt.json",
-    "real_import_status": "PASS on 460aab0; docs/p5/integration-20261018/verified-ci-460aab0.json"
+    "real_import_status": "PASS on c55647e; docs/p5/integration-20261019/verified-ci-c55647e.json"
   },
   "historical_before_real_m01_pass": {
     "last_hosted_tested_sha": "35dced61a8f9ae36f77379860f414e012de20997",
@@ -855,5 +855,16 @@
     ]
   },
   "visual_preflight": "docs/p5/integration-20261018/visual-preflight.json",
-  "remaining_gate_plan": "docs/p5/integration-20261018/remaining-gates.md"
+  "remaining_gate_plan": "docs/p5/integration-20261019/README.md",
+  "publication_preparation": {
+    "documentation": "docs/p5/integration-20261019/README.md",
+    "expected_resolved_assets": 450,
+    "expected_test_delivery_assets": 450,
+    "audio_assets": 420,
+    "visual_drafts": 30,
+    "automatic_approval_insertion": false,
+    "publication_ready": false,
+    "visual_review": "PENDING",
+    "current_source_execution": "SEE_EXACT_HEAD_PR_CHECKS_AND_ARTIFACTS"
+  }
 }

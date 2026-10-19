@@ -16,6 +16,7 @@ import {seedBootstrap} from '../../prisma/seed.js';
 import {p5MediaFixture,svgAsset} from '../../tests/support/p5-fixtures.js';
 import {loadMediaLibrary,importMediaLibrary} from './media-library.js';
 import type {LoadedMediaLibrary} from './media-library.js';
+import {resolveM01Bindings} from './m01-publication-bindings.js';
 import type {ContentPayload} from '../../packages/activity-schemas/src/content.js';
 import {assetObjectKey} from '../../packages/provider-adapters/storage/asset-integrity.js';
 import {s3TestFixture,minioTestRevision} from './s3-test-fixture.js';
@@ -42,6 +43,13 @@ if(real){
  entries:Array.from({length:450},(_,n)=>{const a=svgAsset(n%2?'cs':'en');a.metadata.stable_code='SYNTHETIC_S3_'+n;return {file:'SYNTHETIC/'+n+'.svg',metadata:a.metadata,bytes:a.bytes,batch_id:id};})};
 }
 assert.equal(library.entries.length,450);
+let bindingPlanSha256:string|null=null;
+if(real){
+ const planBytes=await readFile('artifacts/p5/m01-publication-bindings.json'),plan=JSON.parse(planBytes.toString('utf8'));
+ assert.equal(plan.source_sha,commit);assert.equal(plan.publication_ready,false);
+ assert.deepEqual(plan.bindings,resolveM01Bindings(library,JSON.parse(await readFile('assets/specs/p5/reference-media.registry.json','utf8'))));
+ bindingPlanSha256=createHash('sha256').update(planBytes).digest('hex');
+}
 const admin=new pg.Client({connectionString:base,connectionTimeoutMillis:3000}),name='lingvessa_p5_test_'+randomBytes(8).toString('hex'),url=new URL(base);url.pathname='/'+name;
 const env={...process.env,LINGVESSA_ENV:'local',DATABASE_URL:url.toString()};
 let pool:pg.Pool|undefined,created=false,storage:Awaited<ReturnType<typeof s3TestFixture>>|undefined;
@@ -84,7 +92,8 @@ try{
   assert.equal(row.checksum,m.checksum);assert.equal(Number(row.byte_length),m.byte_length);assert.equal(row.object_key,k);assert.deepEqual(row.metadata,m);
  }
  assert.deepEqual(await importMediaLibrary(media,f.author,library),outputs);assert.deepEqual(await before(),snapshot);
- let testPublications=0,deliveredAssets=0,deliveredAudioAssets=0,deliveredAvatarAssets=0,testFixtureApprovals=0,avatarClosureChecks=0;
+ let testPublications=0,deliveredAssets=0,deliveredAudioAssets=0,deliveredVisualAssets=0,deliveredAvatarAssets=0,testFixtureApprovals=0,avatarClosureChecks=0;
+ const deliveredPins:Array<{asset_id:string;asset_version:number;checksum:string;metadata_checksum:string}>=[];
  // Disposable test publications use fixture approvals, never new human/production approvals.
  // The importer above must still insert zero approvals/publications. Approved M01 bytes/metadata are unchanged.
  for(const language of ['en','cs'] as const){
@@ -92,15 +101,15 @@ try{
    ?library.entries.filter(e=>e.metadata.kind==='audio'&&e.metadata.scope.language===language)
    :[library.entries.find(e=>e.metadata.scope.language===language)!];
   assert.equal(audioEntries.length,real?210:1);
-  const avatars=real?library.entries.filter(e=>e.metadata.kind==='avatar'&&e.metadata.scope.language===language):[];
-  assert.equal(avatars.length,real?3:0);
-  const entries=[...audioEntries,...avatars];
+  const visuals=real?library.entries.filter(e=>e.metadata.kind!=='audio'&&e.metadata.scope.language===language):[];
+  assert.equal(visuals.length,real?15:0);assert.equal(visuals.filter(e=>e.metadata.kind==='avatar').length,real?3:0);
+  const entries=[...audioEntries,...visuals];
   const executable=executableLessonFixtureSchema.parse(JSON.parse(await readFile('content/fixtures/p3/'+language+'-lesson.json','utf8')));
   await loadExecutableLessonFixture(pool,f.author,executable);
   const payload=(await pool.query('SELECT payload FROM content_versions WHERE id=$1',[executable.content_version_id])).rows[0].payload as ContentPayload;
   const activity=payload.activities![0]!;
   for(const entry of entries){
-   const ref={asset_id:entry.metadata.asset_id,asset_stable_code:entry.metadata.stable_code,asset_version:entry.metadata.asset_version,role:real?(entry.metadata.kind==='avatar'?'test_dialogue_avatar':'test_imported_audio'):'imported_vector'};
+   const ref={asset_id:entry.metadata.asset_id,asset_stable_code:entry.metadata.stable_code,asset_version:entry.metadata.asset_version,role:real?(entry.metadata.kind==='avatar'?'test_dialogue_avatar':entry.metadata.kind==='audio'?'test_imported_audio':'test_imported_visual'):'imported_vector'};
    activity.media_refs.push(ref);activity.contract!.presentation.media_refs.push(ref);
   }
   if(real){
@@ -129,6 +138,7 @@ try{
   const publication=await content.publish({id:randomUUID(),actorId:f.reviewer,courseId:source.entities.find(e=>e.kind==='course')!.id,languageId:source.language_id,channel:'test',versionCode:'s3-import-'+language,versionIds});
   const storedPins:Array<{asset_id:string;asset_version:number;checksum:string;metadata_checksum:string}>=(await pool.query('SELECT asset_id,asset_version,checksum,metadata_checksum FROM publication_assets WHERE publication_id=$1 ORDER BY asset_id',[publication.id])).rows;
   assert.deepEqual(storedPins,pins.toSorted((a,b)=>a.asset_id.localeCompare(b.asset_id)));
+  deliveredPins.push(...storedPins);
   const profile=randomUUID();await pool.query('INSERT INTO language_profiles(id,user_id,language_id,variant_id) SELECT $1,$2,$3,id FROM variants WHERE language_id=$3 AND is_default',[profile,f.learner,source.language_id]);
   const run=await new LessonRepository(pool).start(f.learner,{language_profile_id:profile,publication_id:publication.id,lesson_id:executable.lesson_id});
   for(const entry of entries){
@@ -136,6 +146,7 @@ try{
    assert.deepEqual(Buffer.from(delivered.bytes),entry.bytes);assert.equal(delivered.metadata.checksum,entry.metadata.checksum);
    assert.equal(delivered.metadata.scope.language,language);deliveredAssets++;
    if(entry.metadata.kind==='audio')deliveredAudioAssets++;
+   if(real&&entry.metadata.kind!=='audio')deliveredVisualAssets++;
    if(entry.metadata.kind==='avatar')deliveredAvatarAssets++;
   }
   const firstEntry=entries[0]!;
@@ -144,12 +155,14 @@ try{
   await assert.rejects(pool.query('UPDATE publication_assets SET checksum=$1 WHERE publication_id=$2',['0'.repeat(64),publication.id]),{code:'23514'});testPublications++;
  }
  assert.equal((await pool.query("SELECT count(*) FROM media_jobs WHERE job_kind='generation'")).rows[0].count,'0');
- assert.equal(testPublications,2);assert.equal(deliveredAssets,real?426:2);
+ assert.equal(testPublications,2);assert.equal(deliveredAssets,real?450:2);
+ assert.equal(deliveredVisualAssets,real?30:0);
  assert.equal(deliveredAudioAssets,real?420:0);assert.equal(deliveredAvatarAssets,real?6:0);assert.equal(avatarClosureChecks,real?2:0);
  assert.equal(testFixtureApprovals,deliveredAssets*mediaApprovalGates.length);
  assert.equal(Number((await pool.query('SELECT count(*) FROM asset_approvals')).rows[0].count),testFixtureApprovals);
- const paths=['tools/p5/verify-m01-s3-import.ts','tools/p5/s3-test-fixture.ts','tools/p5/media-library.ts','infra/persistence/media.ts','infra/persistence/content.ts','packages/provider-adapters/storage/s3.ts'];
- const report={status:'PASS',scope:real?'REAL_M01_BYTES_POSTGRESQL_S3_IMPORT':'SYNTHETIC_POSTGRESQL_S3_IMPORT_NOT_M01',commit,source_sha:process.env.GITHUB_HEAD_SHA??null,database:'PostgreSQL 18.6',imported_versions:450,audio_assets:real?420:0,visual_drafts:real?30:0,synthetic_vectors:real?0:450,real_m01_audio_imported:real,exact_replay:true,immutable_update_and_delete_rejected:true,changed_bytes_rejected:true,database_pool_recreated:true,storage_adapter_restart_verified:true,storage_server_restart_verified:true,all_stored_bytes_verified:true,anonymous_access_denied:true,import_inserted_approvals:0,test_publications:testPublications,test_fixture_asset_approvals:testFixtureApprovals,test_approval_scope:'DISPOSABLE_TEST_FIXTURE_ONLY_NOT_OWNER_OR_PRODUCTION_APPROVAL',delivered_assets:deliveredAssets,delivered_real_m01_audio_assets:deliveredAudioAssets,delivered_test_avatar_assets:deliveredAvatarAssets,same_language_versioned_avatar_closure_checks:avatarClosureChecks,delivery_scope:'MEDIA_REPOSITORY_OWNER_SCOPED_TEST_LESSON_AFTER_S3_RESTART',foreign_user_and_activity_denied:true,production_publication_created:false,production_delivery_profile_approved:false,p6_authorized:false,test_server_source_revision:minioTestRevision,test_server_binary_sha256:storage.binary_sha256,code_bindings:Object.fromEntries(await Promise.all(paths.map(async path=>[path,createHash('sha256').update(await readFile(path)).digest('hex')])))};
+ if(real)assert.deepEqual(deliveredPins.toSorted((a,b)=>a.asset_id.localeCompare(b.asset_id)),outputs.toSorted((a,b)=>a.asset_id.localeCompare(b.asset_id)));
+ const paths=['tools/p5/verify-m01-s3-import.ts','tools/p5/s3-test-fixture.ts','tools/p5/media-library.ts','tools/p5/m01-publication-bindings.ts','infra/persistence/media.ts','infra/persistence/content.ts','packages/provider-adapters/storage/s3.ts'];
+ const report={status:'PASS',scope:real?'REAL_M01_BYTES_POSTGRESQL_S3_IMPORT':'SYNTHETIC_POSTGRESQL_S3_IMPORT_NOT_M01',commit,source_sha:process.env.GITHUB_HEAD_SHA??null,database:'PostgreSQL 18.6',imported_versions:450,audio_assets:real?420:0,visual_drafts:real?30:0,synthetic_vectors:real?0:450,real_m01_audio_imported:real,exact_replay:true,immutable_update_and_delete_rejected:true,changed_bytes_rejected:true,database_pool_recreated:true,storage_adapter_restart_verified:true,storage_server_restart_verified:true,all_stored_bytes_verified:true,anonymous_access_denied:true,import_inserted_approvals:0,test_publications:testPublications,test_fixture_asset_approvals:testFixtureApprovals,test_approval_scope:'DISPOSABLE_TEST_FIXTURE_ONLY_NOT_OWNER_OR_PRODUCTION_APPROVAL',delivered_assets:deliveredAssets,delivered_real_m01_audio_assets:deliveredAudioAssets,delivered_test_visual_assets:deliveredVisualAssets,catalog_resolved_assets:real?450:0,binding_plan_sha256:bindingPlanSha256,delivered_publication_pins:deliveredPins.toSorted((a,b)=>a.asset_id.localeCompare(b.asset_id)),delivered_test_avatar_assets:deliveredAvatarAssets,same_language_versioned_avatar_closure_checks:avatarClosureChecks,delivery_scope:'MEDIA_REPOSITORY_OWNER_SCOPED_TEST_LESSON_AFTER_S3_RESTART',foreign_user_and_activity_denied:true,production_publication_created:false,production_delivery_profile_approved:false,p6_authorized:false,test_server_source_revision:minioTestRevision,test_server_binary_sha256:storage.binary_sha256,code_bindings:Object.fromEntries(await Promise.all(paths.map(async path=>[path,createHash('sha256').update(await readFile(path)).digest('hex')])))};
  await mkdir('artifacts/p5',{recursive:true});await writeFile('artifacts/p5/'+(real?'m01-library-import-validation.json':'library-s3-validation.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));
 }finally{
  await pool?.end();try{if(created)await admin.query('DROP DATABASE "'+name+'" WITH (FORCE)');}finally{await admin.end();await storage?.close();}

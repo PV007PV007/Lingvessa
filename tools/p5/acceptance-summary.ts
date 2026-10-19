@@ -12,6 +12,17 @@ assert.equal(ownerAudio.status,'OWNER_APPROVED');assert.equal(ownerAudio.approve
 assert.equal(approvedMedia.status,'PASS');assert.equal(approvedMedia.source_sha,commit);assert.equal(approvedMedia.audio_bytes_verified,false);
 assert.equal(libraryContract.status,'PASS');assert.equal(libraryContract.source_sha,commit);assert.equal(libraryContract.real_m01_audio_imported,false);
 assert.equal(process.env.GITHUB_HEAD_SHA,commit,'Evidence must be produced from the exact hosted source');
+const publicationBindings=read('artifacts/p5/m01-publication-bindings.json');
+assert.equal(publicationBindings.status,'PASS');assert.equal(publicationBindings.source_sha,commit);
+assert.equal(publicationBindings.resolved_assets,450);assert.equal(publicationBindings.normal_slow_pairs,210);
+assert.equal(publicationBindings.bindings.length,450);assert.equal(publicationBindings.publication_ready,false);
+assert.equal(publicationBindings.automatic_approval_insertion,false);assert.equal(publicationBindings.audio_bytes_verified,false);
+const visualManifest=read('artifacts/p5/visual-review-manifest.json'),visualReview=read('artifacts/p5/visual-review-validation.json'),visualBrowser=read('artifacts/p5/visual-review-browser-results.json');
+for(const r of [visualManifest,visualReview]){assert.equal(r.source_sha,commit);assert.equal(r.working_tree_dirty,false);assert.equal(r.human_review,'PENDING');assert.equal(r.rights_approval,'PENDING');assert.equal(r.publication_ready,false);assert.equal(r.p6_authorized,false);}
+assert.equal(visualReview.status,'PASS');assert.equal(visualReview.visuals_verified,30);assert.equal(visualReview.external_requests,0);
+assert.equal(visualManifest.items.length,30);assert.equal(visualManifest.html_sha256,visualReview.html_sha256);
+assert.equal(createHash('sha256').update(readFileSync('artifacts/p5/'+visualManifest.html_file)).digest('hex'),visualManifest.html_sha256);
+assert.equal(visualBrowser.stats.expected,3);for(const key of ['unexpected','skipped','flaky'])assert.equal(visualBrowser.stats[key],0);
 const libraryS3=read('artifacts/p5/library-s3-validation.json');
 assert.equal(libraryS3.status,'PASS');assert.equal(libraryS3.commit,commit);assert.equal(libraryS3.source_sha,commit);
 assert.equal(libraryS3.scope,'SYNTHETIC_POSTGRESQL_S3_IMPORT_NOT_M01');assert.equal(libraryS3.real_m01_audio_imported,false);
@@ -28,8 +39,11 @@ if(m01Input.status==='VERIFIED'){
  assert.equal(m01Import.status,'PASS');assert.equal(m01Import.commit,commit);assert.equal(m01Import.source_sha,commit);
  assert.equal(m01Import.scope,'REAL_M01_BYTES_POSTGRESQL_S3_IMPORT');assert.equal(m01Import.real_m01_audio_imported,true);
  assert.equal(m01Import.audio_assets,420);assert.equal(m01Import.visual_drafts,30);assert.equal(m01Import.test_publications,2);
- assert.equal(m01Import.delivered_real_m01_audio_assets,420);assert.equal(m01Import.test_fixture_asset_approvals,2556);
- assert.equal(m01Import.delivered_test_avatar_assets,6);assert.equal(m01Import.delivered_assets,426);
+ assert.equal(m01Import.delivered_real_m01_audio_assets,420);assert.equal(m01Import.test_fixture_asset_approvals,2700);
+ assert.equal(m01Import.delivered_test_avatar_assets,6);assert.equal(m01Import.delivered_test_visual_assets,30);assert.equal(m01Import.delivered_assets,450);
+ assert.equal(m01Import.catalog_resolved_assets,450);assert.equal(m01Import.delivered_publication_pins.length,450);
+ assert.equal(m01Import.binding_plan_sha256,createHash('sha256').update(readFileSync('artifacts/p5/m01-publication-bindings.json')).digest('hex'));
+ for(const binding of publicationBindings.bindings){const pin:{asset_id:string;asset_version:number;checksum:string;metadata_checksum:string}|undefined=m01Import.delivered_publication_pins.find((p:{asset_id:string})=>p.asset_id===binding.asset_id);assert(pin);assert.equal(pin.asset_version,binding.asset_version);assert.equal(pin.checksum,binding.checksum);assert.match(pin.metadata_checksum,/^[a-f0-9]{64}$/u);}
  assert.equal(m01Import.same_language_versioned_avatar_closure_checks,2);
  assert.equal(m01Import.import_inserted_approvals,0);assert.equal(m01Import.production_publication_created,false);
  assert.equal(m01Import.foreign_user_and_activity_denied,true);
@@ -188,7 +202,9 @@ const paths=['artifacts/p5/m01-private-transfer.json','artifacts/p5/library-s3-v
  'artifacts/p5/m01-continuation-plan.json','artifacts/p5/m01-completion-validation.json',
  'artifacts/p5/m01-completion-tests.json','artifacts/p5/m01-dialogue-crosscheck-validation.json',
  'artifacts/p5/approved-media-metadata-validation.json','artifacts/p5/media-library-validation.json',
- 'docs/p5/m01-completion-20261014/owner-approval.json'];
+ 'docs/p5/m01-completion-20261014/owner-approval.json',
+ 'artifacts/p5/m01-publication-bindings.json','artifacts/p5/visual-review-manifest.json',
+ 'artifacts/p5/visual-review-validation.json','artifacts/p5/visual-review-browser-results.json'];
 const summary={phase:'P5',runtime_status:'PASS',milestone_status:'NOT_READY',tested_sha:commit,
  run_id:process.env.GITHUB_RUN_ID,event:process.env.GITHUB_EVENT_NAME,
  runtime_gates:{storage:storage.gates,media:media.gates,audio:audio.gates,speech:speech.gates},
@@ -198,6 +214,8 @@ const summary={phase:'P5',runtime_status:'PASS',milestone_status:'NOT_READY',tes
  m01_completion:{metadata:m01Completion,tests:m01CompletionTests,dialogue_crosscheck:m01DialogueCheck},
  m01_owner_approval:ownerAudio,
  approved_media_registry:approvedMedia,
+ m01_publication_preparation:{status:publicationBindings.status,source_sha:commit,resolved_assets:450,normal_slow_pairs:210,publication_ready:false},
+ visual_review_packet:{browser:visualBrowser.stats,visuals_verified:30,html_sha256:visualManifest.html_sha256,human_review:'PENDING',rights_approval:'PENDING',publication_ready:false},
  acoustic_candidate:{provider_code:'local_acoustic_ipa',model_version:'xlsr53-espeak-2c733782da56-1',test_only:true,production_calibration_approved:false,private_evidence_transferred:true,integrity:pilot},
  library_contract:libraryContract,
  library_s3:libraryS3,

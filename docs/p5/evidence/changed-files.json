@@ -1,6 +1,6 @@
 {
   "compared_to_accepted_main": "5027f001237b6451237d87343ebeca58cd0af007",
-  "timestamp": "2026-10-18T00:00:00Z",
+  "timestamp": "2026-10-19T00:00:00Z",
   "files": [
     {
       "path": ".gitattributes",
@@ -604,6 +604,14 @@
     },
     {
       "path": "docs/p5/integration-20261018/visual-preflight.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261019/README.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261019/verified-ci-c55647e.json",
       "status": "A"
     },
     {
@@ -1707,6 +1715,10 @@
       "status": "A"
     },
     {
+      "path": "tests/browser/p5-visual-review.spec.ts",
+      "status": "A"
+    },
+    {
       "path": "tests/integration/bootstrap.test.ts",
       "status": "M"
     },
@@ -1803,6 +1815,10 @@
       "status": "A"
     },
     {
+      "path": "tests/unit/p5-publication-bindings.test.ts",
+      "status": "A"
+    },
+    {
       "path": "tests/unit/p5-reviewed-secret-fixture.test.ts",
       "status": "A"
     },
@@ -1883,6 +1899,10 @@
       "status": "A"
     },
     {
+      "path": "tools/p5/build-visual-review.py",
+      "status": "A"
+    },
+    {
       "path": "tools/p5/calibrate-acoustic.py",
       "status": "A"
     },
@@ -1923,6 +1943,10 @@
       "status": "A"
     },
     {
+      "path": "tools/p5/m01-publication-bindings.ts",
+      "status": "A"
+    },
+    {
       "path": "tools/p5/m01-review.html",
       "status": "A"
     },
@@ -1956,6 +1980,10 @@
     },
     {
       "path": "tools/p5/pocket-case-trial.py",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/prepare-m01-publication.ts",
       "status": "A"
     },
     {
@@ -2016,6 +2044,14 @@
     },
     {
       "path": "tools/p5/verify-m01-s3-import.ts",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/visual-review.html",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/visual-review.playwright.config.ts",
       "status": "A"
     },
     {

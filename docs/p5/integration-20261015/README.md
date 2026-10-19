@@ -1,5 +1,7 @@
 # P5 recovery, external bytes and development/test integration
 
+Current continuation: [2026-10-19 bindings, complete visual delivery and review](../integration-20261019/README.md). Real import has already passed on c55647e; historical missing-input statements below are recovery history. Reuse private draft release asset 649769507. No new ZIP or generation is required.
+
 P5 **IN PROGRESS / NOT READY**. PR #5 remains OPEN DRAFT. P0–P4 accepted; no merge and no P6. Recovery baseline: `b53ef44ef6a8389b9680586817c101008e186027`, tree `09816f904b7637c8231664745464959a19645880`; accepted main `5027f001237b6451237d87343ebeca58cd0af007`.
 
 ## Interrupted blob operation
@@ -45,6 +47,7 @@ python3 tools/p5/stage-m01-audio.py --archive /absolute/path/Lingvessa_M01_Compl
 If that destination already exists, reuse it after byte verification; do not overwrite or regenerate it. The next repeatable integration command is:
 
 ```bash
+node --import tsx tools/p5/prepare-m01-publication.ts
 P5_M01_AUDIO_ROOT=/absolute/path/outside-checkout/verified-m01/audio MINIO_BINARY=/absolute/path/to/pinned/minio node --env-file=.local/runtime.env --import tsx tools/p5/verify-m01-s3-import.ts --real-m01
 ```
 
@@ -52,7 +55,7 @@ Each invocation creates and removes only its own disposable database and bucket 
 
 ## Remaining work
 
-- **BLOCKER:** execute actual M01 PostgreSQL/S3 import with the external approved bytes in a permitted runtime; complete required reference-media publication integration and visual approvals; resolve production delivery OD-004 and speech calibration OD-006 with proper evidence/owner decisions.
+- **BLOCKER (current):** real import is verified; complete required reference-media publication integration and visual approvals; resolve production delivery OD-004 and speech calibration OD-006 with proper evidence/owner decisions.
 - **IMPORTANT:** remaining applicable compound P5 requirements retain their existing status; imported audio approval does not approve the 30 visual drafts or manufacture per-file review forms.
 - **MINOR:** current retrievability of the 41 unreferenced historical Git blobs cannot be established through the text-only connector; it is irrelevant to the new external-byte ingestion path.
 
