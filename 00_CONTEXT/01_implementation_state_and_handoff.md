@@ -1,9 +1,17 @@
 # Lingvessa implementation state and handoff
 
-Updated: 2026-10-19. **P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED; P6 NOT AUTHORIZED.**
+Updated: 2026-10-20. **P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED; P6 NOT AUTHORIZED.**
 Branch `implementation/p5-media-speech`; [PR #5](https://github.com/PV007PV007/Lingvessa/pull/5) OPEN DRAFT. Accepted main/P4: `5027f001237b6451237d87343ebeca58cd0af007`.
 
-## Publication bindings and visual review continuation — 2026-10-19
+## Owner visual acceptance and actual HTTP delivery — 2026-10-20
+
+The owner's “все добре. продовжуй” accepts the presented 30-item set in its immediate review context. [Decision](../docs/p5/visual-approval-20261020/owner-approval.json) binds the exact b9c34fa review manifest, HTML SHA-256, 30 immutable version-2 metadata records and SVG checksums. No per-item form or authenticated runtime reviewer is invented. Draft/pending source records remain historical; reports overlay this later set-level acceptance. Audio approval from 2026-10-14 is unchanged. This does not approve a production delivery profile, close OD-004/006 or authorize P6.
+
+Parent b9c34fa passed all seven workflows / eleven jobs, 450 real PostgreSQL/S3 imports/readbacks/repository deliveries and both independent artifact audits (86 acceptance references). [Retained evidence](../docs/p5/integration-20261020/verified-ci-b9c34fa.json). This revision additionally requires authenticated HTTP delivery of all 450 assets, exact bytes and privacy/SVG headers, eight byte-range reads, eighteen access/range failures, two storage-outage 503s and two recovery reads through the running API. It retains two disposable test publications and 2,700 fixture permission rows; importer approval insertion remains zero. Parent results do not prove this new HTTP gate.
+
+[Current execution/recovery instructions](../docs/p5/integration-20261020/README.md). Exact current-HEAD checks and independently verified artifacts in PR #5 determine success. Required activity-specific reference publication/accessibility, OD-004 production profile, OD-006 learner-error calibration/policy and applicable compound clauses remain open. No new ZIP, generation, WAV Git storage, public release, merge or P6.
+
+## Historical publication bindings and visual review continuation — 2026-10-19
 
 Previous HEAD `c55647e22d7ac1918db596ae2c4a398fee3b12bd` passed all seven workflows / eleven jobs and both independent artifact audits (78 references). [Retained evidence](../docs/p5/integration-20261019/verified-ci-c55647e.json). Its 426 successful delivery reads are historical; this revision requires a new exact-HEAD run for the expanded 450-delivery test.
 

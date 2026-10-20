@@ -1,6 +1,6 @@
 {
   "compared_to_accepted_main": "5027f001237b6451237d87343ebeca58cd0af007",
-  "timestamp": "2026-10-19T00:00:00Z",
+  "timestamp": "2026-10-20",
   "files": [
     {
       "path": ".gitattributes",
@@ -615,6 +615,14 @@
       "status": "A"
     },
     {
+      "path": "docs/p5/integration-20261020/README.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261020/verified-ci-b9c34fa.json",
+      "status": "A"
+    },
+    {
       "path": "docs/p5/listening-review.md",
       "status": "A"
     },
@@ -1044,6 +1052,14 @@
     },
     {
       "path": "docs/p5/trace-review.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/visual-approval-20261020/owner-approval.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/visual-approval-20261020/reviewed-manifest.json",
       "status": "A"
     },
     {
@@ -1827,6 +1843,10 @@
       "status": "A"
     },
     {
+      "path": "tests/unit/p5-visual-owner-approval.test.ts",
+      "status": "A"
+    },
+    {
       "path": "tools/governance/validate_p3_baseline.py",
       "status": "M"
     },
@@ -1943,6 +1963,10 @@
       "status": "A"
     },
     {
+      "path": "tools/p5/m01-http-delivery.ts",
+      "status": "A"
+    },
+    {
       "path": "tools/p5/m01-publication-bindings.ts",
       "status": "A"
     },
@@ -2044,6 +2068,10 @@
     },
     {
       "path": "tools/p5/verify-m01-s3-import.ts",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/visual-owner-approval.ts",
       "status": "A"
     },
     {

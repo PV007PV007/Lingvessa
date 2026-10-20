@@ -1,6 +1,6 @@
 # P5 recovery, external bytes and development/test integration
 
-Current continuation: [2026-10-19 bindings, complete visual delivery and review](../integration-20261019/README.md). Real import has already passed on c55647e; historical missing-input statements below are recovery history. Reuse private draft release asset 649769507. No new ZIP or generation is required.
+Current continuation: [2026-10-20 owner visual acceptance and HTTP delivery](../integration-20261020/README.md). Real import/repository delivery has already passed on b9c34fa; historical missing-input statements below are recovery history. Reuse private draft release asset 649769507. No new ZIP or generation is required.
 
 P5 **IN PROGRESS / NOT READY**. PR #5 remains OPEN DRAFT. P0–P4 accepted; no merge and no P6. Recovery baseline: `b53ef44ef6a8389b9680586817c101008e186027`, tree `09816f904b7637c8231664745464959a19645880`; accepted main `5027f001237b6451237d87343ebeca58cd0af007`.
 
@@ -55,8 +55,8 @@ Each invocation creates and removes only its own disposable database and bucket 
 
 ## Remaining work
 
-- **BLOCKER (current):** real import is verified; complete required reference-media publication integration and visual approvals; resolve production delivery OD-004 and speech calibration OD-006 with proper evidence/owner decisions.
-- **IMPORTANT:** remaining applicable compound P5 requirements retain their existing status; imported audio approval does not approve the 30 visual drafts or manufacture per-file review forms.
+- **BLOCKER (current):** real import is verified; complete required activity-specific reference-media publication/accessibility; resolve production delivery OD-004 and speech calibration OD-006 with proper evidence/owner decisions.
+- **IMPORTANT:** remaining applicable compound P5 requirements retain their existing status; the separate 2026-10-20 owner decision accepts the exact 30 visuals without manufacturing per-file review forms.
 - **MINOR:** current retrievability of the 41 unreferenced historical Git blobs cannot be established through the text-only connector; it is irrelevant to the new external-byte ingestion path.
 
 Historical generation/partial-batch/failed-CI records remain intact. Current instructions no longer request the already completed 204 WAVs.

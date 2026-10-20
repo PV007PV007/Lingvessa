@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "status": "OWNER_APPROVED",
+  "scope": "EXACT_PRESENTED_M01_VISUAL_SET_ONLY",
+  "decided_at": "2026-10-20T20:43:37+03:00",
+  "decision_source": "Owner message in this project conversation immediately after delivery of the 30-item visual review and request for owner review",
+  "owner_statement_original": "все добре. продовжуй",
+  "interpretation": "Set-level acceptance of the presented visuals, descriptions and provenance for continued P5 work; inferred from the immediate review context. No per-item form responses, independent rights opinion, or runtime reviewer identity are claimed.",
+  "approved_visual_assets": 30,
+  "language_counts": {
+    "en": 15,
+    "cs": 15
+  },
+  "reviewed_source_sha": "b9c34fa0c7513d824ee4aaede7e8bd31d297fe5f",
+  "reviewed_tree_sha": "2b59d676dc1f28e5aac441319c87f456f5813031",
+  "reviewed_manifest_path": "docs/p5/visual-approval-20261020/reviewed-manifest.json",
+  "reviewed_manifest_sha256": "e860c06f408cdd745e7f7ade52ee1dafaff76130d457a7c4b15cd380fb740f14",
+  "review_set_sha256": "5655341db927628bdc62f05b605d19b1814330495195584c2d9fce4e427b53a1",
+  "reviewed_html": {
+    "name": "Lingvessa_M01_Visual_Review_2026-10-19.html",
+    "sha256": "ef54a4ab8897c6950e3672c7ebe96296f0aab4125ee11faf7a876ce35e33deaa",
+    "byte_length": 355674,
+    "library_file_id": "libfile_0d7de0def13c819186ef96225fc1bc24"
+  },
+  "immutable_source_records_unchanged": true,
+  "historical_pending_labels": "The reviewed manifest and ingested metadata preserve their original draft/pending state. This later owner decision supplies the current set acceptance without rewriting those records.",
+  "per_item_form_submitted": false,
+  "runtime_approval_insertion_authorized": false,
+  "production_publication_authorized": false,
+  "production_delivery_profile_approved": false,
+  "od_004_closed": false,
+  "od_006_closed": false,
+  "p6_authorized": false,
+  "audio_approval_20261014_unchanged": true
+}

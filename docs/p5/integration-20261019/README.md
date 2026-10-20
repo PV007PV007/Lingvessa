@@ -1,5 +1,7 @@
 # M01 publication bindings and visual review — 2026-10-19
 
+Historical implementation note. Current state and commands: [2026-10-20](../integration-20261020/README.md). Owner accepted the exact presented 30-item visual set; the pending review statements below describe the prior state.
+
 P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED. PR #5 OPEN DRAFT. No merge or P6.
 
 The previous exact HEAD `c55647e22d7ac1918db596ae2c4a398fee3b12bd` passed all seven workflows / eleven jobs; both P5 evidence archives were independently checked (78 acceptance references). [Retained evidence](verified-ci-c55647e.json). It proves 450 real imports/readbacks and 426 deliveries (420 audio + six avatars). This revision requires its own exact-HEAD CI and artifacts; parent success is not substituted.

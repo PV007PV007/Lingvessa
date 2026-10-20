@@ -7,7 +7,7 @@ const catalog=JSON.parse(await readFile('assets/specs/p5/reference-media.registr
 test('M01 catalog resolves all immutable versions without upgrading visual approval',async()=>{
  const library=await loadMediaLibrary(process.cwd(),{metadataOnly:true}),bindings=resolveM01Bindings(library,catalog);
  assert.equal(bindings.length,450);assert.equal(bindings.filter(b=>b.normal_pin).length,210);
- assert.equal(bindings.filter(b=>b.review_status==='PENDING_VISUAL_REVIEW').length,30);
+ assert.equal(bindings.filter(b=>b.ingested_review_status==='PENDING_VISUAL_REVIEW').length,30);
  assert.equal(new Set(bindings.flatMap(b=>b.speakers.map(s=>s.voice_id))).size,6);
  assert.equal(new Set(bindings.flatMap(b=>b.speakers.flatMap(s=>s.avatar_pin?[s.avatar_pin.asset_id]:[]))).size,6);
 });

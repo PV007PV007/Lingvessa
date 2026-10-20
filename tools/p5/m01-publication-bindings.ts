@@ -47,7 +47,7 @@ export function resolveM01Bindings(library:LoadedMediaLibrary,catalog:M01Catalog
   return {asset_id:a.asset_id,stable_code:a.stable_code,asset_version:a.asset_version,version_code:a.version_code,language:a.scope.language,kind:a.kind,checksum:a.checksum,byte_length:a.byte_length,source_file:entry.file,
    // This is a source-serialization hash; PostgreSQL's canonical metadata checksum is recorded by the real test separately.
    metadata_json_sha256:createHash('sha256').update(JSON.stringify(a)).digest('hex'),normal_pin,speakers,
-   review_status:a.kind==='audio'?'OWNER_APPROVED_AUDIO_2026_10_14':'PENDING_VISUAL_REVIEW'};
+   ingested_review_status:a.kind==='audio'?'OWNER_APPROVED_AUDIO_2026_10_14':'PENDING_VISUAL_REVIEW'};
  }).sort((a,b)=>a.asset_id.localeCompare(b.asset_id));
  for(const language of ['en','cs']){assert.equal(bindings.filter(b=>b.language===language&&b.kind==='audio').length,210);assert.equal(bindings.filter(b=>b.language===language&&b.kind!=='audio').length,15);}
  assert.equal(bindings.filter(b=>b.normal_pin).length,210);

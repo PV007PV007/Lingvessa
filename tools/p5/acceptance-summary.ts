@@ -6,6 +6,7 @@ import assert from 'node:assert/strict';
 const read=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 const commit=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();
 const ownerAudio=read('docs/p5/m01-completion-20261014/owner-approval.json');
+const ownerVisual=read('docs/p5/visual-approval-20261020/owner-approval.json');
 const approvedMedia=read('artifacts/p5/approved-media-metadata-validation.json');
 const libraryContract=read('artifacts/p5/media-library-validation.json');
 assert.equal(ownerAudio.status,'OWNER_APPROVED');assert.equal(ownerAudio.approved_final_audio_files,420);
@@ -17,6 +18,10 @@ assert.equal(publicationBindings.status,'PASS');assert.equal(publicationBindings
 assert.equal(publicationBindings.resolved_assets,450);assert.equal(publicationBindings.normal_slow_pairs,210);
 assert.equal(publicationBindings.bindings.length,450);assert.equal(publicationBindings.publication_ready,false);
 assert.equal(publicationBindings.automatic_approval_insertion,false);assert.equal(publicationBindings.audio_bytes_verified,false);
+assert.equal(ownerVisual.status,'OWNER_APPROVED');assert.equal(ownerVisual.approved_visual_assets,30);
+assert.equal(publicationBindings.owner_visual_approval.status,'OWNER_APPROVED');assert.equal(publicationBindings.owner_visual_approval.assets_verified,30);
+assert.equal(publicationBindings.owner_visual_approval.decision_sha256,createHash('sha256').update(readFileSync('docs/p5/visual-approval-20261020/owner-approval.json')).digest('hex'));
+assert.deepEqual(approvedMedia.owner_visual_approval,publicationBindings.owner_visual_approval);
 const visualManifest=read('artifacts/p5/visual-review-manifest.json'),visualReview=read('artifacts/p5/visual-review-validation.json'),visualBrowser=read('artifacts/p5/visual-review-browser-results.json');
 for(const r of [visualManifest,visualReview]){assert.equal(r.source_sha,commit);assert.equal(r.working_tree_dirty,false);assert.equal(r.human_review,'PENDING');assert.equal(r.rights_approval,'PENDING');assert.equal(r.publication_ready,false);assert.equal(r.p6_authorized,false);}
 assert.equal(visualReview.status,'PASS');assert.equal(visualReview.visuals_verified,30);assert.equal(visualReview.external_requests,0);
@@ -45,6 +50,11 @@ if(m01Input.status==='VERIFIED'){
  assert.equal(m01Import.binding_plan_sha256,createHash('sha256').update(readFileSync('artifacts/p5/m01-publication-bindings.json')).digest('hex'));
  for(const binding of publicationBindings.bindings){const pin:{asset_id:string;asset_version:number;checksum:string;metadata_checksum:string}|undefined=m01Import.delivered_publication_pins.find((p:{asset_id:string})=>p.asset_id===binding.asset_id);assert(pin);assert.equal(pin.asset_version,binding.asset_version);assert.equal(pin.checksum,binding.checksum);assert.match(pin.metadata_checksum,/^[a-f0-9]{64}$/u);}
  assert.equal(m01Import.same_language_versioned_avatar_closure_checks,2);
+ const http=m01Import.http_delivery;assert.equal(http.status,'PASS');assert.equal(http.executed,true);
+ assert.equal(http.scope,'REAL_M01_LOOPBACK_HTTP_POSTGRESQL_S3_NOT_PRODUCTION_CDN');
+ for(const [key,value]of Object.entries({metadata_lists:2,full_assets:450,audio_assets:420,visual_assets:30,byte_ranges:8,negative_responses:20,storage_outage_503:2,storage_recovery_reads:2}))assert.equal(http[key],value);
+ for(const key of ['authenticated_login','all_full_response_checksums_verified','private_no_store_headers_verified','svg_sandbox_headers_verified'])assert.equal(http[key],true);
+ assert.equal(http.production_delivery_profile_approved,false);
  assert.equal(m01Import.import_inserted_approvals,0);assert.equal(m01Import.production_publication_created,false);
  assert.equal(m01Import.foreign_user_and_activity_denied,true);
  for(const key of ['exact_replay','immutable_update_and_delete_rejected','changed_bytes_rejected','database_pool_recreated','storage_adapter_restart_verified','storage_server_restart_verified','all_stored_bytes_verified'])assert.equal(m01Import[key],true);
@@ -62,6 +72,7 @@ const reference=read('artifacts/p5/reference-media-validation.json');
 assert.equal(reference.approved_m01_audio.status,ownerAudio.status);
 assert.equal(reference.approved_m01_audio.files,ownerAudio.approved_final_audio_files);
 assert.equal(reference.approved_m01_audio.sha256,createHash('sha256').update(readFileSync('docs/p5/m01-completion-20261014/owner-approval.json')).digest('hex'));
+assert.deepEqual(reference.approved_m01_visuals,publicationBindings.owner_visual_approval);
 assert.equal(reference.publication_ready,false);
 const mediaBrowser=read('artifacts/p5/browser-results.json');
 const speechBrowser=read('artifacts/p5/speech-browser-results.json');
@@ -189,7 +200,7 @@ assert.equal(build.commit,commit);assert.deepEqual(Object.keys(build.images).sor
 const authorization=read('docs/p5/authorization.json');assert.equal(authorization.p6_authorized,false);
 const trace=read('docs/p5/requirement-evidence.json').requirements as Array<{status:string}>;
 const counts=Object.fromEntries(['PASS','PARTIAL','PENDING'].map(status=>[status,trace.filter(r=>r.status===status).length]));
-const paths=['artifacts/p5/m01-private-transfer.json','artifacts/p5/library-s3-validation.json','artifacts/p5/acoustic-pilot-validation.json','artifacts/p5/m01-input-status.json',...(m01Import?['artifacts/p5/m01-library-import-validation.json','artifacts/p5/external-m01-byte-validation.json']:[]),'artifacts/p5/storage-validation.json','artifacts/p5/media-database-validation.json','artifacts/p5/audio-validation.json',
+const paths=['docs/p5/visual-approval-20261020/owner-approval.json','docs/p5/visual-approval-20261020/reviewed-manifest.json','artifacts/p5/m01-private-transfer.json','artifacts/p5/library-s3-validation.json','artifacts/p5/acoustic-pilot-validation.json','artifacts/p5/m01-input-status.json',...(m01Import?['artifacts/p5/m01-library-import-validation.json','artifacts/p5/external-m01-byte-validation.json']:[]),'artifacts/p5/storage-validation.json','artifacts/p5/media-database-validation.json','artifacts/p5/audio-validation.json',
  'artifacts/p5/speech-database-validation.json','artifacts/p5/baseline-validation.json','artifacts/p5/reference-media-validation.json',
  'artifacts/p5/browser-results.json','artifacts/p5/speech-browser-results.json','artifacts/p1/container-build.json','artifacts/p1/container-smoke.json',
  'artifacts/p3/acceptance-summary.json','artifacts/p4/acceptance-summary.json','docs/p5/requirement-evidence.json',
@@ -213,9 +224,10 @@ const summary={phase:'P5',runtime_status:'PASS',milestone_status:'NOT_READY',tes
  m01_audio_draft:m01Draft,
  m01_completion:{metadata:m01Completion,tests:m01CompletionTests,dialogue_crosscheck:m01DialogueCheck},
  m01_owner_approval:ownerAudio,
+ m01_visual_owner_approval:publicationBindings.owner_visual_approval,
  approved_media_registry:approvedMedia,
  m01_publication_preparation:{status:publicationBindings.status,source_sha:commit,resolved_assets:450,normal_slow_pairs:210,publication_ready:false},
- visual_review_packet:{browser:visualBrowser.stats,visuals_verified:30,html_sha256:visualManifest.html_sha256,human_review:'PENDING',rights_approval:'PENDING',publication_ready:false},
+ visual_review_packet:{scope:'HISTORICAL_UNSUBMITTED_WORKSHEET_CURRENT_DECISION_RECORDED_SEPARATELY',browser:visualBrowser.stats,visuals_verified:30,html_sha256:visualManifest.html_sha256,human_review:'PENDING',rights_approval:'PENDING',publication_ready:false},
  acoustic_candidate:{provider_code:'local_acoustic_ipa',model_version:'xlsr53-espeak-2c733782da56-1',test_only:true,production_calibration_approved:false,private_evidence_transferred:true,integrity:pilot},
  library_contract:libraryContract,
  library_s3:libraryS3,
@@ -228,7 +240,7 @@ const summary={phase:'P5',runtime_status:'PASS',milestone_status:'NOT_READY',tes
   external_audio_bytes_verified:false,real_audio_generated:false},
  database:media.database,storage_startup:storage.startup_readiness,container_checks:containers.checks,container_images:build.images,
  reference_media:reference,trace_counts:counts,p6_authorized:false,
- remaining:[...(m01Import?[]:['Real M01 PostgreSQL/S3 execution requires the approved external package; no missing authorization or regeneration is implied']),'Visual quality/rights and approved delivery profile remain open','A production speech policy requires valid labelled learner-error calibration','Remaining applicable compound P5 gates; P6 is not authorized'],
+ remaining:[...(m01Import?[]:['Real M01 PostgreSQL/S3 execution requires the approved external package; no missing authorization or regeneration is implied']),'Activity-specific reference publication/accessibility and OD-004 production delivery profile remain open; owner visual set acceptance is retained','A production speech policy requires valid labelled learner-error calibration','Remaining applicable compound P5 gates; P6 is not authorized'],
  artifacts:paths.map(path=>({path,sha256:createHash('sha256').update(readFileSync(path)).digest('hex')}))};
 // Green runtime CI is deliberately not owner acceptance or permission for P6.
 writeFileSync('artifacts/p5/acceptance-summary.json',JSON.stringify(summary,null,2)+'\n');

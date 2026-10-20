@@ -1,0 +1,771 @@
+{
+  "schema_version": 1,
+  "tested_sha": "b9c34fa0c7513d824ee4aaede7e8bd31d297fe5f",
+  "scope": "INDEPENDENTLY_DOWNLOADED_EXACT_SOURCE_P5_EVIDENCE",
+  "workflows": [
+    {
+      "id": 39294915150,
+      "name": "P4 mastery and Review",
+      "event": "pull_request",
+      "head_sha": "b9c34fa0c7513d824ee4aaede7e8bd31d297fe5f",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/39294915150"
+    },
+    {
+      "id": 39294915178,
+      "name": "P2 data foundation",
+      "event": "pull_request",
+      "head_sha": "b9c34fa0c7513d824ee4aaede7e8bd31d297fe5f",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/39294915178"
+    },
+    {
+      "id": 39294915203,
+      "name": "P1 foundation",
+      "event": "pull_request",
+      "head_sha": "b9c34fa0c7513d824ee4aaede7e8bd31d297fe5f",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/39294915203"
+    },
+    {
+      "id": 39294915207,
+      "name": "P3 lesson engine",
+      "event": "pull_request",
+      "head_sha": "b9c34fa0c7513d824ee4aaede7e8bd31d297fe5f",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/39294915207"
+    },
+    {
+      "id": 39294915032,
+      "name": "P5 media and speech",
+      "event": "pull_request",
+      "head_sha": "b9c34fa0c7513d824ee4aaede7e8bd31d297fe5f",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/39294915032"
+    },
+    {
+      "id": 39294897604,
+      "name": "P1 foundation",
+      "event": "push",
+      "head_sha": "b9c34fa0c7513d824ee4aaede7e8bd31d297fe5f",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/39294897604"
+    },
+    {
+      "id": 39294897605,
+      "name": "P5 media and speech",
+      "event": "push",
+      "head_sha": "b9c34fa0c7513d824ee4aaede7e8bd31d297fe5f",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/39294897605"
+    }
+  ],
+  "checks": [
+    {
+      "id": 118205041297,
+      "name": "p5-exit",
+      "head_sha": "b9c34fa0c7513d824ee4aaede7e8bd31d297fe5f",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 118204943381,
+      "name": "p5-exit",
+      "head_sha": "b9c34fa0c7513d824ee4aaede7e8bd31d297fe5f",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 118204872243,
+      "name": "p5-input-slot",
+      "head_sha": "b9c34fa0c7513d824ee4aaede7e8bd31d297fe5f",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 118204806914,
+      "name": "p4-exit",
+      "head_sha": "b9c34fa0c7513d824ee4aaede7e8bd31d297fe5f",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 118204806537,
+      "name": "p5-input-slot",
+      "head_sha": "b9c34fa0c7513d824ee4aaede7e8bd31d297fe5f",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 118204806448,
+      "name": "p1-exit",
+      "head_sha": "b9c34fa0c7513d824ee4aaede7e8bd31d297fe5f",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 118204806346,
+      "name": "p5-private-bridge",
+      "head_sha": "b9c34fa0c7513d824ee4aaede7e8bd31d297fe5f",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 118204805981,
+      "name": "p2-exit",
+      "head_sha": "b9c34fa0c7513d824ee4aaede7e8bd31d297fe5f",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 118204805922,
+      "name": "p3-exit",
+      "head_sha": "b9c34fa0c7513d824ee4aaede7e8bd31d297fe5f",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 118204747519,
+      "name": "p1-exit",
+      "head_sha": "b9c34fa0c7513d824ee4aaede7e8bd31d297fe5f",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 118204747373,
+      "name": "p5-private-bridge",
+      "head_sha": "b9c34fa0c7513d824ee4aaede7e8bd31d297fe5f",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "pr": {
+    "artifact_id": 12209820942,
+    "artifact_sha256": "ce0ab184d0b96a96b6915d1adaf83c42fe7452ebdec824bbe7a4a111d83c415f",
+    "archive_crc_verified": true,
+    "archive_entries": 70,
+    "audio_or_input_zip_entries": 0,
+    "tested_sha": "b9c34fa0c7513d824ee4aaede7e8bd31d297fe5f",
+    "run_id": "39294915032",
+    "event": "pull_request",
+    "runtime_status": "PASS",
+    "milestone_status": "NOT_READY",
+    "references_verified": 43,
+    "artifact_references": [
+      {
+        "path": "artifacts/p5/m01-private-transfer.json",
+        "sha256": "43196cb89b9a0503e849a347ccde0dc18159920c2b147f18d73917e2a26adad9"
+      },
+      {
+        "path": "artifacts/p5/library-s3-validation.json",
+        "sha256": "9402be298480a7fdf8efbd929a4f88c1a4487357f96845af8625effaddf38bce"
+      },
+      {
+        "path": "artifacts/p5/acoustic-pilot-validation.json",
+        "sha256": "3791b4114630aef18f900a5942bd23b69663c151c5e8c60a53a5174210c7b726"
+      },
+      {
+        "path": "artifacts/p5/m01-input-status.json",
+        "sha256": "18656fc95cea9f51bbfd15d742ed59211a083411c93a51ebe4d4a42b00c48343"
+      },
+      {
+        "path": "artifacts/p5/m01-library-import-validation.json",
+        "sha256": "5a02e769dcf52611d70f0e706a5e2d5367a80a1c9abf4894c1bbba1ac40b3db3"
+      },
+      {
+        "path": "artifacts/p5/external-m01-byte-validation.json",
+        "sha256": "dc8a678594b766ed3b38b5d4bcffe21ab3933f0d48a6414566f2067468761bd1"
+      },
+      {
+        "path": "artifacts/p5/storage-validation.json",
+        "sha256": "69cff0ce28a36f3d9339975ea280854ef777c50542be80c46a154a0bb09806be"
+      },
+      {
+        "path": "artifacts/p5/media-database-validation.json",
+        "sha256": "1d0041d72d039b445d0ddcfde7e660c9c1bdd73422736a83dc70a95d5ed4c7f0"
+      },
+      {
+        "path": "artifacts/p5/audio-validation.json",
+        "sha256": "090e323b8211e7ec5bea871c38f8c541e8e956526d421e94412d2b82cf7518ff"
+      },
+      {
+        "path": "artifacts/p5/speech-database-validation.json",
+        "sha256": "e3264c44229954aa6ba2af3ad11741bc2a1d28599b6fe430c4d0bc361b86e147"
+      },
+      {
+        "path": "artifacts/p5/baseline-validation.json",
+        "sha256": "e12175af531b93991417eafa180de2195160dfd0e22a983778ef54d43bde2a96"
+      },
+      {
+        "path": "artifacts/p5/reference-media-validation.json",
+        "sha256": "7e807a264a4edf8bd9f26126fdc3aeb28c5515c553ad52ba096777eb12af2362"
+      },
+      {
+        "path": "artifacts/p5/browser-results.json",
+        "sha256": "e90c30c68376a7ab87cc0c9d4e2cfdd347a073bcbfc36e7939c26dc35b5a39cc"
+      },
+      {
+        "path": "artifacts/p5/speech-browser-results.json",
+        "sha256": "a9a5c6521edd93696fe56a75e3397dc02f241185ae0df98fb81cf58bce421e42"
+      },
+      {
+        "path": "artifacts/p1/container-build.json",
+        "sha256": "a7f36b9ad51b0d770573279b2cce0915795224902f9c57ea0f091b1ed1d33547"
+      },
+      {
+        "path": "artifacts/p1/container-smoke.json",
+        "sha256": "e5c29e7a2d09578227ce9a0a79049dd83c3ad3bf0825d6c79a67613e5abdf70e"
+      },
+      {
+        "path": "artifacts/p3/acceptance-summary.json",
+        "sha256": "8a2f4710008539b6b5f5ee29d1c478c7d65b84623b7d547c32f1d43f7bc21720"
+      },
+      {
+        "path": "artifacts/p4/acceptance-summary.json",
+        "sha256": "43023fd6e8a2055721432dd2357eba721cad7a0e2215c9e81f018432b58447e2"
+      },
+      {
+        "path": "docs/p5/requirement-evidence.json",
+        "sha256": "c7b18a5ba838cde6e180bac5e5350a381cb2076ed0fadcbae1c639c20af514f5"
+      },
+      {
+        "path": "artifacts/p5/listening-browser-results.json",
+        "sha256": "cf9e02539b54e4f64b913386135b39ed802ec0053e150744c875187031046f04"
+      },
+      {
+        "path": "artifacts/p5/listening-playback-validation.json",
+        "sha256": "02c5ec3ec371135129c03c3259d204e63d5b2bcf5ff388c5390e14d5c5be998e"
+      },
+      {
+        "path": "artifacts/p5/listening-review-manifest.json",
+        "sha256": "ac31f0f4e5c2171288c62460c878256f5af8c8115ed839221ccc9fa54fe2d2b8"
+      },
+      {
+        "path": "artifacts/p5/m01-audio-draft-validation.json",
+        "sha256": "1ee2472bd33f8b752b3a6903d19470c8958f903c3ba956c313865be405bff3ba"
+      },
+      {
+        "path": "artifacts/p5/m01-review-catalog.json",
+        "sha256": "534a78cc4524e1394c225b6d03e013da859ec702f4aee0b0f63fd4d74b131f8d"
+      },
+      {
+        "path": "artifacts/p5/m01-review-catalog-validation.json",
+        "sha256": "f23608ed8b16d4a5294ed1db59278f6d2ada85a430fff26da51cb8f02c539e77"
+      },
+      {
+        "path": "artifacts/p5/m01-review-ui-validation.json",
+        "sha256": "cf6c6c2530ea1d99298f6ea9251f63f14f916fa2e8cad0850a651cdff2e398f1"
+      },
+      {
+        "path": "artifacts/p5/m01-review-browser-results.json",
+        "sha256": "f7d1c9b448ea44bed5e9a22c596349cbc24f8ba7d5b989a117df4d0da73eacb0"
+      },
+      {
+        "path": "artifacts/p5/m01-review-fixture-manifest.json",
+        "sha256": "31b44286a74817e9e3960ec9ae75655430c15ee69ad6c5623206d000a03d58d1"
+      },
+      {
+        "path": "artifacts/p5/m01-feedback-validation.json",
+        "sha256": "43110c246e3445b0d926fd945a9dafdd8e0ad24b4ab9e8a2c9d78e058cc7dfbb"
+      },
+      {
+        "path": "artifacts/p5/m01-feedback-browser-export.json",
+        "sha256": "b424a094330f8d43c27b2f4bf5894f5a8818686a9e0d47b6e261adafaffd682c"
+      },
+      {
+        "path": "artifacts/p5/m01-feedback-browser-intake.json",
+        "sha256": "50c12a796793f4bffab9a278b34b7c667abbc4987a2fcbb8ae55ffa3f3b5e771"
+      },
+      {
+        "path": "artifacts/p5/m01-continuation-validation.json",
+        "sha256": "14018f2c5514e5d3103f1724141479306ddbf4cddb61f2cbd19ff97960e6b0f9"
+      },
+      {
+        "path": "artifacts/p5/m01-continuation-plan.json",
+        "sha256": "7029261146299e7af7815ff6640790a6a997185ad38ce266a6d4444818fa323a"
+      },
+      {
+        "path": "artifacts/p5/m01-completion-validation.json",
+        "sha256": "680f1612bfabf0a50b789bd4a54d317444e8e08c50cda89680829fb2af30c7d6"
+      },
+      {
+        "path": "artifacts/p5/m01-completion-tests.json",
+        "sha256": "0a9a25c12589a9ef0a04b7f4e7505422c11471fff9a907644d499e8e451ef6ca"
+      },
+      {
+        "path": "artifacts/p5/m01-dialogue-crosscheck-validation.json",
+        "sha256": "bf1f8d4ab25afabf2c8dcbea2472ee711235677ed51f637cbcc13d21a0177a51"
+      },
+      {
+        "path": "artifacts/p5/approved-media-metadata-validation.json",
+        "sha256": "019f03dc3e20e21ef8768f98b42286cc3474826ca9d335687204492d72322fc8"
+      },
+      {
+        "path": "artifacts/p5/media-library-validation.json",
+        "sha256": "09ccbc1d4db6497f9460d9dfdda0f11670dc450304cab905b59a5c6a0fe5214a"
+      },
+      {
+        "path": "docs/p5/m01-completion-20261014/owner-approval.json",
+        "sha256": "292dc272ecddf962d8bc92ee2bba6ad5e9b549f44beedb8107d1504b2ace9ee0"
+      },
+      {
+        "path": "artifacts/p5/m01-publication-bindings.json",
+        "sha256": "d42d47d01c7b308a78be05f9a0424c5a7d7c3b103b3ba4859f1ff3e4f0de95c5"
+      },
+      {
+        "path": "artifacts/p5/visual-review-manifest.json",
+        "sha256": "e860c06f408cdd745e7f7ade52ee1dafaff76130d457a7c4b15cd380fb740f14"
+      },
+      {
+        "path": "artifacts/p5/visual-review-validation.json",
+        "sha256": "160706f745ab9b4f0a7abe9b802a8d4a8e494f63362a90b506e7184261e40964"
+      },
+      {
+        "path": "artifacts/p5/visual-review-browser-results.json",
+        "sha256": "0da3033f9e78cef5cfea79a51ff546620c0734f2ecf6a81d94dcd97a33f799b0"
+      }
+    ],
+    "real_m01_import": {
+      "status": "PASS",
+      "scope": "REAL_M01_BYTES_POSTGRESQL_S3_IMPORT",
+      "commit": "b9c34fa0c7513d824ee4aaede7e8bd31d297fe5f",
+      "source_sha": "b9c34fa0c7513d824ee4aaede7e8bd31d297fe5f",
+      "database": "PostgreSQL 18.6",
+      "imported_versions": 450,
+      "audio_assets": 420,
+      "visual_drafts": 30,
+      "synthetic_vectors": 0,
+      "real_m01_audio_imported": true,
+      "exact_replay": true,
+      "immutable_update_and_delete_rejected": true,
+      "changed_bytes_rejected": true,
+      "database_pool_recreated": true,
+      "storage_adapter_restart_verified": true,
+      "storage_server_restart_verified": true,
+      "all_stored_bytes_verified": true,
+      "anonymous_access_denied": true,
+      "import_inserted_approvals": 0,
+      "test_publications": 2,
+      "test_fixture_asset_approvals": 2700,
+      "test_approval_scope": "DISPOSABLE_TEST_FIXTURE_ONLY_NOT_OWNER_OR_PRODUCTION_APPROVAL",
+      "delivered_assets": 450,
+      "delivered_real_m01_audio_assets": 420,
+      "delivered_test_visual_assets": 30,
+      "catalog_resolved_assets": 450,
+      "binding_plan_sha256": "d42d47d01c7b308a78be05f9a0424c5a7d7c3b103b3ba4859f1ff3e4f0de95c5",
+      "delivered_test_avatar_assets": 6,
+      "same_language_versioned_avatar_closure_checks": 2,
+      "delivery_scope": "MEDIA_REPOSITORY_OWNER_SCOPED_TEST_LESSON_AFTER_S3_RESTART",
+      "foreign_user_and_activity_denied": true,
+      "production_publication_created": false,
+      "production_delivery_profile_approved": false,
+      "p6_authorized": false,
+      "test_server_source_revision": "9e49d5e7a648f00e26f2246f4dc28e6b07f8c84a",
+      "test_server_binary_sha256": "d971ad945e567ee3093a2d9ec46a65e903f3b5a90077890444f36f60139030e2",
+      "code_bindings": {
+        "tools/p5/verify-m01-s3-import.ts": "0f729471b3612023b9f61e87b13bc7b6f370bff29afa7e852c52683017500106",
+        "tools/p5/s3-test-fixture.ts": "676d1a7df61b3a0b5903dfa919584ae82088122409aaffaa7fd18bccb90c3570",
+        "tools/p5/media-library.ts": "129031a66ebe737a235bb238de4990a9297f78bd2d666a55a590232f257e0d4f",
+        "tools/p5/m01-publication-bindings.ts": "3652f749a6a6a7df6dd7df8bf3436cecba9dec97a10364ae4c74a66f4986f9dc",
+        "infra/persistence/media.ts": "e9d4aaa9f1c6f8f2d88c43dd3e7a08fdfed27afe2527861e63f730be2db79655",
+        "infra/persistence/content.ts": "2affc4bd3632de892b9bb2c9deea3b151db902022d6b18e2553cbd1b2929895a",
+        "packages/provider-adapters/storage/s3.ts": "1375a84fb2b0e5a21b3e96c45a50dfc0a95c0e7ad65daf5c69b99aab02aa148c"
+      }
+    },
+    "private_m01_transfer": {
+      "status": "ARCHIVE_VERIFIED",
+      "release_id": 414560160,
+      "repository_private_verified": true,
+      "release_draft_verified": true,
+      "draft_asset_access_verified": true,
+      "archive_downloaded": true,
+      "expected_archive_sha256": "3edaeaaeb000479921a0b3ff5ec2b52042faeee54bf943eff25e4a4a0f4e516d",
+      "expected_archive_bytes": 63346796,
+      "asset_id": 649769507,
+      "source_sha": "b9c34fa0c7513d824ee4aaede7e8bd31d297fe5f",
+      "real_m01_postgresql_executed": false,
+      "production_delivery_profile_approved": false,
+      "p6_authorized": false,
+      "transport_token_scope": "ISOLATED_INPUT_JOB_CONTENTS_WRITE",
+      "relay_retention_days": 1,
+      "relay_received_and_source_bound": true,
+      "test_job_needs_no_release_token": true
+    },
+    "external_byte_check": {
+      "status": "PASS",
+      "scope": "EXTERNAL_M01_BYTES_AND_LOCAL_ADAPTER_ONLY",
+      "approved_dataset_sha256": "81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf",
+      "files": 420,
+      "audio_bytes": 35876788,
+      "languages": {
+        "en": {
+          "final_files": 210,
+          "pilot_single_turns": 202,
+          "dialogue_files": 8
+        },
+        "cs": {
+          "final_files": 210,
+          "pilot_single_turns": 200,
+          "dialogue_files": 10
+        }
+      },
+      "pilot_files": 402,
+      "pilot_excludes_dialogue_files": 18,
+      "controls_are_final_assets": false,
+      "visual_drafts": 30,
+      "registry_versions_verified": 450,
+      "pcm_and_frame_cues_verified": true,
+      "six_voice_bindings_verified": true,
+      "normal_slow_bindings_verified": true,
+      "local_adapter_recreated": true,
+      "all_stored_bytes_verified": true,
+      "exact_replay": true,
+      "changed_bytes_rejected": true,
+      "postgresql_executed": false,
+      "s3_executed": false,
+      "audio_regenerated": false,
+      "production_calibration_approved": false,
+      "p6_authorized": false,
+      "code_bindings": {
+        "tools/p5/verify-external-m01.ts": "988217170d01184f2d732fc905b7b67789360e32355fbb1eab0aff1695c7e291",
+        "tools/p5/media-library.ts": "129031a66ebe737a235bb238de4990a9297f78bd2d666a55a590232f257e0d4f",
+        "assets/media/m01/registry.json": "2a5e8632987beec7bf34d31fc1f5552dee95f56eb0b971d6caac847bbffdea3d",
+        "assets/media/m01/source-all-assets.json": "21664c1f8bdadb9aef0694854edc50214835d7919078d96749814c661ea29293",
+        "docs/p5/m01-completion-20261014/owner-approval.json": "292dc272ecddf962d8bc92ee2bba6ad5e9b549f44beedb8107d1504b2ace9ee0",
+        "docs/p5/acoustic-provider/pilot-plan.json": "ad1d060e16e6ebbeb012fcf868fc9c4b00cc11c00d2d7b99506acf651820214a",
+        "docs/p5/acoustic-provider/pilot-results/summary.json": "5cd2b9936cd6bda985c1e301a3108005e934ba72acc9343ce9b7f959b3003d6b"
+      }
+    },
+    "visual_review_verified": {
+      "visuals": 30,
+      "browser_cases": 3,
+      "html_sha256": "ef54a4ab8897c6950e3672c7ebe96296f0aab4125ee11faf7a876ce35e33deaa",
+      "human_review": "PENDING"
+    },
+    "publication_bindings_verified": 450,
+    "trace_counts": {
+      "PASS": 174,
+      "PARTIAL": 30,
+      "PENDING": 152
+    },
+    "p6_authorized": false
+  },
+  "push": {
+    "artifact_id": 12207494917,
+    "artifact_sha256": "11787c1bf84ffe0c4e007a36962687088550d591b13511b988f56da56a7dfc7f",
+    "archive_crc_verified": true,
+    "archive_entries": 70,
+    "audio_or_input_zip_entries": 0,
+    "tested_sha": "b9c34fa0c7513d824ee4aaede7e8bd31d297fe5f",
+    "run_id": "39294897605",
+    "event": "push",
+    "runtime_status": "PASS",
+    "milestone_status": "NOT_READY",
+    "references_verified": 43,
+    "artifact_references": [
+      {
+        "path": "artifacts/p5/m01-private-transfer.json",
+        "sha256": "43196cb89b9a0503e849a347ccde0dc18159920c2b147f18d73917e2a26adad9"
+      },
+      {
+        "path": "artifacts/p5/library-s3-validation.json",
+        "sha256": "3b0550832d4729ad21f1f2b1fde9f9ee25e762f964fdd33ae84b9a48682e6cff"
+      },
+      {
+        "path": "artifacts/p5/acoustic-pilot-validation.json",
+        "sha256": "3791b4114630aef18f900a5942bd23b69663c151c5e8c60a53a5174210c7b726"
+      },
+      {
+        "path": "artifacts/p5/m01-input-status.json",
+        "sha256": "21c4f7a784ae780593118592b42a5a02357716a8cbe8389cc0e1c2bbc3ddae56"
+      },
+      {
+        "path": "artifacts/p5/m01-library-import-validation.json",
+        "sha256": "5a02e769dcf52611d70f0e706a5e2d5367a80a1c9abf4894c1bbba1ac40b3db3"
+      },
+      {
+        "path": "artifacts/p5/external-m01-byte-validation.json",
+        "sha256": "dc8a678594b766ed3b38b5d4bcffe21ab3933f0d48a6414566f2067468761bd1"
+      },
+      {
+        "path": "artifacts/p5/storage-validation.json",
+        "sha256": "729ada09a2a83e9e971a2a77866056334d49c23bd476e25a937e468dc2162e8c"
+      },
+      {
+        "path": "artifacts/p5/media-database-validation.json",
+        "sha256": "1d0041d72d039b445d0ddcfde7e660c9c1bdd73422736a83dc70a95d5ed4c7f0"
+      },
+      {
+        "path": "artifacts/p5/audio-validation.json",
+        "sha256": "090e323b8211e7ec5bea871c38f8c541e8e956526d421e94412d2b82cf7518ff"
+      },
+      {
+        "path": "artifacts/p5/speech-database-validation.json",
+        "sha256": "e3264c44229954aa6ba2af3ad11741bc2a1d28599b6fe430c4d0bc361b86e147"
+      },
+      {
+        "path": "artifacts/p5/baseline-validation.json",
+        "sha256": "73a27886bda2106abb08351d3840d046b068054898052cc51c98af95034e1b18"
+      },
+      {
+        "path": "artifacts/p5/reference-media-validation.json",
+        "sha256": "7e807a264a4edf8bd9f26126fdc3aeb28c5515c553ad52ba096777eb12af2362"
+      },
+      {
+        "path": "artifacts/p5/browser-results.json",
+        "sha256": "566cf4760ac5faa72be8731f88f23eb3252f00090ecf66c7d76d5d8e0b2f6f6c"
+      },
+      {
+        "path": "artifacts/p5/speech-browser-results.json",
+        "sha256": "673b7f5279fbe16c80756ae7f38ca54b9a51f99c64b413e572957e181ffde001"
+      },
+      {
+        "path": "artifacts/p1/container-build.json",
+        "sha256": "27a13823d1149f7f7ae61fc1a5322c7a1d059fe164c6ad34d5cbb33e755d7412"
+      },
+      {
+        "path": "artifacts/p1/container-smoke.json",
+        "sha256": "e5c29e7a2d09578227ce9a0a79049dd83c3ad3bf0825d6c79a67613e5abdf70e"
+      },
+      {
+        "path": "artifacts/p3/acceptance-summary.json",
+        "sha256": "0b67da2cfff636857a136b93e989eb0a4e92e655c1eb2c234bc32a3fc1b6e0cf"
+      },
+      {
+        "path": "artifacts/p4/acceptance-summary.json",
+        "sha256": "254d1fe0e867374877a6ed7ae5a287e1e27259fa9e39d112b142af3567f2cc88"
+      },
+      {
+        "path": "docs/p5/requirement-evidence.json",
+        "sha256": "c7b18a5ba838cde6e180bac5e5350a381cb2076ed0fadcbae1c639c20af514f5"
+      },
+      {
+        "path": "artifacts/p5/listening-browser-results.json",
+        "sha256": "96a6ce0e77496f9c90d759c9b46058f223f69ec3e79bf77f69e3cb42699d00e9"
+      },
+      {
+        "path": "artifacts/p5/listening-playback-validation.json",
+        "sha256": "6bcfa2d87bec623b95376e9b22873294f4450b397d51544d0f19a6193c2b414e"
+      },
+      {
+        "path": "artifacts/p5/listening-review-manifest.json",
+        "sha256": "ac31f0f4e5c2171288c62460c878256f5af8c8115ed839221ccc9fa54fe2d2b8"
+      },
+      {
+        "path": "artifacts/p5/m01-audio-draft-validation.json",
+        "sha256": "1ee2472bd33f8b752b3a6903d19470c8958f903c3ba956c313865be405bff3ba"
+      },
+      {
+        "path": "artifacts/p5/m01-review-catalog.json",
+        "sha256": "534a78cc4524e1394c225b6d03e013da859ec702f4aee0b0f63fd4d74b131f8d"
+      },
+      {
+        "path": "artifacts/p5/m01-review-catalog-validation.json",
+        "sha256": "f23608ed8b16d4a5294ed1db59278f6d2ada85a430fff26da51cb8f02c539e77"
+      },
+      {
+        "path": "artifacts/p5/m01-review-ui-validation.json",
+        "sha256": "fbca8f02680f5917f25dd2399d57aa6f7d5c1cf896eeacb57c751eb72463381e"
+      },
+      {
+        "path": "artifacts/p5/m01-review-browser-results.json",
+        "sha256": "6d2f14299b2cbb28ebe9f48577bb4ec5451db75b497a50b6a48ea8cab4428c27"
+      },
+      {
+        "path": "artifacts/p5/m01-review-fixture-manifest.json",
+        "sha256": "31b44286a74817e9e3960ec9ae75655430c15ee69ad6c5623206d000a03d58d1"
+      },
+      {
+        "path": "artifacts/p5/m01-feedback-validation.json",
+        "sha256": "43110c246e3445b0d926fd945a9dafdd8e0ad24b4ab9e8a2c9d78e058cc7dfbb"
+      },
+      {
+        "path": "artifacts/p5/m01-feedback-browser-export.json",
+        "sha256": "46158c3a9062dcef5f7d40e3bae33def354f05e4c3ea54646849c032793605a8"
+      },
+      {
+        "path": "artifacts/p5/m01-feedback-browser-intake.json",
+        "sha256": "8877ee5c92ba23722e61a948b687dca4edfb0f8968aa09a89129720d4955a5ee"
+      },
+      {
+        "path": "artifacts/p5/m01-continuation-validation.json",
+        "sha256": "14018f2c5514e5d3103f1724141479306ddbf4cddb61f2cbd19ff97960e6b0f9"
+      },
+      {
+        "path": "artifacts/p5/m01-continuation-plan.json",
+        "sha256": "7029261146299e7af7815ff6640790a6a997185ad38ce266a6d4444818fa323a"
+      },
+      {
+        "path": "artifacts/p5/m01-completion-validation.json",
+        "sha256": "680f1612bfabf0a50b789bd4a54d317444e8e08c50cda89680829fb2af30c7d6"
+      },
+      {
+        "path": "artifacts/p5/m01-completion-tests.json",
+        "sha256": "0a9a25c12589a9ef0a04b7f4e7505422c11471fff9a907644d499e8e451ef6ca"
+      },
+      {
+        "path": "artifacts/p5/m01-dialogue-crosscheck-validation.json",
+        "sha256": "bf1f8d4ab25afabf2c8dcbea2472ee711235677ed51f637cbcc13d21a0177a51"
+      },
+      {
+        "path": "artifacts/p5/approved-media-metadata-validation.json",
+        "sha256": "019f03dc3e20e21ef8768f98b42286cc3474826ca9d335687204492d72322fc8"
+      },
+      {
+        "path": "artifacts/p5/media-library-validation.json",
+        "sha256": "09ccbc1d4db6497f9460d9dfdda0f11670dc450304cab905b59a5c6a0fe5214a"
+      },
+      {
+        "path": "docs/p5/m01-completion-20261014/owner-approval.json",
+        "sha256": "292dc272ecddf962d8bc92ee2bba6ad5e9b549f44beedb8107d1504b2ace9ee0"
+      },
+      {
+        "path": "artifacts/p5/m01-publication-bindings.json",
+        "sha256": "d42d47d01c7b308a78be05f9a0424c5a7d7c3b103b3ba4859f1ff3e4f0de95c5"
+      },
+      {
+        "path": "artifacts/p5/visual-review-manifest.json",
+        "sha256": "e860c06f408cdd745e7f7ade52ee1dafaff76130d457a7c4b15cd380fb740f14"
+      },
+      {
+        "path": "artifacts/p5/visual-review-validation.json",
+        "sha256": "160706f745ab9b4f0a7abe9b802a8d4a8e494f63362a90b506e7184261e40964"
+      },
+      {
+        "path": "artifacts/p5/visual-review-browser-results.json",
+        "sha256": "1a3d5e10ae1c36dff9255940627ce5f9dc6fb25ffd223c20c5807c1fc20115d0"
+      }
+    ],
+    "real_m01_import": {
+      "status": "PASS",
+      "scope": "REAL_M01_BYTES_POSTGRESQL_S3_IMPORT",
+      "commit": "b9c34fa0c7513d824ee4aaede7e8bd31d297fe5f",
+      "source_sha": "b9c34fa0c7513d824ee4aaede7e8bd31d297fe5f",
+      "database": "PostgreSQL 18.6",
+      "imported_versions": 450,
+      "audio_assets": 420,
+      "visual_drafts": 30,
+      "synthetic_vectors": 0,
+      "real_m01_audio_imported": true,
+      "exact_replay": true,
+      "immutable_update_and_delete_rejected": true,
+      "changed_bytes_rejected": true,
+      "database_pool_recreated": true,
+      "storage_adapter_restart_verified": true,
+      "storage_server_restart_verified": true,
+      "all_stored_bytes_verified": true,
+      "anonymous_access_denied": true,
+      "import_inserted_approvals": 0,
+      "test_publications": 2,
+      "test_fixture_asset_approvals": 2700,
+      "test_approval_scope": "DISPOSABLE_TEST_FIXTURE_ONLY_NOT_OWNER_OR_PRODUCTION_APPROVAL",
+      "delivered_assets": 450,
+      "delivered_real_m01_audio_assets": 420,
+      "delivered_test_visual_assets": 30,
+      "catalog_resolved_assets": 450,
+      "binding_plan_sha256": "d42d47d01c7b308a78be05f9a0424c5a7d7c3b103b3ba4859f1ff3e4f0de95c5",
+      "delivered_test_avatar_assets": 6,
+      "same_language_versioned_avatar_closure_checks": 2,
+      "delivery_scope": "MEDIA_REPOSITORY_OWNER_SCOPED_TEST_LESSON_AFTER_S3_RESTART",
+      "foreign_user_and_activity_denied": true,
+      "production_publication_created": false,
+      "production_delivery_profile_approved": false,
+      "p6_authorized": false,
+      "test_server_source_revision": "9e49d5e7a648f00e26f2246f4dc28e6b07f8c84a",
+      "test_server_binary_sha256": "d971ad945e567ee3093a2d9ec46a65e903f3b5a90077890444f36f60139030e2",
+      "code_bindings": {
+        "tools/p5/verify-m01-s3-import.ts": "0f729471b3612023b9f61e87b13bc7b6f370bff29afa7e852c52683017500106",
+        "tools/p5/s3-test-fixture.ts": "676d1a7df61b3a0b5903dfa919584ae82088122409aaffaa7fd18bccb90c3570",
+        "tools/p5/media-library.ts": "129031a66ebe737a235bb238de4990a9297f78bd2d666a55a590232f257e0d4f",
+        "tools/p5/m01-publication-bindings.ts": "3652f749a6a6a7df6dd7df8bf3436cecba9dec97a10364ae4c74a66f4986f9dc",
+        "infra/persistence/media.ts": "e9d4aaa9f1c6f8f2d88c43dd3e7a08fdfed27afe2527861e63f730be2db79655",
+        "infra/persistence/content.ts": "2affc4bd3632de892b9bb2c9deea3b151db902022d6b18e2553cbd1b2929895a",
+        "packages/provider-adapters/storage/s3.ts": "1375a84fb2b0e5a21b3e96c45a50dfc0a95c0e7ad65daf5c69b99aab02aa148c"
+      }
+    },
+    "private_m01_transfer": {
+      "status": "ARCHIVE_VERIFIED",
+      "release_id": 414560160,
+      "repository_private_verified": true,
+      "release_draft_verified": true,
+      "draft_asset_access_verified": true,
+      "archive_downloaded": true,
+      "expected_archive_sha256": "3edaeaaeb000479921a0b3ff5ec2b52042faeee54bf943eff25e4a4a0f4e516d",
+      "expected_archive_bytes": 63346796,
+      "asset_id": 649769507,
+      "source_sha": "b9c34fa0c7513d824ee4aaede7e8bd31d297fe5f",
+      "real_m01_postgresql_executed": false,
+      "production_delivery_profile_approved": false,
+      "p6_authorized": false,
+      "transport_token_scope": "ISOLATED_INPUT_JOB_CONTENTS_WRITE",
+      "relay_retention_days": 1,
+      "relay_received_and_source_bound": true,
+      "test_job_needs_no_release_token": true
+    },
+    "external_byte_check": {
+      "status": "PASS",
+      "scope": "EXTERNAL_M01_BYTES_AND_LOCAL_ADAPTER_ONLY",
+      "approved_dataset_sha256": "81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf",
+      "files": 420,
+      "audio_bytes": 35876788,
+      "languages": {
+        "en": {
+          "final_files": 210,
+          "pilot_single_turns": 202,
+          "dialogue_files": 8
+        },
+        "cs": {
+          "final_files": 210,
+          "pilot_single_turns": 200,
+          "dialogue_files": 10
+        }
+      },
+      "pilot_files": 402,
+      "pilot_excludes_dialogue_files": 18,
+      "controls_are_final_assets": false,
+      "visual_drafts": 30,
+      "registry_versions_verified": 450,
+      "pcm_and_frame_cues_verified": true,
+      "six_voice_bindings_verified": true,
+      "normal_slow_bindings_verified": true,
+      "local_adapter_recreated": true,
+      "all_stored_bytes_verified": true,
+      "exact_replay": true,
+      "changed_bytes_rejected": true,
+      "postgresql_executed": false,
+      "s3_executed": false,
+      "audio_regenerated": false,
+      "production_calibration_approved": false,
+      "p6_authorized": false,
+      "code_bindings": {
+        "tools/p5/verify-external-m01.ts": "988217170d01184f2d732fc905b7b67789360e32355fbb1eab0aff1695c7e291",
+        "tools/p5/media-library.ts": "129031a66ebe737a235bb238de4990a9297f78bd2d666a55a590232f257e0d4f",
+        "assets/media/m01/registry.json": "2a5e8632987beec7bf34d31fc1f5552dee95f56eb0b971d6caac847bbffdea3d",
+        "assets/media/m01/source-all-assets.json": "21664c1f8bdadb9aef0694854edc50214835d7919078d96749814c661ea29293",
+        "docs/p5/m01-completion-20261014/owner-approval.json": "292dc272ecddf962d8bc92ee2bba6ad5e9b549f44beedb8107d1504b2ace9ee0",
+        "docs/p5/acoustic-provider/pilot-plan.json": "ad1d060e16e6ebbeb012fcf868fc9c4b00cc11c00d2d7b99506acf651820214a",
+        "docs/p5/acoustic-provider/pilot-results/summary.json": "5cd2b9936cd6bda985c1e301a3108005e934ba72acc9343ce9b7f959b3003d6b"
+      }
+    },
+    "visual_review_verified": {
+      "visuals": 30,
+      "browser_cases": 3,
+      "html_sha256": "ef54a4ab8897c6950e3672c7ebe96296f0aab4125ee11faf7a876ce35e33deaa",
+      "human_review": "PENDING"
+    },
+    "publication_bindings_verified": 450,
+    "trace_counts": {
+      "PASS": 174,
+      "PARTIAL": 30,
+      "PENDING": 152
+    },
+    "p6_authorized": false
+  }
+}

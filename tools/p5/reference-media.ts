@@ -5,6 +5,8 @@ import {dirname} from 'node:path';
 import {z} from 'zod';
 import {assetVersionSchema} from '../../packages/activity-schemas/src/media.js';
 import {UUID_PATTERN,STABLE_CODE_PATTERN} from '../../packages/domain/src/identity.js';
+import {loadMediaLibrary} from './media-library.js';
+import {verifyVisualOwnerApproval} from './visual-owner-approval.js';
 import {validateAssetBytes} from '../../packages/provider-adapters/storage/asset-integrity.js';
 
 const uuid=z.string().regex(UUID_PATTERN),code=z.string().regex(STABLE_CODE_PATTERN),language=z.enum(['en','cs']);
@@ -83,7 +85,8 @@ const approvalChecksum='292dc272ecddf962d8bc92ee2bba6ad5e9b549f44beedb8107d1504b
 assert.equal(digest(approvalBytes),approvalChecksum,'Owner approval bytes changed');
 assert.equal(approval.status,'OWNER_APPROVED');assert.equal(approval.approved_final_audio_files,420);
 const approvedAudio={status:approval.status,files:approval.approved_final_audio_files,scope:approval.scope,record:approvalPath,sha256:approvalChecksum};
-const unresolved=['Required M01 reference publication and activity-specific accessibility remain open; approved audio requires no regeneration or repeat approval','Human visual semantic/geometric/accessibility/originality/rights review before publication','OD-004 approved delivery profile before production integration','OD-006 calibrated real speech policy; scoring remains unavailable by default'];
-const report={phase:'P5',scope:'Media preparation, not P6/P7 runtime/publication',source_sha:process.env.GITHUB_HEAD_SHA??null,structural_validation:'PASS',publication_ready:false,original_visual_drafts:visuals.filter(v=>v.metadata.rights.source_kind==='programmatic').length,flag_drafts:source.flags.length,script_count:source.scripts.length,audio_slots:audio.length,voice_profiles:source.voices.length,approved_assets:0,approved_assets_scope:'Historical preproduction registry only; not the approved M01 audio inventory',approved_m01_audio:approvedAudio,historical_draft_unresolved:registry.unresolved,unresolved};
+const approvedVisual=await verifyVisualOwnerApproval(process.cwd(),await loadMediaLibrary(process.cwd(),{metadataOnly:true}));
+const unresolved=['Required M01 reference publication and activity-specific accessibility remain open; approved audio requires no regeneration or repeat approval','OD-004 approved delivery profile before production integration','OD-006 calibrated real speech policy; scoring remains unavailable by default'];
+const report={phase:'P5',scope:'Media preparation, not P6/P7 runtime/publication',source_sha:process.env.GITHUB_HEAD_SHA??null,structural_validation:'PASS',publication_ready:false,original_visual_drafts:visuals.filter(v=>v.metadata.rights.source_kind==='programmatic').length,flag_drafts:source.flags.length,script_count:source.scripts.length,audio_slots:audio.length,voice_profiles:source.voices.length,approved_assets:0,approved_assets_scope:'Historical preproduction registry only; not the approved M01 audio inventory',approved_m01_audio:approvedAudio,approved_m01_visuals:approvedVisual,historical_draft_unresolved:registry.unresolved,unresolved};
 mkdirSync('artifacts/p5',{recursive:true});writeFileSync('artifacts/p5/reference-media-validation.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));
 if(process.argv.includes('--require-ready'))process.exitCode=1;

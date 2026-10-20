@@ -7,7 +7,7 @@
       "phase": "P5",
       "goal": "Media manifests, generated assets, QA and object-storage adapter",
       "owner_workstream": "Media/speech",
-      "source": "Plan \u00a712 p7; Appendix B p12",
+      "source": "Plan §12 p7; Appendix B p12",
       "dependencies": [
         "P4 gate"
       ],
@@ -286,7 +286,7 @@
         "CHK-N-TS-P17-T02-R05",
         "CHK-N-TS-P19-T03-R08"
       ],
-      "readiness": "Real 420-WAV plus 30 visual-draft PostgreSQL/S3 import, replay, immutable versions, restart and 420 audio + 6 avatar deliveries passed on c55647e in both PR/push runs. Import inserts zero approvals; 2556 disposable fixture permissions are not human/visual/production approval. Required reference publication, visual QA/rights and OD-004 remain open.",
+      "readiness": "Parent b9c34fa verified 450 real imports/replays/readbacks and repository deliveries in both PR/push runs. All 30 exact visuals are owner-accepted on 2026-10-20. Current HTTP delivery requires its own exact-source result. Import creates zero approvals; 2700 disposable fixture permissions are not production approval. Activity-specific reference publication/accessibility and OD-004 remain open.",
       "contract_change": "No governing contract change; P5 concrete implementation only",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
@@ -296,7 +296,7 @@
       "phase": "P5",
       "goal": "Normal/slow playback and voice/variety bindings",
       "owner_workstream": "Media/speech",
-      "source": "Plan \u00a712 p7; Appendix B p12",
+      "source": "Plan §12 p7; Appendix B p12",
       "dependencies": [
         "IMP-P5-001"
       ],
@@ -408,7 +408,7 @@
         "CHK-N-TS-P13-T03-R08",
         "CHK-N-TS-P16-T01-R02"
       ],
-      "readiness": "Owner quality, six-voice and audio-rights approval remains valid for all 420 final WAVs. Exact-source real delivery and independent checksums passed on c55647e; normal/slow/playback/browser contracts also passed. Activity-specific accessibility and complete reference publication remain open; no repeat audio approval or generation.",
+      "readiness": "Owner quality, six-voice and audio-rights approval remains valid for all 420 final WAVs. Exact-source real delivery and independent checksums passed on b9c34fa; normal/slow/playback/browser contracts also passed. Activity-specific accessibility and complete reference publication remain open; no repeat audio approval or generation.",
       "contract_change": "No governing contract change; P5 concrete implementation only",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
@@ -418,7 +418,7 @@
       "phase": "P5",
       "goal": "Async speech jobs, mic UX, exact evidence settlement and cleanup",
       "owner_workstream": "Media/speech",
-      "source": "Plan \u00a712 p7; Appendix B p12",
+      "source": "Plan §12 p7; Appendix B p12",
       "dependencies": [
         "IMP-P5-001",
         "IMP-P5-002"
@@ -790,13 +790,13 @@
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
     }
   ],
-  "timestamp": "2026-10-19T00:00:00Z",
-  "last_hosted_tested_sha": "c55647e22d7ac1918db596ae2c4a398fee3b12bd",
+  "timestamp": "2026-10-20",
+  "last_hosted_tested_sha": "b9c34fa0c7513d824ee4aaede7e8bd31d297fe5f",
   "last_hosted_result": "PASS_REAL_M01_POSTGRESQL_S3_AND_ALL_SEVEN_WORKFLOWS",
-  "last_full_runtime_pass_sha": "c55647e22d7ac1918db596ae2c4a398fee3b12bd",
-  "ci_evidence": "docs/p5/integration-20261019/verified-ci-c55647e.json",
-  "current_revision_ci": "This revision prepares all 450 catalog bindings and expands real delivery from 426 to 450 assets, with a 30-item visual worksheet. Its exact-HEAD checks/artifacts in PR #5 determine success. Prior c55647e evidence is retained separately; no source result is inferred from parent CI.",
-  "latest_attempt_evidence": "docs/p5/integration-20261019/verified-ci-c55647e.json",
+  "last_full_runtime_pass_sha": "b9c34fa0c7513d824ee4aaede7e8bd31d297fe5f",
+  "ci_evidence": "docs/p5/integration-20261020/verified-ci-b9c34fa.json",
+  "current_revision_ci": "This revision retains the exact owner visual decision and adds actual HTTP verification for all 450 real assets. Only its exact-HEAD checks and independently downloaded artifacts in PR #5 prove execution; parent b9c34fa results are historical.",
+  "latest_attempt_evidence": "docs/p5/integration-20261020/verified-ci-b9c34fa.json",
   "local_audition_evidence": "docs/p5/voice-audition/results.json",
   "resolved_hosted_remediation": {
     "issue_id": "P5-DEP-001",
@@ -811,7 +811,7 @@
     "latest_attempt_evidence": "docs/p5/evidence/ci-pocket-audit-failure.json",
     "pending_hosted_remediation": {
       "issue_id": "P5-DEP-002",
-      "patch": "sharp 0.35.4\u21920.35.5 and matching @img platform/libvips packages, within existing Next range",
+      "patch": "sharp 0.35.4→0.35.5 and matching @img platform/libvips packages, within existing Next range",
       "local_evidence": "docs/p5/evidence/sharp-patch-validation.json",
       "resolution_authority": "Exact current revision PR checks and hosted acceptance-summary; no parent PASS substitution"
     },
@@ -830,7 +830,6 @@
   "owner_audio_approval": "docs/p5/m01-completion-20261014/owner-approval.json",
   "remaining": [
     "Required M01 reference publication and activity-specific accessibility, distinct from disposable test publication",
-    "Human semantic/accessibility/rights review for 30 immutable visual drafts",
     "OD-004 production delivery profile",
     "OD-006 labelled learner speech calibration; neutral fallback remains default",
     "Remaining applicable compound P5 clauses; no P6/P8/P9 implementation"
@@ -855,16 +854,28 @@
     ]
   },
   "visual_preflight": "docs/p5/integration-20261018/visual-preflight.json",
-  "remaining_gate_plan": "docs/p5/integration-20261019/README.md",
+  "remaining_gate_plan": "docs/p5/integration-20261020/README.md",
   "publication_preparation": {
-    "documentation": "docs/p5/integration-20261019/README.md",
+    "documentation": "docs/p5/integration-20261020/README.md",
     "expected_resolved_assets": 450,
     "expected_test_delivery_assets": 450,
     "audio_assets": 420,
     "visual_drafts": 30,
     "automatic_approval_insertion": false,
     "publication_ready": false,
-    "visual_review": "PENDING",
-    "current_source_execution": "SEE_EXACT_HEAD_PR_CHECKS_AND_ARTIFACTS"
+    "visual_review": "OWNER_ACCEPTED_EXACT_PRESENTED_SET_2026_10_20",
+    "current_source_execution": "SEE_EXACT_HEAD_PR_CHECKS_AND_ARTIFACTS",
+    "expected_http_full_asset_reads": 450,
+    "expected_http_range_reads": 8,
+    "expected_http_negative_responses": 20,
+    "expected_http_storage_recovery_reads": 2
+  },
+  "owner_visual_approval": {
+    "record": "docs/p5/visual-approval-20261020/owner-approval.json",
+    "sha256": "027b3fa9736188e11fa703361bbb5024958f49897e5be276db8fc6983e11d24c",
+    "assets": 30,
+    "decision": "OWNER_APPROVED_EXACT_PRESENTED_SET",
+    "per_item_form_submitted": false,
+    "runtime_approval_insertion": false
   }
 }
