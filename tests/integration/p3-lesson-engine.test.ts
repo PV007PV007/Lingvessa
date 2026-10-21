@@ -66,7 +66,7 @@ test('P3 PostgreSQL: pinned bilingual lesson runtime, attempts, idempotency, rem
 
     await run('P3-DB-001 clean migration/replay and exact phase table boundary', async () => {
       migrate();
-      assert.equal((await db.query(`SELECT count(*) FROM public._prisma_migrations WHERE finished_at IS NOT NULL`)).rows[0].count, '7');
+      assert.equal((await db.query(`SELECT count(*) FROM public._prisma_migrations WHERE finished_at IS NOT NULL`)).rows[0].count, '8');
       const tables = (await db.query(`SELECT tablename FROM pg_tables WHERE schemaname='public'`)).rows.map((row) => row.tablename);
       for (const table of ['lesson_runs','lesson_run_items','activity_attempts','attempt_receipts','evidence_events','outbox_events','outbox_deliveries']) assert(tables.includes(table));
       for (const table of ['ai_runs','ai_sessions']) assert(!tables.includes(table));

@@ -3,6 +3,10 @@
 Updated: 2026-10-21. **P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED; P6 NOT AUTHORIZED.**
 Branch `implementation/p5-media-speech`; [PR #5](https://github.com/PV007PV007/Lingvessa/pull/5) OPEN DRAFT. Accepted main/P4: `5027f001237b6451237d87343ebeca58cd0af007`.
 
+## Regression correction — 2026-10-21
+
+`742bbdc235cfe677572d2244b23498dd3e1dd7ce` passed the real M01 PostgreSQL/S3 step in both runs and all nine media gates in the inspected PR job, including declared accessibility. Overall all seven workflows FAILED because P3 line 69 still expected seven migrations instead of eight. [Exact failure observation](../docs/p5/integration-20261021/ci-742bbdc-regression-failure.json). The remaining assertion is corrected without weakening the gate. Final exact-source CI and independently audited artifacts in PR #5 must prove this descendant. Last fully verified source remains d2ec78a; no acceptance-summary PASS is claimed for 742bbdc.
+
 ## Declared media accessibility and clause mapping — 2026-10-21
 
 Parent `d2ec78a5a5e61c1359a8e282abd47888bdd3f74d` passed seven workflows / eleven jobs and both independent artifact audits (90 references). It verified all 450 real PostgreSQL/S3 imports, replay, immutable versions, restart/readbacks, publication pins and actual authenticated HTTP deliveries. [Retained evidence](../docs/p5/integration-20261021/verified-ci-d2ec78a.json).

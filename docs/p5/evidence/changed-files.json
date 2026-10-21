@@ -147,14 +147,6 @@
       "status": "A"
     },
     {
-      "path": "assets/specs/p5/README.md",
-      "status": "A"
-    },
-    {
-      "path": "assets/specs/p5/flags/UPSTREAM-README.md",
-      "status": "A"
-    },
-    {
       "path": "assets/specs/p5/flags/normalized/cz.svg",
       "status": "A"
     },
@@ -212,6 +204,10 @@
     },
     {
       "path": "assets/specs/p5/flags/source/ua.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/flags/UPSTREAM-README.md",
       "status": "A"
     },
     {
@@ -287,6 +283,10 @@
       "status": "A"
     },
     {
+      "path": "assets/specs/p5/README.md",
+      "status": "A"
+    },
+    {
       "path": "assets/specs/p5/reference-media.registry.json",
       "status": "A"
     },
@@ -299,19 +299,11 @@
       "status": "M"
     },
     {
-      "path": "docs/p5/P5_exit_evidence.md",
-      "status": "A"
-    },
-    {
       "path": "docs/p5/acoustic-provider/model.lock.json",
       "status": "A"
     },
     {
       "path": "docs/p5/acoustic-provider/pilot-plan.json",
-      "status": "A"
-    },
-    {
-      "path": "docs/p5/acoustic-provider/pilot-results/STARTED.json",
       "status": "A"
     },
     {
@@ -368,6 +360,10 @@
     },
     {
       "path": "docs/p5/acoustic-provider/pilot-results/results-13.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/acoustic-provider/pilot-results/STARTED.json",
       "status": "A"
     },
     {
@@ -531,10 +527,6 @@
       "status": "A"
     },
     {
-      "path": "docs/p5/integration-20261015/README.md",
-      "status": "A"
-    },
-    {
       "path": "docs/p5/integration-20261015/acoustic-pilot-validation.json",
       "status": "A"
     },
@@ -555,11 +547,11 @@
       "status": "A"
     },
     {
-      "path": "docs/p5/integration-20261015/recovery-state.json",
+      "path": "docs/p5/integration-20261015/README.md",
       "status": "A"
     },
     {
-      "path": "docs/p5/integration-20261016/README.md",
+      "path": "docs/p5/integration-20261015/recovery-state.json",
       "status": "A"
     },
     {
@@ -571,7 +563,7 @@
       "status": "A"
     },
     {
-      "path": "docs/p5/integration-20261017/README.md",
+      "path": "docs/p5/integration-20261016/README.md",
       "status": "A"
     },
     {
@@ -583,15 +575,19 @@
       "status": "A"
     },
     {
+      "path": "docs/p5/integration-20261017/README.md",
+      "status": "A"
+    },
+    {
       "path": "docs/p5/integration-20261017/transfer-receipt.json",
       "status": "A"
     },
     {
-      "path": "docs/p5/integration-20261018/README.md",
+      "path": "docs/p5/integration-20261018/prior-real-failure.json",
       "status": "A"
     },
     {
-      "path": "docs/p5/integration-20261018/prior-real-failure.json",
+      "path": "docs/p5/integration-20261018/README.md",
       "status": "A"
     },
     {
@@ -623,11 +619,15 @@
       "status": "A"
     },
     {
-      "path": "docs/p5/integration-20261021/README.md",
+      "path": "docs/p5/integration-20261021/ci-742bbdc-regression-failure.json",
       "status": "A"
     },
     {
       "path": "docs/p5/integration-20261021/pr5-before-accessibility.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261021/README.md",
       "status": "A"
     },
     {
@@ -636,10 +636,6 @@
     },
     {
       "path": "docs/p5/listening-review.md",
-      "status": "A"
-    },
-    {
-      "path": "docs/p5/m01-audio-draft-20261011/README.md",
       "status": "A"
     },
     {
@@ -680,6 +676,10 @@
     },
     {
       "path": "docs/p5/m01-audio-draft-20261011/plan.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/README.md",
       "status": "A"
     },
     {
@@ -863,14 +863,6 @@
       "status": "A"
     },
     {
-      "path": "docs/p5/m01-completion-20261014/QUALITY_REPORT_UA.md",
-      "status": "A"
-    },
-    {
-      "path": "docs/p5/m01-completion-20261014/README.md",
-      "status": "A"
-    },
-    {
       "path": "docs/p5/m01-completion-20261014/asr-run.json",
       "status": "A"
     },
@@ -920,6 +912,14 @@
     },
     {
       "path": "docs/p5/m01-completion-20261014/processing-recovery.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/QUALITY_REPORT_UA.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/README.md",
       "status": "A"
     },
     {
@@ -1047,6 +1047,10 @@
       "status": "A"
     },
     {
+      "path": "docs/p5/P5_exit_evidence.md",
+      "status": "A"
+    },
+    {
       "path": "docs/p5/requirement-evidence.json",
       "status": "A"
     },
@@ -1075,10 +1079,6 @@
       "status": "A"
     },
     {
-      "path": "docs/p5/voice-audition/README.md",
-      "status": "A"
-    },
-    {
       "path": "docs/p5/voice-audition/audition-plan.json",
       "status": "A"
     },
@@ -1103,19 +1103,11 @@
       "status": "A"
     },
     {
-      "path": "docs/p5/voice-audition/pocket-20261009/MODEL_CARD.md",
-      "status": "A"
-    },
-    {
-      "path": "docs/p5/voice-audition/pocket-20261009/README.md",
+      "path": "docs/p5/voice-audition/pocket-20261009/archive-listening-validation.json",
       "status": "A"
     },
     {
       "path": "docs/p5/voice-audition/pocket-20261009/archive-README.md",
-      "status": "A"
-    },
-    {
-      "path": "docs/p5/voice-audition/pocket-20261009/archive-listening-validation.json",
       "status": "A"
     },
     {
@@ -1155,7 +1147,15 @@
       "status": "A"
     },
     {
+      "path": "docs/p5/voice-audition/pocket-20261009/MODEL_CARD.md",
+      "status": "A"
+    },
+    {
       "path": "docs/p5/voice-audition/pocket-20261009/models.lock.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/README.md",
       "status": "A"
     },
     {
@@ -1231,10 +1231,6 @@
       "status": "A"
     },
     {
-      "path": "docs/p5/voice-audition/pocket-case-20261010/README.md",
-      "status": "A"
-    },
-    {
       "path": "docs/p5/voice-audition/pocket-case-20261010/asr-screen.json",
       "status": "A"
     },
@@ -1260,6 +1256,10 @@
     },
     {
       "path": "docs/p5/voice-audition/pocket-case-20261010/plan.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/README.md",
       "status": "A"
     },
     {
@@ -1387,10 +1387,6 @@
       "status": "A"
     },
     {
-      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/README.md",
-      "status": "A"
-    },
-    {
       "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/asr-screen.json",
       "status": "A"
     },
@@ -1408,6 +1404,10 @@
     },
     {
       "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/plan.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/README.md",
       "status": "A"
     },
     {
@@ -1524,6 +1524,10 @@
     },
     {
       "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-C-pocket-C-lowercase-turn-5.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/README.md",
       "status": "A"
     },
     {

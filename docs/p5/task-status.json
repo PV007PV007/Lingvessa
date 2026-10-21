@@ -795,8 +795,8 @@
   "last_hosted_result": "PASS_REAL_M01_POSTGRESQL_S3_AND_ALL_SEVEN_WORKFLOWS",
   "last_full_runtime_pass_sha": "d2ec78a5a5e61c1359a8e282abd47888bdd3f74d",
   "ci_evidence": "docs/p5/integration-20261021/verified-ci-d2ec78a.json",
-  "current_revision_ci": "New declared-accessibility gate and 450 test-use checks require their own exact-HEAD CI and independently audited PR/push artifacts. Retained d2ec78a proves the parent only.",
-  "latest_attempt_evidence": "docs/p5/integration-20261021/verified-ci-d2ec78a.json",
+  "current_revision_ci": "742bbdc passed real M01 and the new declared-accessibility gate, but all workflows failed one stale P3 migration-count assertion (8 actual, 7 expected). This correction requires all seven exact-source workflows and independent PR/push artifact audits. d2ec78a remains the last fully verified revision.",
+  "latest_attempt_evidence": "docs/p5/integration-20261021/ci-742bbdc-regression-failure.json",
   "local_audition_evidence": "docs/p5/voice-audition/results.json",
   "resolved_hosted_remediation": {
     "issue_id": "P5-DEP-001",
@@ -879,5 +879,6 @@
     "decision": "OWNER_APPROVED_EXACT_PRESENTED_SET",
     "per_item_form_submitted": false,
     "runtime_approval_insertion": false
-  }
+  },
+  "latest_failed_sha": "742bbdc235cfe677572d2244b23498dd3e1dd7ce"
 }

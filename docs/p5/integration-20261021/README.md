@@ -28,6 +28,10 @@ The real M01 test declares 450 distinct **test uses** and verifies kind, variety
 
 All five clauses remain PARTIAL; aggregate trace stays 174 PASS / 30 PARTIAL / 152 PENDING. This mapping clarifies evidence already obtained and work owned by later course phases; it does not waive an acceptance condition or authorize P6/P7. Current notes replace obsolete requests for missing audio/visual decisions while preserving their history.
 
+## Regression correction
+
+The first execution on `742bbdc` passed the real M01 step in both runs and the new media accessibility gate, but failed overall because P3 line 69 still expected seven migrations. The other migration assertions already expected eight. [Failure evidence](ci-742bbdc-regression-failure.json). This follow-up corrects that one stale assertion; it does not weaken migration validation. Full acceptance summaries were skipped on the failed revision. The corrected descendant needs all seven workflows and both independent artifact audits.
+
 ## Exact-source execution and recovery
 
 Use existing P5 Actions and private draft-release asset `649769507` (release `414560160`). The original 63,346,796-byte ZIP has SHA-256 `3edaeaaeb000479921a0b3ff5ec2b52042faeee54bf943eff25e4a4a0f4e516d`. It is already transferred and is verified before extracting the 420 allowlisted WAVs outside Git. Do not upload it again.
