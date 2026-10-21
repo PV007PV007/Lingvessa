@@ -1,9 +1,17 @@
 # Lingvessa implementation state and handoff
 
-Updated: 2026-10-20. **P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED; P6 NOT AUTHORIZED.**
+Updated: 2026-10-21. **P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED; P6 NOT AUTHORIZED.**
 Branch `implementation/p5-media-speech`; [PR #5](https://github.com/PV007PV007/Lingvessa/pull/5) OPEN DRAFT. Accepted main/P4: `5027f001237b6451237d87343ebeca58cd0af007`.
 
-## Owner visual acceptance and actual HTTP delivery — 2026-10-20
+## Declared media accessibility and clause mapping — 2026-10-21
+
+Parent `d2ec78a5a5e61c1359a8e282abd47888bdd3f74d` passed seven workflows / eleven jobs and both independent artifact audits (90 references). It verified all 450 real PostgreSQL/S3 imports, replay, immutable versions, restart/readbacks, publication pins and actual authenticated HTTP deliveries. [Retained evidence](../docs/p5/integration-20261021/verified-ci-d2ec78a.json).
+
+This revision closes a concrete enforcement gap: declared semantic/decorative media use is now checked during content validation and repository publication, with a direct PostgreSQL publication guard. Negative integration cases cover substitution, a mixed same-role set, optional-role mismatch and rollback; positive cases cover correct decorative and absent optional use. The real M01 test additionally checks 450 separate declared test uses. It preserves the approved corpus and decisions, zero importer-created approvals and test-only publication scope. Its own exact-HEAD CI/artifacts in PR #5 determine execution, not the parent result.
+
+[Current mapping and execution/recovery instructions](../docs/p5/integration-20261021/README.md) distinguish the five media/accessibility clauses from their later authored-course/objective acceptance. All five remain PARTIAL; total trace remains 174 PASS / 30 PARTIAL / 152 PENDING. No synthetic activity is relabelled as a real reference lesson. OD-004/006 remain open. No new archive, audio generation, repeated owner review, media Git storage, public release, merge or P6.
+
+## Historical owner visual acceptance and actual HTTP delivery — 2026-10-20
 
 The owner's “все добре. продовжуй” accepts the presented 30-item set in its immediate review context. [Decision](../docs/p5/visual-approval-20261020/owner-approval.json) binds the exact b9c34fa review manifest, HTML SHA-256, 30 immutable version-2 metadata records and SVG checksums. No per-item form or authenticated runtime reviewer is invented. Draft/pending source records remain historical; reports overlay this later set-level acceptance. Audio approval from 2026-10-14 is unchanged. This does not approve a production delivery profile, close OD-004/006 or authorize P6.
 

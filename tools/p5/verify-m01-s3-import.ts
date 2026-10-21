@@ -96,7 +96,7 @@ try{
   assert.equal(row.checksum,m.checksum);assert.equal(Number(row.byte_length),m.byte_length);assert.equal(row.object_key,k);assert.deepEqual(row.metadata,m);
  }
  assert.deepEqual(await importMediaLibrary(media,f.author,library),outputs);assert.deepEqual(await before(),snapshot);
- let testPublications=0,deliveredAssets=0,deliveredAudioAssets=0,deliveredVisualAssets=0,deliveredAvatarAssets=0,testFixtureApprovals=0,avatarClosureChecks=0;
+ let testPublications=0,deliveredAssets=0,deliveredAudioAssets=0,deliveredVisualAssets=0,deliveredAvatarAssets=0,testFixtureApprovals=0,avatarClosureChecks=0,requiredUseChecks=0;
  const httpTargets:M01HttpTarget[]=[];
  const deliveredPins:Array<{asset_id:string;asset_version:number;checksum:string;metadata_checksum:string}>=[];
  // Disposable test publications use fixture approvals, never new human/production approvals.
@@ -114,11 +114,12 @@ try{
   const payload=(await pool.query('SELECT payload FROM content_versions WHERE id=$1',[executable.content_version_id])).rows[0].payload as ContentPayload;
   const activity=payload.activities![0]!;
   for(const entry of entries){
-   const ref={asset_id:entry.metadata.asset_id,asset_stable_code:entry.metadata.stable_code,asset_version:entry.metadata.asset_version,role:real?(entry.metadata.kind==='avatar'?'test_dialogue_avatar':entry.metadata.kind==='audio'?'test_imported_audio':'test_imported_visual'):'imported_vector'};
+   const ref={asset_id:entry.metadata.asset_id,asset_stable_code:entry.metadata.stable_code,asset_version:entry.metadata.asset_version,role:real?'test_'+entry.metadata.stable_code:'imported_vector'};
    activity.media_refs.push(ref);activity.contract!.presentation.media_refs.push(ref);
+   if(real)await media.declareRequirement(f.author,{id:randomUUID(),target_content_version_id:executable.content_version_id,item_id:activity.id,role:ref.role,required:true,kind:entry.metadata.kind,scope:entry.metadata.scope,specification_version:'p5-test-use-1',specification:'Disposable import/delivery use only; checks exact kind, variety and accessibility role. Not an authored M01 learning-objective mapping.',accessibility_role:entry.metadata.decorative?'decorative':'semantic'});
   }
   if(real){
-   const audioRefs=activity.media_refs.filter(ref=>ref.role!=='test_dialogue_avatar');
+   const audioRefs=activity.media_refs.filter(ref=>!visuals.some(e=>e.metadata.kind==='avatar'&&e.metadata.asset_id===ref.asset_id));
    const closure=async(refs:typeof audioRefs)=>(await pool!.query('SELECT p5_avatar_closure($1::jsonb,$2::uuid) AS complete',[JSON.stringify(refs),source.language_id])).rows[0].complete;
    assert.equal(await closure(audioRefs),false,'Real dialogue references must fail without their versioned avatars');
    assert.equal(await closure(activity.media_refs),true,'Each dialogue speaker must resolve to its same-language/version avatar');
@@ -128,6 +129,11 @@ try{
   // The fixture's repositories used the closed pool; use the recovered pool explicitly.
   const content=new ContentRepository(pool,restarted);
   await content.saveDraft(f.author,source.language_id,payload,revision);
+  if(real){
+   assert.equal((await pool.query('SELECT p5_media_requirements_fulfilled($1::uuid) AS fulfilled',[executable.content_version_id])).rows[0].fulfilled,true);
+   assert.equal(Number((await pool.query('SELECT count(*) FROM media_requirements WHERE target_content_version_id=$1 AND required',[executable.content_version_id])).rows[0].count),entries.length);
+   requiredUseChecks+=entries.length;
+  }
   await assert.rejects(content.validateVersion(executable.content_version_id),/unapproved/);
   const pins=entries.map(entry=>outputs.find(o=>o.asset_id===entry.metadata.asset_id)!);
   for(const out of pins)for(const gate of mediaApprovalGates){
@@ -161,15 +167,15 @@ try{
   await assert.rejects(pool.query('UPDATE publication_assets SET checksum=$1 WHERE publication_id=$2',['0'.repeat(64),publication.id]),{code:'23514'});testPublications++;
  }
  assert.equal((await pool.query("SELECT count(*) FROM media_jobs WHERE job_kind='generation'")).rows[0].count,'0');
- assert.equal(testPublications,2);assert.equal(deliveredAssets,real?450:2);
+ assert.equal(requiredUseChecks,real?450:0);assert.equal(testPublications,2);assert.equal(deliveredAssets,real?450:2);
  assert.equal(deliveredVisualAssets,real?30:0);
  assert.equal(deliveredAudioAssets,real?420:0);assert.equal(deliveredAvatarAssets,real?6:0);assert.equal(avatarClosureChecks,real?2:0);
  assert.equal(testFixtureApprovals,deliveredAssets*mediaApprovalGates.length);
  assert.equal(Number((await pool.query('SELECT count(*) FROM asset_approvals')).rows[0].count),testFixtureApprovals);
  if(real)assert.deepEqual(deliveredPins.toSorted((a,b)=>a.asset_id.localeCompare(b.asset_id)),outputs.toSorted((a,b)=>a.asset_id.localeCompare(b.asset_id)));
  const httpDelivery=real?await verifyM01HttpDelivery(pool,storage,f.learner,httpTargets):{executed:false,scope:'SYNTHETIC_MODE_NOT_REAL_M01_HTTP'};
- const paths=['tools/p5/m01-http-delivery.ts','tools/p5/visual-owner-approval.ts','apps/api/src/app.ts','apps/api/src/media.ts','apps/api/src/foundation.ts','infra/persistence/identity.ts','tools/p5/verify-m01-s3-import.ts','tools/p5/s3-test-fixture.ts','tools/p5/media-library.ts','tools/p5/m01-publication-bindings.ts','infra/persistence/media.ts','infra/persistence/content.ts','packages/provider-adapters/storage/s3.ts'];
- const report={http_delivery:httpDelivery,status:'PASS',scope:real?'REAL_M01_BYTES_POSTGRESQL_S3_IMPORT':'SYNTHETIC_POSTGRESQL_S3_IMPORT_NOT_M01',commit,source_sha:process.env.GITHUB_HEAD_SHA??null,database:'PostgreSQL 18.6',imported_versions:450,audio_assets:real?420:0,visual_drafts:real?30:0,synthetic_vectors:real?0:450,real_m01_audio_imported:real,exact_replay:true,immutable_update_and_delete_rejected:true,changed_bytes_rejected:true,database_pool_recreated:true,storage_adapter_restart_verified:true,storage_server_restart_verified:true,all_stored_bytes_verified:true,anonymous_access_denied:true,import_inserted_approvals:0,test_publications:testPublications,test_fixture_asset_approvals:testFixtureApprovals,test_approval_scope:'DISPOSABLE_TEST_FIXTURE_ONLY_NOT_OWNER_OR_PRODUCTION_APPROVAL',delivered_assets:deliveredAssets,delivered_real_m01_audio_assets:deliveredAudioAssets,delivered_test_visual_assets:deliveredVisualAssets,catalog_resolved_assets:real?450:0,binding_plan_sha256:bindingPlanSha256,delivered_publication_pins:deliveredPins.toSorted((a,b)=>a.asset_id.localeCompare(b.asset_id)),delivered_test_avatar_assets:deliveredAvatarAssets,same_language_versioned_avatar_closure_checks:avatarClosureChecks,delivery_scope:'MEDIA_REPOSITORY_OWNER_SCOPED_TEST_LESSON_AFTER_S3_RESTART',foreign_user_and_activity_denied:true,production_publication_created:false,production_delivery_profile_approved:false,p6_authorized:false,test_server_source_revision:minioTestRevision,test_server_binary_sha256:storage.binary_sha256,code_bindings:Object.fromEntries(await Promise.all(paths.map(async path=>[path,createHash('sha256').update(await readFile(path)).digest('hex')])))};
+ const paths=['prisma/migrations/202610210001_p5_media_accessibility/migration.sql','tools/p5/m01-http-delivery.ts','tools/p5/visual-owner-approval.ts','apps/api/src/app.ts','apps/api/src/media.ts','apps/api/src/foundation.ts','infra/persistence/identity.ts','tools/p5/verify-m01-s3-import.ts','tools/p5/s3-test-fixture.ts','tools/p5/media-library.ts','tools/p5/m01-publication-bindings.ts','infra/persistence/media.ts','infra/persistence/content.ts','packages/provider-adapters/storage/s3.ts'];
+ const report={required_test_uses_verified:requiredUseChecks,required_test_use_scope:'DISPOSABLE_FIXTURE_KIND_VARIETY_ACCESSIBILITY_NOT_PEDAGOGICAL_COURSE_MAPPING',http_delivery:httpDelivery,status:'PASS',scope:real?'REAL_M01_BYTES_POSTGRESQL_S3_IMPORT':'SYNTHETIC_POSTGRESQL_S3_IMPORT_NOT_M01',commit,source_sha:process.env.GITHUB_HEAD_SHA??null,database:'PostgreSQL 18.6',imported_versions:450,audio_assets:real?420:0,visual_drafts:real?30:0,synthetic_vectors:real?0:450,real_m01_audio_imported:real,exact_replay:true,immutable_update_and_delete_rejected:true,changed_bytes_rejected:true,database_pool_recreated:true,storage_adapter_restart_verified:true,storage_server_restart_verified:true,all_stored_bytes_verified:true,anonymous_access_denied:true,import_inserted_approvals:0,test_publications:testPublications,test_fixture_asset_approvals:testFixtureApprovals,test_approval_scope:'DISPOSABLE_TEST_FIXTURE_ONLY_NOT_OWNER_OR_PRODUCTION_APPROVAL',delivered_assets:deliveredAssets,delivered_real_m01_audio_assets:deliveredAudioAssets,delivered_test_visual_assets:deliveredVisualAssets,catalog_resolved_assets:real?450:0,binding_plan_sha256:bindingPlanSha256,delivered_publication_pins:deliveredPins.toSorted((a,b)=>a.asset_id.localeCompare(b.asset_id)),delivered_test_avatar_assets:deliveredAvatarAssets,same_language_versioned_avatar_closure_checks:avatarClosureChecks,delivery_scope:'MEDIA_REPOSITORY_OWNER_SCOPED_TEST_LESSON_AFTER_S3_RESTART',foreign_user_and_activity_denied:true,production_publication_created:false,production_delivery_profile_approved:false,p6_authorized:false,test_server_source_revision:minioTestRevision,test_server_binary_sha256:storage.binary_sha256,code_bindings:Object.fromEntries(await Promise.all(paths.map(async path=>[path,createHash('sha256').update(await readFile(path)).digest('hex')])))};
  await mkdir('artifacts/p5',{recursive:true});await writeFile('artifacts/p5/'+(real?'m01-library-import-validation.json':'library-s3-validation.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));
 }finally{
  await pool?.end();try{if(created)await admin.query('DROP DATABASE "'+name+'" WITH (FORCE)');}finally{await admin.end();await storage?.close();}

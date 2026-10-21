@@ -310,7 +310,7 @@ test('P3 PostgreSQL: pinned bilingual lesson runtime, attempts, idempotency, rem
     await run('P3-DB-002 clean database recreation repeats all migrations and synthetic seed', async () => {
       await admin.query(`CREATE DATABASE "${name}" TEMPLATE template0 ENCODING 'UTF8'`); created=true; migrate(); await seedBootstrap(env); await seedBootstrap(env);
       const fresh=createFoundationPool(url.toString()); try {
-        assert.equal((await fresh.query('SELECT count(*) FROM public._prisma_migrations WHERE finished_at IS NOT NULL')).rows[0].count,'7');
+        assert.equal((await fresh.query('SELECT count(*) FROM public._prisma_migrations WHERE finished_at IS NOT NULL')).rows[0].count,'8');
         assert.equal((await fresh.query('SELECT count(*) FROM lesson_runs')).rows[0].count,'0');
         assert.equal((await fresh.query('SELECT count(*) FROM p1_bootstrap.fixtures')).rows[0].count,'2');
       } finally { await fresh.end(); }

@@ -1,5 +1,7 @@
 # P5 owner visual decision and real HTTP delivery — 2026-10-20
 
+Current continuation: [2026-10-21 declared accessibility and clause mapping](../integration-20261021/README.md). Historical execution details below retain their original source scope.
+
 P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED. PR #5 OPEN DRAFT; no merge or P6.
 
 ## Retained owner decision

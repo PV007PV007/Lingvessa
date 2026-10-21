@@ -1,5 +1,7 @@
 # P5 recovery, external bytes and development/test integration
 
+Current continuation: [2026-10-21 declared accessibility and clause mapping](../integration-20261021/README.md). Historical execution details below retain their original source scope.
+
 Current continuation: [2026-10-20 owner visual acceptance and HTTP delivery](../integration-20261020/README.md). Real import/repository delivery has already passed on b9c34fa; historical missing-input statements below are recovery history. Reuse private draft release asset 649769507. No new ZIP or generation is required.
 
 P5 **IN PROGRESS / NOT READY**. PR #5 remains OPEN DRAFT. P0–P4 accepted; no merge and no P6. Recovery baseline: `b53ef44ef6a8389b9680586817c101008e186027`, tree `09816f904b7637c8231664745464959a19645880`; accepted main `5027f001237b6451237d87343ebeca58cd0af007`.

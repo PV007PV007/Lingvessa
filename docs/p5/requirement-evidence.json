@@ -91,8 +91,8 @@
       ],
       "actual_gate_ids": [],
       "verified_implementation_sha": null,
-      "verification_note": "All approved M01 audio is present and the real 450-version storage/import test passed on 460aab0. Complete required reference publication, remaining visuals and applicable accessibility/rights QA remain open.",
-      "trace_reviewed_at": "2026-10-04T08:56:01.470535+00:00",
+      "verification_note": "All 450 immutable versions and retained audio/visual owner decisions resolve; both d2ec78a runs verified actual storage/restart and 450 authenticated HTTP deliveries. Declared media accessibility enforcement is added in this revision and needs its own exact-source gate. Full clause remains PARTIAL; see docs/p5/integration-20261021/README.md.",
+      "trace_reviewed_at": "2026-10-21",
       "audition_evidence": {
         "path": "docs/p5/voice-audition/results.json",
         "authorization": "docs/p5/voice-audition/authorization.json",
@@ -104,10 +104,20 @@
         "docs/p5/m01-completion-20261014/owner-approval.json",
         "docs/p5/integration-20261015/external-m01-byte-validation.json",
         "docs/p5/integration-20261015/README.md",
-        "docs/p5/integration-20261018/verified-ci-460aab0.json"
+        "docs/p5/integration-20261018/verified-ci-460aab0.json",
+        "docs/p5/integration-20261021/verified-ci-d2ec78a.json",
+        "docs/p5/integration-20261021/README.md",
+        "docs/p5/visual-approval-20261020/owner-approval.json"
       ],
-      "current_followup": "420 approved WAVs passed actual PostgreSQL/S3 import, replay, immutable versions, restart and scoped delivery on 460aab0 in both PR/push runs. See docs/p5/integration-20261018/verified-ci-460aab0.json. No audio regeneration/reapproval. Complete required reference publication, visual/accessibility QA and OD-004; test fixture permissions do not approve production.",
-      "historical_verification_note": "Runtime media preflight works; M01 complete generated/approved assets remain open."
+      "current_followup": "Verify P5-MEDIA-A11Y-001 and 450 declared test uses on this exact revision; preserve full-clause PARTIAL until appropriate reference-course/activity/objective evidence exists. P5 preparation does not authorize P6/P7. No generation or repeat owner audio/visual set approval.",
+      "historical_verification_note": "Runtime media preflight works; M01 complete generated/approved assets remain open.",
+      "historical_followups": [
+        {
+          "recorded_before": "2026-10-21",
+          "verification_note": "All approved M01 audio is present and the real 450-version storage/import test passed on 460aab0. Complete required reference publication, remaining visuals and applicable accessibility/rights QA remain open.",
+          "current_followup": "420 approved WAVs passed actual PostgreSQL/S3 import, replay, immutable versions, restart and scoped delivery on 460aab0 in both PR/push runs. See docs/p5/integration-20261018/verified-ci-460aab0.json. No audio regeneration/reapproval. Complete required reference publication, visual/accessibility QA and OD-004; test fixture permissions do not approve production."
+        }
+      ]
     },
     {
       "requirement_id": "AUD-001",
@@ -147,8 +157,8 @@
       ],
       "actual_gate_ids": [],
       "verified_implementation_sha": null,
-      "verification_note": "All 420 approved normal/slow WAV bytes passed actual import and delivery on 460aab0; audio quality/voices/rights were approved on 2026-10-14. Complete activity-specific reference publication remains.",
-      "trace_reviewed_at": "2026-10-04T08:56:01.470535+00:00",
+      "verification_note": "All 450 immutable versions and retained audio/visual owner decisions resolve; both d2ec78a runs verified actual storage/restart and 450 authenticated HTTP deliveries. 210 normal/slow pairs have approved quality, duration/language metadata and exact-byte delivery. Declared media accessibility enforcement is added in this revision and needs its own exact-source gate. Full clause remains PARTIAL; see docs/p5/integration-20261021/README.md.",
+      "trace_reviewed_at": "2026-10-21",
       "audition_evidence": {
         "path": "docs/p5/voice-audition/results.json",
         "authorization": "docs/p5/voice-audition/authorization.json",
@@ -158,8 +168,18 @@
       },
       "historical_verification_note": "Normal/slow playback proven with synthetic tones; actual reference audio duration/language QA pending.",
       "supplementary_evidence": [
-        "docs/p5/integration-20261018/verified-ci-460aab0.json"
-      ]
+        "docs/p5/integration-20261018/verified-ci-460aab0.json",
+        "docs/p5/integration-20261021/verified-ci-d2ec78a.json",
+        "docs/p5/integration-20261021/README.md",
+        "docs/p5/visual-approval-20261020/owner-approval.json"
+      ],
+      "historical_followups": [
+        {
+          "recorded_before": "2026-10-21",
+          "verification_note": "All 420 approved normal/slow WAV bytes passed actual import and delivery on 460aab0; audio quality/voices/rights were approved on 2026-10-14. Complete activity-specific reference publication remains."
+        }
+      ],
+      "current_followup": "Verify P5-MEDIA-A11Y-001 and 450 declared test uses on this exact revision; preserve full-clause PARTIAL until appropriate reference-course/activity/objective evidence exists. P5 preparation does not authorize P6/P7. No generation or repeat owner audio/visual set approval."
     },
     {
       "requirement_id": "AUD-002",
@@ -342,8 +362,8 @@
       ],
       "actual_gate_ids": [],
       "verified_implementation_sha": null,
-      "verification_note": "Transcript fallback is implemented and approved audio is delivered in the real storage test. Activity-specific accessibility/learning-objective QA remains.",
-      "trace_reviewed_at": "2026-10-04T08:56:01.470535+00:00",
+      "verification_note": "All 450 immutable versions and retained audio/visual owner decisions resolve; both d2ec78a runs verified actual storage/restart and 450 authenticated HTTP deliveries. Transcript availability and support recording are implemented; this does not prove compatibility with each future authored learning objective. Declared media accessibility enforcement is added in this revision and needs its own exact-source gate. Full clause remains PARTIAL; see docs/p5/integration-20261021/README.md.",
+      "trace_reviewed_at": "2026-10-21",
       "audition_evidence": {
         "path": "docs/p5/voice-audition/results.json",
         "authorization": "docs/p5/voice-audition/authorization.json",
@@ -353,8 +373,18 @@
       },
       "historical_verification_note": "Transcript fallback implemented; content-specific accessibility/learning-objective QA remains.",
       "supplementary_evidence": [
-        "docs/p5/integration-20261018/verified-ci-460aab0.json"
-      ]
+        "docs/p5/integration-20261018/verified-ci-460aab0.json",
+        "docs/p5/integration-20261021/verified-ci-d2ec78a.json",
+        "docs/p5/integration-20261021/README.md",
+        "docs/p5/visual-approval-20261020/owner-approval.json"
+      ],
+      "historical_followups": [
+        {
+          "recorded_before": "2026-10-21",
+          "verification_note": "Transcript fallback is implemented and approved audio is delivered in the real storage test. Activity-specific accessibility/learning-objective QA remains."
+        }
+      ],
+      "current_followup": "Verify P5-MEDIA-A11Y-001 and 450 declared test uses on this exact revision; preserve full-clause PARTIAL until appropriate reference-course/activity/objective evidence exists. P5 preparation does not authorize P6/P7. No generation or repeat owner audio/visual set approval."
     },
     {
       "requirement_id": "AUD-006",
@@ -490,8 +520,8 @@
       ],
       "actual_gate_ids": [],
       "verified_implementation_sha": null,
-      "verification_note": "All approved M01 audio is present and the real 450-version storage/import test passed on 460aab0. Complete required reference publication, remaining visuals and applicable accessibility/rights QA remain open.",
-      "trace_reviewed_at": "2026-10-04T08:56:01.470535+00:00",
+      "verification_note": "All 450 immutable versions and retained audio/visual owner decisions resolve; both d2ec78a runs verified actual storage/restart and 450 authenticated HTTP deliveries. Declared media accessibility enforcement is added in this revision and needs its own exact-source gate. Full clause remains PARTIAL; see docs/p5/integration-20261021/README.md.",
+      "trace_reviewed_at": "2026-10-21",
       "audition_evidence": {
         "path": "docs/p5/voice-audition/results.json",
         "authorization": "docs/p5/voice-audition/authorization.json",
@@ -503,10 +533,20 @@
         "docs/p5/m01-completion-20261014/owner-approval.json",
         "docs/p5/integration-20261015/external-m01-byte-validation.json",
         "docs/p5/integration-20261015/README.md",
-        "docs/p5/integration-20261018/verified-ci-460aab0.json"
+        "docs/p5/integration-20261018/verified-ci-460aab0.json",
+        "docs/p5/integration-20261021/verified-ci-d2ec78a.json",
+        "docs/p5/integration-20261021/README.md",
+        "docs/p5/visual-approval-20261020/owner-approval.json"
       ],
-      "current_followup": "420 approved WAVs passed actual PostgreSQL/S3 import, replay, immutable versions, restart and scoped delivery on 460aab0 in both PR/push runs. See docs/p5/integration-20261018/verified-ci-460aab0.json. No audio regeneration/reapproval. Complete required reference publication, visual/accessibility QA and OD-004; test fixture permissions do not approve production.",
-      "historical_verification_note": "System media pipeline exists; complete M01 asset bytes/QA unresolved."
+      "current_followup": "Verify P5-MEDIA-A11Y-001 and 450 declared test uses on this exact revision; preserve full-clause PARTIAL until appropriate reference-course/activity/objective evidence exists. P5 preparation does not authorize P6/P7. No generation or repeat owner audio/visual set approval.",
+      "historical_verification_note": "System media pipeline exists; complete M01 asset bytes/QA unresolved.",
+      "historical_followups": [
+        {
+          "recorded_before": "2026-10-21",
+          "verification_note": "All approved M01 audio is present and the real 450-version storage/import test passed on 460aab0. Complete required reference publication, remaining visuals and applicable accessibility/rights QA remain open.",
+          "current_followup": "420 approved WAVs passed actual PostgreSQL/S3 import, replay, immutable versions, restart and scoped delivery on 460aab0 in both PR/push runs. See docs/p5/integration-20261018/verified-ci-460aab0.json. No audio regeneration/reapproval. Complete required reference publication, visual/accessibility QA and OD-004; test fixture permissions do not approve production."
+        }
+      ]
     },
     {
       "requirement_id": "MED-002",
@@ -863,8 +903,8 @@
       ],
       "actual_gate_ids": [],
       "verified_implementation_sha": null,
-      "verification_note": "All approved M01 audio is present and the real 450-version storage/import test passed on 460aab0. Complete required reference publication, remaining visuals and applicable accessibility/rights QA remain open.",
-      "trace_reviewed_at": "2026-10-04T08:56:01.470535+00:00",
+      "verification_note": "All 450 immutable versions and retained audio/visual owner decisions resolve; both d2ec78a runs verified actual storage/restart and 450 authenticated HTTP deliveries. Declared media accessibility enforcement is added in this revision and needs its own exact-source gate. Full clause remains PARTIAL; see docs/p5/integration-20261021/README.md.",
+      "trace_reviewed_at": "2026-10-21",
       "audition_evidence": {
         "path": "docs/p5/voice-audition/results.json",
         "authorization": "docs/p5/voice-audition/authorization.json",
@@ -876,10 +916,20 @@
         "docs/p5/m01-completion-20261014/owner-approval.json",
         "docs/p5/integration-20261015/external-m01-byte-validation.json",
         "docs/p5/integration-20261015/README.md",
-        "docs/p5/integration-20261018/verified-ci-460aab0.json"
+        "docs/p5/integration-20261018/verified-ci-460aab0.json",
+        "docs/p5/integration-20261021/verified-ci-d2ec78a.json",
+        "docs/p5/integration-20261021/README.md",
+        "docs/p5/visual-approval-20261020/owner-approval.json"
       ],
-      "current_followup": "420 approved WAVs passed actual PostgreSQL/S3 import, replay, immutable versions, restart and scoped delivery on 460aab0 in both PR/push runs. See docs/p5/integration-20261018/verified-ci-460aab0.json. No audio regeneration/reapproval. Complete required reference publication, visual/accessibility QA and OD-004; test fixture permissions do not approve production.",
-      "historical_verification_note": "Manifest gate implemented; required reference audio/flags/QA unresolved."
+      "current_followup": "Verify P5-MEDIA-A11Y-001 and 450 declared test uses on this exact revision; preserve full-clause PARTIAL until appropriate reference-course/activity/objective evidence exists. P5 preparation does not authorize P6/P7. No generation or repeat owner audio/visual set approval.",
+      "historical_verification_note": "Manifest gate implemented; required reference audio/flags/QA unresolved.",
+      "historical_followups": [
+        {
+          "recorded_before": "2026-10-21",
+          "verification_note": "All approved M01 audio is present and the real 450-version storage/import test passed on 460aab0. Complete required reference publication, remaining visuals and applicable accessibility/rights QA remain open.",
+          "current_followup": "420 approved WAVs passed actual PostgreSQL/S3 import, replay, immutable versions, restart and scoped delivery on 460aab0 in both PR/push runs. See docs/p5/integration-20261018/verified-ci-460aab0.json. No audio regeneration/reapproval. Complete required reference publication, visual/accessibility QA and OD-004; test fixture permissions do not approve production."
+        }
+      ]
     },
     {
       "requirement_id": "REF-A1-011",
@@ -14627,27 +14677,31 @@
       "verification_note": "P5 foundation is present or planned; the entire source clause is not proven by synthetic media fixtures. Required content/QA/operational or optional AI behavior must remain separately evidenced."
     }
   ],
-  "timestamp": "2026-10-20",
+  "timestamp": "2026-10-21",
   "evidence_policy": "PASS rows cite executed evidence on an exact remote SHA. PARTIAL rows do not close the requirement or phase. Test-only synthetic media/evaluators are never reference-content QA.",
-  "trace_review_scope": "All 356 clauses/statuses retained. Both exact-source c55647e real M01 PostgreSQL/S3 runs passed; all 420 original WAVs and 30 SVG drafts imported/replayed/read back after restart. Test publications/delivery do not close reference publication, visual QA, OD-004, OD-006 or compound clauses.",
+  "trace_review_scope": "All 356 statuses retained. d2ec78a verified 450 real PostgreSQL/S3 imports/replays/restart readbacks and authenticated HTTP delivery in both PR/push runs. Retained owner audio and visual decisions resolve prior set-review requests. Test-use enforcement and full reference course/objective acceptance remain distinct; OD-004/006 open.",
   "recovery_evidence": "docs/p5/integration-20261015/README.md",
   "private_input_evidence": "docs/p5/integration-20261017/README.md",
   "private_input_transfer_receipt": "docs/p5/integration-20261017/transfer-receipt.json",
-  "real_import_execution_evidence": "docs/p5/integration-20261020/verified-ci-b9c34fa.json",
+  "real_import_execution_evidence": "docs/p5/integration-20261021/verified-ci-d2ec78a.json",
   "current_publication_preparation": {
-    "documentation": "docs/p5/integration-20261020/README.md",
+    "documentation": "docs/p5/integration-20261021/README.md",
     "code": [
       "tools/p5/m01-publication-bindings.ts",
       "tools/p5/prepare-m01-publication.ts",
       "tools/p5/verify-m01-s3-import.ts",
       "tools/p5/build-visual-review.py",
       "tools/p5/visual-owner-approval.ts",
-      "tools/p5/m01-http-delivery.ts"
+      "tools/p5/m01-http-delivery.ts",
+      "prisma/migrations/202610210001_p5_media_accessibility/migration.sql",
+      "infra/persistence/content.ts",
+      "infra/persistence/media.ts"
     ],
     "tests": [
       "tests/unit/p5-publication-bindings.test.ts",
       "tests/browser/p5-visual-review.spec.ts",
-      "tests/unit/p5-visual-owner-approval.test.ts"
+      "tests/unit/p5-visual-owner-approval.test.ts",
+      "tests/integration/p5-media.test.ts"
     ],
     "expected_catalog_bindings": 450,
     "expected_delivery_reads": 450,
@@ -14659,6 +14713,8 @@
     "expected_http_delivery_reads": 450,
     "expected_http_range_reads": 8,
     "expected_http_negative_responses": 20,
-    "expected_http_storage_recovery_reads": 2
+    "expected_http_storage_recovery_reads": 2,
+    "expected_required_test_use_checks": 450,
+    "new_gate": "P5-MEDIA-A11Y-001"
   }
 }

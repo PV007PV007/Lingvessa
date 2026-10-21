@@ -12,7 +12,7 @@ import {createFoundationPool} from '../../infra/persistence/database.js';
 import {seedBootstrap} from '../../prisma/seed.js';
 import {LocalAssetStore} from '../../packages/provider-adapters/storage/local.js';
 import {assetObjectKey} from '../../packages/provider-adapters/storage/asset-integrity.js';
-import {p5MediaFixture} from '../support/p5-fixtures.js';
+import {p5MediaFixture,svgAsset} from '../support/p5-fixtures.js';
 import {takeP5Quota,P5_QUOTAS} from '../../infra/persistence/p5-quota.js';
 
 test('P5 real PostgreSQL: media ownership, immutable versions, bytes preflight and publication pins',{timeout:240000},async()=>{
@@ -25,7 +25,7 @@ test('P5 real PostgreSQL: media ownership, immutable versions, bytes preflight a
   await admin.query(`CREATE DATABASE "${name}" TEMPLATE template0 ENCODING 'UTF8'`);created=true;migrate();await seedBootstrap(env);pool=createFoundationPool(url.toString());const db=pool,store=new LocalAssetStore(root);
   const reject=async(sql:string,args:unknown[],codes=['23503','23514','42501'])=>assert.rejects(db.query(sql,args),(e:unknown)=>Boolean(e&&typeof e==='object'&&'code'in e&&codes.includes(String(e.code))));
   await gate('P5-MEDIA-DB-001 clean migration/replay and phase boundary',async()=>{
-   migrate();await seedBootstrap(env);assert.equal((await db.query('SELECT count(*) FROM _prisma_migrations WHERE finished_at IS NOT NULL')).rows[0].count,'7');
+   migrate();await seedBootstrap(env);assert.equal((await db.query('SELECT count(*) FROM _prisma_migrations WHERE finished_at IS NOT NULL')).rows[0].count,'8');
    for(const table of ['voices','characters','media_requirements','media_jobs','assets','asset_versions','asset_approvals','content_media_bindings','publication_assets'])assert((await db.query('SELECT to_regclass($1) AS name',[table])).rows[0].name);
    assert.equal((await db.query("SELECT to_regclass('ai_runs') AS name")).rows[0].name,null);
   });
@@ -69,6 +69,38 @@ test('P5 real PostgreSQL: media ownership, immutable versions, bytes preflight a
    const rev=(await db.query('SELECT revision FROM content_versions WHERE id=$1',[en.lesson.version_id])).rows[0].revision;
    await assert.rejects(f.content.saveDraft(f.author,en.source.language_id,forged,rev),/mismatch/);
   });
+  await gate('P5-MEDIA-A11Y-001 required and optional media roles enforce accessibility in validation and direct SQL publication',async()=>{
+   const requirement=randomUUID(),decoration=svgAsset('en');decoration.metadata.stable_code='P5_en_DECORATION';
+   decoration.metadata.decorative=true;decoration.metadata.alt_text='';
+   await f.media.declareRequirement(f.author,{id:requirement,target_content_version_id:en.lesson.version_id,item_id:en.activity.id,role:'decoration',required:false,kind:'vector',scope:decoration.metadata.scope,specification_version:'test-1',specification:'Optional decorative fixture only',accessibility_role:'decorative'});
+   const job=await f.media.enqueue(f.author,requirement,randomUUID(),'programmatic_fixture','p5-fixture-1');
+   await f.approve(await f.media.ingest(f.author,job,decoration.metadata,decoration.bytes));
+   const original=structuredClone(en.payload),semantic=original.activities![0]!.media_refs[0]!;
+   const decorative={asset_id:decoration.metadata.asset_id,asset_stable_code:decoration.metadata.stable_code,asset_version:1,role:'visual_1'};
+   const save=async(refs:typeof semantic[])=>{
+    const payload=structuredClone(original);payload.activities![0]!.media_refs=refs;
+    const rev=(await db.query('SELECT revision FROM content_versions WHERE id=$1',[en.lesson.version_id])).rows[0].revision;
+    await f.content.saveDraft(f.author,en.source.language_id,payload,rev);
+   };
+   const rejected={code:'INVALID_INPUT',message:'required media declaration is not fulfilled or accessibility role differs'};
+   for(const refs of [[decorative],[semantic,decorative],[semantic,{...semantic,role:'decoration'}]]){
+    await save(refs);await assert.rejects(f.content.validateVersion(en.lesson.version_id),rejected);
+   }
+   await save([decorative]);
+   const publishInput={id:randomUUID(),actorId:f.reviewer,courseId:en.source.entities.find(e=>e.kind==='course')!.id,languageId:en.source.language_id,channel:'test' as const,versionCode:'a11y-negative',versionIds:[en.lesson.version_id]};
+   await assert.rejects(f.content.publish(publishInput),rejected);
+   assert.equal((await db.query('SELECT count(*) FROM publications WHERE id=$1',[publishInput.id])).rows[0].count,'0','Rejected repository publication rolls back');
+   const client=await db.connect();
+   try{
+    await client.query('BEGIN');
+    await client.query("INSERT INTO publications(id,course_id,language_id,channel,version_code,schema_version,manifest,published_by) VALUES($1,$2,$3,'test','direct-a11y-negative','1.7','{}',$4)",[publishInput.id,publishInput.courseId,publishInput.languageId,f.reviewer]);
+    await client.query('INSERT INTO publication_entries(publication_id,entity_id,content_version_id,language_id,content_checksum) SELECT $1,entity_id,id,language_id,checksum FROM content_versions WHERE id=$2',[publishInput.id,en.lesson.version_id]);
+    await assert.rejects(client.query("UPDATE publications SET status='published',published_at=now() WHERE id=$1",[publishInput.id]),{code:'23514',message:rejected.message});
+   }finally{await client.query('ROLLBACK');client.release();}
+   await save([semantic,{...decorative,role:'decoration'}]);await f.content.validateVersion(en.lesson.version_id);
+   await save([semantic]);await f.content.validateVersion(en.lesson.version_id); // An absent optional role is valid.
+   assert.equal((await db.query('SELECT count(*) FROM publications WHERE id=$1',[publishInput.id])).rows[0].count,'0');
+  });
   await gate('P5-MEDIA-VERSION-001 new version, immutable publication, rollback pointer',async()=>{
    const en2=await f.load('en',2);await f.approve(en2.ingested);await f.bind(en2);
    const published=await f.publish('en','media-1'),again=await f.publish('en','media-2');
@@ -87,13 +119,13 @@ test('P5 real PostgreSQL: media ownership, immutable versions, bytes preflight a
    await assert.rejects(f.content.validateVersion(cs.lesson.version_id),/integrity/);
    await rm(path);await assert.rejects(f.content.validateVersion(cs.lesson.version_id),/metadata mismatch/);
    await store.putImmutable(key,cs.asset.bytes,a.mime,a.checksum);await f.publish('cs','media-cs-1');
-   assert.equal((await db.query('SELECT count(*) FROM media_jobs')).rows[0].count,'3','Publishing never starts generation');
+   assert.equal((await db.query('SELECT count(*) FROM media_jobs')).rows[0].count,'4','Publishing never starts generation');
   });
   await gate('P5-MEDIA-QUOTA-001 generation quota separates work cost; replay and learning do not consume it',async()=>{
    for(let n=0;n<P5_QUOTAS.media_generation;n++)await takeP5Quota(db,'media_generation',f.author);
    assert.equal(await f.media.enqueue(f.author,en.requirement,en.key,'programmatic_fixture','p5-fixture-1'),en.job);
    await assert.rejects(f.media.enqueue(f.author,en.requirement,randomUUID(),'programmatic_fixture','p5-fixture-1'),/quota exhausted/);
-   assert.equal((await db.query('SELECT count(*) FROM media_jobs')).rows[0].count,'3');
+   assert.equal((await db.query('SELECT count(*) FROM media_jobs')).rows[0].count,'4');
    assert.equal(await f.identity.allowLearningAction(f.author),true);assert.equal(await f.identity.allowSpeechTransport(f.author),true);
   });
   await gate('P5-MEDIA-DB-002 clean recreation and migration/seed recovery',async()=>{

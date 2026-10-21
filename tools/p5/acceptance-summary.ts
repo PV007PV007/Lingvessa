@@ -46,7 +46,7 @@ if(m01Input.status==='VERIFIED'){
  assert.equal(m01Import.audio_assets,420);assert.equal(m01Import.visual_drafts,30);assert.equal(m01Import.test_publications,2);
  assert.equal(m01Import.delivered_real_m01_audio_assets,420);assert.equal(m01Import.test_fixture_asset_approvals,2700);
  assert.equal(m01Import.delivered_test_avatar_assets,6);assert.equal(m01Import.delivered_test_visual_assets,30);assert.equal(m01Import.delivered_assets,450);
- assert.equal(m01Import.catalog_resolved_assets,450);assert.equal(m01Import.delivered_publication_pins.length,450);
+ assert.equal(m01Import.required_test_uses_verified,450);assert.equal(m01Import.catalog_resolved_assets,450);assert.equal(m01Import.delivered_publication_pins.length,450);
  assert.equal(m01Import.binding_plan_sha256,createHash('sha256').update(readFileSync('artifacts/p5/m01-publication-bindings.json')).digest('hex'));
  for(const binding of publicationBindings.bindings){const pin:{asset_id:string;asset_version:number;checksum:string;metadata_checksum:string}|undefined=m01Import.delivered_publication_pins.find((p:{asset_id:string})=>p.asset_id===binding.asset_id);assert(pin);assert.equal(pin.asset_version,binding.asset_version);assert.equal(pin.checksum,binding.checksum);assert.match(pin.metadata_checksum,/^[a-f0-9]{64}$/u);}
  assert.equal(m01Import.same_language_versioned_avatar_closure_checks,2);
@@ -95,7 +95,7 @@ const p3=read('artifacts/p3/acceptance-summary.json'),p4=read('artifacts/p4/acce
 const containers=read('artifacts/p1/container-smoke.json'),build=read('artifacts/p1/container-build.json');
 for(const r of [storage,media,audio,speech,containers]){assert.equal(r.commit,commit);assert.equal(r.status,'PASS');}
 for(const r of [media,audio,speech,reference])assert.equal(r.source_sha,commit);
-for(const [r,count]of [[storage,3],[media,8],[audio,4],[speech,12]] as const){
+for(const [r,count]of [[storage,3],[media,9],[audio,4],[speech,12]] as const){
  assert.equal(r.gates.length,count);assert(r.gates.every((g:{status:string})=>g.status==='PASS'));
 }
 assert.equal(media.database,'PostgreSQL 18.6');assert.equal(speech.database,'PostgreSQL 18.6');

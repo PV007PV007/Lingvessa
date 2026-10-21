@@ -142,6 +142,12 @@ export class MediaRepository {
   }
 }
 
+/** Check declared roles against this content version, including optional roles when present. */
+export async function preflightMediaRequirements(db:pg.PoolClient,versionId:string):Promise<void> {
+  const result=await db.query('SELECT p5_media_requirements_fulfilled($1::uuid) AS fulfilled',[versionId]);
+  if(result.rows[0]?.fulfilled!==true)throw new ContractError('INVALID_INPUT','required media declaration is not fulfilled or accessibility role differs');
+}
+
 /** Referenced immutable bytes must exist and match; a provider URL or metadata header alone is insufficient. */
 export async function preflightMedia(db:pg.PoolClient,store:AssetStore|undefined,languageId:string,refs:MediaReference[]):Promise<void> {
   for(const ref of refs){

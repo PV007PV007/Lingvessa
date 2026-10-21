@@ -55,7 +55,7 @@ test('P2 real PostgreSQL: identity, DB isolation, immutable publication and recr
 
     await run('P2-DB-001 clean migrations, replay, seed/reseed and registry parity', async () => {
       const migrations = (await db.query('SELECT migration_name,checksum FROM _prisma_migrations WHERE finished_at IS NOT NULL ORDER BY migration_name')).rows;
-      assert.equal(migrations.length, 7);
+      assert.equal(migrations.length, 8);
       for (const m of migrations) assert.equal(m.checksum, createHash('sha256').update(readFileSync(`prisma/migrations/${m.migration_name}/migration.sql`)).digest('hex'));
       assert.equal((await db.query('SELECT count(*) FROM p1_bootstrap.fixtures')).rows[0].count, '2');
       assert.equal((await db.query('SELECT count(*) FROM roles')).rows[0].count, '7');

@@ -6,7 +6,7 @@ import type { ContentPayload } from '../../packages/activity-schemas/src/content
 import type { ContentLookup } from '../../packages/application/src/content.js';
 import { transaction } from './database.js';
 import type { AssetStore } from '../../packages/application/src/media.js';
-import { preflightMedia } from './media.js';
+import { preflightMedia, preflightMediaRequirements } from './media.js';
 
 export class ContentRepository implements ContentLookup {
   constructor(private readonly pool: pg.Pool, private readonly assetStore?: AssetStore) {}
@@ -66,6 +66,7 @@ export class ContentRepository implements ContentLookup {
     });
   }
   private async validateReferences(db: pg.PoolClient, payload: ContentPayload, languageId: string) {
+    await preflightMediaRequirements(db,payload.content_version_id);
     for (const ref of payload.refs) {
       const target = (await db.query(`SELECT e.stable_code,v.version_code FROM content_entities e JOIN content_versions v ON v.entity_id=e.id
         WHERE e.id=$1 AND v.id=$2 AND e.language_id=$3 AND v.language_id=$3`, [ref.entity_id, ref.content_version_id, languageId])).rows[0];
@@ -111,6 +112,7 @@ export class ContentRepository implements ContentLookup {
         const v = (await db.query('SELECT * FROM content_versions WHERE id=$1 FOR UPDATE', [id])).rows[0];
         if (!v) throw new ContractError('NOT_FOUND', 'Publication version not found');
         const payload=validateContent(v.payload);
+        await preflightMediaRequirements(db,id);
         for(const activity of payload.activities??[])await preflightMedia(db,this.assetStore,input.languageId,activity.media_refs);
         await db.query(`INSERT INTO publication_entries(publication_id,entity_id,content_version_id,language_id,content_checksum)
           VALUES($1,$2,$3,$4,$5)`, [input.id, v.entity_id, id, input.languageId, v.checksum]);

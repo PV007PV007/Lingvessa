@@ -286,7 +286,7 @@
         "CHK-N-TS-P17-T02-R05",
         "CHK-N-TS-P19-T03-R08"
       ],
-      "readiness": "Parent b9c34fa verified 450 real imports/replays/readbacks and repository deliveries in both PR/push runs. All 30 exact visuals are owner-accepted on 2026-10-20. Current HTTP delivery requires its own exact-source result. Import creates zero approvals; 2700 disposable fixture permissions are not production approval. Activity-specific reference publication/accessibility and OD-004 remain open.",
+      "readiness": "450 approved corpus versions imported/replayed/read after restart and delivered through HTTP on d2ec78a. New per-use accessibility enforcement requires exact-source CI. Full reference publication remains separate; no P6 authoring.",
       "contract_change": "No governing contract change; P5 concrete implementation only",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
@@ -790,13 +790,13 @@
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
     }
   ],
-  "timestamp": "2026-10-20",
-  "last_hosted_tested_sha": "b9c34fa0c7513d824ee4aaede7e8bd31d297fe5f",
+  "timestamp": "2026-10-21",
+  "last_hosted_tested_sha": "d2ec78a5a5e61c1359a8e282abd47888bdd3f74d",
   "last_hosted_result": "PASS_REAL_M01_POSTGRESQL_S3_AND_ALL_SEVEN_WORKFLOWS",
-  "last_full_runtime_pass_sha": "b9c34fa0c7513d824ee4aaede7e8bd31d297fe5f",
-  "ci_evidence": "docs/p5/integration-20261020/verified-ci-b9c34fa.json",
-  "current_revision_ci": "This revision retains the exact owner visual decision and adds actual HTTP verification for all 450 real assets. Only its exact-HEAD checks and independently downloaded artifacts in PR #5 prove execution; parent b9c34fa results are historical.",
-  "latest_attempt_evidence": "docs/p5/integration-20261020/verified-ci-b9c34fa.json",
+  "last_full_runtime_pass_sha": "d2ec78a5a5e61c1359a8e282abd47888bdd3f74d",
+  "ci_evidence": "docs/p5/integration-20261021/verified-ci-d2ec78a.json",
+  "current_revision_ci": "New declared-accessibility gate and 450 test-use checks require their own exact-HEAD CI and independently audited PR/push artifacts. Retained d2ec78a proves the parent only.",
+  "latest_attempt_evidence": "docs/p5/integration-20261021/verified-ci-d2ec78a.json",
   "local_audition_evidence": "docs/p5/voice-audition/results.json",
   "resolved_hosted_remediation": {
     "issue_id": "P5-DEP-001",
@@ -829,16 +829,16 @@
   "audio_integrity_evidence": "docs/p5/integration-20261016/attached-archive-verification.json",
   "owner_audio_approval": "docs/p5/m01-completion-20261014/owner-approval.json",
   "remaining": [
-    "Required M01 reference publication and activity-specific accessibility, distinct from disposable test publication",
+    "Applicable reference publication/accessibility at full clause scope; P5 declared-use enforcement is distinct from later authored course/objective acceptance",
     "OD-004 production delivery profile",
     "OD-006 labelled learner speech calibration; neutral fallback remains default",
-    "Remaining applicable compound P5 clauses; no P6/P8/P9 implementation"
+    "Remaining compound-clause applicability/evidence review; no P6/P7/P8/P9 implementation"
   ],
   "private_input_transfer": "docs/p5/integration-20261017/README.md",
   "private_input_result": {
     "status": "TRANSFER_AND_INDEPENDENT_DOWNLOAD_VERIFIED",
     "receipt": "docs/p5/integration-20261017/transfer-receipt.json",
-    "real_import_status": "PASS on c55647e; docs/p5/integration-20261019/verified-ci-c55647e.json"
+    "real_import_status": "PASS including 450 actual authenticated HTTP byte deliveries on d2ec78a; docs/p5/integration-20261021/verified-ci-d2ec78a.json"
   },
   "historical_before_real_m01_pass": {
     "last_hosted_tested_sha": "35dced61a8f9ae36f77379860f414e012de20997",
@@ -854,9 +854,9 @@
     ]
   },
   "visual_preflight": "docs/p5/integration-20261018/visual-preflight.json",
-  "remaining_gate_plan": "docs/p5/integration-20261020/README.md",
+  "remaining_gate_plan": "docs/p5/integration-20261021/README.md",
   "publication_preparation": {
-    "documentation": "docs/p5/integration-20261020/README.md",
+    "documentation": "docs/p5/integration-20261021/README.md",
     "expected_resolved_assets": 450,
     "expected_test_delivery_assets": 450,
     "audio_assets": 420,
@@ -868,7 +868,9 @@
     "expected_http_full_asset_reads": 450,
     "expected_http_range_reads": 8,
     "expected_http_negative_responses": 20,
-    "expected_http_storage_recovery_reads": 2
+    "expected_http_storage_recovery_reads": 2,
+    "expected_required_test_use_checks": 450,
+    "expected_media_gates": 9
   },
   "owner_visual_approval": {
     "record": "docs/p5/visual-approval-20261020/owner-approval.json",
