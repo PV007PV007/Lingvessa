@@ -647,6 +647,10 @@
       "status": "A"
     },
     {
+      "path": "docs/p5/integration-20261022/ci-c2e0226-failure.json",
+      "status": "A"
+    },
+    {
       "path": "docs/p5/integration-20261022/verified-ci-96cc960.json",
       "status": "A"
     },
@@ -1740,6 +1744,10 @@
     },
     {
       "path": "prisma/migrations/202610210001_p5_media_accessibility/migration.sql",
+      "status": "A"
+    },
+    {
+      "path": "prisma/migrations/202610220001_p5_audio_activity_closure/migration.sql",
       "status": "A"
     },
     {

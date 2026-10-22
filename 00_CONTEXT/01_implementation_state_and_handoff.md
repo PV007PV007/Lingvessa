@@ -2,13 +2,15 @@
 
 Authoritative parent `96cc9607c3a05481dddd9f8e6c763d8241db26eb` passed seven workflows / eleven jobs, 28 runtime gates and both independent artifact audits (90 references). All 420 approved WAVs + 30 SVGs passed real PostgreSQL/S3 replay, immutable versions, restart and authenticated HTTP delivery; 450 declared test uses passed. [Retained exact-source evidence](../docs/p5/integration-20261022/verified-ci-96cc960.json). Historical 742bbdc failure was corrected on 96cc960.
 
-This batch fixes unaudited inline activity transcripts and accepts inline-only alternatives from the owned immutable run. Shared client logging preserves text availability during audit failures. New PostgreSQL/Chromium gates verify idempotency, ownership, before/after audit, six weighted EN/CS attempts and replay without changing the accepted 0.3 conservative transcript policy. Current HEAD must pass its own seven workflows, 30 runtime gates and both artifact audits; final exact results in PR #5 override historical summaries below.
+This batch fixes unaudited inline activity transcripts and accepts inline-only alternatives from the owned immutable run. Shared client logging preserves text availability during audit failures. New PostgreSQL/Chromium gates verify idempotency, ownership, before/after audit, six weighted EN/CS attempts and replay without changing the accepted 0.3 conservative transcript policy. Current HEAD must pass its own seven workflows, 31 runtime gates and both artifact audits; final exact results in PR #5 override historical summaries below.
 
 The atomic audio-metadata storage clause N-CUR-P12-B04-C12 is proven by both 96cc960 runs: trace becomes 175 PASS / 30 PARTIAL / 151 PENDING. AUD-005 remains PARTIAL until actual authored-objective accessibility review. [Current scope, gates and idempotent recovery instructions](../docs/p5/integration-20261022/README.md).
 
-P5 IN PROGRESS / NOT READY. Owner audio/visual decisions retained; no new ZIP, generation, media Git storage or repeat approval. OD-004 and OD-006 OPEN. Full reference publication/objective acceptance remains distinct from disposable fixtures. No merge or P6. After exact-source verification, audit the required normal-audio/slow-pair publication gate within P5.
+P5 IN PROGRESS / NOT READY. Owner audio/visual decisions retained; no new ZIP, generation, media Git storage or repeat approval. OD-004 and OD-006 OPEN. Full reference publication/objective acceptance remains distinct from disposable fixtures. No merge or P6. The current batch also enforces exact normal/slow closure within each activity, using a ninth additive migration and repository/direct SQL negative tests. After exact-source verification, continue the remaining P5 clause/applicability evidence review.
 
-# Lingvessa implementation state and handoff
+The first transcript revision c2e0226 passed both real M01 steps but failed overall on noncanonical new fixture reference ordering. [Failure evidence](../docs/p5/integration-20261022/ci-c2e0226-failure.json). The fixture is corrected; the database guard remains enforced. This follow-up requires all seven workflows, 31 runtime gates and both independent artifact audits on its exact HEAD.
+
+## Historical implementation handoff — through 2026-10-21
 
 Updated: 2026-10-21. **P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED; P6 NOT AUTHORIZED.**
 Branch `implementation/p5-media-speech`; [PR #5](https://github.com/PV007PV007/Lingvessa/pull/5) OPEN DRAFT. Accepted main/P4: `5027f001237b6451237d87343ebeca58cd0af007`.

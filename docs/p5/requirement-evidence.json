@@ -143,7 +143,9 @@
       "actual_code_schema": [
         "infra/persistence/speech.ts",
         "apps/web/src/lesson/media.tsx",
-        "apps/web/src/lesson/speech.tsx"
+        "apps/web/src/lesson/speech.tsx",
+        "infra/persistence/media.ts",
+        "prisma/migrations/202610220001_p5_audio_activity_closure/migration.sql"
       ],
       "implementation_status": "IN_PROGRESS",
       "milestone_evidence": "docs/p5/evidence/ci-batch-006.json",
@@ -153,12 +155,13 @@
       "actual_test_files": [
         "tests/integration/p5-media.test.ts",
         "tests/integration/p5-audio.test.ts",
-        "tests/integration/p5-speech.test.ts"
+        "tests/integration/p5-speech.test.ts",
+        "tools/p5/verify-m01-s3-import.ts"
       ],
       "actual_gate_ids": [],
       "verified_implementation_sha": null,
-      "verification_note": "All 450 immutable versions and retained audio/visual owner decisions resolve; both d2ec78a runs verified actual storage/restart and 450 authenticated HTTP deliveries. 210 normal/slow pairs have approved quality, duration/language metadata and exact-byte delivery. Declared media accessibility enforcement is added in this revision and needs its own exact-source gate. Full clause remains PARTIAL; see docs/p5/integration-20261021/README.md.",
-      "trace_reviewed_at": "2026-10-21",
+      "verification_note": "Owner-approved 420 WAVs and 210 exact normal/slow pairs passed actual byte/delivery validation on 96cc960. This follow-up adds same-activity exact normal-source closure after finding that publication-wide closure can leave an activity unplayable. New EN/CS repository/direct SQL negatives and both real M01 positive closures require exact-source CI. Full authored-objective clause remains PARTIAL.",
+      "trace_reviewed_at": "2026-10-22",
       "audition_evidence": {
         "path": "docs/p5/voice-audition/results.json",
         "authorization": "docs/p5/voice-audition/authorization.json",
@@ -171,15 +174,25 @@
         "docs/p5/integration-20261018/verified-ci-460aab0.json",
         "docs/p5/integration-20261021/verified-ci-d2ec78a.json",
         "docs/p5/integration-20261021/README.md",
-        "docs/p5/visual-approval-20261020/owner-approval.json"
+        "docs/p5/visual-approval-20261020/owner-approval.json",
+        "docs/p5/integration-20261022/README.md"
       ],
       "historical_followups": [
         {
           "recorded_before": "2026-10-21",
           "verification_note": "All 420 approved normal/slow WAV bytes passed actual import and delivery on 460aab0; audio quality/voices/rights were approved on 2026-10-14. Complete activity-specific reference publication remains."
+        },
+        {
+          "recorded_before": "2026-10-22",
+          "verification_note": "All 450 immutable versions and retained audio/visual owner decisions resolve; both d2ec78a runs verified actual storage/restart and 450 authenticated HTTP deliveries. 210 normal/slow pairs have approved quality, duration/language metadata and exact-byte delivery. Declared media accessibility enforcement is added in this revision and needs its own exact-source gate. Full clause remains PARTIAL; see docs/p5/integration-20261021/README.md.",
+          "current_followup": "Verify P5-MEDIA-A11Y-001 and 450 declared test uses on this exact revision; preserve full-clause PARTIAL until appropriate reference-course/activity/objective evidence exists. P5 preparation does not authorize P6/P7. No generation or repeat owner audio/visual set approval."
         }
       ],
-      "current_followup": "Verify P5-MEDIA-A11Y-001 and 450 declared test uses on this exact revision; preserve full-clause PARTIAL until appropriate reference-course/activity/objective evidence exists. P5 preparation does not authorize P6/P7. No generation or repeat owner audio/visual set approval."
+      "current_followup": "Verify same-activity normal/slow enforcement on exact HEAD, then preserve full-clause PARTIAL until actual authored-objective acceptance. No repeat audio approval or generation.",
+      "current_batch_required_gates": [
+        "P5-AUDIO-DB-003",
+        "REAL_M01_BYTES_POSTGRESQL_S3_IMPORT"
+      ]
     },
     {
       "requirement_id": "AUD-002",

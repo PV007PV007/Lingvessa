@@ -74,6 +74,8 @@ export async function p5AudioFixture(db:pg.Pool,store:AssetStore){
    const ref={asset_id:id,asset_version:1,asset_stable_code:metadata.stable_code,role:speed};activity.media_refs.push(ref);activity.contract!.presentation.media_refs.push(ref);
   }
   const revision=(await db.query('SELECT revision FROM content_versions WHERE id=$1',[fixture.content_version_id])).rows[0].revision as number;
+  // New fixture item references must retain PostgreSQL's canonical C-order contract.
+  payload.refs.sort((a,b)=>a.relation===b.relation?(a.stable_code<b.stable_code?-1:a.stable_code>b.stable_code?1:0):(a.relation<b.relation?-1:1));
   await f.content.saveDraft(f.author,source.language_id,payload,revision);
   const replacements=new Map([[fixture.lesson_id,fixture.content_version_id],...fixture.ancestor_versions.map(a=>[a.entity_id,a.content_version_id] as const)]);
   const versionIds=[...source.entities.map(e=>replacements.get(e.id)??e.version_id),...fixture.new_items.map(item=>item.content_version_id)];

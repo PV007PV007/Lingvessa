@@ -150,6 +150,8 @@ export class MediaRepository {
 export async function preflightMediaRequirements(db:pg.PoolClient,versionId:string):Promise<void> {
   const result=await db.query('SELECT p5_media_requirements_fulfilled($1::uuid) AS fulfilled',[versionId]);
   if(result.rows[0]?.fulfilled!==true)throw new ContractError('INVALID_INPUT','required media declaration is not fulfilled or accessibility role differs');
+  const audio=await db.query('SELECT p5_content_audio_closure($1::uuid) AS fulfilled',[versionId]);
+  if(audio.rows[0]?.fulfilled!==true)throw new ContractError('INVALID_INPUT','slow audio requires its pinned normal source in the same activity');
 }
 
 /** Referenced immutable bytes must exist and match; a provider URL or metadata header alone is insufficient. */

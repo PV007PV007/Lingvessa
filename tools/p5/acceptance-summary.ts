@@ -43,6 +43,7 @@ if(m01Input.status==='VERIFIED'){
  m01Import=read('artifacts/p5/m01-library-import-validation.json');
  assert.equal(m01Import.status,'PASS');assert.equal(m01Import.commit,commit);assert.equal(m01Import.source_sha,commit);
  assert.equal(m01Import.scope,'REAL_M01_BYTES_POSTGRESQL_S3_IMPORT');assert.equal(m01Import.real_m01_audio_imported,true);
+ assert.equal(m01Import.activity_audio_closure_verified,2);
  assert.equal(m01Import.audio_assets,420);assert.equal(m01Import.visual_drafts,30);assert.equal(m01Import.test_publications,2);
  assert.equal(m01Import.delivered_real_m01_audio_assets,420);assert.equal(m01Import.test_fixture_asset_approvals,2700);
  assert.equal(m01Import.delivered_test_avatar_assets,6);assert.equal(m01Import.delivered_test_visual_assets,30);assert.equal(m01Import.delivered_assets,450);
@@ -95,7 +96,7 @@ const p3=read('artifacts/p3/acceptance-summary.json'),p4=read('artifacts/p4/acce
 const containers=read('artifacts/p1/container-smoke.json'),build=read('artifacts/p1/container-build.json');
 for(const r of [storage,media,audio,speech,containers]){assert.equal(r.commit,commit);assert.equal(r.status,'PASS');}
 for(const r of [media,audio,speech,reference])assert.equal(r.source_sha,commit);
-for(const [r,count]of [[storage,3],[media,9],[audio,6],[speech,12]] as const){
+for(const [r,count]of [[storage,3],[media,9],[audio,7],[speech,12]] as const){
  assert.equal(r.gates.length,count);assert(r.gates.every((g:{status:string})=>g.status==='PASS'));
 }
 assert.equal(media.database,'PostgreSQL 18.6');assert.equal(speech.database,'PostgreSQL 18.6');

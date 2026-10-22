@@ -19,6 +19,7 @@ import {transaction} from '../../infra/persistence/database.js';
 import {evidenceWeight} from '../../packages/mastery-review/src/model.js';
 import {policy} from '../../packages/mastery-review/src/policy.js';
 import {command} from '../support/p4-fixtures.js';
+import type {ContentPayload} from '../../packages/activity-schemas/src/content.js';
 
 test('P5 audio: published delivery, ownership, byte ranges, support and normal/slow speaker timing',{timeout:240000},async()=>{
  const base=localDatabaseUrl(process.env),admin=new pg.Client({connectionString:base}),name=`lingvessa_p5_test_${randomBytes(8).toString('hex')}`,url=new URL(base);url.pathname=`/${name}`;
@@ -45,6 +46,40 @@ test('P5 audio: published delivery, ownership, byte ranges, support and normal/s
    await assert.rejects(f.media.bytesForRun(f.learner,f.runs.en.id,f.audio.en.itemId,f.audio.cs.normal.asset_id,1),/not in/);
    await assert.rejects(db.query("UPDATE voices SET metadata='{}' WHERE id=$1",[f.audio.en.voiceId]),{code:'23514'});
    await assert.rejects(db.query('UPDATE asset_versions SET metadata=$1 WHERE asset_id=$2',[{},f.audio.en.normal.asset_id]),{code:'23514'});
+  });
+  await gate('P5-AUDIO-DB-003 slow audio requires its exact normal source in the same activity, including direct SQL publication',async()=>{
+   for(const language of ['en','cs'] as const){
+    const source=f.runs[language],original=(await db.query('SELECT payload FROM content_versions WHERE id=$1',[source.content_version_id])).rows[0].payload as ContentPayload;
+    const payload=structuredClone(original);payload.content_version_id=randomUUID();payload.version_code='p5-audio-closure-negative';
+    for(const a of payload.activities!)a.contract!.content_version_id=payload.content_version_id;
+    const refs=payload.activities![0]!.media_refs,normal=refs.find(r=>r.asset_id===f.audio[language].normal.asset_id)!;
+    const slowOnly=refs.filter(r=>r!==normal);
+    const closure=async(values:typeof refs)=>(await db.query('SELECT p5_audio_activity_closure($1::jsonb,$2::uuid) AS ok',[JSON.stringify(values),source.language_id])).rows[0].ok;
+    assert.equal(await closure(refs),true);assert.equal(await closure([normal]),true);assert.equal(await closure([]),true);
+    assert.equal(await closure(slowOnly),false);
+    assert.equal(await closure([...slowOnly,{...normal,asset_version:normal.asset_version+1}]),false);
+    const foreign=f.audio[language==='en'?'cs':'en'].normal;
+    assert.equal(await closure([...slowOnly,{...normal,asset_id:foreign.asset_id,asset_stable_code:foreign.stable_code}]),false);
+    // Publication-wide closure passes: the first activity still has the normal pin.
+    const second=payload.activities![1]!;second.media_refs=slowOnly;second.contract!.presentation.media_refs=slowOnly;
+    await f.content.saveDraft(f.author,source.language_id,payload);
+    const rejected={code:'INVALID_INPUT',message:'slow audio requires its pinned normal source in the same activity'};
+    await assert.rejects(f.content.validateVersion(payload.content_version_id),rejected);
+    const input={id:randomUUID(),actorId:f.reviewer,courseId:f.sources[language].entities.find(e=>e.kind==='course')!.id,languageId:source.language_id,channel:'test' as const,versionCode:'audio-closure-negative',versionIds:[payload.content_version_id]};
+    await assert.rejects(f.content.publish(input),rejected);
+    assert.equal((await db.query('SELECT count(*) FROM publications WHERE id=$1',[input.id])).rows[0].count,'0');
+    const client=await db.connect();
+    try{
+     await client.query('BEGIN');
+     await client.query("INSERT INTO publications(id,course_id,language_id,channel,version_code,schema_version,manifest,published_by) VALUES($1,$2,$3,'test','direct-audio-closure-negative','1.7','{}',$4)",[input.id,input.courseId,input.languageId,f.reviewer]);
+     await client.query('INSERT INTO publication_entries(publication_id,entity_id,content_version_id,language_id,content_checksum) SELECT $1,entity_id,id,language_id,checksum FROM content_versions WHERE id=$2',[input.id,payload.content_version_id]);
+     await assert.rejects(client.query("UPDATE publications SET status='published',published_at=now() WHERE id=$1",[input.id]),{code:'23514',message:rejected.message});
+    }finally{await client.query('ROLLBACK');client.release();}
+    assert.equal((await db.query('SELECT count(*) FROM publications WHERE id=$1',[input.id])).rows[0].count,'0');
+    second.media_refs=refs;second.contract!.presentation.media_refs=refs;
+    const revision=(await db.query('SELECT revision FROM content_versions WHERE id=$1',[payload.content_version_id])).rows[0].revision;
+    await f.content.saveDraft(f.author,source.language_id,payload,revision);await f.content.validateVersion(payload.content_version_id);
+   }
   });
   const app=await createApi({ready:async()=>true,close:async()=>undefined},{identity:f.identity,content:f.content,lessons:f.lessons,media:f.media});await app.listen(0,'127.0.0.1');
   try{
