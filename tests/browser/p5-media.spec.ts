@@ -24,6 +24,24 @@ for(const language of ['en','cs'] as const)test(`P5 ${language} audio: explicit 
  await page.route('**/media?item_id=*',async route=>{const response=await route.fetch();const assets=await response.json() as Array<{speed:string}>;await route.fulfill({response,json:assets.filter(a=>a.speed!=='slow')});});
  await page.reload();await expect(audio).toHaveCount(1);await page.getByRole('button',{name:'Повільно',exact:true}).click();
  await expect.poll(()=>audio.evaluate(e=>(e as HTMLAudioElement).playbackRate)).toBe(0.75);expect(await audio.evaluate(e=>(e as HTMLAudioElement).preservesPitch)).toBe(true);
+ // Reach an inline-only listening fixture through ordinary authoritative attempts.
+ for(const option of [language==='en'?'hello':'dobry_den','informal']){
+  await page.locator(`input[value="${option}"]`).check();await page.getByRole('button',{name:'Перевірити',exact:true}).click();
+  await expect(page.locator('.lesson-feedback')).toContainText('Правильно');await page.getByRole('button',{name:'Далі',exact:true}).click();
+ }
+ await expect(audio).toHaveCount(0);
+ const disclosure=page.locator('details').filter({has:page.getByText('Текст запису',{exact:true})}),summary=disclosure.locator('summary');
+ await expect(summary).toBeVisible();let supportRequests=0;
+ await page.route('**/media/support',async route=>{supportRequests++;if(supportRequests===1)await route.fulfill({status:503,contentType:'application/json',body:'{}'});else await route.continue();});
+ const supportResponse=()=>page.waitForResponse(r=>r.url().endsWith('/media/support'));
+ await summary.focus();const [failed]=await Promise.all([supportResponse(),summary.press('Enter')]);expect(failed.status()).toBe(503);
+ await expect(disclosure.locator('p')).toHaveText(language==='en'?'Tone A. Tone B.':'Tón A. Tón B.');
+ await expect(page.getByRole('radio').first()).toBeEnabled();
+ await summary.press('Enter');await expect(disclosure).not.toHaveAttribute('open','');
+ const [retried]=await Promise.all([supportResponse(),summary.press('Enter')]);expect(retried.status()).toBe(204);expect(supportRequests).toBe(2);
+ await page.reload();await expect(summary).toBeVisible();
+ const [replayed]=await Promise.all([supportResponse(),summary.click()]);expect(replayed.status()).toBe(204);
+ await expect(disclosure.locator('p')).toBeVisible();
 });
 
 for(const country of ['gb','ua','cz','pl','de','sk','es'])test(`P5 flag ${country}: static normalization preserves source geometry`,async({page})=>{

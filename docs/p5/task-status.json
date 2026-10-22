@@ -408,7 +408,7 @@
         "CHK-N-TS-P13-T03-R08",
         "CHK-N-TS-P16-T01-R02"
       ],
-      "readiness": "Owner quality, six-voice and audio-rights approval remains valid for all 420 final WAVs. Exact-source real delivery and independent checksums passed on b9c34fa; normal/slow/playback/browser contracts also passed. Activity-specific accessibility and complete reference publication remain open; no repeat audio approval or generation.",
+      "readiness": "All 420 WAVs are approved and verified in real storage/HTTP tests on 96cc960. This batch repairs inline transcript logging and adds PostgreSQL/Chromium support-evidence gates. Full activity-objective accessibility remains open; no repeat audio generation/approval.",
       "contract_change": "No governing contract change; P5 concrete implementation only",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
@@ -790,13 +790,13 @@
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
     }
   ],
-  "timestamp": "2026-10-21",
-  "last_hosted_tested_sha": "d2ec78a5a5e61c1359a8e282abd47888bdd3f74d",
+  "timestamp": "2026-10-22",
+  "last_hosted_tested_sha": "96cc9607c3a05481dddd9f8e6c763d8241db26eb",
   "last_hosted_result": "PASS_REAL_M01_POSTGRESQL_S3_AND_ALL_SEVEN_WORKFLOWS",
-  "last_full_runtime_pass_sha": "d2ec78a5a5e61c1359a8e282abd47888bdd3f74d",
-  "ci_evidence": "docs/p5/integration-20261021/verified-ci-d2ec78a.json",
-  "current_revision_ci": "742bbdc passed real M01 and the new declared-accessibility gate, but all workflows failed one stale P3 migration-count assertion (8 actual, 7 expected). This correction requires all seven exact-source workflows and independent PR/push artifact audits. d2ec78a remains the last fully verified revision.",
-  "latest_attempt_evidence": "docs/p5/integration-20261021/ci-742bbdc-regression-failure.json",
+  "last_full_runtime_pass_sha": "96cc9607c3a05481dddd9f8e6c763d8241db26eb",
+  "ci_evidence": "docs/p5/integration-20261022/verified-ci-96cc960.json",
+  "current_revision_ci": "Parent 96cc960 independently verified: seven workflows / eleven jobs, 28 runtime gates, both real M01 artifacts and 90 references PASS. Current transcript-support batch requires its own seven exact-source workflows, 30 runtime gates and both independent artifact audits; final current-source evidence is in PR #5.",
+  "latest_attempt_evidence": "docs/p5/integration-20261022/verified-ci-96cc960.json",
   "local_audition_evidence": "docs/p5/voice-audition/results.json",
   "resolved_hosted_remediation": {
     "issue_id": "P5-DEP-001",
@@ -880,5 +880,14 @@
     "per_item_form_submitted": false,
     "runtime_approval_insertion": false
   },
-  "latest_failed_sha": "742bbdc235cfe677572d2244b23498dd3e1dd7ce"
+  "latest_failed_sha": "742bbdc235cfe677572d2244b23498dd3e1dd7ce",
+  "transcript_support": {
+    "documentation": "docs/p5/integration-20261022/README.md",
+    "expected_audio_gates": 6,
+    "expected_supported_attempts": 6,
+    "policy_version_unchanged": "weighted-evidence-1.0.0",
+    "transcript_weight_unchanged": 0.3,
+    "current_source_execution": "SEE_EXACT_HEAD_PR_CHECKS_AND_ARTIFACTS",
+    "objective_review_complete": false
+  }
 }

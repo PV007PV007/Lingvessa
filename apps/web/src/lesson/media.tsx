@@ -37,17 +37,16 @@ function AudioPlayer({asset,slow,avatars,runId,itemId,onPlay,onTranscript}:{asse
   </details>
  </section>;
 }
-export function MediaPanel({runId,itemId,hasMedia,csrf}:{runId:string;itemId:string;hasMedia:boolean;csrf:()=>string}){
- const [assets,setAssets]=useState<DeliveredMedia[]|null>(null),[error,setError]=useState(false),[retry,setRetry]=useState(0),container=useRef<HTMLDivElement|null>(null),logged=useRef(false);
- useEffect(()=>{if(!hasMedia)return;const abort=new AbortController();setAssets(null);setError(false);logged.current=false;
+export function MediaPanel({runId,itemId,hasMedia,onTranscript}:{runId:string;itemId:string;hasMedia:boolean;onTranscript:()=>void}){
+ const [assets,setAssets]=useState<DeliveredMedia[]|null>(null),[error,setError]=useState(false),[retry,setRetry]=useState(0),container=useRef<HTMLDivElement|null>(null);
+ useEffect(()=>{if(!hasMedia)return;const abort=new AbortController();setAssets(null);setError(false);
   void fetch(`/api/v1/lesson-runs/${runId}/media?item_id=${itemId}`,{credentials:'include',signal:abort.signal}).then(async r=>{if(!r.ok)throw new Error();const data=deliveredMediaListSchema.parse(await r.json());if(!abort.signal.aborted)setAssets(data);}).catch(()=>{if(!abort.signal.aborted)setError(true);});return()=>abort.abort();
  },[runId,itemId,hasMedia,retry]);
  if(!hasMedia)return null;
- const transcript=()=>{if(logged.current)return;logged.current=true;void fetch(`/api/v1/lesson-runs/${runId}/media/support`,{method:'POST',headers:{'content-type':'application/json','x-csrf-token':csrf(),'x-lingvessa-client':'web'},credentials:'include',body:JSON.stringify({item_id:itemId,kind:'transcript'})}).then(r=>{if(!r.ok)logged.current=false;}).catch(()=>{logged.current=false;});};
  return <div ref={container} className="lesson-media" lang="uk">
   {error?<p role="status">Не вдалося завантажити медіа. <button type="button" onClick={()=>setRetry(retry+1)}>Повторити завантаження</button></p>:assets===null?<p role="status">Завантаження медіа…</p>:null}
   {assets?.filter(a=>a.kind!=='audio'&&!(a.kind==='avatar'&&assets.some(s=>s.turns?.some(t=>t.character_id===a.character_id)))).map(a=><img key={`${a.asset_id}:${a.asset_version}`} src={path(runId,itemId,a)} alt={a.decorative?'':a.alt_text} loading="lazy" onError={e=>{e.currentTarget.hidden=true;setError(true);}}/>)}
   {assets?.filter(a=>a.kind==='audio'&&a.speed==='normal').map(a=><AudioPlayer key={`${a.asset_id}:${a.asset_version}`} asset={a} slow={assets.find(s=>s.speed==='slow'&&s.normal_asset_id===a.asset_id&&s.normal_asset_version===a.asset_version)} avatars={assets.filter(a=>a.kind==='avatar')} runId={runId} itemId={itemId}
-   onPlay={current=>container.current?.querySelectorAll('audio').forEach(other=>{if(other!==current)other.pause();})} onTranscript={transcript}/>)}
+   onPlay={current=>container.current?.querySelectorAll('audio').forEach(other=>{if(other!==current)other.pause();})} onTranscript={onTranscript}/>)}
  </div>;
 }

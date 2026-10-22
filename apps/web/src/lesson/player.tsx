@@ -22,6 +22,16 @@ export function LessonPlayer({runId,embedded=false,sessionCsrf}:{runId:string;em
   const [notice,setNotice]=useState('Завантаження уроку…');const [busy,setBusy]=useState(true);const [loginRequired,setLoginRequired]=useState(false);
   const [autoAdvance,setAutoAdvance]=useState(false);const csrf=useRef('');const client=useRef<LessonApiClient|null>(null);const queue=useRef<UnsentAttemptQueue|null>(null);
   const inflight=useRef(false);const loading=useRef(false);
+  const transcriptRequests=useRef(new Set<string>());
+  function recordTranscript(){
+    const itemId=run?.manifest.activities[run.position]?.id;if(!itemId)return;
+    const key=`${runId}:${itemId}`;if(transcriptRequests.current.has(key))return;
+    transcriptRequests.current.add(key);
+    // Accessibility remains usable if the audit request fails. Reopening retries it;
+    // the server's conservative evidence weighting does not depend on this request.
+    void fetch(`/api/v1/lesson-runs/${runId}/media/support`,{method:'POST',credentials:'include',headers:{'content-type':'application/json','x-csrf-token':csrf.current,'x-lingvessa-client':'web'},body:JSON.stringify({item_id:itemId,kind:'transcript'})})
+      .then(response=>{if(!response.ok)transcriptRequests.current.delete(key);}).catch(()=>{transcriptRequests.current.delete(key);});
+  }
   const [conflictingAttempt,setConflictingAttempt]=useState<string|null>(null);
   const [diagnostic,setDiagnostic]=useState('');const [hint,setHint]=useState('');
   const captureProblem=(error:unknown)=>setDiagnostic(error instanceof ApiProblem?`${error.problem.code} · ${error.problem.correlation_id} · ${run?.content_version_id??runId}`:'');
@@ -97,9 +107,9 @@ export function LessonPlayer({runId,embedded=false,sessionCsrf}:{runId:string;em
     {!loginRequired&&<>
       {run&&run.state!=='completed'&&<>{!embedded&&<p>{run.manifest.language==='en'?'English':'Čeština'} · {run.position+1} / {run.manifest.activities.length}</p>}
         {run.state==='remediation'&&<p>Повторення: невирішених вправ — {run.unresolved_count}.</p>}
-        {run.manifest.activities[run.position]&&<MediaPanel key={`media:${run.id}:${run.position}`} runId={run.id} itemId={run.manifest.activities[run.position]!.id} hasMedia={run.manifest.activities[run.position]!.presentation.media_refs.length>0} csrf={()=>csrf.current}/>}
+        {run.manifest.activities[run.position]&&<MediaPanel key={`media:${run.id}:${run.position}`} runId={run.id} itemId={run.manifest.activities[run.position]!.id} hasMedia={run.manifest.activities[run.position]!.presentation.media_refs.length>0} onTranscript={recordTranscript}/>}
         {run.manifest.activities[run.position]?.response_kind==='speech'&&<SpeechPanel key={`speech:${run.id}:${run.position}`} run={run} csrf={()=>csrf.current} state={player} dispatch={dispatch} autoAdvance={autoAdvance} onNext={value=>{restore(value);setResult(null);setNotice('');}}/>}
-        {run.manifest.activities[run.position]&&run.manifest.activities[run.position]?.response_kind!=='speech'&&<ActivityRenderer key={`${run.id}:${run.position}:${result?.attempt_id??'active'}`} activity={run.manifest.activities[run.position]!} disabled={busy||result!==null||notice!==''||(!run.retry_available&&run.manifest.activities[run.position]?.response_kind!=='none')} onAnswer={response=>void answer(response)}/>}
+        {run.manifest.activities[run.position]&&run.manifest.activities[run.position]?.response_kind!=='speech'&&<ActivityRenderer key={`${run.id}:${run.position}:${result?.attempt_id??'active'}`} activity={run.manifest.activities[run.position]!} disabled={busy||result!==null||notice!==''||(!run.retry_available&&run.manifest.activities[run.position]?.response_kind!=='none')} onAnswer={response=>void answer(response)} onTranscript={recordTranscript}/>}
         {result&&<div className="lesson-feedback" aria-live="polite" role="status"><strong>{result.outcome==='correct'?'Правильно':result.outcome==='incorrect'?'Спробуйте ще раз':result.outcome==='assisted'?'Завершено з допомогою':'Продовжуймо'}</strong><p>{result.feedback}</p>
           {result.outcome==='incorrect'?<button disabled={busy||!result.run.retry_available} onClick={()=>{dispatch({type:'RETRY'});setResult(null);}}>Повторити</button>:<button disabled={busy} onClick={()=>void next()}>Далі</button>}</div>}
         {result?.outcome==='incorrect'&&<button disabled={busy} onClick={async()=>{try{const r=await fetch(`/api/v1/lesson-runs/${runId}/hint`,{method:'POST',headers:{'x-csrf-token':csrf.current},credentials:'include'});if(!r.ok)throw new Error();setHint((await r.json() as {hint:string}).hint);}catch{setNotice('Не вдалося отримати підказку.');}}}>Підказка</button>}

@@ -95,12 +95,19 @@ const p3=read('artifacts/p3/acceptance-summary.json'),p4=read('artifacts/p4/acce
 const containers=read('artifacts/p1/container-smoke.json'),build=read('artifacts/p1/container-build.json');
 for(const r of [storage,media,audio,speech,containers]){assert.equal(r.commit,commit);assert.equal(r.status,'PASS');}
 for(const r of [media,audio,speech,reference])assert.equal(r.source_sha,commit);
-for(const [r,count]of [[storage,3],[media,9],[audio,4],[speech,12]] as const){
+for(const [r,count]of [[storage,3],[media,9],[audio,6],[speech,12]] as const){
  assert.equal(r.gates.length,count);assert(r.gates.every((g:{status:string})=>g.status==='PASS'));
 }
 assert.equal(media.database,'PostgreSQL 18.6');assert.equal(speech.database,'PostgreSQL 18.6');
 assert.equal(baseline.status,'PASS');assert.equal(reference.structural_validation,'PASS');
 assert.equal(audio.browser_executed,true);
+assert.equal(audio.transcript_support.scope,'SYNTHETIC_ACTIVITY_CONTRACT_NOT_M01_OBJECTIVE_REVIEW');
+assert.deepEqual(audio.transcript_support.languages,['en','cs']);
+assert.deepEqual(audio.transcript_support.activity_types,['listening_gist','listening_detail','dictation']);
+assert.equal(audio.transcript_support.weighted_attempts_verified,6);
+assert.equal(audio.transcript_support.model_version,'weighted-evidence-1.0.0');assert.equal(audio.transcript_support.transcript_weight,0.3);
+for(const key of ['client_override_rejected','inline_audit_verified'])assert.equal(audio.transcript_support[key],true);
+for(const key of ['audit_creates_evidence','late_audit_mutates_evidence','replay_multiplies_evidence'])assert.equal(audio.transcript_support[key],false);
 for(const [r,count]of [[mediaBrowser,9],[speechBrowser,2]] as const){
  assert.equal(r.stats.expected,count);for(const key of ['unexpected','skipped','flaky'])assert.equal(r.stats[key],0);
 }
@@ -219,6 +226,7 @@ const paths=['docs/p5/visual-approval-20261020/owner-approval.json','docs/p5/vis
 const summary={phase:'P5',runtime_status:'PASS',milestone_status:'NOT_READY',tested_sha:commit,
  run_id:process.env.GITHUB_RUN_ID,event:process.env.GITHUB_EVENT_NAME,
  runtime_gates:{storage:storage.gates,media:media.gates,audio:audio.gates,speech:speech.gates},
+ transcript_support:audio.transcript_support,
  browser:{media:mediaBrowser.stats,speech:speechBrowser.stats,total_with_p3_p4:p3.browser.expected+p4.browser.expected+mediaBrowser.stats.expected+speechBrowser.stats.expected},
  listening_review:{browser:listeningBrowser.stats,clips_verified:listeningPlayback.clips_verified,human_review:'PENDING',html_sha256:listeningManifest.html_sha256},
  m01_audio_draft:m01Draft,

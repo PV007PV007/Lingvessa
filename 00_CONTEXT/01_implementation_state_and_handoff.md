@@ -1,3 +1,13 @@
+## Current P5 transcript-support continuation — 2026-10-22
+
+Authoritative parent `96cc9607c3a05481dddd9f8e6c763d8241db26eb` passed seven workflows / eleven jobs, 28 runtime gates and both independent artifact audits (90 references). All 420 approved WAVs + 30 SVGs passed real PostgreSQL/S3 replay, immutable versions, restart and authenticated HTTP delivery; 450 declared test uses passed. [Retained exact-source evidence](../docs/p5/integration-20261022/verified-ci-96cc960.json). Historical 742bbdc failure was corrected on 96cc960.
+
+This batch fixes unaudited inline activity transcripts and accepts inline-only alternatives from the owned immutable run. Shared client logging preserves text availability during audit failures. New PostgreSQL/Chromium gates verify idempotency, ownership, before/after audit, six weighted EN/CS attempts and replay without changing the accepted 0.3 conservative transcript policy. Current HEAD must pass its own seven workflows, 30 runtime gates and both artifact audits; final exact results in PR #5 override historical summaries below.
+
+The atomic audio-metadata storage clause N-CUR-P12-B04-C12 is proven by both 96cc960 runs: trace becomes 175 PASS / 30 PARTIAL / 151 PENDING. AUD-005 remains PARTIAL until actual authored-objective accessibility review. [Current scope, gates and idempotent recovery instructions](../docs/p5/integration-20261022/README.md).
+
+P5 IN PROGRESS / NOT READY. Owner audio/visual decisions retained; no new ZIP, generation, media Git storage or repeat approval. OD-004 and OD-006 OPEN. Full reference publication/objective acceptance remains distinct from disposable fixtures. No merge or P6. After exact-source verification, audit the required normal-audio/slow-pair publication gate within P5.
+
 # Lingvessa implementation state and handoff
 
 Updated: 2026-10-21. **P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED; P6 NOT AUTHORIZED.**
@@ -7,7 +17,7 @@ Branch `implementation/p5-media-speech`; [PR #5](https://github.com/PV007PV007/L
 
 `742bbdc235cfe677572d2244b23498dd3e1dd7ce` passed the real M01 PostgreSQL/S3 step in both runs and all nine media gates in the inspected PR job, including declared accessibility. Overall all seven workflows FAILED because P3 line 69 still expected seven migrations instead of eight. [Exact failure observation](../docs/p5/integration-20261021/ci-742bbdc-regression-failure.json). The remaining assertion is corrected without weakening the gate. Final exact-source CI and independently audited artifacts in PR #5 must prove this descendant. Last fully verified source remains d2ec78a; no acceptance-summary PASS is claimed for 742bbdc.
 
-## Declared media accessibility and clause mapping — 2026-10-21
+## Historical declared media accessibility and clause mapping — 2026-10-21
 
 Parent `d2ec78a5a5e61c1359a8e282abd47888bdd3f74d` passed seven workflows / eleven jobs and both independent artifact audits (90 references). It verified all 450 real PostgreSQL/S3 imports, replay, immutable versions, restart/readbacks, publication pins and actual authenticated HTTP deliveries. [Retained evidence](../docs/p5/integration-20261021/verified-ci-d2ec78a.json).
 

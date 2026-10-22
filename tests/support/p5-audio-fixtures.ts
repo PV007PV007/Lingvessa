@@ -5,6 +5,7 @@ import type pg from 'pg';
 import type {AssetStore} from '../../packages/application/src/media.js';
 import type {AssetVersion} from '../../packages/activity-schemas/src/media.js';
 import type {ContentPayload} from '../../packages/activity-schemas/src/content.js';
+import type {ActivityContract} from '../../packages/activity-schemas/src/lesson.js';
 import {executableLessonFixtureSchema} from '../../packages/content-tools/src/p3-fixture.js';
 import {loadExecutableLessonFixture} from '../../infra/persistence/p3-fixtures.js';
 import {LessonRepository} from '../../infra/persistence/lessons.js';
@@ -22,9 +23,23 @@ export function toneWav(milliseconds:number):Buffer {
 export async function p5AudioFixture(db:pg.Pool,store:AssetStore){
  const f=await p5MediaFixture(db,store),lessons=new LessonRepository(db);
  const runs:Partial<Record<'en'|'cs',Awaited<ReturnType<LessonRepository['start']>>>>={};
- const fixtures:Partial<Record<'en'|'cs',{normal:AssetVersion;slow:AssetVersion;voiceId:string;itemId:string}>>={};
+ const fixtures:Partial<Record<'en'|'cs',{normal:AssetVersion;slow:AssetVersion;voiceId:string;itemId:string;activities:ActivityContract[]}>>={};
  for(const language of ['en','cs'] as const){
   const source=f.sources[language],fixture=executableLessonFixtureSchema.parse(JSON.parse(readFileSync(`content/fixtures/p3/${language}-lesson.json`,'utf8')));
+  // Disposable P5 contracts only; these are not authored M01 learner activities.
+  for(const type of ['listening_gist','listening_detail','dictation'] as const){
+   const activity=structuredClone(fixture.activities[0]!);activity.id=randomUUID();activity.stable_code=`P5_${language}_${type}`;activity.type=type;
+   activity.presentation.prompt='Synthetic transcript-support contract check.';
+   activity.presentation.accessibility.transcript=language==='en'?'Tone A. Tone B.':'Tón A. Tón B.';
+   activity.learning.evidence_map=[{skill:type==='dictation'?'writing':'listening',facet:type==='dictation'?'spelling':type,weight:1}];
+   if(type==='dictation'){
+    activity.response.kind='text';activity.response.answer_policy.mode='text';
+    activity.response.answer_policy.accepted_text=[language==='en'?'Tone A.':'Tón A.'];
+    delete activity.response.answer_policy.accepted_option_ids;delete activity.presentation.options;
+    activity.runtime.presentation_order=[];
+   }
+   fixture.activities.push(activity);fixture.new_items.push({activity_id:activity.id,content_version_id:randomUUID(),version_code:'p5-transcript-fixture-1'});
+  }
   await loadExecutableLessonFixture(db,f.author,fixture);
   const payload=(await db.query('SELECT payload FROM content_versions WHERE id=$1',[fixture.content_version_id])).rows[0].payload as ContentPayload;
   const activity=payload.activities![0]!,variety=language==='en'?'en-GB':'cs-CZ',voiceIds=[randomUUID(),randomUUID()],charIds=[randomUUID(),randomUUID()];
@@ -61,13 +76,13 @@ export async function p5AudioFixture(db:pg.Pool,store:AssetStore){
   const revision=(await db.query('SELECT revision FROM content_versions WHERE id=$1',[fixture.content_version_id])).rows[0].revision as number;
   await f.content.saveDraft(f.author,source.language_id,payload,revision);
   const replacements=new Map([[fixture.lesson_id,fixture.content_version_id],...fixture.ancestor_versions.map(a=>[a.entity_id,a.content_version_id] as const)]);
-  const versionIds=source.entities.map(e=>replacements.get(e.id)??e.version_id);
+  const versionIds=[...source.entities.map(e=>replacements.get(e.id)??e.version_id),...fixture.new_items.map(item=>item.content_version_id)];
   for(const id of versionIds){await f.content.validateVersion(id);const v=(await db.query('SELECT checksum,revision FROM content_versions WHERE id=$1',[id])).rows[0];
    for(const gate of ['linguistic','pedagogical','technical','accessibility','media','originality'])await f.content.approve(f.reviewer,id,v.checksum,v.revision,gate,'approved','Controlled synthetic P5 contract approval, not production QA');}
   const publication=await f.content.publish({id:randomUUID(),actorId:f.reviewer,courseId:source.entities.find(e=>e.kind==='course')!.id,languageId:source.language_id,channel:'test',versionCode:`p5-audio-${language}-1`,versionIds});
   const profileId=randomUUID();await db.query('INSERT INTO language_profiles(id,user_id,language_id,variant_id) VALUES($1,$2,$3,$4)',[profileId,f.learner,source.language_id,language==='en'?'0198f000-0000-7000-8000-000000000011':'0198f000-0000-7000-8000-000000000013']);
   runs[language]=await lessons.start(f.learner,{language_profile_id:profileId,publication_id:publication.id,lesson_id:fixture.lesson_id});
-  fixtures[language]={normal:assets[0]!,slow:assets[1]!,voiceId:voiceIds[0]!,itemId:activity.id};
+  fixtures[language]={normal:assets[0]!,slow:assets[1]!,voiceId:voiceIds[0]!,itemId:activity.id,activities:payload.activities!.map(item=>item.contract!)};
  }
  return {...f,lessons,runs:runs as Required<typeof runs>,audio:fixtures as Required<typeof fixtures>};
 }

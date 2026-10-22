@@ -348,7 +348,12 @@
       "actual_code_schema": [
         "infra/persistence/speech.ts",
         "apps/web/src/lesson/media.tsx",
-        "apps/web/src/lesson/speech.tsx"
+        "apps/web/src/lesson/speech.tsx",
+        "infra/persistence/media.ts",
+        "infra/persistence/lessons.ts",
+        "apps/web/src/lesson/player.tsx",
+        "apps/web/src/lesson/activity.tsx",
+        "packages/mastery-review/src/model.ts"
       ],
       "implementation_status": "IN_PROGRESS",
       "milestone_evidence": "docs/p5/evidence/ci-batch-006.json",
@@ -358,12 +363,13 @@
       "actual_test_files": [
         "tests/integration/p5-media.test.ts",
         "tests/integration/p5-audio.test.ts",
-        "tests/integration/p5-speech.test.ts"
+        "tests/integration/p5-speech.test.ts",
+        "tests/browser/p5-media.spec.ts"
       ],
       "actual_gate_ids": [],
       "verified_implementation_sha": null,
-      "verification_note": "All 450 immutable versions and retained audio/visual owner decisions resolve; both d2ec78a runs verified actual storage/restart and 450 authenticated HTTP deliveries. Transcript availability and support recording are implemented; this does not prove compatibility with each future authored learning objective. Declared media accessibility enforcement is added in this revision and needs its own exact-source gate. Full clause remains PARTIAL; see docs/p5/integration-20261021/README.md.",
-      "trace_reviewed_at": "2026-10-21",
+      "verification_note": "96cc960 proves immutable transcripts and real M01 delivery. This batch fixes unaudited inline-only alternatives and requires new PostgreSQL/Chromium transcript audit, 0.3 evidence weighting, client-override and replay checks. It preserves the accepted policy; full authored-objective/conditional accessibility-mode review remains unproven.",
+      "trace_reviewed_at": "2026-10-22",
       "audition_evidence": {
         "path": "docs/p5/voice-audition/results.json",
         "authorization": "docs/p5/voice-audition/authorization.json",
@@ -376,15 +382,28 @@
         "docs/p5/integration-20261018/verified-ci-460aab0.json",
         "docs/p5/integration-20261021/verified-ci-d2ec78a.json",
         "docs/p5/integration-20261021/README.md",
-        "docs/p5/visual-approval-20261020/owner-approval.json"
+        "docs/p5/visual-approval-20261020/owner-approval.json",
+        "docs/p5/integration-20261022/verified-ci-96cc960.json",
+        "docs/p5/integration-20261022/README.md"
       ],
       "historical_followups": [
         {
           "recorded_before": "2026-10-21",
           "verification_note": "Transcript fallback is implemented and approved audio is delivered in the real storage test. Activity-specific accessibility/learning-objective QA remains."
+        },
+        {
+          "recorded_before": "2026-10-22",
+          "status": "PARTIAL",
+          "verification_note": "All 450 immutable versions and retained audio/visual owner decisions resolve; both d2ec78a runs verified actual storage/restart and 450 authenticated HTTP deliveries. Transcript availability and support recording are implemented; this does not prove compatibility with each future authored learning objective. Declared media accessibility enforcement is added in this revision and needs its own exact-source gate. Full clause remains PARTIAL; see docs/p5/integration-20261021/README.md.",
+          "current_followup": "Verify P5-MEDIA-A11Y-001 and 450 declared test uses on this exact revision; preserve full-clause PARTIAL until appropriate reference-course/activity/objective evidence exists. P5 preparation does not authorize P6/P7. No generation or repeat owner audio/visual set approval."
         }
       ],
-      "current_followup": "Verify P5-MEDIA-A11Y-001 and 450 declared test uses on this exact revision; preserve full-clause PARTIAL until appropriate reference-course/activity/objective evidence exists. P5 preparation does not authorize P6/P7. No generation or repeat owner audio/visual set approval."
+      "current_followup": "Verify this batch on exact HEAD; retain full-clause status until authored-objective/conditional accessibility evidence exists. No P6, new transcript policy, generation or repeat owner media approval.",
+      "current_batch_required_gates": [
+        "P5-AUDIO-API-003",
+        "P5-AUDIO-DB-002",
+        "P5-AUDIO-UI-001"
+      ]
     },
     {
       "requirement_id": "AUD-006",
@@ -5284,17 +5303,45 @@
       "status": "PENDING",
       "followup_tasks": "P5 foundation remains in IMP-P5-002; complete compound clause under P6/P7/P12 per Implementation Plan; no phase change or acceptance exception.",
       "planned_code_schema": "apps/web; packages/ui; packages/provider-adapters/tts",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
+      "actual_code_schema": [
+        "infra/persistence/media.ts",
+        "infra/persistence/lessons.ts",
+        "apps/web/src/lesson/player.tsx",
+        "apps/web/src/lesson/activity.tsx",
+        "apps/web/src/lesson/media.tsx",
+        "packages/mastery-review/src/model.ts"
+      ],
+      "implementation_status": "IN_PROGRESS",
       "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "test_or_gate": "CHK-N-REF-P24-T02-R03",
       "applicability": "Binding when the named optional capability is enabled; default-off/fallback restrictions always apply.",
-      "actual_test_files": [],
+      "actual_test_files": [
+        "tests/integration/p5-audio.test.ts",
+        "tests/browser/p5-media.spec.ts"
+      ],
       "actual_gate_ids": [],
       "verified_implementation_sha": null,
-      "trace_reviewed_at": "2026-10-04T08:55:11.894620+00:00",
-      "verification_note": "P5 foundation is present or planned; the entire source clause is not proven by synthetic media fixtures. Required content/QA/operational or optional AI behavior must remain separately evidenced."
+      "trace_reviewed_at": "2026-10-22",
+      "verification_note": "96cc960 proves immutable transcripts and real M01 delivery. This batch fixes unaudited inline-only alternatives and requires new PostgreSQL/Chromium transcript audit, 0.3 evidence weighting, client-override and replay checks. It preserves the accepted policy; full authored-objective/conditional accessibility-mode review remains unproven.",
+      "historical_followups": [
+        {
+          "recorded_before": "2026-10-22",
+          "status": "PENDING",
+          "verification_note": "P5 foundation is present or planned; the entire source clause is not proven by synthetic media fixtures. Required content/QA/operational or optional AI behavior must remain separately evidenced.",
+          "current_followup": null
+        }
+      ],
+      "supplementary_evidence": [
+        "docs/p5/integration-20261022/verified-ci-96cc960.json",
+        "docs/p5/integration-20261022/README.md"
+      ],
+      "current_followup": "Verify this batch on exact HEAD; retain full-clause status until authored-objective/conditional accessibility evidence exists. No P6, new transcript policy, generation or repeat owner media approval.",
+      "current_batch_required_gates": [
+        "P5-AUDIO-API-003",
+        "P5-AUDIO-DB-002",
+        "P5-AUDIO-UI-001"
+      ]
     },
     {
       "requirement_id": "N-REF-P24-T02-R04",
@@ -9847,20 +9894,43 @@
       "implementation_phase": "P5",
       "source_section/page": "Normative prose / canonical contract; p.12; p12:b4:c12",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
-      "followup_tasks": "P5 foundation remains in IMP-P5-001; complete compound clause under P6/P7/P12 per Implementation Plan; no phase change or acceptance exception.",
+      "status": "PASS",
+      "followup_tasks": "Regression at applicable later milestone gates",
       "planned_code_schema": "assets/specs; packages/content-tools; packages/provider-adapters/storage; apps/worker",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "actual_code_schema": [
+        "packages/activity-schemas/src/media.ts",
+        "tools/p5/media-library.ts",
+        "infra/persistence/media.ts"
+      ],
+      "implementation_status": "VERIFIED",
+      "milestone_evidence": "docs/p5/integration-20261022/verified-ci-96cc960.json",
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "test_or_gate": "CHK-N-CUR-P12-B04-C12",
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
-      "actual_test_files": [],
-      "actual_gate_ids": [],
-      "verified_implementation_sha": null,
-      "trace_reviewed_at": "2026-10-04T08:55:11.894620+00:00",
-      "verification_note": "P5 foundation is present or planned; the entire source clause is not proven by synthetic media fixtures. Required content/QA/operational or optional AI behavior must remain separately evidenced."
+      "actual_test_files": [
+        "tools/p5/verify-m01-s3-import.ts",
+        "tools/p5/verify-approved-media-metadata.ts",
+        "tests/unit/p5-media.test.ts"
+      ],
+      "actual_gate_ids": [
+        "REAL_M01_BYTES_POSTGRESQL_S3_IMPORT",
+        "P5-MEDIA-VERSION-001"
+      ],
+      "verified_implementation_sha": "96cc9607c3a05481dddd9f8e6c763d8241db26eb",
+      "trace_reviewed_at": "2026-10-22",
+      "verification_note": "Complete atomic metadata-storage clause proven in both 96cc960 actual M01 runs: schema validates every required audio field and all 420 records; after PostgreSQL/S3 recreation each stored metadata object is deeply compared to its immutable source. Stored language, exact variety, voice/script versions, speed, provenance/rights and transcript match. This is not a course/objective/production acceptance claim.",
+      "historical_followups": [
+        {
+          "recorded_before": "2026-10-22",
+          "status": "PENDING",
+          "verification_note": "P5 foundation is present or planned; the entire source clause is not proven by synthetic media fixtures. Required content/QA/operational or optional AI behavior must remain separately evidenced.",
+          "current_followup": null
+        }
+      ],
+      "supplementary_evidence": [
+        "docs/p5/integration-20261022/verified-ci-96cc960.json",
+        "docs/p5/integration-20261022/README.md"
+      ]
     },
     {
       "requirement_id": "N-CUR-P12-B04-C13",
@@ -14677,7 +14747,7 @@
       "verification_note": "P5 foundation is present or planned; the entire source clause is not proven by synthetic media fixtures. Required content/QA/operational or optional AI behavior must remain separately evidenced."
     }
   ],
-  "timestamp": "2026-10-21",
+  "timestamp": "2026-10-22",
   "evidence_policy": "PASS rows cite executed evidence on an exact remote SHA. PARTIAL rows do not close the requirement or phase. Test-only synthetic media/evaluators are never reference-content QA.",
   "trace_review_scope": "All 356 statuses retained. d2ec78a verified 450 real PostgreSQL/S3 imports/replays/restart readbacks and authenticated HTTP delivery in both PR/push runs. Retained owner audio and visual decisions resolve prior set-review requests. Test-use enforcement and full reference course/objective acceptance remain distinct; OD-004/006 open.",
   "recovery_evidence": "docs/p5/integration-20261015/README.md",

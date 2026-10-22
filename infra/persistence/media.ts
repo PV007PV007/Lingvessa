@@ -131,7 +131,11 @@ export class MediaRepository {
   }
   async recordTranscriptSupport(userId:string,runId:string,itemId:string):Promise<void> {
     const media=await this.forRun(userId,runId,itemId);
-    if(!media.some(a=>a.kind==='audio'&&a.transcript))throw new ContractError('NOT_FOUND','No audio transcript for this activity');
+    // Inline alternatives belong to the immutable run manifest, not to client-supplied text.
+    // forRun above verifies ownership, activity membership and any published media pins.
+    const row=(await this.pool.query('SELECT manifest FROM lesson_runs WHERE id=$1 AND user_id=$2',[runId,userId])).rows[0];
+    const inline=(row?.manifest as LessonManifest|undefined)?.activities.find(a=>a.id===itemId)?.presentation.accessibility.transcript;
+    if(!inline?.trim()&&!media.some(a=>a.kind==='audio'&&a.transcript))throw new ContractError('NOT_FOUND','No transcript for this activity');
     await transaction(this.pool,async db=>{
       await db.query('SELECT pg_advisory_xact_lock(hashtextextended($1,0))',[`transcript:${userId}:${runId}:${itemId}`]);
       await db.query(`INSERT INTO audit_events(actor_id,action,target_id,payload)
