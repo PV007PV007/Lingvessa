@@ -40,6 +40,14 @@ Additive migration `202610220001_p5_audio_activity_closure` checks the exact nor
 
 The real M01 gate additionally checks both EN/CS activity closures across the unchanged 210 pairs, reports `activity_audio_closure_verified: 2` and binds the new migration hash. Its two publications remain disposable test fixtures, not real course acceptance. This extends AUD-001 evidence without promoting its full objective-specific clause.
 
+## Follow-up: pinned private input reuse
+
+`b57ae9c55acd33808407e82b0e1a96244b85eedd` exposed a distinct transport defect. The release inventory returned an empty list even though the existing approved draft was accessible directly. The PR input job therefore created empty private draft `420910401` and relayed only 780 bytes of status metadata; its real M01 step was SKIPPED. The push input correctly reused release `414560160` / asset `649769507`, but its FFmpeg package installation timed out after ten minutes before real import. [Observed state](ci-b57ae9c-input-defect.json). Neither is a current real-M01 acceptance PASS.
+
+Input preparation now directly reads the already authorized release ID and never creates a container. Download and receipt validation require the exact existing asset ID, approved byte length and SHA-256. Missing/replaced input fails explicitly. Trusted branch/PR acceptance also requires verified real input, so a synthetic-only run cannot silently satisfy the gate. Eighteen focused artificial-byte transport/relay checks cover private scope, absent or wrong input, checksum changes, source mismatch and credential boundaries; only hosted real execution proves M01.
+
+The empty duplicate remains unpublished and untouched; it is not used or automatically deleted. Original archive and owner approval records are unchanged. No new upload, private archive disclosure, cost or production profile is introduced. Both new P5 runs must independently show the actual real-M01 step and summary PASS; final exact-source results belong in PR #5 and its bound artifacts.
+
 ## Recovery and remaining work
 
 Reuse private draft release `414560160`, asset `649769507`: 63,346,796 bytes, ZIP SHA-256 `3edaeaaeb000479921a0b3ff5ec2b52042faeee54bf943eff25e4a4a0f4e516d`. No upload, regeneration, public publication or new paid service is needed. The real command remains `verify-m01-s3-import.ts --real-m01` under [the existing test instructions](../integration-20261015/README.md).

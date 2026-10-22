@@ -37,6 +37,12 @@ const pilot=read('artifacts/p5/acoustic-pilot-validation.json');assert.equal(pil
 const transfer=read('artifacts/p5/m01-private-transfer.json');assert.equal(transfer.source_sha,commit);
 assert(['ARCHIVE_VERIFIED','AWAITING_PRIVATE_UPLOAD','NO_AUTHORIZED_INPUT_SLOT'].includes(transfer.status));
 const m01Input=read('artifacts/p5/m01-input-status.json');
+const trustedM01Run=process.env.GITHUB_REPOSITORY==='PV007PV007/Lingvessa'&&['refs/heads/implementation/p5-media-speech','refs/pull/5/merge','refs/pull/5/head'].includes(process.env.GITHUB_REF??'');
+if(trustedM01Run){
+ assert.equal(transfer.status,'ARCHIVE_VERIFIED','Authorized P5 CI requires the existing approved private archive');
+ assert.equal(transfer.release_id,414560160);assert.equal(transfer.asset_id,649769507);
+ assert.equal(transfer.archive_downloaded,true);assert.equal(m01Input.status,'VERIFIED');
+}
 if(transfer.status==='ARCHIVE_VERIFIED')assert.equal(m01Input.status,'VERIFIED');
 let m01Import=null;
 if(m01Input.status==='VERIFIED'){

@@ -15,13 +15,13 @@ spec.loader.exec_module(relay)
 
 
 class RelayTests(unittest.TestCase):
-    def exercise(self, *, data=b'fixture', changed=None, head='a' * 40, status='ARCHIVE_VERIFIED'):
+    def exercise(self, *, data=b'fixture', changed=None, head='a' * 40, status='ARCHIVE_VERIFIED', asset_id=84):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary) / 'checkout'
             directory = Path(temporary) / 'input'
             directory.mkdir()
             expected = {'filename': 'fixture.zip', 'bytes': len(data), 'sha256': hashlib.sha256(data).hexdigest()}
-            report = {'release_id': 42, 'source_sha': head, 'status': status,
+            report = {'release_id': 42, 'asset_id': asset_id, 'source_sha': head, 'status': status,
                       'repository_private_verified': True, 'release_draft_verified': True,
                       'draft_asset_access_verified': True, 'expected_archive_sha256': expected['sha256'],
                       'expected_archive_bytes': expected['bytes']}
@@ -29,6 +29,7 @@ class RelayTests(unittest.TestCase):
             if status == 'ARCHIVE_VERIFIED' or changed is not None:
                 (directory / 'fixture.zip').write_bytes(changed if changed is not None else data)
             with patch.object(relay, 'ROOT', root), patch.object(relay, 'EXPECTED', expected), \
+                    patch.object(relay, 'RELEASE_ID', 42), patch.object(relay, 'ASSET_ID', 84), \
                     patch.dict(os.environ, {'P5_M01_TRANSFER_DIR': str(directory), 'P5_M01_RELEASE_ID': '42',
                                            'GITHUB_HEAD_SHA': 'a' * 40}), patch.object(relay, 'output') as output, \
                     patch('builtins.print'), patch.object(relay, 'api') as api:
@@ -52,11 +53,16 @@ class RelayTests(unittest.TestCase):
         with self.assertRaisesRegex(relay.TransferError, 'checksum/length'):
             self.exercise(changed=b'changed')
 
-    def test_missing_input_stays_explicitly_missing(self):
-        self.exercise(status='AWAITING_PRIVATE_UPLOAD')
+    def test_missing_input_is_rejected_for_pinned_approved_archive(self):
+        with self.assertRaisesRegex(relay.TransferError, 'provenance/identity'):
+            self.exercise(status='AWAITING_PRIVATE_UPLOAD')
+
+    def test_replaced_asset_is_rejected(self):
+        with self.assertRaisesRegex(relay.TransferError, 'provenance/identity'):
+            self.exercise(asset_id=85)
 
     def test_unexpected_archive_with_missing_status_rejected(self):
-        with self.assertRaisesRegex(relay.TransferError, 'Unexpected archive'):
+        with self.assertRaisesRegex(relay.TransferError, 'provenance/identity'):
             self.exercise(status='AWAITING_PRIVATE_UPLOAD', changed=b'fixture')
 
     def test_checkout_or_relative_staging_rejected(self):

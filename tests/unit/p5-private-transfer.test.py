@@ -34,10 +34,10 @@ class PrivateTransferTests(unittest.TestCase):
             api.assert_not_called()
 
     def test_published_or_unrelated_release_rejected(self):
-        valid = {'id': 1, 'draft': True, 'prerelease': True, 'tag_name': transfer.TAG,
+        valid = {'id': transfer.RELEASE_ID, 'draft': True, 'prerelease': True, 'tag_name': transfer.TAG,
                  'name': transfer.TITLE, 'body': transfer.MARKER}
         transfer.validate_release(valid)
-        for changed in [{'draft': False}, {'tag_name': 'accepted-p2'}, {'body': 'unrelated'}]:
+        for changed in [{'draft': False}, {'id': 420910401}, {'tag_name': 'accepted-p2'}, {'body': 'unrelated'}]:
             with self.subTest(changed=changed), self.assertRaises(transfer.TransferError):
                 transfer.validate_release({**valid, **changed})
 
@@ -79,14 +79,47 @@ class PrivateTransferTests(unittest.TestCase):
             self.assertNotIn('secret URL', str(caught.exception))
 
     def test_existing_container_is_reused_without_write(self):
-        release = {'id': 42, 'draft': True, 'prerelease': True, 'tag_name': transfer.TAG,
+        release = {'id': transfer.RELEASE_ID, 'draft': True, 'prerelease': True, 'tag_name': transfer.TAG,
                    'name': transfer.TITLE, 'body': transfer.MARKER}
         with patch.dict(os.environ, {'GITHUB_REPOSITORY': transfer.REPOSITORY,
                         'GITHUB_EVENT_NAME': 'push', 'GITHUB_REF': 'refs/heads/implementation/p5-media-speech'}), \
-                patch.object(transfer, 'api', return_value=[release]) as api, \
+                patch.object(transfer, 'api', return_value=release) as api, \
                 patch.object(transfer, 'output'), patch('builtins.print'):
             transfer.prepare('artificial-token', {'default_branch': 'main'})
-            api.assert_called_once_with('/releases?per_page=100&page=1', 'artificial-token')
+            api.assert_called_once_with('/releases/' + str(transfer.RELEASE_ID), 'artificial-token')
+
+    def test_missing_draft_does_not_create_replacement(self):
+        with patch.dict(os.environ, {'GITHUB_REPOSITORY': transfer.REPOSITORY,
+                        'GITHUB_EVENT_NAME': 'push', 'GITHUB_REF': 'refs/heads/implementation/p5-media-speech'}), \
+                patch.object(transfer, 'api', side_effect=transfer.TransferError('GitHub API request failed: HTTP 404')) as api:
+            with self.assertRaisesRegex(transfer.TransferError, 'HTTP 404'):
+                transfer.prepare('artificial-token', {'default_branch': 'main'})
+            api.assert_called_once_with('/releases/' + str(transfer.RELEASE_ID), 'artificial-token')
+
+    def test_missing_or_replaced_asset_cannot_become_missing_input_success(self):
+        release = {'id': transfer.RELEASE_ID, 'draft': True, 'prerelease': True, 'tag_name': transfer.TAG,
+                   'name': transfer.TITLE, 'body': transfer.MARKER}
+        replaced = {'id': transfer.ASSET_ID + 1, 'name': transfer.EXPECTED['filename'],
+                    'state': 'uploaded', 'size': transfer.EXPECTED['bytes'],
+                    'digest': 'sha256:' + transfer.EXPECTED['sha256']}
+        for assets, message in [([], 'Pinned approved archive unavailable'), ([replaced], 'metadata mismatch')]:
+            with self.subTest(assets=bool(assets)), tempfile.TemporaryDirectory() as directory, \
+                    patch.object(transfer, 'transfer_directory', return_value=Path(directory)), \
+                    patch.object(transfer, 'api', side_effect=[release, assets]) as api, \
+                    patch.object(transfer, 'download_asset') as download:
+                with self.assertRaisesRegex(transfer.TransferError, message):
+                    transfer.download('artificial-token', str(transfer.RELEASE_ID))
+                download.assert_not_called()
+                self.assertFalse((Path(directory) / 'm01-private-transfer.json').exists())
+                self.assertEqual(api.call_count, 2)
+
+    def test_duplicate_release_id_rejected_before_api(self):
+        with tempfile.TemporaryDirectory() as directory, \
+                patch.object(transfer, 'transfer_directory', return_value=Path(directory)), \
+                patch.object(transfer, 'api') as api:
+            with self.assertRaisesRegex(transfer.TransferError, 'Pinned input container'):
+                transfer.download('artificial-token', '420910401')
+            api.assert_not_called()
 
 
 if __name__ == '__main__':

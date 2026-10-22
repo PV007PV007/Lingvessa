@@ -10,6 +10,8 @@ P5 IN PROGRESS / NOT READY. Owner audio/visual decisions retained; no new ZIP, g
 
 The first transcript revision c2e0226 passed both real M01 steps but failed overall on noncanonical new fixture reference ordering. [Failure evidence](../docs/p5/integration-20261022/ci-c2e0226-failure.json). The fixture is corrected; the database guard remains enforced. This follow-up requires all seven workflows, 31 runtime gates and both independent artifact audits on its exact HEAD.
 
+The b57ae9c follow-up exposed private-input discovery failure: an empty release listing created unused private draft 420910401, so the PR real M01 step was skipped; push input was exact but package installation timed out. [Observed state](../docs/p5/integration-20261022/ci-b57ae9c-input-defect.json). Current preparation directly reads existing release 414560160 and pins asset 649769507, rejects absent/replaced input and requires verified real input in trusted P5 acceptance. Eighteen local transport/relay checks passed; hosted real evidence is still required. The unused empty draft remains unpublished/untouched. No re-upload is needed.
+
 ## Historical implementation handoff — through 2026-10-21
 
 Updated: 2026-10-21. **P5 IN PROGRESS / NOT READY. P0–P4 ACCEPTED; P6 NOT AUTHORIZED.**

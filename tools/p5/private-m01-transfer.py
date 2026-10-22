@@ -17,6 +17,10 @@ TITLE = 'P5 private M01 input — DO NOT PUBLISH'
 APPROVAL = json.loads((ROOT / 'docs/p5/m01-completion-20261014/owner-approval.json').read_text())
 EXPECTED = next(item for item in APPROVAL['approved_deliverables'] if item['filename'].endswith('.zip'))
 MARKER = 'P5_PRIVATE_INPUT_SHA256=' + EXPECTED['sha256']
+# Existing approved private input, independently verified through the connector.
+# Release listings can omit drafts; an empty inventory must never create a replacement.
+RELEASE_ID = 414560160
+ASSET_ID = 649769507
 
 
 class TransferError(RuntimeError):
@@ -61,8 +65,8 @@ def validate_release(release):
             and release.get('tag_name') == TAG and release.get('name') == TITLE
             and MARKER in (release.get('body') or '')):
         raise TransferError('Input container identity/draft restriction failed; do not modify it automatically')
-    if not isinstance(release.get('id'), int) or release['id'] <= 0:
-        raise TransferError('Invalid input container ID')
+    if release.get('id') != RELEASE_ID:
+        raise TransferError('Pinned input container identity mismatch')
 
 
 def output(name, value, file='GITHUB_OUTPUT'):
@@ -72,7 +76,7 @@ def output(name, value, file='GITHUB_OUTPUT'):
 
 
 def prepare(token, repo):
-    # This job has the sole write token; only the trusted P5 branch/PR can run it.
+    # Only the trusted P5 branch/PR may resolve the existing private input.
     if os.environ.get('GITHUB_REPOSITORY') != REPOSITORY:
         raise TransferError('Unexpected repository context')
     event = os.environ.get('GITHUB_EVENT_NAME')
@@ -87,29 +91,7 @@ def prepare(token, repo):
         trusted = False
     if not trusted:
         raise TransferError('Input preparation requires the authorized P5 branch or PR #5')
-    found = []
-    for page in range(1, 11):
-        releases = api('/releases?per_page=100&page=' + str(page), token)
-        found.extend(release for release in releases if release.get('tag_name') == TAG)
-        if len(releases) < 100:
-            break
-    else:
-        raise TransferError('Release inventory exceeded bounded pagination')
-    if len(found) > 1:
-        raise TransferError('Duplicate input containers; manual inspection required')
-    if found:
-        release = found[0]
-    else:
-        # A transport container, not a release of P5 code. Target the existing default branch.
-        # GITHUB_TOKEN cannot request workflows:write; no default-branch/workflow change is made.
-        release = api('/releases', token, {
-            'tag_name': TAG, 'target_commitish': repo['default_branch'], 'name': TITLE,
-            'draft': True, 'prerelease': True, 'make_latest': 'false',
-            'body': MARKER + '\n\nPrivate temporary input for P5 development/test only. DO NOT PUBLISH.\n'
-                    'Upload the unchanged approved ' + EXPECTED['filename'] + ' (' + str(EXPECTED['bytes']) + ' bytes).\n'
-                    'Not a code release, production delivery profile, approval, or P6 authorization.\n'
-                    'Actions verifies the complete archive and all 420 immutable WAV checksums before import.\n'
-                    'No automatic replacement, deletion or public URL. Remove only after durable ingestion evidence and owner-authorized cleanup.'})
+    release = api('/releases/' + str(RELEASE_ID), token)
     validate_release(release)
     output('release_id', release['id'])
     print(json.dumps({'status': 'PRIVATE_DRAFT_READY', 'release_id': release['id'], 'draft': True,
@@ -164,33 +146,32 @@ def transfer_directory():
 
 def download(token, release_id):
     directory = transfer_directory()
-    if not release_id or not release_id.isdecimal():
-        result = {'status': 'NO_AUTHORIZED_INPUT_SLOT', 'archive_downloaded': False}
-    else:
-        release = api('/releases/' + release_id, token)
-        validate_release(release)
-        names = {EXPECTED['filename'], EXPECTED['filename'].removesuffix('.zip') + '(1).zip'}
-        assets = api('/releases/' + release_id + '/assets?per_page=100', token)
-        candidates = [asset for asset in assets if asset.get('name') in names]
-        if len(assets) >= 100 or len(candidates) > 1:
-            raise TransferError('Ambiguous private input assets')
-        result = {'status': 'AWAITING_PRIVATE_UPLOAD', 'release_id': int(release_id),
-                  'repository_private_verified': True, 'release_draft_verified': True,
-                  'draft_asset_access_verified': True, 'archive_downloaded': False,
-                  'expected_archive_sha256': EXPECTED['sha256'], 'expected_archive_bytes': EXPECTED['bytes']}
-        if candidates:
-            asset = candidates[0]
-            if (asset.get('state') != 'uploaded' or asset.get('size') != EXPECTED['bytes']
-                    or asset.get('digest') not in (None, 'sha256:' + EXPECTED['sha256'])):
-                raise TransferError('Private input asset metadata mismatch')
-            destination = directory / EXPECTED['filename']
-            download_asset(token, asset, destination)
-            output('P5_M01_ARCHIVE_PATH', destination, 'GITHUB_ENV')
-            result.update(status='ARCHIVE_VERIFIED', archive_downloaded=True, asset_id=asset['id'])
+    if release_id != str(RELEASE_ID):
+        raise TransferError('Pinned input container identity mismatch')
+    release = api('/releases/' + release_id, token)
+    validate_release(release)
+    names = {EXPECTED['filename'], EXPECTED['filename'].removesuffix('.zip') + '(1).zip'}
+    assets = api('/releases/' + release_id + '/assets?per_page=100', token)
+    candidates = [asset for asset in assets if asset.get('name') in names]
+    if len(assets) >= 100 or len(candidates) > 1:
+        raise TransferError('Ambiguous private input assets')
+    if not candidates:
+        raise TransferError('Pinned approved archive unavailable; no replacement or upload attempted')
+    asset = candidates[0]
+    if (asset.get('id') != ASSET_ID or asset.get('state') != 'uploaded' or asset.get('size') != EXPECTED['bytes']
+            or asset.get('digest') not in (None, 'sha256:' + EXPECTED['sha256'])):
+        raise TransferError('Private input asset metadata mismatch')
+    destination = directory / EXPECTED['filename']
+    download_asset(token, asset, destination)
+    output('P5_M01_ARCHIVE_PATH', destination, 'GITHUB_ENV')
+    result = {'status': 'ARCHIVE_VERIFIED', 'release_id': RELEASE_ID, 'asset_id': ASSET_ID,
+              'repository_private_verified': True, 'release_draft_verified': True,
+              'draft_asset_access_verified': True, 'archive_downloaded': True,
+              'expected_archive_sha256': EXPECTED['sha256'], 'expected_archive_bytes': EXPECTED['bytes'],
+              'source_sha': os.environ.get('GITHUB_HEAD_SHA'), 'real_m01_postgresql_executed': False,
+              'production_delivery_profile_approved': False, 'p6_authorized': False,
+              'transport_token_scope': 'ISOLATED_INPUT_JOB_CONTENTS_WRITE', 'relay_retention_days': 1}
     report = directory / 'm01-private-transfer.json'
-    result.update(source_sha=os.environ.get('GITHUB_HEAD_SHA'), real_m01_postgresql_executed=False,
-                  production_delivery_profile_approved=False, p6_authorized=False,
-                  transport_token_scope='ISOLATED_INPUT_JOB_CONTENTS_WRITE', relay_retention_days=1)
     report.write_text(json.dumps(result, indent=2) + '\n')
     print(json.dumps(result))
 
@@ -206,22 +187,20 @@ def receive():
                   'production_delivery_profile_approved': False, 'p6_authorized': False}
     else:
         result = json.loads((directory / 'm01-private-transfer.json').read_text())
-        if not (str(result.get('release_id')) == release_id and result.get('source_sha') == os.environ.get('GITHUB_HEAD_SHA')
-                and result.get('status') in {'AWAITING_PRIVATE_UPLOAD', 'ARCHIVE_VERIFIED'}
+        if not (str(result.get('release_id')) == release_id == str(RELEASE_ID)
+                and result.get('asset_id') == ASSET_ID and result.get('source_sha') == os.environ.get('GITHUB_HEAD_SHA')
+                and result.get('status') == 'ARCHIVE_VERIFIED'
                 and result.get('repository_private_verified') is True and result.get('release_draft_verified') is True
                 and result.get('draft_asset_access_verified') is True
                 and result.get('expected_archive_sha256') == EXPECTED['sha256']
                 and result.get('expected_archive_bytes') == EXPECTED['bytes']):
             raise TransferError('Private relay provenance/identity mismatch')
         archive = directory / EXPECTED['filename']
-        if result['status'] == 'ARCHIVE_VERIFIED':
-            with archive.open('rb') as stream:
-                checksum = hashlib.file_digest(stream, 'sha256').hexdigest()
-            if archive.stat().st_size != EXPECTED['bytes'] or checksum != EXPECTED['sha256']:
-                raise TransferError('Private relay archive checksum/length mismatch')
-            output('P5_M01_ARCHIVE_PATH', archive, 'GITHUB_ENV')
-        elif archive.exists():
-            raise TransferError('Unexpected archive accompanying missing-input status')
+        with archive.open('rb') as stream:
+            checksum = hashlib.file_digest(stream, 'sha256').hexdigest()
+        if archive.stat().st_size != EXPECTED['bytes'] or checksum != EXPECTED['sha256']:
+            raise TransferError('Private relay archive checksum/length mismatch')
+        output('P5_M01_ARCHIVE_PATH', archive, 'GITHUB_ENV')
         result['relay_received_and_source_bound'] = True
         result['test_job_needs_no_release_token'] = True
     report.write_text(json.dumps(result, indent=2) + '\n')
