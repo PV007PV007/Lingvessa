@@ -2,7 +2,13 @@
 
 P5 remains **IN PROGRESS / NOT READY**. P0–P4 remain ACCEPTED; PR #5 stays OPEN DRAFT. No merge or P6.
 
-## Observed execution
+## Current dependency-audit continuation
+
+The scanner correction was published as `6998b70a8ff9401db2d931fe483bd7288fa7311d`. All seven workflows acquired runners and their full `pnpm check` passed (838 current files and 1,432 history blobs; zero scanner findings). Each then failed the unchanged production dependency audit. It reported two critical and four high advisories affecting Next.js, Zod, body-parser and multer. [Exact run/job evidence](ci-6998b70.json). P5 private-input preflight also remains blocked; neither real M01 run executed.
+
+This continuation updates only the affected direct pins and narrowly scoped existing-family transitive overrides, with a package-manager-generated lockfile. Direct Next.js pins move to 16.4.1 and Zod to 4.6.6; scoped overrides pin multer 2.5.0, body-parser 2.4.0 and fast-uri 3.1.9. The fast-uri patch addresses the four remaining moderate/low advisories found during follow-up triage. [Dependency review and local audit](dependency-remediation.json). Audit severity, toolchain pins, private-media boundaries and acceptance gates remain unchanged. Exact successor checks are required; the 6998b70 build/test result does not prove updated dependencies.
+
+## Historical observed execution
 
 The owner requested another attempt after changing GitHub settings. Run [39811276331, attempt 3](https://github.com/PV007PV007/Lingvessa/actions/runs/39811276331/attempts/3) executed on 2026-10-25 at exact source `875461ca57f72928815014806773ec34751459a1`. Runners were assigned. This supersedes the earlier before-job-step failure for that attempt; it does not establish that private-repository billing or Actions availability is repaired.
 
@@ -16,11 +22,11 @@ The complete current fixture was reviewed. The scanner now recognizes its exact 
 
 Local results use Node 24.22.1; hosted CI remains pinned to Node 24.19.0 and pnpm 11.19.0. Focused unit/transport/relay tests, changed-file lint/typecheck and governance validation do not establish full-project or real PostgreSQL/S3 acceptance. The fresh recovery copy has no generated Prisma client; full project validation is delegated to the exact-commit hosted workflow. The preceding 875461c hosted generation and typecheck passed.
 
-The recovery copy was reconstructed from the saved 2026-10-25 export. Its ZIP SHA-256 and CRC passed, and all 835 repository files matched their recorded Git blob identities before editing. No audio, approval, manifest, migration, workflow or private-transfer code is changed by this correction.
+The recovery copy was reconstructed from the saved 2026-10-25 export. Its ZIP SHA-256 and CRC passed, and all 835 repository files matched their recorded Git blob identities before editing. No audio, approval, manifest, migration, workflow or private-transfer code is changed by these corrections.
 
 ## Private input and continuation
 
-Existing release **414560160** remains an unpublished draft; asset **649769507** is uploaded, 63,346,796 bytes, digest `3edaeaaeb000479921a0b3ff5ec2b52042faeee54bf943eff25e4a4a0f4e516d`. Reuse it. Do not create another release, upload again, publish the archive, put WAVs in Git or remove privacy checks. Owner approval dated 2026-10-14 still covers all 420 final WAVs, six voices, quality and rights. The 402 single-turn acoustic results plus 18 dialogue files account for all 420 final files; they do not prove learner-error calibration.
+Reuse the existing approved unpublished private input after restoring the approved private context. Do not create another release, upload again, publish the archive, put WAVs in Git or remove privacy checks. Private input locators and checksums are not repeated in this current public summary. Owner approval dated 2026-10-14 still covers all 420 final WAVs, six voices, quality and rights. The 402 single-turn acoustic results plus 18 dialogue files account for all 420 final files; they do not prove learner-error calibration.
 
 The approved private test context must be restored before private-media transfer can run. The current connector can read visibility but cannot change it. A public-code/private-media replacement design would require a separate explicit review; it is not silently substituted here. PC/VM migration remains deferred by the owner. No new paid service is introduced.
 
@@ -34,6 +40,6 @@ Last full verified execution remains `96cc9607c3a05481dddd9f8e6c763d8241db26eb`,
 
 - BLOCKER: approved private runtime context and current-source CI/real M01 evidence; OD-004 production delivery profile; OD-006 labelled learner-error calibration/target policy; applicable full reference publication/objective accessibility.
 - IMPORTANT: remaining P5 atomic/compound applicability and evidence review. Trace remains 175 PASS / 30 PARTIAL / 151 PENDING; no requirement status is promoted by this correction.
-- MINOR: unused empty draft 420910401 remains unpublished/untouched; 41 historical unreferenced blob receipts remain unnecessary for the approved archive/S3 route.
+- MINOR: unused empty input draft remains unpublished/untouched; 41 historical unreferenced blob receipts remain unnecessary for the approved archive/S3 route.
 
 Production delivery is not selected while OD-004 is open. Development/test storage and delivery remain the permitted scope. OD-004 and OD-006 are not closed by runner availability, owner audio approval or passing synthetic tests.

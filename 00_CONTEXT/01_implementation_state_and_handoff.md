@@ -1,6 +1,12 @@
-## Current P5 resumed Actions and private-input boundary — 2026-10-26
+## Current P5 dependency-audit continuation — 2026-10-26
 
-P5 IN PROGRESS / NOT READY; P0–P4 ACCEPTED; PR #5 OPEN DRAFT; no merge/P6. Run 39811276331 attempt 3 on 875461c acquired runners, then failed private-input preflight and the exact-content secret-fixture scan. The repository is now Public; the approved private-media bridge requires Private. The archive remains in unpublished draft 414560160 / pinned asset 649769507. No real M01 execution occurred in that attempt.
+Public-summary privacy correction: private release identifiers, archive digests and review-file locators are omitted here. Historical work/results and original approval records remain retained; no media bytes or approvals are changed.
+
+The exact scanner correction 6998b70 passed full `pnpm check` in all seven exit jobs: generation, lint, full typecheck, zero secret findings, unit tests, builds and smoke tests. All seven workflows then failed the production dependency audit (two critical/four high advisories). [Exact execution](../docs/p5/integration-20261026/ci-6998b70.json). This continuation updates affected dependency pins and narrow transitive overrides; its own CI must pass. The approved private input boundary remains blocked by Public visibility, and no real M01 execution is claimed. No acceptance/requirement promotion, new paid service, merge or P6.
+
+## Historical P5 resumed Actions and private-input boundary — 2026-10-26
+
+P5 IN PROGRESS / NOT READY; P0–P4 ACCEPTED; PR #5 OPEN DRAFT; no merge/P6. Run 39811276331 attempt 3 on 875461c acquired runners, then failed private-input preflight and the exact-content secret-fixture scan. The repository is now Public; the approved private-media bridge requires Private. The approved archive remains unpublished and unchanged. No real M01 execution occurred in that attempt.
 
 This correction reviews the exact updated mocked transport fixture checksum, retains the historical checksum for full-history scans and tests fail-closed behavior for changed content/path. Privacy guards, approved media/manifest/approval bytes and workflow gates are unchanged. [Observed execution and recovery](../docs/p5/integration-20261026/README.md), [failed attempt](../docs/p5/integration-20261026/ci-875461c-attempt3.json) and [bounded local checks](../docs/p5/integration-20261026/local-security-checks.json). Exact successor CI is recorded in PR #5. Current-source seven workflows / 31 runtime gates / both real M01 executions / artifact audits remain required.
 
@@ -18,7 +24,7 @@ P5 IN PROGRESS / NOT READY. Owner audio/visual decisions retained; no new ZIP, g
 
 The first transcript revision c2e0226 passed both real M01 steps but failed overall on noncanonical new fixture reference ordering. [Failure evidence](../docs/p5/integration-20261022/ci-c2e0226-failure.json). The fixture is corrected; the database guard remains enforced. This follow-up requires all seven workflows, 31 runtime gates and both independent artifact audits on its exact HEAD.
 
-The b57ae9c follow-up exposed private-input discovery failure: an empty release listing created unused private draft 420910401, so the PR real M01 step was skipped; push input was exact but package installation timed out. [Observed state](../docs/p5/integration-20261022/ci-b57ae9c-input-defect.json). Current preparation directly reads existing release 414560160 and pins asset 649769507, rejects absent/replaced input and requires verified real input in trusted P5 acceptance. Eighteen local transport/relay checks passed; hosted real evidence is still required. The unused empty draft remains unpublished/untouched. No re-upload is needed.
+The b57ae9c follow-up exposed private-input discovery failure: an empty release listing created unused private draft [private identifier omitted], so the PR real M01 step was skipped; push input was exact but package installation timed out. [Observed state](../docs/p5/integration-20261022/ci-b57ae9c-input-defect.json). Current preparation directly reads existing release [private identifier omitted] and pins asset [private identifier omitted], rejects absent/replaced input and requires verified real input in trusted P5 acceptance. Eighteen local transport/relay checks passed; hosted real evidence is still required. The unused empty draft remains unpublished/untouched. No re-upload is needed.
 
 ## Historical implementation handoff — through 2026-10-21
 
@@ -59,7 +65,7 @@ Both P5 PR and push runs passed on `460aab052115f6fe168d180b4ac44369afaab09d`, t
 
 Executed: 450 immutable imports (420 approved WAVs + 30 visual drafts), exact replay, changed-byte/immutable-update/delete rejection, database-pool and S3 server/adapter recreation, all stored-byte readbacks, anonymous/foreign-owner/activity denial, two disposable publications and 426 delivery reads (420 audio + six avatars). Negative and positive same-language/avatar-version closure checks passed. Import inserts zero approvals; 2,556 permission rows exist only in the disposable test fixture. This is repository-level delivery in development/test, not production HTTP/CDN or pedagogical course publication.
 
-The ZIP remains private draft release asset `649769507`, SHA-256 `3edaeaaeb000479921a0b3ff5ec2b52042faeee54bf943eff25e4a4a0f4e516d`; no upload or audio generation is needed. Owner audio approval remains valid. The 402 acoustic single-turn files (202 EN + 200 CS) and 18 final dialogues (8 EN + 10 CS) account for all 420 checksum-verified WAVs.
+The ZIP remains private draft release asset `[private identifier omitted]`, SHA-256 [digest retained in the original record]; no upload or audio generation is needed. Owner audio approval remains valid. The 402 acoustic single-turn files (202 EN + 200 CS) and 18 final dialogues (8 EN + 10 CS) account for all 420 checksum-verified WAVs.
 
 The current report now separates the immutable historical preproduction registry from the later approved audio inventory. Historical placeholders do not reopen OD-005 or authorize regeneration. Its own exact-HEAD CI/acceptance artifacts in PR #5 determine this reporting revision's result; do not create a self-referential evidence-only descendant.
 
@@ -71,13 +77,13 @@ Private transfer and all 420 immutable WAV checks succeeded. Both real PostgreSQ
 
 ## Historical private input continuation — 2026-10-17
 
-The approved archive is retained locally: 63,346,796 bytes, SHA-256 `3edaeaaeb000479921a0b3ff5ec2b52042faeee54bf943eff25e4a4a0f4e516d`. All 420 final WAVs (210 EN + 210 CS) match immutable records. The 402 acoustic single-turn results plus 18 dialogue files account for all final files. The 2026-10-14 quality, six-voice and audio-rights approval remains valid; no regeneration or repeat approval.
+The approved archive is retained locally: SHA-256 [digest retained in the original record]. All 420 final WAVs (210 EN + 210 CS) match immutable records. The 402 acoustic single-turn results plus 18 dialogue files account for all final files. The 2026-10-14 quality, six-voice and audio-rights approval remains valid; no regeneration or repeat approval.
 
 The owner requests transfer through the existing GitHub connection and does not have another ZIP. [Current autonomous transfer and restart instructions](../docs/p5/integration-20261017/README.md) replace the manual-upload request. The private serial bridge exposes only a short-lived single-object upload capability via a private one-day artifact, receives a text-only acknowledgement through the connector, verifies both envelope and original archive bytes, and attaches the approved archive to the existing private draft release. General GitHub/runtime tokens stay in the isolated runner. No media is added to Git; no new service, production profile or payment.
 
 Parent `c0f10126db2da1506d377ce34476988f877fe2c8` passed all seven workflows and both P5 artifact checks (74 references total), with real M01 explicitly skipped for missing input. This descendant requires its own evidence. The exact current-HEAD checks, source-bound acceptance artifact and PR #5 determine actual transfer/import status. Preparation never counts as upload or real test execution.
 
-Private transfer completed on `d1f3795`: release asset `649769507` has the exact approved checksum and size; the isolated input job independently downloaded and verified it. [Transfer receipt](../docs/p5/integration-20261017/transfer-receipt.json). Reruns reuse this asset; do not ask for or upload another ZIP. This proves private transfer, not real import.
+Private transfer completed on `d1f3795`: release asset `[private identifier omitted]` has the exact approved checksum and size; the isolated input job independently downloaded and verified it. [Transfer receipt](../docs/p5/integration-20261017/transfer-receipt.json). Reruns reuse this asset; do not ask for or upload another ZIP. This proves private transfer, not real import.
 
 Real integration must verify 420 approved WAVs + 30 SVG drafts, replay, immutable versions, restart and all 420 original audio deliveries through two disposable EN/CS test publications. Test fixture permission rows do not assert new human/visual/production approval. OD-004, OD-006, visual QA and remaining applicable compound requirements remain open; P5 stays NOT_READY, with no merge/P6.
 
@@ -99,7 +105,7 @@ All seven workflows/check runs passed on that approved source; both P5 archives 
 
 The pinned PyTorch URL is now HTTP 200; all 67 locked dependency/model files were downloaded or restored and SHA-256 verified. The exact 58-package environment was installed offline. The 97 Pocket turns have been reconstructed with the unchanged generator, text, cast, seed and processing plan, yielding all **204 previously missing Czech assets / 420 total final WAVs**. The original 216 final files remain byte-identical. The prior temporary 2026-10-13 full run was lost before retention; its reported results are not reused as evidence. The pre-generation infrastructure reconstruction plan documents this explicitly.
 
-A durable checkpoint retains all 291 new raw/normal/slow WAVs and journals: `libfile_7fecc92d04d0819189edc358d6397070`, version 0, SHA-256 `caa25f1bf3fbf59528fc9d94b4e25ef5afa153cb690ef22eb044f01926dcdf15`. Three stale STARTED journals were recovered by exact re-derivation of processed audio from retained raw bytes, with the original records kept and no repeated synthesis or invented completion time. A stale assembly marker is retained with a separate proof that every final PCM stream and cue matches its validated source.
+A durable checkpoint retains all 291 new raw/normal/slow WAVs and journals: [private review-file identity omitted], version 0, SHA-256 [digest retained in the original record]. Three stale STARTED journals were recovered by exact re-derivation of processed audio from retained raw bytes, with the original records kept and no repeated synthesis or invented completion time. A stale assembly marker is retained with a separate proof that every final PCM stream and cue matches its validated source.
 
 Current completion evidence and commands are in [the completion record](../docs/p5/m01-completion-20261014/README.md). Automated ASR discrepancy flags are diagnostics, not human pronunciation approval. M01 audio quality, final cast and audio rights are now owner-approved. Delivery/publication integration, visual QA and OD-004/006 remain open. New exact-source CI belongs in PR metadata and immutable artifacts; the historical sections below describe predecessor states, including resolved dependency failures.
 
@@ -125,7 +131,7 @@ The [M01 feedback intake command](../docs/p5/m01-feedback-intake.md) validates t
 
 Local stdlib tests PASS on a verified source subset; no local full-project/browser execution is claimed. This new source requires its own hosted checks and 25 acceptance hash references. Final exact-source results belong in PR metadata and immutable CI artifacts.
 
-Completed predecessor `38ca31f0dcda7ac267893a4eb81b93a398624611`, tree `eae8f7d67d2fc2db4b26dd9716c5f0477583165b`: all seven workflows PASS, P5 PR run 38212383183 / push 38212379535. Both archive digests and all 22 acceptance references were independently verified. The saved HTML identity is `libfile_0604983dd6148191869f82f1ab91cfcf` (version 0), 17,931,485 bytes, SHA-256 `31390589234c35c49ce52f56bcc6d8a9c78c2b84cf8392d7634fa70e9fba275e`. Its unchanged form remains compatible with intake; browser validation covered four audition fixtures, and separate local byte validation covered all 216 real M01 recordings.
+Completed predecessor `38ca31f0dcda7ac267893a4eb81b93a398624611`, tree `eae8f7d67d2fc2db4b26dd9716c5f0477583165b`: all seven workflows PASS, P5 PR run 38212383183 / push 38212379535. Both archive digests and all 22 acceptance references were independently verified. The saved HTML identity is [private review-file identity omitted] (version 0), SHA-256 [digest retained in the original record]. Its unchanged form remains compatible with intake; browser validation covered four audition fixtures, and separate local byte validation covered all 216 real M01 recordings.
 
 ## Completed M01 authoring/review predecessors
 
@@ -149,7 +155,7 @@ Historical predecessor evidence follows.
 
 Last inspected full runtime PASS: `c21a2a0aa65924c091a7c464094ff3de4aa2c2ee`, tree `bdd794e7b883e423eb625dfce3f6e1bd03bf6219`. All seven hosted workflows passed. P5 PR run 38049540964 / job 114205709344; push run 38049537327 / job 114205699606. Both final artifact archives were downloaded and verified against their SHA-256 digests; their acceptance summaries bind twelve runtime reports and the repository requirement-evidence hash to the exact tested source.
 
-PR artifact 11669156689 SHA-256 `f704c3b09b578f890292ba14963c3dd54dbd2dcebfb8a8e2911f03bc4c844b61`; push artifact 11668981926 SHA-256 `dd52cd5f836dd2ae8274d236fce1aedf7460e4381ef32d515d65335dfa577c06`. Exact final results remain in PR metadata and immutable workflow artifacts.
+PR artifact 11669156689 SHA-256 [digest retained in the original record]; push artifact 11668981926 SHA-256 [digest retained in the original record]. Exact final results remain in PR metadata and immutable workflow artifacts.
 
 Executed there: frozen install; baseline 76/76; 54 unit + 4 smoke; audit zero findings; reference/flag checks; signed-S3 restart/immutable bytes/outage; PostgreSQL 18.6 and six migrations with clean/replay/seed/reseed/recreation/isolation; 16 integration and 17 Chromium cases; four OCI build/start/health/DB-outage/recovery gates. No failed or skipped tests.
 
@@ -173,7 +179,7 @@ Both candidates remain **HOLD_FOR_REVIEW**; human Czech listening/linguistic rev
 
 ## Recovery, authorization and upload boundary
 
-The new archive `Lingvessa_Czech_Trial_2026-10-10.zip` was successfully saved for review. SHA-256 `18c61165bb97038a37f04a40af2e2b980e1341025e7aa60aa40647bacd2e7818`; all 98 entry hashes matched on restoration on 2026-10-11. All 77 new repository files, including the complete generation/ASR scripts and 56 WAVs, were restored byte-for-byte. Twenty shared base files also matched. No inference or ASR was repeated. Prior local commits and unsaved handoff/workflow edits did not survive; the CI step and current handoff are reconstructed explicitly. `docs/p5/evidence/case-recovery.json` records this boundary and the prior blob identities.
+The new archive [private review archive] was successfully saved for review. SHA-256 [digest retained in the original record]; all 98 entry hashes matched on restoration on 2026-10-11. All 77 new repository files, including the complete generation/ASR scripts and 56 WAVs, were restored byte-for-byte. Twenty shared base files also matched. No inference or ASR was repeated. Prior local commits and unsaved handoff/workflow edits did not survive; the CI step and current handoff are reconstructed explicitly. `docs/p5/evidence/case-recovery.json` records this boundary and the prior blob identities.
 
 Automatic approval review stopped the earlier upload after 35 unreferenced blobs because the visible messages did not explicitly authorize this new payload/destination. No tree, remote commit or branch ref was created then. The concrete permission request named all 56 WAVs, accompanying changes, private `PV007PV007/Lingvessa`, `implementation/p5-media-speech`, PR #5 and exact-source CI. The owner responded **“продовжуй” on 2026-10-11**, authorizing completion of that request. Repository owner/private visibility/push permission and unchanged remote head `c21a2a0a` were reverified. Exact scope: `docs/p5/evidence/case-upload-authorization.json`.
 

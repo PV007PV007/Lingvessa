@@ -1,5 +1,7 @@
 # P5 requirement evidence review
 
+2026-10-26 dependency follow-up: the scanner correction passed full hosted checks, then the dependency audit failed. [Exact failed run set](integration-20261026/ci-6998b70.json); dependency updates require their own exact-source regression. No requirement status is promoted.
+
 2026-10-26: [resumed Actions evidence and private-input boundary](integration-20261026/README.md). The 875461c retry reached runners but failed; its descendant must pass its own CI. The exact mocked-fixture scanner correction does not promote any requirement. Public repository visibility currently conflicts with the approved private audio transfer. OD-004/006 remain open.
 
 The 356 baseline P5 rows retain exact source IDs, versions, locators, summaries, task and phase assignments. No compound requirement is collapsed or reassigned.

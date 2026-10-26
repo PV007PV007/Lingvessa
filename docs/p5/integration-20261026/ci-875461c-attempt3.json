@@ -72,14 +72,11 @@
     "dependency boundaries"
   ],
   "approved_input": {
-    "release_id": 414560160,
-    "draft": true,
-    "published_at": null,
-    "asset_id": 649769507,
-    "state": "uploaded",
-    "bytes": 63346796,
-    "sha256": "3edaeaaeb000479921a0b3ff5ec2b52042faeee54bf943eff25e4a4a0f4e516d",
-    "change": "none; metadata rechecked 2026-10-26"
+    "draft_verified": true,
+    "published": false,
+    "uploaded_asset_metadata_matches_approved_record": true,
+    "change": "none; metadata rechecked 2026-10-26",
+    "private_identifiers": "omitted from current public execution report"
   },
   "artifact_metadata": {
     "id": 12603097098,
