@@ -1,0 +1,22 @@
+{
+  "status": "PASS_FOCUSED_CHECKS_NOT_HOSTED_ACCEPTANCE",
+  "date": "2026-10-26",
+  "public_input_tests": 11,
+  "existing_transfer_tests": 11,
+  "existing_relay_tests": 7,
+  "existing_envelope_tests": 2,
+  "existing_bridge_tests": 3,
+  "governance_checks": 76,
+  "workflow_yaml_and_pins": "PASS",
+  "test_job_permissions": "CONTENTS_READ_UNCHANGED",
+  "requirement_rows_unchanged": 356,
+  "typescript_syntax": "PASS_NODE_24_22_1",
+  "hosted_pinned_toolchain_validation": "REQUIRED",
+  "real_postgresql_s3_executed_locally": false,
+  "code_bindings": {
+    "tools/p5/public-m01-input.py": "bb75b89e10c5dc443cccda8b8a651fa26c1ae79353784a5bfa5ab4a4182190e0",
+    "tests/unit/p5-public-input.test.py": "679952374e281c51512b826d56b30b3b26470e97610ac242b4823f3867f37c28",
+    ".github/workflows/p5.yml": "38d3ce01ee9318599d49f8b0e96952e6100a4f55ac22ca83c02f2b50329513a1",
+    "tools/p5/acceptance-summary.ts": "ae8d5d71acb58ed32607d072ae19cdd0b483f5f36a64d704bee2d63397beae02"
+  }
+}

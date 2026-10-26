@@ -1,3 +1,5 @@
+Current continuation: [owner-authorized public final-audio input](../public-test-input-20261026/README.md). The later owner clarification supersedes the historical restore-Private instructions below; no original archive publication is authorized.
+
 # P5 resumed Actions and private-input boundary — 2026-10-26
 
 P5 remains **IN PROGRESS / NOT READY**. P0–P4 remain ACCEPTED; PR #5 stays OPEN DRAFT. No merge or P6.
@@ -24,7 +26,7 @@ Local results use Node 24.22.1; hosted CI remains pinned to Node 24.19.0 and pnp
 
 The recovery copy was reconstructed from the saved 2026-10-25 export. Its ZIP SHA-256 and CRC passed, and all 835 repository files matched their recorded Git blob identities before editing. No audio, approval, manifest, migration, workflow or private-transfer code is changed by these corrections.
 
-## Private input and continuation
+## Historical private input and continuation (superseded)
 
 Reuse the existing approved unpublished private input after restoring the approved private context. Do not create another release, upload again, publish the archive, put WAVs in Git or remove privacy checks. Private input locators and checksums are not repeated in this current public summary. Owner approval dated 2026-10-14 still covers all 420 final WAVs, six voices, quality and rights. The 402 single-turn acoustic results plus 18 dialogue files account for all 420 final files; they do not prove learner-error calibration.
 

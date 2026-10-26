@@ -40,7 +40,27 @@ const m01Input=read('artifacts/p5/m01-input-status.json');
 const trustedM01Run=process.env.GITHUB_REPOSITORY==='PV007PV007/Lingvessa'&&['refs/heads/implementation/p5-media-speech','refs/pull/5/merge','refs/pull/5/head'].includes(process.env.GITHUB_REF??'');
 if(trustedM01Run){
  assert.equal(transfer.status,'ARCHIVE_VERIFIED','Authorized P5 CI requires the existing approved private archive');
- assert.equal(transfer.release_id,414560160);assert.equal(transfer.asset_id,649769507);
+ if(transfer.transport_profile==='PUBLIC_APPROVED_WAVS'){
+  const publicScope=read('docs/p5/public-test-input-20261026/owner-scope.json');
+  assert.equal(publicScope.status,'OWNER_AUTHORIZED');assert.equal(publicScope.public_final_wavs_allowed,true);
+  assert.equal(publicScope.original_archive_public,false);assert.equal(publicScope.final_wav_count,420);
+  assert.equal(transfer.run_id,process.env.GITHUB_RUN_ID);assert.equal(transfer.run_attempt,process.env.GITHUB_RUN_ATTEMPT);
+  assert.equal(transfer.event,process.env.GITHUB_EVENT_NAME);assert.equal(transfer.relay_retention_days,1);
+  for(const key of ['pinned_input_identity_verified','original_archive_checksum_verified','original_archive_anonymous_denied',
+   'release_draft_verified','repository_public_verified','relay_received_and_source_bound','test_job_needs_no_release_token'])assert.equal(transfer[key],true);
+  assert.equal(transfer.original_archive_in_artifact,false);assert.equal(transfer.audio_regenerated,false);
+  assert.equal(transfer.immutable_wav_checksums_verified,420);
+  for(const path of ['tools/p5/public-m01-input.py','tools/p5/private-m01-transfer.py','tools/p5/stage-m01-audio.py',
+   'docs/p5/public-test-input-20261026/owner-scope.json','assets/media/m01/source-all-assets.json']){
+   assert.equal(transfer.code_bindings[path],createHash('sha256').update(readFileSync(path)).digest('hex'));
+  }
+ }else{
+  // Exact release and asset identity are enforced by the unchanged isolated transport and receiver.
+  for(const key of ['repository_private_verified','release_draft_verified','draft_asset_access_verified',
+   'relay_received_and_source_bound','test_job_needs_no_release_token'])assert.equal(transfer[key],true);
+  const approvedArchive=ownerAudio.approved_deliverables.find((item:{filename:string})=>item.filename.endsWith('.zip'));
+  assert.equal(transfer.expected_archive_sha256,approvedArchive.sha256);assert.equal(transfer.expected_archive_bytes,approvedArchive.bytes);
+ }
  assert.equal(transfer.archive_downloaded,true);assert.equal(m01Input.status,'VERIFIED');
 }
 if(transfer.status==='ARCHIVE_VERIFIED')assert.equal(m01Input.status,'VERIFIED');
@@ -238,7 +258,7 @@ const summary={phase:'P5',runtime_status:'PASS',milestone_status:'NOT_READY',tes
  listening_review:{browser:listeningBrowser.stats,clips_verified:listeningPlayback.clips_verified,human_review:'PENDING',html_sha256:listeningManifest.html_sha256},
  m01_audio_draft:m01Draft,
  m01_completion:{metadata:m01Completion,tests:m01CompletionTests,dialogue_crosscheck:m01DialogueCheck},
- m01_owner_approval:ownerAudio,
+ m01_owner_approval:{...ownerAudio,approved_deliverables:"Original deliverable locators omitted; approval file checksum is bound below"},
  m01_visual_owner_approval:publicationBindings.owner_visual_approval,
  approved_media_registry:approvedMedia,
  m01_publication_preparation:{status:publicationBindings.status,source_sha:commit,resolved_assets:450,normal_slow_pairs:210,publication_ready:false},

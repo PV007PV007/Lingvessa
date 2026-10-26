@@ -1,0 +1,53 @@
+{
+  "status": "PASS_LOCAL_BYTES_ONLY",
+  "baseline_sha": "6debfb91eb6373be08d46b6ea07ff39bba37fd0c",
+  "original_archive_sha256_matches_owner_record": true,
+  "archive_crc": "PASS",
+  "physical_archive_entries": 1164,
+  "physical_archive_wav_entries": 1027,
+  "final_wavs": 420,
+  "historical_wavs_excluded": 607,
+  "final_wav_bytes": 35876788,
+  "immutable_record_checksums_verified": 420,
+  "single_turn_acoustic_results": 402,
+  "dialogue_wavs_outside_single_turn_pilot": 18,
+  "languages": {
+    "en": {
+      "final": 210,
+      "single_turn": 202,
+      "dialogue": 8
+    },
+    "cs": {
+      "final": 210,
+      "single_turn": 200,
+      "dialogue": 10
+    }
+  },
+  "postgresql_executed": false,
+  "s3_executed": false,
+  "hosted_transfer_executed": false,
+  "audio_regenerated": false,
+  "code_bindings": {
+    "docs/p5/public-test-input-20261026/owner-scope.json": "647d53076303b94fdea267d0d4f72f25aac04452464016cfc096e891758a7782",
+    "assets/media/m01/source-all-assets.json": "21664c1f8bdadb9aef0694854edc50214835d7919078d96749814c661ea29293",
+    "docs/p5/m01-completion-attribution.md": "9121b184e1d8e429f215b9465e2826c919492caa57b6cec19a04ee7ebc3232fd",
+    "tools/p5/public-m01-input.py": "bb75b89e10c5dc443cccda8b8a651fa26c1ae79353784a5bfa5ab4a4182190e0",
+    "tools/p5/private-m01-transfer.py": "6dce62e63dca8cbdd4d6176a7bb444acc5e55daa0cecd905ca28b5a3a3a6aaab",
+    "tools/p5/stage-m01-audio.py": "cde404312f11feac3c888f090cffd7453e2cef121b3ec6612b83f6dacb45e61b",
+    "docs/p5/m01-completion-20261014/owner-approval.json": "292dc272ecddf962d8bc92ee2bba6ad5e9b549f44beedb8107d1504b2ace9ee0",
+    "assets/media/m01/records/audio-00.json": "841cb7f2fe04f3c99e2e695705081db3f4ef0bedef6e3faf215d5bc5172b7ca3",
+    "assets/media/m01/records/audio-01.json": "e1d90ff9aa45b11ec4d278c3ccbfe255d1ea6cb14b0d3333c55dadd6a1c5bd10",
+    "assets/media/m01/records/audio-02.json": "768e298186958d95e23a1eba79aebf505dc4872aceded3cc49fb0beb4ed23a12",
+    "assets/media/m01/records/audio-03.json": "4a6741bd52b414f51c2321e7e5a00d232ac3ce9a710460b07b5aed8e0a0838ea",
+    "assets/media/m01/records/audio-04.json": "908068dbc769dbda7e0b6096081c47be8ac8f916d2030193c336351f8aa96357",
+    "assets/media/m01/records/audio-05.json": "15ded9a5c074a8e2230aac120706bb3204f61bdc1f6011dfab0548e6970fbaa9",
+    "assets/media/m01/records/audio-06.json": "7beec4e00cc7da71b9148a4a2557165d62ae84124d3c43a75904f2c5773a07e5",
+    "assets/media/m01/records/audio-07.json": "41fcbfc182b23fbfb511ed7e38b89780ba68958fd3ccec85cd0729caafb16cf3",
+    "assets/media/m01/records/audio-08.json": "b3581d7737c58b9aa9415d7bb8c46ef5778c903a0f10df8b6fae7f7f4ab1ea85",
+    "assets/media/m01/records/audio-09.json": "5db17520b38e314f8d7dbd242ce158bff0f90ac5f874ef6959d7d535567ee948",
+    "assets/media/m01/records/audio-10.json": "23cef0f9bb7165cef3919db62fbc84d0d8782b24799443ff3d40ed1723481286",
+    "assets/media/m01/records/audio-11.json": "b3a1d0de79cab71728337f42db140fec368de2620c810f662caf666828670f59",
+    "assets/media/m01/records/audio-12.json": "f5a3048e1a56259e9ea40458fa78fb7eabfebdf98cc48d6b90a9daffda775d2e",
+    "assets/media/m01/records/audio-13.json": "114fb55240f57fef59b81a7c3ee74e9008dc92dd5e287b146e4ee8a3c09ccabe"
+  }
+}

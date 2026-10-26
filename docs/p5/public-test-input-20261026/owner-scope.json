@@ -1,0 +1,18 @@
+{
+  "status": "OWNER_AUTHORIZED",
+  "date": "2026-10-26",
+  "owner_instruction": "аудіо не обовязково мають бути приватними",
+  "context": "Continue P5 in the public repository without a new paid service.",
+  "interpretation": "Permit the 420 approved final WAVs in a one-day Actions test-input artifact. Keep the original archive and historical/intermediate materials unpublished.",
+  "public_final_wavs_allowed": true,
+  "final_wav_count": 420,
+  "languages": {"en": 210, "cs": 210},
+  "retention_days": 1,
+  "original_archive_public": false,
+  "regeneration_authorized": false,
+  "quality_cast_and_rights_approval": "RETAINED_2026_10_14",
+  "production_delivery_profile_approved": false,
+  "od_004": "OPEN",
+  "od_006": "OPEN",
+  "p6_authorized": false
+}

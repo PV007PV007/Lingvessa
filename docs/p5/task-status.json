@@ -795,7 +795,7 @@
   "last_hosted_result": "PASS_REAL_M01_POSTGRESQL_S3_AND_ALL_SEVEN_WORKFLOWS",
   "last_full_runtime_pass_sha": "96cc9607c3a05481dddd9f8e6c763d8241db26eb",
   "ci_evidence": "docs/p5/integration-20261022/verified-ci-96cc960.json",
-  "current_revision_ci": "6998b70 full pnpm check passed in all seven exit jobs, then all workflows failed the production dependency audit. The dependency correction needs its own complete CI. Private input remains blocked by Public visibility; no current real M01 execution or milestone acceptance.",
+  "current_revision_ci": "Previous exact 6debfb91: five P1–P4 workflows PASS; both P5 workflows failed the old private-input condition after 31 technical gates passed. The owner-authorized public final-WAV transport requires its own seven workflows/eleven jobs, both actual M01 runs and independent artifact audits. Exact results in PR #5.",
   "latest_attempt_evidence": "docs/p5/integration-20261026/ci-6998b70.json",
   "local_audition_evidence": "docs/p5/voice-audition/results.json",
   "resolved_hosted_remediation": {
@@ -881,7 +881,7 @@
     "per_item_form_submitted": false,
     "runtime_approval_insertion": false
   },
-  "latest_failed_sha": "6998b70a8ff9401db2d931fe483bd7288fa7311d",
+  "latest_failed_sha": "6debfb91eb6373be08d46b6ea07ff39bba37fd0c",
   "transcript_support": {
     "documentation": "docs/p5/integration-20261022/README.md",
     "expected_audio_gates": 7,
@@ -897,17 +897,17 @@
     "unused_draft_untouched": true,
     "local_transport_relay_tests": 18,
     "real_execution_authority": "EXACT_HEAD_ACTIONS_AND_INDEPENDENT_ARTIFACT_AUDITS",
-    "identity_binding": "Reuse the exact approved private record; identifiers omitted from this public task summary."
+    "identity_binding": "Original input remains pinned and unpublished. Public runs export only the final WAV allowlist; private runs retain the original guarded route."
   },
   "historical_current_revision_ci_20261022": "Last fully verified source remains 96cc960. b57ae9c PR skipped real M01 after empty inventory caused an unused duplicate draft; push received exact input but package installation timed out. This revision pins existing release/asset, rejects missing/replaced relay input and requires real input in trusted acceptance. Its own seven workflows, 31 runtime gates, both actual M01 steps and independent artifact audits must pass; final exact results are in PR #5.",
   "execution_resume": {
-    "status": "DEPENDENCY_AUDIT_REMEDIATION_PRIVATE_INPUT_BLOCKED",
-    "observed_source_sha": "6998b70a8ff9401db2d931fe483bd7288fa7311d",
+    "status": "PUBLIC_FINAL_WAV_TEST_INPUT_IMPLEMENTED_AWAITING_EXACT_SOURCE_CI",
+    "observed_source_sha": "6debfb91eb6373be08d46b6ea07ff39bba37fd0c",
     "repository_visibility": "public",
-    "private_media_guard": "unchanged",
-    "evidence": "docs/p5/integration-20261026/README.md",
-    "local_checks": "docs/p5/integration-20261026/local-security-checks.json",
+    "evidence": "docs/p5/public-test-input-20261026/README.md",
+    "owner_scope": "docs/p5/public-test-input-20261026/owner-scope.json",
+    "local_bytes": "docs/p5/public-test-input-20261026/local-byte-verification.json",
     "real_m01_on_observed_attempt": "NOT_EXECUTED",
-    "decision_boundary": "Restore approved private context; no public archive or new delivery profile."
+    "decision_boundary": "420 approved unchanged final WAVs may be a one-day test artifact; original archive unpublished; S3 development/test only; OD-004/006 open."
   }
 }

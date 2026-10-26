@@ -1,4 +1,14 @@
-## Current P5 dependency-audit continuation — 2026-10-26
+## Current P5 public final-audio test input — 2026-10-26
+
+P5 IN PROGRESS / NOT READY; P0–P4 ACCEPTED; PR #5 OPEN DRAFT; no merge/P6. The owner requires continued work without a new paid service and clarified that audio need not be private. [Scope and implementation](../docs/p5/public-test-input-20261026/README.md) permit a one-day Actions artifact containing only 420 approved final WAVs, a safe receipt and source attribution. The original archive and its 607 historical/intermediate WAVs remain unpublished. Original quality/six-voice/rights approval is retained; no audio is regenerated, modified or committed to Git.
+
+Public runs now use isolated draft download and exact allowlist extraction, followed by a read-only test job that independently checks every WAV against immutable records and source/run/attempt bindings. Anonymous access to the original is rejected before export. The old private-only whole-archive relay cannot run in Public. No new storage account, billing setting, secret or PC access is needed. PostgreSQL/S3 and HTTP delivery remain disposable development/test scope; OD-004/006 stay OPEN.
+
+The preceding exact HEAD 6debfb91 passed all five P1–P4 workflows and 31/31 technical runtime gates in both P5 exit jobs, but the old input condition blocked both actual M01 executions. Those results do not prove the new source. [Local recovered-byte checks](../docs/p5/public-test-input-20261026/local-byte-verification.json) verify all 420 final WAVs and reconcile 402 single-turn results +18 dialogues; they explicitly do not claim PostgreSQL/S3 execution. The successor requires its own seven workflows/eleven jobs, both real M01 runs and independent artifact audits. Final exact-source results and run links are recorded in PR #5. No requirement status is promoted merely by transport changes.
+
+Next: read actual HEAD and current Actions attempts, inspect the new input jobs and then verify the real import/replay/immutability/restart/readback/HTTP results. Do not switch to Private, regenerate audio, upload the original again or blindly rerun an older commit. Missing real input remains a hard failure. All 356 rows retain 175 PASS / 30 PARTIAL / 151 PENDING. Remaining BLOCKER: current-source actual execution, OD-004/006 and applicable full reference publication/objective accessibility; IMPORTANT: clause applicability/evidence; MINOR: historical cleanup.
+
+## Historical P5 dependency-audit continuation — 2026-10-26
 
 Public-summary privacy correction: private release identifiers, archive digests and review-file locators are omitted here. Historical work/results and original approval records remain retained; no media bytes or approvals are changed.
 
@@ -10,7 +20,7 @@ P5 IN PROGRESS / NOT READY; P0–P4 ACCEPTED; PR #5 OPEN DRAFT; no merge/P6. Run
 
 This correction reviews the exact updated mocked transport fixture checksum, retains the historical checksum for full-history scans and tests fail-closed behavior for changed content/path. Privacy guards, approved media/manifest/approval bytes and workflow gates are unchanged. [Observed execution and recovery](../docs/p5/integration-20261026/README.md), [failed attempt](../docs/p5/integration-20261026/ci-875461c-attempt3.json) and [bounded local checks](../docs/p5/integration-20261026/local-security-checks.json). Exact successor CI is recorded in PR #5. Current-source seven workflows / 31 runtime gates / both real M01 executions / artifact audits remain required.
 
-The current connector cannot restore repository visibility. Restore the approved private test context before media transfer; do not expose the archive or silently replace the approved architecture. Earlier runner billing failure remains historical and private Actions availability is still unproven. Last full PASS remains 96cc960; 356 requirement rows and 175 PASS / 30 PARTIAL / 151 PENDING are unchanged. OD-004/006 and full objective/publication acceptance stay open. PC/VM migration is deferred; no new paid services. Owner audio/visual approvals remain effective, with no regeneration or repeat approval.
+Historical instruction before the later owner clarification: the connector could not restore visibility, so the old route required the private context. This is superseded by the approved final-WAV test-input scope above; the original archive remains unpublished. Earlier runner billing failure remains historical and private Actions availability is still unproven. Last full PASS remains 96cc960; 356 requirement rows and 175 PASS / 30 PARTIAL / 151 PENDING are unchanged. OD-004/006 and full objective/publication acceptance stay open. PC/VM migration is deferred; no new paid services. Owner audio/visual approvals remain effective, with no regeneration or repeat approval.
 
 ## Historical P5 transcript-support continuation — 2026-10-22
 

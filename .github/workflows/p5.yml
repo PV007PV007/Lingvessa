@@ -31,15 +31,26 @@ jobs:
           persist-credentials: false
           sparse-checkout: |
             .github/actions/private-m01-bridge
+            tools/p5/public-m01-input.py
+            tools/p5/private-m01-transfer.py
+            tools/p5/stage-m01-audio.py
+            docs/p5/public-test-input-20261026/owner-scope.json
             tools/p5/private-m01-envelope.py
             docs/p5/integration-20261017/private-transfer-plan.json
             docs/p5/m01-completion-20261014/owner-approval.json
           sparse-checkout-cone-mode: false
       - name: Receive approved private bytes using one artifact upload capability
+        if: github.event.repository.private
         uses: ./.github/actions/private-m01-bridge
         env:
           GH_TOKEN: ${{ github.token }}
           GITHUB_HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+      - name: Verify public final-audio scope and anonymous denial of the original archive
+        if: ${{ !github.event.repository.private }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GITHUB_HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: python3 tools/p5/public-m01-input.py preflight
   p5-input-slot:
     needs: p5-private-bridge
     if: >-
@@ -59,7 +70,8 @@ jobs:
       cancel-in-progress: false
     outputs:
       release_id: ${{ steps.input.outputs.release_id }}
-      artifact_id: ${{ steps.relay.outputs.artifact-id }}
+      artifact_id: ${{ steps.relay.outputs.artifact-id || steps.public-relay.outputs.artifact-id }}
+      profile: ${{ github.event.repository.private && 'PRIVATE_ARCHIVE' || 'PUBLIC_APPROVED_WAVS' }}
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
@@ -67,25 +79,50 @@ jobs:
           persist-credentials: false
           sparse-checkout: |
             tools/p5/private-m01-transfer.py
+            tools/p5/public-m01-input.py
+            tools/p5/stage-m01-audio.py
+            docs/p5/public-test-input-20261026/owner-scope.json
             docs/p5/m01-completion-20261014/owner-approval.json
+            docs/p5/m01-completion-attribution.md
+            assets/media/m01/source-all-assets.json
+            assets/media/m01/records
           sparse-checkout-cone-mode: false
       - name: Prepare idempotent private draft input container (never publish)
+        if: github.event.repository.private
         id: input
         env:
           GH_TOKEN: ${{ github.token }}
         run: python3 tools/p5/private-m01-transfer.py prepare
       - name: Read approved draft input in isolated transport job
+        if: github.event.repository.private
         env:
           GH_TOKEN: ${{ github.token }}
           P5_M01_RELEASE_ID: ${{ steps.input.outputs.release_id }}
           P5_M01_TRANSFER_DIR: ${{ runner.temp }}/p5-private-m01
         run: python3 tools/p5/private-m01-transfer.py download
       - name: Relay private input to tests for one day only
+        if: github.event.repository.private
         id: relay
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: p5-private-input-${{ github.run_id }}-${{ github.run_attempt }}
           path: ${{ runner.temp }}/p5-private-m01/*
+          if-no-files-found: error
+          retention-days: 1
+          compression-level: 0
+      - name: Export only the 420 approved WAVs; keep the original ZIP unpublished
+        if: ${{ !github.event.repository.private }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          P5_M01_TRANSFER_DIR: ${{ runner.temp }}/p5-approved-m01
+        run: python3 tools/p5/public-m01-input.py export
+      - name: Relay owner-authorized final WAVs for one day only
+        if: ${{ !github.event.repository.private }}
+        id: public-relay
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: p5-approved-audio-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/p5-approved-m01/*
           if-no-files-found: error
           retention-days: 1
           compression-level: 0
@@ -118,6 +155,7 @@ jobs:
           python3 tests/unit/p5-private-relay.test.py
           python3 tests/unit/p5-private-envelope.test.py
           node --test tests/unit/p5-private-bridge.test.mjs
+          python3 tests/unit/p5-public-input.test.py
       - name: Receive same-run private input relay outside the checkout
         if: needs.p5-input-slot.outputs.artifact_id != ''
         uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
@@ -126,10 +164,16 @@ jobs:
           path: ${{ runner.temp }}/p5-private-m01
           merge-multiple: true
       - name: Bind relay to exact source and verify approved archive again
+        if: needs.p5-input-slot.outputs.profile != 'PUBLIC_APPROVED_WAVS'
         env:
           P5_M01_RELEASE_ID: ${{ needs.p5-input-slot.outputs.release_id }}
           P5_M01_TRANSFER_DIR: ${{ runner.temp }}/p5-private-m01
         run: python3 tools/p5/private-m01-transfer.py receive
+      - name: Verify all final WAVs against immutable records and the same-run receipt
+        if: needs.p5-input-slot.outputs.profile == 'PUBLIC_APPROVED_WAVS'
+        env:
+          P5_M01_TRANSFER_DIR: ${{ runner.temp }}/p5-private-m01
+        run: python3 tools/p5/public-m01-input.py receive
       - run: pnpm validate:references
       - name: Validate reference media draft identities, scripts and generated bytes
         run: |
@@ -221,6 +265,7 @@ jobs:
       - name: Exercise importer with PostgreSQL and restarted S3 (explicit synthetic vectors)
         run: MINIO_BINARY="$(go env GOPATH)/bin/minio" node --env-file=.local/runtime.env --import tsx tools/p5/verify-m01-s3-import.ts --synthetic
       - name: Stage checksum-approved external M01 package if configured
+        if: env.P5_M01_AUDIO_ROOT == ''
         env:
           P5_M01_AUDIO_ARCHIVE_URL: ${{ secrets.P5_M01_AUDIO_ARCHIVE_URL }}
         run: python3 tools/p5/stage-m01-audio.py
