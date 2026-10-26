@@ -1,4 +1,12 @@
-## Current P5 transcript-support continuation — 2026-10-22
+## Current P5 resumed Actions and private-input boundary — 2026-10-26
+
+P5 IN PROGRESS / NOT READY; P0–P4 ACCEPTED; PR #5 OPEN DRAFT; no merge/P6. Run 39811276331 attempt 3 on 875461c acquired runners, then failed private-input preflight and the exact-content secret-fixture scan. The repository is now Public; the approved private-media bridge requires Private. The archive remains in unpublished draft 414560160 / pinned asset 649769507. No real M01 execution occurred in that attempt.
+
+This correction reviews the exact updated mocked transport fixture checksum, retains the historical checksum for full-history scans and tests fail-closed behavior for changed content/path. Privacy guards, approved media/manifest/approval bytes and workflow gates are unchanged. [Observed execution and recovery](../docs/p5/integration-20261026/README.md), [failed attempt](../docs/p5/integration-20261026/ci-875461c-attempt3.json) and [bounded local checks](../docs/p5/integration-20261026/local-security-checks.json). Exact successor CI is recorded in PR #5. Current-source seven workflows / 31 runtime gates / both real M01 executions / artifact audits remain required.
+
+The current connector cannot restore repository visibility. Restore the approved private test context before media transfer; do not expose the archive or silently replace the approved architecture. Earlier runner billing failure remains historical and private Actions availability is still unproven. Last full PASS remains 96cc960; 356 requirement rows and 175 PASS / 30 PARTIAL / 151 PENDING are unchanged. OD-004/006 and full objective/publication acceptance stay open. PC/VM migration is deferred; no new paid services. Owner audio/visual approvals remain effective, with no regeneration or repeat approval.
+
+## Historical P5 transcript-support continuation — 2026-10-22
 
 Authoritative parent `96cc9607c3a05481dddd9f8e6c763d8241db26eb` passed seven workflows / eleven jobs, 28 runtime gates and both independent artifact audits (90 references). All 420 approved WAVs + 30 SVGs passed real PostgreSQL/S3 replay, immutable versions, restart and authenticated HTTP delivery; 450 declared test uses passed. [Retained exact-source evidence](../docs/p5/integration-20261022/verified-ci-96cc960.json). Historical 742bbdc failure was corrected on 96cc960.
 

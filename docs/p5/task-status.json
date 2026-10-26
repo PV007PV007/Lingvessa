@@ -790,13 +790,13 @@
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
     }
   ],
-  "timestamp": "2026-10-22",
+  "timestamp": "2026-10-26",
   "last_hosted_tested_sha": "96cc9607c3a05481dddd9f8e6c763d8241db26eb",
   "last_hosted_result": "PASS_REAL_M01_POSTGRESQL_S3_AND_ALL_SEVEN_WORKFLOWS",
   "last_full_runtime_pass_sha": "96cc9607c3a05481dddd9f8e6c763d8241db26eb",
   "ci_evidence": "docs/p5/integration-20261022/verified-ci-96cc960.json",
-  "current_revision_ci": "Last fully verified source remains 96cc960. b57ae9c PR skipped real M01 after empty inventory caused an unused duplicate draft; push received exact input but package installation timed out. This revision pins existing release/asset, rejects missing/replaced relay input and requires real input in trusted acceptance. Its own seven workflows, 31 runtime gates, both actual M01 steps and independent artifact audits must pass; final exact results are in PR #5.",
-  "latest_attempt_evidence": "docs/p5/integration-20261022/ci-b57ae9c-input-defect.json",
+  "current_revision_ci": "875461c attempt 3 acquired runners but failed private-input preflight and the exact-content fixture scan. This correction requires its own seven workflows, 31 runtime gates, both real M01 steps and independent artifact audits. Public visibility blocks the approved private-media path. Exact successor results are in PR #5; last full PASS remains 96cc960.",
+  "latest_attempt_evidence": "docs/p5/integration-20261026/ci-875461c-attempt3.json",
   "local_audition_evidence": "docs/p5/voice-audition/results.json",
   "resolved_hosted_remediation": {
     "issue_id": "P5-DEP-001",
@@ -900,5 +900,16 @@
     "unused_draft_untouched": true,
     "local_transport_relay_tests": 18,
     "real_execution_authority": "EXACT_HEAD_ACTIONS_AND_INDEPENDENT_ARTIFACT_AUDITS"
+  },
+  "historical_current_revision_ci_20261022": "Last fully verified source remains 96cc960. b57ae9c PR skipped real M01 after empty inventory caused an unused duplicate draft; push received exact input but package installation timed out. This revision pins existing release/asset, rejects missing/replaced relay input and requires real input in trusted acceptance. Its own seven workflows, 31 runtime gates, both actual M01 steps and independent artifact audits must pass; final exact results are in PR #5.",
+  "execution_resume": {
+    "status": "CURRENT_SOURCE_CI_REQUIRED_PRIVATE_INPUT_BLOCKED",
+    "observed_source_sha": "875461ca57f72928815014806773ec34751459a1",
+    "repository_visibility": "public",
+    "private_media_guard": "unchanged",
+    "evidence": "docs/p5/integration-20261026/README.md",
+    "local_checks": "docs/p5/integration-20261026/local-security-checks.json",
+    "real_m01_on_observed_attempt": "NOT_EXECUTED",
+    "decision_boundary": "Restore approved private context; no public archive or new delivery profile."
   }
 }

@@ -1,5 +1,7 @@
 # P5 requirement evidence review
 
+2026-10-26: [resumed Actions evidence and private-input boundary](integration-20261026/README.md). The 875461c retry reached runners but failed; its descendant must pass its own CI. The exact mocked-fixture scanner correction does not promote any requirement. Public repository visibility currently conflicts with the approved private audio transfer. OD-004/006 remain open.
+
 The 356 baseline P5 rows retain exact source IDs, versions, locators, summaries, task and phase assignments. No compound requirement is collapsed or reassigned.
 
 Current trace: **175 PASS / 30 PARTIAL / 151 PENDING**. The one later promotion, N-CUR-P12-B04-C12, is bound to both 96cc960 real M01 executions in [the retained evidence](integration-20261022/verified-ci-96cc960.json). [Current P5 continuation](integration-20261022/README.md) and exact-HEAD PR #5 artifacts supersede the historical execution paragraph below. Whole objective/publication, production-delivery and calibration clauses remain open; parent CI is not proof of a descendant.
