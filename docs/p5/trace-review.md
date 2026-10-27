@@ -1,5 +1,7 @@
 # P5 requirement evidence review
 
+2026-10-27 executed integration: [5230d48 evidence](public-test-input-20261026/verified-ci-5230d48.json) confirms seven workflows / eleven latest-attempt jobs, both real M01 imports and 31 runtime gates per event. Independent audits verified all 420 WAVs in both inputs, all 450 publication pins and 90 acceptance references. CUR-A1-015, AUD-001, AUD-005, MED-001 and REF-A1-010 now distinguish executed technical subgates from remaining full authored-objective/publication acceptance. All 356 statuses stay 175 PASS / 30 PARTIAL / 151 PENDING; no compound clause is promoted from a fixture. The public-input and clean-checkout failures below are resolved historical observations. Exact descendant results remain in PR #5.
+
 2026-10-27: both d0cff4f input pipelines and independent 420-WAV audits passed; Python bytecode cache dirtiness stopped the runtime before PostgreSQL/S3. [Failure and correction](public-test-input-20261026/ci-d0cff4f-input-and-failure.json). The clean-checkout gate remains enforced; no requirement promotion.
 
 2026-10-26 current continuation: [public final-audio test input](public-test-input-20261026/README.md), authorized by the owner clarification. Prior restore-Private requirements are historical. Exact 6debfb91 passed five P1–P4 workflows and both sets of 31 runtime gates, but no real M01 import. The new transport requires complete exact-source evidence; all 356 statuses remain unchanged.

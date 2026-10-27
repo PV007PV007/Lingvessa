@@ -1,4 +1,22 @@
-## Current P5 public final-audio test input — 2026-10-26
+## Current P5 verified real integration — 2026-10-27
+
+P5 **IN PROGRESS / NOT READY**. P0–P4 ACCEPTED; PR #5 OPEN DRAFT; no merge or P6.
+
+Verified source `5230d48846f902782b388d9d019632e77ffc6cc7`, tree `e72fc3a2a39bef7ddb44cc887deaefff6a2a6286`: all seven workflows and eleven latest-attempt jobs PASS. P5 push 40460988576 attempt 2 and PR 40460994664 attempt 1 both executed real M01. [Retained exact-source evidence](../docs/p5/public-test-input-20261026/verified-ci-5230d48.json) records independent input/runtime artifact audits, 90 acceptance references and 31 runtime gates per event. Any later revision requires its own exact-source CI; final results are in [PR #5](https://github.com/PV007PV007/Lingvessa/pull/5).
+
+Both runs imported/replayed 450 immutable versions (420 approved WAVs + 30 SVGs), rejected updates/deletes/changed bytes, recreated PostgreSQL pools and S3 servers/adapters, and verified every stored byte and publication pin. Authenticated HTTP delivery passed 450 full reads, eight ranges, twenty negative responses and recovery after storage outage. The two test publications are disposable; the importer inserts no approvals or production publication.
+
+All 420 final WAVs match their immutable checksums: 210 EN + 210 CS, comprising 402 single-turn acoustic results (202 EN / 200 CS) and 18 dialogues (8 EN / 10 CS). Original archive SHA-256/CRC also passed. Quality/six-voice/rights approval from 2026-10-14 remains effective. No audio was regenerated or changed. No final M01 WAV was added to Git; retained historical audition files are unchanged.
+
+The owner's public-audio scope permits only the 420 finals in a one-day Actions artifact with receipt/attribution. The original ZIP and its 607 historical/intermediate WAVs remain unpublished. This is test transport into disposable S3-compatible storage, with no new service, cost, secret or PC access. [Scope and recovery](../docs/p5/public-test-input-20261026/README.md).
+
+The first 5230d48 push attempt timed out during slow Ubuntu package downloads, before real M01. One same-source retry passed. The input job was necessarily repeated because receipts bind the exact run attempt; the old receipt cannot be used in a new attempt. No older failed/synthetic artifact was counted as current acceptance.
+
+All 356 trace rows retain **175 PASS / 30 PARTIAL / 151 PENDING**. Five core media clauses now cite the executed 5230d48 gates without claiming whole-clause acceptance. BLOCKER: OD-004 production delivery profile, OD-006 labelled learner-error calibration/policy, and applicable full reference publication/objective accessibility. IMPORTANT: remaining clause-level applicability/evidence review. MINOR: retained historical unreferenced blob receipts and unused unpublished draft; neither blocks ingestion.
+
+Next: read actual branch HEAD and latest attempts, verify this documentation revision's complete CI, then review remaining atomic media/transcript requirements against existing code and full source clauses. Do not author P6 content, change approval/production policy, repeat generation or re-upload the original. Runtime results belong in PR #5 without another evidence-only descendant cycle.
+
+## Historical P5 public-input correction — 2026-10-26
 
 2026-10-27 follow-up: d0cff4f passed both complete input pipelines and independent 420-WAV artifact audits. Both full pnpm checks passed, then the historical Pocket gate correctly rejected untracked Python bytecode caches before real PostgreSQL/S3. The cache cause was reproduced; the workflow now prevents bytecode writes without weakening clean-tree checks. [Exact observed evidence](../docs/p5/public-test-input-20261026/ci-d0cff4f-input-and-failure.json). Successor exact-source execution and final results remain required in PR #5.
 

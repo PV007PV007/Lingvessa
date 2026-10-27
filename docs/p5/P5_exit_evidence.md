@@ -2,13 +2,21 @@
 
 **IN PROGRESS / NOT READY. PR #5 OPEN DRAFT; no merge or P6 authorization.**
 
+## Current verified runtime — 2026-10-27
+
+Source `5230d48846f902782b388d9d019632e77ffc6cc7` passed all seven workflows / eleven latest-attempt jobs and both real M01 PostgreSQL/S3/HTTP runs. [Retained verification](public-test-input-20261026/verified-ci-5230d48.json) records all 420 immutable WAVs, 450 asset versions/pins, replay, server/adapter restart, byte readbacks, authenticated HTTP delivery, 31 gates per event and 90 independent acceptance-reference checks. All five P1–P4 regression workflows and the production dependency audit passed. This proves 5230d48 only; exact descendant CI is recorded in PR #5.
+
+Owner audio approval from 2026-10-14 and exact visual-set approval from 2026-10-20 remain effective. No generation or repeat set approval is required. The owner's later public-audio permission covers only final-WAV test transport; the original archive remains unpublished and the media corpus stays outside Git. [Current scope and restart procedure](public-test-input-20261026/README.md) supersede the historical private-only input instructions.
+
+P5 remains NOT READY: OD-004 production delivery, OD-006 learner-error calibration/policy, full applicable reference publication/objective accessibility and remaining clause evidence are open. Trace is 175 PASS / 30 PARTIAL / 151 PENDING. The following dated snapshots preserve history and do not reopen approved generation/cast/rights or replace current exact-source evidence.
+
 ## Verified real M01 execution — 2026-10-18
 
 Both P5 PR and push runs passed on `460aab052115f6fe168d180b4ac44369afaab09d`, together with all five P1–P4 runs. Both ordinary evidence archives were independently downloaded; their digests, CRC, 39 references each and source/code bindings matched. [Durable exact-source evidence](integration-20261018/verified-ci-460aab0.json).
 
 Executed: 450 immutable imports (420 approved WAVs + 30 visual drafts), exact replay, changed-byte/immutable-update/delete rejection, database-pool and S3 server/adapter recreation, all stored-byte readbacks, anonymous/foreign-owner/activity denial, two disposable publications and 426 delivery reads (420 audio + six avatars). Negative and positive same-language/avatar-version closure checks passed. Import inserts zero approvals; 2,556 permission rows exist only in the disposable test fixture. This is repository-level delivery in development/test, not production HTTP/CDN or pedagogical course publication.
 
-The ZIP remains private draft release asset `649769507`, SHA-256 `3edaeaaeb000479921a0b3ff5ec2b52042faeee54bf943eff25e4a4a0f4e516d`; no upload or audio generation is needed. Owner audio approval remains valid. The 402 acoustic single-turn files (202 EN + 200 CS) and 18 final dialogues (8 EN + 10 CS) account for all 420 checksum-verified WAVs.
+The ZIP remains private draft release asset `[private asset identity retained in the original record]`, SHA-256 `[original checksum retained in the immutable approval record]`; no upload or audio generation is needed. Owner audio approval remains valid. The 402 acoustic single-turn files (202 EN + 200 CS) and 18 final dialogues (8 EN + 10 CS) account for all 420 checksum-verified WAVs.
 
 The current report now separates the immutable historical preproduction registry from the later approved audio inventory. Historical placeholders do not reopen OD-005 or authorize regeneration. Its own exact-HEAD CI/acceptance artifacts in PR #5 determine this reporting revision's result; do not create a self-referential evidence-only descendant.
 
@@ -75,7 +83,7 @@ No new direct application dependency, schema, API, migration or production provi
 
 ## Historical open exit conditions — 2026-10-17
 
-All 420 M01 WAVs, the six voices and audio rights are approved; no regeneration or repeat audio approval. The unchanged archive was uploaded through the existing GitHub connection to private draft release 414560160, asset 649769507; GitHub reports the exact approved size and SHA-256. The isolated input job independently downloaded and verified the bytes. See [transfer receipt and real-gate boundary](integration-20261017/README.md).
+All 420 M01 WAVs, the six voices and audio rights are approved; no regeneration or repeat audio approval. The unchanged archive was uploaded through the existing GitHub connection to private draft release [private release identity retained in the original record], asset [private asset identity retained in the original record]; GitHub reports the exact approved size and SHA-256. The isolated input job independently downloaded and verified the bytes. See [transfer receipt and real-gate boundary](integration-20261017/README.md).
 
 Plan v1.4 §12 p7 still requires all required M01 asset IDs to resolve through the appropriate publication path. The real PostgreSQL/S3 test must prove 420 audio + 30 draft visual imports, replay, immutable versions, restart and 420 owner-scoped test deliveries on the exact current HEAD. Transport success is not test success or approval of the 30 visual drafts. Current-source CI and acceptance artifacts in PR #5 determine execution status.
 

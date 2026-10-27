@@ -286,10 +286,11 @@
         "CHK-N-TS-P17-T02-R05",
         "CHK-N-TS-P19-T03-R08"
       ],
-      "readiness": "450 approved corpus versions imported/replayed/read after restart and delivered through HTTP on d2ec78a. New per-use accessibility enforcement requires exact-source CI. Full reference publication remains separate; no P6 authoring.",
+      "readiness": "Both 5230d48 runs passed 450 real immutable versions, replay/restart, HTTP delivery and declared-use accessibility. Production delivery OD-004 and full reference publication remain open; no P6 authoring.",
       "contract_change": "No governing contract change; P5 concrete implementation only",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
-      "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
+      "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists",
+      "historical_readiness_before_20261027": "450 approved corpus versions imported/replayed/read after restart and delivered through HTTP on d2ec78a. New per-use accessibility enforcement requires exact-source CI. Full reference publication remains separate; no P6 authoring."
     },
     {
       "task_id": "IMP-P5-002",
@@ -408,10 +409,11 @@
         "CHK-N-TS-P13-T03-R08",
         "CHK-N-TS-P16-T01-R02"
       ],
-      "readiness": "All 420 WAVs are approved and verified in real storage/HTTP tests on 96cc960. This batch repairs inline transcript logging and adds PostgreSQL/Chromium support-evidence gates. Full activity-objective accessibility remains open; no repeat audio generation/approval.",
+      "readiness": "Both 5230d48 runs passed all 420 immutable WAVs, same-activity normal/slow closure, transcript audit and conservative support-evidence gates. Full authored-objective accessibility remains open; no regeneration or repeat approval.",
       "contract_change": "No governing contract change; P5 concrete implementation only",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
-      "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
+      "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists",
+      "historical_readiness_before_20261027": "All 420 WAVs are approved and verified in real storage/HTTP tests on 96cc960. This batch repairs inline transcript logging and adds PostgreSQL/Chromium support-evidence gates. Full activity-objective accessibility remains open; no repeat audio generation/approval."
     },
     {
       "task_id": "IMP-P5-003",
@@ -784,18 +786,19 @@
         "CHK-N-TS-P17-T02-R06",
         "CHK-N-TS-P18-T02-R08"
       ],
-      "readiness": "All 12 speech gates and real microphone browser paths PASS. Controlled evaluation is not production calibration; OD-006 still governs usable real-provider evidence.",
+      "readiness": "All twelve speech runtime gates passed on 5230d48. OD-006 labelled learner-error calibration and approved target policy remain open; neutral unavailable remains default.",
       "contract_change": "No governing contract change; P5 concrete implementation only",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
-      "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists"
+      "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists",
+      "historical_readiness_before_20261027": "All 12 speech gates and real microphone browser paths PASS. Controlled evaluation is not production calibration; OD-006 still governs usable real-provider evidence."
     }
   ],
-  "timestamp": "2026-10-26",
-  "last_hosted_tested_sha": "96cc9607c3a05481dddd9f8e6c763d8241db26eb",
-  "last_hosted_result": "PASS_REAL_M01_POSTGRESQL_S3_AND_ALL_SEVEN_WORKFLOWS",
-  "last_full_runtime_pass_sha": "96cc9607c3a05481dddd9f8e6c763d8241db26eb",
-  "ci_evidence": "docs/p5/integration-20261022/verified-ci-96cc960.json",
-  "current_revision_ci": "d0cff4f: both approved 420-WAV input transfers and independent artifact audits PASS; both full pnpm checks PASS; Pocket provenance gate correctly rejected Python bytecode cache dirtiness before real PostgreSQL/S3. Workflow now prevents bytecode writes; complete successor CI and real M01 evidence required in PR #5.",
+  "timestamp": "2026-10-27",
+  "last_hosted_tested_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
+  "last_hosted_result": "PASS_REAL_M01_POSTGRESQL_S3_HTTP_AND_ALL_SEVEN_WORKFLOWS",
+  "last_full_runtime_pass_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
+  "ci_evidence": "docs/p5/public-test-input-20261026/verified-ci-5230d48.json",
+  "current_revision_ci": "5230d48 passed all seven workflows / eleven latest-attempt jobs, both real M01 runs and independent input/runtime audits. This evidence consolidation changes documentation only; its own exact-HEAD results must be read from PR #5. A parent PASS never certifies a descendant.",
   "latest_attempt_evidence": "docs/p5/integration-20261026/ci-6998b70.json",
   "local_audition_evidence": "docs/p5/voice-audition/results.json",
   "resolved_hosted_remediation": {
@@ -838,7 +841,7 @@
   "private_input_result": {
     "status": "TRANSFER_AND_INDEPENDENT_DOWNLOAD_VERIFIED",
     "receipt": "docs/p5/integration-20261017/transfer-receipt.json",
-    "real_import_status": "PASS including 450 actual authenticated HTTP byte deliveries on d2ec78a; docs/p5/integration-20261021/verified-ci-d2ec78a.json"
+    "real_import_status": "PASS on 5230d48 in both events: 450 imports/replay/restart readbacks/publication pins and authenticated HTTP deliveries; see docs/p5/public-test-input-20261026/verified-ci-5230d48.json"
   },
   "historical_before_real_m01_pass": {
     "last_hosted_tested_sha": "35dced61a8f9ae36f77379860f414e012de20997",
@@ -901,14 +904,42 @@
   },
   "historical_current_revision_ci_20261022": "Last fully verified source remains 96cc960. b57ae9c PR skipped real M01 after empty inventory caused an unused duplicate draft; push received exact input but package installation timed out. This revision pins existing release/asset, rejects missing/replaced relay input and requires real input in trusted acceptance. Its own seven workflows, 31 runtime gates, both actual M01 steps and independent artifact audits must pass; final exact results are in PR #5.",
   "execution_resume": {
-    "status": "PUBLIC_AUDIO_TRANSFER_VERIFIED_PYTHON_CACHE_FIX_AWAITING_CI",
-    "observed_source_sha": "d0cff4f21a264d242e5679befa9258f56125d97f",
+    "status": "PUBLIC_AUDIO_REAL_M01_RUNTIME_VERIFIED_MILESTONE_NOT_READY",
+    "observed_source_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
     "repository_visibility": "public",
-    "evidence": "docs/p5/public-test-input-20261026/README.md",
+    "evidence": "docs/p5/public-test-input-20261026/verified-ci-5230d48.json",
     "owner_scope": "docs/p5/public-test-input-20261026/owner-scope.json",
-    "local_bytes": "docs/p5/public-test-input-20261026/local-byte-verification.json",
-    "real_m01_on_observed_attempt": "NOT_EXECUTED",
-    "decision_boundary": "420 approved unchanged final WAVs may be a one-day test artifact; original archive unpublished; S3 development/test only; OD-004/006 open.",
-    "failed_execution": "docs/p5/public-test-input-20261026/ci-d0cff4f-input-and-failure.json"
+    "real_m01_on_observed_attempt": "PASS_BOTH_EVENTS",
+    "verified_attempts": {
+      "push": {
+        "run_id": 40460988576,
+        "attempt": 2
+      },
+      "pull_request": {
+        "run_id": 40460994664,
+        "attempt": 1
+      }
+    },
+    "decision_boundary": "420 unchanged approved final WAVs may enter a one-day test artifact; original archive unpublished; S3 development/test only; OD-004/006 open.",
+    "idempotent_next_action": "Read branch HEAD and its latest Actions attempts; inspect existing results before any rerun. Exact descendant verification belongs in PR #5."
+  },
+  "historical_before_public_runtime_pass": {
+    "timestamp": "2026-10-26",
+    "last_hosted_tested_sha": "96cc9607c3a05481dddd9f8e6c763d8241db26eb",
+    "last_hosted_result": "PASS_REAL_M01_POSTGRESQL_S3_AND_ALL_SEVEN_WORKFLOWS",
+    "last_full_runtime_pass_sha": "96cc9607c3a05481dddd9f8e6c763d8241db26eb",
+    "ci_evidence": "docs/p5/integration-20261022/verified-ci-96cc960.json",
+    "current_revision_ci": "d0cff4f: both approved 420-WAV input transfers and independent artifact audits PASS; both full pnpm checks PASS; Pocket provenance gate correctly rejected Python bytecode cache dirtiness before real PostgreSQL/S3. Workflow now prevents bytecode writes; complete successor CI and real M01 evidence required in PR #5.",
+    "execution_resume": {
+      "status": "PUBLIC_AUDIO_TRANSFER_VERIFIED_PYTHON_CACHE_FIX_AWAITING_CI",
+      "observed_source_sha": "d0cff4f21a264d242e5679befa9258f56125d97f",
+      "repository_visibility": "public",
+      "evidence": "docs/p5/public-test-input-20261026/README.md",
+      "owner_scope": "docs/p5/public-test-input-20261026/owner-scope.json",
+      "local_bytes": "docs/p5/public-test-input-20261026/local-byte-verification.json",
+      "real_m01_on_observed_attempt": "NOT_EXECUTED",
+      "decision_boundary": "420 approved unchanged final WAVs may be a one-day test artifact; original archive unpublished; S3 development/test only; OD-004/006 open.",
+      "failed_execution": "docs/p5/public-test-input-20261026/ci-d0cff4f-input-and-failure.json"
+    }
   }
 }

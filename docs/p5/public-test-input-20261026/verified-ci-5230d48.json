@@ -1,0 +1,730 @@
+{
+  "schema_version": 1,
+  "status": "RUNTIME_PASS_MILESTONE_NOT_READY",
+  "tested_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
+  "tree_sha": "e72fc3a2a39bef7ddb44cc887deaefff6a2a6286",
+  "verified_at": "2026-10-27",
+  "github": {
+    "workflows": [
+      {
+        "id": 40460994746,
+        "name": "P4 mastery and Review",
+        "event": "pull_request",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
+        "run_attempt": 1,
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/40460994746"
+      },
+      {
+        "id": 40460994667,
+        "name": "P1 foundation",
+        "event": "pull_request",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
+        "run_attempt": 1,
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/40460994667"
+      },
+      {
+        "id": 40460994710,
+        "name": "P2 data foundation",
+        "event": "pull_request",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
+        "run_attempt": 1,
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/40460994710"
+      },
+      {
+        "id": 40460994701,
+        "name": "P3 lesson engine",
+        "event": "pull_request",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
+        "run_attempt": 1,
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/40460994701"
+      },
+      {
+        "id": 40460994664,
+        "name": "P5 media and speech",
+        "event": "pull_request",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
+        "run_attempt": 1,
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/40460994664"
+      },
+      {
+        "id": 40460988327,
+        "name": "P1 foundation",
+        "event": "push",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
+        "run_attempt": 1,
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/40460988327"
+      },
+      {
+        "id": 40460988576,
+        "name": "P5 media and speech",
+        "event": "push",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
+        "run_attempt": 2,
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/40460988576"
+      }
+    ],
+    "checks": [
+      {
+        "id": 122045296910,
+        "name": "p4-exit",
+        "run_id": 40460994746,
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/40460994746/job/122045296910"
+      },
+      {
+        "id": 122045296415,
+        "name": "p1-exit",
+        "run_id": 40460994667,
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/40460994667/job/122045296415"
+      },
+      {
+        "id": 122045296288,
+        "name": "p2-exit",
+        "run_id": 40460994710,
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/40460994710/job/122045296288"
+      },
+      {
+        "id": 122045296450,
+        "name": "p3-exit",
+        "run_id": 40460994701,
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/40460994701/job/122045296450"
+      },
+      {
+        "id": 122045296800,
+        "name": "p5-private-bridge",
+        "run_id": 40460994664,
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/40460994664/job/122045296800"
+      },
+      {
+        "id": 122045373548,
+        "name": "p5-input-slot",
+        "run_id": 40460994664,
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/40460994664/job/122045373548"
+      },
+      {
+        "id": 122045445927,
+        "name": "p5-exit",
+        "run_id": 40460994664,
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/40460994664/job/122045445927"
+      },
+      {
+        "id": 122045276321,
+        "name": "p1-exit",
+        "run_id": 40460988327,
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/40460988327/job/122045276321"
+      },
+      {
+        "id": 122050382273,
+        "name": "p5-input-slot",
+        "run_id": 40460988576,
+        "run_attempt": 2,
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/40460988576/job/122050382273"
+      },
+      {
+        "id": 122050382572,
+        "name": "p5-private-bridge",
+        "run_id": 40460988576,
+        "run_attempt": 2,
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/40460988576/job/122050382572"
+      },
+      {
+        "id": 122050447792,
+        "name": "p5-exit",
+        "run_id": 40460988576,
+        "run_attempt": 2,
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/40460988576/job/122050447792"
+      }
+    ]
+  },
+  "source_blobs_verified": 847,
+  "source_blob_mismatches": 0,
+  "artifact_metadata": [
+    {
+      "id": 12715377707,
+      "name": "p5-5230d48846f902782b388d9d019632e77ffc6cc7-push",
+      "bytes": 7834221,
+      "sha256": "5e88f43e9731f7b4ccd10853a1635bc37fe43ae77ca122ca8effbad52f2cbf93",
+      "created_at": "2026-10-27T06:53:15Z",
+      "expires_at": "2026-11-10T06:53:12Z",
+      "run_id": 40460988576,
+      "source_sha": "5230d48846f902782b388d9d019632e77ffc6cc7"
+    },
+    {
+      "id": 12715058255,
+      "name": "p5-approved-audio-40460988576-2",
+      "bytes": 35959324,
+      "sha256": "226468871ed3881d939005131f36b4a54651e28d327752e560a01f1a3724d795",
+      "created_at": "2026-10-27T06:41:24Z",
+      "expires_at": "2026-10-28T06:41:22Z",
+      "run_id": 40460988576,
+      "source_sha": "5230d48846f902782b388d9d019632e77ffc6cc7"
+    },
+    {
+      "id": 12715335253,
+      "name": "p5-5230d48846f902782b388d9d019632e77ffc6cc7-pull_request",
+      "bytes": 8277237,
+      "sha256": "7c7246a6a672044a431efa801d0f4b4855dd795ebed171b527f54a622fa8b70f",
+      "created_at": "2026-10-27T06:34:10Z",
+      "expires_at": "2026-11-10T06:34:09Z",
+      "run_id": 40460994664,
+      "source_sha": "5230d48846f902782b388d9d019632e77ffc6cc7"
+    },
+    {
+      "id": 12714296800,
+      "name": "p5-approved-audio-40460994664-1",
+      "bytes": 35959332,
+      "sha256": "97325eed0401f89bda262f8bb65fa91715f861261179e7d4ef0c7b615e1c7b02",
+      "created_at": "2026-10-27T06:25:38Z",
+      "expires_at": "2026-10-28T06:25:37Z",
+      "run_id": 40460994664,
+      "source_sha": "5230d48846f902782b388d9d019632e77ffc6cc7"
+    }
+  ],
+  "failed_attempt": {
+    "run_id": 40460988576,
+    "run_attempt": 1,
+    "job_id": 122045375878,
+    "error": "The action 'Install audio inspection tool with bounded package-network waits' has timed out after 10 minutes.",
+    "observed_cause": "Ubuntu package downloads continued very slowly until the existing ten-minute step bound; no real M01 execution in this attempt.",
+    "resolution": "A single same-source rerun of the input job and dependent exit job passed. Receipts are strictly bound to run_attempt. The prior successful bridge result is carried in GitHub's latest-attempt job list.",
+    "reused_failure_artifact": false
+  },
+  "scope": {
+    "approved_final_audio": 420,
+    "regenerated_audio": 0,
+    "approved_audio_added_to_git": 0,
+    "original_archive_published": false,
+    "original_archive_sha256_and_crc_verified": true,
+    "original_archive_wav_entries": 1027,
+    "excluded_historical_wav_entries": 607,
+    "final_wav_bytes": 35876788,
+    "voices": 6,
+    "owner_approval_retained": "2026-10-14",
+    "acoustic_single_turn": 402,
+    "dialogues_outside_acoustic_pilot": 18,
+    "by_language": {
+      "en": {
+        "final": 210,
+        "pilot": 202,
+        "dialogues": 8
+      },
+      "cs": {
+        "final": 210,
+        "pilot": 200,
+        "dialogues": 10
+      }
+    },
+    "transport": "PUBLIC_APPROVED_WAVS_ONE_DAY_ACTIONS_ARTIFACT",
+    "storage": "DISPOSABLE_S3_COMPATIBLE_DEVELOPMENT_TEST",
+    "od_004": "OPEN",
+    "od_006": "OPEN",
+    "p6_authorized": false
+  },
+  "trace_counts": {
+    "PASS": 175,
+    "PARTIAL": 30,
+    "PENDING": 151
+  },
+  "requirement_status_changes": 0,
+  "independent_input_audit": {
+    "status": "PASS",
+    "artifacts": [
+      {
+        "event": "push",
+        "run_id": "40460988576",
+        "run_attempt": "2",
+        "source_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
+        "sha256": "226468871ed3881d939005131f36b4a54651e28d327752e560a01f1a3724d795",
+        "zip_crc": "PASS",
+        "members": 422,
+        "wav_checksums_verified": 420,
+        "wav_bytes": 35876788,
+        "languages": {
+          "en": 210,
+          "cs": 210
+        },
+        "voices": 6,
+        "source_bindings_verified": 21,
+        "original_archive_or_historical_wavs_present": false
+      },
+      {
+        "event": "pull_request",
+        "run_id": "40460994664",
+        "run_attempt": "1",
+        "source_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
+        "sha256": "97325eed0401f89bda262f8bb65fa91715f861261179e7d4ef0c7b615e1c7b02",
+        "zip_crc": "PASS",
+        "members": 422,
+        "wav_checksums_verified": 420,
+        "wav_bytes": 35876788,
+        "languages": {
+          "en": 210,
+          "cs": 210
+        },
+        "voices": 6,
+        "source_bindings_verified": 21,
+        "original_archive_or_historical_wavs_present": false
+      }
+    ]
+  },
+  "independent_runtime_audit": {
+    "status": "PASS_RUNTIME_NOT_MILESTONE",
+    "reports": [
+      {
+        "event": "push",
+        "run_id": "40460988576",
+        "run_attempt": "2",
+        "source_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
+        "artifact_id": 12715377707,
+        "sha256": "5e88f43e9731f7b4ccd10853a1635bc37fe43ae77ca122ca8effbad52f2cbf93",
+        "zip_crc": "PASS",
+        "members": 70,
+        "acceptance_references_verified": 45,
+        "code_binding_checks": 69,
+        "unique_source_files_bound": 46,
+        "runtime_gates_passed": 31,
+        "real_m01_import_replay_restart_and_bytes": "PASS",
+        "immutable_publication_pins_verified": 450,
+        "http_delivery": {
+          "status": "PASS",
+          "executed": true,
+          "scope": "REAL_M01_LOOPBACK_HTTP_POSTGRESQL_S3_NOT_PRODUCTION_CDN",
+          "metadata_lists": 2,
+          "full_assets": 450,
+          "audio_assets": 420,
+          "visual_assets": 30,
+          "byte_ranges": 8,
+          "negative_responses": 20,
+          "storage_outage_503": 2,
+          "storage_recovery_reads": 2,
+          "authenticated_login": true,
+          "all_full_response_checksums_verified": true,
+          "private_no_store_headers_verified": true,
+          "svg_sandbox_headers_verified": true,
+          "production_delivery_profile_approved": false
+        },
+        "browser_reports": [
+          {
+            "file": "p3/browser-results.json",
+            "passed": 4
+          },
+          {
+            "file": "p4/browser-results.json",
+            "passed": 2
+          },
+          {
+            "file": "p5/browser-results.json",
+            "passed": 9
+          },
+          {
+            "file": "p5/listening-browser-results.json",
+            "passed": 3
+          },
+          {
+            "file": "p5/m01-review-browser-results.json",
+            "passed": 5
+          },
+          {
+            "file": "p5/speech-browser-results.json",
+            "passed": 2
+          },
+          {
+            "file": "p5/visual-review-browser-results.json",
+            "passed": 3
+          }
+        ],
+        "milestone_status": "NOT_READY"
+      },
+      {
+        "event": "pull_request",
+        "run_id": "40460994664",
+        "run_attempt": "1",
+        "source_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
+        "artifact_id": 12715335253,
+        "sha256": "7c7246a6a672044a431efa801d0f4b4855dd795ebed171b527f54a622fa8b70f",
+        "zip_crc": "PASS",
+        "members": 70,
+        "acceptance_references_verified": 45,
+        "code_binding_checks": 69,
+        "unique_source_files_bound": 46,
+        "runtime_gates_passed": 31,
+        "real_m01_import_replay_restart_and_bytes": "PASS",
+        "immutable_publication_pins_verified": 450,
+        "http_delivery": {
+          "status": "PASS",
+          "executed": true,
+          "scope": "REAL_M01_LOOPBACK_HTTP_POSTGRESQL_S3_NOT_PRODUCTION_CDN",
+          "metadata_lists": 2,
+          "full_assets": 450,
+          "audio_assets": 420,
+          "visual_assets": 30,
+          "byte_ranges": 8,
+          "negative_responses": 20,
+          "storage_outage_503": 2,
+          "storage_recovery_reads": 2,
+          "authenticated_login": true,
+          "all_full_response_checksums_verified": true,
+          "private_no_store_headers_verified": true,
+          "svg_sandbox_headers_verified": true,
+          "production_delivery_profile_approved": false
+        },
+        "browser_reports": [
+          {
+            "file": "p3/browser-results.json",
+            "passed": 4
+          },
+          {
+            "file": "p4/browser-results.json",
+            "passed": 2
+          },
+          {
+            "file": "p5/browser-results.json",
+            "passed": 9
+          },
+          {
+            "file": "p5/listening-browser-results.json",
+            "passed": 3
+          },
+          {
+            "file": "p5/m01-review-browser-results.json",
+            "passed": 5
+          },
+          {
+            "file": "p5/speech-browser-results.json",
+            "passed": 2
+          },
+          {
+            "file": "p5/visual-review-browser-results.json",
+            "passed": 3
+          }
+        ],
+        "milestone_status": "NOT_READY"
+      }
+    ]
+  },
+  "executed_runtime_gates": {
+    "push": {
+      "storage": [
+        {
+          "gate": "P5-S3-001 actual SigV4 PUT/HEAD/GET, immutable concurrent replay and private bucket",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-S3-002 authentication, byte integrity and bounded reads",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-S3-003 outage, restart and immutable stored bytes recovery",
+          "status": "PASS"
+        }
+      ],
+      "media": [
+        {
+          "gate": "P5-MEDIA-DB-001 clean migration/replay and phase boundary",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-MEDIA-JOB-001 idempotency and exact immutable ingestion replay",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-MEDIA-QA-001 human approvals and missing/unapproved/required asset rejection",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-MEDIA-ISO-001 direct DB cross-language references and author mismatch rejected",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-MEDIA-A11Y-001 required and optional media roles enforce accessibility in validation and direct SQL publication",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-MEDIA-VERSION-001 new version, immutable publication, rollback pointer",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-MEDIA-BYTES-001 missing and tampered objects fail preflight; generation not in lesson path",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-MEDIA-QUOTA-001 generation quota separates work cost; replay and learning do not consume it",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-MEDIA-DB-002 clean recreation and migration/seed recovery",
+          "status": "PASS"
+        }
+      ],
+      "audio": [
+        {
+          "gate": "P5-AUDIO-DB-001 published pins preserve normal/slow script, language and voice",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-AUDIO-DB-003 slow audio requires its exact normal source in the same activity, including direct SQL publication",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-AUDIO-API-001 authenticated immutable byte range and invalid-range rejection",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-AUDIO-API-002 transcript support is CSRF protected, idempotent and never mastery evidence",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-AUDIO-API-003 inline-only transcripts use pinned ownership, CSRF and concurrent idempotent audit",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-AUDIO-DB-002 transcript availability retains conservative evidence weight before and after audit/replay",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-AUDIO-UI-001 Chromium playback and keyboard inline transcript audit failure/retry/reload in EN and CS",
+          "status": "PASS"
+        }
+      ],
+      "speech": [
+        {
+          "gate": "P5-SPEECH-001 created/cancel replay settles once; Next never appends an attempt",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-SPEECH-002 evaluable mismatch targets exact intelligibility facet; Retry is new immutable attempt",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-SPEECH-003 Czech shares lifecycle; DB cross-language/owner/policy/receipt negatives reject",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-SPEECH-004 denied/absent/low confidence/unavailable leave all learning projections unchanged",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-SPEECH-005 auth/CSRF/single-use upload and signed callbacks reject replay/context tampering",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-SPEECH-012 transport quota is separate; cancellation, cleanup and poll remain available",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-SPEECH-006 bounded failures retry same job, then one neutral settlement",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-SPEECH-009 expired job/orphan, failed cleanup and deferred settlement recover without evidence",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-SPEECH-010 worker lease recovery audits old execution; cancellation wins an in-flight result",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-SPEECH-011 processing quota settles neutral, replay is free and normal learning stays available",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-SPEECH-007 reset during processing settles neutral and cannot receive late mastery credit",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-SPEECH-008 real Chromium microphone/retry/Continue/reduced-motion, shared EN/CS runtime",
+          "status": "PASS"
+        }
+      ]
+    },
+    "pr": {
+      "storage": [
+        {
+          "gate": "P5-S3-001 actual SigV4 PUT/HEAD/GET, immutable concurrent replay and private bucket",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-S3-002 authentication, byte integrity and bounded reads",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-S3-003 outage, restart and immutable stored bytes recovery",
+          "status": "PASS"
+        }
+      ],
+      "media": [
+        {
+          "gate": "P5-MEDIA-DB-001 clean migration/replay and phase boundary",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-MEDIA-JOB-001 idempotency and exact immutable ingestion replay",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-MEDIA-QA-001 human approvals and missing/unapproved/required asset rejection",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-MEDIA-ISO-001 direct DB cross-language references and author mismatch rejected",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-MEDIA-A11Y-001 required and optional media roles enforce accessibility in validation and direct SQL publication",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-MEDIA-VERSION-001 new version, immutable publication, rollback pointer",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-MEDIA-BYTES-001 missing and tampered objects fail preflight; generation not in lesson path",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-MEDIA-QUOTA-001 generation quota separates work cost; replay and learning do not consume it",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-MEDIA-DB-002 clean recreation and migration/seed recovery",
+          "status": "PASS"
+        }
+      ],
+      "audio": [
+        {
+          "gate": "P5-AUDIO-DB-001 published pins preserve normal/slow script, language and voice",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-AUDIO-DB-003 slow audio requires its exact normal source in the same activity, including direct SQL publication",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-AUDIO-API-001 authenticated immutable byte range and invalid-range rejection",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-AUDIO-API-002 transcript support is CSRF protected, idempotent and never mastery evidence",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-AUDIO-API-003 inline-only transcripts use pinned ownership, CSRF and concurrent idempotent audit",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-AUDIO-DB-002 transcript availability retains conservative evidence weight before and after audit/replay",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-AUDIO-UI-001 Chromium playback and keyboard inline transcript audit failure/retry/reload in EN and CS",
+          "status": "PASS"
+        }
+      ],
+      "speech": [
+        {
+          "gate": "P5-SPEECH-001 created/cancel replay settles once; Next never appends an attempt",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-SPEECH-002 evaluable mismatch targets exact intelligibility facet; Retry is new immutable attempt",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-SPEECH-003 Czech shares lifecycle; DB cross-language/owner/policy/receipt negatives reject",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-SPEECH-004 denied/absent/low confidence/unavailable leave all learning projections unchanged",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-SPEECH-005 auth/CSRF/single-use upload and signed callbacks reject replay/context tampering",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-SPEECH-012 transport quota is separate; cancellation, cleanup and poll remain available",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-SPEECH-006 bounded failures retry same job, then one neutral settlement",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-SPEECH-009 expired job/orphan, failed cleanup and deferred settlement recover without evidence",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-SPEECH-010 worker lease recovery audits old execution; cancellation wins an in-flight result",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-SPEECH-011 processing quota settles neutral, replay is free and normal learning stays available",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-SPEECH-007 reset during processing settles neutral and cannot receive late mastery credit",
+          "status": "PASS"
+        },
+        {
+          "gate": "P5-SPEECH-008 real Chromium microphone/retry/Continue/reduced-motion, shared EN/CS runtime",
+          "status": "PASS"
+        }
+      ]
+    }
+  },
+  "supersession_rule": "This record proves only tested_sha. Any descendant must pass its own complete CI; final exact-source results are in PR #5 and its immutable artifacts."
+}
