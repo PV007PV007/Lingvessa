@@ -14802,11 +14802,13 @@
   },
   "current_execution_resume": {
     "evidence": "docs/p5/public-test-input-20261026/README.md",
-    "previous_exact_sha": "6debfb91eb6373be08d46b6ea07ff39bba37fd0c",
-    "previous_real_m01_execution": "NOT_EXECUTED",
+    "previous_exact_sha": "d0cff4f21a264d242e5679befa9258f56125d97f",
+    "previous_real_m01_execution": "NOT_EXECUTED_PYTHON_CACHE_CLEANLINESS_FAILURE",
     "owner_scope": "docs/p5/public-test-input-20261026/owner-scope.json",
     "current_source_ci": "REQUIRED; exact successor results in PR #5",
     "requirement_status_changes": 0,
-    "last_full_runtime_pass_sha": "96cc9607c3a05481dddd9f8e6c763d8241db26eb"
+    "last_full_runtime_pass_sha": "96cc9607c3a05481dddd9f8e6c763d8241db26eb",
+    "failed_execution": "docs/p5/public-test-input-20261026/ci-d0cff4f-input-and-failure.json",
+    "input_transfer": "BOTH_420_WAV_ARTIFACTS_INDEPENDENTLY_VERIFIED"
   }
 }

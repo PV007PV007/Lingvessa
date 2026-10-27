@@ -16,7 +16,8 @@
   "code_bindings": {
     "tools/p5/public-m01-input.py": "bb75b89e10c5dc443cccda8b8a651fa26c1ae79353784a5bfa5ab4a4182190e0",
     "tests/unit/p5-public-input.test.py": "679952374e281c51512b826d56b30b3b26470e97610ac242b4823f3867f37c28",
-    ".github/workflows/p5.yml": "38d3ce01ee9318599d49f8b0e96952e6100a4f55ac22ca83c02f2b50329513a1",
+    ".github/workflows/p5.yml": "f3eaa1abb999bafc2f3c0e71a155cb049ecfaaf11f7febff5587278a8b76f8ae",
     "tools/p5/acceptance-summary.ts": "ae8d5d71acb58ed32607d072ae19cdd0b483f5f36a64d704bee2d63397beae02"
-  }
+  },
+  "python_bytecode_cleanliness": "PASS_REPRODUCED_FAILURE_AND_VERIFIED_PREVENTION"
 }

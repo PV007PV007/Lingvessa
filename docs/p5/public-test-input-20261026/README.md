@@ -32,6 +32,12 @@ The exact previous HEAD `6debfb91eb6373be08d46b6ea07ff39bba37fd0c` passed five P
 
 Required real command remains `MINIO_BINARY=<pinned-binary> node --env-file=.local/runtime.env --import tsx tools/p5/verify-m01-s3-import.ts --real-m01` after the receiver sets the external `P5_M01_AUDIO_ROOT`. Import/replay, immutable versions, rejected byte changes, full storage server/adapter restart, 450 byte readbacks and authenticated delivery must actually pass.
 
+## 2026-10-27 executed transfer and clean-checkout correction
+
+Both d0cff4f P5 input pipelines passed. Independent artifact downloads verified SHA-256/CRC, exactly 420 immutable WAVs plus receipt/attribution, 21 code bindings each, and no original archive or historical WAVs. Both test receivers independently accepted the actual bytes. Full `pnpm check` passed in both exit jobs; the following historical Pocket check correctly rejected a dirty checkout before PostgreSQL/S3 execution. [Exact observed evidence](ci-d0cff4f-input-and-failure.json).
+
+The new Python helper imports created untracked `tools/p5/__pycache__` in the checkout. This was reproduced locally. The workflow now sets `PYTHONDONTWRITEBYTECODE=1` for every P5 job; the same import then leaves a clean tree. The clean-checkout gate, ignore rules, original media and imports are unchanged. This descendant needs its own full CI and both real M01 executions; successful transfer alone is not runtime acceptance.
+
 ## Idempotent continuation
 
 Read branch HEAD, PR state and latest Actions attempts first. If this revision is already running, inspect it; do not create a replacement input, upload the original again or rerun older commits. On a failed input job, inspect its safe error and current draft state; do not retry unchanged failures. Rerunning the appropriate failed workflow jobs creates a new run-attempt-bound final-WAV artifact from the same original. Expired one-day input requires rerunning the input job for the current attempt, not bypassing the receiver. Record every attempt and verify both P5 events before promoting exact-source runtime evidence.

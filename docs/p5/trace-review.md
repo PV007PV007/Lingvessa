@@ -1,5 +1,7 @@
 # P5 requirement evidence review
 
+2026-10-27: both d0cff4f input pipelines and independent 420-WAV audits passed; Python bytecode cache dirtiness stopped the runtime before PostgreSQL/S3. [Failure and correction](public-test-input-20261026/ci-d0cff4f-input-and-failure.json). The clean-checkout gate remains enforced; no requirement promotion.
+
 2026-10-26 current continuation: [public final-audio test input](public-test-input-20261026/README.md), authorized by the owner clarification. Prior restore-Private requirements are historical. Exact 6debfb91 passed five P1–P4 workflows and both sets of 31 runtime gates, but no real M01 import. The new transport requires complete exact-source evidence; all 356 statuses remain unchanged.
 
 2026-10-26 dependency follow-up: the scanner correction passed full hosted checks, then the dependency audit failed. [Exact failed run set](integration-20261026/ci-6998b70.json); dependency updates require their own exact-source regression. No requirement status is promoted.
