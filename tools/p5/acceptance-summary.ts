@@ -5,6 +5,11 @@ import assert from 'node:assert/strict';
 
 const read=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 const commit=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();
+const dependencyAudit=read('artifacts/p5/dependency-audit.json');
+assert.equal(dependencyAudit.error,undefined);
+const dependencyVulnerabilities=dependencyAudit.metadata.vulnerabilities;
+for(const severity of ['info','low','moderate','high','critical'])assert(Number.isInteger(dependencyVulnerabilities[severity])&&dependencyVulnerabilities[severity]>=0);
+assert.equal(dependencyVulnerabilities.high,0);assert.equal(dependencyVulnerabilities.critical,0);
 const ownerAudio=read('docs/p5/m01-completion-20261014/owner-approval.json');
 const ownerVisual=read('docs/p5/visual-approval-20261020/owner-approval.json');
 const approvedMedia=read('artifacts/p5/approved-media-metadata-validation.json');
@@ -234,7 +239,7 @@ assert.equal(build.commit,commit);assert.deepEqual(Object.keys(build.images).sor
 const authorization=read('docs/p5/authorization.json');assert.equal(authorization.p6_authorized,false);
 const trace=read('docs/p5/requirement-evidence.json').requirements as Array<{status:string}>;
 const counts=Object.fromEntries(['PASS','PARTIAL','PENDING'].map(status=>[status,trace.filter(r=>r.status===status).length]));
-const paths=['docs/p5/exit-review-20261028/README.md','docs/p5/visual-approval-20261020/owner-approval.json','docs/p5/visual-approval-20261020/reviewed-manifest.json','artifacts/p5/m01-private-transfer.json','artifacts/p5/library-s3-validation.json','artifacts/p5/acoustic-pilot-validation.json','artifacts/p5/m01-input-status.json',...(m01Import?['artifacts/p5/m01-library-import-validation.json','artifacts/p5/external-m01-byte-validation.json']:[]),'artifacts/p5/storage-validation.json','artifacts/p5/media-database-validation.json','artifacts/p5/audio-validation.json',
+const paths=['artifacts/p5/dependency-audit.json','docs/p5/exit-review-20261028/README.md','docs/p5/visual-approval-20261020/owner-approval.json','docs/p5/visual-approval-20261020/reviewed-manifest.json','artifacts/p5/m01-private-transfer.json','artifacts/p5/library-s3-validation.json','artifacts/p5/acoustic-pilot-validation.json','artifacts/p5/m01-input-status.json',...(m01Import?['artifacts/p5/m01-library-import-validation.json','artifacts/p5/external-m01-byte-validation.json']:[]),'artifacts/p5/storage-validation.json','artifacts/p5/media-database-validation.json','artifacts/p5/audio-validation.json',
  'artifacts/p5/speech-database-validation.json','artifacts/p5/baseline-validation.json','artifacts/p5/reference-media-validation.json',
  'artifacts/p5/browser-results.json','artifacts/p5/speech-browser-results.json','artifacts/p1/container-build.json','artifacts/p1/container-smoke.json',
  'artifacts/p3/acceptance-summary.json','artifacts/p4/acceptance-summary.json','docs/p5/requirement-evidence.json',
@@ -251,6 +256,7 @@ const paths=['docs/p5/exit-review-20261028/README.md','docs/p5/visual-approval-2
  'artifacts/p5/m01-publication-bindings.json','artifacts/p5/visual-review-manifest.json',
  'artifacts/p5/visual-review-validation.json','artifacts/p5/visual-review-browser-results.json'];
 const summary={phase:'P5',runtime_status:'PASS',milestone_status:'NOT_READY',tested_sha:commit,
+ dependency_audit:{scope:'PRODUCTION_DEPENDENCY_GRAPH',failure_threshold:'HIGH_OR_CRITICAL',vulnerabilities:dependencyVulnerabilities,advisory_count:Object.keys(dependencyAudit.advisories).length},
  run_id:process.env.GITHUB_RUN_ID,event:process.env.GITHUB_EVENT_NAME,
  runtime_gates:{storage:storage.gates,media:media.gates,audio:audio.gates,speech:speech.gates},
  transcript_support:audio.transcript_support,

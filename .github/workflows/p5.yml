@@ -197,7 +197,14 @@ jobs:
           python3 tools/p5/pocket-case-trial.py --verify-only > artifacts/p5/pocket-case-validation.json
           python3 tools/p5/pocket-case-holdout.py --verify-only > artifacts/p5/pocket-case-holdout-validation.json
           cat artifacts/p5/pocket-case-validation.json artifacts/p5/pocket-case-holdout-validation.json
-      - run: pnpm audit:dependencies
+      - name: Audit production dependencies and retain the complete report
+        run: |
+          set +e
+          pnpm audit --prod --json --audit-level high > artifacts/p5/dependency-audit.json
+          audit_status=$?
+          set -e
+          cat artifacts/p5/dependency-audit.json
+          exit "$audit_status"
       - name: Verify unpublished M01 authoring metadata (external WAV bytes excluded)
         env:
           PYTHONDONTWRITEBYTECODE: '1'

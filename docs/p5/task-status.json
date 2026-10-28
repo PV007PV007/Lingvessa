@@ -797,11 +797,11 @@
     }
   ],
   "timestamp": "2026-10-28",
-  "last_hosted_tested_sha": "9215dbbbb6eb0fdc23e754d216730b64ee8a3c9c",
+  "last_hosted_tested_sha": "e9a831061216272514a3c9dc22a605ff65351ef8",
   "last_hosted_result": "PASS_REAL_M01_POSTGRESQL_S3_HTTP_AND_ALL_SEVEN_WORKFLOWS",
-  "last_full_runtime_pass_sha": "9215dbbbb6eb0fdc23e754d216730b64ee8a3c9c",
-  "ci_evidence": "docs/p5/exit-review-20261028/verified-ci-9215dbb.json",
-  "current_revision_ci": "9215dbb passed all seven workflows / eleven jobs on attempt 1, both real M01 executions and independently verified artifacts. The exit-review/reporting revision requires its own full CI and artifact audits; exact results belong in PR #5. A parent PASS never certifies a descendant.",
+  "last_full_runtime_pass_sha": "e9a831061216272514a3c9dc22a605ff65351ef8",
+  "ci_evidence": "docs/p5/exit-review-20261028/verified-ci-e9a8310.json",
+  "current_revision_ci": "e9a8310 passed all seven workflows/eleven jobs, both real M01 executions and independent audits. Its high/critical audit passed with one moderate qs advisory. The narrow qs patch and complete audit reporting require their own exact-source verification in PR #5.",
   "latest_attempt_evidence": "docs/p5/integration-20261026/ci-6998b70.json",
   "local_audition_evidence": "docs/p5/voice-audition/results.json",
   "resolved_hosted_remediation": {
@@ -835,6 +835,7 @@
   "audio_integrity_evidence": "docs/p5/integration-20261016/attached-archive-verification.json",
   "owner_audio_approval": "docs/p5/m01-completion-20261014/owner-approval.json",
   "remaining": [
+    "Complete exact-source CI/artifact verification for bounded qs security update; preserve high/critical gate and expose all severities",
     "Owner acceptance of the evidenced P5 development/reference scope and explicit phase/merge decision; no merge/P6 is performed by this review",
     "OD-004 OPEN before production storage/delivery; existing owner-authorized test scope remains bounded",
     "OD-006 OPEN before usable learner scoring; unavailable default and controlled fixtures retained",
@@ -907,24 +908,24 @@
   },
   "historical_current_revision_ci_20261022": "Last fully verified source remains 96cc960. b57ae9c PR skipped real M01 after empty inventory caused an unused duplicate draft; push received exact input but package installation timed out. This revision pins existing release/asset, rejects missing/replaced relay input and requires real input in trusted acceptance. Its own seven workflows, 31 runtime gates, both actual M01 steps and independent artifact audits must pass; final exact results are in PR #5.",
   "execution_resume": {
-    "status": "P5_EXIT_CRITERIA_EVIDENCED_OWNER_ACCEPTANCE_PENDING",
-    "observed_source_sha": "9215dbbbb6eb0fdc23e754d216730b64ee8a3c9c",
+    "status": "QS_PATCH_AWAITING_OWN_FULL_CI",
+    "observed_source_sha": "e9a831061216272514a3c9dc22a605ff65351ef8",
     "repository_visibility": "public",
-    "evidence": "docs/p5/exit-review-20261028/verified-ci-9215dbb.json",
+    "evidence": "docs/p5/exit-review-20261028/verified-ci-e9a8310.json",
     "owner_scope": "docs/p5/public-test-input-20261026/owner-scope.json",
     "real_m01_on_observed_attempt": "PASS_BOTH_EVENTS",
     "verified_attempts": {
       "push": {
-        "run_id": 40500393519,
+        "run_id": 40670396069,
         "attempt": 1
       },
       "pull_request": {
-        "run_id": 40500402007,
+        "run_id": 40670402979,
         "attempt": 1
       }
     },
     "decision_boundary": "420 unchanged approved final WAVs may enter a one-day test artifact; original archive unpublished; S3 development/test only; OD-004/006 open.",
-    "idempotent_next_action": "Read branch HEAD and existing Actions attempts; verify this exact exit-review revision and update PR #5 with independently audited evidence. Then obtain the single phase acceptance/merge/P6 decision; do not regenerate or re-upload the original."
+    "idempotent_next_action": "Read actual HEAD and attempts; verify the bounded qs successor and both runtime artifacts. No blind retries, regeneration or original archive upload."
   },
   "historical_before_public_runtime_pass": {
     "timestamp": "2026-10-26",
@@ -993,5 +994,23 @@
       "PARTIAL": 31,
       "PENDING": 147
     }
+  },
+  "historical_before_qs_followup_20261028": {
+    "last_hosted_tested_sha": "9215dbbbb6eb0fdc23e754d216730b64ee8a3c9c",
+    "last_full_runtime_pass_sha": "9215dbbbb6eb0fdc23e754d216730b64ee8a3c9c",
+    "ci_evidence": "docs/p5/exit-review-20261028/verified-ci-9215dbb.json",
+    "current_revision_ci": "9215dbb passed all seven workflows / eleven jobs on attempt 1, both real M01 executions and independently verified artifacts. The exit-review/reporting revision requires its own full CI and artifact audits; exact results belong in PR #5. A parent PASS never certifies a descendant.",
+    "remaining": [
+      "Owner acceptance of the evidenced P5 development/reference scope and explicit phase/merge decision; no merge/P6 is performed by this review",
+      "OD-004 OPEN before production storage/delivery; existing owner-authorized test scope remains bounded",
+      "OD-006 OPEN before usable learner scoring; unavailable default and controlled fixtures retained",
+      "Full authored-objective/accessibility/publication clauses remain open for the ordered P6/P7/P8 work; their P5 foundation assignments are retained"
+    ]
+  },
+  "dependency_followup": {
+    "id": "P5-DEP-003",
+    "record": "docs/p5/exit-review-20261028/dependency-remediation.json",
+    "status": "PATCH_PREPARED_REQUIRES_EXACT_SOURCE_CI",
+    "observed_source_sha": "e9a831061216272514a3c9dc22a605ff65351ef8"
   }
 }

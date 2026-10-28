@@ -1,4 +1,12 @@
-## Current P5 exit review — 2026-10-28
+## Current bounded dependency follow-up — 2026-10-28
+
+P5 **IN PROGRESS / NOT READY**; PR #5 OPEN DRAFT; no merge/P6. Exact `e9a831061216272514a3c9dc22a605ff65351ef8` passed all seven workflows / eleven jobs on attempt 1 and both independent input/runtime audits: 420 unchanged WAVs, 450 pins, 31 gates and 28 browser cases per event, 46 acceptance references each. [Retained proof](../docs/p5/exit-review-20261028/verified-ci-e9a8310.json). All 850 source blobs matched GitHub. No historical/synthetic result substituted for a real M01 run.
+
+The production dependency gate passed its high/critical threshold but logged one moderate advisory, GHSA-6pq8-jhm2-2vcw, in Express's qs 6.16.0. [Remediation record](../docs/p5/exit-review-20261028/dependency-remediation.json): narrow override to the already-present qs 6.16.1; no API/schema/media change. Full JSON audit reports are now retained and hash-bound; the original audit exit status/high-critical threshold is preserved. Local read-only advisory inspection is not pinned-toolchain acceptance. The successor must pass its own seven workflows, both real M01 runs and independent artifacts before phase acceptance is presented.
+
+Next: read HEAD and existing attempts; verify the bounded dependency successor, then put final exact-source proof in PR #5 without an untested evidence-only descendant. P5 acceptance scope and 178 PASS / 31 PARTIAL / 147 PENDING trace below remain current. OD-004/006 stay OPEN. No repeat generation/approval/upload or new service is needed.
+
+## P5 exit review retained with dependency follow-up above — 2026-10-28
 
 P5 **IN PROGRESS / NOT READY pending owner acceptance**. P0–P4 ACCEPTED. PR #5 OPEN DRAFT; prior no-merge instruction active; P6 not implemented.
 

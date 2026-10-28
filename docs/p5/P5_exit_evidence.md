@@ -1,5 +1,7 @@
 # P5 exit evidence
 
+Current dependency follow-up (2026-10-28): [e9a8310 evidence](exit-review-20261028/verified-ci-e9a8310.json) confirms seven workflows / eleven jobs, both real M01 runs and independent audits (46 references/report). The high/critical gate passed but reported one moderate qs advisory. [Bounded remediation](exit-review-20261028/dependency-remediation.json) pins Express to the already present patched qs 6.16.1 and retains complete JSON audit evidence without lowering the gate. This successor requires its own full CI; final results belong in PR #5. Existing acceptance/production/P6 boundaries remain unchanged.
+
 **IN PROGRESS / NOT READY pending owner acceptance. PR #5 OPEN DRAFT; no merge or P6 implementation.**
 
 ## Current Plan §12 exit review — 2026-10-28

@@ -1,5 +1,7 @@
 # P5 exit review and proposed transition scope — 2026-10-28
 
+Current dependency follow-up (2026-10-28): [e9a8310 evidence](verified-ci-e9a8310.json) confirms seven workflows / eleven jobs, both real M01 runs and independent audits (46 references/report). The high/critical gate passed but reported one moderate qs advisory. [Bounded remediation](dependency-remediation.json) pins Express to the already present patched qs 6.16.1 and retains complete JSON audit evidence without lowering the gate. This successor requires its own full CI; final results belong in PR #5. Existing acceptance/production/P6 boundaries remain unchanged.
+
 **P5 IN PROGRESS / NOT READY pending owner acceptance. PR #5 OPEN DRAFT; no merge; P6 not started.** The executed development/test criteria below support a concrete P5 acceptance review. This review does not approve production delivery, calibrated learner scoring, a published course, or an exception to a governing contract.
 
 ## Governing scope
