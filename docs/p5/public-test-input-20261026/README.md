@@ -2,6 +2,8 @@
 
 P5 **IN PROGRESS / NOT READY**. P0–P4 ACCEPTED; PR #5 OPEN DRAFT; no merge or P6.
 
+Current 2026-10-28 review: [Plan §12 exit criteria and transition scope](../exit-review-20261028/README.md). [Retained 9215dbb proof](../exit-review-20261028/verified-ci-9215dbb.json) verifies seven workflows / eleven jobs on attempt 1, both 420-WAV transfers, both real PostgreSQL/S3/HTTP runs and independent artifact audits. Earlier failures below are historical. This reporting revision requires its own exact-source result in PR #5; parent success is not inherited. OD-004/006 remain open in their production/usable-scoring scope; no input regeneration or re-upload is needed.
+
 The owner requires a no-new-paid-service route and clarified on 2026-10-26 that the audio need not be private. [Recorded scope](owner-scope.json) permits the 420 approved, unchanged final WAVs in a one-day Actions test-input artifact. It does not publish the original archive, historical/intermediate files, private review records or a production release. Quality, six voices and rights approval from 2026-10-14 remains effective. No regeneration or new owner review is required.
 
 Standard GitHub-hosted runners for public repositories are free under the [GitHub billing documentation](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions). This workflow keeps `ubuntu-24.04`, existing ephemeral Actions credentials and one-day input retention. No subscription, larger runner, paid storage account, PC access or new secret is introduced.

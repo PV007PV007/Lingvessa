@@ -234,7 +234,7 @@ assert.equal(build.commit,commit);assert.deepEqual(Object.keys(build.images).sor
 const authorization=read('docs/p5/authorization.json');assert.equal(authorization.p6_authorized,false);
 const trace=read('docs/p5/requirement-evidence.json').requirements as Array<{status:string}>;
 const counts=Object.fromEntries(['PASS','PARTIAL','PENDING'].map(status=>[status,trace.filter(r=>r.status===status).length]));
-const paths=['docs/p5/visual-approval-20261020/owner-approval.json','docs/p5/visual-approval-20261020/reviewed-manifest.json','artifacts/p5/m01-private-transfer.json','artifacts/p5/library-s3-validation.json','artifacts/p5/acoustic-pilot-validation.json','artifacts/p5/m01-input-status.json',...(m01Import?['artifacts/p5/m01-library-import-validation.json','artifacts/p5/external-m01-byte-validation.json']:[]),'artifacts/p5/storage-validation.json','artifacts/p5/media-database-validation.json','artifacts/p5/audio-validation.json',
+const paths=['docs/p5/exit-review-20261028/README.md','docs/p5/visual-approval-20261020/owner-approval.json','docs/p5/visual-approval-20261020/reviewed-manifest.json','artifacts/p5/m01-private-transfer.json','artifacts/p5/library-s3-validation.json','artifacts/p5/acoustic-pilot-validation.json','artifacts/p5/m01-input-status.json',...(m01Import?['artifacts/p5/m01-library-import-validation.json','artifacts/p5/external-m01-byte-validation.json']:[]),'artifacts/p5/storage-validation.json','artifacts/p5/media-database-validation.json','artifacts/p5/audio-validation.json',
  'artifacts/p5/speech-database-validation.json','artifacts/p5/baseline-validation.json','artifacts/p5/reference-media-validation.json',
  'artifacts/p5/browser-results.json','artifacts/p5/speech-browser-results.json','artifacts/p1/container-build.json','artifacts/p1/container-smoke.json',
  'artifacts/p3/acceptance-summary.json','artifacts/p4/acceptance-summary.json','docs/p5/requirement-evidence.json',
@@ -275,7 +275,16 @@ const summary={phase:'P5',runtime_status:'PASS',milestone_status:'NOT_READY',tes
   external_audio_bytes_verified:false,real_audio_generated:false},
  database:media.database,storage_startup:storage.startup_readiness,container_checks:containers.checks,container_images:build.images,
  reference_media:reference,trace_counts:counts,p6_authorized:false,
- remaining:[...(m01Import?[]:['Real M01 PostgreSQL/S3 execution requires the approved external package; no missing authorization or regeneration is implied']),'Activity-specific reference publication/accessibility and OD-004 production delivery profile remain open; owner visual set acceptance is retained','A production speech policy requires valid labelled learner-error calibration','Remaining applicable compound P5 gates; P6 is not authorized'],
+ plan_exit_review:{authority:'Implementation Plan v1.4 §12 p7',review:'docs/p5/exit-review-20261028/README.md',
+  source_sha:commit,scope:'DEVELOPMENT_TEST_NOT_PRODUCTION',runtime_criteria_status:m01Import?'PASS':'INCOMPLETE_REAL_M01_MISSING',
+  resolved_m01_assets:m01Import?.catalog_resolved_assets??0,owner_milestone_acceptance:'PENDING',
+  od_004:'OPEN_BEFORE_PRODUCTION_DELIVERY',od_006:'OPEN_BEFORE_USABLE_LEARNER_SCORING',
+  full_authored_objective_review:'P6_P7_NOT_EXECUTED',production_profile_approved:false,p6_authorized:false},
+ remaining:[...(m01Import?[]:['Real M01 PostgreSQL/S3 execution requires the approved external package; no missing authorization or regeneration is implied']),
+  'Owner acceptance of the evidenced P5 development/reference scope; PR #5 remains unmerged and P6 is not authorized',
+  'OD-004 remains open for production storage/delivery; current evidence is disposable S3 and loopback HTTP only',
+  'OD-006 remains open before usable learner scoring; neutral unavailable is the default and fixtures are not calibration',
+  'Full authored objective/accessibility and publication requirements retain their trace statuses; Plan §§13–15 orders reference lessons in P6/P7 and editorial workflow in P8'],
  artifacts:paths.map(path=>({path,sha256:createHash('sha256').update(readFileSync(path)).digest('hex')}))};
 // Green runtime CI is deliberately not owner acceptance or permission for P6.
 writeFileSync('artifacts/p5/acceptance-summary.json',JSON.stringify(summary,null,2)+'\n');

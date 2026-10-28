@@ -1,4 +1,20 @@
-## Current P5 verified real integration — 2026-10-27
+## Current P5 exit review — 2026-10-28
+
+P5 **IN PROGRESS / NOT READY pending owner acceptance**. P0–P4 ACCEPTED. PR #5 OPEN DRAFT; prior no-merge instruction active; P6 not implemented.
+
+[Plan §12 criterion matrix and concrete transition scope](../docs/p5/exit-review-20261028/README.md) distinguish P5 runtime/asset readiness from P6/P7 authored lessons, P8 workflow and production/calibrated speech. Earlier blanket production/full-course blockers below are historical interpretations, superseded by this source review. No baseline source or open-decision record is changed. OD-004 and OD-006 remain OPEN; production storage/CDN and usable learner scoring are not enabled.
+
+Verified parent `9215dbbbb6eb0fdc23e754d216730b64ee8a3c9c`, tree `b7927419d527c5f391e56733356b3e3d62d79470`: seven workflows / eleven jobs PASS on attempt 1; P5 push 40500393519 and PR 40500402007 both execute actual approved M01. [Retained source-bound proof](../docs/p5/exit-review-20261028/verified-ci-9215dbb.json): 420 immutable WAVs + 30 SVGs, 450 version/pin/readback checks, replay, update/delete/changed-byte rejection, PG/S3 server/adapter restart, authenticated HTTP 450 full reads/eight ranges/twenty negatives/two recovery reads, 31 gates and 28 browser cases per event. Both input/runtime artifacts were independently downloaded and verified; all 848 parent source blobs match GitHub. The current reporting revision still needs its own CI; final descendant results belong in PR #5.
+
+420 final WAVs = 210 EN + 210 CS = 402 single-turn acoustic files + 18 dialogues. Quality/six-voice/rights approval 2026-10-14 and visual approval 2026-10-20 remain valid. No generation, media changes, repeat set approval, original ZIP publication or new M01 WAV Git storage. Existing one-day final-WAV transport feeds disposable S3-compatible tests; no new paid service, secret or PC access.
+
+N-REF-P24-T01-R03/R04/R09 are now PASS on complete atomic metadata evidence. N-REF-P24-T02-R03 is PARTIAL on executed transcript/keyboard/audit/retry/evidence subgates; actual objective and future hiding-mode review remains open. Trace: **178 PASS / 31 PARTIAL / 147 PENDING**, all 356 original source/task/phase assignments retained.
+
+BLOCKER for transition: final exact-source regression/artifact verification for this revision, then owner milestone acceptance/phase decision. IMPORTANT before enabling their scope: OD-004 production delivery; OD-006 labelled learner-error calibration/policy; full authored-objective/publication checks in Plan order. MINOR: historical 41 unreferenced blob receipts and unused unpublished draft, neither used by ingestion.
+
+Next: read actual HEAD and existing attempts; complete and independently audit this revision's seven workflows and two real M01 runs; update PR #5 with exact SHA, runs and artifact digests. Then present the concrete P5 development/reference acceptance and merge/P6 decision once. Do not claim owner acceptance, merge, start P6, repeat input upload or regenerate audio. [Idempotent recovery procedure](../docs/p5/public-test-input-20261026/README.md); an identified retry requires an attempt-matched input job and its dependent exit job.
+
+## Historical P5 verified real integration — 2026-10-27
 
 P5 **IN PROGRESS / NOT READY**. P0–P4 ACCEPTED; PR #5 OPEN DRAFT; no merge or P6.
 

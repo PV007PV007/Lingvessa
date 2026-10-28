@@ -5167,20 +5167,52 @@
       "implementation_phase": "P5",
       "source_section/page": "Field | Purpose | Rule; p.24; p24:t1:r3",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
-      "followup_tasks": "P5 foundation remains in IMP-P5-002; complete compound clause under P6/P7/P12 per Implementation Plan; no phase change or acceptance exception.",
+      "status": "PASS",
+      "followup_tasks": "Regression at applicable later milestone gates",
       "planned_code_schema": "apps/web; packages/ui; packages/provider-adapters/tts",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "actual_code_schema": [
+        "packages/activity-schemas/src/media.ts",
+        "tools/p5/media-library.ts",
+        "tools/p5/m01-publication-bindings.ts",
+        "apps/web/src/lesson/media.tsx"
+      ],
+      "implementation_status": "VERIFIED",
+      "milestone_evidence": "docs/p5/exit-review-20261028/verified-ci-9215dbb.json",
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "test_or_gate": "CHK-N-REF-P24-T01-R03",
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
-      "actual_test_files": [],
-      "actual_gate_ids": [],
-      "verified_implementation_sha": null,
-      "trace_reviewed_at": "2026-10-04T08:55:11.894620+00:00",
-      "verification_note": "P5 foundation is present or planned; the entire source clause is not proven by synthetic media fixtures. Required content/QA/operational or optional AI behavior must remain separately evidenced."
+      "actual_test_files": [
+        "tests/unit/p5-media.test.ts",
+        "tests/integration/p5-audio.test.ts",
+        "tests/browser/p5-media.spec.ts",
+        "tools/p5/verify-m01-s3-import.ts"
+      ],
+      "actual_gate_ids": [
+        "REAL_M01_BYTES_POSTGRESQL_S3_IMPORT",
+        "P5-AUDIO-DB-001",
+        "P5-AUDIO-UI-001",
+        "P5-MEDIA-ISO-001"
+      ],
+      "verified_implementation_sha": "9215dbbbb6eb0fdc23e754d216730b64ee8a3c9c",
+      "trace_reviewed_at": "2026-10-28",
+      "verification_note": "Atomic class/locale/variety metadata clause: exact media-kind renderer and en-GB/en-US/cs-CZ scope validation, voice scope/version rejection, same-language speaker/avatar binding, and actual M01 metadata deeply compared after PostgreSQL/S3 restart. Both 9215dbb events pass. This proves explicit metadata/policy separation, not every later authored-answer variant.",
+      "historical_followups": [
+        {
+          "recorded_before": "2026-10-28",
+          "status": "PENDING",
+          "implementation_status": "NOT_STARTED",
+          "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+          "verified_implementation_sha": null,
+          "verification_note": "P5 foundation is present or planned; the entire source clause is not proven by synthetic media fixtures. Required content/QA/operational or optional AI behavior must remain separately evidenced.",
+          "current_followup": null,
+          "followup_tasks": "P5 foundation remains in IMP-P5-002; complete compound clause under P6/P7/P12 per Implementation Plan; no phase change or acceptance exception."
+        }
+      ],
+      "supplementary_evidence": [
+        "docs/p5/exit-review-20261028/verified-ci-9215dbb.json",
+        "docs/p5/exit-review-20261028/README.md"
+      ],
+      "current_followup": "Retain exact-source regression; no new generation or repeat approval."
     },
     {
       "requirement_id": "N-REF-P24-T01-R04",
@@ -5200,20 +5232,51 @@
       "implementation_phase": "P5",
       "source_section/page": "Field | Purpose | Rule; p.24; p24:t1:r4",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
-      "followup_tasks": "P5 foundation remains in IMP-P5-002; complete compound clause under P6/P7/P12 per Implementation Plan; no phase change or acceptance exception.",
+      "status": "PASS",
+      "followup_tasks": "Regression at applicable later milestone gates",
       "planned_code_schema": "apps/web; packages/ui; packages/provider-adapters/tts",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "actual_code_schema": [
+        "packages/activity-schemas/src/media.ts",
+        "tools/p5/build-approved-media.py",
+        "tools/p5/media-library.ts",
+        "infra/persistence/media.ts",
+        "prisma/migrations/202609260001_p5_media_foundation/migration.sql"
+      ],
+      "implementation_status": "VERIFIED",
+      "milestone_evidence": "docs/p5/exit-review-20261028/verified-ci-9215dbb.json",
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "test_or_gate": "CHK-N-REF-P24-T01-R04",
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
-      "actual_test_files": [],
-      "actual_gate_ids": [],
-      "verified_implementation_sha": null,
-      "trace_reviewed_at": "2026-10-04T08:55:11.894620+00:00",
-      "verification_note": "P5 foundation is present or planned; the entire source clause is not proven by synthetic media fixtures. Required content/QA/operational or optional AI behavior must remain separately evidenced."
+      "actual_test_files": [
+        "tests/integration/p5-media.test.ts",
+        "tools/p5/verify-m01-s3-import.ts",
+        "tests/unit/p5-media.test.ts"
+      ],
+      "actual_gate_ids": [
+        "REAL_M01_BYTES_POSTGRESQL_S3_IMPORT",
+        "P5-MEDIA-JOB-001",
+        "P5-MEDIA-VERSION-001"
+      ],
+      "verified_implementation_sha": "9215dbbbb6eb0fdc23e754d216730b64ee8a3c9c",
+      "trace_reviewed_at": "2026-10-28",
+      "verification_note": "Atomic prompt/script checksum/version clause: spec_hash/script_hash and script_version are required in immutable metadata; approved metadata reconstruction checks the exact source script/transcript fields and manifest record hashes. Both real 9215dbb imports/replays/readbacks preserve all 450 metadata objects. Mutation/update/delete is rejected; P5-MEDIA-VERSION-001 creates a new version while retaining the published version and rollback pointer. Human audio/script quality approval is retained, not inferred from hashes.",
+      "historical_followups": [
+        {
+          "recorded_before": "2026-10-28",
+          "status": "PENDING",
+          "implementation_status": "NOT_STARTED",
+          "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+          "verified_implementation_sha": null,
+          "verification_note": "P5 foundation is present or planned; the entire source clause is not proven by synthetic media fixtures. Required content/QA/operational or optional AI behavior must remain separately evidenced.",
+          "current_followup": null,
+          "followup_tasks": "P5 foundation remains in IMP-P5-002; complete compound clause under P6/P7/P12 per Implementation Plan; no phase change or acceptance exception."
+        }
+      ],
+      "supplementary_evidence": [
+        "docs/p5/exit-review-20261028/verified-ci-9215dbb.json",
+        "docs/p5/exit-review-20261028/README.md"
+      ],
+      "current_followup": "Retain exact-source regression; no new generation or repeat approval."
     },
     {
       "requirement_id": "N-REF-P24-T01-R05",
@@ -5310,20 +5373,52 @@
       "implementation_phase": "P5",
       "source_section/page": "Field | Purpose | Rule; p.24; p24:t1:r9",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
-      "followup_tasks": "P5 foundation remains in IMP-P5-002; complete compound clause under P6/P7/P12 per Implementation Plan; no phase change or acceptance exception.",
+      "status": "PASS",
+      "followup_tasks": "Regression at applicable later milestone gates",
       "planned_code_schema": "apps/web; packages/ui; packages/provider-adapters/tts",
-      "actual_code_schema": [],
-      "implementation_status": "NOT_STARTED",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "actual_code_schema": [
+        "packages/activity-schemas/src/media.ts",
+        "tools/p5/media-library.ts",
+        "tools/p5/m01-publication-bindings.ts",
+        "apps/web/src/lesson/media.tsx"
+      ],
+      "implementation_status": "VERIFIED",
+      "milestone_evidence": "docs/p5/exit-review-20261028/verified-ci-9215dbb.json",
       "ADR_or_exception": "docs/adr/adr-d19.md; no exception",
       "test_or_gate": "CHK-N-REF-P24-T01-R09",
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
-      "actual_test_files": [],
-      "actual_gate_ids": [],
-      "verified_implementation_sha": null,
-      "trace_reviewed_at": "2026-10-04T08:55:11.894620+00:00",
-      "verification_note": "P5 foundation is present or planned; the entire source clause is not proven by synthetic media fixtures. Required content/QA/operational or optional AI behavior must remain separately evidenced."
+      "actual_test_files": [
+        "tools/p5/verify-m01-s3-import.ts",
+        "tests/integration/p5-audio.test.ts",
+        "tests/browser/p5-media.spec.ts",
+        "tests/unit/p5-publication-bindings.test.ts"
+      ],
+      "actual_gate_ids": [
+        "REAL_M01_BYTES_POSTGRESQL_S3_IMPORT",
+        "P5-AUDIO-DB-001",
+        "P5-AUDIO-DB-003",
+        "P5-AUDIO-UI-001"
+      ],
+      "verified_implementation_sha": "9215dbbbb6eb0fdc23e754d216730b64ee8a3c9c",
+      "trace_reviewed_at": "2026-10-28",
+      "verification_note": "Atomic technical-audio metadata clause: duration/speed/loudness are mandatory, PCM frame duration and cue rounding are checked against each unchanged WAV, and all source metadata is compared after restart. Exactly 210 slow files pin normal identity/version/script/transcript/turns. Same-activity closure negative tests and real EN/CS Chromium slow/playback-clock cases pass in both 9215dbb events. Existing approved loudness metadata is verified, not remeasured or regenerated.",
+      "historical_followups": [
+        {
+          "recorded_before": "2026-10-28",
+          "status": "PENDING",
+          "implementation_status": "NOT_STARTED",
+          "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+          "verified_implementation_sha": null,
+          "verification_note": "P5 foundation is present or planned; the entire source clause is not proven by synthetic media fixtures. Required content/QA/operational or optional AI behavior must remain separately evidenced.",
+          "current_followup": null,
+          "followup_tasks": "P5 foundation remains in IMP-P5-002; complete compound clause under P6/P7/P12 per Implementation Plan; no phase change or acceptance exception."
+        }
+      ],
+      "supplementary_evidence": [
+        "docs/p5/exit-review-20261028/verified-ci-9215dbb.json",
+        "docs/p5/exit-review-20261028/README.md"
+      ],
+      "current_followup": "Retain exact-source regression; no new generation or repeat approval."
     },
     {
       "requirement_id": "N-REF-P24-T02-R03",
@@ -5343,7 +5438,7 @@
       "implementation_phase": "P5",
       "source_section/page": "Area | Required behavior | Failure condition; p.24; p24:t2:r3",
       "owner/workstream": "Media/speech",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "followup_tasks": "P5 foundation remains in IMP-P5-002; complete compound clause under P6/P7/P12 per Implementation Plan; no phase change or acceptance exception.",
       "planned_code_schema": "apps/web; packages/ui; packages/provider-adapters/tts",
       "actual_code_schema": [
@@ -5355,7 +5450,7 @@
         "packages/mastery-review/src/model.ts"
       ],
       "implementation_status": "IN_PROGRESS",
-      "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+      "milestone_evidence": "docs/p5/exit-review-20261028/verified-ci-9215dbb.json",
       "ADR_or_exception": "docs/adr/adr-d08.md; no exception",
       "test_or_gate": "CHK-N-REF-P24-T02-R03",
       "applicability": "Binding when the named optional capability is enabled; default-off/fallback restrictions always apply.",
@@ -5363,23 +5458,40 @@
         "tests/integration/p5-audio.test.ts",
         "tests/browser/p5-media.spec.ts"
       ],
-      "actual_gate_ids": [],
-      "verified_implementation_sha": null,
-      "trace_reviewed_at": "2026-10-22",
-      "verification_note": "96cc960 proves immutable transcripts and real M01 delivery. This batch fixes unaudited inline-only alternatives and requires new PostgreSQL/Chromium transcript audit, 0.3 evidence weighting, client-override and replay checks. It preserves the accepted policy; full authored-objective/conditional accessibility-mode review remains unproven.",
+      "actual_gate_ids": [
+        "P5-AUDIO-API-002",
+        "P5-AUDIO-API-003",
+        "P5-AUDIO-DB-002",
+        "P5-AUDIO-UI-001"
+      ],
+      "verified_implementation_sha": "9215dbbbb6eb0fdc23e754d216730b64ee8a3c9c",
+      "trace_reviewed_at": "2026-10-28",
+      "verification_note": "Both 9215dbb events executed text/inline transcript availability, keyboard disclosure before an answer, support audit failure/retry/reload, ownership/CSRF/idempotency and six conservative-weight evidence cases. The current player has no first-attempt lock. Whole-clause PARTIAL is retained for actual authored-objective review and any future hiding/accessibility-mode policy; existing fallback is not an invented settings implementation.",
       "historical_followups": [
         {
           "recorded_before": "2026-10-22",
           "status": "PENDING",
           "verification_note": "P5 foundation is present or planned; the entire source clause is not proven by synthetic media fixtures. Required content/QA/operational or optional AI behavior must remain separately evidenced.",
           "current_followup": null
+        },
+        {
+          "recorded_before": "2026-10-28",
+          "status": "PENDING",
+          "implementation_status": "IN_PROGRESS",
+          "milestone_evidence": "docs/evidence/P5/ (future; not yet produced)",
+          "verified_implementation_sha": null,
+          "verification_note": "96cc960 proves immutable transcripts and real M01 delivery. This batch fixes unaudited inline-only alternatives and requires new PostgreSQL/Chromium transcript audit, 0.3 evidence weighting, client-override and replay checks. It preserves the accepted policy; full authored-objective/conditional accessibility-mode review remains unproven.",
+          "current_followup": "Verify this batch on exact HEAD; retain full-clause status until authored-objective/conditional accessibility evidence exists. No P6, new transcript policy, generation or repeat owner media approval.",
+          "followup_tasks": "P5 foundation remains in IMP-P5-002; complete compound clause under P6/P7/P12 per Implementation Plan; no phase change or acceptance exception."
         }
       ],
       "supplementary_evidence": [
         "docs/p5/integration-20261022/verified-ci-96cc960.json",
-        "docs/p5/integration-20261022/README.md"
+        "docs/p5/integration-20261022/README.md",
+        "docs/p5/exit-review-20261028/verified-ci-9215dbb.json",
+        "docs/p5/exit-review-20261028/README.md"
       ],
-      "current_followup": "Verify this batch on exact HEAD; retain full-clause status until authored-objective/conditional accessibility evidence exists. No P6, new transcript policy, generation or repeat owner media approval.",
+      "current_followup": "P6/P7 must review actual authored objectives and alternatives; any later first-attempt hiding policy requires its accessibility override and audit. No current text path is gated by an answer, audio availability or support-audit success.",
       "current_batch_required_gates": [
         "P5-AUDIO-API-003",
         "P5-AUDIO-DB-002",
@@ -14790,13 +14902,13 @@
       "verification_note": "P5 foundation is present or planned; the entire source clause is not proven by synthetic media fixtures. Required content/QA/operational or optional AI behavior must remain separately evidenced."
     }
   ],
-  "timestamp": "2026-10-27",
+  "timestamp": "2026-10-28",
   "evidence_policy": "PASS rows cite executed evidence on an exact remote SHA. PARTIAL rows do not close the requirement or phase. Test-only synthetic media/evaluators are never reference-content QA.",
-  "trace_review_scope": "All 356 requirement statuses and original task/source assignments are retained. Both 5230d48 events passed 31 runtime gates, actual 450-version PostgreSQL/S3 import/replay/restart and authenticated HTTP delivery, with independent artifact audits. Whole authored-objective/publication acceptance and OD-004/006 remain open.",
+  "trace_review_scope": "Plan §12 exit review separates executed P5 development/test criteria from later full-course/production behavior. Three complete atomic media-metadata rows promoted to PASS, one transcript row to PARTIAL. 178 PASS / 31 PARTIAL / 147 PENDING; all 356 original source/task/phase assignments preserved. No blanket deferral, owner acceptance or OD-004/006 closure.",
   "recovery_evidence": "docs/p5/integration-20261015/README.md",
   "private_input_evidence": "docs/p5/integration-20261017/README.md",
   "private_input_transfer_receipt": "docs/p5/integration-20261017/transfer-receipt.json",
-  "real_import_execution_evidence": "docs/p5/public-test-input-20261026/verified-ci-5230d48.json",
+  "real_import_execution_evidence": "docs/p5/exit-review-20261028/verified-ci-9215dbb.json",
   "current_publication_preparation": {
     "documentation": "docs/p5/integration-20261021/README.md",
     "code": [
@@ -14831,12 +14943,14 @@
     "new_gate": "P5-MEDIA-A11Y-001"
   },
   "current_execution_resume": {
-    "evidence": "docs/p5/public-test-input-20261026/verified-ci-5230d48.json",
-    "verified_exact_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
+    "evidence": "docs/p5/exit-review-20261028/verified-ci-9215dbb.json",
+    "verified_exact_sha": "9215dbbbb6eb0fdc23e754d216730b64ee8a3c9c",
     "real_m01_execution": "PASS_BOTH_EVENTS",
-    "requirement_status_changes": 0,
+    "requirement_status_changes": 4,
     "current_source_ci": "Exact descendant results in PR #5; parent verification is not inherited.",
-    "owner_scope": "docs/p5/public-test-input-20261026/owner-scope.json"
+    "owner_scope": "docs/p5/public-test-input-20261026/owner-scope.json",
+    "phase_exit_review": "docs/p5/exit-review-20261028/README.md",
+    "owner_milestone_acceptance": "PENDING"
   },
   "historical_execution_resume_before_20261027": {
     "evidence": "docs/p5/public-test-input-20261026/README.md",
@@ -14848,5 +14962,17 @@
     "last_full_runtime_pass_sha": "96cc9607c3a05481dddd9f8e6c763d8241db26eb",
     "failed_execution": "docs/p5/public-test-input-20261026/ci-d0cff4f-input-and-failure.json",
     "input_transfer": "BOTH_420_WAV_ARTIFACTS_INDEPENDENTLY_VERIFIED"
+  },
+  "historical_trace_review_before_20261028": {
+    "timestamp": "2026-10-27",
+    "trace_review_scope": "All 356 requirement statuses and original task/source assignments are retained. Both 5230d48 events passed 31 runtime gates, actual 450-version PostgreSQL/S3 import/replay/restart and authenticated HTTP delivery, with independent artifact audits. Whole authored-objective/publication acceptance and OD-004/006 remain open.",
+    "current_execution_resume": {
+      "evidence": "docs/p5/public-test-input-20261026/verified-ci-5230d48.json",
+      "verified_exact_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
+      "real_m01_execution": "PASS_BOTH_EVENTS",
+      "requirement_status_changes": 0,
+      "current_source_ci": "Exact descendant results in PR #5; parent verification is not inherited.",
+      "owner_scope": "docs/p5/public-test-input-20261026/owner-scope.json"
+    }
   }
 }

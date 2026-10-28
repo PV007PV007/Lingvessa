@@ -1,5 +1,15 @@
 # P5 decision inputs and owner approvals
 
+## Current decision packet — 2026-10-28
+
+[Concrete P5 exit scope](exit-review-20261028/README.md) and [verified 9215dbb execution](exit-review-20261028/verified-ci-9215dbb.json) are ready for phase review after the reporting revision's own exact-HEAD checks. The remaining owner action is milestone acceptance and explicit merge/P6 authorization, not repeat approval of the accepted media.
+
+The proposed acceptance covers the executed P5 development/reference foundation under Plan §12. Existing development/test S3 permission is retained. OD-004 production storage/delivery and OD-006 usable learner scoring stay OPEN; the default speech evaluator remains unavailable. Full English/Czech authored lessons and objective/accessibility review follow Plan P6/P7; no course or production publication is asserted. Approval of this proposal has not been recorded.
+
+Audio quality/six voices/rights (2026-10-14) and the exact 30-visual set (2026-10-20) are already accepted. The older audition/204-missing-WAV/visual-review instructions below are historical records, not work to repeat. The current phase boundary supersedes earlier unconditional production/full-course exit blockers without changing any approved invariant or immutable record.
+
+## Historical decision preparation
+
 ## Recorded M01 audio approval — 2026-10-14
 
 The owner approved all 420 delivered M01 audio files, the six-voice cast and audio rights with **“Затверджено” at 2026-10-14T13:12:30+03:00**. [The approval record](m01-completion-20261014/owner-approval.json) binds the exact tested source, dataset, ZIP and HTML hashes. Existing ASR diagnostics and the immutable delivery are retained; this direct approval is separate from individual listening-form entries. These audio decisions are closed. Actual approved media delivery/publication-registry integration, remaining visual QA, OD-004/006 and applicable compound technical requirements still need completion before P5 exit.

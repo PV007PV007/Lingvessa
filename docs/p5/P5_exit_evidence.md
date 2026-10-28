@@ -1,8 +1,18 @@
 # P5 exit evidence
 
+**IN PROGRESS / NOT READY pending owner acceptance. PR #5 OPEN DRAFT; no merge or P6 implementation.**
+
+## Current Plan §12 exit review — 2026-10-28
+
+[Concrete acceptance scope and criterion matrix](exit-review-20261028/README.md) correct the earlier unconditional production/full-course blocker grouping using the locked Plan §§4.2, 12–15 and 24. [9215dbb](exit-review-20261028/verified-ci-9215dbb.json) passed all seven workflows / eleven jobs on attempt 1, both real M01 PostgreSQL/S3/HTTP executions, 31 gates and 28 browser cases per event, and independent artifact audits. Each descendant still requires its own exact-source CI in PR #5.
+
+All 450 required M01 catalog IDs resolve with approved audio/visual records; 420 WAVs and 210 normal/slow pairs remain unchanged. Existing owner approvals are retained. Three atomic metadata clauses are now PASS and the transcript-alternative clause is PARTIAL: trace 178 PASS / 31 PARTIAL / 147 PENDING. Full authored-objective, publication, operational and optional-capability clauses remain open at their stated scopes; no source assignment is rewritten.
+
+The proposed P5 acceptance covers the executed development/reference foundation. OD-004 stays OPEN before production storage/delivery and OD-006 before usable learner scoring. Neutral unavailable remains default. P6/P7 must supply full authored lessons and objective review; this is not fabricated P5 content. Owner milestone acceptance is still pending. The dated records below preserve their original observations; obsolete generation, incomplete-audio, missing-visual-review and broad blocker instructions are historical.
+
 **IN PROGRESS / NOT READY. PR #5 OPEN DRAFT; no merge or P6 authorization.**
 
-## Current verified runtime — 2026-10-27
+## Historical verified runtime — 2026-10-27
 
 Source `5230d48846f902782b388d9d019632e77ffc6cc7` passed all seven workflows / eleven latest-attempt jobs and both real M01 PostgreSQL/S3/HTTP runs. [Retained verification](public-test-input-20261026/verified-ci-5230d48.json) records all 420 immutable WAVs, 450 asset versions/pins, replay, server/adapter restart, byte readbacks, authenticated HTTP delivery, 31 gates per event and 90 independent acceptance-reference checks. All five P1–P4 regression workflows and the production dependency audit passed. This proves 5230d48 only; exact descendant CI is recorded in PR #5.
 

@@ -286,11 +286,12 @@
         "CHK-N-TS-P17-T02-R05",
         "CHK-N-TS-P19-T03-R08"
       ],
-      "readiness": "Both 5230d48 runs passed 450 real immutable versions, replay/restart, HTTP delivery and declared-use accessibility. Production delivery OD-004 and full reference publication remain open; no P6 authoring.",
+      "readiness": "Both 9215dbb runs passed all 450 real immutable versions, replay/restart, authenticated HTTP delivery and declared-use enforcement. Plan §12 catalog resolution and S3 criteria evidenced; production OD-004 and later authored-course publication stay open. Owner milestone acceptance pending.",
       "contract_change": "No governing contract change; P5 concrete implementation only",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists",
-      "historical_readiness_before_20261027": "450 approved corpus versions imported/replayed/read after restart and delivered through HTTP on d2ec78a. New per-use accessibility enforcement requires exact-source CI. Full reference publication remains separate; no P6 authoring."
+      "historical_readiness_before_20261027": "450 approved corpus versions imported/replayed/read after restart and delivered through HTTP on d2ec78a. New per-use accessibility enforcement requires exact-source CI. Full reference publication remains separate; no P6 authoring.",
+      "historical_readiness_before_20261028": "Both 5230d48 runs passed 450 real immutable versions, replay/restart, HTTP delivery and declared-use accessibility. Production delivery OD-004 and full reference publication remain open; no P6 authoring."
     },
     {
       "task_id": "IMP-P5-002",
@@ -409,11 +410,12 @@
         "CHK-N-TS-P13-T03-R08",
         "CHK-N-TS-P16-T01-R02"
       ],
-      "readiness": "Both 5230d48 runs passed all 420 immutable WAVs, same-activity normal/slow closure, transcript audit and conservative support-evidence gates. Full authored-objective accessibility remains open; no regeneration or repeat approval.",
+      "readiness": "All 420 immutable WAVs and 210 normal/slow pairs, speaker/avatar playback and transcript-support gates passed in both 9215dbb events. Three atomic metadata clauses now PASS; full authored-objective/accessibility clause remains PARTIAL for P6/P7 review. No regeneration or repeat audio approval.",
       "contract_change": "No governing contract change; P5 concrete implementation only",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists",
-      "historical_readiness_before_20261027": "All 420 WAVs are approved and verified in real storage/HTTP tests on 96cc960. This batch repairs inline transcript logging and adds PostgreSQL/Chromium support-evidence gates. Full activity-objective accessibility remains open; no repeat audio generation/approval."
+      "historical_readiness_before_20261027": "All 420 WAVs are approved and verified in real storage/HTTP tests on 96cc960. This batch repairs inline transcript logging and adds PostgreSQL/Chromium support-evidence gates. Full activity-objective accessibility remains open; no repeat audio generation/approval.",
+      "historical_readiness_before_20261028": "Both 5230d48 runs passed all 420 immutable WAVs, same-activity normal/slow closure, transcript audit and conservative support-evidence gates. Full authored-objective accessibility remains open; no regeneration or repeat approval."
     },
     {
       "task_id": "IMP-P5-003",
@@ -786,19 +788,20 @@
         "CHK-N-TS-P17-T02-R06",
         "CHK-N-TS-P18-T02-R08"
       ],
-      "readiness": "All twelve speech runtime gates passed on 5230d48. OD-006 labelled learner-error calibration and approved target policy remain open; neutral unavailable remains default.",
+      "readiness": "All twelve speech runtime gates passed in both 9215dbb events. Plan §12 correct/mismatch/denial/low-confidence/provider-failure and transient/UX fixtures evidenced. OD-006 remains OPEN before usable learner scoring; neutral unavailable default retained. Owner milestone acceptance pending.",
       "contract_change": "No governing contract change; P5 concrete implementation only",
       "rollback": "Use reviewed compatible migration/pointer/config rollback; never rewrite immutable evidence",
       "observability": "Task gate evidence includes correlation/version/safe error context where runtime exists",
-      "historical_readiness_before_20261027": "All 12 speech gates and real microphone browser paths PASS. Controlled evaluation is not production calibration; OD-006 still governs usable real-provider evidence."
+      "historical_readiness_before_20261027": "All 12 speech gates and real microphone browser paths PASS. Controlled evaluation is not production calibration; OD-006 still governs usable real-provider evidence.",
+      "historical_readiness_before_20261028": "All twelve speech runtime gates passed on 5230d48. OD-006 labelled learner-error calibration and approved target policy remain open; neutral unavailable remains default."
     }
   ],
-  "timestamp": "2026-10-27",
-  "last_hosted_tested_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
+  "timestamp": "2026-10-28",
+  "last_hosted_tested_sha": "9215dbbbb6eb0fdc23e754d216730b64ee8a3c9c",
   "last_hosted_result": "PASS_REAL_M01_POSTGRESQL_S3_HTTP_AND_ALL_SEVEN_WORKFLOWS",
-  "last_full_runtime_pass_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
-  "ci_evidence": "docs/p5/public-test-input-20261026/verified-ci-5230d48.json",
-  "current_revision_ci": "5230d48 passed all seven workflows / eleven latest-attempt jobs, both real M01 runs and independent input/runtime audits. This evidence consolidation changes documentation only; its own exact-HEAD results must be read from PR #5. A parent PASS never certifies a descendant.",
+  "last_full_runtime_pass_sha": "9215dbbbb6eb0fdc23e754d216730b64ee8a3c9c",
+  "ci_evidence": "docs/p5/exit-review-20261028/verified-ci-9215dbb.json",
+  "current_revision_ci": "9215dbb passed all seven workflows / eleven jobs on attempt 1, both real M01 executions and independently verified artifacts. The exit-review/reporting revision requires its own full CI and artifact audits; exact results belong in PR #5. A parent PASS never certifies a descendant.",
   "latest_attempt_evidence": "docs/p5/integration-20261026/ci-6998b70.json",
   "local_audition_evidence": "docs/p5/voice-audition/results.json",
   "resolved_hosted_remediation": {
@@ -832,16 +835,16 @@
   "audio_integrity_evidence": "docs/p5/integration-20261016/attached-archive-verification.json",
   "owner_audio_approval": "docs/p5/m01-completion-20261014/owner-approval.json",
   "remaining": [
-    "Applicable reference publication/accessibility at full clause scope; P5 declared-use enforcement is distinct from later authored course/objective acceptance",
-    "OD-004 production delivery profile",
-    "OD-006 labelled learner speech calibration; neutral fallback remains default",
-    "Remaining compound-clause applicability/evidence review; no P6/P7/P8/P9 implementation"
+    "Owner acceptance of the evidenced P5 development/reference scope and explicit phase/merge decision; no merge/P6 is performed by this review",
+    "OD-004 OPEN before production storage/delivery; existing owner-authorized test scope remains bounded",
+    "OD-006 OPEN before usable learner scoring; unavailable default and controlled fixtures retained",
+    "Full authored-objective/accessibility/publication clauses remain open for the ordered P6/P7/P8 work; their P5 foundation assignments are retained"
   ],
   "private_input_transfer": "docs/p5/integration-20261017/README.md",
   "private_input_result": {
     "status": "TRANSFER_AND_INDEPENDENT_DOWNLOAD_VERIFIED",
     "receipt": "docs/p5/integration-20261017/transfer-receipt.json",
-    "real_import_status": "PASS on 5230d48 in both events: 450 imports/replay/restart readbacks/publication pins and authenticated HTTP deliveries; see docs/p5/public-test-input-20261026/verified-ci-5230d48.json"
+    "real_import_status": "PASS on 9215dbb in both events: 450 imports/replay/restart readbacks/publication pins and authenticated HTTP deliveries; see docs/p5/exit-review-20261028/verified-ci-9215dbb.json"
   },
   "historical_before_real_m01_pass": {
     "last_hosted_tested_sha": "35dced61a8f9ae36f77379860f414e012de20997",
@@ -857,7 +860,7 @@
     ]
   },
   "visual_preflight": "docs/p5/integration-20261018/visual-preflight.json",
-  "remaining_gate_plan": "docs/p5/integration-20261021/README.md",
+  "remaining_gate_plan": "docs/p5/exit-review-20261028/README.md",
   "publication_preparation": {
     "documentation": "docs/p5/integration-20261022/README.md",
     "expected_resolved_assets": 450,
@@ -904,24 +907,24 @@
   },
   "historical_current_revision_ci_20261022": "Last fully verified source remains 96cc960. b57ae9c PR skipped real M01 after empty inventory caused an unused duplicate draft; push received exact input but package installation timed out. This revision pins existing release/asset, rejects missing/replaced relay input and requires real input in trusted acceptance. Its own seven workflows, 31 runtime gates, both actual M01 steps and independent artifact audits must pass; final exact results are in PR #5.",
   "execution_resume": {
-    "status": "PUBLIC_AUDIO_REAL_M01_RUNTIME_VERIFIED_MILESTONE_NOT_READY",
-    "observed_source_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
+    "status": "P5_EXIT_CRITERIA_EVIDENCED_OWNER_ACCEPTANCE_PENDING",
+    "observed_source_sha": "9215dbbbb6eb0fdc23e754d216730b64ee8a3c9c",
     "repository_visibility": "public",
-    "evidence": "docs/p5/public-test-input-20261026/verified-ci-5230d48.json",
+    "evidence": "docs/p5/exit-review-20261028/verified-ci-9215dbb.json",
     "owner_scope": "docs/p5/public-test-input-20261026/owner-scope.json",
     "real_m01_on_observed_attempt": "PASS_BOTH_EVENTS",
     "verified_attempts": {
       "push": {
-        "run_id": 40460988576,
-        "attempt": 2
+        "run_id": 40500393519,
+        "attempt": 1
       },
       "pull_request": {
-        "run_id": 40460994664,
+        "run_id": 40500402007,
         "attempt": 1
       }
     },
     "decision_boundary": "420 unchanged approved final WAVs may enter a one-day test artifact; original archive unpublished; S3 development/test only; OD-004/006 open.",
-    "idempotent_next_action": "Read branch HEAD and its latest Actions attempts; inspect existing results before any rerun. Exact descendant verification belongs in PR #5."
+    "idempotent_next_action": "Read branch HEAD and existing Actions attempts; verify this exact exit-review revision and update PR #5 with independently audited evidence. Then obtain the single phase acceptance/merge/P6 decision; do not regenerate or re-upload the original."
   },
   "historical_before_public_runtime_pass": {
     "timestamp": "2026-10-26",
@@ -940,6 +943,55 @@
       "real_m01_on_observed_attempt": "NOT_EXECUTED",
       "decision_boundary": "420 approved unchanged final WAVs may be a one-day test artifact; original archive unpublished; S3 development/test only; OD-004/006 open.",
       "failed_execution": "docs/p5/public-test-input-20261026/ci-d0cff4f-input-and-failure.json"
+    }
+  },
+  "historical_before_exit_review_20261028": {
+    "timestamp": "2026-10-27",
+    "last_hosted_tested_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
+    "last_hosted_result": "PASS_REAL_M01_POSTGRESQL_S3_HTTP_AND_ALL_SEVEN_WORKFLOWS",
+    "last_full_runtime_pass_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
+    "ci_evidence": "docs/p5/public-test-input-20261026/verified-ci-5230d48.json",
+    "current_revision_ci": "5230d48 passed all seven workflows / eleven latest-attempt jobs, both real M01 runs and independent input/runtime audits. This evidence consolidation changes documentation only; its own exact-HEAD results must be read from PR #5. A parent PASS never certifies a descendant.",
+    "remaining": [
+      "Applicable reference publication/accessibility at full clause scope; P5 declared-use enforcement is distinct from later authored course/objective acceptance",
+      "OD-004 production delivery profile",
+      "OD-006 labelled learner speech calibration; neutral fallback remains default",
+      "Remaining compound-clause applicability/evidence review; no P6/P7/P8/P9 implementation"
+    ],
+    "execution_resume": {
+      "status": "PUBLIC_AUDIO_REAL_M01_RUNTIME_VERIFIED_MILESTONE_NOT_READY",
+      "observed_source_sha": "5230d48846f902782b388d9d019632e77ffc6cc7",
+      "repository_visibility": "public",
+      "evidence": "docs/p5/public-test-input-20261026/verified-ci-5230d48.json",
+      "owner_scope": "docs/p5/public-test-input-20261026/owner-scope.json",
+      "real_m01_on_observed_attempt": "PASS_BOTH_EVENTS",
+      "verified_attempts": {
+        "push": {
+          "run_id": 40460988576,
+          "attempt": 2
+        },
+        "pull_request": {
+          "run_id": 40460994664,
+          "attempt": 1
+        }
+      },
+      "decision_boundary": "420 unchanged approved final WAVs may enter a one-day test artifact; original archive unpublished; S3 development/test only; OD-004/006 open.",
+      "idempotent_next_action": "Read branch HEAD and its latest Actions attempts; inspect existing results before any rerun. Exact descendant verification belongs in PR #5."
+    }
+  },
+  "phase_exit_review": {
+    "document": "docs/p5/exit-review-20261028/README.md",
+    "authority": "Implementation Plan v1.4 §12 p7",
+    "verified_source": "9215dbbbb6eb0fdc23e754d216730b64ee8a3c9c",
+    "runtime_criteria": "PASS_DEVELOPMENT_TEST_SCOPE",
+    "owner_milestone_acceptance": "PENDING",
+    "milestone_status": "NOT_READY",
+    "p6_authorized": false,
+    "production_approved": false,
+    "trace_counts": {
+      "PASS": 178,
+      "PARTIAL": 31,
+      "PENDING": 147
     }
   }
 }
