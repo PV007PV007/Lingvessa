@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "phase": "P6",
+  "milestone_status": "NOT_READY",
+  "items": [
+    {
+      "id": "P6-CONTENT-001",
+      "severity": "BLOCKER",
+      "status": "OPEN_IMPLEMENTATION",
+      "source": "Plan §13; Reference §§6–10 pp9–13",
+      "finding": "58 source rows are outlined; complete versioned lesson/activity/knowledge/outcome manifests and PostgreSQL publication have not been implemented.",
+      "next_action": "Compile the complete units using shared contracts, then prove load/replay/version pins; no substitution of text probes for full lessons."
+    },
+    {
+      "id": "P6-A11Y-001",
+      "severity": "BLOCKER",
+      "status": "OBSERVED_SHARED_CONTRACT_GAP",
+      "source": "Reference §7 L02.8 p10; §8 L03.6 p11; §9 L04.2 p11; §10 R01.2 p12",
+      "finding": "Current MediaPanel and ActivityRenderer allow transcript disclosure before the first answer. Existing support telemetry does not implement the source-specific after-attempt visibility policy.",
+      "code": [
+        "apps/web/src/lesson/media.tsx",
+        "apps/web/src/lesson/activity.tsx",
+        "packages/activity-schemas/src/lesson.ts"
+      ],
+      "next_action": "Specify the shared objective/visibility/accessibility-override contract and required audit/evidence semantics; review any contract change before implementation."
+    },
+    {
+      "id": "P6-EVAL-001",
+      "severity": "IMPORTANT",
+      "status": "OBSERVED_SHARED_CONTRACT_GAP",
+      "source": "Reference §7 L02.7 p10",
+      "finding": "A contraction objective can reject a full form, but the current result has a single correct/incorrect axis. The probes do not prove meaning-correct/form-needed feedback or independent facet outcomes.",
+      "code": [
+        "packages/lesson-engine/src/evaluator.ts",
+        "packages/activity-schemas/src/lesson.ts"
+      ],
+      "next_action": "Review shared objective-aware feedback/evidence contract; do not mark full-form semantics incorrect or add an English-only evaluator."
+    },
+    {
+      "id": "P6-MEDIA-001",
+      "severity": "IMPORTANT",
+      "status": "OPEN_OBJECTIVE_BINDING_REVIEW",
+      "source": "Reference §7 L02.1/L02.5/L02.8 p10; §8 L03.5/L03.6 p11; §10 recap scenario p12",
+      "finding": "All 225 existing English catalog assets resolve. This does not prove the four profile introductions, three role-image uses, listening-profile/country stimuli or the two new recap characters. The approved English visuals comprise three scenes, three avatars, three icons and six flags.",
+      "next_action": "Map each authored stimulus exactly to approved material; prepare explicit additional requirements where reuse is insufficient. Never substitute a generic scene or new script for unchanged approved bytes."
+    },
+    {
+      "id": "P6-VARIANT-001",
+      "severity": "IMPORTANT",
+      "status": "OPEN_VARIANT_REVIEW",
+      "source": "Reference §5 p8; CUR-A1-011",
+      "finding": "176 policy cases cover en-GB/en-US text normalization. Existing approved English voices are en-GB. No learner-profile switching, meaningful letter-name variety note or en-US audio acceptance is asserted.",
+      "next_action": "Author and verify explicit variety metadata/notes against the existing approved voices without silently relabelling en-GB audio."
+    },
+    {
+      "id": "P6-JOURNEY-001",
+      "severity": "BLOCKER",
+      "status": "OPEN_EXECUTION_GATE",
+      "source": "Plan §13 p7; Reference §§9–11 pp11–14",
+      "finding": "No complete P6 mobile/desktop journey has executed. Persistent turn history, supported production, result/remediation, Review seed, restart/resume and nonblocking speech remain to be proved on actual authored units.",
+      "next_action": "Run real PostgreSQL/S3-backed English lesson journeys after authoring; retain exact-source vertical-slice report and defect list."
+    }
+  ],
+  "unchanged_decisions": {
+    "OD-004": "OPEN_BEFORE_PRODUCTION_DELIVERY",
+    "OD-006": "OPEN_BEFORE_USABLE_LEARNER_SCORING"
+  }
+}

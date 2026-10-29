@@ -1,0 +1,22 @@
+{
+  "phase": "P6",
+  "p6_authorized": true,
+  "p7_authorized": false,
+  "authorization_date": "2026-10-29",
+  "owner_reply": "дозволяю",
+  "scope": "English reference E-A1-M01; development/reference only",
+  "accepted_main_sha": "da3a38c844d68bc6b4051f59d8c9265964347069",
+  "accepted_p5_tested_sha": "8f353cf44945738cff1b2ea49bfd9ce730ebf022",
+  "accepted_p5_tree_sha": "ff9e9f0b364db7d2989973e6197cb12133e5bcb0",
+  "accepted_p5_pr": 5,
+  "owner_decision": "docs/p6/evidence/p5-acceptance.json",
+  "execution_authority": "Implementation Plan v1.4 §13 p7; Appendix B p12; Reference Module Design v1.6 §§5–11 pp8–14",
+  "operational_exception": "EXC-P1-001: main is not technically protected; implementation branch -> PR -> green CI -> owner acceptance.",
+  "boundaries": [
+    "P7 and later phases not authorized",
+    "No production delivery approval; OD-004 OPEN",
+    "No usable learner scoring approval; OD-006 OPEN",
+    "No audio regeneration, changed approved media or final WAV corpus in Git",
+    "No new paid service or PC access"
+  ]
+}
