@@ -1,0 +1,189 @@
+"""Recover a processing journal from retained bytes, then export auditable M01 metadata.
+
+This script never synthesizes speech. Uncommitted engine journals remain unchanged.
+"""
+import argparse
+import csv
+import hashlib
+import importlib.util
+import json
+from pathlib import Path
+import re
+import shutil
+import subprocess
+import tempfile
+import zipfile
+
+SPEC = importlib.util.spec_from_file_location('m01', Path(__file__).with_name('m01-audio-draft.py'))
+m = importlib.util.module_from_spec(SPEC)
+SPEC.loader.exec_module(m)
+
+
+def recover(output):
+    m.offline()
+    plan, registry, turns, cast = m.inputs()
+    # The command exited with code 0, but this one record and the aggregate journal
+    # remained at STARTED/RUNNING. Both processed files already exist. Require exact
+    # re-derivation from the retained raw file; never run the speech model again.
+    turn_id = 'baddc4d1-1d8b-5ea2-977f-52ae59cfd385'
+    row = m.read(output / 'recovery/attempts' / (turn_id + '.json'))
+    m.need(row['status'] == 'STARTED', 'Unexpected journal state')
+    original_record_sha = m.sha(output / 'recovery/attempts' / (turn_id + '.json'))
+    raw = output / 'recovery/raw' / (turn_id + '.wav')
+    normal = output / 'recovery/turns' / (turn_id + '.wav')
+    slow = output / 'recovery/turns' / (turn_id + '-slow.wav')
+    m.need(not (output / 'journal-recovery.json').exists(), 'Recovery already recorded')
+    with tempfile.TemporaryDirectory() as temporary:
+        n, s = Path(temporary) / 'normal.wav', Path(temporary) / 'slow.wav'
+        normalization = m.normalize(raw, n, s, plan)
+        m.need(m.sha(n) == m.sha(normal) and m.sha(s) == m.sha(slow), 'Retained processing does not match the raw file')
+    candidate = cast[row['voice_code']]
+    model = next(x for x in m.read(m.ROOT / 'docs/p5/voice-audition/models.lock.json')['models'] if x['id'] == candidate['model'])
+    row.update(status='GENERATED_UNREVIEWED', raw=m.file_record(raw, output),
+               normal=m.file_record(normal, output, True), slow=m.file_record(slow, output, True),
+               normalization=normalization, engine_result={'model_sha256': model['sha256'], 'speaker_id': candidate['speaker_id']})
+    recovered = {'kind': 'VERIFIED_PROCESSING_CHECKPOINT', 'original_record_sha256': original_record_sha,
+        'script_sha256': m.sha(Path(__file__)), 'synthesis_repeated': False, 'normal_and_slow_byte_identical_to_rederived': True,
+        'explanation': 'Both retained processed WAVs exactly match the pinned processing of the retained raw WAV. Original STARTED record and aggregate RUNNING journal are preserved unchanged. No original completion timestamp is invented.',
+        'turn': row}
+    m.write(output / 'journal-recovery.json', recovered)
+    supplement = output / 'supplement'
+    assets = []
+    for a in registry['audio']:
+        if len(a['turns']) != 1 or a['turns'][0]['turn_id'] != turn_id:
+            continue
+        clip = row[a['speed']]
+        path = supplement / 'audio' / a['language'] / (a['stable_code'] + '.wav')
+        m.wav(path, m.pcm(output / clip['path']))
+        entry = {k: a[k] for k in ['asset_id', 'stable_code', 'language', 'speed', 'normal_asset_id', 'script_id', 'script_hash', 'transcript']}
+        frames = clip['metrics']['frames']
+        entry.update(status='GENERATED_UNREVIEWED', turn_ids=[turn_id], **m.file_record(path, supplement, True),
+            timing=[{'turn_id': turn_id, 'voice_id': row['voice_id'], 'character_id': row.get('character_id'),
+                     'candidate_id': row['candidate_id'], 'text': row['text'], 'start_frame': 0, 'end_frame': frames,
+                     'start_ms': 0, 'end_ms': frames / 24, 'turn_sha256': clip['sha256']}])
+        measured = subprocess.run(['ffmpeg', '-hide_banner', '-nostdin', '-i', str(path), '-af', 'ebur128=peak=true',
+                                  '-f', 'null', '-'], check=True, capture_output=True, text=True, timeout=30)
+        entry['integrated_lufs'] = float(re.findall(r'I:\s*(-?[0-9.]+) LUFS', measured.stderr)[-1])
+        entry['loudness_note'] = 'Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval.'
+        assets.append(entry)
+    m.need(len(assets) == 2, 'Expected exactly two supplementary assets')
+    m.write(supplement / 'assets.json', {'plan_sha256': m.sha(m.BATCH / 'plan.json'), 'assembler_sha256': m.sha(Path(__file__)),
+                                     'constraints': plan['constraints'], 'assets': assets})
+    print(json.dumps({'recovered_without_synthesis': turn_id, 'supplementary_assets': 2}))
+
+
+def export(output, destination):
+    plan, registry, turns, cast = m.inputs()
+    m.need(not destination.exists(), 'Export destination already exists')
+    attempts = []
+    for subdir in ['', 'recovery/']:
+        for path in sorted((output / subdir / 'attempts').glob('*.json')):
+            row = m.read(path)
+            row['attempt_batch'] = 'initial' if not subdir else 'infrastructure_recovery'
+            for field in ['raw', 'normal', 'slow']:
+                if field in row:
+                    row[field]['path'] = subdir + row[field]['path']
+            attempts.append(row)
+    recovery = m.read(output / 'journal-recovery.json')
+    assets = m.read(output / 'assets.json')['assets']
+    additional = {a['asset_id']: a for a in m.read(output / 'supplement/assets.json')['assets']}
+    assets = [additional.get(a['asset_id'], a) for a in assets]
+    available_turn_ids = {a['turn_id'] for a in attempts if a['status'] == 'GENERATED_UNREVIEWED'} | {recovery['turn']['turn_id']}
+    for asset in assets:
+        if asset['status'] == 'NOT_GENERATED':
+            asset['missing_turn_ids'] = [turn_id for turn_id in asset['turn_ids'] if turn_id not in available_turn_ids]
+    screens = []
+    for subdir in ['', 'supplement/']:
+        job = m.read(output / subdir / 'asr-run.json')
+        for path in sorted((output / subdir / 'asr').glob('*.json')):
+            screens.append(m.read(path))
+        # The per-asset records are independently complete even if the aggregate
+        # journal is stale. Preserve the actual journal; never silently repair it.
+    completed = [a for a in assets if a['status'] == 'GENERATED_UNREVIEWED']
+    m.need(len(completed) == len(screens) == 216, 'Not all available assets have ASR records')
+    m.need(all(s['status'] == 'SCREENED' for s in screens), 'ASR failure remains')
+    destination.mkdir(parents=True)
+    # Keep all attempted raw/processed bytes, including the two interrupted initial
+    # attempts. Do not copy environments, model weights or repository-backed code.
+    for subdir in ['raw', 'turns', 'recovery/raw', 'recovery/turns', 'audio']:
+        shutil.copytree(output / subdir, destination / subdir)
+    for a in additional.values():
+        target = destination / a['path']
+        target.parent.mkdir(parents=True, exist_ok=True)
+        m.need(not target.exists(), 'Supplement would overwrite an existing audio file')
+        shutil.copyfile(output / 'supplement' / a['path'], target)
+    payload_files = [m.file_record(p, destination) for p in sorted(destination.rglob('*.wav'))]
+    m.write(destination / 'SHA256SUMS.json', payload_files)
+    by_id = {s['asset_id']: s for s in screens}
+    with (destination / 'review-index.csv').open('w', newline='', encoding='utf-8-sig') as f:
+        columns = ['asset_id', 'stable_code', 'language', 'speed', 'status', 'file', 'expected_text', 'asr_text', 'word_edits', 'review_flag']
+        writer = csv.DictWriter(f, fieldnames=columns)
+        writer.writeheader()
+        for a in assets:
+            s = by_id.get(a['asset_id'], {})
+            writer.writerow(dict(zip(columns, [a['asset_id'], a['stable_code'], a['language'], a['speed'], a['status'],
+                a.get('path', ''), a['transcript'], s.get('transcript', ''), s.get('word_edits', ''), s.get('review_flag', 'NOT_GENERATED')])))
+    (destination / 'README_UA.txt').write_text(
+        'Lingvessa — неопублікована аудіочернетка M01\n\n'
+        '216 кінцевих WAV: 210 англійських і 6 чеських, включно з повільними версіями.\n'
+        '204 чеські файли не створено: зафіксований PyTorch повертає HTTP 403.\n'
+        'audio/ містить файли для прослуховування; raw/, turns/ і recovery/ — початкові та проміжні записи.\n'
+        'review-index.csv пов’язує всі 420 запланованих ID з текстом, файлом і результатом ASR.\n'
+        'ASR знаходить можливі розбіжності; це не оцінка вимови людиною. Усі файли потребують перевірки.\n'
+        'SHA256SUMS.json дозволяє перевірити кожен WAV. Джерела й повний журнал: PR #5.\n'
+        'https://github.com/PV007PV007/Lingvessa/pull/5\n\n'
+        'Робочі голоси: Maya A, Daniel B, Alex C; Klára C, Adam A, Oksana B.\n'
+        'Повільне аудіо створено atempo=0.8, без зміни тексту.\n'
+        'Публікація, остаточне схвалення голосів і мовна перевірка ще не виконані. P5 NOT_READY.\n', encoding='utf-8')
+    records = []
+    for role, rows in [('attempts', attempts), ('assets', assets), ('screens', screens), ('payload_files', payload_files)]:
+        for i in range(0, len(rows), 30):
+            path = m.BATCH / 'records' / f'{role}-{i // 30:02d}.json'
+            m.write(path, rows[i:i + 30])
+            records.append({'role': role, 'path': str(path.relative_to(m.ROOT)), 'sha256': m.sha(path), 'count': len(rows[i:i + 30])})
+    evidence = []
+    for name, path in [('generation-initial.json', output / 'generation-piper.json'),
+                       ('generation-recovery.json', output / 'recovery/generation-piper.json'),
+                       ('asr-main.json', output / 'asr-run.json'), ('asr-supplement.json', output / 'supplement/asr-run.json'),
+                       ('journal-recovery.json', output / 'journal-recovery.json')]:
+        target = m.BATCH / name
+        shutil.copyfile(path, target)
+        evidence.append({'path': str(target.relative_to(m.ROOT)), 'sha256': m.sha(target)})
+    archive = destination.with_suffix('.zip')
+    with zipfile.ZipFile(archive, 'x', compression=zipfile.ZIP_DEFLATED, compresslevel=6) as z:
+        for path in sorted(destination.rglob('*')):
+            if path.is_file():
+                z.write(path, path.relative_to(destination).as_posix())
+    result = {'schema_version': 1, 'batch': plan['batch'], 'plan_sha256': m.sha(m.BATCH / 'plan.json'),
+        'continuation_plan_sha256': m.sha(m.BATCH / 'continuation-plan.json'),
+        'authoring_script_sha256': m.sha(Path(__file__).with_name('m01-audio-draft.py')),
+        'export_script_sha256': m.sha(Path(__file__)), 'records': records, 'evidence': evidence,
+        'journal_recovery_script_path': 'tools/p5/archive/export-m01-journal-20261011.txt',
+        'journal_recovery_script_sha256': m.sha(Path(__file__).parent / 'archive/export-m01-journal-20261011.txt'),
+        'counts': {'planned_scripts': 168, 'planned_turns': 201, 'planned_assets': 420, 'generated_unique_turns': 104,
+                   'synthesis_attempt_records': len(attempts), 'interrupted_initial_attempts': 2,
+                   'infrastructure_replacement_attempts': 2, 'processing_journal_recovered_without_synthesis': 1,
+                   'available_assets': len(completed), 'not_generated_assets': 420 - len(completed),
+                   'asr_screened_assets': len(screens), 'asr_discrepancy_assets': sum(s['word_edits'] > 0 for s in screens),
+                   'asr_word_edits': sum(s['word_edits'] for s in screens), 'asr_reference_words': sum(s['reference_words'] for s in screens),
+                   'payload_wavs': len(payload_files)},
+        'technical_status': 'PARTIAL_DEPENDENCY_BLOCK', 'quality_retries': 0, 'constraints': plan['constraints'],
+        'network_incident': 'Initial native telemetry attempt triggered automatic approval rejection. Subsequent inference uses kernel-enforced network denial plus disabled ONNX telemetry. No payload or successful prior egress assertion.',
+        'journal_limit': 'Original aggregate journals are retained as observed; per-file byte checks, per-asset ASR records and explicit processing recovery determine completion. No retrospective completion timestamp.',
+        'artifact': {'file_name': archive.name, 'bytes': archive.stat().st_size, 'sha256': m.sha(archive)},
+        'ci_scope': 'Metadata, source identities, hashes, timings, ASR bookkeeping and explicit open gates only. Audio ZIP bytes are externally retained and must be checked with --audio-root locally.'}
+    m.write(m.BATCH / 'results.json', result)
+    print(json.dumps({'counts': result['counts'], 'artifact': result['artifact']}))
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('command', choices=['recover-journal', 'export'])
+    parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--destination', type=Path)
+    args = parser.parse_args()
+    if args.command == 'recover-journal':
+        recover(args.output.resolve())
+    else:
+        m.need(args.destination is not None, '--destination is required')
+        export(args.output.resolve(), args.destination.resolve())

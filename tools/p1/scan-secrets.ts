@@ -1,13 +1,18 @@
 import { execFileSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
 import { secretRuleIds } from './secret-rules.js';
+import { reviewedNonSecretFixture } from './reviewed-secret-fixtures.js';
 
 const git = (args: string[]) => execFileSync('git', args, { encoding: 'utf8', maxBuffer: 32 * 1024 * 1024 });
 const files = git(['ls-files', '--cached', '--others', '--exclude-standard', '-z']).split('\0').filter(Boolean);
 const findings: { location: string; rules: string[] }[] = [];
+const reviewedFixtures: {location:string;rules:string[]}[]=[];
 function inspect(location: string, bytes: Buffer) {
   if (bytes.subarray(0, 8192).includes(0) || bytes.subarray(0, 4).toString() === '%PDF') return;
-  const rules = secretRuleIds(bytes.toString('utf8'));
+  const rawRules = secretRuleIds(bytes.toString('utf8'));
+  const reviewed=reviewedNonSecretFixture(location,bytes).filter(rule=>rawRules.includes(rule));
+  if(reviewed.length)reviewedFixtures.push({location,rules:reviewed});
+  const rules = rawRules.filter(rule=>!reviewed.includes(rule));
   if (rules.length) findings.push({ location, rules });
 }
 for (const file of new Set(files)) {
@@ -26,5 +31,5 @@ for (const line of git(['rev-list', '--objects', '--all']).trim().split('\n')) {
   blobs.add(oid);
   inspect(`history:${oid.slice(0, 12)}:${parts.join(' ')}`, execFileSync('git', ['cat-file', 'blob', oid], { maxBuffer: 32 * 1024 * 1024 }));
 }
-console.log(JSON.stringify({ source_files: new Set(files).size, history_blobs: blobs.size, findings }, null, 2));
+console.log(JSON.stringify({ source_files: new Set(files).size, history_blobs: blobs.size, findings, reviewed_non_secret_fixtures:reviewedFixtures }, null, 2));
 if (findings.length) process.exitCode = 1;

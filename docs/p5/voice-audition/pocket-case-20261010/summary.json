@@ -1,0 +1,133 @@
+{
+  "initial": {
+    "plan_sha256": "77ed34e90fc4339d51e34350f664d1f670a567c9fcb237f1bff11de4c5a3d1b6",
+    "pairs": [
+      {
+        "candidate": "cs-B-pocket-A",
+        "pace": "normal",
+        "reference_words": 10,
+        "control_edits": 5,
+        "lowercase_edits": 3,
+        "control_transcript": "Dobý den, jak semenujete, těší mě, uvůvím česky, děkuj.",
+        "lowercase_transcript": "Dobrý den. Jak semenujete? Těší mě. Mluvím česky. Děkují."
+      },
+      {
+        "candidate": "cs-B-pocket-A",
+        "pace": "slow",
+        "reference_words": 10,
+        "control_edits": 5,
+        "lowercase_edits": 4,
+        "control_transcript": "Dobý den, jak semenujete, těší mě, uvůvím česky, děkuj.",
+        "lowercase_transcript": "Dobrý den, jak semenujete, těží mě, mluvím česky, děkuju."
+      },
+      {
+        "candidate": "cs-C-pocket-C",
+        "pace": "normal",
+        "reference_words": 10,
+        "control_edits": 4,
+        "lowercase_edits": 1,
+        "control_transcript": "do býden. Jak se menujete? Těší mě. Mluvím česky. Děkuju.",
+        "lowercase_transcript": "Dobrý den. Jak se menujete? Těší mě. Mluvím česky. Děkuji."
+      },
+      {
+        "candidate": "cs-C-pocket-C",
+        "pace": "slow",
+        "reference_words": 10,
+        "control_edits": 3,
+        "lowercase_edits": 2,
+        "control_transcript": "Dobí den, jak se menujete, těší mě, mluvím česky, děkuj.",
+        "lowercase_transcript": "Dobrý den, jak se menujete, těší mě, mluvím česky, děkuj."
+      }
+    ],
+    "all_pairs_strictly_improve": true
+  },
+  "heldout": {
+    "plan_sha256": "d948124d3de72a43eb00abca6e3653af0e8a1d59f518a870d5db0a1039accc10",
+    "pairs": [
+      {
+        "candidate": "cs-B-pocket-A",
+        "pace": "normal",
+        "reference_words": 13,
+        "control_edits": 1,
+        "lowercase_edits": 1,
+        "control_transcript": "Můžete to zopakovat, prosím. Mennuji se Oksana. Odkud jste. Ona je učitelka. Nerozumím.",
+        "lowercase_transcript": "Můžete to zopakovat, prosím. Ménuji se Oksana. Odkud jste. Ona je učitelka. Nerozumím."
+      },
+      {
+        "candidate": "cs-B-pocket-A",
+        "pace": "slow",
+        "reference_words": 13,
+        "control_edits": 1,
+        "lowercase_edits": 1,
+        "control_transcript": "Můžete to zopakovat, prosím, tmenuj se Oksana, odkud jste, ona je učitelka, nerozumím.",
+        "lowercase_transcript": "Můžete to zopakovat prosím. Ménuji se Oksana. Odkud jste. Ona je učitelka. Nerozumím."
+      },
+      {
+        "candidate": "cs-C-pocket-C",
+        "pace": "normal",
+        "reference_words": 13,
+        "control_edits": 1,
+        "lowercase_edits": 1,
+        "control_transcript": "Můžete to zopakovat, prosím, nemenuj se Oksana, odkud jste, ona je učitelka, nerozumím.",
+        "lowercase_transcript": "Můžete to zopakovat prosím. Měnuj se Oksana. Odkud jste. Ona je učitelka. Nerozumím."
+      },
+      {
+        "candidate": "cs-C-pocket-C",
+        "pace": "slow",
+        "reference_words": 13,
+        "control_edits": 1,
+        "lowercase_edits": 1,
+        "control_transcript": "Můžete to zopakovat, prosím. Nemenuj se Oksana. Odkud jste. Ona je učitelka. Nerozumím.",
+        "lowercase_transcript": "Můžete to zopakovat prosím. Ménuji se Oksana. Odkud jste. Ona je učitelka. Nerozumím."
+      }
+    ],
+    "all_pairs_strictly_improve": false
+  },
+  "conclusion": "INITIAL_IMPROVEMENT_NOT_CONFIRMED_ON_HELDOUT",
+  "control_reproduction": [
+    {
+      "candidate": "cs-B-pocket-A",
+      "pace": "normal",
+      "file_bytes_identical": false,
+      "frame_count_identical": true,
+      "pcm_samples_differing": 4636,
+      "maximum_pcm16_delta": 4
+    },
+    {
+      "candidate": "cs-B-pocket-A",
+      "pace": "slow",
+      "file_bytes_identical": false,
+      "frame_count_identical": true,
+      "pcm_samples_differing": 5930,
+      "maximum_pcm16_delta": 4
+    },
+    {
+      "candidate": "cs-C-pocket-C",
+      "pace": "normal",
+      "file_bytes_identical": false,
+      "frame_count_identical": true,
+      "pcm_samples_differing": 20810,
+      "maximum_pcm16_delta": 55
+    },
+    {
+      "candidate": "cs-C-pocket-C",
+      "pace": "slow",
+      "file_bytes_identical": false,
+      "frame_count_identical": true,
+      "pcm_samples_differing": 26769,
+      "maximum_pcm16_delta": 55
+    }
+  ],
+  "historical_asr_variation": "Fresh ASR of unchanged historical C slow audio has 4 edits; archived screen had 3. Historical bytes/reports are not overwritten. ASR is a fallible diagnostic, not a pronunciation judgment.",
+  "generation_attempts": 40,
+  "generation_failures": 0,
+  "normal_slow_clips": 16,
+  "raw_turns": 40,
+  "asr_bindings": 28,
+  "human_review": "PENDING",
+  "candidate_status": "HOLD_FOR_REVIEW",
+  "selected_for_full_generation": false,
+  "approved_publication_assets": 0,
+  "p5_milestone": "NOT_READY",
+  "p6_authorized": false
+}

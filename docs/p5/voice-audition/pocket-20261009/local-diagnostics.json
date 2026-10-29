@@ -1,0 +1,7 @@
+{
+  "asr_initial_attempt": "FAILED before any transcript: PyAV 19.0.1 rejects metadata_errors argument used by faster-whisper 1.2.1 file decoder",
+  "resolution": "Decode all PCM16 WAVs with scipy, resample_poly to 16000 Hz, pass float32 arrays through supported faster-whisper API; no dependency pin change or result waiver",
+  "prior_Nano_context": "Prior conversation reports failed Nano runs. Their bytes and logs were not available after checkpoint recovery. They are not fabricated or counted as verified evidence here.",
+  "synthetic_references": "Existing committed Piper EN A p225 and EN C p228; not newly designed MOSS voices",
+  "application_changes": false
+}

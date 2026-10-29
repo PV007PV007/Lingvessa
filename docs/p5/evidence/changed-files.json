@@ -1,0 +1,2134 @@
+{
+  "compared_to_accepted_main": "5027f001237b6451237d87343ebeca58cd0af007",
+  "timestamp": "2026-10-22",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "status": "M"
+    },
+    {
+      "path": ".github/actions/private-m01-bridge/action.yml",
+      "status": "A"
+    },
+    {
+      "path": ".github/actions/private-m01-bridge/bridge.mjs",
+      "status": "A"
+    },
+    {
+      "path": ".github/workflows/p5.yml",
+      "status": "A"
+    },
+    {
+      "path": ".gitignore",
+      "status": "M"
+    },
+    {
+      "path": "00_CONTEXT/01_implementation_state_and_handoff.md",
+      "status": "M"
+    },
+    {
+      "path": "apps/admin/package.json",
+      "status": "M"
+    },
+    {
+      "path": "apps/api/src/app.ts",
+      "status": "M"
+    },
+    {
+      "path": "apps/api/src/main.ts",
+      "status": "M"
+    },
+    {
+      "path": "apps/api/src/media.ts",
+      "status": "A"
+    },
+    {
+      "path": "apps/api/src/speech.ts",
+      "status": "A"
+    },
+    {
+      "path": "apps/web/package.json",
+      "status": "M"
+    },
+    {
+      "path": "apps/web/src/app/api/v1/[...segments]/route.ts",
+      "status": "M"
+    },
+    {
+      "path": "apps/web/src/app/globals.css",
+      "status": "M"
+    },
+    {
+      "path": "apps/web/src/lesson/activity.tsx",
+      "status": "M"
+    },
+    {
+      "path": "apps/web/src/lesson/media.tsx",
+      "status": "A"
+    },
+    {
+      "path": "apps/web/src/lesson/player.tsx",
+      "status": "M"
+    },
+    {
+      "path": "apps/web/src/lesson/speech.tsx",
+      "status": "A"
+    },
+    {
+      "path": "apps/worker/src/main.ts",
+      "status": "M"
+    },
+    {
+      "path": "assets/media/m01/records/audio-00.json",
+      "status": "A"
+    },
+    {
+      "path": "assets/media/m01/records/audio-01.json",
+      "status": "A"
+    },
+    {
+      "path": "assets/media/m01/records/audio-02.json",
+      "status": "A"
+    },
+    {
+      "path": "assets/media/m01/records/audio-03.json",
+      "status": "A"
+    },
+    {
+      "path": "assets/media/m01/records/audio-04.json",
+      "status": "A"
+    },
+    {
+      "path": "assets/media/m01/records/audio-05.json",
+      "status": "A"
+    },
+    {
+      "path": "assets/media/m01/records/audio-06.json",
+      "status": "A"
+    },
+    {
+      "path": "assets/media/m01/records/audio-07.json",
+      "status": "A"
+    },
+    {
+      "path": "assets/media/m01/records/audio-08.json",
+      "status": "A"
+    },
+    {
+      "path": "assets/media/m01/records/audio-09.json",
+      "status": "A"
+    },
+    {
+      "path": "assets/media/m01/records/audio-10.json",
+      "status": "A"
+    },
+    {
+      "path": "assets/media/m01/records/audio-11.json",
+      "status": "A"
+    },
+    {
+      "path": "assets/media/m01/records/audio-12.json",
+      "status": "A"
+    },
+    {
+      "path": "assets/media/m01/records/audio-13.json",
+      "status": "A"
+    },
+    {
+      "path": "assets/media/m01/records/visual-00.json",
+      "status": "A"
+    },
+    {
+      "path": "assets/media/m01/registry.json",
+      "status": "A"
+    },
+    {
+      "path": "assets/media/m01/source-all-assets.json",
+      "status": "A"
+    },
+    {
+      "path": "assets/media/m01/source-catalog.json",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/README.md",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/flags/UPSTREAM-README.md",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/flags/normalized/cz.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/flags/normalized/de.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/flags/normalized/es.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/flags/normalized/gb.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/flags/normalized/pl.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/flags/normalized/sk.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/flags/normalized/ua.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/flags/provenance.json",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/flags/source/cz.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/flags/source/de.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/flags/source/es.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/flags/source/gb.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/flags/source/pl.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/flags/source/sk.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/flags/source/ua.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/generated/cs/AV_CZE_ADAM_01.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/generated/cs/AV_CZE_KLARA_01.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/generated/cs/AV_CZE_OKSANA_01.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/generated/cs/IMG_CZE_M01_CLASS_01.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/generated/cs/IMG_CZE_M01_FORMAL_01.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/generated/cs/IMG_CZE_M01_INFORMAL_01.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/generated/cs/VEC_CS_REPEAT.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/generated/cs/VEC_CS_THANKS.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/generated/cs/VEC_CS_UNCLEAR.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/generated/en/AV_ENG_DANIEL_01.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/generated/en/AV_ENG_MAYA_01.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/generated/en/AV_ENG_TEACHER_01.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/generated/en/IMG_ENG_M01_CLUB_01.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/generated/en/IMG_ENG_M01_EVENING_01.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/generated/en/IMG_ENG_M01_MORNING_01.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/generated/en/VEC_EN_REPEAT.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/generated/en/VEC_EN_THANKS.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/generated/en/VEC_EN_UNCLEAR.svg",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/reference-media.registry.json",
+      "status": "A"
+    },
+    {
+      "path": "assets/specs/p5/reference-media.source.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/baseline/open-decisions.md",
+      "status": "M"
+    },
+    {
+      "path": "docs/p5/P5_exit_evidence.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/acoustic-provider/model.lock.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/acoustic-provider/pilot-plan.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/acoustic-provider/pilot-results/STARTED.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/acoustic-provider/pilot-results/results-00.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/acoustic-provider/pilot-results/results-01.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/acoustic-provider/pilot-results/results-02.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/acoustic-provider/pilot-results/results-03.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/acoustic-provider/pilot-results/results-04.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/acoustic-provider/pilot-results/results-05.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/acoustic-provider/pilot-results/results-06.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/acoustic-provider/pilot-results/results-07.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/acoustic-provider/pilot-results/results-08.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/acoustic-provider/pilot-results/results-09.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/acoustic-provider/pilot-results/results-10.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/acoustic-provider/pilot-results/results-11.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/acoustic-provider/pilot-results/results-12.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/acoustic-provider/pilot-results/results-13.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/acoustic-provider/pilot-results/summary.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/acoustic-provider/requirements-locked.txt",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/acoustic-provider/tooling.lock.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/authorization.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/accepted-file-checksums.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/case-recovery.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/case-upload-authorization.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/changed-files.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/ci-audition-audit-failure.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/ci-batch-001.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/ci-batch-002.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/ci-batch-003.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/ci-batch-004.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/ci-batch-005.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/ci-batch-006.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/ci-batch-007.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/ci-batch-008.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/ci-batch-009.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/ci-batch-010.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/ci-batch-011.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/ci-batch-012.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/ci-batch-013.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/ci-case-20261011.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/ci-pocket-audit-failure.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/dependency-patch-validation.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/dependency-remediation-008.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/local-audio-validation.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/local-batch-007.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/local-batch-008.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/local-pocket-recovery.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/local-validation.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/p4-acceptance.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/p4-handoff-at-acceptance.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/pocket-upload-authorization.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/schema-api-diff.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/evidence/sharp-patch-validation.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261014/authorization.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261014/local-evidence/acoustic-pilot-validation.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261014/local-evidence/acoustic-runtime-validation.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261014/local-evidence/code-bindings.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261015/README.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261015/acoustic-pilot-validation.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261015/external-m01-byte-validation.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261015/historical-blob-receipts.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261015/local-validation.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261015/parent-ci.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261015/recovery-state.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261016/README.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261016/attached-archive-verification.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261016/parent-ci.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261017/README.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261017/parent-ci.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261017/private-transfer-plan.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261017/transfer-receipt.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261018/README.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261018/prior-real-failure.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261018/remaining-gates.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261018/verified-ci-460aab0.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261018/visual-preflight.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261019/README.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261019/verified-ci-c55647e.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261020/README.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261020/verified-ci-b9c34fa.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261021/README.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261021/ci-742bbdc-regression-failure.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261021/pr5-before-accessibility.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261021/verified-ci-d2ec78a.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261022/README.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261022/ci-b57ae9c-input-defect.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261022/ci-c2e0226-failure.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/integration-20261022/verified-ci-96cc960.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/listening-review.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/README.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/asr-main.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/asr-supplement.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/availability.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/continuation-plan.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/delivery.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/generation-initial.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/generation-recovery.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/journal-recovery.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/local-byte-validation.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/plan.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/assets-00.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/assets-01.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/assets-02.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/assets-03.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/assets-04.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/assets-05.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/assets-06.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/assets-07.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/assets-08.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/assets-09.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/assets-10.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/assets-11.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/assets-12.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/assets-13.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/attempts-00.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/attempts-01.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/attempts-02.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/attempts-03.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-00.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-01.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-02.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-03.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-04.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-05.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-06.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-07.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-08.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-09.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-10.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-11.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-12.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-13.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-14.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-15.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-16.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-17.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/screens-00.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/screens-01.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/screens-02.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/screens-03.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/screens-04.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/screens-05.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/screens-06.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/records/screens-07.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/results.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/QUALITY_REPORT_UA.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/README.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/asr-run.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/assembly-checkpoint.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/availability.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/checkpoint-delivery.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/delivery-byte-validation.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/delivery.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/dialogue-crosscheck-plan.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/dialogue-crosscheck.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/generation.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/library-delivery.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/medium-model.lock.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/owner-approval.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/processing-recovery.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/reconstruction-plan.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/records/assets-00.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/records/assets-01.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/records/assets-02.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/records/assets-03.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/records/assets-04.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/records/assets-05.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/records/assets-06.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/records/screens-00.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/records/screens-01.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/records/screens-02.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/records/screens-03.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/records/screens-04.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/records/screens-05.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/records/screens-06.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/records/turns-00.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/records/turns-01.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/records/turns-02.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/records/turns-03.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/results.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/retained-assembly-marker.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/review-priorities.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/screen-selection.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-completion-attribution.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-continuation.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-feedback-intake.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-listening-review.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-listening-review/feedback-intake-local-validation.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/m01-listening-review/local-byte-validation.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/media-ingestion-integrity.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/owner-decision-inputs.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/requirement-evidence.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/speech-contract.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/storage-protocol-spike.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/task-status.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/trace-review.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/visual-approval-20261020/owner-approval.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/visual-approval-20261020/reviewed-manifest.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/README.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/audition-plan.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/authorization.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/cs-jirka-MODEL_CARD.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/en-vctk-MODEL_CARD.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/local-validation.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/models.lock.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/MODEL_CARD.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/README.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/archive-README.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/archive-listening-validation.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/archive-write-status.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/asr-model.lock.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/asr-screen.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/continuous/asr-screen.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/continuous/cs-B-pocket-A-continuous.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/continuous/cs-C-pocket-C-continuous.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/continuous/results.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/local-diagnostics.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/local-validation.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/models.lock.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/recovery.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/requirements-local.txt",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/results.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-normal.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-slow.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-turn-1.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-turn-2.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-turn-3.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-turn-4.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-turn-5.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-normal.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-slow.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-turn-1.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-turn-2.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-turn-3.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-turn-4.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-turn-5.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-20261009/tooling-lock.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/README.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/asr-screen.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/asr.log",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/downloads.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/environment-install.log",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/generation.log",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/listening-validation.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/plan.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/results.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-control-normal.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-control-slow.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-control-turn-1.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-control-turn-2.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-control-turn-3.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-control-turn-4.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-control-turn-5.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-lowercase-normal.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-lowercase-slow.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-lowercase-turn-1.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-lowercase-turn-2.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-lowercase-turn-3.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-lowercase-turn-4.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-lowercase-turn-5.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-control-normal.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-control-slow.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-control-turn-1.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-control-turn-2.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-control-turn-3.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-control-turn-4.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-control-turn-5.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-lowercase-normal.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-lowercase-slow.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-lowercase-turn-1.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-lowercase-turn-2.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-lowercase-turn-3.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-lowercase-turn-4.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-lowercase-turn-5.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/summary.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-20261010/upstream-czech.yaml",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/README.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/asr-screen.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/asr.log",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/downloads.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/generation.log",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/plan.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/results.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-control-normal.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-control-slow.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-control-turn-1.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-control-turn-2.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-control-turn-3.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-control-turn-4.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-control-turn-5.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-lowercase-normal.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-lowercase-slow.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-lowercase-turn-1.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-lowercase-turn-2.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-lowercase-turn-3.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-lowercase-turn-4.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-B-pocket-A-lowercase-turn-5.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-C-pocket-C-control-normal.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-C-pocket-C-control-slow.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-C-pocket-C-control-turn-1.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-C-pocket-C-control-turn-2.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-C-pocket-C-control-turn-3.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-C-pocket-C-control-turn-4.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-C-pocket-C-control-turn-5.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-C-pocket-C-lowercase-normal.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-C-pocket-C-lowercase-slow.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-C-pocket-C-lowercase-turn-1.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-C-pocket-C-lowercase-turn-2.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-C-pocket-C-lowercase-turn-3.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-C-pocket-C-lowercase-turn-4.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/pocket-case-holdout-20261010/samples/cs-C-pocket-C-lowercase-turn-5.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/requirements-local.txt",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/resource-assessment.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/results.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/samples/cs-A-jirka-normal.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/samples/cs-A-jirka-slow.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/samples/en-A-p225-normal.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/samples/en-A-p225-slow.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/samples/en-B-p226-normal.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/samples/en-B-p226-slow.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/samples/en-C-p228-normal.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/samples/en-C-p228-slow.wav",
+      "status": "A"
+    },
+    {
+      "path": "docs/p5/voice-audition/tooling-lock.json",
+      "status": "A"
+    },
+    {
+      "path": "infra/config/media.ts",
+      "status": "A"
+    },
+    {
+      "path": "infra/config/speech.ts",
+      "status": "A"
+    },
+    {
+      "path": "infra/contracts/p3.openapi.json",
+      "status": "M"
+    },
+    {
+      "path": "infra/contracts/p5-speech.openapi.json",
+      "status": "A"
+    },
+    {
+      "path": "infra/local/database-guard.ts",
+      "status": "M"
+    },
+    {
+      "path": "infra/persistence/content.ts",
+      "status": "M"
+    },
+    {
+      "path": "infra/persistence/identity.ts",
+      "status": "M"
+    },
+    {
+      "path": "infra/persistence/lessons.ts",
+      "status": "M"
+    },
+    {
+      "path": "infra/persistence/media.ts",
+      "status": "A"
+    },
+    {
+      "path": "infra/persistence/p3-fixtures.ts",
+      "status": "M"
+    },
+    {
+      "path": "infra/persistence/p5-quota.ts",
+      "status": "A"
+    },
+    {
+      "path": "infra/persistence/speech.ts",
+      "status": "A"
+    },
+    {
+      "path": "package.json",
+      "status": "M"
+    },
+    {
+      "path": "packages/activity-schemas/src/content.ts",
+      "status": "M"
+    },
+    {
+      "path": "packages/activity-schemas/src/lesson.ts",
+      "status": "M"
+    },
+    {
+      "path": "packages/activity-schemas/src/media-delivery.ts",
+      "status": "A"
+    },
+    {
+      "path": "packages/activity-schemas/src/media.ts",
+      "status": "A"
+    },
+    {
+      "path": "packages/activity-schemas/src/speech.ts",
+      "status": "A"
+    },
+    {
+      "path": "packages/api-client/src/speech.ts",
+      "status": "A"
+    },
+    {
+      "path": "packages/application/src/media.ts",
+      "status": "A"
+    },
+    {
+      "path": "packages/application/src/speech.ts",
+      "status": "A"
+    },
+    {
+      "path": "packages/lesson-engine/src/audio.ts",
+      "status": "A"
+    },
+    {
+      "path": "packages/lesson-engine/src/registry.ts",
+      "status": "M"
+    },
+    {
+      "path": "packages/lesson-engine/src/speech.ts",
+      "status": "A"
+    },
+    {
+      "path": "packages/lesson-engine/src/state.ts",
+      "status": "M"
+    },
+    {
+      "path": "packages/provider-adapters/speech/callback.ts",
+      "status": "A"
+    },
+    {
+      "path": "packages/provider-adapters/speech/local-acoustic.ts",
+      "status": "A"
+    },
+    {
+      "path": "packages/provider-adapters/speech/transient.ts",
+      "status": "A"
+    },
+    {
+      "path": "packages/provider-adapters/speech/unavailable.ts",
+      "status": "A"
+    },
+    {
+      "path": "packages/provider-adapters/storage/asset-integrity.ts",
+      "status": "A"
+    },
+    {
+      "path": "packages/provider-adapters/storage/local.ts",
+      "status": "A"
+    },
+    {
+      "path": "packages/provider-adapters/storage/s3.ts",
+      "status": "A"
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "status": "M"
+    },
+    {
+      "path": "pnpm-workspace.yaml",
+      "status": "M"
+    },
+    {
+      "path": "prisma/migrations/202609260001_p5_media_foundation/migration.sql",
+      "status": "A"
+    },
+    {
+      "path": "prisma/migrations/202609270001_p5_speech_contract/migration.sql",
+      "status": "A"
+    },
+    {
+      "path": "prisma/migrations/202610140001_p5_media_library/migration.sql",
+      "status": "A"
+    },
+    {
+      "path": "prisma/migrations/202610210001_p5_media_accessibility/migration.sql",
+      "status": "A"
+    },
+    {
+      "path": "prisma/migrations/202610220001_p5_audio_activity_closure/migration.sql",
+      "status": "A"
+    },
+    {
+      "path": "prisma/schema.prisma",
+      "status": "M"
+    },
+    {
+      "path": "tests/browser/p5-listening-review.spec.ts",
+      "status": "A"
+    },
+    {
+      "path": "tests/browser/p5-m01-review.spec.ts",
+      "status": "A"
+    },
+    {
+      "path": "tests/browser/p5-media.spec.ts",
+      "status": "A"
+    },
+    {
+      "path": "tests/browser/p5-speech.spec.ts",
+      "status": "A"
+    },
+    {
+      "path": "tests/browser/p5-visual-review.spec.ts",
+      "status": "A"
+    },
+    {
+      "path": "tests/integration/bootstrap.test.ts",
+      "status": "M"
+    },
+    {
+      "path": "tests/integration/p2-foundation.test.ts",
+      "status": "M"
+    },
+    {
+      "path": "tests/integration/p3-lesson-engine.test.ts",
+      "status": "M"
+    },
+    {
+      "path": "tests/integration/p4-mastery-review.test.ts",
+      "status": "M"
+    },
+    {
+      "path": "tests/integration/p5-audio.test.ts",
+      "status": "A"
+    },
+    {
+      "path": "tests/integration/p5-media-library.test.ts",
+      "status": "A"
+    },
+    {
+      "path": "tests/integration/p5-media.test.ts",
+      "status": "A"
+    },
+    {
+      "path": "tests/integration/p5-speech.test.ts",
+      "status": "A"
+    },
+    {
+      "path": "tests/support/p4-fixtures.ts",
+      "status": "M"
+    },
+    {
+      "path": "tests/support/p5-audio-fixtures.ts",
+      "status": "A"
+    },
+    {
+      "path": "tests/support/p5-fixtures.ts",
+      "status": "A"
+    },
+    {
+      "path": "tests/support/p5-speech-fixtures.ts",
+      "status": "A"
+    },
+    {
+      "path": "tests/unit/database-guard.test.ts",
+      "status": "M"
+    },
+    {
+      "path": "tests/unit/p5-audio.test.ts",
+      "status": "A"
+    },
+    {
+      "path": "tests/unit/p5-fixture-readiness.test.ts",
+      "status": "A"
+    },
+    {
+      "path": "tests/unit/p5-m01-completion.test.py",
+      "status": "A"
+    },
+    {
+      "path": "tests/unit/p5-m01-continuation.test.py",
+      "status": "A"
+    },
+    {
+      "path": "tests/unit/p5-m01-feedback.test.py",
+      "status": "A"
+    },
+    {
+      "path": "tests/unit/p5-media-library.test.ts",
+      "status": "A"
+    },
+    {
+      "path": "tests/unit/p5-media.test.ts",
+      "status": "A"
+    },
+    {
+      "path": "tests/unit/p5-private-bridge.test.mjs",
+      "status": "A"
+    },
+    {
+      "path": "tests/unit/p5-private-envelope.test.py",
+      "status": "A"
+    },
+    {
+      "path": "tests/unit/p5-private-relay.test.py",
+      "status": "A"
+    },
+    {
+      "path": "tests/unit/p5-private-transfer.test.py",
+      "status": "A"
+    },
+    {
+      "path": "tests/unit/p5-publication-bindings.test.ts",
+      "status": "A"
+    },
+    {
+      "path": "tests/unit/p5-reviewed-secret-fixture.test.ts",
+      "status": "A"
+    },
+    {
+      "path": "tests/unit/p5-speech.test.ts",
+      "status": "A"
+    },
+    {
+      "path": "tests/unit/p5-visual-owner-approval.test.ts",
+      "status": "A"
+    },
+    {
+      "path": "tools/governance/validate_p3_baseline.py",
+      "status": "M"
+    },
+    {
+      "path": "tools/governance/validate_p4_baseline.py",
+      "status": "M"
+    },
+    {
+      "path": "tools/governance/validate_p5_baseline.py",
+      "status": "A"
+    },
+    {
+      "path": "tools/p1/reviewed-secret-fixtures.ts",
+      "status": "A"
+    },
+    {
+      "path": "tools/p1/scan-secrets.ts",
+      "status": "M"
+    },
+    {
+      "path": "tools/p2/sql-diagnostics.ts",
+      "status": "M"
+    },
+    {
+      "path": "tools/p3/acceptance-summary.ts",
+      "status": "M"
+    },
+    {
+      "path": "tools/p4/acceptance-summary.ts",
+      "status": "M"
+    },
+    {
+      "path": "tools/p5/acceptance-summary.ts",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/acoustic-engine.py",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/archive/export-m01-journal-20261011.txt",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/archive/m01-audio-draft-initial-20261011.txt",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/authoring_offline.py",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/browser-gate.ts",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/build-approved-media.py",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/build-case-listening.py",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/build-listening-review.py",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/build-m01-review.py",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/build-visual-review.py",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/calibrate-acoustic.py",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/complete-m01-audio.py",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/continue-m01-audio.py",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/crosscheck-m01-dialogues.py",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/export-m01-audio-draft.py",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/fixture-readiness.ts",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/import-approved-media.ts",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/listening-review.html",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/listening.playwright.config.ts",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/m01-audio-draft.py",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/m01-http-delivery.ts",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/m01-publication-bindings.ts",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/m01-review.html",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/m01-review.playwright.config.ts",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/media-library.ts",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/normalize-flags.py",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/openapi.ts",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/playwright.config.ts",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/pocket-audition.py",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/pocket-case-holdout.py",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/pocket-case-trial.py",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/prepare-m01-publication.ts",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/private-m01-envelope.py",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/private-m01-transfer.py",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/recover-m01-pocket-journal.py",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/reference-media.ts",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/s3-test-fixture.ts",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/setup-acoustic-provider.py",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/speech.playwright.config.ts",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/stage-m01-audio.py",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/storage-gate.ts",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/validate-m01-feedback.py",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/verify-acoustic-runtime.ts",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/verify-approved-media-metadata.ts",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/verify-external-m01.ts",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/verify-m01-audio-draft.py",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/verify-m01-s3-import.ts",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/visual-owner-approval.ts",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/visual-review.html",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/visual-review.playwright.config.ts",
+      "status": "A"
+    },
+    {
+      "path": "tools/p5/voice-audition.py",
+      "status": "A"
+    }
+  ]
+}

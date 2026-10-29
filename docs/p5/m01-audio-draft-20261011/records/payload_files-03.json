@@ -1,0 +1,152 @@
+[
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_COUNTRY_GB.wav",
+    "sha256": "1cc8ecf3c69c681c089b57f09621bc3c787fa2a2753853e26a40e20f4a02b1a2",
+    "bytes": 34596
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_COUNTRY_GB_SLOW.wav",
+    "sha256": "437ea25b159a276e78ec9e681f42059d7f80d54f6790cc17946fa09eec2ed0a5",
+    "bytes": 42608
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_COUNTRY_PL.wav",
+    "sha256": "c044ef406783a938388ae4a7b020abd9b2050535cf747357c8fbff924a56f6a4",
+    "bytes": 30696
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_COUNTRY_PL_SLOW.wav",
+    "sha256": "7dcaa18124514e6e2e517ae665124f0d3af7fb050e00f0d4bcd8115743273434",
+    "bytes": 37462
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_COUNTRY_UA.wav",
+    "sha256": "2ace1265979e679879219c09a98ddd8702c23cde6e924fb735bbcad383fedd81",
+    "bytes": 33482
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_COUNTRY_UA_SLOW.wav",
+    "sha256": "65756d907d8b85ced58179620df649ce61ae8f61dd53fb329aaa2990f04f4002",
+    "bytes": 41018
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_DONT_UNDERSTAND.wav",
+    "sha256": "3e5e7f05007163244ef697c846e792b032f2d822348974db415b8a1e9e474938",
+    "bytes": 49086
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_DONT_UNDERSTAND_SLOW.wav",
+    "sha256": "df85e350ada240ae2afddbf98d66e3f361eb7fda1dcb8e1e4dd495779819e7a0",
+    "bytes": 60378
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_FROM_Q.wav",
+    "sha256": "f75ee0033248da67ea407067e65599b0d81e6b23e0eb6a33322904d1e157d0cb",
+    "bytes": 94226
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_FROM_Q_SLOW.wav",
+    "sha256": "8881cd7ef642c905fd06fbb2d6ac37df338eff197bc29e6bdc96bb537d0960a7",
+    "bytes": 116662
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_FROM_UA.wav",
+    "sha256": "5534197efc4d20868867f4b8b9d299bb5a9e6d1b8c498624ce5efcb6e7f00b6b",
+    "bytes": 47414
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_FROM_UA_SLOW.wav",
+    "sha256": "c25cb428bbec39ac105e747c20f656c20203626d3e3d48059506160dd0d8a74d",
+    "bytes": 58670
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_GOODBYE.wav",
+    "sha256": "0059d6d10dc78b85e6e4377ae83e9a42ef655c8966e25b71648864073ce6781a",
+    "bytes": 30696
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_GOODBYE_SLOW.wav",
+    "sha256": "2aa7b6519ae45d8a6ea84c169cb364dda17b3cda0cba42d10456bd64338089dd",
+    "bytes": 37752
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_GOOD_EVENING.wav",
+    "sha256": "0e99ac7fee52724e3067e899700196e2398bc5ae4532cba0eba068a798440563",
+    "bytes": 79178
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_GOOD_EVENING_SLOW.wav",
+    "sha256": "c83df1877850ef2213154bf156e8caae13ad5e52958b98fc0bd44f00a46a7dca",
+    "bytes": 98270
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_GOOD_MORNING.wav",
+    "sha256": "e07b9f2a436c2529a6bb8679b949d5bb763f2fe5f430ef7f8929ebf9706dac7f",
+    "bytes": 37382
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_GOOD_MORNING_SLOW.wav",
+    "sha256": "4fa78624d32357395399249ef7f73f5c97e1cf7ba4c86722a669795056b95098",
+    "bytes": 45752
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_HELLO.wav",
+    "sha256": "49bc97e8475119b35d28045fad656f79214ee60fe590847a356d68a3d7e2b19c",
+    "bytes": 29024
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_HELLO_SLOW.wav",
+    "sha256": "b6bec6812866ab484139a492d24380735192c84937192053026a9ee1a7b616d1",
+    "bytes": 35714
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_HI.wav",
+    "sha256": "68eb28e85d40b03e9e2a690942d348e09b00f24376d98edef411c6c5a1ddd992",
+    "bytes": 22336
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_HI_SLOW.wav",
+    "sha256": "2ff1e074ab8a1b5834d23f73f3f11b05ae93c4fba4d011a6066e2ae69e554dbb",
+    "bytes": 27062
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_IM_DANIEL.wav",
+    "sha256": "6e21a3fb6348a82df7f1d68eb06ba8fba03fbaf6c5d07d1c2a3ff8eefe021660",
+    "bytes": 38498
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_IM_DANIEL_SLOW.wav",
+    "sha256": "b00e4be109ed3f4298f2e273ebc150dfb41f7613a225100d0d0aaeb6b796055a",
+    "bytes": 47034
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_IS_HE.wav",
+    "sha256": "9d2aeb2bb90afa1fe4cac8fe1897f6a42207e03475fd2f214539a9996052b0ea",
+    "bytes": 88652
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_IS_HE_SLOW.wav",
+    "sha256": "2150c072c17013f60aeec1e13098a3c7a8b310f6c7564740fd45ed3b5954562a",
+    "bytes": 110098
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_IS_SHE.wav",
+    "sha256": "3c948a1cfb899c1207719f11b6f227f11153567cd32b747eb341a922d4ce5a74",
+    "bytes": 46300
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_IS_SHE_SLOW.wav",
+    "sha256": "cd4f1aba903495bf4107e0437c385fc92f6d94635cf33c36ce3f811cbc465bdf",
+    "bytes": 56852
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_LANG_CS.wav",
+    "sha256": "ed5dbbcb4fa361d7f17143e2780aa2795d1d221d684beffc53d448ad69699333",
+    "bytes": 22894
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_LANG_CS_SLOW.wav",
+    "sha256": "78d8ab0f8febfe2bca63c7b7aa94a437322589485a6ba02409356de0e9d37814",
+    "bytes": 27572
+  }
+]

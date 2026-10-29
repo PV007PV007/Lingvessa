@@ -1,0 +1,31 @@
+{
+  "phase": "P5",
+  "status": "IN_PROGRESS_NOT_READY",
+  "recovered_base_sha": "b53ef44ef6a8389b9680586817c101008e186027",
+  "recovered_tree_sha": "09816f904b7637c8231664745464959a19645880",
+  "interrupted_operation_new_commit": false,
+  "historical_creation_receipts": 41,
+  "receipts_match_approved_local_git_blob_hashes": true,
+  "remote_binary_blobs_revalidated": false,
+  "remote_read_limitation": "Connector UTF-8 binary decoding failure; no remote availability claim",
+  "last_recorded_blob": {
+    "path": "assets/media/m01/en/AUD_ENG_M01_WORDS_BE_YOU.wav",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6a6ac8898a12f846b4a04cef3154729ff49ab69d"
+  },
+  "planned_uploads_without_success_receipts": 379,
+  "m01_wavs_in_verified_base_tree": 0,
+  "new_audio_git_blobs_created": 0,
+  "complete_archive_sha256": "3edaeaaeb000479921a0b3ff5ec2b52042faeee54bf943eff25e4a4a0f4e516d",
+  "acoustic_archive_sha256": "b5d74266046613521e9a38cdbc21ac06c34d4f1506e737f1acfc232990130b75",
+  "local_postgresql": "NOT_EXECUTED: unprivileged process escalation automatically rejected",
+  "local_s3": "NOT_EXECUTED: MinIO netlinkrib operation not permitted",
+  "external_bytes_available": true,
+  "no_regeneration": true,
+  "owner_approval_reused": true,
+  "od_004": "OPEN",
+  "od_006": "OPEN",
+  "p6_authorized": false,
+  "continuation": "Use verify-m01-s3-import.ts --real-m01 with explicit external audio root in an authorized PostgreSQL 18.6/S3 test runtime; do not resume the old Git blob plan"
+}

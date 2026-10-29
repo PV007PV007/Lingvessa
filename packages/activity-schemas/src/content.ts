@@ -30,6 +30,8 @@ export const activityMetadataSchema = z.object({
     ctx.addIssue({ code: 'custom', message: 'Evidence requires an assessable knowledge target' });
   if (a.contract && (JSON.stringify(a.contract.learning.evidence_map)!==JSON.stringify(a.evidence_map) || JSON.stringify(a.contract.learning.knowledge_refs)!==JSON.stringify(a.knowledge_refs)))
     ctx.addIssue({ code:'custom',path:['contract','learning'],message:'Executable contract mapping differs from published metadata' });
+  if(a.contract && JSON.stringify(a.contract.presentation.media_refs)!==JSON.stringify(a.media_refs))
+    ctx.addIssue({code:'custom',path:['contract','presentation','media_refs'],message:'Executable media references differ from published metadata'});
   if (a.contract && (a.contract.id !== a.id || a.contract.stable_code !== a.stable_code || a.contract.type !== a.type))
     ctx.addIssue({ code: 'custom', path: ['contract'], message: 'Executable contract identity/type differs from activity metadata' });
 });
@@ -58,6 +60,6 @@ export const contentSchema = z.object({
 });
 export type ContentPayload = z.infer<typeof contentSchema>;
 export type ContentReference = z.infer<typeof referenceSchema>;
-export const validatorVersion = 'p2-content-1.0.0';
+export const validatorVersion = 'p5-content-1.0.0';
 
 export function validateContent(input: unknown): ContentPayload { return contentSchema.parse(input); }

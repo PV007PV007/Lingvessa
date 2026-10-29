@@ -1,0 +1,152 @@
+[
+  {
+    "path": "audio/cs/AUD_CZE_M01_DIALOGUES_L04_INFORMAL_TURN_01.wav",
+    "sha256": "1d155a3cfdd8454ad55ed0c5f97bbb50163d174c56bb29381fe4d97b792e9999",
+    "bytes": 102028
+  },
+  {
+    "path": "audio/cs/AUD_CZE_M01_DIALOGUES_L04_INFORMAL_TURN_01_SLOW.wav",
+    "sha256": "531c807342abfd6666ff8dc19718bfdd9255a31a0b518d3e15a1c0fb4312defb",
+    "bytes": 126592
+  },
+  {
+    "path": "audio/cs/AUD_CZE_M01_DIALOGUES_L04_INFORMAL_TURN_03.wav",
+    "sha256": "ee25550da49e2451fc5d0fc2c3a5c7e0510a5da53892acec23616112f234a424",
+    "bytes": 55216
+  },
+  {
+    "path": "audio/cs/AUD_CZE_M01_DIALOGUES_L04_INFORMAL_TURN_03_SLOW.wav",
+    "sha256": "7a3f889dc1f67b0e632061fa4288ab2beac493a702d4cf29e45b1d1dbd951126",
+    "bytes": 68476
+  },
+  {
+    "path": "audio/cs/AUD_CZE_M01_DIALOGUES_L04_INFORMAL_TURN_05.wav",
+    "sha256": "e1b2abf84c472d94adb09e499a3b10e88868cec6e841405df61d517f4f851776",
+    "bytes": 124318
+  },
+  {
+    "path": "audio/cs/AUD_CZE_M01_DIALOGUES_L04_INFORMAL_TURN_05_SLOW.wav",
+    "sha256": "e56bb36bf6e81abd345c6f89e7ae7c5383e2463c241607c6824b48123fcbd18a",
+    "bytes": 154596
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L01_CONTEXT.wav",
+    "sha256": "1e762ae78c7ebaf02f38f8b50323e1804e14e76eb0c513086c18cbba5d9b4514",
+    "bytes": 69230
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L01_CONTEXT_SLOW.wav",
+    "sha256": "789479ec7bc286686038bc8c23788df90129ada33461513613fd937db271dc69",
+    "bytes": 85532
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L01_CONTEXT_TURN_01.wav",
+    "sha256": "e7dae938f9497707d5e90618e22a40a9225ff0f454416abed320147e46479138",
+    "bytes": 28466
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L01_CONTEXT_TURN_01_SLOW.wav",
+    "sha256": "26ab866f0cbcf4a5fbd2398fe5b698dfd041b81c35a3f11ba327ec3d6bb55519",
+    "bytes": 35356
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L01_CONTEXT_TURN_02.wav",
+    "sha256": "2471321d3b5cb6c3047665c18e2efe5477b0ba2c55a392ef22b3754afdd0b6fa",
+    "bytes": 24008
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L01_CONTEXT_TURN_02_SLOW.wav",
+    "sha256": "d56ec67ca172bc9cfcc076d2ed194ae3498fa87193a4a9f305bc51fec07b3339",
+    "bytes": 29220
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L01_REPAIR.wav",
+    "sha256": "b4710478228f7551f3be61f3901041f690aa9ff6d5c74e2eb6603e20897cc80b",
+    "bytes": 344136
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L01_REPAIR_SLOW.wav",
+    "sha256": "38407b53c614e4f2736c21b757b451f338a96ebce08e744a0faf4c1152149035",
+    "bytes": 426786
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L01_REPAIR_TURN_01.wav",
+    "sha256": "6e0a59fe893f4a4371e327fd13fe28c03a31bfcdb1020a18b5c18a5e110a6c08",
+    "bytes": 86980
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L01_REPAIR_TURN_01_SLOW.wav",
+    "sha256": "3c16d991a18b9f5c830e7fd803ce583dc39d43195f75e801145acea67d29d880",
+    "bytes": 107808
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L01_REPAIR_TURN_02.wav",
+    "sha256": "3a843f55f8c4231943d13922e5b859c5123b2af2aee2052559f37bcb33833556",
+    "bytes": 106486
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L01_REPAIR_TURN_02_SLOW.wav",
+    "sha256": "59608f9b3d3868e740f5ca0228d0a2a5b3637f70f6433d424ab5b7a0d9bb9de9",
+    "bytes": 132340
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L01_REPAIR_TURN_03.wav",
+    "sha256": "96e2387f71493e157c012e981f9ffc2d069b17f1abae9488aa7a82a1da216495",
+    "bytes": 68034
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L01_REPAIR_TURN_03_SLOW.wav",
+    "sha256": "3698087e1188345e35547c976af581049bfd29e3ed27de33d7914c935c2b7d87",
+    "bytes": 84174
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L01_REPAIR_TURN_04.wav",
+    "sha256": "a9232424606c8aebdc85503d5ce36738823d0a5a4030f2ce0b750f57733612f8",
+    "bytes": 32368
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L01_REPAIR_TURN_04_SLOW.wav",
+    "sha256": "b755b5718a756a7f760b3e3964e9a2553eaf7b84ec7baf6821f684f4eb87d036",
+    "bytes": 39596
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT.wav",
+    "sha256": "969182c7623de9b7951f253b1aaa690064fc8904423a4b8141497abd57e52724",
+    "bytes": 562754
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_SLOW.wav",
+    "sha256": "e74b93de47fbdce126e340de91844021f371bd3a78a40ad73ffdcc64eec86aa0",
+    "bytes": 698626
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_01.wav",
+    "sha256": "e77d78dde7a9b9984899ff6892f833c2549978dc01fe507fdf588904a0a17c5c",
+    "bytes": 60788
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_01_SLOW.wav",
+    "sha256": "391e038a429e6517474901b72d97a74162b8778a2ab9f218d11eebea0f70f65a",
+    "bytes": 75152
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_02.wav",
+    "sha256": "563334dcec56c177682672f34f2b05f69b16e3b0e0cd6f09f716c1326db28bed",
+    "bytes": 109272
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_02_SLOW.wav",
+    "sha256": "3677d6182031a109654dde15e92e249ad19babfb10cf5e686375a84906384e92",
+    "bytes": 135818
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_03.wav",
+    "sha256": "74ad9d4bff1d33e1b357bb9af7b9da945c541e73382f55f701c6a459fcd165bd",
+    "bytes": 124876
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_03_SLOW.wav",
+    "sha256": "8a7f9a4b86b69d0480259affd0d76b8ce3b420e0fc5b73bcc12c5a17925b6b5b",
+    "bytes": 155116
+  }
+]

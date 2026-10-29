@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; media-src data:; style-src 'unsafe-inline'; script-src 'unsafe-inline'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Lingvessa · Аудіомайстерня M01</title>
+<style>
+:root{color-scheme:light;--ink:#173e36;--muted:#526b63;--line:#d1ded6;--green:#1a6852;--paper:#f5f7f1;--gold:#a66b27}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 system-ui,-apple-system,sans-serif}main{max-width:1360px;margin:auto;padding:32px 32px 60px}h1{font-size:clamp(30px,4vw,46px);line-height:1.12;letter-spacing:-.035em;margin:12px 0}h2{font-size:25px;line-height:1.3;margin:0 0 14px}h3{font-size:21px;line-height:1.3;margin:0}p{margin:9px 0}.eyebrow{font-size:12px;letter-spacing:.15em;text-transform:uppercase;font-weight:750}.muted{color:var(--muted);font-size:14px}.lead{max-width:830px;font-size:18px}.topline,.toolbar,.row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.topline{justify-content:space-between}.pill{font-size:12px;border:1px solid #b7cdc1;border-radius:20px;padding:5px 11px;background:#e9f1e8}.toolbar{margin:22px 0 12px}button,.button{font:inherit;font-weight:650;min-height:44px;padding:10px 16px;border:1px solid var(--green);border-radius:9px;background:var(--green);color:#fff;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px}button.secondary,.button.secondary{background:#fff;color:var(--ink);border-color:var(--line)}button:disabled{opacity:.45;cursor:default}label{display:block;font-size:14px;font-weight:650;margin-bottom:6px}select,input[type=search],textarea{font:inherit;color:var(--ink);border:1px solid #99b2a4;border-radius:7px;background:#fff;padding:10px 11px;min-height:44px;width:100%}textarea{resize:vertical;min-height:100px}select{cursor:pointer}textarea::placeholder,input::placeholder{color:#65766d}input[type=checkbox]{width:18px;height:18px;accent-color:var(--green);flex-shrink:0;margin:2px 0}audio{width:100%;height:42px;display:block;margin:15px 0}.status{min-height:22px;font-size:14px;color:var(--muted)}[data-error=true]{color:#a2342c!important}.summary-grid{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:12px;margin:23px 0}.stat{border:1px solid var(--line);background:#fff;border-radius:11px;padding:17px 20px}.stat strong{font-size:27px;line-height:1.1}.stat span{display:block;font-size:13px;color:var(--muted);margin-top:7px}.stat:first-child{background:#e5eee3}progress{display:block;width:100%;height:7px;margin-top:11px;accent-color:var(--green)}.layout{display:grid;grid-template-columns:290px minmax(0,1fr);gap:24px;align-items:start}.sidebar{border:1px solid var(--line);border-radius:12px;background:#fff;padding:18px;position:sticky;top:18px}.filters{display:grid;gap:13px}.filter-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.queue{margin-top:13px;max-height:465px;overflow:auto;border-top:1px solid var(--line);padding-top:8px}.queue button{display:block;text-align:left;width:100%;background:transparent;border:1px solid transparent;color:var(--ink);padding:11px 10px;font-weight:500;border-radius:7px;margin:2px 0;overflow-wrap:anywhere}.queue button[aria-current=true]{background:#e8f0e7;border-color:#a9c3b2}.queue small{display:block;font-size:12px;color:var(--muted);margin-top:4px}.queue .title{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.queue .done{color:#276e52}.review-head{padding:4px 0 18px}.script{white-space:pre-wrap;overflow-wrap:anywhere;font-size:22px;line-height:1.55;margin:12px 0 0;padding:18px 20px;border-left:3px solid #8cac7a;background:#edf2e7;border-radius:4px}.clip-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.clip{min-width:0;background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px}.clip .pace-tag{font-size:12px;letter-spacing:.1em;font-weight:700;text-transform:uppercase;color:var(--muted);margin:0 0 6px}.check{display:flex;align-items:flex-start;gap:10px;font-size:14px;font-weight:500;margin:18px 0}.field{margin-top:17px}.cue-list{display:grid;gap:6px;margin:12px 0}.cue-list button{display:block;min-height:36px;background:#f1f5ed;color:var(--ink);border:1px solid #dbe5d5;padding:7px 9px;text-align:left;font-size:13px;font-weight:400}.diagnostic{border-top:1px solid var(--line);padding-top:12px;margin-top:18px;font-size:14px}.diagnostic summary{cursor:pointer;min-height:34px;font-weight:650}.diagnostic p{overflow-wrap:anywhere}.diagnostic .asr-text{white-space:pre-wrap;border-left:2px solid #d2b179;padding:8px 10px;background:#f8f2e6}.nav-row{display:flex;justify-content:space-between;gap:12px;margin-top:20px}.notice{background:#f4eddd;border:1px solid #e1cfaa;border-radius:8px;padding:13px 16px;font-size:14px}.missing{padding:25px 20px;border:1px dashed #b9c7bd;border-radius:12px;background:#eff2eb}.profile{margin:18px 0;border:1px solid var(--line);border-radius:10px;padding:14px 18px}.profile summary{cursor:pointer;font-weight:650;min-height:28px}.levels{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:12px 0 4px}footer{border-top:1px solid var(--line);margin-top:35px;padding-top:20px;max-width:900px;font-size:14px;color:var(--muted)}footer details{margin-top:12px}footer summary{cursor:pointer;font-weight:600}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.file-input{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden}.button:focus-within,:focus-visible{outline:3px solid #bd762f;outline-offset:3px}dialog{width:calc(100% - 32px);max-width:450px;border:1px solid var(--line);border-radius:12px;padding:25px;color:var(--ink)}dialog::backdrop{background:#183e3477}dialog .row{margin-top:20px}[hidden]{display:none!important}#fixture-warning{font-weight:750;margin-bottom:20px}#empty{padding:35px;background:#fff;border:1px solid var(--line);border-radius:12px}.help{font-size:13px;line-height:1.55;color:var(--muted)}
+@media(max-width:1050px){.layout{grid-template-columns:260px minmax(0,1fr);gap:18px}.clip-grid{grid-template-columns:1fr}.script{font-size:20px}}@media(max-width:720px){main{padding:23px 16px 45px}.layout{grid-template-columns:1fr;gap:18px}.sidebar{position:static}.queue{max-height:190px}.summary-grid{gap:8px}.stat{padding:14px 12px}.stat strong{font-size:24px}.stat span{font-size:12px}.toolbar button,.toolbar .button{flex:1 1 100%;margin:0}.clip-grid{grid-template-columns:1fr}.levels{grid-template-columns:1fr}.lead{font-size:16px}.clip{padding:18px}.script{font-size:19px}.nav-row button{padding:10px 12px}.topline{gap:10px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+</style>
+</head>
+<body><main>
+<div id="fixture-warning" class="notice" hidden>ТЕСТ ІНТЕРФЕЙСУ — демонстраційні дані, не набір M01.</div>
+<header><div class="topline"><div class="eyebrow">Lingvessa / аудіомайстерня M01</div><span class="pill">Чернетка для прослуховування</span></div>
+<h1>Прослухати й перевірити</h1><p class="lead">Порівняйте звичайний і повільний темп. Перевірте текст, вимову та паузи й залиште окрему нотатку до кожного запису.</p>
+<div class="toolbar"><button id="export" type="button">Завантажити нотатки</button><label class="button secondary" for="import">Відновити з файлу<input class="file-input" id="import" type="file" accept=".json,application/json"></label></div>
+<p id="storage-status" class="status">Нотатки залишаються у вашому браузері. Завантажте файл перед закриттям.</p>
+<p id="action-status" class="status" role="status" aria-live="polite"></p>
+<div class="summary-grid"><div class="stat"><strong id="progress-text" role="status">0 / 216</strong><span>записів із вашим відгуком</span><progress id="progress" value="0" max="216" aria-label="Записи з відгуком"></progress></div><div class="stat"><strong id="ready-count">216</strong><span>записів для прослуховування</span></div><div class="stat"><strong id="missing-count">204</strong><span>записи ще очікуються</span></div></div>
+</header>
+<details class="profile"><summary>Мови, які ви можете оцінити</summary><p class="muted">Якщо не знаєте мову достатньо, можна описати шум, паузи або темп і вибрати «Не можу впевнено оцінити».</p><div class="levels"><div><label for="level-en">Англійська</label><select id="level-en"><option value="unspecified">Не зазначено</option><option value="native_or_fluent">Рідна або вільне володіння</option><option value="learning">Вивчаю мову</option><option value="cannot_assess">Не можу оцінити вимову</option></select></div><div><label for="level-cs">Чеська</label><select id="level-cs"><option value="unspecified">Не зазначено</option><option value="native_or_fluent">Рідна або вільне володіння</option><option value="learning">Вивчаю мову</option><option value="cannot_assess">Не можу оцінити вимову</option></select></div></div></details>
+<noscript><p class="notice">Для навігації, відтворення та збереження нотаток відкрийте цей HTML-файл у браузері з увімкненим JavaScript.</p></noscript>
+<div class="layout"><aside class="sidebar" aria-label="Вибір записів">
+<div class="filters"><div><label for="search">Знайти текст</label><input type="search" id="search" placeholder="Наприклад, Hello або Ahoj"></div><div class="filter-row"><div><label for="language">Мова</label><select id="language"><option value="all">Обидві</option><option value="en">Англійська</option><option value="cs">Чеська</option></select></div><div><label for="kind">Матеріал</label><select id="kind"><option value="all">Увесь</option><option value="word">Слова</option><option value="turn">Репліки</option><option value="dialogue">Діалоги</option></select></div></div>
+<div><label for="view">Які записи показати</label><select id="view"><option value="ready">Доступні для прослуховування</option><option value="pending">Ще без мого відгуку</option><option value="flagged">Із підказкою розпізнавача</option><option value="missing">Запис ще очікується</option></select></div></div>
+<p id="queue-count" class="muted" role="status"></p><nav id="queue" class="queue" aria-label="Пари записів"></nav>
+<p class="help">Один пункт — звичайна й повільна версії. Кожна має власний відгук.</p></aside>
+<section id="review" aria-label="Прослуховування поточної пари"><div class="review-head"><div id="pair-meta" class="eyebrow"></div><h2 id="pair-title" style="margin-top:10px">Текст для прослуховування</h2><div id="script" class="script"></div></div><div id="clips" class="clip-grid"></div><div class="nav-row"><button id="previous" class="secondary" type="button">← Попередній</button><button id="next" type="button">Наступний →</button></div></section>
+<div id="empty" hidden><h2>Записів не знайдено</h2><p>Змініть мову, фільтр або пошуковий запит.</p></div></div>
+<footer><p><strong>Як перевіряти:</strong> спочатку прослухайте запис без автоматичної підказки. Порівняйте з авторським текстом; зверніть увагу на пропуски, наголос, чіткість звуків і паузи. Потім, за потреби, відкрийте «Автоматична звірка».</p><p>Розпізнавач може помилятися на літерах, коротких словах та іменах. Його підказка не означає, що в аудіо є помилка. Відсутність підказки також не замінює прослуховування.</p><p>Аудіо вбудоване. Збережіть HTML-файл і відкрийте його у браузері — інтернет не потрібен. Нотатки можна завантажити після будь-якої кількості записів та відновити пізніше.</p><p class="notice">Ця форма збирає відгуки. Остаточне затвердження голосів, мовної якості й публікації потребує окремої перевірки.</p><details><summary>Походження записів</summary><p>Авторські тексти Lingvessa, синтетичні голоси Piper. Робочі англійські голоси: Maya, Daniel, Alex; доступний чеський — Adam. Англійська модель VCTK і чеська Jirka; повільні версії оброблено без зміни висоти голосу. Точні моделі, ліцензійні джерела та журнал створення збережено у супровідному аудіопакеті та PR #5.</p><p>204 чеські записи ще не створено через недоступність зафіксованої залежності синтезу. Вони показані окремо та не мають оцінок. Нотатки прив’язані до точних версій аудіофайлів.</p></details></footer>
+<dialog id="import-confirm"><h2>Відновити нотатки?</h2><p>Поточні нотатки буде замінено. За потреби спершу завантажте їх окремим файлом.</p><div class="row"><button id="import-apply" type="button">Замінити нотатки</button><button id="import-cancel" class="secondary" type="button">Скасувати</button></div></dialog>
+<template id="clip-template"><article class="clip"><p class="pace-tag"></p><h3></h3><p class="muted duration"></p><audio controls preload="metadata"></audio><div class="cue-list" aria-label="Перейти до репліки"></div><label class="check listened-label"><input type="checkbox" class="listened">Я прослухав / прослухала цей запис</label><div class="field"><label class="choice-label">Ваш висновок</label><select class="choice"><option value="pending">Ще не оцінено</option><option value="no_issues">Не помічаю проблем</option><option value="needs_work">Є зауваження</option><option value="unsure">Не можу впевнено оцінити</option></select></div><div class="field"><label class="issue-label">Основне зауваження</label><select class="issue"><option value="none">Не зазначено</option><option value="text">Пропущені або інші слова</option><option value="pronunciation">Вимова / наголос</option><option value="pace">Темп / паузи</option><option value="noise">Шум / обрізаний звук</option><option value="voice">Голос / його сталість</option><option value="other">Інше</option></select></div><div class="field"><label class="notes-label">Нотатка</label><textarea class="notes" rows="3" maxlength="2000" placeholder="Яке слово, що саме чуєте, час у записі…"></textarea></div><details class="diagnostic"><summary>Автоматична звірка</summary><p class="asr-status"></p><p class="muted">Розпізнаний текст:</p><p class="asr-text"></p><p class="help">Це допоміжна підказка. Ваш висновок записується окремо.</p></details></article></template>
+</main>
+<script type="application/json" id="review-manifest">__MANIFEST__</script>
+<script type="application/json" id="audio-data">__AUDIO__</script>
+<script>
+'use strict';
+(() => {
+  const $ = id => document.getElementById(id);
+  const manifest = JSON.parse($('review-manifest').textContent);
+  const audioData = JSON.parse($('audio-data').textContent);
+  const slots = manifest.pairs.flatMap(pair => pair.slots).filter(slot => slot.available);
+  const bindings = slots.map(slot => ({asset_id: slot.id, sha256: slot.sha256}));
+  const key = 'lingvessa-m01-review-v1-' + manifest.scope + '-' + manifest.dataset_sha256;
+  const levels = ['unspecified', 'native_or_fluent', 'learning', 'cannot_assess'];
+  const choices = ['pending', 'no_issues', 'needs_work', 'unsure'];
+  const issues = ['none', 'text', 'pronunciation', 'pace', 'noise', 'voice', 'other'];
+  let state = {levels: {en: 'unspecified', cs: 'unspecified'}, records: slots.map(slot => ({
+    asset_id: slot.id, listened: false, choice: 'pending', issue: 'none', notes: '', updated_at: null
+  }))};
+  let selected = null, pendingImport = null, visible = [];
+  let stateMap = new Map();
+  const reindex = () => { stateMap = new Map(state.records.map(row => [row.asset_id, row])); };
+  reindex();
+  const done = row => row.listened && row.choice !== 'pending';
+  const completed = () => state.records.filter(done).length;
+  const object = value => value !== null && typeof value === 'object' && !Array.isArray(value);
+  const exact = (value, keys) => object(value) && Object.keys(value).sort().join('|') === keys.slice().sort().join('|');
+  const clone = value => JSON.parse(JSON.stringify(value));
+  function status(message, error = false) { $('action-status').textContent = message; $('action-status').dataset.error = String(error); }
+  function report() {
+    return {schema_version: 1, tool: 'lingvessa-m01-listening', scope: manifest.scope,
+      dataset_sha256: manifest.dataset_sha256, audio_source_sha: manifest.audio_source_sha,
+      saved_at: new Date().toISOString(), bindings, feedback: clone(state), completed_files: completed(),
+      feedback_status: completed() === slots.length ? 'RECORDED_UNAPPROVED' : 'PARTIAL',
+      publication_ready: false, p5_milestone: 'NOT_READY', p6_authorized: false};
+  }
+  function validate(value) {
+    if (!object(value) || value.schema_version !== 1 || value.tool !== 'lingvessa-m01-listening' ||
+        value.scope !== manifest.scope || value.dataset_sha256 !== manifest.dataset_sha256 ||
+        value.audio_source_sha !== manifest.audio_source_sha || JSON.stringify(value.bindings) !== JSON.stringify(bindings) ||
+        value.publication_ready !== false || value.p5_milestone !== 'NOT_READY' || value.p6_authorized !== false) throw Error('wrong-set');
+    const next = value.feedback;
+    if (!exact(next, ['levels', 'records']) || !exact(next.levels, ['en', 'cs']) ||
+        !levels.includes(next.levels.en) || !levels.includes(next.levels.cs) ||
+        !Array.isArray(next.records) || next.records.length !== slots.length) throw Error('invalid-feedback');
+    next.records.forEach((row, i) => {
+      if (!exact(row, ['asset_id', 'listened', 'choice', 'issue', 'notes', 'updated_at']) ||
+          row.asset_id !== slots[i].id || typeof row.listened !== 'boolean' ||
+          !choices.includes(row.choice) || !issues.includes(row.issue) ||
+          typeof row.notes !== 'string' || row.notes.length > 2000 ||
+          !(row.updated_at === null || (typeof row.updated_at === 'string' &&
+            /^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3}Z$/u.test(row.updated_at) &&
+            Number.isFinite(Date.parse(row.updated_at))))) throw Error('invalid-record');
+    });
+    // Claimed completion and approval are never imported. Progress is recomputed.
+    return clone(next);
+  }
+  function progress() {
+    $('progress-text').textContent = completed() + ' / ' + slots.length;
+    $('progress').max = slots.length; $('progress').value = completed();
+  }
+  function save() {
+    progress();
+    try { localStorage.setItem(key, JSON.stringify(report())); $('storage-status').textContent = 'Нотатки збережено в цьому браузері. Завантажте файл перед закриттям.'; }
+    catch { $('storage-status').textContent = 'Браузер не дозволяє автозбереження. Завантажте нотатки перед закриттям.'; }
+    renderQueue();
+  }
+  function element(tag, className, text) {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text !== undefined) node.textContent = text;
+    return node;
+  }
+  const kindNames = {word: 'Слово / фраза', turn: 'Репліка діалогу', dialogue: 'Діалог'};
+  const languageNames = {en: 'Англійська', cs: 'Чеська'};
+  function filtered() {
+    const query = $('search').value.normalize('NFC').toLocaleLowerCase().trim();
+    return manifest.pairs.filter(pair => {
+      if ($('language').value !== 'all' && pair.language !== $('language').value) return false;
+      if ($('kind').value !== 'all' && pair.kind !== $('kind').value) return false;
+      if (query && !pair.text.normalize('NFC').toLocaleLowerCase().includes(query)) return false;
+      const available = pair.slots.filter(slot => slot.available);
+      const view = $('view').value;
+      if (view === 'missing') return available.length === 0;
+      if (!available.length) return false;
+      if (view === 'flagged') return available.some(slot => slot.asr.flagged);
+      if (view === 'pending') return available.some(slot => !done(stateMap.get(slot.id)));
+      return true;
+    });
+  }
+  function renderQueue() {
+    visible = filtered();
+    $('queue-count').textContent = 'Пар у списку: ' + visible.length;
+    const queue = $('queue'); queue.replaceChildren();
+    visible.forEach(pair => {
+      const button = element('button'); button.type = 'button'; button.dataset.pairId = pair.id;
+      button.setAttribute('aria-current', String(pair.id === selected));
+      button.append(element('span', 'title', pair.text));
+      const available = pair.slots.filter(slot => slot.available);
+      const count = available.filter(slot => done(stateMap.get(slot.id))).length;
+      button.append(element('small', count === 2 ? 'done' : '', languageNames[pair.language] + ' · ' +
+        (available.length ? count + '/2 з відгуком' : 'Запис очікується')));
+      button.addEventListener('click', () => { selected = pair.id; renderCurrent(); renderQueue(); });
+      queue.append(button);
+    });
+    const index = visible.findIndex(pair => pair.id === selected);
+    $('previous').disabled = index <= 0;
+    $('next').disabled = !visible.length || index === visible.length - 1;
+  }
+  function stopAudio() { document.querySelectorAll('audio').forEach(audio => audio.pause()); }
+  function renderCurrent() {
+    stopAudio();
+    const pair = manifest.pairs.find(item => item.id === selected);
+    $('review').hidden = !pair; $('empty').hidden = Boolean(pair);
+    const container = $('clips'); container.replaceChildren();
+    if (!pair) return;
+    $('pair-meta').textContent = languageNames[pair.language] + ' · ' + kindNames[pair.kind] +
+      (pair.speakers.length ? ' · ' + pair.speakers.join(', ') : '');
+    $('script').textContent = pair.text; $('script').lang = pair.language;
+    pair.slots.forEach(slot => {
+      if (!slot.available) {
+        const missing = element('article', 'missing');
+        missing.append(element('h3', '', slot.pace === 'normal' ? 'Звичайний темп' : 'Повільний темп'),
+          element('p', '', 'Запис ще очікується. Оцінювання стане доступним після його створення.'));
+        container.append(missing); return;
+      }
+      const card = $('clip-template').content.firstElementChild.cloneNode(true);
+      card.dataset.assetId = slot.id;
+      const find = selector => card.querySelector(selector);
+      find('.pace-tag').textContent = slot.pace === 'normal' ? '01 / звичайний темп' : '02 / повільний темп';
+      find('h3').textContent = slot.pace === 'normal' ? 'Звичайна версія' : 'Повільна версія';
+      find('.duration').textContent = slot.duration.toFixed(2).replace('.', ',') + ' с · ' + pair.speakers.join(', ');
+      const audio = find('audio'); audio.id = slot.pace + '-audio';
+      audio.src = 'data:audio/wav;base64,' + audioData[slot.id];
+      audio.setAttribute('aria-label', (slot.pace === 'normal' ? 'Звичайна' : 'Повільна') + ' версія запису');
+      audio.addEventListener('play', () => { document.querySelectorAll('audio').forEach(other => { if (other !== audio) other.pause(); }); });
+      audio.addEventListener('error', () => status('Браузер не зміг відтворити запис. Спробуйте відкрити збережений HTML-файл у сучасному браузері.', true));
+      if (slot.cues.length > 1) slot.cues.forEach(cue => {
+        const button = element('button', '', cue.start.toFixed(2).replace('.', ',') + ' с · ' + cue.speaker + ': ' + cue.text);
+        button.type = 'button'; button.dataset.start = String(cue.start);
+        button.addEventListener('click', () => { audio.currentTime = cue.start; audio.play().catch(() => status('Натисніть відтворення в аудіоплеєрі.', true)); });
+        find('.cue-list').append(button);
+      });
+      const row = stateMap.get(slot.id);
+      for (const field of ['listened', 'choice', 'issue', 'notes']) {
+        const control = find('.' + field); control.id = slot.pace + '-' + field;
+        find('.' + field + '-label').setAttribute('for', control.id);
+        if (field === 'listened') control.checked = row.listened; else control.value = row[field];
+        control.addEventListener(field === 'notes' ? 'input' : 'change', () => {
+          row[field] = field === 'listened' ? control.checked : control.value;
+          row.updated_at = new Date().toISOString(); save();
+        });
+      }
+      find('.asr-status').textContent = slot.asr.flagged ? 'Розпізнавач знайшов розбіжність. Перевірте її на слух.' : 'Розпізнавач не знайшов розбіжностей. Прослуховування все одно потрібне.';
+      find('.asr-text').textContent = slot.asr.transcript || '(Розпізнавач не повернув текст.)';
+      find('.asr-text').lang = pair.language;
+      container.append(card);
+    });
+  }
+  function resetSelection() { visible = filtered(); selected = visible[0]?.id ?? null; renderCurrent(); renderQueue(); }
+  try {
+    const saved = localStorage.getItem(key);
+    if (saved) { state = validate(JSON.parse(saved)); reindex(); $('storage-status').textContent = 'Відновлено нотатки з цього браузера. Можна продовжувати.'; }
+  } catch { $('storage-status').textContent = 'Автовідновлення недоступне. Почніть заново або відновіть нотатки з файлу.'; }
+  $('fixture-warning').hidden = manifest.scope !== 'UI_TEST_FIXTURE';
+  $('ready-count').textContent = String(manifest.counts.available);
+  $('missing-count').textContent = String(manifest.counts.missing);
+  for (const language of ['en', 'cs']) {
+    $('level-' + language).value = state.levels[language];
+    $('level-' + language).addEventListener('change', event => { state.levels[language] = event.target.value; save(); });
+  }
+  for (const id of ['language', 'kind', 'view']) $(id).addEventListener('change', resetSelection);
+  $('search').addEventListener('input', resetSelection);
+  for (const [id, delta] of [['previous', -1], ['next', 1]]) $(id).addEventListener('click', () => {
+    const index = visible.findIndex(pair => pair.id === selected);
+    const next = visible[index + delta];
+    if (next) { selected = next.id; renderCurrent(); renderQueue(); $('pair-title').tabIndex = -1; $('pair-title').focus(); }
+  });
+  function download() {
+    const url = URL.createObjectURL(new Blob([JSON.stringify(report(), null, 2) + '\n'], {type: 'application/json'}));
+    const link = document.createElement('a'); link.href = url;
+    link.download = manifest.scope === 'UI_TEST_FIXTURE' ? 'TEST_ONLY_M01_Notes.json' : 'Lingvessa_M01_Listening_Notes.json';
+    document.body.append(link); link.click(); link.remove(); setTimeout(() => URL.revokeObjectURL(url), 30000);
+    status('Файл нотаток підготовлено. Прикріпіть його в чаті, коли будете готові.');
+  }
+  $('export').addEventListener('click', download);
+  $('import').addEventListener('change', async event => {
+    const file = event.target.files[0]; event.target.value = '';
+    if (!file) return;
+    try {
+      if (file.size > 2000000) throw Error('too-large');
+      pendingImport = validate(JSON.parse(await file.text())); $('import-confirm').showModal();
+    } catch { pendingImport = null; status('Файл не підходить до цього набору записів або має некоректні дані. Поточні нотатки збережено.', true); }
+  });
+  $('import-apply').addEventListener('click', () => {
+    if (pendingImport) {
+      state = pendingImport; pendingImport = null; reindex();
+      for (const language of ['en', 'cs']) $('level-' + language).value = state.levels[language];
+      renderCurrent(); save(); status('Нотатки відновлено. Можна продовжувати прослуховування.');
+    }
+    $('import-confirm').close();
+  });
+  $('import-cancel').addEventListener('click', () => { pendingImport = null; $('import-confirm').close(); });
+  $('import-confirm').addEventListener('cancel', () => { pendingImport = null; });
+  progress(); resetSelection();
+})();
+</script>
+</body></html>

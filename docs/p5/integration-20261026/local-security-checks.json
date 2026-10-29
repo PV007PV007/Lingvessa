@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-26",
+  "base_sha": "875461ca57f72928815014806773ec34751459a1",
+  "scope": "focused local checks, not full-project CI or real M01 integration",
+  "status": "FOCUSED_CHECKS_PASS_FULL_CI_REQUIRED",
+  "node": "24.22.1",
+  "hosted_node": "24.19.0",
+  "checks": [
+    {
+      "command": "node --import tsx --test tests/unit/p5-reviewed-secret-fixture.test.ts tests/unit/secrets.test.ts",
+      "status": "PASS",
+      "tests": 4,
+      "skipped": 0
+    },
+    {
+      "command": "python3 tests/unit/p5-private-transfer.test.py",
+      "status": "PASS",
+      "tests": 11
+    },
+    {
+      "command": "python3 tests/unit/p5-private-relay.test.py",
+      "status": "PASS",
+      "tests": 7
+    },
+    {
+      "command": "eslint tools/p1/reviewed-secret-fixtures.ts tests/unit/p5-reviewed-secret-fixture.test.ts",
+      "status": "PASS"
+    },
+    {
+      "command": "tsc --ignoreConfig --noEmit --target ES2022 --module NodeNext --types node tools/p1/reviewed-secret-fixtures.ts tests/unit/p5-reviewed-secret-fixture.test.ts",
+      "status": "PASS"
+    },
+    {
+      "command": "python3 tools/governance/validate_p5_baseline.py",
+      "status": "PASS",
+      "checks": 76
+    }
+  ],
+  "source_sha256": {
+    "tools/p1/reviewed-secret-fixtures.ts": "ab5dfe9859e8783bec46ae112a21be70a6e9119ee104b6a82d380b8e27309d26",
+    "tests/unit/p5-reviewed-secret-fixture.test.ts": "aff5261eb184da4bbbd9d2df5c1dee69a428a1c0930102fa4095ddd05c979f13",
+    "tests/unit/p5-private-transfer.test.py": "cd8b53b86ef581355954b93a7e0aaf9e782e8652e30a0613777f00b3e4e7109f",
+    ".github/actions/private-m01-bridge/bridge.mjs": "a165af6859eb3803892e5cd998fc29192ca89c6f2a7958243fbefa2b0e13d420",
+    "tools/p5/private-m01-transfer.py": "6dce62e63dca8cbdd4d6176a7bb444acc5e55daa0cecd905ca28b5a3a3a6aaab"
+  },
+  "limitations": [
+    "No generated Prisma client in fresh recovery copy; full project typecheck/build are not claimed locally.",
+    "No real PostgreSQL/S3 M01 execution in these focused tests.",
+    "Different local Node patch version; exact-source hosted pinned-toolchain CI remains mandatory."
+  ],
+  "recovery": {
+    "export_sha256": "c3247da31bff76799e06653e415a0f382a33dc1443e782693bd14553a89724eb",
+    "zip_crc": "PASS",
+    "git_blobs_verified_before_edits": 835
+  }
+}

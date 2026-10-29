@@ -1,0 +1,718 @@
+[
+  {
+    "asset_id": "7f207eb5-937a-5892-89d4-a00d687723ca",
+    "audio_sha256": "e5c3c5f478edd0ce40b7a9bf238b9cfd52a208716752464e5ef7133919c50333",
+    "status": "SCREENED",
+    "expected": "Mě také.",
+    "transcript": "Mě také.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Mě také.",
+        "avg_logprob": -0.4675251990556717,
+        "no_speech_prob": 0.06139308586716652
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 2,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.644
+  },
+  {
+    "asset_id": "bd8b6147-fdb9-5473-9e80-bd2551c72648",
+    "audio_sha256": "3bfa2be8932f4773212ef5cea64a764bad138eb8bf83b29ba8b784e545443d6d",
+    "status": "SCREENED",
+    "expected": "Mě také.",
+    "transcript": "Mě také.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Mě také.",
+        "avg_logprob": -0.42724836245179176,
+        "no_speech_prob": 0.12378357350826263
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 2,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.539
+  },
+  {
+    "asset_id": "ab67408b-074a-5956-a90b-38c1d52908b0",
+    "audio_sha256": "e07c448d60b1e8bdbd5c33ad453f9e76840220d42ffd682f5410e6fde1846358",
+    "status": "SCREENED",
+    "expected": "Ahoj. Jak se jmenuješ?\nAhoj. Jmenuji se Oksana.\nOdkud jsi?\nJsem z Ukrajiny. Odkud jsi?\nJsem z Česka. Těší mě.\nTaky mě těší.",
+    "transcript": "Ahoj, jak se jmenuješ? Ahoj, jmenuj se Oksana. Odkutí si. Jsem z Ukrainy, odkutí si. Jsem z Česka, těší mě. Taky mě těší.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Ahoj, jak se jmenuješ?",
+        "avg_logprob": -0.38689637338960325,
+        "no_speech_prob": 0.003514425130560994
+      },
+      {
+        "start": 2.44,
+        "end": 4.44,
+        "text": " Ahoj, jmenuj se Oksana.",
+        "avg_logprob": -0.38689637338960325,
+        "no_speech_prob": 0.003514425130560994
+      },
+      {
+        "start": 5.16,
+        "end": 6.16,
+        "text": " Odkutí si.",
+        "avg_logprob": -0.38689637338960325,
+        "no_speech_prob": 0.003514425130560994
+      },
+      {
+        "start": 6.640000000000001,
+        "end": 8.28,
+        "text": " Jsem z Ukrainy, odkutí si.",
+        "avg_logprob": -0.38689637338960325,
+        "no_speech_prob": 0.003514425130560994
+      },
+      {
+        "start": 8.76,
+        "end": 11.24,
+        "text": " Jsem z Česka, těší mě.",
+        "avg_logprob": -0.38689637338960325,
+        "no_speech_prob": 0.003514425130560994
+      },
+      {
+        "start": 12.48,
+        "end": 13.48,
+        "text": " Taky mě těší.",
+        "avg_logprob": -0.38689637338960325,
+        "no_speech_prob": 0.003514425130560994
+      }
+    ],
+    "word_edits": 6,
+    "reference_words": 23,
+    "diagnostic_wer": 0.2608695652173913,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 2.989
+  },
+  {
+    "asset_id": "fa51fd78-8148-5d79-90d4-be124448efa2",
+    "audio_sha256": "41c99e2a6b01e5e2cd0bf750f0e8cb5069d5404b23bc52d5a9649f1cc40c1300",
+    "status": "SCREENED",
+    "expected": "Ahoj. Jak se jmenuješ?\nAhoj. Jmenuji se Oksana.\nOdkud jsi?\nJsem z Ukrajiny. Odkud jsi?\nJsem z Česka. Těší mě.\nTaky mě těší.",
+    "transcript": "Ahoj, jak se jmenuješ? Ahoj, jmenuj se Oksana. Odkutí si. Jsem z Ukrainy, odkutí si. Jsem z Česka, těší mě. Taky mě těší.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.44,
+        "text": " Ahoj, jak se jmenuješ?",
+        "avg_logprob": -0.3782008344476873,
+        "no_speech_prob": 0.0019131385488435626
+      },
+      {
+        "start": 3.04,
+        "end": 5.4,
+        "text": " Ahoj, jmenuj se Oksana.",
+        "avg_logprob": -0.3782008344476873,
+        "no_speech_prob": 0.0019131385488435626
+      },
+      {
+        "start": 6.4,
+        "end": 7.6000000000000005,
+        "text": " Odkutí si.",
+        "avg_logprob": -0.3782008344476873,
+        "no_speech_prob": 0.0019131385488435626
+      },
+      {
+        "start": 8.24,
+        "end": 10.200000000000001,
+        "text": " Jsem z Ukrainy, odkutí si.",
+        "avg_logprob": -0.3782008344476873,
+        "no_speech_prob": 0.0019131385488435626
+      },
+      {
+        "start": 10.88,
+        "end": 13.92,
+        "text": " Jsem z Česka, těší mě.",
+        "avg_logprob": -0.3782008344476873,
+        "no_speech_prob": 0.0019131385488435626
+      },
+      {
+        "start": 15.48,
+        "end": 16.6,
+        "text": " Taky mě těší.",
+        "avg_logprob": -0.3782008344476873,
+        "no_speech_prob": 0.0019131385488435626
+      }
+    ],
+    "word_edits": 6,
+    "reference_words": 23,
+    "diagnostic_wer": 0.2608695652173913,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 3.288
+  },
+  {
+    "asset_id": "dda70ffd-a268-5df6-984a-fb393ef685a7",
+    "audio_sha256": "18dc6a83253a19c69a1a174f7ac8fb3831fd00aeffadf6c8b5b7de7acce3fad7",
+    "status": "SCREENED",
+    "expected": "Ahoj. Jmenuji se Oksana.",
+    "transcript": "Ahoj. Menuj se oxana.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Ahoj. Menuj se oxana.",
+        "avg_logprob": -0.4942769270676833,
+        "no_speech_prob": 0.16888566315174103
+      }
+    ],
+    "word_edits": 2,
+    "reference_words": 4,
+    "diagnostic_wer": 0.5,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.911
+  },
+  {
+    "asset_id": "be991c99-1bff-5944-8246-5602c5f51bb4",
+    "audio_sha256": "eba8790c7d125a5e4536d0dfdcb8558cfa43fcdafa4d0f66396d91e21e4e50ad",
+    "status": "SCREENED",
+    "expected": "Ahoj. Jmenuji se Oksana.",
+    "transcript": "Ahoj, menuj se oxana.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.32,
+        "text": " Ahoj, menuj se oxana.",
+        "avg_logprob": -0.5926599332264492,
+        "no_speech_prob": 0.07012324035167694
+      }
+    ],
+    "word_edits": 2,
+    "reference_words": 4,
+    "diagnostic_wer": 0.5,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.671
+  },
+  {
+    "asset_id": "d464b575-a90f-54af-a6a1-36fa4655f8ae",
+    "audio_sha256": "8a6b74ba4b250ef00073083dcd7e37153a6249a19cd2cdf7ff8bbff66b5d707f",
+    "status": "SCREENED",
+    "expected": "Jsem z Ukrajiny. Odkud jsi?",
+    "transcript": "s Ukrainy. Odkuď si.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " s Ukrainy. Odkuď si.",
+        "avg_logprob": -0.6358762154212365,
+        "no_speech_prob": 0.45674410462379456
+      }
+    ],
+    "word_edits": 5,
+    "reference_words": 5,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.691
+  },
+  {
+    "asset_id": "bcc99cae-5f6f-5a81-8e62-f62031400ff5",
+    "audio_sha256": "fa8d1dff8ee754cf615834ecbadbbde6b9d616be1a17dececbd060514b952653",
+    "status": "SCREENED",
+    "expected": "Jsem z Ukrajiny. Odkud jsi?",
+    "transcript": "z Ukrainy. Odkuď si.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " z Ukrainy. Odkuď si.",
+        "avg_logprob": -0.635468629690317,
+        "no_speech_prob": 0.2890937626361847
+      }
+    ],
+    "word_edits": 4,
+    "reference_words": 5,
+    "diagnostic_wer": 0.8,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.713
+  },
+  {
+    "asset_id": "b6d082fc-ce6c-58d3-a43f-641ab427877f",
+    "audio_sha256": "4583e03182b3bcf23bf21ae8c5eac7c57b71ef03e1e37bd933298b45b1d38cfa",
+    "status": "SCREENED",
+    "expected": "Taky mě těší.",
+    "transcript": "Taky mě těší.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Taky mě těší.",
+        "avg_logprob": -0.2861287918957797,
+        "no_speech_prob": 0.11290164291858673
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 3,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.77
+  },
+  {
+    "asset_id": "4ff43873-8ee2-55be-ba4d-156518ea213e",
+    "audio_sha256": "cf743fed5cd4239c3b6c45716316f39b13f63356ce3f7b1b648ca9dacb2e36a4",
+    "status": "SCREENED",
+    "expected": "Taky mě těší.",
+    "transcript": "Taky mě těší.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Taky mě těší.",
+        "avg_logprob": -0.4210735180161216,
+        "no_speech_prob": 0.2861180901527405
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 3,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.788
+  },
+  {
+    "asset_id": "16f5c1c3-75e4-5374-878d-953cb1d94154",
+    "audio_sha256": "afc44ee2ce424435a007ecce5f8ea112d75676217b6b270ce9b400f5efbc09c4",
+    "status": "SCREENED",
+    "expected": "Dobrý den. Vy jste Oksana?\nDobrý den. Ano.\nOdkud jste?\nJsem z Ukrajiny.\nTěší mě.\nMě také. Na shledanou.",
+    "transcript": "Doblý den, vojste Oksana. Doblý den, ano. Odkudste. Jsem z Ukrainy. Kěží mě. Nětaké, nás chledanou.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 1.6,
+        "text": " Doblý den, vojste Oksana.",
+        "avg_logprob": -0.48714951518923044,
+        "no_speech_prob": 0.04513295367360115
+      },
+      {
+        "start": 3.04,
+        "end": 4.16,
+        "text": " Doblý den, ano.",
+        "avg_logprob": -0.48714951518923044,
+        "no_speech_prob": 0.04513295367360115
+      },
+      {
+        "start": 4.96,
+        "end": 5.64,
+        "text": " Odkudste.",
+        "avg_logprob": -0.48714951518923044,
+        "no_speech_prob": 0.04513295367360115
+      },
+      {
+        "start": 6.640000000000001,
+        "end": 7.5200000000000005,
+        "text": " Jsem z Ukrainy.",
+        "avg_logprob": -0.48714951518923044,
+        "no_speech_prob": 0.04513295367360115
+      },
+      {
+        "start": 8.72,
+        "end": 9.4,
+        "text": " Kěží mě.",
+        "avg_logprob": -0.48714951518923044,
+        "no_speech_prob": 0.04513295367360115
+      },
+      {
+        "start": 10.120000000000001,
+        "end": 11.72,
+        "text": " Nětaké, nás chledanou.",
+        "avg_logprob": -0.48714951518923044,
+        "no_speech_prob": 0.04513295367360115
+      }
+    ],
+    "word_edits": 12,
+    "reference_words": 19,
+    "diagnostic_wer": 0.631578947368421,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 3.095
+  },
+  {
+    "asset_id": "a84fa870-8fda-5c10-8908-97187a0c7c91",
+    "audio_sha256": "8412bc0ed89fab2cf62d20d0434f5c8ec06c7466c293ca5300eb4ed38703b840",
+    "status": "SCREENED",
+    "expected": "Dobrý den. Vy jste Oksana?\nDobrý den. Ano.\nOdkud jste?\nJsem z Ukrajiny.\nTěší mě.\nMě také. Na shledanou.",
+    "transcript": "Doblý den, vojste Oksana. Doblý den, ano. Odkud jste. Jsem z Ukrainy. Kěží mě. Nětaké, nás chledanou.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Doblý den, vojste Oksana.",
+        "avg_logprob": -0.5206436157226563,
+        "no_speech_prob": 0.07295268028974533
+      },
+      {
+        "start": 3.7800000000000002,
+        "end": 5.28,
+        "text": " Doblý den, ano.",
+        "avg_logprob": -0.5206436157226563,
+        "no_speech_prob": 0.07295268028974533
+      },
+      {
+        "start": 6.16,
+        "end": 7.16,
+        "text": " Odkud jste.",
+        "avg_logprob": -0.5206436157226563,
+        "no_speech_prob": 0.07295268028974533
+      },
+      {
+        "start": 8.3,
+        "end": 9.42,
+        "text": " Jsem z Ukrainy.",
+        "avg_logprob": -0.5206436157226563,
+        "no_speech_prob": 0.07295268028974533
+      },
+      {
+        "start": 10.86,
+        "end": 11.86,
+        "text": " Kěží mě.",
+        "avg_logprob": -0.5206436157226563,
+        "no_speech_prob": 0.07295268028974533
+      },
+      {
+        "start": 12.620000000000001,
+        "end": 14.620000000000001,
+        "text": " Nětaké, nás chledanou.",
+        "avg_logprob": -0.5206436157226563,
+        "no_speech_prob": 0.07295268028974533
+      }
+    ],
+    "word_edits": 10,
+    "reference_words": 19,
+    "diagnostic_wer": 0.5263157894736842,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 2.791
+  },
+  {
+    "asset_id": "70bff2f5-59dc-57c1-939c-fa616aeff771",
+    "audio_sha256": "8a6e90b502ea909b1399483b09d0ddb0c0495eda18b7958e8399e026ad9e44d8",
+    "status": "SCREENED",
+    "expected": "Dobrý den. Vy jste Oksana?",
+    "transcript": "Do býden. Vy jste oxana.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 1.56,
+        "text": " Do býden. Vy jste oxana.",
+        "avg_logprob": -0.6792207638422648,
+        "no_speech_prob": 0.4415036737918854
+      }
+    ],
+    "word_edits": 3,
+    "reference_words": 5,
+    "diagnostic_wer": 0.6,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.713
+  },
+  {
+    "asset_id": "56ed4446-c40c-5b38-961f-ce3facd238d8",
+    "audio_sha256": "a88452c0a89febad37b1572ebd12fdb959e0c8e781d6b34eca4a3954262aefb4",
+    "status": "SCREENED",
+    "expected": "Dobrý den. Vy jste Oksana?",
+    "transcript": "Do býden. Vy jste oxana.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Do býden. Vy jste oxana.",
+        "avg_logprob": -0.658553679784139,
+        "no_speech_prob": 0.23586083948612213
+      }
+    ],
+    "word_edits": 3,
+    "reference_words": 5,
+    "diagnostic_wer": 0.6,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.775
+  },
+  {
+    "asset_id": "4f380cd9-427f-56cf-9430-1309ade77994",
+    "audio_sha256": "3b403843028101b43ecd9307c3a877bf1dc07f85a1e5281217c4caa768c76365",
+    "status": "SCREENED",
+    "expected": "Dobrý den. Ano.",
+    "transcript": "Dobrý den. Ano.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Dobrý den. Ano.",
+        "avg_logprob": -0.6330627744848077,
+        "no_speech_prob": 0.3704940676689148
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 3,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.934
+  },
+  {
+    "asset_id": "73cef992-d44c-5ea3-ab67-3facc861ea42",
+    "audio_sha256": "5fe3d539810e74df207ce9dc961e3dd336b399018ae371073bc2b13dc5e5548e",
+    "status": "SCREENED",
+    "expected": "Dobrý den. Ano.",
+    "transcript": "Vy bude jen... Ano...",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Vy bude jen... Ano...",
+        "avg_logprob": -0.8552137338198148,
+        "no_speech_prob": 0.3875530958175659
+      }
+    ],
+    "word_edits": 3,
+    "reference_words": 3,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.642
+  },
+  {
+    "asset_id": "881ece8d-a600-5000-a59d-95e37d047c5c",
+    "audio_sha256": "28c996b09c41c0721e81f08f386015c1510fa26352024373ba300c3dd3029bc5",
+    "status": "SCREENED",
+    "expected": "Odkud jste?",
+    "transcript": "Odkud jste.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Odkud jste.",
+        "avg_logprob": -0.5225962532891167,
+        "no_speech_prob": 0.3892923891544342
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 2,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.651
+  },
+  {
+    "asset_id": "3aaec93d-9fb4-5a3e-9f38-0a804383ab59",
+    "audio_sha256": "e440766d4d1654c7853b74b77920274f6b590aeed8d2323d9557dcdbc4aa6806",
+    "status": "SCREENED",
+    "expected": "Odkud jste?",
+    "transcript": "Odkud jste.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Odkud jste.",
+        "avg_logprob": -0.5110220379299588,
+        "no_speech_prob": 0.45143750309944153
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 2,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.629
+  },
+  {
+    "asset_id": "f3027fce-c26b-585e-8400-b109fd3f6262",
+    "audio_sha256": "ef016d2e62fd02fbfdadc33bbe96bc2fdb3b89c0b303305e75a78dac79192fde",
+    "status": "SCREENED",
+    "expected": "Jsem z Ukrajiny.",
+    "transcript": "jsem z Ukrainy",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " jsem z Ukrainy",
+        "avg_logprob": -0.3761267140507698,
+        "no_speech_prob": 0.16538172960281372
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 3,
+    "diagnostic_wer": 0.3333333333333333,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.601
+  },
+  {
+    "asset_id": "4b36fe5d-e577-5eef-a645-6e35d5127088",
+    "audio_sha256": "c602afe2e8bce27d7592a33f701bdd5da1a14437ed926142a507b65efa0efb91",
+    "status": "SCREENED",
+    "expected": "Jsem z Ukrajiny.",
+    "transcript": "Sem z Ukrainy.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Sem z Ukrainy.",
+        "avg_logprob": -0.553450796339247,
+        "no_speech_prob": 0.1234167218208313
+      }
+    ],
+    "word_edits": 2,
+    "reference_words": 3,
+    "diagnostic_wer": 0.6666666666666666,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.877
+  },
+  {
+    "asset_id": "a1500c19-3a4b-5b11-aaa1-b357b33076f2",
+    "audio_sha256": "31dbbb93716a819cf8f064e3bd6b64a1d9cdcb1d7e5d808e8761410c4768a83b",
+    "status": "SCREENED",
+    "expected": "Těší mě.",
+    "transcript": "Kěši mě.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Kěši mě.",
+        "avg_logprob": -0.5196507453918457,
+        "no_speech_prob": 0.43341827392578125
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 2,
+    "diagnostic_wer": 0.5,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.702
+  },
+  {
+    "asset_id": "9e9d0ece-e968-57ee-afa9-bd2ec15a46c6",
+    "audio_sha256": "6b15fb50c6b637042763820f3d852c49254e0df95b829d3993aaeab6ee9c5c54",
+    "status": "SCREENED",
+    "expected": "Těší mě.",
+    "transcript": "Kěši mě.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Kěši mě.",
+        "avg_logprob": -0.591282194852829,
+        "no_speech_prob": 0.3944764733314514
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 2,
+    "diagnostic_wer": 0.5,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.635
+  },
+  {
+    "asset_id": "207d4b49-7bae-5e60-9299-9bbc27d380ec",
+    "audio_sha256": "0d1abbef9aa18309bc918674c3e9a0e80e142209263fcc84164cad145dec1ef5",
+    "status": "SCREENED",
+    "expected": "Mě také. Na shledanou.",
+    "transcript": "Nétake na schodanou.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Nétake na schodanou.",
+        "avg_logprob": -0.7083951085805893,
+        "no_speech_prob": 0.17359495162963867
+      }
+    ],
+    "word_edits": 3,
+    "reference_words": 4,
+    "diagnostic_wer": 0.75,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.677
+  },
+  {
+    "asset_id": "c2f1eb5c-f8c0-58ef-ac49-e5cc7d4ece3f",
+    "audio_sha256": "fa429b9b33779a4176d8c23bcfd02a899c7e4c8727beca8afc3a423e632713fb",
+    "status": "SCREENED",
+    "expected": "Mě také. Na shledanou.",
+    "transcript": "Nětaké, naschledanou.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Nětaké, naschledanou.",
+        "avg_logprob": -0.6801645437876384,
+        "no_speech_prob": 0.19091029465198517
+      }
+    ],
+    "word_edits": 4,
+    "reference_words": 4,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.884
+  }
+]

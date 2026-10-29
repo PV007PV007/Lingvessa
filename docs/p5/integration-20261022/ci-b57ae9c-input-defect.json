@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "status": "OBSERVED_INPUT_REUSE_DEFECT_NOT_ACCEPTANCE",
+  "tested_sha": "b57ae9c55acd33808407e82b0e1a96244b85eedd",
+  "observed_at": "2026-10-22",
+  "scope": "P5_DEVELOPMENT_TEST",
+  "approved_input": {
+    "release_id": 414560160,
+    "asset_id": 649769507,
+    "repository_private": true,
+    "draft": true,
+    "published_at": null,
+    "bytes": 63346796,
+    "sha256": "3edaeaaeb000479921a0b3ff5ec2b52042faeee54bf943eff25e4a4a0f4e516d"
+  },
+  "unexpected_empty_draft": {
+    "id": 420910401,
+    "created_at": "2026-10-22T15:49:06Z",
+    "draft": true,
+    "published_at": null,
+    "assets": 0,
+    "retained_untouched": true
+  },
+  "observed_inventory": "GET /releases?per_page=100 returned [] while GET /releases/414560160 returned the exact approved draft and asset",
+  "pull_request": {
+    "run_id": 39808285406,
+    "input_job_id": 119927419938,
+    "artifact_id": 12439245684,
+    "relay_bytes": 780,
+    "real_m01_step": "SKIPPED",
+    "acceptance_not_claimed": true
+  },
+  "push": {
+    "run_id": 39808274096,
+    "input_job_id": 119927342323,
+    "artifact_id": 12438816701,
+    "relay_bytes": 63347783,
+    "input_release_id": 414560160,
+    "status": "FAILED",
+    "failure_step": "Install audio inspection tool with bounded package-network waits",
+    "failure": "10-minute package-download timeout",
+    "real_m01_step": "SKIPPED"
+  },
+  "remediation": "Resolve existing release directly by immutable ID; reject absent/replaced asset and missing-input relay; require verified private bytes in trusted branch/PR acceptance. No automatic release creation, archive upload, deletion or media change.",
+  "last_fully_verified_sha": "96cc9607c3a05481dddd9f8e6c763d8241db26eb",
+  "p6_authorized": false,
+  "od_004_closed": false,
+  "od_006_closed": false
+}

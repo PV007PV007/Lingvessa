@@ -1,0 +1,402 @@
+{
+  "status": "PASS",
+  "plan_sha256": "77ed34e90fc4339d51e34350f664d1f670a567c9fcb237f1bff11de4c5a3d1b6",
+  "screen_script_sha256": "a110b972e6aaeb9119e17a0b6a0422ec007b607cb2d6e898a3e8d8780d356b25",
+  "parameters": {
+    "language": "cs",
+    "compute_type": "int8",
+    "beam_size": 5,
+    "temperature": 0,
+    "vad_filter": false,
+    "condition_on_previous_text": false,
+    "initial_prompt": null
+  },
+  "normalization": "NFC, lowercase word tokens; punctuation ignored, diacritics retained",
+  "decoding": "scipy PCM16 WAV read / resample_poly to mono float32 16000Hz; no PyAV decoding",
+  "network_guard": "Python socket connect/DNS rejected; local files only",
+  "human_listening_review": "PENDING",
+  "pronunciation_quality_asserted": false,
+  "publication_ready": false,
+  "outputs": [
+    {
+      "candidate_id": "cs-B-pocket-A",
+      "variant": "control",
+      "pace": "normal",
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-control-normal.wav",
+      "sha256": "6813c1913e3470440cbc1558abe462364d905fb0958aac532e3357fad3c56547",
+      "expected": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "transcript": "Dobý den, jak semenujete, těší mě, uvůvím česky, děkuj.",
+      "word_edits": 5,
+      "reference_words": 10,
+      "diagnostic_wer": 0.5,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 10.0,
+          "text": " Dobý den, jak semenujete, těší mě, uvůvím česky, děkuj.",
+          "avg_logprob": -0.4169581442168265,
+          "no_speech_prob": 0.09870888292789459
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-B-pocket-A",
+      "variant": "control",
+      "pace": "slow",
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-control-slow.wav",
+      "sha256": "313c911ace11082f203b5552e2477c0ab5e278698d703c7c591326a88e104810",
+      "expected": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "transcript": "Dobý den, jak semenujete, těší mě, uvůvím česky, děkuj.",
+      "word_edits": 5,
+      "reference_words": 10,
+      "diagnostic_wer": 0.5,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 12.0,
+          "text": " Dobý den, jak semenujete, těší mě, uvůvím česky, děkuj.",
+          "avg_logprob": -0.4044264591101444,
+          "no_speech_prob": 0.06553035229444504
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-B-pocket-A",
+      "variant": "lowercase",
+      "pace": "normal",
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-lowercase-normal.wav",
+      "sha256": "56f1ea31aae6b8fdb418fdec49c8d7b263ceab11ca92beb9f4a0d280e8e51cb8",
+      "expected": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "transcript": "Dobrý den. Jak semenujete? Těší mě. Mluvím česky. Děkují.",
+      "word_edits": 3,
+      "reference_words": 10,
+      "diagnostic_wer": 0.3,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 9.0,
+          "text": " Dobrý den. Jak semenujete? Těší mě. Mluvím česky. Děkují.",
+          "avg_logprob": -0.31939320792170134,
+          "no_speech_prob": 0.0778147280216217
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-B-pocket-A",
+      "variant": "lowercase",
+      "pace": "slow",
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-B-pocket-A-lowercase-slow.wav",
+      "sha256": "212d9565a4f5eb9442eeb729ed4e4bf39fa49ff1cd660a5c2dafb11ad65ec0f4",
+      "expected": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "transcript": "Dobrý den, jak semenujete, těží mě, mluvím česky, děkuju.",
+      "word_edits": 4,
+      "reference_words": 10,
+      "diagnostic_wer": 0.4,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 12.0,
+          "text": " Dobrý den, jak semenujete, těží mě, mluvím česky, děkuju.",
+          "avg_logprob": -0.3495423206511666,
+          "no_speech_prob": 0.04633019119501114
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-C-pocket-C",
+      "variant": "control",
+      "pace": "normal",
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-control-normal.wav",
+      "sha256": "b07fda76fdebf6a4347b9114f9984b12abd02c985147d480f988f9ccf73678f2",
+      "expected": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "transcript": "do býden. Jak se menujete? Těší mě. Mluvím česky. Děkuju.",
+      "word_edits": 4,
+      "reference_words": 10,
+      "diagnostic_wer": 0.4,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": " do býden.",
+          "avg_logprob": -0.24583455992908013,
+          "no_speech_prob": 0.2711447477340698
+        },
+        {
+          "start": 2.0,
+          "end": 4.0,
+          "text": " Jak se menujete?",
+          "avg_logprob": -0.24583455992908013,
+          "no_speech_prob": 0.2711447477340698
+        },
+        {
+          "start": 4.0,
+          "end": 6.0,
+          "text": " Těší mě.",
+          "avg_logprob": -0.24583455992908013,
+          "no_speech_prob": 0.2711447477340698
+        },
+        {
+          "start": 6.0,
+          "end": 8.0,
+          "text": " Mluvím česky.",
+          "avg_logprob": -0.24583455992908013,
+          "no_speech_prob": 0.2711447477340698
+        },
+        {
+          "start": 8.0,
+          "end": 10.0,
+          "text": " Děkuju.",
+          "avg_logprob": -0.24583455992908013,
+          "no_speech_prob": 0.2711447477340698
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-C-pocket-C",
+      "variant": "control",
+      "pace": "slow",
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-control-slow.wav",
+      "sha256": "d2e3eadb44467bb7e2daaae7325b8bda3b474c410e23d4f6d5b960348c83d2c4",
+      "expected": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "transcript": "Dobí den, jak se menujete, těší mě, mluvím česky, děkuj.",
+      "word_edits": 3,
+      "reference_words": 10,
+      "diagnostic_wer": 0.3,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 12.0,
+          "text": " Dobí den, jak se menujete, těší mě, mluvím česky, děkuj.",
+          "avg_logprob": -0.4598345924168825,
+          "no_speech_prob": 0.254143089056015
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-C-pocket-C",
+      "variant": "lowercase",
+      "pace": "normal",
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-lowercase-normal.wav",
+      "sha256": "b3776a0c5156ac72560c520e12a9b11d464ffbd051651110e396344d9bd09c21",
+      "expected": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "transcript": "Dobrý den. Jak se menujete? Těší mě. Mluvím česky. Děkuji.",
+      "word_edits": 1,
+      "reference_words": 10,
+      "diagnostic_wer": 0.1,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": " Dobrý den.",
+          "avg_logprob": -0.18706328985167714,
+          "no_speech_prob": 0.07518329471349716
+        },
+        {
+          "start": 2.0,
+          "end": 4.0,
+          "text": " Jak se menujete?",
+          "avg_logprob": -0.18706328985167714,
+          "no_speech_prob": 0.07518329471349716
+        },
+        {
+          "start": 4.0,
+          "end": 6.0,
+          "text": " Těší mě.",
+          "avg_logprob": -0.18706328985167714,
+          "no_speech_prob": 0.07518329471349716
+        },
+        {
+          "start": 6.0,
+          "end": 8.0,
+          "text": " Mluvím česky.",
+          "avg_logprob": -0.18706328985167714,
+          "no_speech_prob": 0.07518329471349716
+        },
+        {
+          "start": 8.0,
+          "end": 10.0,
+          "text": " Děkuji.",
+          "avg_logprob": -0.18706328985167714,
+          "no_speech_prob": 0.07518329471349716
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-C-pocket-C",
+      "variant": "lowercase",
+      "pace": "slow",
+      "path": "docs/p5/voice-audition/pocket-case-20261010/samples/cs-C-pocket-C-lowercase-slow.wav",
+      "sha256": "9537769607ae3e7c6dec5cd229039a359eeba7d917147c41f9ecb2ef5053ed4a",
+      "expected": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "transcript": "Dobrý den, jak se menujete, těší mě, mluvím česky, děkuj.",
+      "word_edits": 2,
+      "reference_words": 10,
+      "diagnostic_wer": 0.2,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 12.0,
+          "text": " Dobrý den, jak se menujete, těší mě, mluvím česky, děkuj.",
+          "avg_logprob": -0.3289355364712802,
+          "no_speech_prob": 0.09212512522935867
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-B-pocket-A",
+      "variant": "historical",
+      "pace": "normal",
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-normal.wav",
+      "sha256": "20bb6cb04c136f68cab28c9e24f6fbce78118dce33ee1cb24c11a314e097271a",
+      "expected": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "transcript": "Dobý den, jak semenujete, těší mě, uvůvím česky, děkuj.",
+      "word_edits": 5,
+      "reference_words": 10,
+      "diagnostic_wer": 0.5,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 10.0,
+          "text": " Dobý den, jak semenujete, těší mě, uvůvím česky, děkuj.",
+          "avg_logprob": -0.4218418236934777,
+          "no_speech_prob": 0.0772922933101654
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-B-pocket-A",
+      "variant": "historical",
+      "pace": "slow",
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-slow.wav",
+      "sha256": "2e1bf770ef5835688f974ba6df1fdc3d39a10c0fc6803855940b13dc57595133",
+      "expected": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "transcript": "Dobý den, jak semenujete, těší mě, vůvím česky, děkuj.",
+      "word_edits": 5,
+      "reference_words": 10,
+      "diagnostic_wer": 0.5,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 12.0,
+          "text": " Dobý den, jak semenujete, těší mě, vůvím česky, děkuj.",
+          "avg_logprob": -0.41062290500849485,
+          "no_speech_prob": 0.06589650362730026
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-C-pocket-C",
+      "variant": "historical",
+      "pace": "normal",
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-normal.wav",
+      "sha256": "bb9efbb0529e244b204b39ed22e5b29ab790e37de3392cac62a1dd68bb62c70e",
+      "expected": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "transcript": "do býden. Jak se menujete? Těší mě. Mluvím česky. Děkuju.",
+      "word_edits": 4,
+      "reference_words": 10,
+      "diagnostic_wer": 0.4,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": " do býden.",
+          "avg_logprob": -0.2496688540388898,
+          "no_speech_prob": 0.3767561912536621
+        },
+        {
+          "start": 2.0,
+          "end": 4.0,
+          "text": " Jak se menujete?",
+          "avg_logprob": -0.2496688540388898,
+          "no_speech_prob": 0.3767561912536621
+        },
+        {
+          "start": 4.0,
+          "end": 6.0,
+          "text": " Těší mě.",
+          "avg_logprob": -0.2496688540388898,
+          "no_speech_prob": 0.3767561912536621
+        },
+        {
+          "start": 6.0,
+          "end": 8.0,
+          "text": " Mluvím česky.",
+          "avg_logprob": -0.2496688540388898,
+          "no_speech_prob": 0.3767561912536621
+        },
+        {
+          "start": 8.0,
+          "end": 10.0,
+          "text": " Děkuju.",
+          "avg_logprob": -0.2496688540388898,
+          "no_speech_prob": 0.3767561912536621
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-C-pocket-C",
+      "variant": "historical",
+      "pace": "slow",
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-slow.wav",
+      "sha256": "60e4435cfceb5d515309d1d1f681560d825f409f6d5743be223c50354a0163bb",
+      "expected": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "transcript": "Dobí den, jak se menujete, těším mě, mluvím česky, děkuj.",
+      "word_edits": 4,
+      "reference_words": 10,
+      "diagnostic_wer": 0.4,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 12.0,
+          "text": " Dobí den, jak se menujete, těším mě, mluvím česky, děkuj.",
+          "avg_logprob": -0.46091660586270417,
+          "no_speech_prob": 0.23173213005065918
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-A-jirka",
+      "variant": "historical",
+      "pace": "normal",
+      "path": "docs/p5/voice-audition/samples/cs-A-jirka-normal.wav",
+      "sha256": "26b1dd03c1140b7f63193482821d3e49ac97a76d4d08855c389579e34e71309b",
+      "expected": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "transcript": "Dobrý den, jak se jmenujete. Češí mě. Mluvím česky. Děkuji.",
+      "word_edits": 1,
+      "reference_words": 10,
+      "diagnostic_wer": 0.1,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 6.0,
+          "text": " Dobrý den, jak se jmenujete. Češí mě. Mluvím česky. Děkuji.",
+          "avg_logprob": -0.2603124363081796,
+          "no_speech_prob": 0.013523809611797333
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-A-jirka",
+      "variant": "historical",
+      "pace": "slow",
+      "path": "docs/p5/voice-audition/samples/cs-A-jirka-slow.wav",
+      "sha256": "27bd46edba1a9ee1812c994d8b9430b822c22612ea4d206bda52a999e8551c4c",
+      "expected": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "transcript": "Dobrý den, jak se jmenujete, děší mě, mluvím česky, děkují.",
+      "word_edits": 2,
+      "reference_words": 10,
+      "diagnostic_wer": 0.2,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 7.76,
+          "text": " Dobrý den, jak se jmenujete, děší mě, mluvím česky, děkují.",
+          "avg_logprob": -0.3308091197695051,
+          "no_speech_prob": 0.0046409545466303825
+        }
+      ]
+    }
+  ],
+  "elapsed_seconds": 33.070726647000015,
+  "peak_rss_kib": 700052
+}

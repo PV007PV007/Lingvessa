@@ -1,0 +1,350 @@
+{
+  "status": "EXECUTED",
+  "purpose": "Blind transcript discrepancy screen, not pronunciation/cast acceptance",
+  "model_lock": "asr-model.lock.json",
+  "engine": "faster-whisper 1.2.1",
+  "compute_type": "int8",
+  "parameters": {
+    "beam_size": 5,
+    "temperature": 0,
+    "vad_filter": false,
+    "condition_on_previous_text": false,
+    "initial_prompt": null
+  },
+  "normalization": "NFC + lowercase + word tokens; punctuation ignored; diacritics retained",
+  "decoding": "scipy PCM16 WAV read; scipy resample_poly to 16000 Hz float32; avoids PyAV file-decoder API incompatibility",
+  "network": "local paths only; connect/DNS rejected",
+  "paid_inference_calls": 0,
+  "human_listening_review": "PENDING",
+  "pronunciation_quality_asserted": false,
+  "publication_ready": false,
+  "outputs": [
+    {
+      "candidate_id": "en-A-p225",
+      "pace": "normal",
+      "language": "en",
+      "path": "docs/p5/voice-audition/samples/en-A-p225-normal.wav",
+      "sha256": "436906eb0ffb3af2ac9332910e3591934a2e8e5a5cbcc83625e1b1859f9e0695",
+      "expected": "Hello. Good morning. What's your name? Nice to meet you. Thank you.",
+      "transcript": "Hello. Good morning. What's your name? Nice to meet you. Thank you.",
+      "word_edits": 0,
+      "reference_words": 12,
+      "diagnostic_wer": 0.0,
+      "screen": "EXACT_NORMALIZED_TEXT",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": " Hello. Good morning. What's your name?",
+          "avg_logprob": -0.37617910167445306,
+          "no_speech_prob": 0.0019089743727818131
+        },
+        {
+          "start": 3.0,
+          "end": 5.0,
+          "text": " Nice to meet you. Thank you.",
+          "avg_logprob": -0.37617910167445306,
+          "no_speech_prob": 0.0019089743727818131
+        }
+      ]
+    },
+    {
+      "candidate_id": "en-A-p225",
+      "pace": "slow",
+      "language": "en",
+      "path": "docs/p5/voice-audition/samples/en-A-p225-slow.wav",
+      "sha256": "f10faf6bee406b69ff3ae2b7c4fed890e924749a46ea8668642f78e749cd0593",
+      "expected": "Hello. Good morning. What's your name? Nice to meet you. Thank you.",
+      "transcript": "Hello Good morning. What's your name? Nice to meet you. Thank you.",
+      "word_edits": 0,
+      "reference_words": 12,
+      "diagnostic_wer": 0.0,
+      "screen": "EXACT_NORMALIZED_TEXT",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": " Hello",
+          "avg_logprob": -0.3324700395266215,
+          "no_speech_prob": 0.00420985696837306
+        },
+        {
+          "start": 2.0,
+          "end": 4.0,
+          "text": " Good morning. What's your name?",
+          "avg_logprob": -0.3324700395266215,
+          "no_speech_prob": 0.00420985696837306
+        },
+        {
+          "start": 4.0,
+          "end": 6.0,
+          "text": " Nice to meet you. Thank you.",
+          "avg_logprob": -0.3324700395266215,
+          "no_speech_prob": 0.00420985696837306
+        }
+      ]
+    },
+    {
+      "candidate_id": "en-B-p226",
+      "pace": "normal",
+      "language": "en",
+      "path": "docs/p5/voice-audition/samples/en-B-p226-normal.wav",
+      "sha256": "3985e0f624e5c47dd138a96e08b9d6d1a29146e17e1a7f0c4c39211a7a313334",
+      "expected": "Hello. Good morning. What's your name? Nice to meet you. Thank you.",
+      "transcript": "Hello, good morning. What's your name? Nice to meet you. Thank you.",
+      "word_edits": 0,
+      "reference_words": 12,
+      "diagnostic_wer": 0.0,
+      "screen": "EXACT_NORMALIZED_TEXT",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 3.84,
+          "text": " Hello, good morning. What's your name? Nice to meet you. Thank you.",
+          "avg_logprob": -0.31576162292843774,
+          "no_speech_prob": 0.017116524279117584
+        }
+      ]
+    },
+    {
+      "candidate_id": "en-B-p226",
+      "pace": "slow",
+      "language": "en",
+      "path": "docs/p5/voice-audition/samples/en-B-p226-slow.wav",
+      "sha256": "abaea6d903c0995985537ac300ef4bcd4ad567ad39e5fd807d6837c6b0835045",
+      "expected": "Hello. Good morning. What's your name? Nice to meet you. Thank you.",
+      "transcript": "Hello. Good morning. What's your name? Nice to meet you. Thank you.",
+      "word_edits": 0,
+      "reference_words": 12,
+      "diagnostic_wer": 0.0,
+      "screen": "EXACT_NORMALIZED_TEXT",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 4.8,
+          "text": " Hello. Good morning. What's your name? Nice to meet you. Thank you.",
+          "avg_logprob": -0.3051461208434332,
+          "no_speech_prob": 0.009110239334404469
+        }
+      ]
+    },
+    {
+      "candidate_id": "en-C-p228",
+      "pace": "normal",
+      "language": "en",
+      "path": "docs/p5/voice-audition/samples/en-C-p228-normal.wav",
+      "sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8",
+      "expected": "Hello. Good morning. What's your name? Nice to meet you. Thank you.",
+      "transcript": "Hello, good morning. What's your name? Nice to meet you, thank you.",
+      "word_edits": 0,
+      "reference_words": 12,
+      "diagnostic_wer": 0.0,
+      "screen": "EXACT_NORMALIZED_TEXT",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 1.44,
+          "text": " Hello, good morning.",
+          "avg_logprob": -0.3436919403076172,
+          "no_speech_prob": 0.025640180334448814
+        },
+        {
+          "start": 1.44,
+          "end": 2.2800000000000002,
+          "text": " What's your name?",
+          "avg_logprob": -0.3436919403076172,
+          "no_speech_prob": 0.025640180334448814
+        },
+        {
+          "start": 2.2800000000000002,
+          "end": 3.92,
+          "text": " Nice to meet you, thank you.",
+          "avg_logprob": -0.3436919403076172,
+          "no_speech_prob": 0.025640180334448814
+        }
+      ]
+    },
+    {
+      "candidate_id": "en-C-p228",
+      "pace": "slow",
+      "language": "en",
+      "path": "docs/p5/voice-audition/samples/en-C-p228-slow.wav",
+      "sha256": "87d25fce236130efbd17229cedd20ed4807df4d19f7e543f9ec35b6690195df9",
+      "expected": "Hello. Good morning. What's your name? Nice to meet you. Thank you.",
+      "transcript": "Hello. Good morning. What's your name? Nice to meet you. Thank you.",
+      "word_edits": 0,
+      "reference_words": 12,
+      "diagnostic_wer": 0.0,
+      "screen": "EXACT_NORMALIZED_TEXT",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 5.0,
+          "text": " Hello. Good morning. What's your name? Nice to meet you. Thank you.",
+          "avg_logprob": -0.32031839802151635,
+          "no_speech_prob": 0.020209796726703644
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-A-jirka",
+      "pace": "normal",
+      "language": "cs",
+      "path": "docs/p5/voice-audition/samples/cs-A-jirka-normal.wav",
+      "sha256": "26b1dd03c1140b7f63193482821d3e49ac97a76d4d08855c389579e34e71309b",
+      "expected": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "transcript": "Dobrý den, jak se jmenujete. Češí mě. Mluvím česky. Děkuji.",
+      "word_edits": 1,
+      "reference_words": 10,
+      "diagnostic_wer": 0.1,
+      "screen": "REVIEW_TRANSCRIPT_DISCREPANCY",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 6.0,
+          "text": " Dobrý den, jak se jmenujete. Češí mě. Mluvím česky. Děkuji.",
+          "avg_logprob": -0.2658537115369524,
+          "no_speech_prob": 0.008689126931130886
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-A-jirka",
+      "pace": "slow",
+      "language": "cs",
+      "path": "docs/p5/voice-audition/samples/cs-A-jirka-slow.wav",
+      "sha256": "27bd46edba1a9ee1812c994d8b9430b822c22612ea4d206bda52a999e8551c4c",
+      "expected": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "transcript": "Dobrý den, jak se jmenujete, děší mě, mluvím česky, děkují.",
+      "word_edits": 2,
+      "reference_words": 10,
+      "diagnostic_wer": 0.2,
+      "screen": "REVIEW_TRANSCRIPT_DISCREPANCY",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 7.76,
+          "text": " Dobrý den, jak se jmenujete, děší mě, mluvím česky, děkují.",
+          "avg_logprob": -0.3316284840305646,
+          "no_speech_prob": 0.00357071403414011
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-B-pocket-A",
+      "pace": "normal",
+      "language": "cs",
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-normal.wav",
+      "sha256": "20bb6cb04c136f68cab28c9e24f6fbce78118dce33ee1cb24c11a314e097271a",
+      "expected": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "transcript": "Dobý den, jak semenujete, těší mě, uvůvím česky, děkuj.",
+      "word_edits": 5,
+      "reference_words": 10,
+      "diagnostic_wer": 0.5,
+      "screen": "REVIEW_TRANSCRIPT_DISCREPANCY",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 10.0,
+          "text": " Dobý den, jak semenujete, těší mě, uvůvím česky, děkuj.",
+          "avg_logprob": -0.41766559716426965,
+          "no_speech_prob": 0.08362806588411331
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-B-pocket-A",
+      "pace": "slow",
+      "language": "cs",
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-slow.wav",
+      "sha256": "2e1bf770ef5835688f974ba6df1fdc3d39a10c0fc6803855940b13dc57595133",
+      "expected": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "transcript": "Dobý den, jak semenujete, těší mě, vůvím česky, děkuj.",
+      "word_edits": 5,
+      "reference_words": 10,
+      "diagnostic_wer": 0.5,
+      "screen": "REVIEW_TRANSCRIPT_DISCREPANCY",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 12.0,
+          "text": " Dobý den, jak semenujete, těší mě, vůvím česky, děkuj.",
+          "avg_logprob": -0.4195938752964139,
+          "no_speech_prob": 0.08201859891414642
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-C-pocket-C",
+      "pace": "normal",
+      "language": "cs",
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-normal.wav",
+      "sha256": "bb9efbb0529e244b204b39ed22e5b29ab790e37de3392cac62a1dd68bb62c70e",
+      "expected": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "transcript": "do býden. Jak se menujete? Těší mě. Mluvím česky. Děkuju.",
+      "word_edits": 4,
+      "reference_words": 10,
+      "diagnostic_wer": 0.4,
+      "screen": "REVIEW_TRANSCRIPT_DISCREPANCY",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": " do býden.",
+          "avg_logprob": -0.24567243529529106,
+          "no_speech_prob": 0.2560107707977295
+        },
+        {
+          "start": 2.0,
+          "end": 4.0,
+          "text": " Jak se menujete?",
+          "avg_logprob": -0.24567243529529106,
+          "no_speech_prob": 0.2560107707977295
+        },
+        {
+          "start": 4.0,
+          "end": 6.0,
+          "text": " Těší mě.",
+          "avg_logprob": -0.24567243529529106,
+          "no_speech_prob": 0.2560107707977295
+        },
+        {
+          "start": 6.0,
+          "end": 8.0,
+          "text": " Mluvím česky.",
+          "avg_logprob": -0.24567243529529106,
+          "no_speech_prob": 0.2560107707977295
+        },
+        {
+          "start": 8.0,
+          "end": 10.0,
+          "text": " Děkuju.",
+          "avg_logprob": -0.24567243529529106,
+          "no_speech_prob": 0.2560107707977295
+        }
+      ]
+    },
+    {
+      "candidate_id": "cs-C-pocket-C",
+      "pace": "slow",
+      "language": "cs",
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-slow.wav",
+      "sha256": "60e4435cfceb5d515309d1d1f681560d825f409f6d5743be223c50354a0163bb",
+      "expected": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "transcript": "Dobí den, jak se menujete, těší mě, mluvím česky, děkuj.",
+      "word_edits": 3,
+      "reference_words": 10,
+      "diagnostic_wer": 0.3,
+      "screen": "REVIEW_TRANSCRIPT_DISCREPANCY",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 12.0,
+          "text": " Dobí den, jak se menujete, těší mě, mluvím česky, děkuj.",
+          "avg_logprob": -0.44950408674776554,
+          "no_speech_prob": 0.20000919699668884
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "same_diagnostic_model_and_parameters_as": "../asr-screen.json",
+  "publication_ready": false,
+  "outputs": [
+    {
+      "candidate_id": "cs-B-pocket-A",
+      "path": "docs/p5/voice-audition/pocket-20261009/continuous/cs-B-pocket-A-continuous.wav",
+      "sha256": "d39fd7cfacdbc7293d3d863c150d083a0b0f1de975a17fae853c35a3db4d27aa",
+      "expected": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "transcript": "Bríden, jak se menujete, těší mě, mluvím česky, děkují.",
+      "word_edits": 4,
+      "reference_words": 10
+    },
+    {
+      "candidate_id": "cs-C-pocket-C",
+      "path": "docs/p5/voice-audition/pocket-20261009/continuous/cs-C-pocket-C-continuous.wav",
+      "sha256": "743905cd62c1533880f87e27717558e3b676038ad727aabad20a612bc6c7dd2f",
+      "expected": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "transcript": "Dobrý den. Jak se menujete? Těší mě.",
+      "word_edits": 4,
+      "reference_words": 10
+    }
+  ]
+}

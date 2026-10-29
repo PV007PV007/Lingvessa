@@ -1,0 +1,2092 @@
+[
+  {
+    "speaker": "F01",
+    "voice_code": "AUD_CZE_VOICE_F01",
+    "text": "Dobrý den.",
+    "turn_id": "4e2ab334-e4d2-5494-875f-1781cd8f440f",
+    "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+    "language": "cs",
+    "script_id": "6eea6f7d-ab89-581c-bd42-51df1719a4dd",
+    "candidate_id": "cs-C-pocket-C",
+    "engine": "pocket",
+    "seed": 1331682247,
+    "status": "GENERATED_UNREVIEWED",
+    "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+    "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+    "continuation_plan_sha256": null,
+    "infrastructure_retry": false,
+    "engine_result": {
+      "model_sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+      "prepared_text": "Dobrý den.",
+      "token_ids": [
+        2911,
+        1346,
+        3917
+      ],
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8"
+    },
+    "raw": {
+      "path": "raw/4e2ab334-e4d2-5494-875f-1781cd8f440f.wav",
+      "sha256": "d615052d459faf13be51ad29f6e5b5cb04546023e8724d7a9b01646872a432ba",
+      "bytes": 161338
+    },
+    "normalization": {
+      "gain": 0.780393667395339,
+      "raw_resampled_peak": 0.7360983490943909,
+      "raw_resampled_rms": 0.10178558180455907
+    },
+    "normal": {
+      "path": "turns/4e2ab334-e4d2-5494-875f-1781cd8f440f.wav",
+      "sha256": "3d9116c281bea7d8f062a2199f17724a924aaf5154126d31393991f723c43c88",
+      "bytes": 80684,
+      "metrics": {
+        "frames": 40320,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.68,
+        "peak_dbfs": -4.815221854443189,
+        "rms_dbfs": -22.000270687609408,
+        "clipped_samples": 0
+      }
+    },
+    "slow": {
+      "path": "turns/4e2ab334-e4d2-5494-875f-1781cd8f440f-slow.wav",
+      "sha256": "719f7976e43edf04580bb2722334d6647564f645bf9674860157ba511b978f2a",
+      "bytes": 100158,
+      "metrics": {
+        "frames": 50040,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 2.085,
+        "peak_dbfs": -4.818914246076696,
+        "rms_dbfs": -21.784020906745248,
+        "clipped_samples": 0
+      }
+    },
+    "elapsed_seconds": 0.877
+  },
+  {
+    "speaker": "F01",
+    "voice_code": "AUD_CZE_VOICE_F01",
+    "text": "Ahoj.",
+    "turn_id": "ae158d6a-f12c-567f-8c64-fc64adb503f7",
+    "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+    "language": "cs",
+    "script_id": "4955fe86-25d5-5476-9c22-c33516466690",
+    "candidate_id": "cs-C-pocket-C",
+    "engine": "pocket",
+    "seed": 793425406,
+    "status": "GENERATED_UNREVIEWED",
+    "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+    "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+    "continuation_plan_sha256": null,
+    "infrastructure_retry": false,
+    "engine_result": {
+      "model_sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+      "prepared_text": "Ahoj.",
+      "token_ids": [
+        77,
+        38,
+        3910,
+        3917
+      ],
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8"
+    },
+    "raw": {
+      "path": "raw/ae158d6a-f12c-567f-8c64-fc64adb503f7.wav",
+      "sha256": "61f5a44ddf1652e75cb100eadeb980dc3b73fdd7dd94723df185196b48f9ce04",
+      "bytes": 130618
+    },
+    "normalization": {
+      "gain": 0.7471008934174618,
+      "raw_resampled_peak": 0.59928959608078,
+      "raw_resampled_rms": 0.1063214141119264
+    },
+    "normal": {
+      "path": "turns/ae158d6a-f12c-567f-8c64-fc64adb503f7.wav",
+      "sha256": "c147a6e0dbe37a0c794dfcc407750b92f6d40376266c9dce94a61c50095f157b",
+      "bytes": 65324,
+      "metrics": {
+        "frames": 32640,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.36,
+        "peak_dbfs": -6.979804357324689,
+        "rms_dbfs": -22.000256851522593,
+        "clipped_samples": 0
+      }
+    },
+    "slow": {
+      "path": "turns/ae158d6a-f12c-567f-8c64-fc64adb503f7-slow.wav",
+      "sha256": "e12a73c0cb3641fa273a0f55373bd63b4c278698d9dd6ac847802af4892e89ea",
+      "bytes": 80656,
+      "metrics": {
+        "frames": 40289,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.6787083333333332,
+        "peak_dbfs": -6.98513439579301,
+        "rms_dbfs": -21.681838268740854,
+        "clipped_samples": 0
+      }
+    },
+    "elapsed_seconds": 0.727
+  },
+  {
+    "speaker": "F01",
+    "voice_code": "AUD_CZE_VOICE_F01",
+    "text": "Na shledanou.",
+    "turn_id": "68f20a7b-576c-5d37-bb01-8e6b164db8af",
+    "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+    "language": "cs",
+    "script_id": "3ea932ff-db1f-5d0c-a198-604377274f2d",
+    "candidate_id": "cs-C-pocket-C",
+    "engine": "pocket",
+    "seed": 1780953870,
+    "status": "GENERATED_UNREVIEWED",
+    "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+    "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+    "continuation_plan_sha256": null,
+    "infrastructure_retry": false,
+    "engine_result": {
+      "model_sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+      "prepared_text": "Na shledanou.",
+      "token_ids": [
+        636,
+        6,
+        558,
+        20,
+        27,
+        3917
+      ],
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8"
+    },
+    "raw": {
+      "path": "raw/68f20a7b-576c-5d37-bb01-8e6b164db8af.wav",
+      "sha256": "7d1fcfe3da522e06f84c1c6bff0d49612350889954491d7d343eaaec01e21f8a",
+      "bytes": 169018
+    },
+    "normalization": {
+      "gain": 0.5866961003687637,
+      "raw_resampled_peak": 1.0142730474472046,
+      "raw_resampled_rms": 0.13539006552540778
+    },
+    "normal": {
+      "path": "turns/68f20a7b-576c-5d37-bb01-8e6b164db8af.wav",
+      "sha256": "5d5b322afd314bf2a5c2f197ee79bd68d4cd1ed8da73f47268569fa71f30687d",
+      "bytes": 84524,
+      "metrics": {
+        "frames": 42240,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.76,
+        "peak_dbfs": -4.5087519136035255,
+        "rms_dbfs": -22.000272303180818,
+        "clipped_samples": 0
+      }
+    },
+    "slow": {
+      "path": "turns/68f20a7b-576c-5d37-bb01-8e6b164db8af-slow.wav",
+      "sha256": "5330b4be115d85e77177c25e23d4914338827235d867c732621fc37ea0de80b4",
+      "bytes": 104954,
+      "metrics": {
+        "frames": 52438,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 2.1849166666666666,
+        "peak_dbfs": -4.514990496620175,
+        "rms_dbfs": -21.70931406426055,
+        "clipped_samples": 0
+      }
+    },
+    "elapsed_seconds": 0.871
+  },
+  {
+    "speaker": "F01",
+    "voice_code": "AUD_CZE_VOICE_F01",
+    "text": "Děkuji.",
+    "turn_id": "8a2d65f3-5682-58d8-9344-6e280091319a",
+    "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+    "language": "cs",
+    "script_id": "a07e01b1-30e9-55e0-b466-3b73db8dfa09",
+    "candidate_id": "cs-C-pocket-C",
+    "engine": "pocket",
+    "seed": 191008391,
+    "status": "GENERATED_UNREVIEWED",
+    "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+    "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+    "continuation_plan_sha256": null,
+    "infrastructure_retry": false,
+    "engine_result": {
+      "model_sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+      "prepared_text": "Děkuji.",
+      "token_ids": [
+        568,
+        3917
+      ],
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8"
+    },
+    "raw": {
+      "path": "raw/8a2d65f3-5682-58d8-9344-6e280091319a.wav",
+      "sha256": "116f747f3ae0091d186d41efa85de7c26315c5d7c4190f05b25e6b9cf9ee5dd8",
+      "bytes": 122938
+    },
+    "normalization": {
+      "gain": 0.6555527610759505,
+      "raw_resampled_peak": 0.9464532136917114,
+      "raw_resampled_rms": 0.12116923028751499
+    },
+    "normal": {
+      "path": "turns/8a2d65f3-5682-58d8-9344-6e280091319a.wav",
+      "sha256": "c87edcfeaa5f0858d54179cad0860acda38e0a84f73633934a682961c0028414",
+      "bytes": 61484,
+      "metrics": {
+        "frames": 30720,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.28,
+        "peak_dbfs": -4.146251126433586,
+        "rms_dbfs": -22.00026235331592,
+        "clipped_samples": 0
+      }
+    },
+    "slow": {
+      "path": "turns/8a2d65f3-5682-58d8-9344-6e280091319a-slow.wav",
+      "sha256": "873a53eae05a7d93c698e57946b6e0b34cf965bc5b5540d25ec89e4e16775e2a",
+      "bytes": 76868,
+      "metrics": {
+        "frames": 38395,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.5997916666666667,
+        "peak_dbfs": -4.161645578423715,
+        "rms_dbfs": -21.83821132254693,
+        "clipped_samples": 0
+      }
+    },
+    "elapsed_seconds": 0.671
+  },
+  {
+    "speaker": "F01",
+    "voice_code": "AUD_CZE_VOICE_F01",
+    "text": "Prosím.",
+    "turn_id": "c07eace3-b818-5bcd-929e-e2eee8e1e688",
+    "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+    "language": "cs",
+    "script_id": "f29447af-f3b9-5615-af26-c31a048a97cd",
+    "candidate_id": "cs-C-pocket-C",
+    "engine": "pocket",
+    "seed": 1102304631,
+    "status": "GENERATED_UNREVIEWED",
+    "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+    "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+    "continuation_plan_sha256": null,
+    "infrastructure_retry": false,
+    "engine_result": {
+      "model_sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+      "prepared_text": "Prosím.",
+      "token_ids": [
+        976,
+        3917
+      ],
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8"
+    },
+    "raw": {
+      "path": "raw/c07eace3-b818-5bcd-929e-e2eee8e1e688.wav",
+      "sha256": "5b03ec1546bc01ca491373ca9ecde4a4aba187efc62b59a4ae7f8118986eda7e",
+      "bytes": 138298
+    },
+    "normalization": {
+      "gain": 0.7615159263721875,
+      "raw_resampled_peak": 1.0163097381591797,
+      "raw_resampled_rms": 0.1043088144601794
+    },
+    "normal": {
+      "path": "turns/c07eace3-b818-5bcd-929e-e2eee8e1e688.wav",
+      "sha256": "f995bbda823ab1e63e5d8872e430201d24bc8004a634f50caeab1259704086c7",
+      "bytes": 69164,
+      "metrics": {
+        "frames": 34560,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.44,
+        "peak_dbfs": -2.2260137150004566,
+        "rms_dbfs": -22.00025242074313,
+        "clipped_samples": 0
+      }
+    },
+    "slow": {
+      "path": "turns/c07eace3-b818-5bcd-929e-e2eee8e1e688-slow.wav",
+      "sha256": "4f553f3133bd69cca61a090ced60bc0ab97f9d7f7f7150aaad426db1da6e616e",
+      "bytes": 85866,
+      "metrics": {
+        "frames": 42894,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.78725,
+        "peak_dbfs": -2.31206444493591,
+        "rms_dbfs": -21.761048541317223,
+        "clipped_samples": 0
+      }
+    },
+    "elapsed_seconds": 0.775
+  },
+  {
+    "speaker": "F01",
+    "voice_code": "AUD_CZE_VOICE_F01",
+    "text": "Promiňte.",
+    "turn_id": "b75eb094-5b39-5b11-b4e4-01989084cc1a",
+    "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+    "language": "cs",
+    "script_id": "df21b3a9-7d25-5175-be2e-1e83734449ee",
+    "candidate_id": "cs-C-pocket-C",
+    "engine": "pocket",
+    "seed": 949213480,
+    "status": "GENERATED_UNREVIEWED",
+    "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+    "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+    "continuation_plan_sha256": null,
+    "infrastructure_retry": false,
+    "engine_result": {
+      "model_sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+      "prepared_text": "Promiňte.",
+      "token_ids": [
+        289,
+        2758,
+        26,
+        3917
+      ],
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8"
+    },
+    "raw": {
+      "path": "raw/b75eb094-5b39-5b11-b4e4-01989084cc1a.wav",
+      "sha256": "12dd89a63b5f995e79df28262cad4e443c2b4dddf6dc926d7ed123e280937e02",
+      "bytes": 138298
+    },
+    "normalization": {
+      "gain": 0.569691920009335,
+      "raw_resampled_peak": 0.9190740585327148,
+      "raw_resampled_rms": 0.1394311919872877
+    },
+    "normal": {
+      "path": "turns/b75eb094-5b39-5b11-b4e4-01989084cc1a.wav",
+      "sha256": "7e70a5ace5e4fa6dfe319238362a52ef97d638efdd29428d9e13bcdbb361141d",
+      "bytes": 69164,
+      "metrics": {
+        "frames": 34560,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.44,
+        "peak_dbfs": -5.620677947853646,
+        "rms_dbfs": -22.00026355192597,
+        "clipped_samples": 0
+      }
+    },
+    "slow": {
+      "path": "turns/b75eb094-5b39-5b11-b4e4-01989084cc1a-slow.wav",
+      "sha256": "f401b4f315953068200acf1c79310cbf46560a57367f204e71abe4f08519b448",
+      "bytes": 85430,
+      "metrics": {
+        "frames": 42676,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.7781666666666667,
+        "peak_dbfs": -5.68674611806731,
+        "rms_dbfs": -21.801574489111797,
+        "clipped_samples": 0
+      }
+    },
+    "elapsed_seconds": 0.738
+  },
+  {
+    "speaker": "F01",
+    "voice_code": "AUD_CZE_VOICE_F01",
+    "text": "Nerozumím.",
+    "turn_id": "20d14fce-46bd-53a9-8af5-e5933cd7901a",
+    "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+    "language": "cs",
+    "script_id": "6b749fd4-e102-5301-b90e-fae53c16f24f",
+    "candidate_id": "cs-C-pocket-C",
+    "engine": "pocket",
+    "seed": 570849377,
+    "status": "GENERATED_UNREVIEWED",
+    "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+    "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+    "continuation_plan_sha256": null,
+    "infrastructure_retry": false,
+    "engine_result": {
+      "model_sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+      "prepared_text": "Nerozumím.",
+      "token_ids": [
+        384,
+        2358,
+        2775,
+        3917
+      ],
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8"
+    },
+    "raw": {
+      "path": "raw/20d14fce-46bd-53a9-8af5-e5933cd7901a.wav",
+      "sha256": "9b2058ef65f5ebc9075734381afdf3fc7b449cabfe5abb4fdc5789b2bf5f2cb3",
+      "bytes": 145978
+    },
+    "normalization": {
+      "gain": 0.5046821593143112,
+      "raw_resampled_peak": 0.8755699992179871,
+      "raw_resampled_rms": 0.15739178016585711
+    },
+    "normal": {
+      "path": "turns/20d14fce-46bd-53a9-8af5-e5933cd7901a.wav",
+      "sha256": "392965518b0d4643031b3fa9e0c71ecd679ae7cec038d313abb3f8b377572ef0",
+      "bytes": 73004,
+      "metrics": {
+        "frames": 36480,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.52,
+        "peak_dbfs": -7.094227336942723,
+        "rms_dbfs": -22.00027318807323,
+        "clipped_samples": 0
+      }
+    },
+    "slow": {
+      "path": "turns/20d14fce-46bd-53a9-8af5-e5933cd7901a-slow.wav",
+      "sha256": "4669027ff6a3642145c20950135afc4ec5c8b38146d1e551f11f65354e62ef3a",
+      "bytes": 90748,
+      "metrics": {
+        "frames": 45335,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.8889583333333333,
+        "peak_dbfs": -7.094827253345769,
+        "rms_dbfs": -21.77060184532568,
+        "clipped_samples": 0
+      }
+    },
+    "elapsed_seconds": 0.767
+  },
+  {
+    "speaker": "F01",
+    "voice_code": "AUD_CZE_VOICE_F01",
+    "text": "Můžete to zopakovat, prosím?",
+    "turn_id": "f8abc045-5558-55b0-90d8-b47e448e0a4c",
+    "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+    "language": "cs",
+    "script_id": "4fd393ba-3691-53bc-b54a-843158804768",
+    "candidate_id": "cs-C-pocket-C",
+    "engine": "pocket",
+    "seed": 2044782809,
+    "status": "GENERATED_UNREVIEWED",
+    "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+    "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+    "continuation_plan_sha256": null,
+    "infrastructure_retry": false,
+    "engine_result": {
+      "model_sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+      "prepared_text": "Můžete to zopakovat, prosím?",
+      "token_ids": [
+        2475,
+        26,
+        25,
+        3230,
+        128,
+        3914,
+        575,
+        3940
+      ],
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8"
+    },
+    "raw": {
+      "path": "raw/f8abc045-5558-55b0-90d8-b47e448e0a4c.wav",
+      "sha256": "2d989128f1fc5e85a42092ab15e07dfd24cef8fb595e1c94e065eb456e02dac2",
+      "bytes": 192058
+    },
+    "normalization": {
+      "gain": 0.6207722723162339,
+      "raw_resampled_peak": 0.7550997138023376,
+      "raw_resampled_rms": 0.12795807257313108
+    },
+    "normal": {
+      "path": "turns/f8abc045-5558-55b0-90d8-b47e448e0a4c.wav",
+      "sha256": "8d0b6bf4a981ec312bfc1d39727bdeaa86b944b5def8bf1aa8018a8c89279548",
+      "bytes": 96044,
+      "metrics": {
+        "frames": 48000,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 2.0,
+        "peak_dbfs": -6.581739891299739,
+        "rms_dbfs": -22.00027601540542,
+        "clipped_samples": 0
+      }
+    },
+    "slow": {
+      "path": "turns/f8abc045-5558-55b0-90d8-b47e448e0a4c-slow.wav",
+      "sha256": "6a4574e9d74c16a13ce5eb9c78128e709d3314349c3e85c51b7f4ea432cab98f",
+      "bytes": 119578,
+      "metrics": {
+        "frames": 59750,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 2.4895833333333335,
+        "peak_dbfs": -6.6327867972316685,
+        "rms_dbfs": -21.721516024585583,
+        "clipped_samples": 0
+      }
+    },
+    "elapsed_seconds": 0.947
+  },
+  {
+    "speaker": "F01",
+    "voice_code": "AUD_CZE_VOICE_F01",
+    "text": "Jak se jmenujete?",
+    "turn_id": "d459739d-4b19-5b8e-be85-8496d4d1c78d",
+    "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+    "language": "cs",
+    "script_id": "ad627850-265e-5145-a071-6c0c5a36b45c",
+    "candidate_id": "cs-C-pocket-C",
+    "engine": "pocket",
+    "seed": 1435409457,
+    "status": "GENERATED_UNREVIEWED",
+    "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+    "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+    "continuation_plan_sha256": null,
+    "infrastructure_retry": false,
+    "engine_result": {
+      "model_sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+      "prepared_text": "Jak se jmenujete?",
+      "token_ids": [
+        756,
+        41,
+        2408,
+        1237,
+        3940
+      ],
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8"
+    },
+    "raw": {
+      "path": "raw/d459739d-4b19-5b8e-be85-8496d4d1c78d.wav",
+      "sha256": "21f84c3a8ae6daad8da9d29ed95c027ee3e14423ca9f447df07269c283e894ea",
+      "bytes": 176698
+    },
+    "normalization": {
+      "gain": 0.7741787262338969,
+      "raw_resampled_peak": 0.6744500398635864,
+      "raw_resampled_rms": 0.10260269467599614
+    },
+    "normal": {
+      "path": "turns/d459739d-4b19-5b8e-be85-8496d4d1c78d.wav",
+      "sha256": "7ccf2575e46229cf1356412705f255bed8236c965c9e9e562054d4c69319d9cf",
+      "bytes": 88364,
+      "metrics": {
+        "frames": 44160,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.84,
+        "peak_dbfs": -5.644506173098998,
+        "rms_dbfs": -22.0002598529312,
+        "clipped_samples": 0
+      }
+    },
+    "slow": {
+      "path": "turns/d459739d-4b19-5b8e-be85-8496d4d1c78d-slow.wav",
+      "sha256": "e4078fe03fd86dd8a7d7b9cb14ab0d7b95aea0e00e5a64574810086c89b0ce9d",
+      "bytes": 109734,
+      "metrics": {
+        "frames": 54828,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 2.2845,
+        "peak_dbfs": -5.654157444779622,
+        "rms_dbfs": -21.79612988004191,
+        "clipped_samples": 0
+      }
+    },
+    "elapsed_seconds": 0.971
+  },
+  {
+    "speaker": "F01",
+    "voice_code": "AUD_CZE_VOICE_F01",
+    "text": "Jak se jmenuješ?",
+    "turn_id": "64abc22d-fa1b-5b84-a74a-1d3d0b3e53a9",
+    "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+    "language": "cs",
+    "script_id": "eb99127c-8ddb-5f07-8a15-68c89e9f827f",
+    "candidate_id": "cs-C-pocket-C",
+    "engine": "pocket",
+    "seed": 1709238976,
+    "status": "GENERATED_UNREVIEWED",
+    "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+    "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+    "continuation_plan_sha256": null,
+    "infrastructure_retry": false,
+    "engine_result": {
+      "model_sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+      "prepared_text": "Jak se jmenuješ?",
+      "token_ids": [
+        756,
+        41,
+        2408,
+        169,
+        3923,
+        3940
+      ],
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8"
+    },
+    "raw": {
+      "path": "raw/64abc22d-fa1b-5b84-a74a-1d3d0b3e53a9.wav",
+      "sha256": "f37cebcefb8cd4a8cf57ac68dcf202b7e2edc88eb0dcd5aaeda1f23c80ca6d37",
+      "bytes": 222778
+    },
+    "normalization": {
+      "gain": 0.7445419644118803,
+      "raw_resampled_peak": 0.9134029150009155,
+      "raw_resampled_rms": 0.10668683199767359
+    },
+    "normal": {
+      "path": "turns/64abc22d-fa1b-5b84-a74a-1d3d0b3e53a9.wav",
+      "sha256": "ebe1e89114dacf55fa70e6395d4b872d8fbe2570b90e896d4a6c85428189d2ea",
+      "bytes": 111404,
+      "metrics": {
+        "frames": 55680,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 2.32,
+        "peak_dbfs": -3.349135703446253,
+        "rms_dbfs": -22.000266730283244,
+        "clipped_samples": 0
+      }
+    },
+    "slow": {
+      "path": "turns/64abc22d-fa1b-5b84-a74a-1d3d0b3e53a9-slow.wav",
+      "sha256": "a1d93d5642ce8800747d1cc20720f04ad323a38be7ccaed2f4c2ded65203da1e",
+      "bytes": 138648,
+      "metrics": {
+        "frames": 69285,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 2.886875,
+        "peak_dbfs": -3.4953583142762588,
+        "rms_dbfs": -21.73236309167595,
+        "clipped_samples": 0
+      }
+    },
+    "elapsed_seconds": 1.034
+  },
+  {
+    "speaker": "F01",
+    "voice_code": "AUD_CZE_VOICE_F01",
+    "text": "Jmenuji se Oksana.",
+    "turn_id": "37e551a4-6e2a-548d-aecc-6fd3406c9191",
+    "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+    "language": "cs",
+    "script_id": "cc6f897f-31d7-5102-a23e-4c832d1725e8",
+    "candidate_id": "cs-C-pocket-C",
+    "engine": "pocket",
+    "seed": 958036535,
+    "status": "GENERATED_UNREVIEWED",
+    "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+    "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+    "continuation_plan_sha256": null,
+    "infrastructure_retry": false,
+    "engine_result": {
+      "model_sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+      "prepared_text": "Jmenuji se Oksana.",
+      "token_ids": [
+        82,
+        228,
+        318,
+        41,
+        271,
+        3904,
+        3897,
+        1414,
+        3917
+      ],
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8"
+    },
+    "raw": {
+      "path": "raw/37e551a4-6e2a-548d-aecc-6fd3406c9191.wav",
+      "sha256": "b3b621f049bf4c4058d3eaf8110dec63b14e1b878179dbca9eef754c54ada8fb",
+      "bytes": 192058
+    },
+    "normalization": {
+      "gain": 0.45470807049286877,
+      "raw_resampled_peak": 1.318032145500183,
+      "raw_resampled_rms": 0.17468971550544293
+    },
+    "normal": {
+      "path": "turns/37e551a4-6e2a-548d-aecc-6fd3406c9191.wav",
+      "sha256": "4841b8e00e890c0c8df554d5a4b77efc7eec2dddde31c8198f4ece7ffc984219",
+      "bytes": 96044,
+      "metrics": {
+        "frames": 48000,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 2.0,
+        "peak_dbfs": -4.4470535853614,
+        "rms_dbfs": -22.000269854099386,
+        "clipped_samples": 0
+      }
+    },
+    "slow": {
+      "path": "turns/37e551a4-6e2a-548d-aecc-6fd3406c9191-slow.wav",
+      "sha256": "83fb0fe11e27a24fdc8a479ef63710743116f066aaa13009f247ecf3435842ff",
+      "bytes": 119270,
+      "metrics": {
+        "frames": 59596,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 2.4831666666666665,
+        "peak_dbfs": -4.484286482218602,
+        "rms_dbfs": -21.82953106596736,
+        "clipped_samples": 0
+      }
+    },
+    "elapsed_seconds": 0.947
+  },
+  {
+    "speaker": "F01",
+    "voice_code": "AUD_CZE_VOICE_F01",
+    "text": "Jmenuji se Adam.",
+    "turn_id": "a0f89179-1c01-5437-8938-636efe50f4fa",
+    "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+    "language": "cs",
+    "script_id": "66e41c71-8c9b-58c7-b138-daa64eec6c62",
+    "candidate_id": "cs-C-pocket-C",
+    "engine": "pocket",
+    "seed": 573422093,
+    "status": "GENERATED_UNREVIEWED",
+    "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+    "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+    "continuation_plan_sha256": null,
+    "infrastructure_retry": false,
+    "engine_result": {
+      "model_sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+      "prepared_text": "Jmenuji se Adam.",
+      "token_ids": [
+        82,
+        228,
+        318,
+        41,
+        3042,
+        3902,
+        3917
+      ],
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8"
+    },
+    "raw": {
+      "path": "raw/a0f89179-1c01-5437-8938-636efe50f4fa.wav",
+      "sha256": "9f9c3868c8ea8e6f0f619d71366b6a0a22a566e1c744bc84e908f89b59b07ada",
+      "bytes": 161338
+    },
+    "normalization": {
+      "gain": 0.4900116507019514,
+      "raw_resampled_peak": 1.1049304008483887,
+      "raw_resampled_rms": 0.16210394866864705
+    },
+    "normal": {
+      "path": "turns/a0f89179-1c01-5437-8938-636efe50f4fa.wav",
+      "sha256": "308756b811b473a5995b012dca11fbce231159ed3e52f977fef62e8dbb4a12ff",
+      "bytes": 80684,
+      "metrics": {
+        "frames": 40320,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.68,
+        "peak_dbfs": -5.329436781341289,
+        "rms_dbfs": -22.000263929001783,
+        "clipped_samples": 0
+      }
+    },
+    "slow": {
+      "path": "turns/a0f89179-1c01-5437-8938-636efe50f4fa-slow.wav",
+      "sha256": "c5970b1fc17d57691ce50cb8976b5ab19e553dff484799af1840fb9ac47f3617",
+      "bytes": 99798,
+      "metrics": {
+        "frames": 49860,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 2.0775,
+        "peak_dbfs": -5.375088797272051,
+        "rms_dbfs": -21.8084492893638,
+        "clipped_samples": 0
+      }
+    },
+    "elapsed_seconds": 0.845
+  },
+  {
+    "speaker": "F01",
+    "voice_code": "AUD_CZE_VOICE_F01",
+    "text": "Těší mě.",
+    "turn_id": "64b42cc8-5ced-52f0-b43b-fa69eec7d1dc",
+    "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+    "language": "cs",
+    "script_id": "bdfea114-02b5-54e0-bf29-60f327d2da37",
+    "candidate_id": "cs-C-pocket-C",
+    "engine": "pocket",
+    "seed": 1709790555,
+    "status": "GENERATED_UNREVIEWED",
+    "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+    "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+    "continuation_plan_sha256": null,
+    "infrastructure_retry": false,
+    "engine_result": {
+      "model_sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+      "prepared_text": "Těší mě.",
+      "token_ids": [
+        72,
+        3915,
+        125,
+        176,
+        3917
+      ],
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8"
+    },
+    "raw": {
+      "path": "raw/64b42cc8-5ced-52f0-b43b-fa69eec7d1dc.wav",
+      "sha256": "e3e4234061629033e6a8625ecb54c1311c3ead0d5c59047b45693374308a8b28",
+      "bytes": 138298
+    },
+    "normalization": {
+      "gain": 0.596156434391746,
+      "raw_resampled_peak": 0.9462341070175171,
+      "raw_resampled_rms": 0.13324157702578998
+    },
+    "normal": {
+      "path": "turns/64b42cc8-5ced-52f0-b43b-fa69eec7d1dc.wav",
+      "sha256": "4e7105f6ecddb2027892cc4a34848804a25719f680385d5aa185b2c1bd6ecbd5",
+      "bytes": 69164,
+      "metrics": {
+        "frames": 34560,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.44,
+        "peak_dbfs": -4.973079502261012,
+        "rms_dbfs": -22.00026557412279,
+        "clipped_samples": 0
+      }
+    },
+    "slow": {
+      "path": "turns/64b42cc8-5ced-52f0-b43b-fa69eec7d1dc-slow.wav",
+      "sha256": "79de976e03fa111790942ab1f04f94ec1ed7bfa74eafe64116865ad5d5e9f04b",
+      "bytes": 85750,
+      "metrics": {
+        "frames": 42836,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.7848333333333333,
+        "peak_dbfs": -5.169835647975721,
+        "rms_dbfs": -21.59913877113641,
+        "clipped_samples": 0
+      }
+    },
+    "elapsed_seconds": 0.722
+  },
+  {
+    "speaker": "F01",
+    "voice_code": "AUD_CZE_VOICE_F01",
+    "text": "Mě také.",
+    "turn_id": "ba6c8366-4980-58a3-8327-c896e82bf297",
+    "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+    "language": "cs",
+    "script_id": "91248898-2660-5ae0-b29b-739f3c12fa82",
+    "candidate_id": "cs-C-pocket-C",
+    "engine": "pocket",
+    "seed": 1000451066,
+    "status": "GENERATED_UNREVIEWED",
+    "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+    "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+    "continuation_plan_sha256": null,
+    "infrastructure_retry": false,
+    "engine_result": {
+      "model_sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+      "prepared_text": "Mě také.",
+      "token_ids": [
+        2201,
+        360,
+        3917
+      ],
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8"
+    },
+    "raw": {
+      "path": "raw/ba6c8366-4980-58a3-8327-c896e82bf297.wav",
+      "sha256": "af484389b328783d9da43db845c51733068e632ae529fc265fc4df2bd9d9c114",
+      "bytes": 138298
+    },
+    "normalization": {
+      "gain": 0.8200635977225478,
+      "raw_resampled_peak": 0.6949979066848755,
+      "raw_resampled_rms": 0.09686178449211284
+    },
+    "normal": {
+      "path": "turns/ba6c8366-4980-58a3-8327-c896e82bf297.wav",
+      "sha256": "3fc20351d8202ec83e57e2e43325d3e063975150a4e8326dfa1846af3924f373",
+      "bytes": 69164,
+      "metrics": {
+        "frames": 34560,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.44,
+        "peak_dbfs": -4.88378648944563,
+        "rms_dbfs": -22.00027509349503,
+        "clipped_samples": 0
+      }
+    },
+    "slow": {
+      "path": "turns/ba6c8366-4980-58a3-8327-c896e82bf297-slow.wav",
+      "sha256": "b2779b49a20e76ce67419751763968a7394d882e06c2f1dda35387ff5b66c5f4",
+      "bytes": 85858,
+      "metrics": {
+        "frames": 42890,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.7870833333333334,
+        "peak_dbfs": -4.890300441697196,
+        "rms_dbfs": -21.69013739825727,
+        "clipped_samples": 0
+      }
+    },
+    "elapsed_seconds": 0.726
+  },
+  {
+    "speaker": "F01",
+    "voice_code": "AUD_CZE_VOICE_F01",
+    "text": "Taky mě těší.",
+    "turn_id": "5351319f-538a-5ff2-8ff9-46006b708ba7",
+    "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+    "language": "cs",
+    "script_id": "57555a9e-460a-5357-a324-ed9c39f32dbd",
+    "candidate_id": "cs-C-pocket-C",
+    "engine": "pocket",
+    "seed": 1418091058,
+    "status": "GENERATED_UNREVIEWED",
+    "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+    "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+    "continuation_plan_sha256": null,
+    "infrastructure_retry": false,
+    "engine_result": {
+      "model_sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+      "prepared_text": "Taky mě těší.",
+      "token_ids": [
+        207,
+        3912,
+        176,
+        276,
+        125,
+        3917
+      ],
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8"
+    },
+    "raw": {
+      "path": "raw/5351319f-538a-5ff2-8ff9-46006b708ba7.wav",
+      "sha256": "300205eb50bf6c7e84ebdcd632c887b77d30e09d4a8d47ec9bddfff82a5629d7",
+      "bytes": 161338
+    },
+    "normalization": {
+      "gain": 0.678317230460985,
+      "raw_resampled_peak": 1.2712794542312622,
+      "raw_resampled_rms": 0.11710276535131728
+    },
+    "normal": {
+      "path": "turns/5351319f-538a-5ff2-8ff9-46006b708ba7.wav",
+      "sha256": "55b3b913c439eb9dfce3a2970084aabd5eea731832deb6143ce8bfb9962ad1d4",
+      "bytes": 80684,
+      "metrics": {
+        "frames": 40320,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.68,
+        "peak_dbfs": -1.2867850612448675,
+        "rms_dbfs": -22.000264896549414,
+        "clipped_samples": 0
+      }
+    },
+    "slow": {
+      "path": "turns/5351319f-538a-5ff2-8ff9-46006b708ba7-slow.wav",
+      "sha256": "0430a7ab9ec1f410709b613532ead985dfe698f4b6931510e255402cb8e11907",
+      "bytes": 100646,
+      "metrics": {
+        "frames": 50284,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 2.0951666666666666,
+        "peak_dbfs": -1.3645973195961945,
+        "rms_dbfs": -21.732257376820414,
+        "clipped_samples": 0
+      }
+    },
+    "elapsed_seconds": 0.961
+  },
+  {
+    "speaker": "F01",
+    "voice_code": "AUD_CZE_VOICE_F01",
+    "text": "Odkud jste?",
+    "turn_id": "ebe5d6ed-2a5d-5532-b390-fae96c5efdd3",
+    "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+    "language": "cs",
+    "script_id": "77eab895-3841-5b73-ba25-8c6389f05918",
+    "candidate_id": "cs-C-pocket-C",
+    "engine": "pocket",
+    "seed": 1830485889,
+    "status": "GENERATED_UNREVIEWED",
+    "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+    "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+    "continuation_plan_sha256": null,
+    "infrastructure_retry": false,
+    "engine_result": {
+      "model_sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+      "prepared_text": "Odkud jste?",
+      "token_ids": [
+        2113,
+        386,
+        411,
+        3940
+      ],
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8"
+    },
+    "raw": {
+      "path": "raw/ebe5d6ed-2a5d-5532-b390-fae96c5efdd3.wav",
+      "sha256": "fd6891f1d22693e9bfea0bdebf312e9f8c544ddc89ae75c38280788190bccc77",
+      "bytes": 130618
+    },
+    "normalization": {
+      "gain": 0.8987353071050488,
+      "raw_resampled_peak": 0.817941427230835,
+      "raw_resampled_rms": 0.08838288965000417
+    },
+    "normal": {
+      "path": "turns/ebe5d6ed-2a5d-5532-b390-fae96c5efdd3.wav",
+      "sha256": "1b524caa8de031561fa69a229812b542c8da938f2958d99ad75aa4e0712bd05f",
+      "bytes": 65324,
+      "metrics": {
+        "frames": 32640,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.36,
+        "peak_dbfs": -2.6733444464906193,
+        "rms_dbfs": -22.000259743145687,
+        "clipped_samples": 0
+      }
+    },
+    "slow": {
+      "path": "turns/ebe5d6ed-2a5d-5532-b390-fae96c5efdd3-slow.wav",
+      "sha256": "6f6b9013a8c60021837c605f9d6e0def14a0c0bb5300af235e49f9b933281f47",
+      "bytes": 80690,
+      "metrics": {
+        "frames": 40306,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.6794166666666666,
+        "peak_dbfs": -2.765424439389479,
+        "rms_dbfs": -21.49408707598315,
+        "clipped_samples": 0
+      }
+    },
+    "elapsed_seconds": 0.763
+  },
+  {
+    "speaker": "F01",
+    "voice_code": "AUD_CZE_VOICE_F01",
+    "text": "Odkud jsi?",
+    "turn_id": "0ea2e8b5-47cd-5877-b60b-9fece4253d50",
+    "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+    "language": "cs",
+    "script_id": "2830e078-42c4-53d6-b40b-e91751fe7a41",
+    "candidate_id": "cs-C-pocket-C",
+    "engine": "pocket",
+    "seed": 265818440,
+    "status": "GENERATED_UNREVIEWED",
+    "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+    "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+    "continuation_plan_sha256": null,
+    "infrastructure_retry": false,
+    "engine_result": {
+      "model_sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+      "prepared_text": "Odkud jsi?",
+      "token_ids": [
+        2113,
+        386,
+        68,
+        3898,
+        3940
+      ],
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8"
+    },
+    "raw": {
+      "path": "raw/0ea2e8b5-47cd-5877-b60b-9fece4253d50.wav",
+      "sha256": "52f7b3cf8d75b5c812574460369a32e3fa91bab0457202efdf874606b9e32315",
+      "bytes": 130618
+    },
+    "normalization": {
+      "gain": 0.8733111572489837,
+      "raw_resampled_peak": 0.6281710863113403,
+      "raw_resampled_rms": 0.09095592425802662
+    },
+    "normal": {
+      "path": "turns/0ea2e8b5-47cd-5877-b60b-9fece4253d50.wav",
+      "sha256": "b16f5984dd6a6e33f6ea408011a61c83373eb3ddab5b6bb6d473d7d376d2bf33",
+      "bytes": 65324,
+      "metrics": {
+        "frames": 32640,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.36,
+        "peak_dbfs": -5.215137510972908,
+        "rms_dbfs": -22.000263777378027,
+        "clipped_samples": 0
+      }
+    },
+    "slow": {
+      "path": "turns/0ea2e8b5-47cd-5877-b60b-9fece4253d50-slow.wav",
+      "sha256": "1a4ae68f618a1daa87ee1b66bb628e8d4979946759153d10415c76c4e2af70c3",
+      "bytes": 80656,
+      "metrics": {
+        "frames": 40289,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.6787083333333332,
+        "peak_dbfs": -5.376073201380099,
+        "rms_dbfs": -21.521565551147603,
+        "clipped_samples": 0
+      }
+    },
+    "elapsed_seconds": 0.725
+  },
+  {
+    "speaker": "F01",
+    "voice_code": "AUD_CZE_VOICE_F01",
+    "text": "jsem",
+    "turn_id": "c12f7caf-ba98-5c06-80c6-948fe00901bf",
+    "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+    "language": "cs",
+    "script_id": "76732427-1490-582d-808d-fac6c2c4fedd",
+    "candidate_id": "cs-C-pocket-C",
+    "engine": "pocket",
+    "seed": 1113892163,
+    "status": "GENERATED_UNREVIEWED",
+    "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+    "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+    "continuation_plan_sha256": null,
+    "infrastructure_retry": false,
+    "engine_result": {
+      "model_sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+      "prepared_text": "Jsem.",
+      "token_ids": [
+        2208,
+        3917
+      ],
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8"
+    },
+    "raw": {
+      "path": "raw/c12f7caf-ba98-5c06-80c6-948fe00901bf.wav",
+      "sha256": "cff594fcaf9b125bd6951ba0736239ddff21f259d3f0e5ba4f0c0f7285b13078",
+      "bytes": 122938
+    },
+    "normalization": {
+      "gain": 0.5741621840528747,
+      "raw_resampled_peak": 1.2120649814605713,
+      "raw_resampled_rms": 0.1383456202422296
+    },
+    "normal": {
+      "path": "turns/c12f7caf-ba98-5c06-80c6-948fe00901bf.wav",
+      "sha256": "c75040740853583f84ed5e24b076240e50c1e171590d90ed0b64638e54dff64c",
+      "bytes": 61484,
+      "metrics": {
+        "frames": 30720,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.28,
+        "peak_dbfs": -3.1491589541526412,
+        "rms_dbfs": -22.00026525671861,
+        "clipped_samples": 0
+      }
+    },
+    "slow": {
+      "path": "turns/c12f7caf-ba98-5c06-80c6-948fe00901bf-slow.wav",
+      "sha256": "11b1d4d12c8031c4289977358b98de53f6b33e082e7cbbd89278b86ff41cccc8",
+      "bytes": 76242,
+      "metrics": {
+        "frames": 38082,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.58675,
+        "peak_dbfs": -3.193457278265023,
+        "rms_dbfs": -21.66829779983285,
+        "clipped_samples": 0
+      }
+    },
+    "elapsed_seconds": 0.681
+  },
+  {
+    "speaker": "F01",
+    "voice_code": "AUD_CZE_VOICE_F01",
+    "text": "jsi",
+    "turn_id": "0b6146d0-4cb5-5aed-8e70-ed17e08f407d",
+    "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+    "language": "cs",
+    "script_id": "9d12aa48-7774-5513-9871-d4826b3d1605",
+    "candidate_id": "cs-C-pocket-C",
+    "engine": "pocket",
+    "seed": 211185507,
+    "status": "GENERATED_UNREVIEWED",
+    "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+    "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+    "continuation_plan_sha256": null,
+    "infrastructure_retry": false,
+    "engine_result": {
+      "model_sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+      "prepared_text": "Jsi.",
+      "token_ids": [
+        82,
+        363,
+        3917
+      ],
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8"
+    },
+    "raw": {
+      "path": "raw/0b6146d0-4cb5-5aed-8e70-ed17e08f407d.wav",
+      "sha256": "43a79cb0330253284e96e3ddadec11abc62decf0da4905f6dfbcf7d004e40d4e",
+      "bytes": 130618
+    },
+    "normalization": {
+      "gain": 0.890229706238762,
+      "raw_resampled_peak": 0.5286625623703003,
+      "raw_resampled_rms": 0.0892273341540504
+    },
+    "normal": {
+      "path": "turns/0b6146d0-4cb5-5aed-8e70-ed17e08f407d.wav",
+      "sha256": "71fe838f9bed62968790d18d68cc72fb712b87e05c1af4d1955b54df416fab23",
+      "bytes": 65324,
+      "metrics": {
+        "frames": 32640,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.36,
+        "peak_dbfs": -6.546747955893871,
+        "rms_dbfs": -22.00026919301676,
+        "clipped_samples": 0
+      }
+    },
+    "slow": {
+      "path": "turns/0b6146d0-4cb5-5aed-8e70-ed17e08f407d-slow.wav",
+      "sha256": "6a48aa756fc3f31be81206608ad2179735a90678e3a11fdc1067a2fd91c1b087",
+      "bytes": 80882,
+      "metrics": {
+        "frames": 40402,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.6834166666666666,
+        "peak_dbfs": -6.559148319585856,
+        "rms_dbfs": -21.677540732254037,
+        "clipped_samples": 0
+      }
+    },
+    "elapsed_seconds": 0.686
+  },
+  {
+    "speaker": "F01",
+    "voice_code": "AUD_CZE_VOICE_F01",
+    "text": "jste",
+    "turn_id": "e6ada213-a434-5067-b066-56629ec0c259",
+    "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+    "language": "cs",
+    "script_id": "07508b8b-7d8a-5ced-8795-8e69ef6c03b7",
+    "candidate_id": "cs-C-pocket-C",
+    "engine": "pocket",
+    "seed": 1742916263,
+    "status": "GENERATED_UNREVIEWED",
+    "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+    "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+    "continuation_plan_sha256": null,
+    "infrastructure_retry": false,
+    "engine_result": {
+      "model_sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+      "prepared_text": "Jste.",
+      "token_ids": [
+        82,
+        250,
+        3917
+      ],
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8"
+    },
+    "raw": {
+      "path": "raw/e6ada213-a434-5067-b066-56629ec0c259.wav",
+      "sha256": "def11d08f9aea28ce05859dfc4613e88fe98890a5b8e85815e7222e80e21a946",
+      "bytes": 115258
+    },
+    "normalization": {
+      "gain": 1.2979227294054778,
+      "raw_resampled_peak": 0.5384196043014526,
+      "raw_resampled_rms": 0.06119996335129509
+    },
+    "normal": {
+      "path": "turns/e6ada213-a434-5067-b066-56629ec0c259.wav",
+      "sha256": "8df924a36d23764082eaf1d4ee23de3e0b6e562b36062f1303623a9243ac2c1d",
+      "bytes": 57644,
+      "metrics": {
+        "frames": 28800,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.2,
+        "peak_dbfs": -3.1130476785063492,
+        "rms_dbfs": -22.00026305231189,
+        "clipped_samples": 0
+      }
+    },
+    "slow": {
+      "path": "turns/e6ada213-a434-5067-b066-56629ec0c259-slow.wav",
+      "sha256": "a61aadaae1e0778231d19d7d8a26f3849c92490572becf8e89635fc0d282a856",
+      "bytes": 71406,
+      "metrics": {
+        "frames": 35664,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.486,
+        "peak_dbfs": -3.4917914578967673,
+        "rms_dbfs": -21.5504513623041,
+        "clipped_samples": 0
+      }
+    },
+    "elapsed_seconds": 0.65
+  },
+  {
+    "speaker": "F01",
+    "voice_code": "AUD_CZE_VOICE_F01",
+    "text": "je",
+    "turn_id": "6f3e9674-98bf-520e-9761-cd01c426bdb4",
+    "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+    "language": "cs",
+    "script_id": "8669418f-b1e1-5135-b758-7ea98caaf06a",
+    "candidate_id": "cs-C-pocket-C",
+    "engine": "pocket",
+    "seed": 1886633735,
+    "status": "GENERATED_UNREVIEWED",
+    "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+    "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+    "continuation_plan_sha256": null,
+    "infrastructure_retry": false,
+    "engine_result": {
+      "model_sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+      "prepared_text": "Je.",
+      "token_ids": [
+        320,
+        3917
+      ],
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8"
+    },
+    "raw": {
+      "path": "raw/6f3e9674-98bf-520e-9761-cd01c426bdb4.wav",
+      "sha256": "c6e9bf35c3ab4f6371519f9f465ff51660154b46e6eb1612c7abe2b3c585d870",
+      "bytes": 99898
+    },
+    "normalization": {
+      "gain": 0.7076679931121941,
+      "raw_resampled_peak": 0.8634538650512695,
+      "raw_resampled_rms": 0.11224588966232193
+    },
+    "normal": {
+      "path": "turns/6f3e9674-98bf-520e-9761-cd01c426bdb4.wav",
+      "sha256": "361bd9c7c34de8c0340c082d1d3092e9256857e5512d831ddba84ea7f784e689",
+      "bytes": 49964,
+      "metrics": {
+        "frames": 24960,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.04,
+        "peak_dbfs": -4.278849558425631,
+        "rms_dbfs": -22.000264700642433,
+        "clipped_samples": 0
+      }
+    },
+    "slow": {
+      "path": "turns/6f3e9674-98bf-520e-9761-cd01c426bdb4-slow.wav",
+      "sha256": "37e4d01bd6ede83d9138ee82ae128923638eed82b9d83e8aae738cec5bb4f724",
+      "bytes": 61576,
+      "metrics": {
+        "frames": 30749,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.2812083333333333,
+        "peak_dbfs": -4.2849251247454365,
+        "rms_dbfs": -21.847539830945024,
+        "clipped_samples": 0
+      }
+    },
+    "elapsed_seconds": 0.555
+  },
+  {
+    "speaker": "F01",
+    "voice_code": "AUD_CZE_VOICE_F01",
+    "text": "student",
+    "turn_id": "727caa2c-d8b4-539e-8d06-a6afdf8f0679",
+    "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+    "language": "cs",
+    "script_id": "86b8a7f5-50cd-5afc-ae39-8cc27d319c99",
+    "candidate_id": "cs-C-pocket-C",
+    "engine": "pocket",
+    "seed": 1941033663,
+    "status": "GENERATED_UNREVIEWED",
+    "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+    "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+    "continuation_plan_sha256": null,
+    "infrastructure_retry": false,
+    "engine_result": {
+      "model_sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+      "prepared_text": "Student.",
+      "token_ids": [
+        157,
+        211,
+        3900,
+        581,
+        3917
+      ],
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8"
+    },
+    "raw": {
+      "path": "raw/727caa2c-d8b4-539e-8d06-a6afdf8f0679.wav",
+      "sha256": "9164df51782c064f9cb160ccb2e437d3061e71b3d8ff0a9f5eb927fdbc442298",
+      "bytes": 138298
+    },
+    "normalization": {
+      "gain": 0.7328792876473894,
+      "raw_resampled_peak": 0.9310237765312195,
+      "raw_resampled_rms": 0.10838459322191364
+    },
+    "normal": {
+      "path": "turns/727caa2c-d8b4-539e-8d06-a6afdf8f0679.wav",
+      "sha256": "b29e56390fb8dec7a4c5f6eb1f61b06e5548c19dac4833909cdbb4abeffb4eb0",
+      "bytes": 69164,
+      "metrics": {
+        "frames": 34560,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.44,
+        "peak_dbfs": -3.320339662859939,
+        "rms_dbfs": -22.00027210863616,
+        "clipped_samples": 0
+      }
+    },
+    "slow": {
+      "path": "turns/727caa2c-d8b4-539e-8d06-a6afdf8f0679-slow.wav",
+      "sha256": "1b96b898b7f128bb40e5a2db828c76a6dbeeba7d01a5c7484a8cb6a5af1ecf00",
+      "bytes": 85528,
+      "metrics": {
+        "frames": 42725,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.7802083333333334,
+        "peak_dbfs": -3.3207281628997256,
+        "rms_dbfs": -21.778162311599473,
+        "clipped_samples": 0
+      }
+    },
+    "elapsed_seconds": 0.723
+  },
+  {
+    "speaker": "F01",
+    "voice_code": "AUD_CZE_VOICE_F01",
+    "text": "studentka",
+    "turn_id": "52ae0cf3-432a-5c1b-a4f9-d44bc131df05",
+    "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+    "language": "cs",
+    "script_id": "732e357a-9658-5ee3-b0f8-718c0b1d3a3d",
+    "candidate_id": "cs-C-pocket-C",
+    "engine": "pocket",
+    "seed": 1407399302,
+    "status": "GENERATED_UNREVIEWED",
+    "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+    "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+    "continuation_plan_sha256": null,
+    "infrastructure_retry": false,
+    "engine_result": {
+      "model_sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+      "prepared_text": "Studentka.",
+      "token_ids": [
+        157,
+        211,
+        3900,
+        581,
+        99,
+        3917
+      ],
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8"
+    },
+    "raw": {
+      "path": "raw/52ae0cf3-432a-5c1b-a4f9-d44bc131df05.wav",
+      "sha256": "1bf78968901bafc1e21113dcf1919fb000fdf02289b5a1c46fb037a69cb54825",
+      "bytes": 145978
+    },
+    "normalization": {
+      "gain": 0.7326131908262568,
+      "raw_resampled_peak": 0.7922016978263855,
+      "raw_resampled_rms": 0.1084239602386112
+    },
+    "normal": {
+      "path": "turns/52ae0cf3-432a-5c1b-a4f9-d44bc131df05.wav",
+      "sha256": "0e28f9405c32aaad83585663672f093cccb704b16a492570989fd22bb82cbce3",
+      "bytes": 73004,
+      "metrics": {
+        "frames": 36480,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.52,
+        "peak_dbfs": -4.726158569361594,
+        "rms_dbfs": -22.000266272365394,
+        "clipped_samples": 0
+      }
+    },
+    "slow": {
+      "path": "turns/52ae0cf3-432a-5c1b-a4f9-d44bc131df05-slow.wav",
+      "sha256": "cfcdf114236a686f04cc6c770981fe44942b3be90e162e06646aaa6d4f44846d",
+      "bytes": 90704,
+      "metrics": {
+        "frames": 45313,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.8880416666666666,
+        "peak_dbfs": -4.794021009610462,
+        "rms_dbfs": -21.64929906325539,
+        "clipped_samples": 0
+      }
+    },
+    "elapsed_seconds": 0.795
+  },
+  {
+    "speaker": "F01",
+    "voice_code": "AUD_CZE_VOICE_F01",
+    "text": "učitel",
+    "turn_id": "def0ecb6-3103-5435-ae35-31dc5509ac88",
+    "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+    "language": "cs",
+    "script_id": "2cbea4a7-c451-56a1-a167-eb85d4a16ab3",
+    "candidate_id": "cs-C-pocket-C",
+    "engine": "pocket",
+    "seed": 1613108554,
+    "status": "GENERATED_UNREVIEWED",
+    "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+    "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+    "continuation_plan_sha256": null,
+    "infrastructure_retry": false,
+    "engine_result": {
+      "model_sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+      "prepared_text": "Učitel.",
+      "token_ids": [
+        644,
+        452,
+        273,
+        3917
+      ],
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8"
+    },
+    "raw": {
+      "path": "raw/def0ecb6-3103-5435-ae35-31dc5509ac88.wav",
+      "sha256": "a49cbc76e6e3a2d417da085e73557b70cbd098048cb4667910d735cb423a3b66",
+      "bytes": 161338
+    },
+    "normalization": {
+      "gain": 1.2208997819633831,
+      "raw_resampled_peak": 0.6264646649360657,
+      "raw_resampled_rms": 0.06506088758955193
+    },
+    "normal": {
+      "path": "turns/def0ecb6-3103-5435-ae35-31dc5509ac88.wav",
+      "sha256": "396d927180569f3174dbac80b8285a5ec0cd38539119263a4079842f9e1fe35b",
+      "bytes": 80684,
+      "metrics": {
+        "frames": 40320,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.68,
+        "peak_dbfs": -2.3286841862190637,
+        "rms_dbfs": -22.000254913391487,
+        "clipped_samples": 0
+      }
+    },
+    "slow": {
+      "path": "turns/def0ecb6-3103-5435-ae35-31dc5509ac88-slow.wav",
+      "sha256": "6520a248434f01133174589db1bccda775c64e6df3c451e8674640289e3479ea",
+      "bytes": 100088,
+      "metrics": {
+        "frames": 50005,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 2.0835416666666666,
+        "peak_dbfs": -2.369328533690349,
+        "rms_dbfs": -21.329299950018942,
+        "clipped_samples": 0
+      }
+    },
+    "elapsed_seconds": 0.829
+  },
+  {
+    "speaker": "F01",
+    "voice_code": "AUD_CZE_VOICE_F01",
+    "text": "učitelka",
+    "turn_id": "4914617e-2466-599b-a3a1-5773e8f6ef29",
+    "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+    "language": "cs",
+    "script_id": "7ac42817-0276-5cd8-89eb-205821cf66ae",
+    "candidate_id": "cs-C-pocket-C",
+    "engine": "pocket",
+    "seed": 1246333457,
+    "status": "GENERATED_UNREVIEWED",
+    "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+    "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+    "continuation_plan_sha256": null,
+    "infrastructure_retry": false,
+    "engine_result": {
+      "model_sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+      "prepared_text": "Učitelka.",
+      "token_ids": [
+        644,
+        452,
+        273,
+        99,
+        3917
+      ],
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8"
+    },
+    "raw": {
+      "path": "raw/4914617e-2466-599b-a3a1-5773e8f6ef29.wav",
+      "sha256": "434267f01aa2d4790b69b6f3643af30e9a5acda0d7b3dacedafbf5b1b08b2170",
+      "bytes": 153658
+    },
+    "normalization": {
+      "gain": 0.9516823567711074,
+      "raw_resampled_peak": 0.6271478533744812,
+      "raw_resampled_rms": 0.08346568884804158
+    },
+    "normal": {
+      "path": "turns/4914617e-2466-599b-a3a1-5773e8f6ef29.wav",
+      "sha256": "5a822ed249ead50859ebc823b08a045e4fcdb6de5c5fc70796603b0a17e0facf",
+      "bytes": 76844,
+      "metrics": {
+        "frames": 38400,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.6,
+        "peak_dbfs": -4.48295398399737,
+        "rms_dbfs": -22.000262449481752,
+        "clipped_samples": 0
+      }
+    },
+    "slow": {
+      "path": "turns/4914617e-2466-599b-a3a1-5773e8f6ef29-slow.wav",
+      "sha256": "03ea3f57e559041e0ed362b81cd20dfda3e2bb34d594c2317f9fffc5091f849c",
+      "bytes": 96220,
+      "metrics": {
+        "frames": 48071,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 2.0029583333333334,
+        "peak_dbfs": -4.776086826576833,
+        "rms_dbfs": -21.49831990115951,
+        "clipped_samples": 0
+      }
+    },
+    "elapsed_seconds": 0.723
+  },
+  {
+    "speaker": "F01",
+    "voice_code": "AUD_CZE_VOICE_F01",
+    "text": "Vy jste Oksana?",
+    "turn_id": "6f12d416-2fbb-5e78-b09b-4a2c69392311",
+    "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+    "language": "cs",
+    "script_id": "a415d92c-9bca-5120-9bf6-a5422d65f2d8",
+    "candidate_id": "cs-C-pocket-C",
+    "engine": "pocket",
+    "seed": 1883765929,
+    "status": "GENERATED_UNREVIEWED",
+    "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+    "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+    "continuation_plan_sha256": null,
+    "infrastructure_retry": false,
+    "engine_result": {
+      "model_sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+      "prepared_text": "Vy jste Oksana?",
+      "token_ids": [
+        904,
+        411,
+        271,
+        3904,
+        3897,
+        1414,
+        3940
+      ],
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8"
+    },
+    "raw": {
+      "path": "raw/6f12d416-2fbb-5e78-b09b-4a2c69392311.wav",
+      "sha256": "260a8e491965675db24f42f531e0568b26cb4bcf852b92d2098c95e91a88cd36",
+      "bytes": 169018
+    },
+    "normalization": {
+      "gain": 0.7733510045225523,
+      "raw_resampled_peak": 0.9193439483642578,
+      "raw_resampled_rms": 0.10271251088820656
+    },
+    "normal": {
+      "path": "turns/6f12d416-2fbb-5e78-b09b-4a2c69392311.wav",
+      "sha256": "11e6c96bc1e6c9d864be642e74b5ee0f63ca80fa02679171883242815a99d832",
+      "bytes": 84524,
+      "metrics": {
+        "frames": 42240,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.76,
+        "peak_dbfs": -2.9629987055662763,
+        "rms_dbfs": -22.000263602998373,
+        "clipped_samples": 0
+      }
+    },
+    "slow": {
+      "path": "turns/6f12d416-2fbb-5e78-b09b-4a2c69392311-slow.wav",
+      "sha256": "214399e2f59d05cd0dac316d6f2aa0a0bb371e0f15ee80e246d3b1a43eb55c50",
+      "bytes": 104734,
+      "metrics": {
+        "frames": 52328,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 2.1803333333333335,
+        "peak_dbfs": -2.97307103345976,
+        "rms_dbfs": -21.49251859370628,
+        "clipped_samples": 0
+      }
+    },
+    "elapsed_seconds": 0.894
+  },
+  {
+    "speaker": "F01",
+    "voice_code": "AUD_CZE_VOICE_F01",
+    "text": "Ty jsi Adam.",
+    "turn_id": "10c23d9a-f110-52fd-81c0-25f246fabefc",
+    "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+    "language": "cs",
+    "script_id": "2560e4e9-0a32-5d98-935b-b65dca8650c3",
+    "candidate_id": "cs-C-pocket-C",
+    "engine": "pocket",
+    "seed": 301426221,
+    "status": "GENERATED_UNREVIEWED",
+    "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+    "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+    "continuation_plan_sha256": null,
+    "infrastructure_retry": false,
+    "engine_result": {
+      "model_sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+      "prepared_text": "Ty jsi Adam.",
+      "token_ids": [
+        1790,
+        68,
+        3898,
+        3042,
+        3902,
+        3917
+      ],
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8"
+    },
+    "raw": {
+      "path": "raw/10c23d9a-f110-52fd-81c0-25f246fabefc.wav",
+      "sha256": "8a2c5741e111c5be6b30c689dc5a38882066ae8932e2289a1d3e04d6b100b7ba",
+      "bytes": 169018
+    },
+    "normalization": {
+      "gain": 0.8771524129056915,
+      "raw_resampled_peak": 0.7563484907150269,
+      "raw_resampled_rms": 0.09055760698336983
+    },
+    "normal": {
+      "path": "turns/10c23d9a-f110-52fd-81c0-25f246fabefc.wav",
+      "sha256": "539a680beba7a443c645e02080e7c8179c0775dd1071eac9d9383ef5b9e68ff9",
+      "bytes": 84524,
+      "metrics": {
+        "frames": 42240,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.76,
+        "peak_dbfs": -3.5642074483200155,
+        "rms_dbfs": -22.0002625020565,
+        "clipped_samples": 0
+      }
+    },
+    "slow": {
+      "path": "turns/10c23d9a-f110-52fd-81c0-25f246fabefc-slow.wav",
+      "sha256": "d7fee59bb770fbee37ef74f97f4931c6d4fc00698592f936bdfb3140bf65e37c",
+      "bytes": 105004,
+      "metrics": {
+        "frames": 52463,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 2.1859583333333332,
+        "peak_dbfs": -3.5950276692299203,
+        "rms_dbfs": -21.453171992719376,
+        "clipped_samples": 0
+      }
+    },
+    "elapsed_seconds": 0.915
+  },
+  {
+    "speaker": "F01",
+    "voice_code": "AUD_CZE_VOICE_F01",
+    "text": "On je student.",
+    "turn_id": "71c228ec-c3ea-5ef5-97c5-c308ead9854e",
+    "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+    "language": "cs",
+    "script_id": "2879b78c-94ef-5c64-ba3d-d1de07850e78",
+    "candidate_id": "cs-C-pocket-C",
+    "engine": "pocket",
+    "seed": 1928810879,
+    "status": "GENERATED_UNREVIEWED",
+    "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+    "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+    "continuation_plan_sha256": null,
+    "infrastructure_retry": false,
+    "engine_result": {
+      "model_sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+      "prepared_text": "On je student.",
+      "token_ids": [
+        2603,
+        40,
+        2997,
+        581,
+        3917
+      ],
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8"
+    },
+    "raw": {
+      "path": "raw/71c228ec-c3ea-5ef5-97c5-c308ead9854e.wav",
+      "sha256": "632e63e069d639e9809a1b0fe651320ec8a57e6c97a3e447231d41522a3713f7",
+      "bytes": 176698
+    },
+    "normalization": {
+      "gain": 0.5305273269339904,
+      "raw_resampled_peak": 1.1245059967041016,
+      "raw_resampled_rms": 0.1497242826896104
+    },
+    "normal": {
+      "path": "turns/71c228ec-c3ea-5ef5-97c5-c308ead9854e.wav",
+      "sha256": "11766f83f686444be0c54ac3f62c68542dadae2bad39da490234bc66cd7e213c",
+      "bytes": 88364,
+      "metrics": {
+        "frames": 44160,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.84,
+        "peak_dbfs": -4.486952092071674,
+        "rms_dbfs": -22.000269810952577,
+        "clipped_samples": 0
+      }
+    },
+    "slow": {
+      "path": "turns/71c228ec-c3ea-5ef5-97c5-c308ead9854e-slow.wav",
+      "sha256": "ec9dd4947c71631f3c5a76eeb960ff1dbab7499a7f77de70d8d81412957ce1cf",
+      "bytes": 109894,
+      "metrics": {
+        "frames": 54908,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 2.2878333333333334,
+        "peak_dbfs": -4.493619697863177,
+        "rms_dbfs": -21.8533704780571,
+        "clipped_samples": 0
+      }
+    },
+    "elapsed_seconds": 0.924
+  },
+  {
+    "speaker": "F01",
+    "voice_code": "AUD_CZE_VOICE_F01",
+    "text": "Ona je učitelka.",
+    "turn_id": "dfabdccf-cabd-591f-9be1-9fd3b1db9b49",
+    "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+    "language": "cs",
+    "script_id": "17b65361-5862-5304-b594-8645c46deda3",
+    "candidate_id": "cs-C-pocket-C",
+    "engine": "pocket",
+    "seed": 1625359715,
+    "status": "GENERATED_UNREVIEWED",
+    "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+    "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+    "continuation_plan_sha256": null,
+    "infrastructure_retry": false,
+    "engine_result": {
+      "model_sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+      "prepared_text": "Ona je učitelka.",
+      "token_ids": [
+        271,
+        84,
+        40,
+        1876,
+        273,
+        99,
+        3917
+      ],
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8"
+    },
+    "raw": {
+      "path": "raw/dfabdccf-cabd-591f-9be1-9fd3b1db9b49.wav",
+      "sha256": "81d56140d2db3ddc540aed55081b63887756bd13e79c86979b4491ab32b1e657",
+      "bytes": 184378
+    },
+    "normalization": {
+      "gain": 0.5914366632704181,
+      "raw_resampled_peak": 0.9498746395111084,
+      "raw_resampled_rms": 0.1343048688141771
+    },
+    "normal": {
+      "path": "turns/dfabdccf-cabd-591f-9be1-9fd3b1db9b49.wav",
+      "sha256": "b9201f0c29af665697dd5124298641867cd1fac576fae911c4e3f0eb71635e26",
+      "bytes": 92204,
+      "metrics": {
+        "frames": 46080,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.92,
+        "peak_dbfs": -5.008866585982618,
+        "rms_dbfs": -22.00026215138619,
+        "clipped_samples": 0
+      }
+    },
+    "slow": {
+      "path": "turns/dfabdccf-cabd-591f-9be1-9fd3b1db9b49-slow.wav",
+      "sha256": "c5968d1b89cf314c5afc171d6b8b8f482f261ccebb5ef77156e94840c994c85d",
+      "bytes": 114282,
+      "metrics": {
+        "frames": 57102,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 2.37925,
+        "peak_dbfs": -5.0566550684228755,
+        "rms_dbfs": -21.775909593003906,
+        "clipped_samples": 0
+      }
+    },
+    "elapsed_seconds": 0.926
+  },
+  {
+    "speaker": "F01",
+    "voice_code": "AUD_CZE_VOICE_F01",
+    "text": "Česko",
+    "turn_id": "bc2cec0a-7f1e-5dc9-8ddb-b2d811acba4b",
+    "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+    "language": "cs",
+    "script_id": "49d4fafe-5ade-5d47-ba2f-e222ff5eb04f",
+    "candidate_id": "cs-C-pocket-C",
+    "engine": "pocket",
+    "seed": 1029837982,
+    "status": "GENERATED_UNREVIEWED",
+    "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+    "generator_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+    "continuation_plan_sha256": null,
+    "infrastructure_retry": false,
+    "normalization": {
+      "gain": 0.9644052493346628,
+      "raw_resampled_peak": 0.7271038293838501,
+      "raw_resampled_rms": 0.0823645697980474
+    },
+    "raw": {
+      "path": "raw/bc2cec0a-7f1e-5dc9-8ddb-b2d811acba4b.wav",
+      "sha256": "f4a11f1be4e11d39b73b0f534d52eb8d9945e80d51db557d4f94debf8a87707b",
+      "bytes": 138298
+    },
+    "normal": {
+      "path": "turns/bc2cec0a-7f1e-5dc9-8ddb-b2d811acba4b.wav",
+      "sha256": "9414651da2c298c30916faaa6dcff078c2fa6c8c9d11f9788f953bcfd8e63056",
+      "bytes": 69164,
+      "metrics": {
+        "frames": 34560,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.44,
+        "peak_dbfs": -3.0831322143228546,
+        "rms_dbfs": -22.000271474995504,
+        "clipped_samples": 0
+      }
+    },
+    "slow": {
+      "path": "turns/bc2cec0a-7f1e-5dc9-8ddb-b2d811acba4b-slow.wav",
+      "sha256": "0b0fa0e2b92c9f522b5d218372e0bfe2074c0efc4ebad0c47fdc3c880225fdd1",
+      "bytes": 85798,
+      "metrics": {
+        "frames": 42860,
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "duration_seconds": 1.7858333333333334,
+        "peak_dbfs": -3.0903176682266276,
+        "rms_dbfs": -21.646097188923147,
+        "clipped_samples": 0
+      }
+    },
+    "engine_result": {
+      "model_sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8",
+      "prepared_text": "Česko.",
+      "token_ids": [
+        303,
+        1423,
+        3917
+      ]
+    }
+  }
+]

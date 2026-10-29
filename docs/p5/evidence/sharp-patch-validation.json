@@ -1,0 +1,81 @@
+{
+  "timestamp": "2026-10-10T11:44:52.403722+00:00",
+  "phase": "P5",
+  "issue_id": "P5-DEP-002",
+  "failed_remote_sha": "cab5af5e080c92b7607ea05f24396fbd02052cd0",
+  "local_status": "PASS",
+  "hosted_status": "REQUIRES_CURRENT_REVISION_RUN",
+  "patches": [
+    {
+      "package": "sharp and @img/sharp platform packages",
+      "from": "0.35.4",
+      "to": "0.35.5"
+    },
+    {
+      "package": "@img/sharp-libvips platform packages",
+      "from": "1.3.3",
+      "to": "1.3.4"
+    }
+  ],
+  "advisory": "GHSA-wq5f-xc86-pv6w",
+  "primary_sources": [
+    "https://github.com/lovell/sharp/security/advisories/GHSA-wq5f-xc86-pv6w",
+    "https://github.com/lovell/sharp/releases/tag/v0.35.5"
+  ],
+  "existing_parent": "next 16.3.8 optional sharp ^0.35.4; patched resolution is within the existing range",
+  "scope": "Only sharp family versions, integrities and referencing Next snapshot changed. All direct importers and unrelated package entries unchanged; no override, audit ignore, threshold, schema/API/migration or contract change.",
+  "lockfile_sha256": "8c8f3aa988e31a616955fde467902933fa1b68d8e6ab8c7a63619ed2b12d4377",
+  "toolchain": {
+    "node": "24.19.0",
+    "pnpm": "11.19.0"
+  },
+  "commands": [
+    {
+      "command": "pnpm update --recursive --lockfile-only --ignore-scripts sharp",
+      "exit_code": 0
+    },
+    {
+      "command": "pnpm install --frozen-lockfile",
+      "exit_code": 0
+    },
+    {
+      "command": "pnpm audit:dependencies",
+      "exit_code": 0,
+      "result": "No known vulnerabilities found"
+    },
+    {
+      "command": "Structural lockfile comparison against parent with YAML parser",
+      "exit_code": 0,
+      "result": "Only sharp package family plus Next snapshot sharp reference changed; importers unchanged"
+    },
+    {
+      "command": "Native SVG-to-PNG via sharp resolved from realpath of installed Next package",
+      "exit_code": 0,
+      "sharp": "0.35.5",
+      "librsvg": "2.63.2",
+      "vips": "8.18.7",
+      "png_width": 16,
+      "png_height": 16,
+      "png_bytes": 107
+    },
+    {
+      "command": "python3 tools/governance/validate_p5_baseline.py",
+      "exit_code": 0,
+      "passed": 76,
+      "total": 76
+    },
+    {
+      "command": "python3 tools/p5/pocket-audition.py --verify-only",
+      "exit_code": 0,
+      "result": "29 retained files; 4 main, 10 raw turns, 2 continuous, 14 diagnostic bindings PASS"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "harness_correction": "First native probe anchored require to the lexical Next symlink and resolved the preinstalled global runtime sharp 0.35.4, failing its version assertion. Corrected the probe to realpathSync of the project Next package; the actual project sharp 0.35.5/librsvg 2.63.2 decoded the fixture successfully. No global runtime package or assertion was changed.",
+  "closure_rule": "Only the child exact-source hosted CI and its acceptance-summary can close this issue; parent audit failure remains retained.",
+  "p5_milestone": "NOT_READY",
+  "p6_authorized": false
+}

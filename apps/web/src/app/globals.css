@@ -14,3 +14,12 @@ h1 { font-size: clamp(2rem, 5vw, 3rem); }
 .lesson-feedback { padding: 1rem; background: #e4efea; border-left: 4px solid #285a48; }
 :focus-visible { outline: 3px solid #186dc1; outline-offset: 3px; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+
+.lesson-media img{max-width:100%;height:auto;max-height:360px;object-fit:contain}.media-audio{padding:1rem;border:1px solid currentColor;border-radius:.5rem;margin:.75rem 0}.media-audio .active-speaker{font-weight:bold;border-inline-start:.25rem solid currentColor;padding-inline-start:.5rem}
+.dialogue-speakers{display:flex;flex-wrap:wrap;gap:1rem}.dialogue-speakers figure{margin:.25rem 0;padding:.5rem;border:2px solid transparent;border-radius:.5rem;min-width:4rem;text-align:center}.dialogue-speakers figure[aria-current="true"]{border-color:currentColor;font-weight:bold}.dialogue-speakers img{display:block;width:64px;height:64px}.dialogue-speakers figcaption{max-width:10rem;overflow-wrap:anywhere}
+
+.speech-panel { display: grid; gap: .8rem; padding: 1rem; border: 1px solid #a3b8bb; border-radius: 1rem; }
+.speech-microphone { min-height: 3rem; }
+.speech-microphone.recording { border: 3px solid #a23137; animation: speech-pulse 1.4s ease-in-out infinite; }
+@keyframes speech-pulse { 50% { box-shadow: 0 0 0 .55rem rgba(162,49,55,.16); } }
+@media (prefers-reduced-motion: reduce) { .speech-microphone.recording { animation: none; box-shadow: none; } }

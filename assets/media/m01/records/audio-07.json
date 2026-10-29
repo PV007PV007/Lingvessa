@@ -1,0 +1,1802 @@
+[
+  {
+    "file": "assets/media/m01/cs/AUD_CZE_M01_WORDS_STUDENTKA.wav",
+    "metadata": {
+      "asset_id": "cb07fee8-fa13-5bda-895a-99f86ac10418",
+      "stable_code": "AUD_CZE_M01_WORDS_STUDENTKA",
+      "asset_version": 2,
+      "version_code": "m01-approved-1",
+      "kind": "audio",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "purpose": "Owner-approved immutable M01 audio; original PCM preserved",
+      "mime": "audio/wav",
+      "checksum": "0e28f9405c32aaad83585663672f093cccb704b16a492570989fd22bb82cbce3",
+      "byte_length": 73004,
+      "duration_ms": 1520,
+      "codec": "pcm_s16le",
+      "loudness_lufs": -18.8,
+      "decorative": false,
+      "alt_text": "",
+      "transcript": "studentka",
+      "script_version": "m01-script-1",
+      "script_hash": "6698ff46079f96eae6dbadbed2f09b1d138f4459dfec4c29f5d1db0449f9a620",
+      "speed": "normal",
+      "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "voice_version_code": "m01-approved-1",
+      "turns": [
+        {
+          "turn_id": "52ae0cf3-432a-5c1b-a4f9-d44bc131df05",
+          "speaker": "F01",
+          "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+          "voice_version_code": "m01-approved-1",
+          "start_ms": 0,
+          "end_ms": 1520,
+          "text": "studentka"
+        }
+      ],
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source cs-C-pocket-C; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf; exact source audio/cs/AUD_CZE_M01_WORDS_STUDENTKA.wav; dialogue voices use the six locked profiles; pre-approval resampling, level adjustment and slow atempo=0.8 retained.",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      }
+    },
+    "source_frames": {
+      "sample_rate": 24000,
+      "frames": 36480,
+      "cues": [
+        {
+          "turn_id": "52ae0cf3-432a-5c1b-a4f9-d44bc131df05",
+          "start_frame": 0,
+          "end_frame": 36480
+        }
+      ]
+    }
+  },
+  {
+    "file": "assets/media/m01/cs/AUD_CZE_M01_WORDS_STUDENTKA_SLOW.wav",
+    "metadata": {
+      "asset_id": "6c7e0e15-69c9-5aeb-8918-455945a4aeda",
+      "stable_code": "AUD_CZE_M01_WORDS_STUDENTKA_SLOW",
+      "asset_version": 2,
+      "version_code": "m01-approved-1",
+      "kind": "audio",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "purpose": "Owner-approved immutable M01 audio; original PCM preserved",
+      "mime": "audio/wav",
+      "checksum": "252e01ad21e66aa3fe135ab8b6b28a846b94c123b9e8c7581753d4071824004f",
+      "byte_length": 90670,
+      "duration_ms": 1889,
+      "codec": "pcm_s16le",
+      "loudness_lufs": -19.2,
+      "decorative": false,
+      "alt_text": "",
+      "transcript": "studentka",
+      "script_version": "m01-script-1",
+      "script_hash": "6698ff46079f96eae6dbadbed2f09b1d138f4459dfec4c29f5d1db0449f9a620",
+      "speed": "slow",
+      "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "voice_version_code": "m01-approved-1",
+      "turns": [
+        {
+          "turn_id": "52ae0cf3-432a-5c1b-a4f9-d44bc131df05",
+          "speaker": "F01",
+          "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+          "voice_version_code": "m01-approved-1",
+          "start_ms": 0,
+          "end_ms": 1888,
+          "text": "studentka"
+        }
+      ],
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source cs-C-pocket-C; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf; exact source audio/cs/AUD_CZE_M01_WORDS_STUDENTKA_SLOW.wav; dialogue voices use the six locked profiles; pre-approval resampling, level adjustment and slow atempo=0.8 retained.",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      },
+      "normal_asset_id": "cb07fee8-fa13-5bda-895a-99f86ac10418",
+      "normal_asset_version": 2
+    },
+    "source_frames": {
+      "sample_rate": 24000,
+      "frames": 45313,
+      "cues": [
+        {
+          "turn_id": "52ae0cf3-432a-5c1b-a4f9-d44bc131df05",
+          "start_frame": 0,
+          "end_frame": 45313
+        }
+      ]
+    }
+  },
+  {
+    "file": "assets/media/m01/cs/AUD_CZE_M01_WORDS_UCITEL.wav",
+    "metadata": {
+      "asset_id": "71d3d3dd-d4a2-5a0f-8e45-892d46a0f3c4",
+      "stable_code": "AUD_CZE_M01_WORDS_UCITEL",
+      "asset_version": 2,
+      "version_code": "m01-approved-1",
+      "kind": "audio",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "purpose": "Owner-approved immutable M01 audio; original PCM preserved",
+      "mime": "audio/wav",
+      "checksum": "396d927180569f3174dbac80b8285a5ec0cd38539119263a4079842f9e1fe35b",
+      "byte_length": 80684,
+      "duration_ms": 1680,
+      "codec": "pcm_s16le",
+      "loudness_lufs": -20.1,
+      "decorative": false,
+      "alt_text": "",
+      "transcript": "učitel",
+      "script_version": "m01-script-1",
+      "script_hash": "d324682245d8d071c9522d4da2aad6aea6f69b8bc0a4040ea5fe2bf03fe76fa7",
+      "speed": "normal",
+      "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "voice_version_code": "m01-approved-1",
+      "turns": [
+        {
+          "turn_id": "def0ecb6-3103-5435-ae35-31dc5509ac88",
+          "speaker": "F01",
+          "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+          "voice_version_code": "m01-approved-1",
+          "start_ms": 0,
+          "end_ms": 1680,
+          "text": "učitel"
+        }
+      ],
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source cs-C-pocket-C; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf; exact source audio/cs/AUD_CZE_M01_WORDS_UCITEL.wav; dialogue voices use the six locked profiles; pre-approval resampling, level adjustment and slow atempo=0.8 retained.",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      }
+    },
+    "source_frames": {
+      "sample_rate": 24000,
+      "frames": 40320,
+      "cues": [
+        {
+          "turn_id": "def0ecb6-3103-5435-ae35-31dc5509ac88",
+          "start_frame": 0,
+          "end_frame": 40320
+        }
+      ]
+    }
+  },
+  {
+    "file": "assets/media/m01/cs/AUD_CZE_M01_WORDS_UCITEL_SLOW.wav",
+    "metadata": {
+      "asset_id": "3acac059-e90d-51eb-bd47-38bcc8354999",
+      "stable_code": "AUD_CZE_M01_WORDS_UCITEL_SLOW",
+      "asset_version": 2,
+      "version_code": "m01-approved-1",
+      "kind": "audio",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "purpose": "Owner-approved immutable M01 audio; original PCM preserved",
+      "mime": "audio/wav",
+      "checksum": "e379d9a2e99b0e6248851407a70a9eaf77a4734eadb0481afff4b04b898d0b54",
+      "byte_length": 100054,
+      "duration_ms": 2084,
+      "codec": "pcm_s16le",
+      "loudness_lufs": -19.0,
+      "decorative": false,
+      "alt_text": "",
+      "transcript": "učitel",
+      "script_version": "m01-script-1",
+      "script_hash": "d324682245d8d071c9522d4da2aad6aea6f69b8bc0a4040ea5fe2bf03fe76fa7",
+      "speed": "slow",
+      "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "voice_version_code": "m01-approved-1",
+      "turns": [
+        {
+          "turn_id": "def0ecb6-3103-5435-ae35-31dc5509ac88",
+          "speaker": "F01",
+          "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+          "voice_version_code": "m01-approved-1",
+          "start_ms": 0,
+          "end_ms": 2084,
+          "text": "učitel"
+        }
+      ],
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source cs-C-pocket-C; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf; exact source audio/cs/AUD_CZE_M01_WORDS_UCITEL_SLOW.wav; dialogue voices use the six locked profiles; pre-approval resampling, level adjustment and slow atempo=0.8 retained.",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      },
+      "normal_asset_id": "71d3d3dd-d4a2-5a0f-8e45-892d46a0f3c4",
+      "normal_asset_version": 2
+    },
+    "source_frames": {
+      "sample_rate": 24000,
+      "frames": 50005,
+      "cues": [
+        {
+          "turn_id": "def0ecb6-3103-5435-ae35-31dc5509ac88",
+          "start_frame": 0,
+          "end_frame": 50005
+        }
+      ]
+    }
+  },
+  {
+    "file": "assets/media/m01/cs/AUD_CZE_M01_WORDS_UCITELKA.wav",
+    "metadata": {
+      "asset_id": "2b8306e1-ef83-5e23-be51-436de408480b",
+      "stable_code": "AUD_CZE_M01_WORDS_UCITELKA",
+      "asset_version": 2,
+      "version_code": "m01-approved-1",
+      "kind": "audio",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "purpose": "Owner-approved immutable M01 audio; original PCM preserved",
+      "mime": "audio/wav",
+      "checksum": "5a822ed249ead50859ebc823b08a045e4fcdb6de5c5fc70796603b0a17e0facf",
+      "byte_length": 76844,
+      "duration_ms": 1600,
+      "codec": "pcm_s16le",
+      "loudness_lufs": -20.7,
+      "decorative": false,
+      "alt_text": "",
+      "transcript": "učitelka",
+      "script_version": "m01-script-1",
+      "script_hash": "9ad4a49f8240d355676e3d10a3bd8c49feffc03a923b6398ac66a7d0eebbcb95",
+      "speed": "normal",
+      "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "voice_version_code": "m01-approved-1",
+      "turns": [
+        {
+          "turn_id": "4914617e-2466-599b-a3a1-5773e8f6ef29",
+          "speaker": "F01",
+          "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+          "voice_version_code": "m01-approved-1",
+          "start_ms": 0,
+          "end_ms": 1600,
+          "text": "učitelka"
+        }
+      ],
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source cs-C-pocket-C; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf; exact source audio/cs/AUD_CZE_M01_WORDS_UCITELKA.wav; dialogue voices use the six locked profiles; pre-approval resampling, level adjustment and slow atempo=0.8 retained.",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      }
+    },
+    "source_frames": {
+      "sample_rate": 24000,
+      "frames": 38400,
+      "cues": [
+        {
+          "turn_id": "4914617e-2466-599b-a3a1-5773e8f6ef29",
+          "start_frame": 0,
+          "end_frame": 38400
+        }
+      ]
+    }
+  },
+  {
+    "file": "assets/media/m01/cs/AUD_CZE_M01_WORDS_UCITELKA_SLOW.wav",
+    "metadata": {
+      "asset_id": "0125a785-23c3-5594-8345-86e2a2474a49",
+      "stable_code": "AUD_CZE_M01_WORDS_UCITELKA_SLOW",
+      "asset_version": 2,
+      "version_code": "m01-approved-1",
+      "kind": "audio",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "purpose": "Owner-approved immutable M01 audio; original PCM preserved",
+      "mime": "audio/wav",
+      "checksum": "cffee41c7432e1913200d83ed8201351b97f0341cc27679b0fe9cf9dbd52d540",
+      "byte_length": 96186,
+      "duration_ms": 2003,
+      "codec": "pcm_s16le",
+      "loudness_lufs": -19.7,
+      "decorative": false,
+      "alt_text": "",
+      "transcript": "učitelka",
+      "script_version": "m01-script-1",
+      "script_hash": "9ad4a49f8240d355676e3d10a3bd8c49feffc03a923b6398ac66a7d0eebbcb95",
+      "speed": "slow",
+      "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "voice_version_code": "m01-approved-1",
+      "turns": [
+        {
+          "turn_id": "4914617e-2466-599b-a3a1-5773e8f6ef29",
+          "speaker": "F01",
+          "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+          "voice_version_code": "m01-approved-1",
+          "start_ms": 0,
+          "end_ms": 2003,
+          "text": "učitelka"
+        }
+      ],
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source cs-C-pocket-C; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf; exact source audio/cs/AUD_CZE_M01_WORDS_UCITELKA_SLOW.wav; dialogue voices use the six locked profiles; pre-approval resampling, level adjustment and slow atempo=0.8 retained.",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      },
+      "normal_asset_id": "2b8306e1-ef83-5e23-be51-436de408480b",
+      "normal_asset_version": 2
+    },
+    "source_frames": {
+      "sample_rate": 24000,
+      "frames": 48071,
+      "cues": [
+        {
+          "turn_id": "4914617e-2466-599b-a3a1-5773e8f6ef29",
+          "start_frame": 0,
+          "end_frame": 48071
+        }
+      ]
+    }
+  },
+  {
+    "file": "assets/media/m01/cs/AUD_CZE_M01_WORDS_VY_OKSANA.wav",
+    "metadata": {
+      "asset_id": "8fc8b4d8-4d30-53d8-aeb2-2a121fcc679f",
+      "stable_code": "AUD_CZE_M01_WORDS_VY_OKSANA",
+      "asset_version": 2,
+      "version_code": "m01-approved-1",
+      "kind": "audio",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "purpose": "Owner-approved immutable M01 audio; original PCM preserved",
+      "mime": "audio/wav",
+      "checksum": "11e6c96bc1e6c9d864be642e74b5ee0f63ca80fa02679171883242815a99d832",
+      "byte_length": 84524,
+      "duration_ms": 1760,
+      "codec": "pcm_s16le",
+      "loudness_lufs": -20.7,
+      "decorative": false,
+      "alt_text": "",
+      "transcript": "Vy jste Oksana?",
+      "script_version": "m01-script-1",
+      "script_hash": "98fc4c185808f6066c704d348337ccb1deb619df63f8d9f9d86c9a3c15d15e5b",
+      "speed": "normal",
+      "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "voice_version_code": "m01-approved-1",
+      "turns": [
+        {
+          "turn_id": "6f12d416-2fbb-5e78-b09b-4a2c69392311",
+          "speaker": "F01",
+          "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+          "voice_version_code": "m01-approved-1",
+          "start_ms": 0,
+          "end_ms": 1760,
+          "text": "Vy jste Oksana?"
+        }
+      ],
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source cs-C-pocket-C; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf; exact source audio/cs/AUD_CZE_M01_WORDS_VY_OKSANA.wav; dialogue voices use the six locked profiles; pre-approval resampling, level adjustment and slow atempo=0.8 retained.",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      }
+    },
+    "source_frames": {
+      "sample_rate": 24000,
+      "frames": 42240,
+      "cues": [
+        {
+          "turn_id": "6f12d416-2fbb-5e78-b09b-4a2c69392311",
+          "start_frame": 0,
+          "end_frame": 42240
+        }
+      ]
+    }
+  },
+  {
+    "file": "assets/media/m01/cs/AUD_CZE_M01_WORDS_VY_OKSANA_SLOW.wav",
+    "metadata": {
+      "asset_id": "3e22e5cb-de60-547d-8d89-73603158f888",
+      "stable_code": "AUD_CZE_M01_WORDS_VY_OKSANA_SLOW",
+      "asset_version": 2,
+      "version_code": "m01-approved-1",
+      "kind": "audio",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "purpose": "Owner-approved immutable M01 audio; original PCM preserved",
+      "mime": "audio/wav",
+      "checksum": "1aa2d30119ac349a92b7afe9d9966f29a5e7d47108f55872243bd4caec018a7f",
+      "byte_length": 104700,
+      "duration_ms": 2181,
+      "codec": "pcm_s16le",
+      "loudness_lufs": -20.0,
+      "decorative": false,
+      "alt_text": "",
+      "transcript": "Vy jste Oksana?",
+      "script_version": "m01-script-1",
+      "script_hash": "98fc4c185808f6066c704d348337ccb1deb619df63f8d9f9d86c9a3c15d15e5b",
+      "speed": "slow",
+      "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "voice_version_code": "m01-approved-1",
+      "turns": [
+        {
+          "turn_id": "6f12d416-2fbb-5e78-b09b-4a2c69392311",
+          "speaker": "F01",
+          "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+          "voice_version_code": "m01-approved-1",
+          "start_ms": 0,
+          "end_ms": 2180,
+          "text": "Vy jste Oksana?"
+        }
+      ],
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source cs-C-pocket-C; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf; exact source audio/cs/AUD_CZE_M01_WORDS_VY_OKSANA_SLOW.wav; dialogue voices use the six locked profiles; pre-approval resampling, level adjustment and slow atempo=0.8 retained.",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      },
+      "normal_asset_id": "8fc8b4d8-4d30-53d8-aeb2-2a121fcc679f",
+      "normal_asset_version": 2
+    },
+    "source_frames": {
+      "sample_rate": 24000,
+      "frames": 52328,
+      "cues": [
+        {
+          "turn_id": "6f12d416-2fbb-5e78-b09b-4a2c69392311",
+          "start_frame": 0,
+          "end_frame": 52328
+        }
+      ]
+    }
+  },
+  {
+    "file": "assets/media/m01/cs/AUD_CZE_M01_WORDS_TY_ADAM.wav",
+    "metadata": {
+      "asset_id": "7ac6c00a-dbbb-53b2-99ff-8065d7d4432a",
+      "stable_code": "AUD_CZE_M01_WORDS_TY_ADAM",
+      "asset_version": 2,
+      "version_code": "m01-approved-1",
+      "kind": "audio",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "purpose": "Owner-approved immutable M01 audio; original PCM preserved",
+      "mime": "audio/wav",
+      "checksum": "539a680beba7a443c645e02080e7c8179c0775dd1071eac9d9383ef5b9e68ff9",
+      "byte_length": 84524,
+      "duration_ms": 1760,
+      "codec": "pcm_s16le",
+      "loudness_lufs": -19.9,
+      "decorative": false,
+      "alt_text": "",
+      "transcript": "Ty jsi Adam.",
+      "script_version": "m01-script-1",
+      "script_hash": "5663d52f26ed117d14825dc03612cfe8afb2e4d7c7b6db5d9eb9eb92e948302a",
+      "speed": "normal",
+      "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "voice_version_code": "m01-approved-1",
+      "turns": [
+        {
+          "turn_id": "10c23d9a-f110-52fd-81c0-25f246fabefc",
+          "speaker": "F01",
+          "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+          "voice_version_code": "m01-approved-1",
+          "start_ms": 0,
+          "end_ms": 1760,
+          "text": "Ty jsi Adam."
+        }
+      ],
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source cs-C-pocket-C; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf; exact source audio/cs/AUD_CZE_M01_WORDS_TY_ADAM.wav; dialogue voices use the six locked profiles; pre-approval resampling, level adjustment and slow atempo=0.8 retained.",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      }
+    },
+    "source_frames": {
+      "sample_rate": 24000,
+      "frames": 42240,
+      "cues": [
+        {
+          "turn_id": "10c23d9a-f110-52fd-81c0-25f246fabefc",
+          "start_frame": 0,
+          "end_frame": 42240
+        }
+      ]
+    }
+  },
+  {
+    "file": "assets/media/m01/cs/AUD_CZE_M01_WORDS_TY_ADAM_SLOW.wav",
+    "metadata": {
+      "asset_id": "4ec0e33a-cd82-5f6e-b947-e65fba6ada0a",
+      "stable_code": "AUD_CZE_M01_WORDS_TY_ADAM_SLOW",
+      "asset_version": 2,
+      "version_code": "m01-approved-1",
+      "kind": "audio",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "purpose": "Owner-approved immutable M01 audio; original PCM preserved",
+      "mime": "audio/wav",
+      "checksum": "0a26572197ee9201ba3156062bb3e3c997ac3ae72c427abbfd34284f5ee4480e",
+      "byte_length": 104970,
+      "duration_ms": 2186,
+      "codec": "pcm_s16le",
+      "loudness_lufs": -18.8,
+      "decorative": false,
+      "alt_text": "",
+      "transcript": "Ty jsi Adam.",
+      "script_version": "m01-script-1",
+      "script_hash": "5663d52f26ed117d14825dc03612cfe8afb2e4d7c7b6db5d9eb9eb92e948302a",
+      "speed": "slow",
+      "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "voice_version_code": "m01-approved-1",
+      "turns": [
+        {
+          "turn_id": "10c23d9a-f110-52fd-81c0-25f246fabefc",
+          "speaker": "F01",
+          "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+          "voice_version_code": "m01-approved-1",
+          "start_ms": 0,
+          "end_ms": 2186,
+          "text": "Ty jsi Adam."
+        }
+      ],
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source cs-C-pocket-C; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf; exact source audio/cs/AUD_CZE_M01_WORDS_TY_ADAM_SLOW.wav; dialogue voices use the six locked profiles; pre-approval resampling, level adjustment and slow atempo=0.8 retained.",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      },
+      "normal_asset_id": "7ac6c00a-dbbb-53b2-99ff-8065d7d4432a",
+      "normal_asset_version": 2
+    },
+    "source_frames": {
+      "sample_rate": 24000,
+      "frames": 52463,
+      "cues": [
+        {
+          "turn_id": "10c23d9a-f110-52fd-81c0-25f246fabefc",
+          "start_frame": 0,
+          "end_frame": 52463
+        }
+      ]
+    }
+  },
+  {
+    "file": "assets/media/m01/cs/AUD_CZE_M01_WORDS_ON_STUDENT.wav",
+    "metadata": {
+      "asset_id": "cc7432ce-377c-5a9f-9335-1a6f10d6eb2b",
+      "stable_code": "AUD_CZE_M01_WORDS_ON_STUDENT",
+      "asset_version": 2,
+      "version_code": "m01-approved-1",
+      "kind": "audio",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "purpose": "Owner-approved immutable M01 audio; original PCM preserved",
+      "mime": "audio/wav",
+      "checksum": "11766f83f686444be0c54ac3f62c68542dadae2bad39da490234bc66cd7e213c",
+      "byte_length": 88364,
+      "duration_ms": 1840,
+      "codec": "pcm_s16le",
+      "loudness_lufs": -20.1,
+      "decorative": false,
+      "alt_text": "",
+      "transcript": "On je student.",
+      "script_version": "m01-script-1",
+      "script_hash": "5ae013600b236d5bb4f159e2db8548f485d391a343ac33318e3fe8e2876bda61",
+      "speed": "normal",
+      "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "voice_version_code": "m01-approved-1",
+      "turns": [
+        {
+          "turn_id": "71c228ec-c3ea-5ef5-97c5-c308ead9854e",
+          "speaker": "F01",
+          "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+          "voice_version_code": "m01-approved-1",
+          "start_ms": 0,
+          "end_ms": 1840,
+          "text": "On je student."
+        }
+      ],
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source cs-C-pocket-C; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf; exact source audio/cs/AUD_CZE_M01_WORDS_ON_STUDENT.wav; dialogue voices use the six locked profiles; pre-approval resampling, level adjustment and slow atempo=0.8 retained.",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      }
+    },
+    "source_frames": {
+      "sample_rate": 24000,
+      "frames": 44160,
+      "cues": [
+        {
+          "turn_id": "71c228ec-c3ea-5ef5-97c5-c308ead9854e",
+          "start_frame": 0,
+          "end_frame": 44160
+        }
+      ]
+    }
+  },
+  {
+    "file": "assets/media/m01/cs/AUD_CZE_M01_WORDS_ON_STUDENT_SLOW.wav",
+    "metadata": {
+      "asset_id": "b8ac65fa-0021-5224-b5ea-524e831a2e4b",
+      "stable_code": "AUD_CZE_M01_WORDS_ON_STUDENT_SLOW",
+      "asset_version": 2,
+      "version_code": "m01-approved-1",
+      "kind": "audio",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "purpose": "Owner-approved immutable M01 audio; original PCM preserved",
+      "mime": "audio/wav",
+      "checksum": "b5a43abd08f02c31b42de279cec95a58f30b80d132c1b1038e23d0b1079bac43",
+      "byte_length": 109860,
+      "duration_ms": 2288,
+      "codec": "pcm_s16le",
+      "loudness_lufs": -19.4,
+      "decorative": false,
+      "alt_text": "",
+      "transcript": "On je student.",
+      "script_version": "m01-script-1",
+      "script_hash": "5ae013600b236d5bb4f159e2db8548f485d391a343ac33318e3fe8e2876bda61",
+      "speed": "slow",
+      "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "voice_version_code": "m01-approved-1",
+      "turns": [
+        {
+          "turn_id": "71c228ec-c3ea-5ef5-97c5-c308ead9854e",
+          "speaker": "F01",
+          "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+          "voice_version_code": "m01-approved-1",
+          "start_ms": 0,
+          "end_ms": 2288,
+          "text": "On je student."
+        }
+      ],
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source cs-C-pocket-C; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf; exact source audio/cs/AUD_CZE_M01_WORDS_ON_STUDENT_SLOW.wav; dialogue voices use the six locked profiles; pre-approval resampling, level adjustment and slow atempo=0.8 retained.",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      },
+      "normal_asset_id": "cc7432ce-377c-5a9f-9335-1a6f10d6eb2b",
+      "normal_asset_version": 2
+    },
+    "source_frames": {
+      "sample_rate": 24000,
+      "frames": 54908,
+      "cues": [
+        {
+          "turn_id": "71c228ec-c3ea-5ef5-97c5-c308ead9854e",
+          "start_frame": 0,
+          "end_frame": 54908
+        }
+      ]
+    }
+  },
+  {
+    "file": "assets/media/m01/cs/AUD_CZE_M01_WORDS_ONA_UCITELKA.wav",
+    "metadata": {
+      "asset_id": "4f7d5de5-4a12-5e4d-9179-e6a735a428e3",
+      "stable_code": "AUD_CZE_M01_WORDS_ONA_UCITELKA",
+      "asset_version": 2,
+      "version_code": "m01-approved-1",
+      "kind": "audio",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "purpose": "Owner-approved immutable M01 audio; original PCM preserved",
+      "mime": "audio/wav",
+      "checksum": "b9201f0c29af665697dd5124298641867cd1fac576fae911c4e3f0eb71635e26",
+      "byte_length": 92204,
+      "duration_ms": 1920,
+      "codec": "pcm_s16le",
+      "loudness_lufs": -20.3,
+      "decorative": false,
+      "alt_text": "",
+      "transcript": "Ona je učitelka.",
+      "script_version": "m01-script-1",
+      "script_hash": "f53d053a1cdff5dfb89accba68abdd5005c11db7da6ea63d9c5f1779806e5adc",
+      "speed": "normal",
+      "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "voice_version_code": "m01-approved-1",
+      "turns": [
+        {
+          "turn_id": "dfabdccf-cabd-591f-9be1-9fd3b1db9b49",
+          "speaker": "F01",
+          "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+          "voice_version_code": "m01-approved-1",
+          "start_ms": 0,
+          "end_ms": 1920,
+          "text": "Ona je učitelka."
+        }
+      ],
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source cs-C-pocket-C; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf; exact source audio/cs/AUD_CZE_M01_WORDS_ONA_UCITELKA.wav; dialogue voices use the six locked profiles; pre-approval resampling, level adjustment and slow atempo=0.8 retained.",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      }
+    },
+    "source_frames": {
+      "sample_rate": 24000,
+      "frames": 46080,
+      "cues": [
+        {
+          "turn_id": "dfabdccf-cabd-591f-9be1-9fd3b1db9b49",
+          "start_frame": 0,
+          "end_frame": 46080
+        }
+      ]
+    }
+  },
+  {
+    "file": "assets/media/m01/cs/AUD_CZE_M01_WORDS_ONA_UCITELKA_SLOW.wav",
+    "metadata": {
+      "asset_id": "af6f90b5-e58e-5705-b2b3-ed41e802ffea",
+      "stable_code": "AUD_CZE_M01_WORDS_ONA_UCITELKA_SLOW",
+      "asset_version": 2,
+      "version_code": "m01-approved-1",
+      "kind": "audio",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "purpose": "Owner-approved immutable M01 audio; original PCM preserved",
+      "mime": "audio/wav",
+      "checksum": "595edcfcdae7d78a13ebfadba0f7c2b525a94d5e4f9c86a12335dbac99ce39c4",
+      "byte_length": 114248,
+      "duration_ms": 2380,
+      "codec": "pcm_s16le",
+      "loudness_lufs": -20.5,
+      "decorative": false,
+      "alt_text": "",
+      "transcript": "Ona je učitelka.",
+      "script_version": "m01-script-1",
+      "script_hash": "f53d053a1cdff5dfb89accba68abdd5005c11db7da6ea63d9c5f1779806e5adc",
+      "speed": "slow",
+      "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "voice_version_code": "m01-approved-1",
+      "turns": [
+        {
+          "turn_id": "dfabdccf-cabd-591f-9be1-9fd3b1db9b49",
+          "speaker": "F01",
+          "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+          "voice_version_code": "m01-approved-1",
+          "start_ms": 0,
+          "end_ms": 2379,
+          "text": "Ona je učitelka."
+        }
+      ],
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source cs-C-pocket-C; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf; exact source audio/cs/AUD_CZE_M01_WORDS_ONA_UCITELKA_SLOW.wav; dialogue voices use the six locked profiles; pre-approval resampling, level adjustment and slow atempo=0.8 retained.",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      },
+      "normal_asset_id": "4f7d5de5-4a12-5e4d-9179-e6a735a428e3",
+      "normal_asset_version": 2
+    },
+    "source_frames": {
+      "sample_rate": 24000,
+      "frames": 57102,
+      "cues": [
+        {
+          "turn_id": "dfabdccf-cabd-591f-9be1-9fd3b1db9b49",
+          "start_frame": 0,
+          "end_frame": 57102
+        }
+      ]
+    }
+  },
+  {
+    "file": "assets/media/m01/cs/AUD_CZE_M01_WORDS_COUNTRY_CZ.wav",
+    "metadata": {
+      "asset_id": "4a68bcc0-056e-57af-8264-b50ed5f351ea",
+      "stable_code": "AUD_CZE_M01_WORDS_COUNTRY_CZ",
+      "asset_version": 2,
+      "version_code": "m01-approved-1",
+      "kind": "audio",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "purpose": "Owner-approved immutable M01 audio; original PCM preserved",
+      "mime": "audio/wav",
+      "checksum": "9414651da2c298c30916faaa6dcff078c2fa6c8c9d11f9788f953bcfd8e63056",
+      "byte_length": 69164,
+      "duration_ms": 1440,
+      "codec": "pcm_s16le",
+      "loudness_lufs": -19.5,
+      "decorative": false,
+      "alt_text": "",
+      "transcript": "Česko",
+      "script_version": "m01-script-1",
+      "script_hash": "a9fc45d2969d21b18e6dcd66a14e4093e532d9d5acd818b26ad0faf70fbd198f",
+      "speed": "normal",
+      "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "voice_version_code": "m01-approved-1",
+      "turns": [
+        {
+          "turn_id": "bc2cec0a-7f1e-5dc9-8ddb-b2d811acba4b",
+          "speaker": "F01",
+          "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+          "voice_version_code": "m01-approved-1",
+          "start_ms": 0,
+          "end_ms": 1440,
+          "text": "Česko"
+        }
+      ],
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source cs-C-pocket-C; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf; exact source audio/cs/AUD_CZE_M01_WORDS_COUNTRY_CZ.wav; dialogue voices use the six locked profiles; pre-approval resampling, level adjustment and slow atempo=0.8 retained.",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      }
+    },
+    "source_frames": {
+      "sample_rate": 24000,
+      "frames": 34560,
+      "cues": [
+        {
+          "turn_id": "bc2cec0a-7f1e-5dc9-8ddb-b2d811acba4b",
+          "start_frame": 0,
+          "end_frame": 34560
+        }
+      ]
+    }
+  },
+  {
+    "file": "assets/media/m01/cs/AUD_CZE_M01_WORDS_COUNTRY_CZ_SLOW.wav",
+    "metadata": {
+      "asset_id": "f97acd24-5473-5c27-8547-258cdb67224a",
+      "stable_code": "AUD_CZE_M01_WORDS_COUNTRY_CZ_SLOW",
+      "asset_version": 2,
+      "version_code": "m01-approved-1",
+      "kind": "audio",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "purpose": "Owner-approved immutable M01 audio; original PCM preserved",
+      "mime": "audio/wav",
+      "checksum": "8226a66f72aa33233ab02fd79ace11b7a5f0def923ac5c018eb3d171b70f6d0d",
+      "byte_length": 85764,
+      "duration_ms": 1786,
+      "codec": "pcm_s16le",
+      "loudness_lufs": -18.8,
+      "decorative": false,
+      "alt_text": "",
+      "transcript": "Česko",
+      "script_version": "m01-script-1",
+      "script_hash": "a9fc45d2969d21b18e6dcd66a14e4093e532d9d5acd818b26ad0faf70fbd198f",
+      "speed": "slow",
+      "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "voice_version_code": "m01-approved-1",
+      "turns": [
+        {
+          "turn_id": "bc2cec0a-7f1e-5dc9-8ddb-b2d811acba4b",
+          "speaker": "F01",
+          "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+          "voice_version_code": "m01-approved-1",
+          "start_ms": 0,
+          "end_ms": 1786,
+          "text": "Česko"
+        }
+      ],
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source cs-C-pocket-C; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf; exact source audio/cs/AUD_CZE_M01_WORDS_COUNTRY_CZ_SLOW.wav; dialogue voices use the six locked profiles; pre-approval resampling, level adjustment and slow atempo=0.8 retained.",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      },
+      "normal_asset_id": "4a68bcc0-056e-57af-8264-b50ed5f351ea",
+      "normal_asset_version": 2
+    },
+    "source_frames": {
+      "sample_rate": 24000,
+      "frames": 42860,
+      "cues": [
+        {
+          "turn_id": "bc2cec0a-7f1e-5dc9-8ddb-b2d811acba4b",
+          "start_frame": 0,
+          "end_frame": 42860
+        }
+      ]
+    }
+  },
+  {
+    "file": "assets/media/m01/cs/AUD_CZE_M01_WORDS_COUNTRY_UA.wav",
+    "metadata": {
+      "asset_id": "d3a9bdeb-8e63-58cf-845e-f46acd6a77b4",
+      "stable_code": "AUD_CZE_M01_WORDS_COUNTRY_UA",
+      "asset_version": 2,
+      "version_code": "m01-approved-1",
+      "kind": "audio",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "purpose": "Owner-approved immutable M01 audio; original PCM preserved",
+      "mime": "audio/wav",
+      "checksum": "33a5fc0732372e09aba34d17223f8b883dea141c959fd3eaaedc11a233b62bd0",
+      "byte_length": 76844,
+      "duration_ms": 1600,
+      "codec": "pcm_s16le",
+      "loudness_lufs": -20.3,
+      "decorative": false,
+      "alt_text": "",
+      "transcript": "Ukrajina",
+      "script_version": "m01-script-1",
+      "script_hash": "66716c2eb530ff9a992a4e7ea5d9df96e9c9a74fb01f8f376f20917a86c168cd",
+      "speed": "normal",
+      "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "voice_version_code": "m01-approved-1",
+      "turns": [
+        {
+          "turn_id": "37562d14-5b67-522b-b1f5-6e22c488fd13",
+          "speaker": "F01",
+          "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+          "voice_version_code": "m01-approved-1",
+          "start_ms": 0,
+          "end_ms": 1600,
+          "text": "Ukrajina"
+        }
+      ],
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source cs-C-pocket-C; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf; exact source audio/cs/AUD_CZE_M01_WORDS_COUNTRY_UA.wav; dialogue voices use the six locked profiles; pre-approval resampling, level adjustment and slow atempo=0.8 retained.",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      }
+    },
+    "source_frames": {
+      "sample_rate": 24000,
+      "frames": 38400,
+      "cues": [
+        {
+          "turn_id": "37562d14-5b67-522b-b1f5-6e22c488fd13",
+          "start_frame": 0,
+          "end_frame": 38400
+        }
+      ]
+    }
+  },
+  {
+    "file": "assets/media/m01/cs/AUD_CZE_M01_WORDS_COUNTRY_UA_SLOW.wav",
+    "metadata": {
+      "asset_id": "02a22a84-5f01-5877-98ed-c399d1484e09",
+      "stable_code": "AUD_CZE_M01_WORDS_COUNTRY_UA_SLOW",
+      "asset_version": 2,
+      "version_code": "m01-approved-1",
+      "kind": "audio",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "purpose": "Owner-approved immutable M01 audio; original PCM preserved",
+      "mime": "audio/wav",
+      "checksum": "42b72fbf61b99fd161728bb1e3971d60ffbaccba868ace552b63660d97cb161c",
+      "byte_length": 95288,
+      "duration_ms": 1985,
+      "codec": "pcm_s16le",
+      "loudness_lufs": -20.1,
+      "decorative": false,
+      "alt_text": "",
+      "transcript": "Ukrajina",
+      "script_version": "m01-script-1",
+      "script_hash": "66716c2eb530ff9a992a4e7ea5d9df96e9c9a74fb01f8f376f20917a86c168cd",
+      "speed": "slow",
+      "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "voice_version_code": "m01-approved-1",
+      "turns": [
+        {
+          "turn_id": "37562d14-5b67-522b-b1f5-6e22c488fd13",
+          "speaker": "F01",
+          "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+          "voice_version_code": "m01-approved-1",
+          "start_ms": 0,
+          "end_ms": 1984,
+          "text": "Ukrajina"
+        }
+      ],
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source cs-C-pocket-C; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf; exact source audio/cs/AUD_CZE_M01_WORDS_COUNTRY_UA_SLOW.wav; dialogue voices use the six locked profiles; pre-approval resampling, level adjustment and slow atempo=0.8 retained.",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      },
+      "normal_asset_id": "d3a9bdeb-8e63-58cf-845e-f46acd6a77b4",
+      "normal_asset_version": 2
+    },
+    "source_frames": {
+      "sample_rate": 24000,
+      "frames": 47622,
+      "cues": [
+        {
+          "turn_id": "37562d14-5b67-522b-b1f5-6e22c488fd13",
+          "start_frame": 0,
+          "end_frame": 47622
+        }
+      ]
+    }
+  },
+  {
+    "file": "assets/media/m01/cs/AUD_CZE_M01_WORDS_COUNTRY_PL.wav",
+    "metadata": {
+      "asset_id": "6f71d875-ddff-5ff2-85a1-5a7de9ca596a",
+      "stable_code": "AUD_CZE_M01_WORDS_COUNTRY_PL",
+      "asset_version": 2,
+      "version_code": "m01-approved-1",
+      "kind": "audio",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "purpose": "Owner-approved immutable M01 audio; original PCM preserved",
+      "mime": "audio/wav",
+      "checksum": "f18623c7f29bc6dbd4517af9ea9b1f4ab8e0413a459e669c4e5affb909ca52ca",
+      "byte_length": 73004,
+      "duration_ms": 1520,
+      "codec": "pcm_s16le",
+      "loudness_lufs": -19.9,
+      "decorative": false,
+      "alt_text": "",
+      "transcript": "Polsko",
+      "script_version": "m01-script-1",
+      "script_hash": "5b255a3c4764194a1780b6042c65fc237083b5deec50c174b1582ea861aba3fa",
+      "speed": "normal",
+      "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "voice_version_code": "m01-approved-1",
+      "turns": [
+        {
+          "turn_id": "23124da7-4b7e-566e-a794-9a3ddaa6897f",
+          "speaker": "F01",
+          "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+          "voice_version_code": "m01-approved-1",
+          "start_ms": 0,
+          "end_ms": 1520,
+          "text": "Polsko"
+        }
+      ],
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source cs-C-pocket-C; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf; exact source audio/cs/AUD_CZE_M01_WORDS_COUNTRY_PL.wav; dialogue voices use the six locked profiles; pre-approval resampling, level adjustment and slow atempo=0.8 retained.",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      }
+    },
+    "source_frames": {
+      "sample_rate": 24000,
+      "frames": 36480,
+      "cues": [
+        {
+          "turn_id": "23124da7-4b7e-566e-a794-9a3ddaa6897f",
+          "start_frame": 0,
+          "end_frame": 36480
+        }
+      ]
+    }
+  },
+  {
+    "file": "assets/media/m01/cs/AUD_CZE_M01_WORDS_COUNTRY_PL_SLOW.wav",
+    "metadata": {
+      "asset_id": "1473f2b5-374d-56e7-b1fe-ebe147a103d0",
+      "stable_code": "AUD_CZE_M01_WORDS_COUNTRY_PL_SLOW",
+      "asset_version": 2,
+      "version_code": "m01-approved-1",
+      "kind": "audio",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "purpose": "Owner-approved immutable M01 audio; original PCM preserved",
+      "mime": "audio/wav",
+      "checksum": "a76eee48fa2561a1d815b922ae16e812c54592dafb600fd9fcc143ac7c8b60da",
+      "byte_length": 90916,
+      "duration_ms": 1894,
+      "codec": "pcm_s16le",
+      "loudness_lufs": -19.1,
+      "decorative": false,
+      "alt_text": "",
+      "transcript": "Polsko",
+      "script_version": "m01-script-1",
+      "script_hash": "5b255a3c4764194a1780b6042c65fc237083b5deec50c174b1582ea861aba3fa",
+      "speed": "slow",
+      "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "voice_version_code": "m01-approved-1",
+      "turns": [
+        {
+          "turn_id": "23124da7-4b7e-566e-a794-9a3ddaa6897f",
+          "speaker": "F01",
+          "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+          "voice_version_code": "m01-approved-1",
+          "start_ms": 0,
+          "end_ms": 1893,
+          "text": "Polsko"
+        }
+      ],
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source cs-C-pocket-C; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf; exact source audio/cs/AUD_CZE_M01_WORDS_COUNTRY_PL_SLOW.wav; dialogue voices use the six locked profiles; pre-approval resampling, level adjustment and slow atempo=0.8 retained.",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      },
+      "normal_asset_id": "6f71d875-ddff-5ff2-85a1-5a7de9ca596a",
+      "normal_asset_version": 2
+    },
+    "source_frames": {
+      "sample_rate": 24000,
+      "frames": 45436,
+      "cues": [
+        {
+          "turn_id": "23124da7-4b7e-566e-a794-9a3ddaa6897f",
+          "start_frame": 0,
+          "end_frame": 45436
+        }
+      ]
+    }
+  },
+  {
+    "file": "assets/media/m01/cs/AUD_CZE_M01_WORDS_COUNTRY_DE.wav",
+    "metadata": {
+      "asset_id": "4f3fdd89-1a80-5285-a976-b325bbfe1351",
+      "stable_code": "AUD_CZE_M01_WORDS_COUNTRY_DE",
+      "asset_version": 2,
+      "version_code": "m01-approved-1",
+      "kind": "audio",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "purpose": "Owner-approved immutable M01 audio; original PCM preserved",
+      "mime": "audio/wav",
+      "checksum": "00bc2c312c92c233c7a79533bf6a165b4d2880087ff3a811ea577d2ef30663c7",
+      "byte_length": 76844,
+      "duration_ms": 1600,
+      "codec": "pcm_s16le",
+      "loudness_lufs": -18.7,
+      "decorative": false,
+      "alt_text": "",
+      "transcript": "Německo",
+      "script_version": "m01-script-1",
+      "script_hash": "73624f7a2c14f1d616d4727e461a83b57362dc85737008ccfac254ae277a0da8",
+      "speed": "normal",
+      "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "voice_version_code": "m01-approved-1",
+      "turns": [
+        {
+          "turn_id": "d507c202-76e4-5637-bbc9-e63c65080e6c",
+          "speaker": "F01",
+          "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+          "voice_version_code": "m01-approved-1",
+          "start_ms": 0,
+          "end_ms": 1600,
+          "text": "Německo"
+        }
+      ],
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source cs-C-pocket-C; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf; exact source audio/cs/AUD_CZE_M01_WORDS_COUNTRY_DE.wav; dialogue voices use the six locked profiles; pre-approval resampling, level adjustment and slow atempo=0.8 retained.",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      }
+    },
+    "source_frames": {
+      "sample_rate": 24000,
+      "frames": 38400,
+      "cues": [
+        {
+          "turn_id": "d507c202-76e4-5637-bbc9-e63c65080e6c",
+          "start_frame": 0,
+          "end_frame": 38400
+        }
+      ]
+    }
+  },
+  {
+    "file": "assets/media/m01/cs/AUD_CZE_M01_WORDS_COUNTRY_DE_SLOW.wav",
+    "metadata": {
+      "asset_id": "4c07319b-a8b8-5649-9073-5f0db4267a70",
+      "stable_code": "AUD_CZE_M01_WORDS_COUNTRY_DE_SLOW",
+      "asset_version": 2,
+      "version_code": "m01-approved-1",
+      "kind": "audio",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "purpose": "Owner-approved immutable M01 audio; original PCM preserved",
+      "mime": "audio/wav",
+      "checksum": "7fe0a152ead7a37f686d7e780c925090bff6231085bbb1cfa68207a77040875d",
+      "byte_length": 95464,
+      "duration_ms": 1988,
+      "codec": "pcm_s16le",
+      "loudness_lufs": -19.6,
+      "decorative": false,
+      "alt_text": "",
+      "transcript": "Německo",
+      "script_version": "m01-script-1",
+      "script_hash": "73624f7a2c14f1d616d4727e461a83b57362dc85737008ccfac254ae277a0da8",
+      "speed": "slow",
+      "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "voice_version_code": "m01-approved-1",
+      "turns": [
+        {
+          "turn_id": "d507c202-76e4-5637-bbc9-e63c65080e6c",
+          "speaker": "F01",
+          "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+          "voice_version_code": "m01-approved-1",
+          "start_ms": 0,
+          "end_ms": 1988,
+          "text": "Německo"
+        }
+      ],
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source cs-C-pocket-C; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf; exact source audio/cs/AUD_CZE_M01_WORDS_COUNTRY_DE_SLOW.wav; dialogue voices use the six locked profiles; pre-approval resampling, level adjustment and slow atempo=0.8 retained.",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      },
+      "normal_asset_id": "4f3fdd89-1a80-5285-a976-b325bbfe1351",
+      "normal_asset_version": 2
+    },
+    "source_frames": {
+      "sample_rate": 24000,
+      "frames": 47710,
+      "cues": [
+        {
+          "turn_id": "d507c202-76e4-5637-bbc9-e63c65080e6c",
+          "start_frame": 0,
+          "end_frame": 47710
+        }
+      ]
+    }
+  },
+  {
+    "file": "assets/media/m01/cs/AUD_CZE_M01_WORDS_COUNTRY_SK.wav",
+    "metadata": {
+      "asset_id": "33dd5e0c-7429-5f89-96ec-09e3a9a3279b",
+      "stable_code": "AUD_CZE_M01_WORDS_COUNTRY_SK",
+      "asset_version": 2,
+      "version_code": "m01-approved-1",
+      "kind": "audio",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "purpose": "Owner-approved immutable M01 audio; original PCM preserved",
+      "mime": "audio/wav",
+      "checksum": "b1b58fe5a75a00d1184a7198146e1dc1224b1438089d6045cbe424936bfa568a",
+      "byte_length": 73004,
+      "duration_ms": 1520,
+      "codec": "pcm_s16le",
+      "loudness_lufs": -20.0,
+      "decorative": false,
+      "alt_text": "",
+      "transcript": "Slovensko",
+      "script_version": "m01-script-1",
+      "script_hash": "d6f4425b69255401b3c60efd5afa263d5d79882194e4cadd50f9b456fdda9b01",
+      "speed": "normal",
+      "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "voice_version_code": "m01-approved-1",
+      "turns": [
+        {
+          "turn_id": "b41adfac-b5ac-5d76-9dcb-8e36ba50c3fd",
+          "speaker": "F01",
+          "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+          "voice_version_code": "m01-approved-1",
+          "start_ms": 0,
+          "end_ms": 1520,
+          "text": "Slovensko"
+        }
+      ],
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source cs-C-pocket-C; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf; exact source audio/cs/AUD_CZE_M01_WORDS_COUNTRY_SK.wav; dialogue voices use the six locked profiles; pre-approval resampling, level adjustment and slow atempo=0.8 retained.",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      }
+    },
+    "source_frames": {
+      "sample_rate": 24000,
+      "frames": 36480,
+      "cues": [
+        {
+          "turn_id": "b41adfac-b5ac-5d76-9dcb-8e36ba50c3fd",
+          "start_frame": 0,
+          "end_frame": 36480
+        }
+      ]
+    }
+  },
+  {
+    "file": "assets/media/m01/cs/AUD_CZE_M01_WORDS_COUNTRY_SK_SLOW.wav",
+    "metadata": {
+      "asset_id": "ed840a9b-e522-5cef-94cc-156f51a48ead",
+      "stable_code": "AUD_CZE_M01_WORDS_COUNTRY_SK_SLOW",
+      "asset_version": 2,
+      "version_code": "m01-approved-1",
+      "kind": "audio",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "purpose": "Owner-approved immutable M01 audio; original PCM preserved",
+      "mime": "audio/wav",
+      "checksum": "cfaa646974bf578dd7e389ae9bee4beb38be24336fcd0d405e56e0763cb2131e",
+      "byte_length": 90260,
+      "duration_ms": 1880,
+      "codec": "pcm_s16le",
+      "loudness_lufs": -19.7,
+      "decorative": false,
+      "alt_text": "",
+      "transcript": "Slovensko",
+      "script_version": "m01-script-1",
+      "script_hash": "d6f4425b69255401b3c60efd5afa263d5d79882194e4cadd50f9b456fdda9b01",
+      "speed": "slow",
+      "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "voice_version_code": "m01-approved-1",
+      "turns": [
+        {
+          "turn_id": "b41adfac-b5ac-5d76-9dcb-8e36ba50c3fd",
+          "speaker": "F01",
+          "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+          "voice_version_code": "m01-approved-1",
+          "start_ms": 0,
+          "end_ms": 1880,
+          "text": "Slovensko"
+        }
+      ],
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source cs-C-pocket-C; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf; exact source audio/cs/AUD_CZE_M01_WORDS_COUNTRY_SK_SLOW.wav; dialogue voices use the six locked profiles; pre-approval resampling, level adjustment and slow atempo=0.8 retained.",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      },
+      "normal_asset_id": "33dd5e0c-7429-5f89-96ec-09e3a9a3279b",
+      "normal_asset_version": 2
+    },
+    "source_frames": {
+      "sample_rate": 24000,
+      "frames": 45108,
+      "cues": [
+        {
+          "turn_id": "b41adfac-b5ac-5d76-9dcb-8e36ba50c3fd",
+          "start_frame": 0,
+          "end_frame": 45108
+        }
+      ]
+    }
+  },
+  {
+    "file": "assets/media/m01/cs/AUD_CZE_M01_WORDS_COUNTRY_ES.wav",
+    "metadata": {
+      "asset_id": "298be826-2eb6-5060-aada-53f0db36ece0",
+      "stable_code": "AUD_CZE_M01_WORDS_COUNTRY_ES",
+      "asset_version": 2,
+      "version_code": "m01-approved-1",
+      "kind": "audio",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "purpose": "Owner-approved immutable M01 audio; original PCM preserved",
+      "mime": "audio/wav",
+      "checksum": "9fd8b1d14f9a785e01de257c1690e63a8c68921af2dc73e6089d70e20eae8900",
+      "byte_length": 80684,
+      "duration_ms": 1680,
+      "codec": "pcm_s16le",
+      "loudness_lufs": -19.0,
+      "decorative": false,
+      "alt_text": "",
+      "transcript": "Španělsko",
+      "script_version": "m01-script-1",
+      "script_hash": "731a858e40c1bfbd1ebf5ef8e49e2243dc63e8d9c26d2db19ebdbd04f519629f",
+      "speed": "normal",
+      "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "voice_version_code": "m01-approved-1",
+      "turns": [
+        {
+          "turn_id": "ed398621-4fcd-5a72-a2ff-01bc1931a04f",
+          "speaker": "F01",
+          "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+          "voice_version_code": "m01-approved-1",
+          "start_ms": 0,
+          "end_ms": 1680,
+          "text": "Španělsko"
+        }
+      ],
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source cs-C-pocket-C; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf; exact source audio/cs/AUD_CZE_M01_WORDS_COUNTRY_ES.wav; dialogue voices use the six locked profiles; pre-approval resampling, level adjustment and slow atempo=0.8 retained.",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      }
+    },
+    "source_frames": {
+      "sample_rate": 24000,
+      "frames": 40320,
+      "cues": [
+        {
+          "turn_id": "ed398621-4fcd-5a72-a2ff-01bc1931a04f",
+          "start_frame": 0,
+          "end_frame": 40320
+        }
+      ]
+    }
+  },
+  {
+    "file": "assets/media/m01/cs/AUD_CZE_M01_WORDS_COUNTRY_ES_SLOW.wav",
+    "metadata": {
+      "asset_id": "f840696b-5d31-5382-895c-70c6f424c8e2",
+      "stable_code": "AUD_CZE_M01_WORDS_COUNTRY_ES_SLOW",
+      "asset_version": 2,
+      "version_code": "m01-approved-1",
+      "kind": "audio",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "purpose": "Owner-approved immutable M01 audio; original PCM preserved",
+      "mime": "audio/wav",
+      "checksum": "6372d058514a22d2272bd880208086bc9a89b6114f475ef0391631832a0c41d0",
+      "byte_length": 99822,
+      "duration_ms": 2079,
+      "codec": "pcm_s16le",
+      "loudness_lufs": -19.5,
+      "decorative": false,
+      "alt_text": "",
+      "transcript": "Španělsko",
+      "script_version": "m01-script-1",
+      "script_hash": "731a858e40c1bfbd1ebf5ef8e49e2243dc63e8d9c26d2db19ebdbd04f519629f",
+      "speed": "slow",
+      "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "voice_version_code": "m01-approved-1",
+      "turns": [
+        {
+          "turn_id": "ed398621-4fcd-5a72-a2ff-01bc1931a04f",
+          "speaker": "F01",
+          "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+          "voice_version_code": "m01-approved-1",
+          "start_ms": 0,
+          "end_ms": 2079,
+          "text": "Španělsko"
+        }
+      ],
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source cs-C-pocket-C; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf; exact source audio/cs/AUD_CZE_M01_WORDS_COUNTRY_ES_SLOW.wav; dialogue voices use the six locked profiles; pre-approval resampling, level adjustment and slow atempo=0.8 retained.",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      },
+      "normal_asset_id": "298be826-2eb6-5060-aada-53f0db36ece0",
+      "normal_asset_version": 2
+    },
+    "source_frames": {
+      "sample_rate": 24000,
+      "frames": 49889,
+      "cues": [
+        {
+          "turn_id": "ed398621-4fcd-5a72-a2ff-01bc1931a04f",
+          "start_frame": 0,
+          "end_frame": 49889
+        }
+      ]
+    }
+  },
+  {
+    "file": "assets/media/m01/cs/AUD_CZE_M01_WORDS_ORIGIN_CZ.wav",
+    "metadata": {
+      "asset_id": "b8300ce0-d67b-5c4e-8f0c-04162c1ee43f",
+      "stable_code": "AUD_CZE_M01_WORDS_ORIGIN_CZ",
+      "asset_version": 2,
+      "version_code": "m01-approved-1",
+      "kind": "audio",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "purpose": "Owner-approved immutable M01 audio; original PCM preserved",
+      "mime": "audio/wav",
+      "checksum": "7a2d20e600a3bac4adf76dfd5854b2b3f9b03d3ef5ea0f147554e8ce74cc8361",
+      "byte_length": 84524,
+      "duration_ms": 1760,
+      "codec": "pcm_s16le",
+      "loudness_lufs": -20.2,
+      "decorative": false,
+      "alt_text": "",
+      "transcript": "Jsem z Česka.",
+      "script_version": "m01-script-1",
+      "script_hash": "0a23011831616a5a855b798986064ef0a767f1d55f84d5ff86420f10b5744dad",
+      "speed": "normal",
+      "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "voice_version_code": "m01-approved-1",
+      "turns": [
+        {
+          "turn_id": "23b2e7ab-0576-50ce-9a4d-9ff07a2f6799",
+          "speaker": "F01",
+          "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+          "voice_version_code": "m01-approved-1",
+          "start_ms": 0,
+          "end_ms": 1760,
+          "text": "Jsem z Česka."
+        }
+      ],
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source cs-C-pocket-C; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf; exact source audio/cs/AUD_CZE_M01_WORDS_ORIGIN_CZ.wav; dialogue voices use the six locked profiles; pre-approval resampling, level adjustment and slow atempo=0.8 retained.",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      }
+    },
+    "source_frames": {
+      "sample_rate": 24000,
+      "frames": 42240,
+      "cues": [
+        {
+          "turn_id": "23b2e7ab-0576-50ce-9a4d-9ff07a2f6799",
+          "start_frame": 0,
+          "end_frame": 42240
+        }
+      ]
+    }
+  },
+  {
+    "file": "assets/media/m01/cs/AUD_CZE_M01_WORDS_ORIGIN_CZ_SLOW.wav",
+    "metadata": {
+      "asset_id": "72375d37-8d91-58ac-b464-d0f94ae59bd5",
+      "stable_code": "AUD_CZE_M01_WORDS_ORIGIN_CZ_SLOW",
+      "asset_version": 2,
+      "version_code": "m01-approved-1",
+      "kind": "audio",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "purpose": "Owner-approved immutable M01 audio; original PCM preserved",
+      "mime": "audio/wav",
+      "checksum": "24066173516b138240e5bc0f3f36fecd49dc1ffc627d3af474d77c2b0d35fb01",
+      "byte_length": 104712,
+      "duration_ms": 2181,
+      "codec": "pcm_s16le",
+      "loudness_lufs": -19.6,
+      "decorative": false,
+      "alt_text": "",
+      "transcript": "Jsem z Česka.",
+      "script_version": "m01-script-1",
+      "script_hash": "0a23011831616a5a855b798986064ef0a767f1d55f84d5ff86420f10b5744dad",
+      "speed": "slow",
+      "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "voice_version_code": "m01-approved-1",
+      "turns": [
+        {
+          "turn_id": "23b2e7ab-0576-50ce-9a4d-9ff07a2f6799",
+          "speaker": "F01",
+          "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+          "voice_version_code": "m01-approved-1",
+          "start_ms": 0,
+          "end_ms": 2181,
+          "text": "Jsem z Česka."
+        }
+      ],
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source cs-C-pocket-C; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf; exact source audio/cs/AUD_CZE_M01_WORDS_ORIGIN_CZ_SLOW.wav; dialogue voices use the six locked profiles; pre-approval resampling, level adjustment and slow atempo=0.8 retained.",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      },
+      "normal_asset_id": "b8300ce0-d67b-5c4e-8f0c-04162c1ee43f",
+      "normal_asset_version": 2
+    },
+    "source_frames": {
+      "sample_rate": 24000,
+      "frames": 52334,
+      "cues": [
+        {
+          "turn_id": "23b2e7ab-0576-50ce-9a4d-9ff07a2f6799",
+          "start_frame": 0,
+          "end_frame": 52334
+        }
+      ]
+    }
+  },
+  {
+    "file": "assets/media/m01/cs/AUD_CZE_M01_WORDS_ORIGIN_UA.wav",
+    "metadata": {
+      "asset_id": "91ac33d3-451e-52f4-bfa3-99eb81ea9198",
+      "stable_code": "AUD_CZE_M01_WORDS_ORIGIN_UA",
+      "asset_version": 2,
+      "version_code": "m01-approved-1",
+      "kind": "audio",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "purpose": "Owner-approved immutable M01 audio; original PCM preserved",
+      "mime": "audio/wav",
+      "checksum": "16dd789156713c6609b0a4740f6539531b6316d0ee6d191ba342502735efad51",
+      "byte_length": 84524,
+      "duration_ms": 1760,
+      "codec": "pcm_s16le",
+      "loudness_lufs": -20.3,
+      "decorative": false,
+      "alt_text": "",
+      "transcript": "Jsem z Ukrajiny.",
+      "script_version": "m01-script-1",
+      "script_hash": "da857eed57b3027cca28ff4f6c80b6abf5e3e6de5eba15bdf0f91b9685e47774",
+      "speed": "normal",
+      "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "voice_version_code": "m01-approved-1",
+      "turns": [
+        {
+          "turn_id": "3de8d8d0-28af-5ec1-ab10-eb6314b26748",
+          "speaker": "F01",
+          "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+          "voice_version_code": "m01-approved-1",
+          "start_ms": 0,
+          "end_ms": 1760,
+          "text": "Jsem z Ukrajiny."
+        }
+      ],
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source cs-C-pocket-C; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf; exact source audio/cs/AUD_CZE_M01_WORDS_ORIGIN_UA.wav; dialogue voices use the six locked profiles; pre-approval resampling, level adjustment and slow atempo=0.8 retained.",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      }
+    },
+    "source_frames": {
+      "sample_rate": 24000,
+      "frames": 42240,
+      "cues": [
+        {
+          "turn_id": "3de8d8d0-28af-5ec1-ab10-eb6314b26748",
+          "start_frame": 0,
+          "end_frame": 42240
+        }
+      ]
+    }
+  },
+  {
+    "file": "assets/media/m01/cs/AUD_CZE_M01_WORDS_ORIGIN_UA_SLOW.wav",
+    "metadata": {
+      "asset_id": "5b69b14a-93be-5fb2-ae9c-17a09a96b313",
+      "stable_code": "AUD_CZE_M01_WORDS_ORIGIN_UA_SLOW",
+      "asset_version": 2,
+      "version_code": "m01-approved-1",
+      "kind": "audio",
+      "scope": {
+        "language": "cs",
+        "variety": "cs-CZ"
+      },
+      "purpose": "Owner-approved immutable M01 audio; original PCM preserved",
+      "mime": "audio/wav",
+      "checksum": "aaef380e0d0ab92e085fabccb502db6fb30f156f32bc58167c7ec694540df2ef",
+      "byte_length": 105016,
+      "duration_ms": 2187,
+      "codec": "pcm_s16le",
+      "loudness_lufs": -19.8,
+      "decorative": false,
+      "alt_text": "",
+      "transcript": "Jsem z Ukrajiny.",
+      "script_version": "m01-script-1",
+      "script_hash": "da857eed57b3027cca28ff4f6c80b6abf5e3e6de5eba15bdf0f91b9685e47774",
+      "speed": "slow",
+      "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "voice_version_code": "m01-approved-1",
+      "turns": [
+        {
+          "turn_id": "3de8d8d0-28af-5ec1-ab10-eb6314b26748",
+          "speaker": "F01",
+          "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+          "voice_version_code": "m01-approved-1",
+          "start_ms": 0,
+          "end_ms": 2187,
+          "text": "Jsem z Ukrajiny."
+        }
+      ],
+      "rights": {
+        "licence": "Owner-approved audio rights; original Lingvessa scripts; VCTK/Pocket Czech CC BY 4.0 or Piper Jirka CC0 per retained source credits",
+        "provenance": "Exact source cs-C-pocket-C; Piper VCTK or Jirka / Pocket TTS Czech; synthetic conditioning only. VCTK: Yamagishi, Veaux, MacDonald, CSTR Edinburgh; Czech ParCzech4Speech: UFAL. See docs/p5/m01-completion-attribution.md and pinned model locks. Owner-approved dataset 81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf; exact source audio/cs/AUD_CZE_M01_WORDS_ORIGIN_UA_SLOW.wav; dialogue voices use the six locked profiles; pre-approval resampling, level adjustment and slow atempo=0.8 retained.",
+        "source_kind": "ai_generated",
+        "generator_version": "m01-completion-20261014",
+        "spec_hash": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+        "real_person_clone": false
+      },
+      "normal_asset_id": "91ac33d3-451e-52f4-bfa3-99eb81ea9198",
+      "normal_asset_version": 2
+    },
+    "source_frames": {
+      "sample_rate": 24000,
+      "frames": 52486,
+      "cues": [
+        {
+          "turn_id": "3de8d8d0-28af-5ec1-ab10-eb6314b26748",
+          "start_frame": 0,
+          "end_frame": 52486
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,336 @@
+{
+  "schema_version": 1,
+  "batch": "m01-audio-draft-20261011",
+  "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+  "continuation_plan_sha256": "7c43993b47f0d5384484fbeca43ab04806d20d2de2946b486ce1cdc04eb37f4b",
+  "authoring_script_sha256": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+  "export_script_sha256": "ec58788029fbf2b746290ea954b50035a01ce87e06f412f0dfc0f3d075bc33c1",
+  "records": [
+    {
+      "role": "attempts",
+      "path": "docs/p5/m01-audio-draft-20261011/records/attempts-00.json",
+      "sha256": "8c73fedd1501eb7c489d570d4c0921a4c9ec8999fa01e13328899de703aa0aaa",
+      "count": 30
+    },
+    {
+      "role": "attempts",
+      "path": "docs/p5/m01-audio-draft-20261011/records/attempts-01.json",
+      "sha256": "88c6527236c6642008e01fafe63387dda13b7086a75eaac5db1e56e91dfb28a0",
+      "count": 30
+    },
+    {
+      "role": "attempts",
+      "path": "docs/p5/m01-audio-draft-20261011/records/attempts-02.json",
+      "sha256": "85983376e9240541d04388b32af2ab22d5856390524797816acfa85da5ab7fd7",
+      "count": 30
+    },
+    {
+      "role": "attempts",
+      "path": "docs/p5/m01-audio-draft-20261011/records/attempts-03.json",
+      "sha256": "340ec9878dc79286de1ece438dc0e89cff8a212fd9590328ae2ec4e6a00371e1",
+      "count": 16
+    },
+    {
+      "role": "assets",
+      "path": "docs/p5/m01-audio-draft-20261011/records/assets-00.json",
+      "sha256": "a72bb9509c9058aa91306181795a12d7af5d187e43e36664d16c51210b6f634b",
+      "count": 30
+    },
+    {
+      "role": "assets",
+      "path": "docs/p5/m01-audio-draft-20261011/records/assets-01.json",
+      "sha256": "9f311008afe9d343a60521bb32d785f0c22f7b9e60d644259f9966d92836cbbd",
+      "count": 30
+    },
+    {
+      "role": "assets",
+      "path": "docs/p5/m01-audio-draft-20261011/records/assets-02.json",
+      "sha256": "33160f603b1bb5766d372fe420c9a238a7b5d507911fce2dab000968bfde7d4c",
+      "count": 30
+    },
+    {
+      "role": "assets",
+      "path": "docs/p5/m01-audio-draft-20261011/records/assets-03.json",
+      "sha256": "8a313709c9d0c2f273326e3bf5f8f718d3d4a6be8bc3a2abc7d15cd9756c76b6",
+      "count": 30
+    },
+    {
+      "role": "assets",
+      "path": "docs/p5/m01-audio-draft-20261011/records/assets-04.json",
+      "sha256": "2c12552be7cc96e34d927a1bb1640e7021a3cdfbc232bcaecc613ea9736ac1a3",
+      "count": 30
+    },
+    {
+      "role": "assets",
+      "path": "docs/p5/m01-audio-draft-20261011/records/assets-05.json",
+      "sha256": "619fb91a932aedaa463a483db955679f7310b44e1b57eda0289dd9752e62b1d0",
+      "count": 30
+    },
+    {
+      "role": "assets",
+      "path": "docs/p5/m01-audio-draft-20261011/records/assets-06.json",
+      "sha256": "afe2de938567aa79dfe42cc91d005d36a0c114eb97454de8591018f7cb8ada30",
+      "count": 30
+    },
+    {
+      "role": "assets",
+      "path": "docs/p5/m01-audio-draft-20261011/records/assets-07.json",
+      "sha256": "c38e972e2c1e851d913753739bdcb6e64f6742bfb2ae6f771e21778794ce803a",
+      "count": 30
+    },
+    {
+      "role": "assets",
+      "path": "docs/p5/m01-audio-draft-20261011/records/assets-08.json",
+      "sha256": "096a503324c498ba906a9fb347e973c98ea296d6a307d6c64058ec98b8aedd6a",
+      "count": 30
+    },
+    {
+      "role": "assets",
+      "path": "docs/p5/m01-audio-draft-20261011/records/assets-09.json",
+      "sha256": "4a6f2397193a2a0f4a72ced1ec398c871f0adcf44034248bfc158adbcef6d1f3",
+      "count": 30
+    },
+    {
+      "role": "assets",
+      "path": "docs/p5/m01-audio-draft-20261011/records/assets-10.json",
+      "sha256": "9691163778c4666ed9e32e5234b1b527f96673c53bdf2ccc0720fc6c64bb066d",
+      "count": 30
+    },
+    {
+      "role": "assets",
+      "path": "docs/p5/m01-audio-draft-20261011/records/assets-11.json",
+      "sha256": "250647bc72ddf23580a37e46af4465fc325af0de0ab7ce27e5c399ba53f1bc58",
+      "count": 30
+    },
+    {
+      "role": "assets",
+      "path": "docs/p5/m01-audio-draft-20261011/records/assets-12.json",
+      "sha256": "a87898b1cc8f53907bd47bcb4588d8c208fb0d239f3ee6f1a1dfb99564e7b5ea",
+      "count": 30
+    },
+    {
+      "role": "assets",
+      "path": "docs/p5/m01-audio-draft-20261011/records/assets-13.json",
+      "sha256": "73a574b4e5b754880046a111ad5eadc71b27f31a78cea890d5d549989565711e",
+      "count": 30
+    },
+    {
+      "role": "screens",
+      "path": "docs/p5/m01-audio-draft-20261011/records/screens-00.json",
+      "sha256": "768e4497489798fa1f10095eaed859788267193b4d542bbd9f0a61ac03a4e300",
+      "count": 30
+    },
+    {
+      "role": "screens",
+      "path": "docs/p5/m01-audio-draft-20261011/records/screens-01.json",
+      "sha256": "6266771cfb68896f4a4c3ca3eedc993939a57fd906da78a9f397e93ce3e1d71a",
+      "count": 30
+    },
+    {
+      "role": "screens",
+      "path": "docs/p5/m01-audio-draft-20261011/records/screens-02.json",
+      "sha256": "58fea222730d0ec0193f6af9b9495283474e16d0681f21fbceffe5e1a988453d",
+      "count": 30
+    },
+    {
+      "role": "screens",
+      "path": "docs/p5/m01-audio-draft-20261011/records/screens-03.json",
+      "sha256": "c7d25bd6cce9259c51e1704b4dd80e719f2aea820830f924d1624ce5c79b3f05",
+      "count": 30
+    },
+    {
+      "role": "screens",
+      "path": "docs/p5/m01-audio-draft-20261011/records/screens-04.json",
+      "sha256": "ed6cf8f7f2e554882637a11f27d8bb7dd36b470f070df4282f6582474b55367a",
+      "count": 30
+    },
+    {
+      "role": "screens",
+      "path": "docs/p5/m01-audio-draft-20261011/records/screens-05.json",
+      "sha256": "a246bd11fe408d37bcd9b6b9c08a39c77d5021c5a041b40b8deffa3fad4be3ed",
+      "count": 30
+    },
+    {
+      "role": "screens",
+      "path": "docs/p5/m01-audio-draft-20261011/records/screens-06.json",
+      "sha256": "5eb2a040430b3b75706d1e17e34081b449e79816840a54c4c3b16ee61346bc35",
+      "count": 30
+    },
+    {
+      "role": "screens",
+      "path": "docs/p5/m01-audio-draft-20261011/records/screens-07.json",
+      "sha256": "723b30c718d0d81c4c64051024b5b9cba2b6f9c035206fdd7e286fdda1a13f17",
+      "count": 6
+    },
+    {
+      "role": "payload_files",
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-00.json",
+      "sha256": "896965558b4ff3f354e1789d37717e7fffa0fa48438ad2676f09cece0ea76bb0",
+      "count": 30
+    },
+    {
+      "role": "payload_files",
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-01.json",
+      "sha256": "9f73e6e2f560c0b0ae27b098f98f7653ed68adc06de97039d1c5c8f6755ca234",
+      "count": 30
+    },
+    {
+      "role": "payload_files",
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-02.json",
+      "sha256": "2e50893bddcadb4a832fb9d6c382f985381838b73954d065ef764ad688673a2b",
+      "count": 30
+    },
+    {
+      "role": "payload_files",
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-03.json",
+      "sha256": "d7908562f87f12b1e5c677ce147f846e155424014003776445bbcf8599e6be22",
+      "count": 30
+    },
+    {
+      "role": "payload_files",
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-04.json",
+      "sha256": "e750af70ee6595743510333f346f1bd6d60be068a8586a721cb780f3812b7e13",
+      "count": 30
+    },
+    {
+      "role": "payload_files",
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-05.json",
+      "sha256": "a90a57b9450e07f3d77839eec44ff5148ef22aa580506648beb9e74f6afa3cda",
+      "count": 30
+    },
+    {
+      "role": "payload_files",
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-06.json",
+      "sha256": "a6a749b38ea3b96562ffda2193a0ddd10e83fd886a0c36de9d4d9878b2021950",
+      "count": 30
+    },
+    {
+      "role": "payload_files",
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-07.json",
+      "sha256": "d736484a9a052b7ca06a6c06e93cd4a9527beef92a53ae7851078bd4c7c8aacf",
+      "count": 30
+    },
+    {
+      "role": "payload_files",
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-08.json",
+      "sha256": "8c382bcfcc833007ec0d497dbc3ea66e7f0c80f689bbfa8cd82e9503e2505fb8",
+      "count": 30
+    },
+    {
+      "role": "payload_files",
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-09.json",
+      "sha256": "43203ff67a8f81917f7a7db587b83c09bd632fa1f48b80812e8cc94f07a69dc6",
+      "count": 30
+    },
+    {
+      "role": "payload_files",
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-10.json",
+      "sha256": "3cf5b38f36d0140c6c4f88db1d595bcc6ca80092a309a6098f94bcc1f404845c",
+      "count": 30
+    },
+    {
+      "role": "payload_files",
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-11.json",
+      "sha256": "e487ec6cc312537d0efcec8c3438453edebb529bb15dbf4863047b90a650d501",
+      "count": 30
+    },
+    {
+      "role": "payload_files",
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-12.json",
+      "sha256": "c13222cbab2eb306bb8c3a106b2eb588fe513c1d211379bb033bb1a366db5010",
+      "count": 30
+    },
+    {
+      "role": "payload_files",
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-13.json",
+      "sha256": "41776bdc278ebef264a1b81de2378acee2be7b2d13c8251bbafb6a6792e80b01",
+      "count": 30
+    },
+    {
+      "role": "payload_files",
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-14.json",
+      "sha256": "c12f8a856a85217e669e3a73dd1f73b5ccb170fb3059bf7cd5057ecec7ba1599",
+      "count": 30
+    },
+    {
+      "role": "payload_files",
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-15.json",
+      "sha256": "b3149bf645df2f93872de22584fa528e469b2ce0877dce25c1018233f7c531b8",
+      "count": 30
+    },
+    {
+      "role": "payload_files",
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-16.json",
+      "sha256": "b4473ac8653a82d9d3e03c63937fc2e2977cc3c01935f857befc6b4d4b2fef9c",
+      "count": 30
+    },
+    {
+      "role": "payload_files",
+      "path": "docs/p5/m01-audio-draft-20261011/records/payload_files-17.json",
+      "sha256": "b9d9f056eafc6f1badc6f1d831682ec5c9767d6edc1981e185116ddcf9c8571c",
+      "count": 22
+    }
+  ],
+  "evidence": [
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/generation-initial.json",
+      "sha256": "725adfe93c407d5fe38d1a34f8c7319c82b6e0382a962a908554970c71b9db4e"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/generation-recovery.json",
+      "sha256": "21c1a04d4ad91309a5c3b01565112b208a7734688217d9411cd1647390b01a64"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/asr-main.json",
+      "sha256": "d99dc3623498185a72245ac90eab9724c2d5ac94a9df58a55e14742e8982e10e"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/asr-supplement.json",
+      "sha256": "36b2bbe995274113c7f6f4da7ab619c3ba658b06ea9a7b56c9eff4011b2e781f"
+    },
+    {
+      "path": "docs/p5/m01-audio-draft-20261011/journal-recovery.json",
+      "sha256": "c189c024c2fbddd43c2c3db9ed1432ef10c866547636a39adbb7086c6e110a81"
+    }
+  ],
+  "journal_recovery_script_path": "tools/p5/archive/export-m01-journal-20261011.txt",
+  "journal_recovery_script_sha256": "d187af121ff97a4293253dd31c8c2b1be2c8d7b44b5b740b78a35ab112c079ea",
+  "counts": {
+    "planned_scripts": 168,
+    "planned_turns": 201,
+    "planned_assets": 420,
+    "generated_unique_turns": 104,
+    "synthesis_attempt_records": 106,
+    "interrupted_initial_attempts": 2,
+    "infrastructure_replacement_attempts": 2,
+    "processing_journal_recovered_without_synthesis": 1,
+    "available_assets": 216,
+    "not_generated_assets": 204,
+    "asr_screened_assets": 216,
+    "asr_discrepancy_assets": 109,
+    "asr_word_edits": 138,
+    "asr_reference_words": 630,
+    "payload_wavs": 532
+  },
+  "technical_status": "PARTIAL_DEPENDENCY_BLOCK",
+  "quality_retries": 0,
+  "constraints": {
+    "paid_inference": false,
+    "learner_data": false,
+    "uploaded_real_voice_reference": false,
+    "runtime_provider": false,
+    "publication_ready": false,
+    "final_cast_approved": false,
+    "human_review": "PENDING",
+    "p5_milestone": "NOT_READY",
+    "p6_authorized": false
+  },
+  "network_incident": "Initial native telemetry attempt triggered automatic approval rejection. Subsequent inference uses kernel-enforced network denial plus disabled ONNX telemetry. No payload or successful prior egress assertion.",
+  "journal_limit": "Original aggregate journals are retained as observed; per-file byte checks, per-asset ASR records and explicit processing recovery determine completion. No retrospective completion timestamp.",
+  "artifact": {
+    "file_name": "Lingvessa_M01_Audio_Draft_2026-10-11_v2.zip",
+    "bytes": 22169837,
+    "sha256": "ba5467c06504160a6bf3f6b29433bc99d037eb68183e607d610a254ae95d45f0"
+  },
+  "ci_scope": "Metadata, source identities, hashes, timings, ASR bookkeeping and explicit open gates only. Audio ZIP bytes are externally retained and must be checked with --audio-root locally."
+}

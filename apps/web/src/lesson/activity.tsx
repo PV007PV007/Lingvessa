@@ -4,7 +4,7 @@ import { pinnedOrder } from '../../../../packages/lesson-engine/src/presentation
 import type { LearnerActivity } from '../../../../packages/activity-schemas/src/learner';
 import type { ActivityResponse } from '../../../../packages/lesson-engine/src/evaluator';
 
-export function ActivityRenderer({activity,disabled,onAnswer}:{activity:LearnerActivity;disabled:boolean;onAnswer:(response:ActivityResponse)=>void}) {
+export function ActivityRenderer({activity,disabled,onAnswer,onTranscript}:{activity:LearnerActivity;disabled:boolean;onAnswer:(response:ActivityResponse)=>void;onTranscript:()=>void}) {
   const [selected,setSelected]=useState<string[]>([]); const [text,setText]=useState(''); const [pairs,setPairs]=useState<Record<string,string>>({});
   const kind=activity.response_kind;const order=activity.runtime.presentation_order;
   const options=['single','set'].includes(kind)?pinnedOrder(activity.presentation.options??[],order,option=>option.id):[];
@@ -24,7 +24,7 @@ export function ActivityRenderer({activity,disabled,onAnswer}:{activity:LearnerA
     <h2 id="activity-prompt">{activity.presentation.prompt}</h2>
     {activity.presentation.stimulus&&<p>{activity.presentation.stimulus}</p>}
     {activity.presentation.segments?.map((segment,index)=><p key={index}><strong>{segment.speaker}: </strong>{segment.text}</p>)}
-    {activity.presentation.accessibility.transcript&&<details><summary lang="uk">Текст запису</summary><p>{activity.presentation.accessibility.transcript}</p></details>}
+    {activity.presentation.accessibility.transcript&&<details onToggle={event=>{if(event.currentTarget.open)onTranscript();}}><summary lang="uk">Текст запису</summary><p>{activity.presentation.accessibility.transcript}</p></details>}
     {steps.length>0&&<div><p aria-live="polite">{steps[step]}</p>{!scaffoldComplete&&<button type="button" disabled={disabled} lang="uk" onClick={()=>setStep(step+1)}>Наступний приклад</button>}</div>}
     <form onSubmit={event=>{event.preventDefault();if(ready&&scaffoldComplete)submit();}}>
       <fieldset disabled={disabled||!scaffoldComplete}><legend className="sr-only">Ваша відповідь</legend>

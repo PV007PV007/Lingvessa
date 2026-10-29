@@ -1,0 +1,207 @@
+{
+  "source_sha": "460aab052115f6fe168d180b4ac44369afaab09d",
+  "observed_at": "2026-10-18T04:23:12.499927+00:00",
+  "scope": "ASSISTANT_RENDER_INSPECTION_NOT_HUMAN_OR_RIGHTS_APPROVAL",
+  "records_rendered_and_inspected": 30,
+  "categories": {
+    "scenes": 6,
+    "avatars": 6,
+    "interaction_icons": 6,
+    "language_scoped_flags": 12
+  },
+  "source_tree_hashes_verified": true,
+  "source_files_modified": false,
+  "observations": [
+    "All 30 pinned SVG records rendered; no missing shapes or unreadable/corrupt image was observed at the inspected contact-sheet size.",
+    "Six avatars are visually distinct and consistent with their corresponding scene characters.",
+    "Twelve language-scoped flag records show the seven expected country geometries.",
+    "The morning scene has sun and long-shadow cues, but its stated low-sun cue needs semantic review.",
+    "The unclear icon depicts generic dialogue bubbles; its specific not-understood meaning needs semantic/accessibility review."
+  ],
+  "remaining": [
+    "Human semantic/accessibility QA and visual rights approval remain unasserted.",
+    "This assistant inspection is not a publication approval or OD-004/OD-006 closure."
+  ],
+  "records": [
+    {
+      "stable_code": "IMG_ENG_M01_CLUB_01",
+      "language": "en",
+      "path": "assets/specs/p5/generated/en/IMG_ENG_M01_CLUB_01.svg",
+      "sha256": "cfe41de78b373781cb1b1e41db2ae22ea55d2e218b7fbe1b6b853109eed0686a"
+    },
+    {
+      "stable_code": "IMG_ENG_M01_MORNING_01",
+      "language": "en",
+      "path": "assets/specs/p5/generated/en/IMG_ENG_M01_MORNING_01.svg",
+      "sha256": "9e00e545b054906930b0803af6bc5647e9d8672a6548e64906d11a28d8f2fb73"
+    },
+    {
+      "stable_code": "IMG_ENG_M01_EVENING_01",
+      "language": "en",
+      "path": "assets/specs/p5/generated/en/IMG_ENG_M01_EVENING_01.svg",
+      "sha256": "f00a4d6155023fdbdabd1b2bba3323ba5767305d1e56ad77b234ef7b49e81a47"
+    },
+    {
+      "stable_code": "IMG_CZE_M01_CLASS_01",
+      "language": "cs",
+      "path": "assets/specs/p5/generated/cs/IMG_CZE_M01_CLASS_01.svg",
+      "sha256": "28f5cc403583fa5f9d061849e65648ac4744e7afb6860d07565b344c2dc21268"
+    },
+    {
+      "stable_code": "IMG_CZE_M01_FORMAL_01",
+      "language": "cs",
+      "path": "assets/specs/p5/generated/cs/IMG_CZE_M01_FORMAL_01.svg",
+      "sha256": "8b6e0b586076cbd14aa2aa6a61ebd55f742ff6ea6e0d1f6a0c3ea5200662507f"
+    },
+    {
+      "stable_code": "IMG_CZE_M01_INFORMAL_01",
+      "language": "cs",
+      "path": "assets/specs/p5/generated/cs/IMG_CZE_M01_INFORMAL_01.svg",
+      "sha256": "0fc4a8b5a3d48df15c44440575289ecf51f3ecf96e30a20bcc946a9e72026513"
+    },
+    {
+      "stable_code": "AV_ENG_MAYA_01",
+      "language": "en",
+      "path": "assets/specs/p5/generated/en/AV_ENG_MAYA_01.svg",
+      "sha256": "61aea745e7c9849bb084929945844c64aa84d690c1a6f9ba3e7b8800cd501a2b"
+    },
+    {
+      "stable_code": "AV_ENG_DANIEL_01",
+      "language": "en",
+      "path": "assets/specs/p5/generated/en/AV_ENG_DANIEL_01.svg",
+      "sha256": "8a33e6c8834c4c6da60b9e321066ce665e22ee3160a2a2166f10a7708844a894"
+    },
+    {
+      "stable_code": "AV_ENG_TEACHER_01",
+      "language": "en",
+      "path": "assets/specs/p5/generated/en/AV_ENG_TEACHER_01.svg",
+      "sha256": "323bce3a1e9c1903cc9a55dcb819cab14c65f3a37b2ad0dd86f25fe902abdc72"
+    },
+    {
+      "stable_code": "AV_CZE_KLARA_01",
+      "language": "cs",
+      "path": "assets/specs/p5/generated/cs/AV_CZE_KLARA_01.svg",
+      "sha256": "5a485d67f1cebecb44ee2cc0e6568c4262f8f40fe7d4e2095182d5a4d415690e"
+    },
+    {
+      "stable_code": "AV_CZE_ADAM_01",
+      "language": "cs",
+      "path": "assets/specs/p5/generated/cs/AV_CZE_ADAM_01.svg",
+      "sha256": "470ed6590f243345dafa08f6d11de6feb0bbbb61c663bdea4c32106c24ada041"
+    },
+    {
+      "stable_code": "AV_CZE_OKSANA_01",
+      "language": "cs",
+      "path": "assets/specs/p5/generated/cs/AV_CZE_OKSANA_01.svg",
+      "sha256": "79b4a8428e7853c4a894215875b437d96cd4d8cae16ea15cb18fb3ddd7520e8d"
+    },
+    {
+      "stable_code": "VEC_EN_THANKS",
+      "language": "en",
+      "path": "assets/specs/p5/generated/en/VEC_EN_THANKS.svg",
+      "sha256": "6196b7054e9c4290b29b38a1c457347657a1c69a4412399a07b15aa461ee7412"
+    },
+    {
+      "stable_code": "VEC_EN_UNCLEAR",
+      "language": "en",
+      "path": "assets/specs/p5/generated/en/VEC_EN_UNCLEAR.svg",
+      "sha256": "769607e22a3c3e58c04bf50d14cb2db6e8e70c9fc10d9aef041309fd0cc9b8d0"
+    },
+    {
+      "stable_code": "VEC_EN_REPEAT",
+      "language": "en",
+      "path": "assets/specs/p5/generated/en/VEC_EN_REPEAT.svg",
+      "sha256": "e4c6ce60c20f605cdcdbf54f2726d65f284865be462bc705776e253540d5c237"
+    },
+    {
+      "stable_code": "VEC_CS_THANKS",
+      "language": "cs",
+      "path": "assets/specs/p5/generated/cs/VEC_CS_THANKS.svg",
+      "sha256": "6196b7054e9c4290b29b38a1c457347657a1c69a4412399a07b15aa461ee7412"
+    },
+    {
+      "stable_code": "VEC_CS_UNCLEAR",
+      "language": "cs",
+      "path": "assets/specs/p5/generated/cs/VEC_CS_UNCLEAR.svg",
+      "sha256": "769607e22a3c3e58c04bf50d14cb2db6e8e70c9fc10d9aef041309fd0cc9b8d0"
+    },
+    {
+      "stable_code": "VEC_CS_REPEAT",
+      "language": "cs",
+      "path": "assets/specs/p5/generated/cs/VEC_CS_REPEAT.svg",
+      "sha256": "e4c6ce60c20f605cdcdbf54f2726d65f284865be462bc705776e253540d5c237"
+    },
+    {
+      "stable_code": "VEC_FLAG_GB",
+      "language": "en",
+      "path": "assets/specs/p5/flags/normalized/gb.svg",
+      "sha256": "ef3219e288f562f38ffd2aa099f569565c2b56d3683be5f3bf83bba283ffe592"
+    },
+    {
+      "stable_code": "VEC_FLAG_UA",
+      "language": "en",
+      "path": "assets/specs/p5/flags/normalized/ua.svg",
+      "sha256": "a962f5271ea26ba9285a1079f05c4ec4d0d88e17022943b7409750ec67e0a842"
+    },
+    {
+      "stable_code": "VEC_FLAG_CZ",
+      "language": "en",
+      "path": "assets/specs/p5/flags/normalized/cz.svg",
+      "sha256": "8927e9936e484b3953fc2115c769be3a961a7d6d458ed8bb6a36e154523a1636"
+    },
+    {
+      "stable_code": "VEC_FLAG_PL",
+      "language": "en",
+      "path": "assets/specs/p5/flags/normalized/pl.svg",
+      "sha256": "d7ffe03be7d9c0f2944215e38398a6cbbd42bb4c3f29d87cb68f276aace379e3"
+    },
+    {
+      "stable_code": "VEC_FLAG_DE",
+      "language": "en",
+      "path": "assets/specs/p5/flags/normalized/de.svg",
+      "sha256": "4f3330fb3dad27b02c8a4cd23ccad457c0cfed51d26c3d3e8ef1371bc8abf427"
+    },
+    {
+      "stable_code": "VEC_FLAG_ES",
+      "language": "en",
+      "path": "assets/specs/p5/flags/normalized/es.svg",
+      "sha256": "524001ea6918d3e99dc374c04c1495c752a849217dd528cf2be3d608f37251e2"
+    },
+    {
+      "stable_code": "VEC_FLAG_CZ",
+      "language": "cs",
+      "path": "assets/specs/p5/flags/normalized/cz.svg",
+      "sha256": "8927e9936e484b3953fc2115c769be3a961a7d6d458ed8bb6a36e154523a1636"
+    },
+    {
+      "stable_code": "VEC_FLAG_UA",
+      "language": "cs",
+      "path": "assets/specs/p5/flags/normalized/ua.svg",
+      "sha256": "a962f5271ea26ba9285a1079f05c4ec4d0d88e17022943b7409750ec67e0a842"
+    },
+    {
+      "stable_code": "VEC_FLAG_PL",
+      "language": "cs",
+      "path": "assets/specs/p5/flags/normalized/pl.svg",
+      "sha256": "d7ffe03be7d9c0f2944215e38398a6cbbd42bb4c3f29d87cb68f276aace379e3"
+    },
+    {
+      "stable_code": "VEC_FLAG_DE",
+      "language": "cs",
+      "path": "assets/specs/p5/flags/normalized/de.svg",
+      "sha256": "4f3330fb3dad27b02c8a4cd23ccad457c0cfed51d26c3d3e8ef1371bc8abf427"
+    },
+    {
+      "stable_code": "VEC_FLAG_SK",
+      "language": "cs",
+      "path": "assets/specs/p5/flags/normalized/sk.svg",
+      "sha256": "5cc50fb7812ce9a17b02fdfb771392e9a8b20c6c07a6c730ddd8b023446b2c13"
+    },
+    {
+      "stable_code": "VEC_FLAG_ES",
+      "language": "cs",
+      "path": "assets/specs/p5/flags/normalized/es.svg",
+      "sha256": "524001ea6918d3e99dc374c04c1495c752a849217dd528cf2be3d608f37251e2"
+    }
+  ]
+}

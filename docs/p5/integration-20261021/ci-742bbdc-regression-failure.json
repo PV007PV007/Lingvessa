@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "tested_sha": "742bbdc235cfe677572d2244b23498dd3e1dd7ce",
+  "status": "FAILED_REGRESSION_NOT_ACCEPTANCE",
+  "observation_scope": "GITHUB_WORKFLOW_STEPS_AND_JOB_LOGS; full acceptance summary not generated",
+  "cause": {
+    "test": "tests/integration/p3-lesson-engine.test.ts",
+    "line": 69,
+    "actual_migrations": 8,
+    "stale_expected_migrations": 7,
+    "correction": "Update the one remaining spaced assertion to 8; do not relax the exact migration count"
+  },
+  "workflows": [
+    {
+      "id": 39622592986,
+      "name": "P2 data foundation",
+      "event": "pull_request",
+      "head_sha": "742bbdc235cfe677572d2244b23498dd3e1dd7ce",
+      "conclusion": "failure",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/39622592986"
+    },
+    {
+      "id": 39622592733,
+      "name": "P3 lesson engine",
+      "event": "pull_request",
+      "head_sha": "742bbdc235cfe677572d2244b23498dd3e1dd7ce",
+      "conclusion": "failure",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/39622592733"
+    },
+    {
+      "id": 39622592720,
+      "name": "P4 mastery and Review",
+      "event": "pull_request",
+      "head_sha": "742bbdc235cfe677572d2244b23498dd3e1dd7ce",
+      "conclusion": "failure",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/39622592720"
+    },
+    {
+      "id": 39622592997,
+      "name": "P1 foundation",
+      "event": "pull_request",
+      "head_sha": "742bbdc235cfe677572d2244b23498dd3e1dd7ce",
+      "conclusion": "failure",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/39622592997"
+    },
+    {
+      "id": 39622592926,
+      "name": "P5 media and speech",
+      "event": "pull_request",
+      "head_sha": "742bbdc235cfe677572d2244b23498dd3e1dd7ce",
+      "conclusion": "failure",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/39622592926"
+    },
+    {
+      "id": 39622583200,
+      "name": "P1 foundation",
+      "event": "push",
+      "head_sha": "742bbdc235cfe677572d2244b23498dd3e1dd7ce",
+      "conclusion": "failure",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/39622583200"
+    },
+    {
+      "id": 39622583049,
+      "name": "P5 media and speech",
+      "event": "push",
+      "head_sha": "742bbdc235cfe677572d2244b23498dd3e1dd7ce",
+      "conclusion": "failure",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/39622583049"
+    }
+  ],
+  "p5_runs": [
+    {
+      "run_id": 39622592926,
+      "job_id": 119299895977,
+      "real_m01_step": {
+        "name": "Verify actual M01 bytes, PostgreSQL import and S3 recovery",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 33
+      },
+      "regression_step": {
+        "name": "Run node --env-file=.local/runtime.env --import tsx --test tests/integration/*.test.ts",
+        "status": "completed",
+        "conclusion": "failure",
+        "number": 34
+      },
+      "acceptance_summary_step": {
+        "name": "Bind P5 runtime evidence to the exact source and retain open media gates",
+        "status": "completed",
+        "conclusion": "skipped",
+        "number": 38
+      }
+    },
+    {
+      "run_id": 39622583049,
+      "job_id": 119299815412,
+      "real_m01_step": {
+        "name": "Verify actual M01 bytes, PostgreSQL import and S3 recovery",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 33
+      },
+      "regression_step": {
+        "name": "Run node --env-file=.local/runtime.env --import tsx --test tests/integration/*.test.ts",
+        "status": "completed",
+        "conclusion": "failure",
+        "number": 34
+      },
+      "acceptance_summary_step": {
+        "name": "Bind P5 runtime evidence to the exact source and retain open media gates",
+        "status": "completed",
+        "conclusion": "skipped",
+        "number": 38
+      }
+    }
+  ],
+  "observed_pr_media_gates": "All 9 P5 media gates including P5-MEDIA-A11Y-001 PASS in job 119299895977; one P3 regression assertion failed. This is not whole-CI success.",
+  "last_fully_verified_sha": "d2ec78a5a5e61c1359a8e282abd47888bdd3f74d",
+  "new_revision_requires_all_gates": true,
+  "p5_milestone": "NOT_READY",
+  "p6_authorized": false
+}

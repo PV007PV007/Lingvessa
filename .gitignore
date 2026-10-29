@@ -14,3 +14,6 @@ prisma/generated/
 *.oci.tar
 # Ephemeral negative dependency fixtures; an interrupted test may leave one.
 packages/domain/src/negative-*.ts
+# Large reference bytes remain external under the approved S3-compatible architecture.
+assets/media/m01/en/*.wav
+assets/media/m01/cs/*.wav

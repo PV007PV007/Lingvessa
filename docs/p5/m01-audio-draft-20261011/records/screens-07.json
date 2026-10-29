@@ -1,0 +1,146 @@
+[
+  {
+    "asset_id": "fc594dba-afec-5e6f-a3cb-a75faa0933fe",
+    "audio_sha256": "950d5c396b2e246cf816dd0cf080c611e75f7086ec0f769c13225e5a43259a6a",
+    "status": "SCREENED",
+    "expected": "W",
+    "transcript": "W",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 0.64,
+        "text": " W",
+        "avg_logprob": -0.7007249593734741,
+        "no_speech_prob": 0.12250086665153503
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 1,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.7
+  },
+  {
+    "asset_id": "fdbd6f70-87dd-586a-93ec-0f4bb2cb2dc4",
+    "audio_sha256": "db8768e89000f5b2af332bab4788e9c11f96ae7d5b37b3c4e89f597efd599d16",
+    "status": "SCREENED",
+    "expected": "C",
+    "transcript": "See?",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 0.5,
+        "text": " See?",
+        "avg_logprob": -0.7509329795837403,
+        "no_speech_prob": 0.18260151147842407
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 1,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.647
+  },
+  {
+    "asset_id": "fe32df64-de79-5e81-8fc6-71732060850a",
+    "audio_sha256": "b6bec6812866ab484139a492d24380735192c84937192053026a9ee1a7b616d1",
+    "status": "SCREENED",
+    "expected": "Hello.",
+    "transcript": "Hello.",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 0.72,
+        "text": " Hello.",
+        "avg_logprob": -0.8161101341247559,
+        "no_speech_prob": 0.022093696519732475
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 1,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.628
+  },
+  {
+    "asset_id": "ffaf0c91-7960-5f75-b7d8-8769697ceca6",
+    "audio_sha256": "a612c359cf7f8ed03e3fe77654954ad234e59226e4d0a8a379684cbe9de8526a",
+    "status": "SCREENED",
+    "expected": "V",
+    "transcript": "Bye.",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 0.5,
+        "text": " Bye.",
+        "avg_logprob": -0.8212831497192383,
+        "no_speech_prob": 0.15028806030750275
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 1,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.638
+  },
+  {
+    "asset_id": "c7594b3c-99b9-500e-97e3-1df423e9efa3",
+    "audio_sha256": "531c807342abfd6666ff8dc19718bfdd9255a31a0b518d3e15a1c0fb4312defb",
+    "status": "SCREENED",
+    "expected": "Ahoj. Jak se jmenuješ?",
+    "transcript": "Ahoj, jak se jmenuješ?",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.4,
+        "text": " Ahoj, jak se jmenuješ?",
+        "avg_logprob": -0.3602003242288317,
+        "no_speech_prob": 0.05282663553953171
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 4,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.776
+  },
+  {
+    "asset_id": "d5f71afc-e22f-5515-a703-9793fdb4473c",
+    "audio_sha256": "1d155a3cfdd8454ad55ed0c5f97bbb50163d174c56bb29381fe4d97b792e9999",
+    "status": "SCREENED",
+    "expected": "Ahoj. Jak se jmenuješ?",
+    "transcript": "Ahoj, jak se jmenuješ?",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Ahoj, jak se jmenuješ?",
+        "avg_logprob": -0.22701307386159897,
+        "no_speech_prob": 0.07414283603429794
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 4,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.811
+  }
+]

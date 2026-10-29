@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "source_sha": null,
+  "working_tree_dirty": null,
+  "builder_sha256": "9bcb86a13020b6011329492a9c0315fbd6704f6f4baf04dcda5abb7ca470927c",
+  "template_sha256": "867c0b447304c711e88ab582b6477aef1326665226e52ea61fc23ccd3b1e26d1",
+  "human_review": "PENDING",
+  "publication_ready": false,
+  "p5_milestone": "NOT_READY",
+  "p6_authorized": false,
+  "scope": "FULL_M01_REVIEW_BYTES",
+  "counts": {
+    "slots": 420,
+    "pairs": 210,
+    "available": 216,
+    "missing": 204,
+    "flagged": 109
+  },
+  "dataset_sha256": "395cd8dc727afdd632a8d868aefcafcad9714b758dba8aa80bdd38b5f219a0ef",
+  "results_sha256": "f3b2bc74eb79e3396846bbcc0f7c17bf3bee711bae061b44728fd68ce4f889fe",
+  "m01_audio_bytes_verified": true,
+  "m01_wavs_verified": 216,
+  "html_file": "Lingvessa_M01_Listening_Review_2026-10-12.html",
+  "html_sha256": "31390589234c35c49ce52f56bcc6d8a9c78c2b84cf8392d7634fa70e9fba275e",
+  "embedded_wavs": 216,
+  "audio_archive_sha256": "ba5467c06504160a6bf3f6b29433bc99d037eb68183e607d610a254ae95d45f0"
+}

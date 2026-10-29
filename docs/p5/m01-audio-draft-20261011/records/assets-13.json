@@ -1,0 +1,702 @@
+[
+  {
+    "asset_id": "7f207eb5-937a-5892-89d4-a00d687723ca",
+    "stable_code": "AUD_CZE_M01_DIALOGUES_L04_FORMAL_TURN_06",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "6a449941-a5ea-522e-9fe4-4ddb9dcca5e1",
+    "script_hash": "98c28ba76afd8c181bc52acef0f7403d033ad24e70e3103354ed456d7505c0e3",
+    "transcript": "Mě také.",
+    "turn_ids": [
+      "c2df5141-295a-55a7-874a-bb16a90f4e64"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "c2df5141-295a-55a7-874a-bb16a90f4e64"
+    ]
+  },
+  {
+    "asset_id": "bd8b6147-fdb9-5473-9e80-bd2551c72648",
+    "stable_code": "AUD_CZE_M01_DIALOGUES_L04_FORMAL_TURN_06_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "7f207eb5-937a-5892-89d4-a00d687723ca",
+    "script_id": "6a449941-a5ea-522e-9fe4-4ddb9dcca5e1",
+    "script_hash": "98c28ba76afd8c181bc52acef0f7403d033ad24e70e3103354ed456d7505c0e3",
+    "transcript": "Mě také.",
+    "turn_ids": [
+      "c2df5141-295a-55a7-874a-bb16a90f4e64"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "c2df5141-295a-55a7-874a-bb16a90f4e64"
+    ]
+  },
+  {
+    "asset_id": "ab67408b-074a-5956-a90b-38c1d52908b0",
+    "stable_code": "AUD_CZE_M01_DIALOGUES_L04_INFORMAL",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "bec3e4d8-58d0-54ae-b25e-522331cd4c82",
+    "script_hash": "2f927d470ca92cbca872a071bb89564d250a6d4d5e7fc7c7dd26f579cdea98c5",
+    "transcript": "Ahoj. Jak se jmenuješ?\nAhoj. Jmenuji se Oksana.\nOdkud jsi?\nJsem z Ukrajiny. Odkud jsi?\nJsem z Česka. Těší mě.\nTaky mě těší.",
+    "turn_ids": [
+      "baddc4d1-1d8b-5ea2-977f-52ae59cfd385",
+      "213d1a1e-69d0-51c4-ac2c-9504403fd593",
+      "b6a30bc9-e055-5ba0-ba7c-8cff202d59d1",
+      "70bd5ce7-62b3-5533-acec-4ac681c06707",
+      "45edc579-9c5d-5ff0-ab55-5624ac30cdef",
+      "47acdd9e-8359-5fdc-9341-158c31efe365"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "213d1a1e-69d0-51c4-ac2c-9504403fd593",
+      "70bd5ce7-62b3-5533-acec-4ac681c06707",
+      "47acdd9e-8359-5fdc-9341-158c31efe365"
+    ]
+  },
+  {
+    "asset_id": "fa51fd78-8148-5d79-90d4-be124448efa2",
+    "stable_code": "AUD_CZE_M01_DIALOGUES_L04_INFORMAL_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "ab67408b-074a-5956-a90b-38c1d52908b0",
+    "script_id": "bec3e4d8-58d0-54ae-b25e-522331cd4c82",
+    "script_hash": "2f927d470ca92cbca872a071bb89564d250a6d4d5e7fc7c7dd26f579cdea98c5",
+    "transcript": "Ahoj. Jak se jmenuješ?\nAhoj. Jmenuji se Oksana.\nOdkud jsi?\nJsem z Ukrajiny. Odkud jsi?\nJsem z Česka. Těší mě.\nTaky mě těší.",
+    "turn_ids": [
+      "baddc4d1-1d8b-5ea2-977f-52ae59cfd385",
+      "213d1a1e-69d0-51c4-ac2c-9504403fd593",
+      "b6a30bc9-e055-5ba0-ba7c-8cff202d59d1",
+      "70bd5ce7-62b3-5533-acec-4ac681c06707",
+      "45edc579-9c5d-5ff0-ab55-5624ac30cdef",
+      "47acdd9e-8359-5fdc-9341-158c31efe365"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "213d1a1e-69d0-51c4-ac2c-9504403fd593",
+      "70bd5ce7-62b3-5533-acec-4ac681c06707",
+      "47acdd9e-8359-5fdc-9341-158c31efe365"
+    ]
+  },
+  {
+    "asset_id": "d5f71afc-e22f-5515-a703-9793fdb4473c",
+    "stable_code": "AUD_CZE_M01_DIALOGUES_L04_INFORMAL_TURN_01",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "bec3e4d8-58d0-54ae-b25e-522331cd4c82",
+    "script_hash": "b4e80b203cc104cb34f02743d4959f6afa481fb8a42af3d66e524739d4fb499b",
+    "transcript": "Ahoj. Jak se jmenuješ?",
+    "status": "GENERATED_UNREVIEWED",
+    "turn_ids": [
+      "baddc4d1-1d8b-5ea2-977f-52ae59cfd385"
+    ],
+    "path": "audio/cs/AUD_CZE_M01_DIALOGUES_L04_INFORMAL_TURN_01.wav",
+    "sha256": "1d155a3cfdd8454ad55ed0c5f97bbb50163d174c56bb29381fe4d97b792e9999",
+    "bytes": 102028,
+    "metrics": {
+      "frames": 50992,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 2.1246666666666667,
+      "peak_dbfs": -7.331395316629765,
+      "rms_dbfs": -22.000257289523383,
+      "clipped_samples": 0
+    },
+    "timing": [
+      {
+        "turn_id": "baddc4d1-1d8b-5ea2-977f-52ae59cfd385",
+        "voice_id": "2c796559-b5ed-5eac-899b-840254e953bf",
+        "character_id": "595521da-0ee4-51ca-b445-04d5705e6a48",
+        "candidate_id": "cs-A-jirka",
+        "text": "Ahoj. Jak se jmenuješ?",
+        "start_frame": 0,
+        "end_frame": 50992,
+        "start_ms": 0,
+        "end_ms": 2124.6666666666665,
+        "turn_sha256": "1d155a3cfdd8454ad55ed0c5f97bbb50163d174c56bb29381fe4d97b792e9999"
+      }
+    ],
+    "integrated_lufs": -22.1,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "c7594b3c-99b9-500e-97e3-1df423e9efa3",
+    "stable_code": "AUD_CZE_M01_DIALOGUES_L04_INFORMAL_TURN_01_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "d5f71afc-e22f-5515-a703-9793fdb4473c",
+    "script_id": "bec3e4d8-58d0-54ae-b25e-522331cd4c82",
+    "script_hash": "b4e80b203cc104cb34f02743d4959f6afa481fb8a42af3d66e524739d4fb499b",
+    "transcript": "Ahoj. Jak se jmenuješ?",
+    "status": "GENERATED_UNREVIEWED",
+    "turn_ids": [
+      "baddc4d1-1d8b-5ea2-977f-52ae59cfd385"
+    ],
+    "path": "audio/cs/AUD_CZE_M01_DIALOGUES_L04_INFORMAL_TURN_01_SLOW.wav",
+    "sha256": "531c807342abfd6666ff8dc19718bfdd9255a31a0b518d3e15a1c0fb4312defb",
+    "bytes": 126592,
+    "metrics": {
+      "frames": 63274,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 2.636416666666667,
+      "peak_dbfs": -7.341264945857943,
+      "rms_dbfs": -21.90899224339509,
+      "clipped_samples": 0
+    },
+    "timing": [
+      {
+        "turn_id": "baddc4d1-1d8b-5ea2-977f-52ae59cfd385",
+        "voice_id": "2c796559-b5ed-5eac-899b-840254e953bf",
+        "character_id": "595521da-0ee4-51ca-b445-04d5705e6a48",
+        "candidate_id": "cs-A-jirka",
+        "text": "Ahoj. Jak se jmenuješ?",
+        "start_frame": 0,
+        "end_frame": 63274,
+        "start_ms": 0,
+        "end_ms": 2636.4166666666665,
+        "turn_sha256": "afb2bde75e2a0837da034cfbf34a8afaeb0fb384b82c887f3aabc57bb5af8a17"
+      }
+    ],
+    "integrated_lufs": -21.8,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "dda70ffd-a268-5df6-984a-fb393ef685a7",
+    "stable_code": "AUD_CZE_M01_DIALOGUES_L04_INFORMAL_TURN_02",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "bec3e4d8-58d0-54ae-b25e-522331cd4c82",
+    "script_hash": "50c7cb64deaca8100c84c96ab1de67ae214ea47ba323084fe19dcecfcdea8384",
+    "transcript": "Ahoj. Jmenuji se Oksana.",
+    "turn_ids": [
+      "213d1a1e-69d0-51c4-ac2c-9504403fd593"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "213d1a1e-69d0-51c4-ac2c-9504403fd593"
+    ]
+  },
+  {
+    "asset_id": "be991c99-1bff-5944-8246-5602c5f51bb4",
+    "stable_code": "AUD_CZE_M01_DIALOGUES_L04_INFORMAL_TURN_02_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "dda70ffd-a268-5df6-984a-fb393ef685a7",
+    "script_id": "bec3e4d8-58d0-54ae-b25e-522331cd4c82",
+    "script_hash": "50c7cb64deaca8100c84c96ab1de67ae214ea47ba323084fe19dcecfcdea8384",
+    "transcript": "Ahoj. Jmenuji se Oksana.",
+    "turn_ids": [
+      "213d1a1e-69d0-51c4-ac2c-9504403fd593"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "213d1a1e-69d0-51c4-ac2c-9504403fd593"
+    ]
+  },
+  {
+    "asset_id": "4292974e-619a-5e4a-a67f-7302b923a140",
+    "stable_code": "AUD_CZE_M01_DIALOGUES_L04_INFORMAL_TURN_03",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "bec3e4d8-58d0-54ae-b25e-522331cd4c82",
+    "script_hash": "7943155186aa7261c582dc62c75cb5b19e76201fb8fcc680ffe084e15c8146b8",
+    "transcript": "Odkud jsi?",
+    "turn_ids": [
+      "b6a30bc9-e055-5ba0-ba7c-8cff202d59d1"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "b6a30bc9-e055-5ba0-ba7c-8cff202d59d1",
+        "voice_id": "2c796559-b5ed-5eac-899b-840254e953bf",
+        "character_id": "595521da-0ee4-51ca-b445-04d5705e6a48",
+        "candidate_id": "cs-A-jirka",
+        "text": "Odkud jsi?",
+        "start_frame": 0,
+        "end_frame": 27586,
+        "start_ms": 0.0,
+        "end_ms": 1149.4166666666667,
+        "turn_sha256": "ee25550da49e2451fc5d0fc2c3a5c7e0510a5da53892acec23616112f234a424"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_DIALOGUES_L04_INFORMAL_TURN_03.wav",
+    "sha256": "ee25550da49e2451fc5d0fc2c3a5c7e0510a5da53892acec23616112f234a424",
+    "bytes": 55216,
+    "metrics": {
+      "frames": 27586,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.1494166666666668,
+      "peak_dbfs": -5.09850798234984,
+      "rms_dbfs": -22.00026759242157,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -22.3,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "2abd182e-2343-58fa-bb3c-4b8e5a7ce825",
+    "stable_code": "AUD_CZE_M01_DIALOGUES_L04_INFORMAL_TURN_03_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "4292974e-619a-5e4a-a67f-7302b923a140",
+    "script_id": "bec3e4d8-58d0-54ae-b25e-522331cd4c82",
+    "script_hash": "7943155186aa7261c582dc62c75cb5b19e76201fb8fcc680ffe084e15c8146b8",
+    "transcript": "Odkud jsi?",
+    "turn_ids": [
+      "b6a30bc9-e055-5ba0-ba7c-8cff202d59d1"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "b6a30bc9-e055-5ba0-ba7c-8cff202d59d1",
+        "voice_id": "2c796559-b5ed-5eac-899b-840254e953bf",
+        "character_id": "595521da-0ee4-51ca-b445-04d5705e6a48",
+        "candidate_id": "cs-A-jirka",
+        "text": "Odkud jsi?",
+        "start_frame": 0,
+        "end_frame": 34216,
+        "start_ms": 0.0,
+        "end_ms": 1425.6666666666667,
+        "turn_sha256": "6eb2c46b62cb74b4357d5487a8e953dccc2c9287d3d5bb175621737e84b9154d"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_DIALOGUES_L04_INFORMAL_TURN_03_SLOW.wav",
+    "sha256": "7a3f889dc1f67b0e632061fa4288ab2beac493a702d4cf29e45b1d1dbd951126",
+    "bytes": 68476,
+    "metrics": {
+      "frames": 34216,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.4256666666666666,
+      "peak_dbfs": -5.185712593602067,
+      "rms_dbfs": -21.681838835214666,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -22.2,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "d464b575-a90f-54af-a6a1-36fa4655f8ae",
+    "stable_code": "AUD_CZE_M01_DIALOGUES_L04_INFORMAL_TURN_04",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "bec3e4d8-58d0-54ae-b25e-522331cd4c82",
+    "script_hash": "7a9bbd2ca655883a2583a2028e7400065891f399d7c693d69977abb1d126dee1",
+    "transcript": "Jsem z Ukrajiny. Odkud jsi?",
+    "turn_ids": [
+      "70bd5ce7-62b3-5533-acec-4ac681c06707"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "70bd5ce7-62b3-5533-acec-4ac681c06707"
+    ]
+  },
+  {
+    "asset_id": "bcc99cae-5f6f-5a81-8e62-f62031400ff5",
+    "stable_code": "AUD_CZE_M01_DIALOGUES_L04_INFORMAL_TURN_04_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "d464b575-a90f-54af-a6a1-36fa4655f8ae",
+    "script_id": "bec3e4d8-58d0-54ae-b25e-522331cd4c82",
+    "script_hash": "7a9bbd2ca655883a2583a2028e7400065891f399d7c693d69977abb1d126dee1",
+    "transcript": "Jsem z Ukrajiny. Odkud jsi?",
+    "turn_ids": [
+      "70bd5ce7-62b3-5533-acec-4ac681c06707"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "70bd5ce7-62b3-5533-acec-4ac681c06707"
+    ]
+  },
+  {
+    "asset_id": "344541e2-2ec4-5648-a82d-58917ee6bef8",
+    "stable_code": "AUD_CZE_M01_DIALOGUES_L04_INFORMAL_TURN_05",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "bec3e4d8-58d0-54ae-b25e-522331cd4c82",
+    "script_hash": "9e07f8fa0953453d8d8c45e8d4f8f2d2ff636a8c233c8df853641aea6df4ba14",
+    "transcript": "Jsem z Česka. Těší mě.",
+    "turn_ids": [
+      "45edc579-9c5d-5ff0-ab55-5624ac30cdef"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "45edc579-9c5d-5ff0-ab55-5624ac30cdef",
+        "voice_id": "2c796559-b5ed-5eac-899b-840254e953bf",
+        "character_id": "595521da-0ee4-51ca-b445-04d5705e6a48",
+        "candidate_id": "cs-A-jirka",
+        "text": "Jsem z Česka. Těší mě.",
+        "start_frame": 0,
+        "end_frame": 62137,
+        "start_ms": 0.0,
+        "end_ms": 2589.0416666666665,
+        "turn_sha256": "e1b2abf84c472d94adb09e499a3b10e88868cec6e841405df61d517f4f851776"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_DIALOGUES_L04_INFORMAL_TURN_05.wav",
+    "sha256": "e1b2abf84c472d94adb09e499a3b10e88868cec6e841405df61d517f4f851776",
+    "bytes": 124318,
+    "metrics": {
+      "frames": 62137,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 2.5890416666666667,
+      "peak_dbfs": -5.819891412483008,
+      "rms_dbfs": -22.00025754490403,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -21.5,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "8951330f-fa2a-537d-9697-d1f830ab7fef",
+    "stable_code": "AUD_CZE_M01_DIALOGUES_L04_INFORMAL_TURN_05_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "344541e2-2ec4-5648-a82d-58917ee6bef8",
+    "script_id": "bec3e4d8-58d0-54ae-b25e-522331cd4c82",
+    "script_hash": "9e07f8fa0953453d8d8c45e8d4f8f2d2ff636a8c233c8df853641aea6df4ba14",
+    "transcript": "Jsem z Česka. Těší mě.",
+    "turn_ids": [
+      "45edc579-9c5d-5ff0-ab55-5624ac30cdef"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "45edc579-9c5d-5ff0-ab55-5624ac30cdef",
+        "voice_id": "2c796559-b5ed-5eac-899b-840254e953bf",
+        "character_id": "595521da-0ee4-51ca-b445-04d5705e6a48",
+        "candidate_id": "cs-A-jirka",
+        "text": "Jsem z Česka. Těší mě.",
+        "start_frame": 0,
+        "end_frame": 77276,
+        "start_ms": 0.0,
+        "end_ms": 3219.8333333333335,
+        "turn_sha256": "f9b078d3071a2f845326e1bc1fd3bf1c08b06af3d4637775af55253f184db0e4"
+      }
+    ],
+    "path": "audio/cs/AUD_CZE_M01_DIALOGUES_L04_INFORMAL_TURN_05_SLOW.wav",
+    "sha256": "e56bb36bf6e81abd345c6f89e7ae7c5383e2463c241607c6824b48123fcbd18a",
+    "bytes": 154596,
+    "metrics": {
+      "frames": 77276,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 3.2198333333333333,
+      "peak_dbfs": -5.840637561088473,
+      "rms_dbfs": -21.81914107735772,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -21.4,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "b6d082fc-ce6c-58d3-a43f-641ab427877f",
+    "stable_code": "AUD_CZE_M01_DIALOGUES_L04_INFORMAL_TURN_06",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "bec3e4d8-58d0-54ae-b25e-522331cd4c82",
+    "script_hash": "108aa6c545a7f7d4c6e748500dec14d23e6ca0436e554e5a04f991a92af77286",
+    "transcript": "Taky mě těší.",
+    "turn_ids": [
+      "47acdd9e-8359-5fdc-9341-158c31efe365"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "47acdd9e-8359-5fdc-9341-158c31efe365"
+    ]
+  },
+  {
+    "asset_id": "4ff43873-8ee2-55be-ba4d-156518ea213e",
+    "stable_code": "AUD_CZE_M01_DIALOGUES_L04_INFORMAL_TURN_06_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "b6d082fc-ce6c-58d3-a43f-641ab427877f",
+    "script_id": "bec3e4d8-58d0-54ae-b25e-522331cd4c82",
+    "script_hash": "108aa6c545a7f7d4c6e748500dec14d23e6ca0436e554e5a04f991a92af77286",
+    "transcript": "Taky mě těší.",
+    "turn_ids": [
+      "47acdd9e-8359-5fdc-9341-158c31efe365"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "47acdd9e-8359-5fdc-9341-158c31efe365"
+    ]
+  },
+  {
+    "asset_id": "16f5c1c3-75e4-5374-878d-953cb1d94154",
+    "stable_code": "AUD_CZE_M01_DIALOGUES_R01_FIRST_CONTACT",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "71a081fe-7ba7-5fa4-b728-89087fe525cc",
+    "script_hash": "205ccee3c5f3484c702c6f3142e87675d5d0ac873b13ed9d13d11473eddb731b",
+    "transcript": "Dobrý den. Vy jste Oksana?\nDobrý den. Ano.\nOdkud jste?\nJsem z Ukrajiny.\nTěší mě.\nMě také. Na shledanou.",
+    "turn_ids": [
+      "e87be03b-9ab6-5dbf-8a17-7387090f9f9e",
+      "e2bff562-3b0c-5847-afa4-ec27f182c604",
+      "b49fa698-b185-5b92-a402-8c88c086122a",
+      "e24b86d3-d1da-5e33-94c3-ccf17b93cca4",
+      "348f64b4-abfb-5b27-bd9f-5f218b6a4455",
+      "e068e2b8-68c3-5d4d-9fc2-53e276eb7268"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "e87be03b-9ab6-5dbf-8a17-7387090f9f9e",
+      "e2bff562-3b0c-5847-afa4-ec27f182c604",
+      "b49fa698-b185-5b92-a402-8c88c086122a",
+      "e24b86d3-d1da-5e33-94c3-ccf17b93cca4",
+      "348f64b4-abfb-5b27-bd9f-5f218b6a4455",
+      "e068e2b8-68c3-5d4d-9fc2-53e276eb7268"
+    ]
+  },
+  {
+    "asset_id": "a84fa870-8fda-5c10-8908-97187a0c7c91",
+    "stable_code": "AUD_CZE_M01_DIALOGUES_R01_FIRST_CONTACT_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "16f5c1c3-75e4-5374-878d-953cb1d94154",
+    "script_id": "71a081fe-7ba7-5fa4-b728-89087fe525cc",
+    "script_hash": "205ccee3c5f3484c702c6f3142e87675d5d0ac873b13ed9d13d11473eddb731b",
+    "transcript": "Dobrý den. Vy jste Oksana?\nDobrý den. Ano.\nOdkud jste?\nJsem z Ukrajiny.\nTěší mě.\nMě také. Na shledanou.",
+    "turn_ids": [
+      "e87be03b-9ab6-5dbf-8a17-7387090f9f9e",
+      "e2bff562-3b0c-5847-afa4-ec27f182c604",
+      "b49fa698-b185-5b92-a402-8c88c086122a",
+      "e24b86d3-d1da-5e33-94c3-ccf17b93cca4",
+      "348f64b4-abfb-5b27-bd9f-5f218b6a4455",
+      "e068e2b8-68c3-5d4d-9fc2-53e276eb7268"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "e87be03b-9ab6-5dbf-8a17-7387090f9f9e",
+      "e2bff562-3b0c-5847-afa4-ec27f182c604",
+      "b49fa698-b185-5b92-a402-8c88c086122a",
+      "e24b86d3-d1da-5e33-94c3-ccf17b93cca4",
+      "348f64b4-abfb-5b27-bd9f-5f218b6a4455",
+      "e068e2b8-68c3-5d4d-9fc2-53e276eb7268"
+    ]
+  },
+  {
+    "asset_id": "70bff2f5-59dc-57c1-939c-fa616aeff771",
+    "stable_code": "AUD_CZE_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_01",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "71a081fe-7ba7-5fa4-b728-89087fe525cc",
+    "script_hash": "0faedd39d898a82a1a891002defd45148b23178325c1eeb611c027585090f400",
+    "transcript": "Dobrý den. Vy jste Oksana?",
+    "turn_ids": [
+      "e87be03b-9ab6-5dbf-8a17-7387090f9f9e"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "e87be03b-9ab6-5dbf-8a17-7387090f9f9e"
+    ]
+  },
+  {
+    "asset_id": "56ed4446-c40c-5b38-961f-ce3facd238d8",
+    "stable_code": "AUD_CZE_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_01_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "70bff2f5-59dc-57c1-939c-fa616aeff771",
+    "script_id": "71a081fe-7ba7-5fa4-b728-89087fe525cc",
+    "script_hash": "0faedd39d898a82a1a891002defd45148b23178325c1eeb611c027585090f400",
+    "transcript": "Dobrý den. Vy jste Oksana?",
+    "turn_ids": [
+      "e87be03b-9ab6-5dbf-8a17-7387090f9f9e"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "e87be03b-9ab6-5dbf-8a17-7387090f9f9e"
+    ]
+  },
+  {
+    "asset_id": "4f380cd9-427f-56cf-9430-1309ade77994",
+    "stable_code": "AUD_CZE_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_02",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "71a081fe-7ba7-5fa4-b728-89087fe525cc",
+    "script_hash": "17297862f0e3c1feedecef4323b1292d714fbb4bcf8f7cd197730a7bf0486077",
+    "transcript": "Dobrý den. Ano.",
+    "turn_ids": [
+      "e2bff562-3b0c-5847-afa4-ec27f182c604"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "e2bff562-3b0c-5847-afa4-ec27f182c604"
+    ]
+  },
+  {
+    "asset_id": "73cef992-d44c-5ea3-ab67-3facc861ea42",
+    "stable_code": "AUD_CZE_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_02_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "4f380cd9-427f-56cf-9430-1309ade77994",
+    "script_id": "71a081fe-7ba7-5fa4-b728-89087fe525cc",
+    "script_hash": "17297862f0e3c1feedecef4323b1292d714fbb4bcf8f7cd197730a7bf0486077",
+    "transcript": "Dobrý den. Ano.",
+    "turn_ids": [
+      "e2bff562-3b0c-5847-afa4-ec27f182c604"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "e2bff562-3b0c-5847-afa4-ec27f182c604"
+    ]
+  },
+  {
+    "asset_id": "881ece8d-a600-5000-a59d-95e37d047c5c",
+    "stable_code": "AUD_CZE_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_03",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "71a081fe-7ba7-5fa4-b728-89087fe525cc",
+    "script_hash": "1d48205657de11251f5d44ee8b86baaf1052ca1ace281f08612aa292bb1b20ba",
+    "transcript": "Odkud jste?",
+    "turn_ids": [
+      "b49fa698-b185-5b92-a402-8c88c086122a"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "b49fa698-b185-5b92-a402-8c88c086122a"
+    ]
+  },
+  {
+    "asset_id": "3aaec93d-9fb4-5a3e-9f38-0a804383ab59",
+    "stable_code": "AUD_CZE_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_03_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "881ece8d-a600-5000-a59d-95e37d047c5c",
+    "script_id": "71a081fe-7ba7-5fa4-b728-89087fe525cc",
+    "script_hash": "1d48205657de11251f5d44ee8b86baaf1052ca1ace281f08612aa292bb1b20ba",
+    "transcript": "Odkud jste?",
+    "turn_ids": [
+      "b49fa698-b185-5b92-a402-8c88c086122a"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "b49fa698-b185-5b92-a402-8c88c086122a"
+    ]
+  },
+  {
+    "asset_id": "f3027fce-c26b-585e-8400-b109fd3f6262",
+    "stable_code": "AUD_CZE_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_04",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "71a081fe-7ba7-5fa4-b728-89087fe525cc",
+    "script_hash": "3e238ea22af65cf1da82392ea6f45c5f61f24aafe64efd655005f928411d8ac4",
+    "transcript": "Jsem z Ukrajiny.",
+    "turn_ids": [
+      "e24b86d3-d1da-5e33-94c3-ccf17b93cca4"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "e24b86d3-d1da-5e33-94c3-ccf17b93cca4"
+    ]
+  },
+  {
+    "asset_id": "4b36fe5d-e577-5eef-a645-6e35d5127088",
+    "stable_code": "AUD_CZE_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_04_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "f3027fce-c26b-585e-8400-b109fd3f6262",
+    "script_id": "71a081fe-7ba7-5fa4-b728-89087fe525cc",
+    "script_hash": "3e238ea22af65cf1da82392ea6f45c5f61f24aafe64efd655005f928411d8ac4",
+    "transcript": "Jsem z Ukrajiny.",
+    "turn_ids": [
+      "e24b86d3-d1da-5e33-94c3-ccf17b93cca4"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "e24b86d3-d1da-5e33-94c3-ccf17b93cca4"
+    ]
+  },
+  {
+    "asset_id": "a1500c19-3a4b-5b11-aaa1-b357b33076f2",
+    "stable_code": "AUD_CZE_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_05",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "71a081fe-7ba7-5fa4-b728-89087fe525cc",
+    "script_hash": "141cade175ae57c48ca8875418c50652f14222378fd5e3febfc903869752208b",
+    "transcript": "Těší mě.",
+    "turn_ids": [
+      "348f64b4-abfb-5b27-bd9f-5f218b6a4455"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "348f64b4-abfb-5b27-bd9f-5f218b6a4455"
+    ]
+  },
+  {
+    "asset_id": "9e9d0ece-e968-57ee-afa9-bd2ec15a46c6",
+    "stable_code": "AUD_CZE_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_05_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "a1500c19-3a4b-5b11-aaa1-b357b33076f2",
+    "script_id": "71a081fe-7ba7-5fa4-b728-89087fe525cc",
+    "script_hash": "141cade175ae57c48ca8875418c50652f14222378fd5e3febfc903869752208b",
+    "transcript": "Těší mě.",
+    "turn_ids": [
+      "348f64b4-abfb-5b27-bd9f-5f218b6a4455"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "348f64b4-abfb-5b27-bd9f-5f218b6a4455"
+    ]
+  },
+  {
+    "asset_id": "207d4b49-7bae-5e60-9299-9bbc27d380ec",
+    "stable_code": "AUD_CZE_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_06",
+    "language": "cs",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "71a081fe-7ba7-5fa4-b728-89087fe525cc",
+    "script_hash": "9d9369aa94b4e33870772fc93ac837a716043f89758b44674447ab758c3efb50",
+    "transcript": "Mě také. Na shledanou.",
+    "turn_ids": [
+      "e068e2b8-68c3-5d4d-9fc2-53e276eb7268"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "e068e2b8-68c3-5d4d-9fc2-53e276eb7268"
+    ]
+  },
+  {
+    "asset_id": "c2f1eb5c-f8c0-58ef-ac49-e5cc7d4ece3f",
+    "stable_code": "AUD_CZE_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_06_SLOW",
+    "language": "cs",
+    "speed": "slow",
+    "normal_asset_id": "207d4b49-7bae-5e60-9299-9bbc27d380ec",
+    "script_id": "71a081fe-7ba7-5fa4-b728-89087fe525cc",
+    "script_hash": "9d9369aa94b4e33870772fc93ac837a716043f89758b44674447ab758c3efb50",
+    "transcript": "Mě také. Na shledanou.",
+    "turn_ids": [
+      "e068e2b8-68c3-5d4d-9fc2-53e276eb7268"
+    ],
+    "status": "NOT_GENERATED",
+    "missing_turn_ids": [
+      "e068e2b8-68c3-5d4d-9fc2-53e276eb7268"
+    ]
+  }
+]

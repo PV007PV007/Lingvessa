@@ -1,0 +1,350 @@
+{
+  "schema_version": 1,
+  "phase": "P5",
+  "batch": "pocket-20261009",
+  "technical_generation_status": "PASS",
+  "source_runtime_checkpoint": "81e6ddacb839abf2473630c889521442193d1d21",
+  "model_lock_sha256": "3e7f86e2acab73f4dd5d3c6852aa7eecd8c6d67d36a0988e301ae95fe102e64b",
+  "tooling_lock_sha256": "38115b90212de6668f440af1189ff2b4f5b936031a9f45099334e8e5b9ecf1fd",
+  "source_path": "assets/specs/p5/reference-media.source.json",
+  "source_sha256": "dbe4ca7b4787bd47e7b953e1162d0f03d60d3ced876a0f914fa11d3f398fde26",
+  "outputs": [
+    {
+      "candidate_id": "cs-B-pocket-A",
+      "language": "cs",
+      "source_script_ids": [
+        "6eea6f7d-ab89-581c-bd42-51df1719a4dd",
+        "ad627850-265e-5145-a071-6c0c5a36b45c",
+        "bdfea114-02b5-54e0-bf29-60f327d2da37",
+        "c5d8fa8b-e2d2-5954-bb52-96bee32070c0",
+        "a07e01b1-30e9-55e0-b466-3b73db8dfa09"
+      ],
+      "text": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "reference_path": "docs/p5/voice-audition/samples/en-A-p225-normal.wav",
+      "reference_sha256": "436906eb0ffb3af2ac9332910e3591934a2e8e5a5cbcc83625e1b1859f9e0695",
+      "reference_origin": "Synthetic Piper preset, not a reference-free designed voice or human upload",
+      "reference_candidate": "en-A-p225",
+      "generation_seconds": 4.0972248509999645,
+      "normal_pcm_gain": 0.9093004132276447,
+      "turns": [
+        {
+          "script_id": "6eea6f7d-ab89-581c-bd42-51df1719a4dd",
+          "text": "Dobrý den.",
+          "seed": 20261009,
+          "start_seconds": 0.0,
+          "end_seconds": 1.68,
+          "raw_path": "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-turn-1.wav",
+          "raw_sha256": "eaaff0c5da0fb3e3d5c2962a187df38d01c7dd40c82d9d0d96af71d02e63e5fa"
+        },
+        {
+          "script_id": "ad627850-265e-5145-a071-6c0c5a36b45c",
+          "text": "Jak se jmenujete?",
+          "seed": 20261010,
+          "start_seconds": 2.03,
+          "end_seconds": 3.79,
+          "raw_path": "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-turn-2.wav",
+          "raw_sha256": "f712947647e80888ebffa4f188b2df62e1bcb510eab5e64fcb190ab0eeb97d87"
+        },
+        {
+          "script_id": "bdfea114-02b5-54e0-bf29-60f327d2da37",
+          "text": "Těší mě.",
+          "seed": 20261011,
+          "start_seconds": 4.14,
+          "end_seconds": 5.5,
+          "raw_path": "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-turn-3.wav",
+          "raw_sha256": "53f82b49f2e8838aea18ee24408de6982138693ea9cf101ece1d09e102d2ef17"
+        },
+        {
+          "script_id": "c5d8fa8b-e2d2-5954-bb52-96bee32070c0",
+          "text": "Mluvím česky.",
+          "seed": 20261012,
+          "start_seconds": 5.85,
+          "end_seconds": 7.77,
+          "raw_path": "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-turn-4.wav",
+          "raw_sha256": "f43caa8c587ee990581ae098d7c24d2bf75ad155a34367392cc8cde3096b3bba"
+        },
+        {
+          "script_id": "a07e01b1-30e9-55e0-b466-3b73db8dfa09",
+          "text": "Děkuji.",
+          "seed": 20261013,
+          "start_seconds": 8.12,
+          "end_seconds": 9.72,
+          "raw_path": "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-turn-5.wav",
+          "raw_sha256": "72db541e703e6810f2b512ca7d7087577c49b4856d86b013e3f7181d3c51fda7"
+        }
+      ],
+      "pace": "normal",
+      "playback_rate": 1.0,
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-normal.wav",
+      "sha256": "20bb6cb04c136f68cab28c9e24f6fbce78118dce33ee1cb24c11a314e097271a",
+      "bytes": 466604,
+      "metrics": {
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "frames": 233280,
+        "duration_seconds": 9.72,
+        "peak_dbfs": -0.9155032481583973,
+        "rms_dbfs": -23.916100729202995,
+        "clipped_samples": 0
+      },
+      "slow_method": null
+    },
+    {
+      "candidate_id": "cs-B-pocket-A",
+      "language": "cs",
+      "source_script_ids": [
+        "6eea6f7d-ab89-581c-bd42-51df1719a4dd",
+        "ad627850-265e-5145-a071-6c0c5a36b45c",
+        "bdfea114-02b5-54e0-bf29-60f327d2da37",
+        "c5d8fa8b-e2d2-5954-bb52-96bee32070c0",
+        "a07e01b1-30e9-55e0-b466-3b73db8dfa09"
+      ],
+      "text": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "reference_path": "docs/p5/voice-audition/samples/en-A-p225-normal.wav",
+      "reference_sha256": "436906eb0ffb3af2ac9332910e3591934a2e8e5a5cbcc83625e1b1859f9e0695",
+      "reference_origin": "Synthetic Piper preset, not a reference-free designed voice or human upload",
+      "reference_candidate": "en-A-p225",
+      "generation_seconds": 4.0972248509999645,
+      "normal_pcm_gain": 0.9093004132276447,
+      "turns": [
+        {
+          "script_id": "6eea6f7d-ab89-581c-bd42-51df1719a4dd",
+          "text": "Dobrý den.",
+          "seed": 20261009,
+          "start_seconds": 0.0,
+          "end_seconds": 1.68,
+          "raw_path": "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-turn-1.wav",
+          "raw_sha256": "eaaff0c5da0fb3e3d5c2962a187df38d01c7dd40c82d9d0d96af71d02e63e5fa"
+        },
+        {
+          "script_id": "ad627850-265e-5145-a071-6c0c5a36b45c",
+          "text": "Jak se jmenujete?",
+          "seed": 20261010,
+          "start_seconds": 2.03,
+          "end_seconds": 3.79,
+          "raw_path": "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-turn-2.wav",
+          "raw_sha256": "f712947647e80888ebffa4f188b2df62e1bcb510eab5e64fcb190ab0eeb97d87"
+        },
+        {
+          "script_id": "bdfea114-02b5-54e0-bf29-60f327d2da37",
+          "text": "Těší mě.",
+          "seed": 20261011,
+          "start_seconds": 4.14,
+          "end_seconds": 5.5,
+          "raw_path": "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-turn-3.wav",
+          "raw_sha256": "53f82b49f2e8838aea18ee24408de6982138693ea9cf101ece1d09e102d2ef17"
+        },
+        {
+          "script_id": "c5d8fa8b-e2d2-5954-bb52-96bee32070c0",
+          "text": "Mluvím česky.",
+          "seed": 20261012,
+          "start_seconds": 5.85,
+          "end_seconds": 7.77,
+          "raw_path": "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-turn-4.wav",
+          "raw_sha256": "f43caa8c587ee990581ae098d7c24d2bf75ad155a34367392cc8cde3096b3bba"
+        },
+        {
+          "script_id": "a07e01b1-30e9-55e0-b466-3b73db8dfa09",
+          "text": "Děkuji.",
+          "seed": 20261013,
+          "start_seconds": 8.12,
+          "end_seconds": 9.72,
+          "raw_path": "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-turn-5.wav",
+          "raw_sha256": "72db541e703e6810f2b512ca7d7087577c49b4856d86b013e3f7181d3c51fda7"
+        }
+      ],
+      "pace": "slow",
+      "playback_rate": 0.8,
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-B-pocket-A-slow.wav",
+      "sha256": "2e1bf770ef5835688f974ba6df1fdc3d39a10c0fc6803855940b13dc57595133",
+      "bytes": 582324,
+      "metrics": {
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "frames": 291123,
+        "duration_seconds": 12.130125,
+        "peak_dbfs": -0.9160923416943867,
+        "rms_dbfs": -23.70125992758748,
+        "clipped_samples": 0
+      },
+      "slow_method": "ffmpeg atempo=0.8; tempo change, no pitch-shift voice substitution"
+    },
+    {
+      "candidate_id": "cs-C-pocket-C",
+      "language": "cs",
+      "source_script_ids": [
+        "6eea6f7d-ab89-581c-bd42-51df1719a4dd",
+        "ad627850-265e-5145-a071-6c0c5a36b45c",
+        "bdfea114-02b5-54e0-bf29-60f327d2da37",
+        "c5d8fa8b-e2d2-5954-bb52-96bee32070c0",
+        "a07e01b1-30e9-55e0-b466-3b73db8dfa09"
+      ],
+      "text": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "reference_path": "docs/p5/voice-audition/samples/en-C-p228-normal.wav",
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8",
+      "reference_origin": "Synthetic Piper preset, not a reference-free designed voice or human upload",
+      "reference_candidate": "en-C-p228",
+      "generation_seconds": 4.070909078,
+      "normal_pcm_gain": 0.8170249901142077,
+      "turns": [
+        {
+          "script_id": "6eea6f7d-ab89-581c-bd42-51df1719a4dd",
+          "text": "Dobrý den.",
+          "seed": 20261109,
+          "start_seconds": 0.0,
+          "end_seconds": 1.52,
+          "raw_path": "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-turn-1.wav",
+          "raw_sha256": "300a36b75893d32961f36c16c6654e873e292780007de750a7765e2ba3699745"
+        },
+        {
+          "script_id": "ad627850-265e-5145-a071-6c0c5a36b45c",
+          "text": "Jak se jmenujete?",
+          "seed": 20261110,
+          "start_seconds": 1.87,
+          "end_seconds": 3.71,
+          "raw_path": "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-turn-2.wav",
+          "raw_sha256": "3960f6cc5c0de642ff66b2cc190043dd2ac5d0d409f07eeb9e4b48c54058f4d3"
+        },
+        {
+          "script_id": "bdfea114-02b5-54e0-bf29-60f327d2da37",
+          "text": "Těší mě.",
+          "seed": 20261111,
+          "start_seconds": 4.06,
+          "end_seconds": 5.5,
+          "raw_path": "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-turn-3.wav",
+          "raw_sha256": "8cdfebd26c4e254fdd1b185f63446ef57cc78f4ff0bd1ba427955199a6059d9f"
+        },
+        {
+          "script_id": "c5d8fa8b-e2d2-5954-bb52-96bee32070c0",
+          "text": "Mluvím česky.",
+          "seed": 20261112,
+          "start_seconds": 5.85,
+          "end_seconds": 7.53,
+          "raw_path": "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-turn-4.wav",
+          "raw_sha256": "9f0928fb80464d825b72677fad97debc73deac3c27c895068a1e75dd43b7fb7c"
+        },
+        {
+          "script_id": "a07e01b1-30e9-55e0-b466-3b73db8dfa09",
+          "text": "Děkuji.",
+          "seed": 20261113,
+          "start_seconds": 7.88,
+          "end_seconds": 9.4,
+          "raw_path": "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-turn-5.wav",
+          "raw_sha256": "a9b66723d89743769afc6f8ea088a77ebd173ca4360c767ac29a98986e61ff9a"
+        }
+      ],
+      "pace": "normal",
+      "playback_rate": 1.0,
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-normal.wav",
+      "sha256": "bb9efbb0529e244b204b39ed22e5b29ab790e37de3392cac62a1dd68bb62c70e",
+      "bytes": 451244,
+      "metrics": {
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "frames": 225600,
+        "duration_seconds": 9.4,
+        "peak_dbfs": -0.9155032481583973,
+        "rms_dbfs": -20.437599336763252,
+        "clipped_samples": 0
+      },
+      "slow_method": null
+    },
+    {
+      "candidate_id": "cs-C-pocket-C",
+      "language": "cs",
+      "source_script_ids": [
+        "6eea6f7d-ab89-581c-bd42-51df1719a4dd",
+        "ad627850-265e-5145-a071-6c0c5a36b45c",
+        "bdfea114-02b5-54e0-bf29-60f327d2da37",
+        "c5d8fa8b-e2d2-5954-bb52-96bee32070c0",
+        "a07e01b1-30e9-55e0-b466-3b73db8dfa09"
+      ],
+      "text": "Dobrý den. Jak se jmenujete? Těší mě. Mluvím česky. Děkuji.",
+      "reference_path": "docs/p5/voice-audition/samples/en-C-p228-normal.wav",
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8",
+      "reference_origin": "Synthetic Piper preset, not a reference-free designed voice or human upload",
+      "reference_candidate": "en-C-p228",
+      "generation_seconds": 4.070909078,
+      "normal_pcm_gain": 0.8170249901142077,
+      "turns": [
+        {
+          "script_id": "6eea6f7d-ab89-581c-bd42-51df1719a4dd",
+          "text": "Dobrý den.",
+          "seed": 20261109,
+          "start_seconds": 0.0,
+          "end_seconds": 1.52,
+          "raw_path": "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-turn-1.wav",
+          "raw_sha256": "300a36b75893d32961f36c16c6654e873e292780007de750a7765e2ba3699745"
+        },
+        {
+          "script_id": "ad627850-265e-5145-a071-6c0c5a36b45c",
+          "text": "Jak se jmenujete?",
+          "seed": 20261110,
+          "start_seconds": 1.87,
+          "end_seconds": 3.71,
+          "raw_path": "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-turn-2.wav",
+          "raw_sha256": "3960f6cc5c0de642ff66b2cc190043dd2ac5d0d409f07eeb9e4b48c54058f4d3"
+        },
+        {
+          "script_id": "bdfea114-02b5-54e0-bf29-60f327d2da37",
+          "text": "Těší mě.",
+          "seed": 20261111,
+          "start_seconds": 4.06,
+          "end_seconds": 5.5,
+          "raw_path": "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-turn-3.wav",
+          "raw_sha256": "8cdfebd26c4e254fdd1b185f63446ef57cc78f4ff0bd1ba427955199a6059d9f"
+        },
+        {
+          "script_id": "c5d8fa8b-e2d2-5954-bb52-96bee32070c0",
+          "text": "Mluvím česky.",
+          "seed": 20261112,
+          "start_seconds": 5.85,
+          "end_seconds": 7.53,
+          "raw_path": "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-turn-4.wav",
+          "raw_sha256": "9f0928fb80464d825b72677fad97debc73deac3c27c895068a1e75dd43b7fb7c"
+        },
+        {
+          "script_id": "a07e01b1-30e9-55e0-b466-3b73db8dfa09",
+          "text": "Děkuji.",
+          "seed": 20261113,
+          "start_seconds": 7.88,
+          "end_seconds": 9.4,
+          "raw_path": "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-turn-5.wav",
+          "raw_sha256": "a9b66723d89743769afc6f8ea088a77ebd173ca4360c767ac29a98986e61ff9a"
+        }
+      ],
+      "pace": "slow",
+      "playback_rate": 0.8,
+      "path": "docs/p5/voice-audition/pocket-20261009/samples/cs-C-pocket-C-slow.wav",
+      "sha256": "60e4435cfceb5d515309d1d1f681560d825f409f6d5743be223c50354a0163bb",
+      "bytes": 563346,
+      "metrics": {
+        "sample_rate": 24000,
+        "channels": 1,
+        "sample_width": 2,
+        "frames": 281634,
+        "duration_seconds": 11.73475,
+        "peak_dbfs": -0.9823249365475256,
+        "rms_dbfs": -20.202024107557065,
+        "clipped_samples": 0
+      },
+      "slow_method": "ffmpeg atempo=0.8; tempo change, no pitch-shift voice substitution"
+    }
+  ],
+  "python": "3.12.14",
+  "elapsed_seconds": 9.793669581000017,
+  "peak_rss_kib": 1256672,
+  "network_guard": "Python connect/DNS rejected during model load and synthesis; local paths only",
+  "paid_inference_calls": 0,
+  "learner_data_used": false,
+  "uploaded_person_reference": false,
+  "runtime_integration": false,
+  "publication_ready": false,
+  "final_cast_approved": false,
+  "human_listening_review": "PENDING",
+  "p5_milestone": "NOT_READY",
+  "p6_authorized": false
+}

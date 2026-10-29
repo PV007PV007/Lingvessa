@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "phase": "P5",
+  "scope": "M01_AUDIO_QUALITY_CAST_AND_RIGHTS",
+  "status": "OWNER_APPROVED",
+  "owner_instruction": "Затверджено",
+  "owner_message_at": "2026-10-14T13:12:30+03:00",
+  "decision_basis": "Direct owner statement in response to the completed audio delivery and pending linguistic/cast/rights decisions.",
+  "approved_source_sha": "e213a3f0a6c9f89fae955c8f48a8931ecb447e62",
+  "approved_source_tree": "3e179eed84d5f914a81bb1f50913b013a302737f",
+  "approved_batch": "docs/p5/m01-completion-20261014",
+  "results_sha256": "c8be45adc7cd2d104cb2d20ac21c79eeeb9af4102c5f416197346c40f24d5708",
+  "dataset_sha256": "81b074a4c29dfa5a055aebadb43dfd6c37b48ba0e176fdc79f532e92323d1cdf",
+  "approved_final_audio_files": 420,
+  "languages": {
+    "en": 210,
+    "cs": 210
+  },
+  "decisions": {
+    "linguistic_quality": "OWNER_APPROVED",
+    "final_voice_cast": "OWNER_APPROVED",
+    "audio_rights": "OWNER_APPROVED"
+  },
+  "voice_cast": {
+    "en": [
+      "Maya",
+      "Daniel",
+      "Alex"
+    ],
+    "cs": [
+      "Klára",
+      "Adam",
+      "Oksana"
+    ]
+  },
+  "approved_deliverables": [
+    {
+      "filename": "Lingvessa_M01_Complete_Audio_Draft_2026-10-14.zip",
+      "bytes": 63346796,
+      "sha256": "3edaeaaeb000479921a0b3ff5ec2b52042faeee54bf943eff25e4a4a0f4e516d",
+      "library_file_id": "libfile_e230fa6f0f10819187557401ca1b4096",
+      "version": 0
+    },
+    {
+      "filename": "Lingvessa_M01_Complete_Listening_Review_2026-10-14.html",
+      "bytes": 48097819,
+      "sha256": "664379c15b861ca9801f0cb61fbfdd611ab78e6baefbb2c5636c707ff0538e4f",
+      "library_file_id": "libfile_e118bf022888819183ab558979d5435a",
+      "version": 0
+    }
+  ],
+  "approval_method": "DIRECT_OWNER_STATEMENT",
+  "retained_diagnostics": {
+    "new_asr_discrepancy_files": 134,
+    "total_asr_discrepancy_files": 243,
+    "small_dialogue_word_edits": 67,
+    "medium_dialogue_word_edits": 26,
+    "dialogue_reference_words": 160
+  },
+  "remaining_p5_conditions": [
+    "Integrate approved M01 audio and remaining visual assets with the publication registry and actual media delivery profile (OD-004).",
+    "Complete real-provider speech calibration and versioned target-feature policy (OD-006).",
+    "Verify remaining applicable compound P5 technical requirements against actual implementation."
+  ],
+  "p5_milestone": "IN_PROGRESS_TECHNICAL_EXIT_GATES_REMAIN",
+  "p6_authorized": false
+}

@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "batch": "m01-audio-draft-20261011",
+  "planned_at_utc": "2026-10-11T20:04:22.841972+00:00",
+  "source_remote_sha": "411493f095345bee3d018556c8c25f8b5698a4dc",
+  "source_remote_tree": "7194729547f5fea81de1c39c6b2b73aeb1d49b3c",
+  "scope": "Unpublished M01 working audio draft; no runtime provider or production registry changes",
+  "authorization": {
+    "user_text": "обирай на власний розсуд і продовжуй",
+    "user_time": "2026-10-11T13:08:18+03:00",
+    "continued_at": "2026-10-11T22:59:22+03:00",
+    "decision": "Working cast selected under owner delegation; generation of unpublished project-authored M01 audio",
+    "human_listening_claimed": false
+  },
+  "recovery": {
+    "earlier_uncommitted_plan_sha256": "522a36297b74e78290cb77276e9c1baaeec39a494e3feaf4a9ddb9ebb9614e67",
+    "earlier_plan_bytes_available": false,
+    "description": "Temporary prior checkout was removed before synthesis. This is a reconstructed pre-generation plan, not a byte-identical restoration. No prior M01 generated audio was found or claimed."
+  },
+  "inputs": {
+    "assets/specs/p5/reference-media.source.json": "dbe4ca7b4787bd47e7b953e1162d0f03d60d3ced876a0f914fa11d3f398fde26",
+    "assets/specs/p5/reference-media.registry.json": "40d8382eb29eb758c0464bf504b2f6423bca71e4680f4ca747c81a8398cbe4b7",
+    "docs/p5/voice-audition/models.lock.json": "4680ac648c82b2bae37b0ace2c91bbe3b2801515201975a3e8d2a220fd84cd01",
+    "docs/p5/voice-audition/tooling-lock.json": "bcf30387de7bb12a86c58b9dad69ebd6444c64b379876937790ae7cb7486d81b",
+    "docs/p5/voice-audition/pocket-20261009/models.lock.json": "3e7f86e2acab73f4dd5d3c6852aa7eecd8c6d67d36a0988e301ae95fe102e64b",
+    "docs/p5/voice-audition/pocket-20261009/tooling-lock.json": "38115b90212de6668f440af1189ff2b4f5b936031a9f45099334e8e5b9ecf1fd",
+    "docs/p5/voice-audition/pocket-20261009/asr-model.lock.json": "1bbd523bbd0bb58beccc990593fb9a0ff50202ef82987ed517b2669d1018923f"
+  },
+  "cast": [
+    {
+      "name": "Maya",
+      "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+      "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+      "voice_code": "AUD_ENG_VOICE_F01",
+      "language": "en",
+      "candidate_id": "en-A-p225",
+      "engine": "piper",
+      "model": "en-vctk",
+      "speaker_id": 107,
+      "speaker_name": "p225"
+    },
+    {
+      "name": "Daniel",
+      "character_id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+      "voice_id": "876c0431-a28a-531c-87c9-c7792f7c353d",
+      "voice_code": "AUD_ENG_VOICE_M01",
+      "language": "en",
+      "candidate_id": "en-B-p226",
+      "engine": "piper",
+      "model": "en-vctk",
+      "speaker_id": 95,
+      "speaker_name": "p226"
+    },
+    {
+      "name": "Alex",
+      "character_id": "c66aa126-37ef-5587-a2ed-49363ded1f55",
+      "voice_id": "54f40978-e547-5905-9a7f-a65a0019285b",
+      "voice_code": "AUD_ENG_VOICE_F02",
+      "language": "en",
+      "candidate_id": "en-C-p228",
+      "engine": "piper",
+      "model": "en-vctk",
+      "speaker_id": 90,
+      "speaker_name": "p228"
+    },
+    {
+      "name": "Klára",
+      "character_id": "074d3cc2-e358-5ef4-b8a8-fb63106343cd",
+      "voice_id": "e413f3ba-049d-5df5-a07f-ba8800dff515",
+      "voice_code": "AUD_CZE_VOICE_F01",
+      "language": "cs",
+      "candidate_id": "cs-C-pocket-C",
+      "engine": "pocket",
+      "model": "pocket-czech",
+      "speaker_id": null,
+      "speaker_name": null,
+      "reference_path": "docs/p5/voice-audition/samples/en-C-p228-normal.wav",
+      "reference_sha256": "ede723be4781c8113e281ec785c5047d3f1cc4207916cc42c311ef6edde9cbc8"
+    },
+    {
+      "name": "Adam",
+      "character_id": "595521da-0ee4-51ca-b445-04d5705e6a48",
+      "voice_id": "2c796559-b5ed-5eac-899b-840254e953bf",
+      "voice_code": "AUD_CZE_VOICE_M01",
+      "language": "cs",
+      "candidate_id": "cs-A-jirka",
+      "engine": "piper",
+      "model": "cs-jirka",
+      "speaker_id": 0,
+      "speaker_name": null
+    },
+    {
+      "name": "Oksana",
+      "character_id": "a029d7cb-8f04-5509-8851-20f8bc474292",
+      "voice_id": "64b3a5a4-0319-5946-9d1f-556abe7b1eae",
+      "voice_code": "AUD_CZE_VOICE_F02",
+      "language": "cs",
+      "candidate_id": "cs-B-pocket-A",
+      "engine": "pocket",
+      "model": "pocket-czech",
+      "speaker_id": null,
+      "speaker_name": null,
+      "reference_path": "docs/p5/voice-audition/samples/en-A-p225-normal.wav",
+      "reference_sha256": "436906eb0ffb3af2ac9332910e3591934a2e8e5a5cbcc83625e1b1859f9e0695"
+    }
+  ],
+  "text_policy": "NFC authored text with original capitalization; no lowercase rule because held-out improvement criterion was not met",
+  "choice_reason": "C for Klara has fewer initial blind-ASR discrepancies than B; not human pronunciation approval. Other working candidates preserve the previously auditioned six identities.",
+  "generation": {
+    "seed_formula": "(20261011 + int(turn_id[:8], 16)) % 2147483647",
+    "attempts_per_turn": 1,
+    "retries": 0,
+    "expected_unique_turns": 201,
+    "expected_final_assets": 420,
+    "maximum_turn_seconds": 45,
+    "piper": {
+      "length_scale": 1.0,
+      "noise_scale": 0.667,
+      "noise_w_scale": 0.8,
+      "volume": 0.8,
+      "normalize_audio": true,
+      "cpu_threads": 2
+    },
+    "pocket": {
+      "temperature": 0.3,
+      "sampler_decode_steps": 1,
+      "eos_threshold": -4.0,
+      "noise_clamp": null,
+      "max_tokens": 50,
+      "capitalize_first_letter": true,
+      "copy_state": true,
+      "torch_threads": 2,
+      "torch_interop_threads": 1
+    }
+  },
+  "processing": {
+    "sample_rate": 24000,
+    "channels": 1,
+    "format": "PCM16",
+    "rms_target_dbfs": -22.0,
+    "peak_ceiling": 0.89,
+    "normal_gap_frames": 8400,
+    "slow_gap_frames": 10500,
+    "slow_filter": "atempo=0.8",
+    "trim": false
+  },
+  "asr": {
+    "engine": "faster-whisper-small",
+    "device": "cpu",
+    "compute_type": "int8",
+    "cpu_threads": 2,
+    "beam_size": 5,
+    "temperature": 0,
+    "vad_filter": false,
+    "condition_on_previous_text": false,
+    "initial_prompt": null,
+    "language": "asset language, explicitly en or cs",
+    "purpose": "Blind transcript discrepancy screen; not human pronunciation quality",
+    "word_policy": "NFC lowercase word tokens; punctuation ignored; diacritics retained"
+  },
+  "constraints": {
+    "paid_inference": false,
+    "learner_data": false,
+    "uploaded_real_voice_reference": false,
+    "runtime_provider": false,
+    "publication_ready": false,
+    "final_cast_approved": false,
+    "human_review": "PENDING",
+    "p5_milestone": "NOT_READY",
+    "p6_authorized": false
+  }
+}

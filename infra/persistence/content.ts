@@ -5,9 +5,11 @@ import { validateContent, validatorVersion } from '../../packages/activity-schem
 import type { ContentPayload } from '../../packages/activity-schemas/src/content.js';
 import type { ContentLookup } from '../../packages/application/src/content.js';
 import { transaction } from './database.js';
+import type { AssetStore } from '../../packages/application/src/media.js';
+import { preflightMedia, preflightMediaRequirements } from './media.js';
 
 export class ContentRepository implements ContentLookup {
-  constructor(private readonly pool: pg.Pool) {}
+  constructor(private readonly pool: pg.Pool, private readonly assetStore?: AssetStore) {}
   async resolve(languageId: string, stableCode: string, versionCode: string) {
     const result = await this.pool.query<{ entity_id: string; content_version_id: string }>(
       `SELECT e.id AS entity_id, v.id AS content_version_id FROM content_entities e
@@ -39,6 +41,13 @@ export class ContentRepository implements ContentLookup {
       await db.query('DELETE FROM content_version_refs WHERE source_version_id=$1', [payload.content_version_id]);
       for (const ref of payload.refs) await db.query(`INSERT INTO content_version_refs(source_version_id,language_id,target_entity_id,target_version_id,relation)
         VALUES($1,$2,$3,$4,$5)`, [payload.content_version_id, languageId, ref.entity_id, ref.content_version_id, ref.relation]);
+      await db.query('DELETE FROM content_media_bindings WHERE content_version_id=$1',[payload.content_version_id]);
+      for(const activity of payload.activities??[]) for(const ref of activity.media_refs) {
+        const asset=(await db.query('SELECT stable_code FROM assets WHERE id=$1 AND language_id=$2',[ref.asset_id,languageId])).rows[0];
+        if(!asset||asset.stable_code!==ref.asset_stable_code)throw new ContractError('INVALID_INPUT','Asset UUID/stable code/language mismatch');
+        await db.query(`INSERT INTO content_media_bindings(content_version_id,item_id,language_id,asset_id,asset_version,role)
+          VALUES($1,$2,$3,$4,$5,$6)`,[payload.content_version_id,activity.id,languageId,ref.asset_id,ref.asset_version,ref.role]);
+      }
       await db.query(`INSERT INTO audit_events(actor_id,action,target_id) VALUES($1,'content.draft_saved',$2)`, [actorId, payload.content_version_id]);
       return (await db.query('SELECT id,checksum,revision FROM content_versions WHERE id=$1', [payload.content_version_id])).rows[0] as { id: string; checksum: string; revision: number };
     });
@@ -50,13 +59,14 @@ export class ContentRepository implements ContentLookup {
       if (!version) throw new ContractError('NOT_FOUND', 'Content version not found');
       const payload = validateContent(version.payload);
       await this.validateReferences(db, payload, version.language_id as string);
-      const report = { schema: 'PASS', references: 'PASS', language: 'PASS', skill_facet: 'PASS', scope: 'P2 data validation; human/media/accessibility approvals remain separate' };
+      const report = { schema: 'PASS', references: 'PASS', language: 'PASS', skill_facet: 'PASS', media: 'PASS', scope: 'Schema/reference/media-byte preflight; human content approvals remain separate' };
       await db.query(`INSERT INTO content_validations(id,content_version_id,target_checksum,target_revision,validator_version,passed,report)
         VALUES($1,$2,$3,$4,$5,true,$6)`, [randomUUID(), versionId, version.checksum, version.revision, validatorVersion, report]);
       return { ...report, checksum: version.checksum as string, revision: version.revision as number };
     });
   }
   private async validateReferences(db: pg.PoolClient, payload: ContentPayload, languageId: string) {
+    await preflightMediaRequirements(db,payload.content_version_id);
     for (const ref of payload.refs) {
       const target = (await db.query(`SELECT e.stable_code,v.version_code FROM content_entities e JOIN content_versions v ON v.entity_id=e.id
         WHERE e.id=$1 AND v.id=$2 AND e.language_id=$3 AND v.language_id=$3`, [ref.entity_id, ref.content_version_id, languageId])).rows[0];
@@ -79,8 +89,7 @@ export class ContentRepository implements ContentLookup {
             throw new ContractError('INVALID_INPUT', 'Evidence map differs from relational mapping');
         }
       }
-      // Actual asset resolution belongs to P5. P2 cannot certify media-bearing publications.
-      if (activity.media_refs.length) throw new ContractError('INVALID_INPUT', 'Concrete asset validation requires the P5 media foundation');
+      await preflightMedia(db,this.assetStore,languageId,activity.media_refs);
     }
   }
   async approve(actorId: string, versionId: string, checksum: string, revision: number, gate: string, decision: 'approved' | 'rejected', notes: string) {
@@ -102,6 +111,9 @@ export class ContentRepository implements ContentLookup {
       for (const id of input.versionIds) {
         const v = (await db.query('SELECT * FROM content_versions WHERE id=$1 FOR UPDATE', [id])).rows[0];
         if (!v) throw new ContractError('NOT_FOUND', 'Publication version not found');
+        const payload=validateContent(v.payload);
+        await preflightMediaRequirements(db,id);
+        for(const activity of payload.activities??[])await preflightMedia(db,this.assetStore,input.languageId,activity.media_refs);
         await db.query(`INSERT INTO publication_entries(publication_id,entity_id,content_version_id,language_id,content_checksum)
           VALUES($1,$2,$3,$4,$5)`, [input.id, v.entity_id, id, input.languageId, v.checksum]);
       }
@@ -117,7 +129,13 @@ export class ContentRepository implements ContentLookup {
         FROM translations t JOIN publication_entries e ON e.content_version_id=t.content_version_id WHERE e.publication_id=$1 ORDER BY t.id`, [input.id])).rows;
       const knowledgeEdges = (await db.query(`SELECT k.id AS edge_id,k.version_code,k.checksum FROM publication_knowledge_edges e
         JOIN knowledge_edges k ON k.id=e.edge_id WHERE e.publication_id=$1 ORDER BY k.id`, [input.id])).rows;
-      const manifest = { publication_id: input.id, course_id: input.courseId, language_id: input.languageId, schema_version: '1.7', entries, translations, knowledge_edges: knowledgeEdges, assets: [] };
+      await db.query(`INSERT INTO publication_assets(publication_id,asset_id,asset_version,language_id,checksum,metadata_checksum)
+        SELECT DISTINCT $1::uuid,b.asset_id,b.asset_version,b.language_id,v.checksum,v.metadata_checksum
+        FROM content_media_bindings b JOIN publication_entries pe ON pe.content_version_id=b.content_version_id
+        JOIN asset_versions v ON v.asset_id=b.asset_id AND v.version=b.asset_version WHERE pe.publication_id=$1`,[input.id]);
+      const assets=(await db.query(`SELECT asset_id,asset_version,checksum,metadata_checksum FROM publication_assets
+        WHERE publication_id=$1 ORDER BY asset_id,asset_version`,[input.id])).rows;
+      const manifest = { publication_id: input.id, course_id: input.courseId, language_id: input.languageId, schema_version: '1.7', entries, translations, knowledge_edges: knowledgeEdges, assets };
       await db.query(`UPDATE publications SET manifest=$1,status='published',published_at=now() WHERE id=$2`, [manifest, input.id]);
       return (await db.query('SELECT id,checksum,manifest FROM publications WHERE id=$1', [input.id])).rows[0] as { id: string; checksum: string; manifest: unknown };
     });

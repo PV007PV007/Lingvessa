@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-09-27T13:44:14.221943+00:00",
+  "phase": "P5",
+  "scope": "initial media batch; not final milestone acceptance",
+  "source": "working tree; hosted commit gates pending",
+  "toolchain": {
+    "node": "24.19.0",
+    "pnpm": "11.19.0"
+  },
+  "commands": [
+    {
+      "command": "pnpm check",
+      "result": "PASS",
+      "unit_pass": 44,
+      "smoke_pass": 4,
+      "caveat": "followed by two narrow hardening changes; containing commit must rerun hosted"
+    },
+    {
+      "command": "python3 tools/governance/validate_p5_baseline.py",
+      "result": "PASS",
+      "checks": 74
+    }
+  ],
+  "runtime_database": "NOT_EXECUTED",
+  "hosted_ci": "PENDING"
+}

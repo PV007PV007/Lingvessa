@@ -1,0 +1,25 @@
+{
+  "repository": "vvolhejn/pocket-tts-czech",
+  "config_revision": "7b7760dd0fe994a0800f2fdbc837dc4b8f219d1c",
+  "weights_revision": "b7eead893ec18b1f493c1c044e1b3e8b2a46b863",
+  "license_claim": "CC-BY-4.0",
+  "model_card": "https://huggingface.co/vvolhejn/pocket-tts-czech",
+  "files": {
+    "czech.yaml": {
+      "sha256": "932f2174c40edac737841f7508c83b2eca8e51b1661a962afaa41b9b5e9688d0",
+      "bytes": 1407
+    },
+    "README.md": {
+      "sha256": "6d501cc702f5974994cbd40bee7282de84a6cff67653b223db26eb283263669c",
+      "bytes": 2638
+    },
+    "model.safetensors": {
+      "sha256": "10b08a55113c8e0ca2a8c8364ec181269bd751b7abfe4ab5cc7e5f58a9470333",
+      "bytes": 438029216
+    },
+    "tokenizer.model": {
+      "sha256": "8fae9e8aa32e637f4c8f27c1f65e8cf0bdeef8f7f113f9c87275dbecf96152a2",
+      "bytes": 304158
+    }
+  }
+}

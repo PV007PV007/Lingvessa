@@ -1,0 +1,14 @@
+{
+  "phase": "P5",
+  "p5_authorized": true,
+  "p6_authorized": false,
+  "authorization_date": "2026-09-26",
+  "owner_instruction": "P4 accepted. Merge PR #4 using a merge commit, then proceed to P5.",
+  "accepted_main_sha": "5027f001237b6451237d87343ebeca58cd0af007",
+  "accepted_p4_tested_sha": "ee16aeea822d7cccb09f65e310d19fd5a1807747",
+  "accepted_p4_tree_sha": "d0e8712e705402502bcb5ddd14a470642c720dc7",
+  "accepted_p4_pr": 4,
+  "merge_method": "merge",
+  "execution_authority": "Lingvessa_Implementation_Plan v1.4 §12 p7; Appendix B p12",
+  "operational_exception": "EXC-P1-001: main is NOT technically protected; implementation branch -> PR -> green CI -> owner acceptance."
+}

@@ -1,0 +1,47 @@
+{
+  "timestamp": "2026-10-06T05:04:50.201656+00:00",
+  "scope": "Local P5 authoring experiment and pre-push static/build validation; no local DB/container claim",
+  "remote_base_sha": "23257497db6cf29497f51d6e5b2476f97e3c7c43",
+  "source_policy": "This report describes the batch source checked before commit. Hosted checkout HEAD and runtime summary bind the committed revision; a parent CI result never certifies a descendant.",
+  "cwd": "/workspace/scratch/3a694649f683/p3_work/repository",
+  "results": [
+    {
+      "command": "/workspace/scratch/3a694649f683/p5_work/voice-audition/venv/bin/python tools/p5/voice-audition.py --models /workspace/scratch/3a694649f683/p5_work/voice-audition/piper-models",
+      "exit_code": 0,
+      "result": "8 actual WAVs generated locally with CPUExecutionProvider; model/config SHA-256 and dependency versions checked before inference. Output hashes and measurements in results.json."
+    },
+    {
+      "command": "python3 tools/p5/voice-audition.py --verify-only",
+      "exit_code": 0,
+      "result": {
+        "status": "PASS",
+        "samples_verified": 8,
+        "model_text_speaker_pairs_verified": 4,
+        "human_review": "PENDING",
+        "publication_ready": false,
+        "p5_milestone": "NOT_READY"
+      }
+    },
+    {
+      "command": "PATH=/workspace/scratch/3a694649f683/p5_work/toolchain/node_modules/.bin:$PATH pnpm validate:baseline",
+      "exit_code": 0,
+      "result": "PASS: 39/39 P0-P3; 65/65 P4; 76/76 P5 baseline checks"
+    },
+    {
+      "command": "PATH=/workspace/scratch/3a694649f683/p5_work/toolchain/node_modules/.bin:$PATH pnpm check",
+      "exit_code": 0,
+      "result": "PASS: Prisma generate/validate, peers, ESLint, TypeScript, dependency boundaries, secrets, 54 unit tests, server/web/admin production builds, 4 smoke tests; 0 failures/skips"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "result": "PASS"
+    }
+  ],
+  "contract_change": "No contract change",
+  "domain_schema_api_migration_changes": false,
+  "application_dependency_changes": false,
+  "runtime_integration": false,
+  "human_listening_review": "PENDING",
+  "p5_milestone": "NOT_READY"
+}

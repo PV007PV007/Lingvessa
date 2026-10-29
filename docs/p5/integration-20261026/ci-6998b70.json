@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-26",
+  "tested_sha": "6998b70a8ff9401db2d931fe483bd7288fa7311d",
+  "status": "CI_FAILED_DEPENDENCY_AUDIT_PRIVATE_INPUT_BLOCKED",
+  "runs": [
+    {
+      "id": 40281845378,
+      "event": "pull_request",
+      "name": "P3 lesson engine",
+      "conclusion": "failure",
+      "jobs": [
+        {
+          "id": 121436664445,
+          "name": "p3-exit",
+          "runner_id": 1000000517,
+          "conclusion": "failure",
+          "failed_steps": [
+            "Run pnpm audit:dependencies"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 40281843278,
+      "event": "pull_request",
+      "name": "P1 foundation",
+      "conclusion": "failure",
+      "jobs": [
+        {
+          "id": 121436658255,
+          "name": "p1-exit",
+          "runner_id": 1000000514,
+          "conclusion": "failure",
+          "failed_steps": [
+            "Run pnpm audit:dependencies"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 40281843164,
+      "event": "pull_request",
+      "name": "P5 media and speech",
+      "conclusion": "failure",
+      "jobs": [
+        {
+          "id": 121436658119,
+          "name": "p5-private-bridge",
+          "runner_id": 1000000518,
+          "conclusion": "failure",
+          "failed_steps": [
+            "Receive approved private bytes using one artifact upload capability"
+          ]
+        },
+        {
+          "id": 121436720366,
+          "name": "p5-exit",
+          "runner_id": 1000000520,
+          "conclusion": "failure",
+          "failed_steps": [
+            "Run pnpm audit:dependencies"
+          ]
+        },
+        {
+          "id": 121436722172,
+          "name": "p5-input-slot",
+          "runner_id": null,
+          "conclusion": "skipped",
+          "failed_steps": []
+        }
+      ]
+    },
+    {
+      "id": 40281843239,
+      "event": "pull_request",
+      "name": "P2 data foundation",
+      "conclusion": "failure",
+      "jobs": [
+        {
+          "id": 121436658230,
+          "name": "p2-exit",
+          "runner_id": 1000000515,
+          "conclusion": "failure",
+          "failed_steps": [
+            "Run pnpm audit:dependencies"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 40281843174,
+      "event": "pull_request",
+      "name": "P4 mastery and Review",
+      "conclusion": "failure",
+      "jobs": [
+        {
+          "id": 121436658325,
+          "name": "p4-exit",
+          "runner_id": 1000000516,
+          "conclusion": "failure",
+          "failed_steps": [
+            "Run pnpm audit:dependencies"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 40281838035,
+      "event": "push",
+      "name": "P1 foundation",
+      "conclusion": "failure",
+      "jobs": [
+        {
+          "id": 121436642511,
+          "name": "p1-exit",
+          "runner_id": 1000000512,
+          "conclusion": "failure",
+          "failed_steps": [
+            "Run pnpm audit:dependencies"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 40281838015,
+      "event": "push",
+      "name": "P5 media and speech",
+      "conclusion": "failure",
+      "jobs": [
+        {
+          "id": 121436643693,
+          "name": "p5-private-bridge",
+          "runner_id": 1000000513,
+          "conclusion": "failure",
+          "failed_steps": [
+            "Receive approved private bytes using one artifact upload capability"
+          ]
+        },
+        {
+          "id": 121436681346,
+          "name": "p5-exit",
+          "runner_id": 1000000519,
+          "conclusion": "failure",
+          "failed_steps": [
+            "Run pnpm audit:dependencies"
+          ]
+        },
+        {
+          "id": 121436683059,
+          "name": "p5-input-slot",
+          "runner_id": null,
+          "conclusion": "skipped",
+          "failed_steps": []
+        }
+      ]
+    }
+  ],
+  "scanner": {
+    "source_files": 838,
+    "history_blobs": 1432,
+    "findings": [],
+    "status": "PASS"
+  },
+  "pnpm_check": "PASS in all seven exit jobs",
+  "p5_unit_tests": {
+    "tests": 63,
+    "passed": 62,
+    "skipped": 1,
+    "failed": 0,
+    "note": "One external-real-file case skipped; no real M01 inference."
+  },
+  "audit": {
+    "total": 10,
+    "low": 2,
+    "moderate": 2,
+    "high": 4,
+    "critical": 2,
+    "blocking_packages": [
+      "next",
+      "zod",
+      "body-parser",
+      "multer"
+    ],
+    "advisories": [
+      "GHSA-2464-fhr4-w9xw",
+      "GHSA-673q-mjm6-r5xr",
+      "GHSA-p3m5-59mp-jv5r",
+      "GHSA-mrhx-c7xc-m3w5",
+      "GHSA-27r3-jxmh-p828",
+      "GHSA-q7qp-rjg7-q26m"
+    ]
+  },
+  "real_m01": "NOT_EXECUTED",
+  "private_input": "Preflight failed; current public visibility is incompatible with unchanged private guards. No private archive identifiers included.",
+  "runtime_gate_claim": "none",
+  "milestone": "NOT_READY"
+}

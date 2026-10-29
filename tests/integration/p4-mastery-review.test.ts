@@ -31,10 +31,10 @@ test('P4 real PostgreSQL: mastery/recompute, Review, collections, reset and P3 a
   await admin.query(`CREATE DATABASE "${name}" TEMPLATE template0 ENCODING 'UTF8'`);created=true;migrate();await seedBootstrap(env);await seedBootstrap(env);pool=createFoundationPool(url.toString());const db=pool;
   const reject=async(sql:string,args:unknown[],codes=['23503','23514'])=>assert.rejects(db.query(sql,args),(e:unknown)=>Boolean(e&&typeof e==='object'&&'code'in e&&codes.includes(String(e.code))));
   await gate('P4-DB-001 clean migration/replay/seed and phase boundary',async()=>{
-   migrate();assert.equal((await db.query('SELECT count(*) FROM _prisma_migrations WHERE finished_at IS NOT NULL')).rows[0].count,'4');
+   migrate();assert.equal((await db.query('SELECT count(*) FROM _prisma_migrations WHERE finished_at IS NOT NULL')).rows[0].count,'9');
    const tables=(await db.query("SELECT tablename FROM pg_tables WHERE schemaname='public'")).rows.map(r=>r.tablename);
    for(const t of ['knowledge_mastery_states','skill_mastery_states','review_schedules','review_sessions','review_session_items','mistake_instances','collections','collection_entries','learning_reset_jobs'])assert(tables.includes(t));
-   for(const t of ['speech_jobs','ai_runs','ai_sessions'])assert(!tables.includes(t));
+   for(const t of ['ai_runs','ai_sessions'])assert(!tables.includes(t));
    assert.equal((await db.query('SELECT parameters FROM learning_policies WHERE model_version=$1',[policy.model_version])).rows[0].parameters.scheduler_version,policy.scheduler_version);
    await reject("UPDATE learning_policies SET parameters='{}'",[]);
   });

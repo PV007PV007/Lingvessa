@@ -1,0 +1,784 @@
+{
+  "tested_sha": "c2e0226bc13b38ab357b04dd0286c0644cbdb9d8",
+  "status": "FAILED_NOT_MILESTONE",
+  "observed_at": "2026-10-22",
+  "workflows": [
+    {
+      "id": 39726149455,
+      "name": "P5 media and speech",
+      "event": "pull_request",
+      "head_sha": "c2e0226bc13b38ab357b04dd0286c0644cbdb9d8",
+      "conclusion": "failure",
+      "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/39726149455"
+    },
+    {
+      "id": 39726149448,
+      "name": "P2 data foundation",
+      "event": "pull_request",
+      "head_sha": "c2e0226bc13b38ab357b04dd0286c0644cbdb9d8",
+      "conclusion": "failure",
+      "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/39726149448"
+    },
+    {
+      "id": 39726149485,
+      "name": "P1 foundation",
+      "event": "pull_request",
+      "head_sha": "c2e0226bc13b38ab357b04dd0286c0644cbdb9d8",
+      "conclusion": "failure",
+      "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/39726149485"
+    },
+    {
+      "id": 39726149311,
+      "name": "P4 mastery and Review",
+      "event": "pull_request",
+      "head_sha": "c2e0226bc13b38ab357b04dd0286c0644cbdb9d8",
+      "conclusion": "failure",
+      "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/39726149311"
+    },
+    {
+      "id": 39726149392,
+      "name": "P3 lesson engine",
+      "event": "pull_request",
+      "head_sha": "c2e0226bc13b38ab357b04dd0286c0644cbdb9d8",
+      "conclusion": "failure",
+      "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/39726149392"
+    },
+    {
+      "id": 39726144083,
+      "name": "P5 media and speech",
+      "event": "push",
+      "head_sha": "c2e0226bc13b38ab357b04dd0286c0644cbdb9d8",
+      "conclusion": "failure",
+      "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/39726144083"
+    },
+    {
+      "id": 39726144213,
+      "name": "P1 foundation",
+      "event": "push",
+      "head_sha": "c2e0226bc13b38ab357b04dd0286c0644cbdb9d8",
+      "conclusion": "failure",
+      "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/39726144213"
+    }
+  ],
+  "p5_jobs": [
+    {
+      "run_id": 39726149455,
+      "jobs": [
+        {
+          "id": 119650387199,
+          "name": "p5-private-bridge",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Receive approved private bytes using one artifact upload capability",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7
+            }
+          ]
+        },
+        {
+          "id": 119650458718,
+          "name": "p5-input-slot",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Prepare idempotent private draft input container (never publish)",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Read approved draft input in isolated transport job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Relay private input to tests for one day only",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11
+            }
+          ]
+        },
+        {
+          "id": 119650562492,
+          "name": "p5-exit",
+          "conclusion": "failure",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Run npm install --global pnpm@11.19.0",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Run pnpm install --frozen-lockfile",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Run pnpm validate:baseline",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6
+            },
+            {
+              "name": "Run pnpm check",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7
+            },
+            {
+              "name": "Verify private transfer credential and integrity boundaries",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8
+            },
+            {
+              "name": "Receive same-run private input relay outside the checkout",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 9
+            },
+            {
+              "name": "Bind relay to exact source and verify approved archive again",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10
+            },
+            {
+              "name": "Run pnpm validate:references",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11
+            },
+            {
+              "name": "Validate reference media draft identities, scripts and generated bytes",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 12
+            },
+            {
+              "name": "Verify owner-authorized local voice audition bytes and language provenance",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 13
+            },
+            {
+              "name": "Verify retained Czech Pocket audition and diagnostic provenance",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 14
+            },
+            {
+              "name": "Verify bounded Czech case trial and held-out text evidence",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 15
+            },
+            {
+              "name": "Run pnpm audit:dependencies",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 16
+            },
+            {
+              "name": "Verify unpublished M01 authoring metadata (external WAV bytes excluded)",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 17
+            },
+            {
+              "name": "Validate M01 feedback intake with artificial notes and unchanged catalog identities",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 18
+            },
+            {
+              "name": "Install audio inspection tool with bounded package-network waits",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 19
+            },
+            {
+              "name": "Verify immutable M01 continuation using synthetic tones only",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 20
+            },
+            {
+              "name": "Verify completed M01 metadata and blind dialogue crosscheck",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 21
+            },
+            {
+              "name": "Verify approved-media registry and actual SVG bytes",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 22
+            },
+            {
+              "name": "Verify retained acoustic pilot (402 single-turn files, no inference)",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 23
+            },
+            {
+              "name": "Install Chromium with bounded package-network waits",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 24
+            },
+            {
+              "name": "Build and exercise the unchanged 30-item visual review packet",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 25
+            },
+            {
+              "name": "Build and exercise the offline human listening worksheet",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 26
+            },
+            {
+              "name": "Verify M01 review catalog and exercise the interface on explicit audition fixtures",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 27
+            },
+            {
+              "name": "Build pinned standalone S3 protocol test server",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 28
+            },
+            {
+              "name": "Verify actual S3 adapter and restart recovery",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 29
+            },
+            {
+              "name": "Run pnpm bootstrap:local",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 30
+            },
+            {
+              "name": "Exercise importer with PostgreSQL and restarted S3 (explicit synthetic vectors)",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 31
+            },
+            {
+              "name": "Stage checksum-approved external M01 package if configured",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 32
+            },
+            {
+              "name": "Verify actual M01 bytes, PostgreSQL import and S3 recovery",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 33
+            },
+            {
+              "name": "Run node --env-file=.local/runtime.env --import tsx --test tests/integration/*.test.ts",
+              "status": "completed",
+              "conclusion": "failure",
+              "number": 34
+            },
+            {
+              "name": "Run pnpm test:containers",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 35
+            },
+            {
+              "name": "Run node --import tsx tools/p3/acceptance-summary.ts",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 36
+            },
+            {
+              "name": "Run node --import tsx tools/p4/acceptance-summary.ts",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 37
+            },
+            {
+              "name": "Bind P5 runtime evidence to the exact source and retain open media gates",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 38
+            },
+            {
+              "name": "Sanitized migration diagnostics on failure",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 39
+            },
+            {
+              "name": "Preserve P5 batch and regression evidence",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 40
+            },
+            {
+              "name": "Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 79
+            },
+            {
+              "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 80
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 81
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": 39726144083,
+      "jobs": [
+        {
+          "id": 119650369835,
+          "name": "p5-private-bridge",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Receive approved private bytes using one artifact upload capability",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7
+            }
+          ]
+        },
+        {
+          "id": 119650410668,
+          "name": "p5-input-slot",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Prepare idempotent private draft input container (never publish)",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Read approved draft input in isolated transport job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Relay private input to tests for one day only",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11
+            }
+          ]
+        },
+        {
+          "id": 119650485041,
+          "name": "p5-exit",
+          "conclusion": "failure",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Run npm install --global pnpm@11.19.0",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Run pnpm install --frozen-lockfile",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Run pnpm validate:baseline",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6
+            },
+            {
+              "name": "Run pnpm check",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7
+            },
+            {
+              "name": "Verify private transfer credential and integrity boundaries",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8
+            },
+            {
+              "name": "Receive same-run private input relay outside the checkout",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 9
+            },
+            {
+              "name": "Bind relay to exact source and verify approved archive again",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10
+            },
+            {
+              "name": "Run pnpm validate:references",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11
+            },
+            {
+              "name": "Validate reference media draft identities, scripts and generated bytes",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 12
+            },
+            {
+              "name": "Verify owner-authorized local voice audition bytes and language provenance",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 13
+            },
+            {
+              "name": "Verify retained Czech Pocket audition and diagnostic provenance",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 14
+            },
+            {
+              "name": "Verify bounded Czech case trial and held-out text evidence",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 15
+            },
+            {
+              "name": "Run pnpm audit:dependencies",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 16
+            },
+            {
+              "name": "Verify unpublished M01 authoring metadata (external WAV bytes excluded)",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 17
+            },
+            {
+              "name": "Validate M01 feedback intake with artificial notes and unchanged catalog identities",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 18
+            },
+            {
+              "name": "Install audio inspection tool with bounded package-network waits",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 19
+            },
+            {
+              "name": "Verify immutable M01 continuation using synthetic tones only",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 20
+            },
+            {
+              "name": "Verify completed M01 metadata and blind dialogue crosscheck",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 21
+            },
+            {
+              "name": "Verify approved-media registry and actual SVG bytes",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 22
+            },
+            {
+              "name": "Verify retained acoustic pilot (402 single-turn files, no inference)",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 23
+            },
+            {
+              "name": "Install Chromium with bounded package-network waits",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 24
+            },
+            {
+              "name": "Build and exercise the unchanged 30-item visual review packet",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 25
+            },
+            {
+              "name": "Build and exercise the offline human listening worksheet",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 26
+            },
+            {
+              "name": "Verify M01 review catalog and exercise the interface on explicit audition fixtures",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 27
+            },
+            {
+              "name": "Build pinned standalone S3 protocol test server",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 28
+            },
+            {
+              "name": "Verify actual S3 adapter and restart recovery",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 29
+            },
+            {
+              "name": "Run pnpm bootstrap:local",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 30
+            },
+            {
+              "name": "Exercise importer with PostgreSQL and restarted S3 (explicit synthetic vectors)",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 31
+            },
+            {
+              "name": "Stage checksum-approved external M01 package if configured",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 32
+            },
+            {
+              "name": "Verify actual M01 bytes, PostgreSQL import and S3 recovery",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 33
+            },
+            {
+              "name": "Run node --env-file=.local/runtime.env --import tsx --test tests/integration/*.test.ts",
+              "status": "completed",
+              "conclusion": "failure",
+              "number": 34
+            },
+            {
+              "name": "Run pnpm test:containers",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 35
+            },
+            {
+              "name": "Run node --import tsx tools/p3/acceptance-summary.ts",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 36
+            },
+            {
+              "name": "Run node --import tsx tools/p4/acceptance-summary.ts",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 37
+            },
+            {
+              "name": "Bind P5 runtime evidence to the exact source and retain open media gates",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 38
+            },
+            {
+              "name": "Sanitized migration diagnostics on failure",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 39
+            },
+            {
+              "name": "Preserve P5 batch and regression evidence",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 40
+            },
+            {
+              "name": "Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 79
+            },
+            {
+              "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 80
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 81
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "inspected_job_id": 119650562492,
+  "error_excerpt": "T05:16:57.7057112Z test at tests/integration/p5-audio.test.ts:1:1204\n2026-10-22T05:16:57.7057987Z ✖ P5 audio: published delivery, ownership, byte ranges, support and normal/slow speaker timing (2834.917158ms)\n2026-10-22T05:16:57.7058764Z   error: payload references must match resolved UUID references in canonical order\n2026-10-22T05:16:57.7059551Z       at /home/runner/work/Lingvessa/Lingvessa/node_modules/.pnpm/pg@8.23.0/node_modules/pg/lib/client.js:694:17\n2026-10-22T05:16:57.7060345Z       at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n2026-10-22T05:16:57.7061154Z       at async <anonymous> (/home/runner/work/Lingvessa/Lingvessa/infra/persistence/content.ts:139:7)\n2026-10-22T05:16:57.7061969Z       at async transaction (/home/runner/work/Lingvessa/Lingvessa/infra/persistence/database.ts:9:49)\n2026-10-22T05:16:57.7062799Z       at async p5AudioFixture (/home/runner/work/Lingvessa/Lingvessa/tests/support/p5-audio-fixtures.ts:82:21)\n2026-10-22T05:16:57.7064485Z       at async TestContext.<anonymous> (/home/runner/work/Lingvessa/Lingvessa/tests/integration/p5-audio.test.ts:30:61)\n2026-10-22T05:16:57.7065231Z       at async Test.run (node:internal/test_runner/test:1389:7)\n2026-10-22T05:16:57.7065856Z       at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {\n2026-10-22T05:16:57.7066400Z     length: 194,\n2026-10-22T05:16:57.7066730Z     severity: 'ERROR',\n2026-10-22T05:16:57.7067096Z     code: '23514',\n2026-10-22T05:16:57.7067434Z     detail: undefined,\n2026-10-22T05:16:57.7067778Z     hint: undefined,\n2026-10-22T05:16:57.7068131Z     position: undefined,\n2026-10-22T05:16:57.7068539Z     internalPosition: undefined,\n2026-10-22T05:16:57.7068929Z     internalQuery: undefined,\n2026-10-22T05:16:57.7069427Z     where: 'PL/pgSQL function p2_publication_guard() line 49 at RAISE',\n2026-10-22T05:16:57.7070877Z     schema: undefined,\n2026-10-22T05:16:57.7071246Z     table: undefined,\n2026-10-22T05:16:57.7071595Z     column: undefined,\n2026-10-22T05:16:57.70719",
+  "cause": "New disposable inline transcript fixture items were appended without canonical C-order of payload refs; PostgreSQL publication guard rejected them. Sort the fixture references, retain guard unchanged.",
+  "real_m01_step_passed_both_runs": true,
+  "full_acceptance_summary_generated": false,
+  "production_publication": false,
+  "p6_authorized": false
+}

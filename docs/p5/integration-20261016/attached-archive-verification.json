@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "scope": "ATTACHED_APPROVED_ARCHIVE_AND_IMMUTABLE_WAV_BYTES",
+  "archive_bytes": 63346796,
+  "archive_sha256": "3edaeaaeb000479921a0b3ff5ec2b52042faeee54bf943eff25e4a4a0f4e516d",
+  "files": 420,
+  "languages": {
+    "en": 210,
+    "cs": 210
+  },
+  "audio_bytes": 35876788,
+  "registry_authorization_and_record_hashes_verified": true,
+  "pcm_and_frame_counts_verified": true,
+  "regenerated": false,
+  "postgresql_executed": false,
+  "s3_executed": false,
+  "p5_milestone": "NOT_READY",
+  "p6_authorized": false,
+  "verified_at": "2026-10-16",
+  "manifest_source_sha": "d7feb7d00cd4fc78ad7a16c58725b7ba29e98bdf",
+  "archive_crc_verified": true,
+  "archive_entries": 1164,
+  "owner_approval_retained": "2026-10-14",
+  "acoustic_pilot": {
+    "single_turn_results": 402,
+    "languages": {
+      "en": 202,
+      "cs": 200
+    },
+    "dialogues_outside_pilot": {
+      "en": 8,
+      "cs": 10
+    },
+    "diagnostic_controls_excluded": 3,
+    "production_calibration_approved": false
+  },
+  "input_bindings": {
+    "assets/media/m01/registry.json": "2a5e8632987beec7bf34d31fc1f5552dee95f56eb0b971d6caac847bbffdea3d",
+    "assets/media/m01/source-all-assets.json": "21664c1f8bdadb9aef0694854edc50214835d7919078d96749814c661ea29293",
+    "docs/p5/m01-completion-20261014/owner-approval.json": "292dc272ecddf962d8bc92ee2bba6ad5e9b549f44beedb8107d1504b2ace9ee0"
+  }
+}

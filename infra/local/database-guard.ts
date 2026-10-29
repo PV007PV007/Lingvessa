@@ -6,8 +6,8 @@ export function localDatabaseUrl(env: NodeJS.ProcessEnv): string {
   if (config.LINGVESSA_ENV !== 'local' || !config.DATABASE_URL) throw new Error('Local synthetic database required');
   const url = new URL(config.DATABASE_URL);
   if (!['127.0.0.1', 'localhost', '[::1]', 'postgres'].includes(url.hostname) ||
-      !/^\/lingvessa_p[1234]_(?:local|test_[a-f0-9]+)$/.test(url.pathname)) {
-    throw new Error('Bootstrap database must be an isolated local Lingvessa P1/P2/P3/P4 database');
+      !/^\/lingvessa_p[12345]_(?:local|test_[a-f0-9]+)$/.test(url.pathname)) {
+    throw new Error('Bootstrap database must be an isolated local Lingvessa P1/P2/P3/P4/P5 database');
   }
   return config.DATABASE_URL;
 }

@@ -33,7 +33,7 @@ export const normalizationPolicySchema = z.object({
 export const answerPolicySchema = z.object({
   id: stableCode,
   version: versionCode,
-  mode: z.enum(['exposure', 'single', 'set', 'mapping', 'text', 'order']),
+  mode: z.enum(['exposure', 'single', 'set', 'mapping', 'text', 'order', 'speech']),
   accepted_option_ids: z.array(stableCode).optional(),
   accepted_sets: z.array(z.array(stableCode)).optional(),
   accepted_pairs: z.array(z.object({ left: stableCode, right: stableCode }).strict()).optional(),
@@ -48,6 +48,7 @@ export const answerPolicySchema = z.object({
     text: Boolean(policy.accepted_text?.length),
     order: Boolean(policy.accepted_order?.length),
     exposure: true,
+    speech: true,
   } as const;
   if (!populated[policy.mode]) ctx.addIssue({ code: 'custom', message: `Answer policy ${policy.mode} has no accepted answer` });
   if (policy.normalization.locale === 'cs-CZ' && policy.mode === 'text' && !policy.normalization.diacritics_sensitive)
@@ -87,9 +88,10 @@ export const activityContractSchema = z.object({
     }).strict(),
   }).strict(),
   response: z.object({
-    kind: z.enum(['none', 'single', 'set', 'mapping', 'text', 'order']),
+    kind: z.enum(['none', 'single', 'set', 'mapping', 'text', 'order', 'speech']),
     answer_policy: answerPolicySchema,
   }).strict(),
+  speech: z.object({target_feature:stableCode}).strict().optional(),
   feedback: z.object({
     correct: z.string().min(1).max(500),
     incorrect: z.string().min(1).max(500),
@@ -111,7 +113,7 @@ export const activityContractSchema = z.object({
     difficulty: z.number().min(0).max(1),
   }).strict(),
   runtime: z.object({
-    completion_policy: z.enum(['exposure_v1', 'correct_or_reveal_v1', 'optional_speech_v1']),
+    completion_policy: z.enum(['exposure_v1', 'correct_or_reveal_v1', 'optional_speech_v1','speech_binary_nonblocking_v1']),
     evaluator_version: versionCode,
     presentation_seed: z.string().min(1).max(128),
     presentation_order: z.array(stableCode).max(100),
@@ -131,9 +133,14 @@ export const activityContractSchema = z.object({
   for (const [index, evidence] of activity.learning.evidence_map.entries()) {
     if (!isSkillFacet(evidence.skill, evidence.facet))
       ctx.addIssue({ code: 'custom', path: ['learning', 'evidence_map', index], message: 'Invalid canonical skill/facet pair' });
-    if (['speaking', 'pronunciation'].includes(evidence.skill) && (activity.runtime.completion_policy !== 'optional_speech_v1' || !['listen_repeat','read_aloud'].includes(activity.type)))
+    if (['speaking', 'pronunciation'].includes(evidence.skill) && (activity.runtime.completion_policy !== 'speech_binary_nonblocking_v1' || !['listen_repeat','read_aloud'].includes(activity.type)))
       ctx.addIssue({ code: 'custom', path: ['learning', 'evidence_map', index], message: 'Speech evidence requires the optional speech contract' });
   }
+  if(activity.response.kind==='speech'){
+    if(!activity.speech||activity.runtime.completion_policy!=='speech_binary_nonblocking_v1'||activity.runtime.evaluator_version!=='speech-target-1.0.0'||!['listen_repeat','read_aloud'].includes(activity.type))
+      ctx.addIssue({code:'custom',message:'Speech requires versioned target-feature async contract'});
+    if(activity.learning.evidence_map.some(m=>m.skill!=='pronunciation'))ctx.addIssue({code:'custom',message:'Target-feature evaluator measures Pronunciation only; no unmeasured Speaking evidence'});
+  } else if(activity.speech||activity.runtime.completion_policy==='speech_binary_nonblocking_v1')ctx.addIssue({code:'custom',message:'Speech completion requires a speech response'});
   if(activity.response.answer_policy.mode === 'exposure' && activity.learning.evidence_map.length)
     ctx.addIssue({code:'custom',message:'Exposure cannot create performance evidence'});
   const identifiers = activity.presentation.options?.map((option) => option.id) ?? [];

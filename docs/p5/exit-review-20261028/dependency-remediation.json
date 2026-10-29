@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "P5-DEP-003",
+  "date": "2026-10-28",
+  "status": "PATCH_PREPARED_REQUIRES_EXACT_SOURCE_CI",
+  "observed_source_sha": "e9a831061216272514a3c9dc22a605ff65351ef8",
+  "executed_predecessor_evidence": "docs/p5/exit-review-20261028/verified-ci-e9a8310.json",
+  "severity": "moderate",
+  "advisory": "GHSA-6pq8-jhm2-2vcw",
+  "cve": "CVE-2026-110816",
+  "package": "qs",
+  "before": "6.16.0",
+  "after": "6.16.1",
+  "affected_parent": "express@5.2.1",
+  "dependency_paths": [
+    "@nestjs/core>@nestjs/platform-express>express>qs",
+    "@nestjs/platform-express>express>qs"
+  ],
+  "sources": [
+    "https://github.com/advisories/GHSA-6pq8-jhm2-2vcw",
+    "https://github.com/ljharb/qs/releases/tag/v6.16.1",
+    "https://registry.npmjs.org/qs/6.16.1"
+  ],
+  "approved_lock_integrity": "sha512-5Px6J7rfHBAGUhNQ3es4YzcOdBBw0SDcVtThJml4RdnKw4tKs2epA0kPZ+K8X+WiHktT93RHVcQ/3ym5aTCgtg==",
+  "change": "Narrow express@5.2.1>qs override; reuse existing 6.16.1 resolution and dependencies; remove now-unused 6.16.0 entries. No direct dependency, API, schema or product policy change.",
+  "impact_review": "Source scan finds no direct qs or comma-array serialization in the application. This is not universal non-exploitability proof; remove the affected transitive version.",
+  "diagnostic_scope": "Isolated unchanged-lockfile advisory inspection used current local tooling with copied manifest engine constraints omitted. Approved project engine checks remained unchanged; this is not pinned-toolchain acceptance.",
+  "ci_reporting": "P5 retains full JSON from the same high/critical audit command and propagates its actual exit status; acceptance hashes the report and exposes all severity counts. Required threshold unchanged.",
+  "validation_required": [
+    "Frozen install on Node 24.19.0 / pnpm 11.19.0",
+    "All seven workflows / eleven jobs on the new SHA",
+    "Both actual M01 PostgreSQL/S3/HTTP steps",
+    "Independent input/runtime artifact audits",
+    "No known production dependency vulnerabilities in the new reports"
+  ],
+  "unit_scope": "General pnpm check intentionally skips one opt-in real-M01 unit case; the dedicated real-M01 CLI step executes against the approved 420 WAVs in both P5 jobs. Browser/integration suites have no skips.",
+  "p6_authorized": false,
+  "od_004": "OPEN",
+  "od_006": "OPEN"
+}

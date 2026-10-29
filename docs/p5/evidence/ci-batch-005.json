@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-09-29T14:55:17.005742+00:00",
+  "tested_sha": "9d8f3de9e0e957f768534c5b0a7fc89efe1354f5",
+  "run_id": 36521263627,
+  "job_id": 109254424240,
+  "event": "pull_request",
+  "status": "PASS_BATCH_NOT_MILESTONE",
+  "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/36521263627",
+  "artifact_id": 11013287654,
+  "artifact_sha256": "c0c505ba84676f8b147b01370c28ee02cf3c73796966c88047e2decae786370b",
+  "executed": [
+    "frozen install",
+    "baseline",
+    "pnpm check: 49 unit + 4 smoke, zero failures/skips",
+    "reference validation",
+    "dependency audit",
+    "actual S3 immutable byte protocol and recovery",
+    "PostgreSQL 18.6 all six migrations/bootstrap/seed",
+    "16 integration tests, zero failures/skips",
+    "7 speech DB/API gates: cancel/idempotency/exact facets/ownership/callbacks/retry/reset/cleanup",
+    "8 Chromium tests: P3 4 + P4 2 + P5 audio 2",
+    "four OCI builds/start/health/DB degradation/recovery",
+    "P3/P4 regression summaries"
+  ],
+  "other_hosted_checks": "P1/P2/P3/P4 pull_request checks green; P1/P5 push checks green",
+  "speech_browser_included": false,
+  "production_provider_or_linguistic_qa_approved": false
+}

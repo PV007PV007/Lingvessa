@@ -1,0 +1,95 @@
+{
+  "memory_limit_bytes": 8589934592,
+  "standard_moss_v15_path": "NOT_RUN_RESOURCE_LIMIT",
+  "reason": "The pinned Local Transformer v1.5 BF16 checkpoint alone is 9100859544 bytes, greater than the 8 GiB memory limit before the codec/runtime. No weight download or model code execution. This assessment does not claim all quantized/offloaded variants are impossible.",
+  "models": [
+    {
+      "repository": "OpenMOSS-Team/MOSS-Audio-Tokenizer",
+      "revision": "3cd226ba2947efa357ef453bcad111b6eafba782",
+      "metadata_claimed_licence": "apache-2.0",
+      "parameters": {
+        "parameters": {
+          "F32": 1774566400
+        },
+        "total": 1774566400
+      },
+      "weights": [
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "bytes": 4998259168,
+          "sha256": "037f441ed30a0ab59f6049de83b824a1b3bd6feb7dbd46c3fbca41fc2f649f28"
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "bytes": 2100202560,
+          "sha256": "a187d73d2cda1c2d0676586d9d03c09c0a5813450266af32029c871493fc9582"
+        }
+      ]
+    },
+    {
+      "repository": "OpenMOSS-Team/MOSS-TTS-Local-Transformer-v1.5",
+      "revision": "be7766a6735b98bd793f7c79fb720b4d0f5d13b8",
+      "metadata_claimed_licence": "apache-2.0",
+      "parameters": {
+        "parameters": {
+          "BF16": 4550403584
+        },
+        "total": 4550403584
+      },
+      "weights": [
+        {
+          "path": "model.safetensors",
+          "bytes": 9100859544,
+          "sha256": "608f1ff64bc6caa9be836060fc7c78a15c4658c4a07b8d73c78d6f70d1b39c23"
+        }
+      ]
+    },
+    {
+      "repository": "OpenMOSS-Team/MOSS-VoiceGenerator",
+      "revision": "97521ec2b6f3ec5026ac1f5751f8fc302d82c2d4",
+      "metadata_claimed_licence": "apache-2.0",
+      "parameters": {
+        "parameters": {
+          "BF16": 2114118656
+        },
+        "total": 2114118656
+      },
+      "weights": [
+        {
+          "path": "model.safetensors",
+          "bytes": 4228278872,
+          "sha256": "dbe345257ff9f6cc84195bed830a268b39d5e0b728ff3ba90e715150a49b16d4"
+        }
+      ]
+    },
+    {
+      "repository": "OpenMOSS-Team/MOSS-Audio-Tokenizer-v2",
+      "revision": "f6e20e543b33d2c252a7ef71bdf8aa71e5ff9169",
+      "metadata_claimed_licence": "apache-2.0",
+      "parameters": {
+        "parameters": {
+          "F32": 2123701248
+        },
+        "total": 2123701248
+      },
+      "weights": [
+        {
+          "path": "model-00001-of-00003.safetensors",
+          "bytes": 3978639168,
+          "sha256": "2d9f9182f17b143a23937feb87c63c08221bd28e685e4bc2fa55dcdce17fcde7"
+        },
+        {
+          "path": "model-00002-of-00003.safetensors",
+          "bytes": 3992738352,
+          "sha256": "d4e48106d0254fe3b00ea0707e88fc6aee076993825e108dd9cef847f9db236e"
+        },
+        {
+          "path": "model-00003-of-00003.safetensors",
+          "bytes": 523681336,
+          "sha256": "d0449fe1b0ef1f6045946867148d8166b9a91a58d0feca4a18b641494d0b22da"
+        }
+      ]
+    }
+  ],
+  "alternative_run": "Piper CPU local audition from the already approved candidate plan"
+}

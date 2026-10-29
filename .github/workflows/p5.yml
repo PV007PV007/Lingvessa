@@ -1,0 +1,314 @@
+name: P5 media and speech
+on:
+  push:
+    branches: ['implementation/p5-*']
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+env:
+  PYTHONDONTWRITEBYTECODE: '1'
+concurrency:
+  group: p5-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  p5-private-bridge:
+    if: >-
+      github.repository == 'PV007PV007/Lingvessa' &&
+      ((github.event_name == 'push' && github.ref == 'refs/heads/implementation/p5-media-speech') ||
+      (github.event_name == 'pull_request' && github.event.pull_request.number == 5 &&
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      github.event.pull_request.head.ref == 'implementation/p5-media-speech'))
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    permissions:
+      contents: write
+    concurrency:
+      group: p5-m01-private-upload-bridge
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+          sparse-checkout: |
+            .github/actions/private-m01-bridge
+            tools/p5/public-m01-input.py
+            tools/p5/private-m01-transfer.py
+            tools/p5/stage-m01-audio.py
+            docs/p5/public-test-input-20261026/owner-scope.json
+            tools/p5/private-m01-envelope.py
+            docs/p5/integration-20261017/private-transfer-plan.json
+            docs/p5/m01-completion-20261014/owner-approval.json
+          sparse-checkout-cone-mode: false
+      - name: Receive approved private bytes using one artifact upload capability
+        if: github.event.repository.private
+        uses: ./.github/actions/private-m01-bridge
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GITHUB_HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+      - name: Verify public final-audio scope and anonymous denial of the original archive
+        if: ${{ !github.event.repository.private }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GITHUB_HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: python3 tools/p5/public-m01-input.py preflight
+  p5-input-slot:
+    needs: p5-private-bridge
+    if: >-
+      github.repository == 'PV007PV007/Lingvessa' &&
+      ((github.event_name == 'push' && github.ref == 'refs/heads/implementation/p5-media-speech') ||
+      (github.event_name == 'pull_request' && github.event.pull_request.number == 5 &&
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      github.event.pull_request.head.ref == 'implementation/p5-media-speech'))
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    env:
+      GITHUB_HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+    concurrency:
+      group: p5-m01-private-input-slot
+      cancel-in-progress: false
+    outputs:
+      release_id: ${{ steps.input.outputs.release_id }}
+      artifact_id: ${{ steps.relay.outputs.artifact-id || steps.public-relay.outputs.artifact-id }}
+      profile: ${{ github.event.repository.private && 'PRIVATE_ARCHIVE' || 'PUBLIC_APPROVED_WAVS' }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+          sparse-checkout: |
+            tools/p5/private-m01-transfer.py
+            tools/p5/public-m01-input.py
+            tools/p5/stage-m01-audio.py
+            docs/p5/public-test-input-20261026/owner-scope.json
+            docs/p5/m01-completion-20261014/owner-approval.json
+            docs/p5/m01-completion-attribution.md
+            assets/media/m01/source-all-assets.json
+            assets/media/m01/records
+          sparse-checkout-cone-mode: false
+      - name: Prepare idempotent private draft input container (never publish)
+        if: github.event.repository.private
+        id: input
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 tools/p5/private-m01-transfer.py prepare
+      - name: Read approved draft input in isolated transport job
+        if: github.event.repository.private
+        env:
+          GH_TOKEN: ${{ github.token }}
+          P5_M01_RELEASE_ID: ${{ steps.input.outputs.release_id }}
+          P5_M01_TRANSFER_DIR: ${{ runner.temp }}/p5-private-m01
+        run: python3 tools/p5/private-m01-transfer.py download
+      - name: Relay private input to tests for one day only
+        if: github.event.repository.private
+        id: relay
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: p5-private-input-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/p5-private-m01/*
+          if-no-files-found: error
+          retention-days: 1
+          compression-level: 0
+      - name: Export only the 420 approved WAVs; keep the original ZIP unpublished
+        if: ${{ !github.event.repository.private }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          P5_M01_TRANSFER_DIR: ${{ runner.temp }}/p5-approved-m01
+        run: python3 tools/p5/public-m01-input.py export
+      - name: Relay owner-authorized final WAVs for one day only
+        if: ${{ !github.event.repository.private }}
+        id: public-relay
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: p5-approved-audio-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/p5-approved-m01/*
+          if-no-files-found: error
+          retention-days: 1
+          compression-level: 0
+  p5-exit:
+    needs: p5-input-slot
+    if: ${{ !cancelled() && (needs.p5-input-slot.result == 'success' || needs.p5-input-slot.result == 'skipped') }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    env:
+      NEXT_TELEMETRY_DISABLED: '1'
+      GITHUB_HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version-file: .node-version
+      - run: npm install --global pnpm@11.19.0
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm validate:baseline
+      - run: pnpm check
+      - name: Verify private transfer credential and integrity boundaries
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          python3 tests/unit/p5-private-transfer.test.py
+          python3 tests/unit/p5-private-relay.test.py
+          python3 tests/unit/p5-private-envelope.test.py
+          node --test tests/unit/p5-private-bridge.test.mjs
+          python3 tests/unit/p5-public-input.test.py
+      - name: Receive same-run private input relay outside the checkout
+        if: needs.p5-input-slot.outputs.artifact_id != ''
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          artifact-ids: ${{ needs.p5-input-slot.outputs.artifact_id }}
+          path: ${{ runner.temp }}/p5-private-m01
+          merge-multiple: true
+      - name: Bind relay to exact source and verify approved archive again
+        if: needs.p5-input-slot.outputs.profile != 'PUBLIC_APPROVED_WAVS'
+        env:
+          P5_M01_RELEASE_ID: ${{ needs.p5-input-slot.outputs.release_id }}
+          P5_M01_TRANSFER_DIR: ${{ runner.temp }}/p5-private-m01
+        run: python3 tools/p5/private-m01-transfer.py receive
+      - name: Verify all final WAVs against immutable records and the same-run receipt
+        if: needs.p5-input-slot.outputs.profile == 'PUBLIC_APPROVED_WAVS'
+        env:
+          P5_M01_TRANSFER_DIR: ${{ runner.temp }}/p5-private-m01
+        run: python3 tools/p5/public-m01-input.py receive
+      - run: pnpm validate:references
+      - name: Validate reference media draft identities, scripts and generated bytes
+        run: |
+          python3 tools/p5/normalize-flags.py --check
+          node --import tsx tools/p5/reference-media.ts --check
+      - name: Verify owner-authorized local voice audition bytes and language provenance
+        run: |
+          mkdir -p artifacts/p5
+          python3 tools/p5/voice-audition.py --verify-only > artifacts/p5/voice-audition-validation.json
+          cat artifacts/p5/voice-audition-validation.json
+      - name: Verify retained Czech Pocket audition and diagnostic provenance
+        run: |
+          python3 tools/p5/pocket-audition.py --verify-only > artifacts/p5/pocket-audition-validation.json
+          cat artifacts/p5/pocket-audition-validation.json
+      - name: Verify bounded Czech case trial and held-out text evidence
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          python3 tools/p5/pocket-case-trial.py --verify-only > artifacts/p5/pocket-case-validation.json
+          python3 tools/p5/pocket-case-holdout.py --verify-only > artifacts/p5/pocket-case-holdout-validation.json
+          cat artifacts/p5/pocket-case-validation.json artifacts/p5/pocket-case-holdout-validation.json
+      - name: Audit production dependencies and retain the complete report
+        run: |
+          set +e
+          pnpm audit --prod --json --audit-level high > artifacts/p5/dependency-audit.json
+          audit_status=$?
+          set -e
+          cat artifacts/p5/dependency-audit.json
+          exit "$audit_status"
+      - name: Verify unpublished M01 authoring metadata (external WAV bytes excluded)
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          python3 tools/p5/verify-m01-audio-draft.py --metadata-only > artifacts/p5/m01-audio-draft-validation.json
+          cat artifacts/p5/m01-audio-draft-validation.json
+      - name: Validate M01 feedback intake with artificial notes and unchanged catalog identities
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: python3 tests/unit/p5-m01-feedback.test.py --report artifacts/p5/m01-feedback-validation.json
+      - name: Install audio inspection tool with bounded package-network waits
+        timeout-minutes: 10
+        run: |
+          sudo tee /etc/apt/apt.conf.d/99lingvessa-network-timeouts >/dev/null <<'APT'
+          Acquire::Retries "2";
+          Acquire::http::Timeout "30";
+          Acquire::https::Timeout "30";
+          APT
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends ffmpeg
+          ffmpeg -version
+      - name: Verify immutable M01 continuation using synthetic tones only
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          python3 tests/unit/p5-m01-continuation.test.py --report artifacts/p5/m01-continuation-validation.json
+          python3 tools/p5/continue-m01-audio.py plan --metadata-only --output artifacts/p5/m01-continuation-plan.json
+      - name: Verify completed M01 metadata and blind dialogue crosscheck
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          python3 tools/p5/complete-m01-audio.py metadata --report artifacts/p5/m01-completion-validation.json
+          python3 tests/unit/p5-m01-completion.test.py --report artifacts/p5/m01-completion-tests.json
+          python3 tools/p5/crosscheck-m01-dialogues.py verify --report artifacts/p5/m01-dialogue-crosscheck-validation.json
+      - name: Verify approved-media registry and actual SVG bytes
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          python3 tools/p5/build-approved-media.py --check --metadata-only
+          node --import tsx tools/p5/verify-approved-media-metadata.ts
+          node --import tsx tools/p5/prepare-m01-publication.ts
+      - name: Verify retained acoustic pilot (402 single-turn files, no inference)
+        run: python3 tools/p5/calibrate-acoustic.py verify --report artifacts/p5/acoustic-pilot-validation.json
+      - name: Install Chromium with bounded package-network waits
+        timeout-minutes: 10
+        run: pnpm exec playwright install --with-deps chromium
+      - name: Build and exercise the unchanged 30-item visual review packet
+        run: |
+          python3 tools/p5/build-visual-review.py
+          pnpm exec playwright test --config tools/p5/visual-review.playwright.config.ts
+      - name: Build and exercise the offline human listening worksheet
+        run: |
+          python3 tools/p5/build-listening-review.py
+          pnpm exec playwright test --config tools/p5/listening.playwright.config.ts
+      - name: Verify M01 review catalog and exercise the interface on explicit audition fixtures
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          python3 tools/p5/build-m01-review.py --mode catalog
+          python3 tools/p5/build-m01-review.py --mode fixture
+          pnpm exec playwright test --config tools/p5/m01-review.playwright.config.ts
+      - name: Build pinned standalone S3 protocol test server
+        run: go install github.com/minio/minio@9e49d5e7a648f00e26f2246f4dc28e6b07f8c84a
+      - name: Verify actual S3 adapter and restart recovery
+        run: MINIO_BINARY="$(go env GOPATH)/bin/minio" node --import tsx tools/p5/storage-gate.ts
+      - run: pnpm bootstrap:local
+      - name: Exercise importer with PostgreSQL and restarted S3 (explicit synthetic vectors)
+        run: MINIO_BINARY="$(go env GOPATH)/bin/minio" node --env-file=.local/runtime.env --import tsx tools/p5/verify-m01-s3-import.ts --synthetic
+      - name: Stage checksum-approved external M01 package if configured
+        if: env.P5_M01_AUDIO_ROOT == ''
+        env:
+          P5_M01_AUDIO_ARCHIVE_URL: ${{ secrets.P5_M01_AUDIO_ARCHIVE_URL }}
+        run: python3 tools/p5/stage-m01-audio.py
+      - name: Verify actual M01 bytes, PostgreSQL import and S3 recovery
+        if: env.P5_M01_AUDIO_ROOT != ''
+        run: |
+          node --import tsx tools/p5/verify-external-m01.ts
+          MINIO_BINARY="$(go env GOPATH)/bin/minio" node --env-file=.local/runtime.env --import tsx tools/p5/verify-m01-s3-import.ts --real-m01
+      - run: node --env-file=.local/runtime.env --import tsx --test tests/integration/*.test.ts
+        env:
+          P3_BROWSER_TESTS: 'true'
+          P4_BROWSER_TESTS: 'true'
+          P5_BROWSER_TESTS: 'true'
+      - run: pnpm test:containers
+      - run: node --import tsx tools/p3/acceptance-summary.ts
+      - run: node --import tsx tools/p4/acceptance-summary.ts
+      - name: Bind P5 runtime evidence to the exact source and retain open media gates
+        run: node --import tsx tools/p5/acceptance-summary.ts
+      - name: Sanitized migration diagnostics on failure
+        if: failure()
+        run: |
+          if test -f .local/runtime.env; then
+            node --env-file=.local/runtime.env --import tsx tools/p2/sql-diagnostics.ts
+          fi
+      - name: Preserve P5 batch and regression evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: p5-${{ github.event.pull_request.head.sha || github.sha }}-${{ github.event_name }}
+          path: |
+            artifacts/p1/*.json
+            artifacts/p2/*
+            artifacts/p3/*
+            artifacts/p4/*
+            artifacts/p5/*
+          if-no-files-found: error
+          retention-days: 14

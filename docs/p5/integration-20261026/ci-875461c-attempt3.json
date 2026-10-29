@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-10-26",
+  "tested_sha": "875461ca57f72928815014806773ec34751459a1",
+  "status": "FAILED_NOT_MILESTONE",
+  "run_id": 39811276331,
+  "run_attempt": 3,
+  "run_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/39811276331/attempts/3",
+  "execution_date": "2026-10-25",
+  "repository_private_observed": false,
+  "previous_pre_runner_block": "This attempt acquired runners; it does not prove Actions billing/availability for a private repository.",
+  "jobs": [
+    {
+      "id": 121201918453,
+      "name": "p5-private-bridge",
+      "conclusion": "failure",
+      "runner_id": 1000000510,
+      "failed_steps": [
+        "Receive approved private bytes using one artifact upload capability"
+      ]
+    },
+    {
+      "id": 121201943671,
+      "name": "p5-exit",
+      "conclusion": "failure",
+      "runner_id": 1000000511,
+      "failed_steps": [
+        "Run pnpm check"
+      ]
+    },
+    {
+      "id": 121201944569,
+      "name": "p5-input-slot",
+      "conclusion": "skipped",
+      "runner_id": null,
+      "failed_steps": []
+    }
+  ],
+  "private_bridge": {
+    "status": "PRIVATE_BRIDGE_FAILED",
+    "phase": "preflight",
+    "http_status": null,
+    "exact_failed_assertion": "not exposed by sanitized log",
+    "known_incompatible_precondition": "The unchanged bridge requires the repository API to report private=true; current public visibility cannot satisfy this.",
+    "private_input_job": "skipped",
+    "real_m01": "not executed"
+  },
+  "secret_scan": {
+    "source_files": 835,
+    "history_blobs": 1423,
+    "findings": [
+      {
+        "location": "tests/unit/p5-private-transfer.test.py",
+        "rule": "credential-url"
+      },
+      {
+        "location": "history:cc66e56ea1bf:tests/unit/p5-private-transfer.test.py",
+        "rule": "credential-url"
+      }
+    ],
+    "reviewed_historical_fixture": "history:780657b00344:tests/unit/p5-private-transfer.test.py",
+    "current_fixture_sha256": "cd8b53b86ef581355954b93a7e0aaf9e782e8652e30a0613777f00b3e4e7109f",
+    "review_scope": "Complete Python test file reviewed. Only a deliberately invalid redirect URL triggers this rule; network operations are mocked."
+  },
+  "passed_before_failure": [
+    "frozen dependency installation",
+    "baseline validation",
+    "Prisma generation and validation",
+    "peer dependencies",
+    "lint",
+    "full typecheck",
+    "dependency boundaries"
+  ],
+  "approved_input": {
+    "draft_verified": true,
+    "published": false,
+    "uploaded_asset_metadata_matches_approved_record": true,
+    "change": "none; metadata rechecked 2026-10-26",
+    "private_identifiers": "omitted from current public execution report"
+  },
+  "artifact_metadata": {
+    "id": 12603097098,
+    "name": "p5-875461ca57f72928815014806773ec34751459a1-pull_request",
+    "bytes": 3573,
+    "digest": "sha256:79f27bfc9b90cf40ef2b3d50bee7b63f0ba2746e52fbe9406c01fdda73cd03c9",
+    "content_audit": "not performed for this failed attempt; no runtime acceptance claim"
+  },
+  "last_full_runtime_pass_sha": "96cc9607c3a05481dddd9f8e6c763d8241db26eb",
+  "remaining": [
+    "Current-source seven workflows, 31 runtime gates, both real M01 runs and artifact audits",
+    "Approved private test context",
+    "OD-004 production delivery profile",
+    "OD-006 labelled learner-error calibration/policy",
+    "Full applicable reference publication/objective accessibility",
+    "Remaining P5 clause applicability/evidence review"
+  ]
+}

@@ -1,0 +1,722 @@
+[
+  {
+    "asset_id": "ee63dc05-9ee1-5588-83ed-ce624a033245",
+    "audio_sha256": "3d9116c281bea7d8f062a2199f17724a924aaf5154126d31393991f723c43c88",
+    "status": "SCREENED",
+    "expected": "Dobrý den.",
+    "transcript": "Do býden.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Do býden.",
+        "avg_logprob": -0.6655447408556938,
+        "no_speech_prob": 0.2070312201976776
+      }
+    ],
+    "word_edits": 2,
+    "reference_words": 2,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.697
+  },
+  {
+    "asset_id": "fe781f4d-6d55-56c1-96a3-c900c0254274",
+    "audio_sha256": "bdd6c07ceb25e1539530e7867008ae163bfff04420d8ccf67bb6a28f6c356cba",
+    "status": "SCREENED",
+    "expected": "Dobrý den.",
+    "transcript": "Byl být den.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Byl být den.",
+        "avg_logprob": -0.8031686067581176,
+        "no_speech_prob": 0.08743473887443542
+      }
+    ],
+    "word_edits": 2,
+    "reference_words": 2,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.709
+  },
+  {
+    "asset_id": "cbca570d-a25e-51b5-a13f-4b71c462bd98",
+    "audio_sha256": "c147a6e0dbe37a0c794dfcc407750b92f6d40376266c9dce94a61c50095f157b",
+    "status": "SCREENED",
+    "expected": "Ahoj.",
+    "transcript": "Ahoj.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Ahoj.",
+        "avg_logprob": -0.4832547732761928,
+        "no_speech_prob": 0.11694381386041641
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 1,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.59
+  },
+  {
+    "asset_id": "92fd013b-b659-5ee8-9b16-3cfbc025e822",
+    "audio_sha256": "2cad0db22a950d6198c842ee51ccded009918d090008e79eef827cb570a89a76",
+    "status": "SCREENED",
+    "expected": "Ahoj.",
+    "transcript": "Ahoj.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Ahoj.",
+        "avg_logprob": -0.450363176209586,
+        "no_speech_prob": 0.21212783455848694
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 1,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.589
+  },
+  {
+    "asset_id": "6cc269a2-8da1-5c6e-951a-b75c83861048",
+    "audio_sha256": "5d5b322afd314bf2a5c2f197ee79bd68d4cd1ed8da73f47268569fa71f30687d",
+    "status": "SCREENED",
+    "expected": "Na shledanou.",
+    "transcript": "Nasledanou.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Nasledanou.",
+        "avg_logprob": -0.5783972814679146,
+        "no_speech_prob": 0.2045522779226303
+      }
+    ],
+    "word_edits": 2,
+    "reference_words": 2,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.616
+  },
+  {
+    "asset_id": "5b0954f3-d1a7-5332-a444-fedc1b717463",
+    "audio_sha256": "27cc1b60c133cec380493807b454555550b6a21e28a62e57f2cd7f9ff5903c4d",
+    "status": "SCREENED",
+    "expected": "Na shledanou.",
+    "transcript": "Naschledanou.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Naschledanou.",
+        "avg_logprob": -0.6058584849039713,
+        "no_speech_prob": 0.2073563188314438
+      }
+    ],
+    "word_edits": 2,
+    "reference_words": 2,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.699
+  },
+  {
+    "asset_id": "6dc192a7-7382-59ac-b2f0-867d14875cc8",
+    "audio_sha256": "c87edcfeaa5f0858d54179cad0860acda38e0a84f73633934a682961c0028414",
+    "status": "SCREENED",
+    "expected": "Děkuji.",
+    "transcript": "Děkuj.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Děkuj.",
+        "avg_logprob": -0.46591974049806595,
+        "no_speech_prob": 0.06607817858457565
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 1,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.687
+  },
+  {
+    "asset_id": "9fa571e9-1323-5cf6-bb04-082c54c19e68",
+    "audio_sha256": "cb6d4db8f623d62255eabf6cd3609d716a1d3a4d644a2d63094f715de1bbad74",
+    "status": "SCREENED",
+    "expected": "Děkuji.",
+    "transcript": "Děkuj.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Děkuj.",
+        "avg_logprob": -0.5388089567422867,
+        "no_speech_prob": 0.05584792047739029
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 1,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.619
+  },
+  {
+    "asset_id": "9b4e9eac-20cb-56e3-88e6-55703f171233",
+    "audio_sha256": "f995bbda823ab1e63e5d8872e430201d24bc8004a634f50caeab1259704086c7",
+    "status": "SCREENED",
+    "expected": "Prosím.",
+    "transcript": "Pro sím.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Pro sím.",
+        "avg_logprob": -0.717356698853629,
+        "no_speech_prob": 0.14324034750461578
+      }
+    ],
+    "word_edits": 2,
+    "reference_words": 1,
+    "diagnostic_wer": 2.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.917
+  },
+  {
+    "asset_id": "0b728afd-56e1-5ec6-9858-be9fedaeb097",
+    "audio_sha256": "859a0ec8937d5aa831873e68110ff72ba31bab68f88564aa2b92a9ed93490437",
+    "status": "SCREENED",
+    "expected": "Prosím.",
+    "transcript": "Pro sím.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Pro sím.",
+        "avg_logprob": -0.6788839101791382,
+        "no_speech_prob": 0.17626070976257324
+      }
+    ],
+    "word_edits": 2,
+    "reference_words": 1,
+    "diagnostic_wer": 2.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.632
+  },
+  {
+    "asset_id": "9f2ba75b-e1f2-522b-8810-a50349db21d9",
+    "audio_sha256": "7e70a5ace5e4fa6dfe319238362a52ef97d638efdd29428d9e13bcdbb361141d",
+    "status": "SCREENED",
+    "expected": "Promiňte.",
+    "transcript": "Promete.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Promete.",
+        "avg_logprob": -0.8082385744367327,
+        "no_speech_prob": 0.18221978843212128
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 1,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.634
+  },
+  {
+    "asset_id": "64662e0b-91be-5588-8326-7e5e20a630fd",
+    "audio_sha256": "0aec4a93ea11589ae837122d448cfb518aa18240169fd6b1b24d009b6f0bdcf3",
+    "status": "SCREENED",
+    "expected": "Promiňte.",
+    "transcript": "Prominte.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Prominte.",
+        "avg_logprob": -0.6930103401343027,
+        "no_speech_prob": 0.21181894838809967
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 1,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.676
+  },
+  {
+    "asset_id": "4b2f3a32-f0bb-5e0a-90e5-7dad57671787",
+    "audio_sha256": "392965518b0d4643031b3fa9e0c71ecd679ae7cec038d313abb3f8b377572ef0",
+    "status": "SCREENED",
+    "expected": "Nerozumím.",
+    "transcript": "Nerozumím.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Nerozumím.",
+        "avg_logprob": -0.3828616142272949,
+        "no_speech_prob": 0.26363465189933777
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 1,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.699
+  },
+  {
+    "asset_id": "93caeba8-cdf8-5662-8d1d-3beb41ea208c",
+    "audio_sha256": "b6afc9e6d0a4a027b39741dece9933a40fe5530c8068603eacc8a9832bb914e9",
+    "status": "SCREENED",
+    "expected": "Nerozumím.",
+    "transcript": "Nerozumím.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Nerozumím.",
+        "avg_logprob": -0.35032102796766496,
+        "no_speech_prob": 0.24292679131031036
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 1,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.66
+  },
+  {
+    "asset_id": "c691d7bb-5a29-51fc-a812-f473795e9674",
+    "audio_sha256": "8d0b6bf4a981ec312bfc1d39727bdeaa86b944b5def8bf1aa8018a8c89279548",
+    "status": "SCREENED",
+    "expected": "Můžete to zopakovat, prosím?",
+    "transcript": "Můžete to zopakovat, prosím.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Můžete to zopakovat, prosím.",
+        "avg_logprob": -0.3478296473622322,
+        "no_speech_prob": 0.014037971384823322
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 4,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.797
+  },
+  {
+    "asset_id": "fba99cf1-489f-5fe0-b836-558eba641b68",
+    "audio_sha256": "558922ddb49a66748c55e7c2cc84d5a5479cc4156154a39ef295246ce308d32a",
+    "status": "SCREENED",
+    "expected": "Můžete to zopakovat, prosím?",
+    "transcript": "Můžete to zopakovat, prosím.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Můžete to zopakovat, prosím.",
+        "avg_logprob": -0.2791538368910551,
+        "no_speech_prob": 0.010286114178597927
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 4,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.808
+  },
+  {
+    "asset_id": "414bc03d-8847-542d-8299-8f9c71355f7a",
+    "audio_sha256": "7ccf2575e46229cf1356412705f255bed8236c965c9e9e562054d4c69319d9cf",
+    "status": "SCREENED",
+    "expected": "Jak se jmenujete?",
+    "transcript": "jak se menujete.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " jak se menujete.",
+        "avg_logprob": -0.5091682540045844,
+        "no_speech_prob": 0.3034196197986603
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 3,
+    "diagnostic_wer": 0.3333333333333333,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.792
+  },
+  {
+    "asset_id": "42fc4222-5ba0-51e2-a1cd-2c01a48a3e6d",
+    "audio_sha256": "bea5e0965bbde3ef847726a1f76d370ae1213384051e7e1d18318e89f2dd16b4",
+    "status": "SCREENED",
+    "expected": "Jak se jmenujete?",
+    "transcript": "jak se menujete.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " jak se menujete.",
+        "avg_logprob": -0.445656246609158,
+        "no_speech_prob": 0.33849823474884033
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 3,
+    "diagnostic_wer": 0.3333333333333333,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.956
+  },
+  {
+    "asset_id": "a0a4a05d-b41e-566e-977e-eba4b1f29c9d",
+    "audio_sha256": "ebe1e89114dacf55fa70e6395d4b872d8fbe2570b90e896d4a6c85428189d2ea",
+    "status": "SCREENED",
+    "expected": "Jak se jmenuješ?",
+    "transcript": "Jak se menu ještě.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Jak se menu ještě.",
+        "avg_logprob": -0.5645951976378759,
+        "no_speech_prob": 0.2528086304664612
+      }
+    ],
+    "word_edits": 2,
+    "reference_words": 3,
+    "diagnostic_wer": 0.6666666666666666,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.922
+  },
+  {
+    "asset_id": "f33b9f47-72a8-596b-a207-8ae54fe49e5e",
+    "audio_sha256": "5d3b087a95ef12fa84d3f1a17e8e6e4c692e6d0db054e985103e8787023cca8f",
+    "status": "SCREENED",
+    "expected": "Jak se jmenuješ?",
+    "transcript": "Jak se menu ještě.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Jak se menu ještě.",
+        "avg_logprob": -0.6527122457822164,
+        "no_speech_prob": 0.25981903076171875
+      }
+    ],
+    "word_edits": 2,
+    "reference_words": 3,
+    "diagnostic_wer": 0.6666666666666666,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.836
+  },
+  {
+    "asset_id": "bab1bdc8-fda3-5cda-a7cc-c379cee0214e",
+    "audio_sha256": "4841b8e00e890c0c8df554d5a4b77efc7eec2dddde31c8198f4ece7ffc984219",
+    "status": "SCREENED",
+    "expected": "Jmenuji se Oksana.",
+    "transcript": "Menuj se Oksana.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Menuj se Oksana.",
+        "avg_logprob": -0.5526605844497681,
+        "no_speech_prob": 0.09819386899471283
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 3,
+    "diagnostic_wer": 0.3333333333333333,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.772
+  },
+  {
+    "asset_id": "21f39a74-9e11-5dcb-931e-b5a83d02e4c0",
+    "audio_sha256": "d2d9c840007dd06188b05ef954be7da4e668a0f8ef7d28d3ee8491696ca7668f",
+    "status": "SCREENED",
+    "expected": "Jmenuji se Oksana.",
+    "transcript": "Menuj se oxana.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Menuj se oxana.",
+        "avg_logprob": -0.6373588773939345,
+        "no_speech_prob": 0.16566024720668793
+      }
+    ],
+    "word_edits": 2,
+    "reference_words": 3,
+    "diagnostic_wer": 0.6666666666666666,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.931
+  },
+  {
+    "asset_id": "b6c374c9-f626-55d4-9b46-ceea7a85e3f0",
+    "audio_sha256": "308756b811b473a5995b012dca11fbce231159ed3e52f977fef62e8dbb4a12ff",
+    "status": "SCREENED",
+    "expected": "Jmenuji se Adam.",
+    "transcript": "Menuj se, Adam.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Menuj se, Adam.",
+        "avg_logprob": -0.5650574366251627,
+        "no_speech_prob": 0.10290270298719406
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 3,
+    "diagnostic_wer": 0.3333333333333333,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.956
+  },
+  {
+    "asset_id": "0251ed5d-0481-55c1-af50-b5a90a6d5584",
+    "audio_sha256": "eddfeba49814463b5c4bb3e4607bfc78d3941731befa98fd3b1b35b770f288e8",
+    "status": "SCREENED",
+    "expected": "Jmenuji se Adam.",
+    "transcript": "Menuj se, Adam.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Menuj se, Adam.",
+        "avg_logprob": -0.4580937491522895,
+        "no_speech_prob": 0.16386385262012482
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 3,
+    "diagnostic_wer": 0.3333333333333333,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.978
+  },
+  {
+    "asset_id": "ba7a2ef6-d1b5-5825-8690-024264f9e331",
+    "audio_sha256": "4e7105f6ecddb2027892cc4a34848804a25719f680385d5aa185b2c1bd6ecbd5",
+    "status": "SCREENED",
+    "expected": "Těší mě.",
+    "transcript": "Děši mě.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Děši mě.",
+        "avg_logprob": -0.5621005117893219,
+        "no_speech_prob": 0.35353589057922363
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 2,
+    "diagnostic_wer": 0.5,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 2.052
+  },
+  {
+    "asset_id": "9e2bf6ef-dbfa-5c64-8749-44006458fc2d",
+    "audio_sha256": "fe922ba92b78dc6324d81309178ce971a8eebef7dd95bf5fd1c5b935315f622b",
+    "status": "SCREENED",
+    "expected": "Těší mě.",
+    "transcript": "Děši mě.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Děši mě.",
+        "avg_logprob": -0.5443977177143097,
+        "no_speech_prob": 0.4283684492111206
+      }
+    ],
+    "word_edits": 1,
+    "reference_words": 2,
+    "diagnostic_wer": 0.5,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.899
+  },
+  {
+    "asset_id": "154332fb-f931-5e20-b6e7-f8964dd41ec7",
+    "audio_sha256": "3fc20351d8202ec83e57e2e43325d3e063975150a4e8326dfa1846af3924f373",
+    "status": "SCREENED",
+    "expected": "Mě také.",
+    "transcript": "Nětaké.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Nětaké.",
+        "avg_logprob": -0.5268197589450412,
+        "no_speech_prob": 0.08094396442174911
+      }
+    ],
+    "word_edits": 2,
+    "reference_words": 2,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.65
+  },
+  {
+    "asset_id": "0b8b451a-62fa-5471-913c-3325a6c3e3f7",
+    "audio_sha256": "6903751f78b43d67523e79e9d0395e8e1b16e9395bfff81513975669a5df39f2",
+    "status": "SCREENED",
+    "expected": "Mě také.",
+    "transcript": "Nětaké.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Nětaké.",
+        "avg_logprob": -0.39347463183932835,
+        "no_speech_prob": 0.16225674748420715
+      }
+    ],
+    "word_edits": 2,
+    "reference_words": 2,
+    "diagnostic_wer": 1.0,
+    "review_flag": "ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.643
+  },
+  {
+    "asset_id": "39d7088b-0e67-5345-ab3c-e3c8a8aafc89",
+    "audio_sha256": "55b3b913c439eb9dfce3a2970084aabd5eea731832deb6143ce8bfb9962ad1d4",
+    "status": "SCREENED",
+    "expected": "Taky mě těší.",
+    "transcript": "Taky mě těší.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Taky mě těší.",
+        "avg_logprob": -0.4596012830734253,
+        "no_speech_prob": 0.192988321185112
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 3,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.744
+  },
+  {
+    "asset_id": "f60bd0aa-cb61-5643-87ed-1701eb90dac6",
+    "audio_sha256": "171b8472afa75c63c975082f2510f84b87e34a91bbb8da9017b55f27a2ed83c9",
+    "status": "SCREENED",
+    "expected": "Taky mě těší.",
+    "transcript": "Taky mě těší.",
+    "language": "cs",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "text": " Taky mě těší.",
+        "avg_logprob": -0.4950093681162054,
+        "no_speech_prob": 0.08603556454181671
+      }
+    ],
+    "word_edits": 0,
+    "reference_words": 3,
+    "diagnostic_wer": 0.0,
+    "review_flag": "NO_ASR_DISCREPANCY",
+    "human_review": "PENDING",
+    "pronunciation_quality_asserted": false,
+    "elapsed_seconds": 1.712
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "source_sha": null,
+  "working_tree_dirty": null,
+  "scope": "FEEDBACK_INTAKE_TESTS",
+  "tests_run": 10,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "validator_sha256": "81ccc42c538cb0a27b2a6706b4a470415f51193de315395e3549e50b88bda272",
+  "test_sha256": "8a8a095ecaec0aae657289215075e132f772c5d4680a79989a7105bcfc912e6a",
+  "catalog_builder_sha256": "9bcb86a13020b6011329492a9c0315fbd6704f6f4baf04dcda5abb7ca470927c",
+  "catalog_dataset_sha256": "395cd8dc727afdd632a8d868aefcafcad9714b758dba8aa80bdd38b5f219a0ef",
+  "catalog_counts": {
+    "slots": 420,
+    "pairs": 210,
+    "available": 216,
+    "missing": 204,
+    "flagged": 109
+  },
+  "real_human_feedback_processed": false,
+  "human_review": "PENDING",
+  "publication_ready": false,
+  "p5_milestone": "NOT_READY",
+  "p6_authorized": false,
+  "local_scope": "Verified source subset; source SHA and working-tree state are null. No local full-project or browser execution.",
+  "initial_negative_test_correction": "The initial decoder test exposed that this runtime could parse 2,000 nested arrays; the validator now enforces a maximum JSON nesting depth of 12. All ten tests passed after that correction."
+}

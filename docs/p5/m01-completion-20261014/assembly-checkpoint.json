@@ -1,0 +1,9 @@
+{
+  "kind": "VERIFIED_ASSEMBLY_CHECKPOINT",
+  "script_sha256": "fa166866862d153f9a48217daac6b37bc8743607bc30c759d62b68d665a1fce2",
+  "marker_sha256": "f8cab09af291a990d725fe07e76a5feeb82ed40670595ad174631a2c145c1ad1",
+  "assembly_sha256": "c714ab135a963ea541ef1f7326d27925aa02fd51fb19c6ca406d53ff1fb05ae8",
+  "all_420_pcm_and_cues_verified": true,
+  "synthesis_repeated": false,
+  "explanation": "Original incomplete marker retained separately after exact comparison of every final PCM stream and cue with the validated sources. No completion timestamp invented."
+}

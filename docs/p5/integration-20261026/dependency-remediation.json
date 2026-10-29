@@ -1,0 +1,114 @@
+{
+  "phase": "P5",
+  "date": "2026-10-26",
+  "base_sha": "6998b70a8ff9401db2d931fe483bd7288fa7311d",
+  "reason": "Unchanged production audit failed in all seven workflows after scanner correction passed.",
+  "updates": [
+    {
+      "package": "next",
+      "from": "16.3.8",
+      "to": "16.4.1",
+      "scope": [
+        "apps/web",
+        "apps/admin"
+      ],
+      "advisories": [
+        "GHSA-2464-fhr4-w9xw",
+        "GHSA-673q-mjm6-r5xr",
+        "GHSA-p3m5-59mp-jv5r"
+      ]
+    },
+    {
+      "package": "zod",
+      "from": "4.6.2",
+      "to": "4.6.6",
+      "scope": [
+        "root"
+      ],
+      "advisories": [
+        "GHSA-mrhx-c7xc-m3w5"
+      ]
+    },
+    {
+      "package": "multer",
+      "from": "2.4.0",
+      "to": "2.5.0",
+      "scope": [
+        "@nestjs/platform-express@12.0.1>multer"
+      ],
+      "advisories": [
+        "GHSA-q7qp-rjg7-q26m"
+      ]
+    },
+    {
+      "package": "body-parser",
+      "from": "2.3.0",
+      "to": "2.4.0",
+      "scope": [
+        "express@5.2.1>body-parser"
+      ],
+      "advisories": [
+        "GHSA-27r3-jxmh-p828"
+      ]
+    },
+    {
+      "package": "fast-uri",
+      "from": "3.1.8",
+      "to": "3.1.9",
+      "scope": [
+        "ajv@8.20.0>fast-uri"
+      ],
+      "advisories": [
+        "GHSA-w74x-v6f9-j3xg",
+        "GHSA-xhq7-xmqj-769h",
+        "GHSA-wjr9-j795-jxcr",
+        "GHSA-333x-w4r6-6crp"
+      ]
+    }
+  ],
+  "sources": [
+    "https://github.com/vercel/next.js/security/advisories/GHSA-2464-fhr4-w9xw",
+    "https://github.com/vercel/next.js/security/advisories/GHSA-673q-mjm6-r5xr",
+    "https://github.com/advisories/GHSA-p3m5-59mp-jv5r",
+    "https://github.com/colinhacks/zod/commit/a0ebf970f2d752e5f58527cd2942ff48be4f46bd",
+    "https://github.com/expressjs/body-parser/security/advisories/GHSA-27r3-jxmh-p828",
+    "https://github.com/expressjs/multer/security/advisories/GHSA-q7qp-rjg7-q26m",
+    "https://github.com/fastify/fast-uri/security/advisories/GHSA-w74x-v6f9-j3xg"
+  ],
+  "lockfile": {
+    "generated_by": "pnpm 11.19.0",
+    "local_node": "24.22.1",
+    "mode": "lockfile-only, ignore-scripts; engine-strict overridden only for local metadata resolution, not committed or used as runtime acceptance",
+    "hosted_toolchain": "Node 24.19.0 / pnpm 11.19.0 unchanged",
+    "native_image_dependency": "sharp 0.35.5 retained",
+    "unrelated_package_records_changed": 0
+  },
+  "local_gate": {
+    "command": "pnpm audit --prod --audit-level low --json",
+    "exit_code": 0,
+    "metadata": {
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "dependencies": 134,
+      "devDependencies": 0,
+      "optionalDependencies": 173,
+      "totalDependencies": 307
+    },
+    "advisories": {},
+    "scope": "Production lockfile graph including optional packages; no zero-vulnerability claim beyond this time and graph."
+  },
+  "validation_boundary": "Full build/typecheck/browser/PostgreSQL regression must execute on the exact successor commit; no runtime result inherited from 6998b70. Private-media guard remains unchanged; real M01 not executed.",
+  "milestone": "NOT_READY",
+  "source_sha256": {
+    "package.json": "08c0aa9c8632e6286fce0b680ef74cfef3ff16eae940d6136a2896bb5681bd77",
+    "apps/web/package.json": "453488690bfab929941021ff7d42677e0e08fba4f84a2dae0c4bec2983e21044",
+    "apps/admin/package.json": "8e0b56e90a6b10070bd2e83fa341503aedee981d471d1ae39215377f62057c11",
+    "pnpm-workspace.yaml": "7782ff9047b309c2a8e8b2a96bac5b881059b5f8fbea27f172017ab84cdc2005",
+    "pnpm-lock.yaml": "a72311aab42242f3ea5688915e018ef3559396323f9c5c987eeba6f1b2d225b1"
+  }
+}

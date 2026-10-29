@@ -1,0 +1,1552 @@
+[
+  {
+    "asset_id": "8cc725ee-2eeb-5a67-90d8-36fbff0e8d4d",
+    "stable_code": "AUD_ENG_M01_DIALOGUES_L01_REPAIR_TURN_03",
+    "language": "en",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "38fafe4e-b6f1-5cbe-85ce-0e474d186948",
+    "script_hash": "74f8e6299b27fd5c65b3c7c636f035f3cc3f065118d55a8b06681bc86ddd177d",
+    "transcript": "My name is Alex.",
+    "turn_ids": [
+      "81367043-7e5e-5629-b058-03332dd99e25"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "81367043-7e5e-5629-b058-03332dd99e25",
+        "voice_id": "54f40978-e547-5905-9a7f-a65a0019285b",
+        "character_id": "c66aa126-37ef-5587-a2ed-49363ded1f55",
+        "candidate_id": "en-C-p228",
+        "text": "My name is Alex.",
+        "start_frame": 0,
+        "end_frame": 33995,
+        "start_ms": 0.0,
+        "end_ms": 1416.4583333333333,
+        "turn_sha256": "96e2387f71493e157c012e981f9ffc2d069b17f1abae9488aa7a82a1da216495"
+      }
+    ],
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L01_REPAIR_TURN_03.wav",
+    "sha256": "96e2387f71493e157c012e981f9ffc2d069b17f1abae9488aa7a82a1da216495",
+    "bytes": 68034,
+    "metrics": {
+      "frames": 33995,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.4164583333333334,
+      "peak_dbfs": -8.00278080098437,
+      "rms_dbfs": -22.00025610378762,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -21.8,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "d79642c7-c21f-5727-adf0-d3f8b030b219",
+    "stable_code": "AUD_ENG_M01_DIALOGUES_L01_REPAIR_TURN_03_SLOW",
+    "language": "en",
+    "speed": "slow",
+    "normal_asset_id": "8cc725ee-2eeb-5a67-90d8-36fbff0e8d4d",
+    "script_id": "38fafe4e-b6f1-5cbe-85ce-0e474d186948",
+    "script_hash": "74f8e6299b27fd5c65b3c7c636f035f3cc3f065118d55a8b06681bc86ddd177d",
+    "transcript": "My name is Alex.",
+    "turn_ids": [
+      "81367043-7e5e-5629-b058-03332dd99e25"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "81367043-7e5e-5629-b058-03332dd99e25",
+        "voice_id": "54f40978-e547-5905-9a7f-a65a0019285b",
+        "character_id": "c66aa126-37ef-5587-a2ed-49363ded1f55",
+        "candidate_id": "en-C-p228",
+        "text": "My name is Alex.",
+        "start_frame": 0,
+        "end_frame": 42065,
+        "start_ms": 0.0,
+        "end_ms": 1752.7083333333333,
+        "turn_sha256": "25f2614060b289920a24241c2bcd632c548f3563b2d1e36da71dcbb2f10a35a4"
+      }
+    ],
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L01_REPAIR_TURN_03_SLOW.wav",
+    "sha256": "3698087e1188345e35547c976af581049bfd29e3ed27de33d7914c935c2b7d87",
+    "bytes": 84174,
+    "metrics": {
+      "frames": 42065,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.7527083333333333,
+      "peak_dbfs": -8.076356465022354,
+      "rms_dbfs": -21.891222522662265,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -21.3,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "2dee0abd-4f8b-50d3-ab62-23991558e6b0",
+    "stable_code": "AUD_ENG_M01_DIALOGUES_L01_REPAIR_TURN_04",
+    "language": "en",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "38fafe4e-b6f1-5cbe-85ce-0e474d186948",
+    "script_hash": "89e0f7817ae441476f5d0391aab7dd014adcf8d921c0e8d7fae894d18e5ad950",
+    "transcript": "Thank you.",
+    "turn_ids": [
+      "2537354b-4bc9-5dd9-9218-0fa9086714cd"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "2537354b-4bc9-5dd9-9218-0fa9086714cd",
+        "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+        "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+        "candidate_id": "en-A-p225",
+        "text": "Thank you.",
+        "start_frame": 0,
+        "end_frame": 16162,
+        "start_ms": 0.0,
+        "end_ms": 673.4166666666666,
+        "turn_sha256": "a9232424606c8aebdc85503d5ce36738823d0a5a4030f2ce0b750f57733612f8"
+      }
+    ],
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L01_REPAIR_TURN_04.wav",
+    "sha256": "a9232424606c8aebdc85503d5ce36738823d0a5a4030f2ce0b750f57733612f8",
+    "bytes": 32368,
+    "metrics": {
+      "frames": 16162,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 0.6734166666666667,
+      "peak_dbfs": -3.6978825179344463,
+      "rms_dbfs": -22.000255268345633,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -21.8,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "1c903c0a-55ba-54d7-9293-22c4767d0f32",
+    "stable_code": "AUD_ENG_M01_DIALOGUES_L01_REPAIR_TURN_04_SLOW",
+    "language": "en",
+    "speed": "slow",
+    "normal_asset_id": "2dee0abd-4f8b-50d3-ab62-23991558e6b0",
+    "script_id": "38fafe4e-b6f1-5cbe-85ce-0e474d186948",
+    "script_hash": "89e0f7817ae441476f5d0391aab7dd014adcf8d921c0e8d7fae894d18e5ad950",
+    "transcript": "Thank you.",
+    "turn_ids": [
+      "2537354b-4bc9-5dd9-9218-0fa9086714cd"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "2537354b-4bc9-5dd9-9218-0fa9086714cd",
+        "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+        "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+        "candidate_id": "en-A-p225",
+        "text": "Thank you.",
+        "start_frame": 0,
+        "end_frame": 19776,
+        "start_ms": 0.0,
+        "end_ms": 824.0,
+        "turn_sha256": "ee6aa6baf2384db0e71d41a712d95fb1c03b3d4e20a4aa8d9f8c762fccb19c3c"
+      }
+    ],
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L01_REPAIR_TURN_04_SLOW.wav",
+    "sha256": "b755b5718a756a7f760b3e3964e9a2553eaf7b84ec7baf6821f684f4eb87d036",
+    "bytes": 39596,
+    "metrics": {
+      "frames": 19776,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 0.824,
+      "peak_dbfs": -3.706813607337761,
+      "rms_dbfs": -21.74956861535054,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -22.4,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "04d258c0-1623-58cb-9d9b-dfeccc602e49",
+    "stable_code": "AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT",
+    "language": "en",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "21d42bc5-e909-55f7-8480-818eb77ac6a1",
+    "script_hash": "1aad8a78c8a1d6ce18f43b274f2adb8038b50a9b50ed79464a7e04e8e00c6053",
+    "transcript": "Hello. I'm Maya.\nHi. I'm Daniel. Where are you from?\nI'm from Ukraine. Where are you from?\nI'm from the UK. Nice to meet you.\nNice to meet you too.\nBye.",
+    "turn_ids": [
+      "a771d57a-558c-55e7-947b-f466e5c7a893",
+      "92ce1222-e6e7-585b-8487-3aa6aa2dc94e",
+      "4ce1f705-68c6-5606-8f10-0048012589df",
+      "4578ae70-2d5d-562c-af8f-dd8520647fc5",
+      "1c2b2dfc-a627-50aa-a30f-1be9f45869b4",
+      "2beae5b6-681f-53ed-b24d-afcddd4438a4"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "a771d57a-558c-55e7-947b-f466e5c7a893",
+        "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+        "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+        "candidate_id": "en-A-p225",
+        "text": "Hello. I'm Maya.",
+        "start_frame": 0,
+        "end_frame": 30372,
+        "start_ms": 0.0,
+        "end_ms": 1265.5,
+        "turn_sha256": "e77d78dde7a9b9984899ff6892f833c2549978dc01fe507fdf588904a0a17c5c"
+      },
+      {
+        "turn_id": "92ce1222-e6e7-585b-8487-3aa6aa2dc94e",
+        "voice_id": "876c0431-a28a-531c-87c9-c7792f7c353d",
+        "character_id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+        "candidate_id": "en-B-p226",
+        "text": "Hi. I'm Daniel. Where are you from?",
+        "start_frame": 38772,
+        "end_frame": 93386,
+        "start_ms": 1615.5,
+        "end_ms": 3891.0833333333335,
+        "turn_sha256": "563334dcec56c177682672f34f2b05f69b16e3b0e0cd6f09f716c1326db28bed"
+      },
+      {
+        "turn_id": "4ce1f705-68c6-5606-8f10-0048012589df",
+        "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+        "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+        "candidate_id": "en-A-p225",
+        "text": "I'm from Ukraine. Where are you from?",
+        "start_frame": 101786,
+        "end_frame": 164202,
+        "start_ms": 4241.083333333333,
+        "end_ms": 6841.75,
+        "turn_sha256": "74ad9d4bff1d33e1b357bb9af7b9da945c541e73382f55f701c6a459fcd165bd"
+      },
+      {
+        "turn_id": "4578ae70-2d5d-562c-af8f-dd8520647fc5",
+        "voice_id": "876c0431-a28a-531c-87c9-c7792f7c353d",
+        "character_id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+        "candidate_id": "en-B-p226",
+        "text": "I'm from the UK. Nice to meet you.",
+        "start_frame": 172602,
+        "end_frame": 224987,
+        "start_ms": 7191.75,
+        "end_ms": 9374.458333333334,
+        "turn_sha256": "45e900265991e37037b8bdc99850c9a6270923286651f15365c35a30a33b7bfb"
+      },
+      {
+        "turn_id": "1c2b2dfc-a627-50aa-a30f-1be9f45869b4",
+        "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+        "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+        "candidate_id": "en-A-p225",
+        "text": "Nice to meet you too.",
+        "start_frame": 233387,
+        "end_frame": 261530,
+        "start_ms": 9724.458333333334,
+        "end_ms": 10897.083333333334,
+        "turn_sha256": "d9c2a567c8770cf383d71b77a13010e1a3a08fb9fb1734f034c348000dd280a1"
+      },
+      {
+        "turn_id": "2beae5b6-681f-53ed-b24d-afcddd4438a4",
+        "voice_id": "876c0431-a28a-531c-87c9-c7792f7c353d",
+        "character_id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+        "candidate_id": "en-B-p226",
+        "text": "Bye.",
+        "start_frame": 269930,
+        "end_frame": 281355,
+        "start_ms": 11247.083333333334,
+        "end_ms": 11723.125,
+        "turn_sha256": "04fed8e3c429ee63081619f40d1c81312a6bcfde085a9ff9ac8646c2bec742df"
+      }
+    ],
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT.wav",
+    "sha256": "969182c7623de9b7951f253b1aaa690064fc8904423a4b8141497abd57e52724",
+    "bytes": 562754,
+    "metrics": {
+      "frames": 281355,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 11.723125,
+      "peak_dbfs": -5.132901914654094,
+      "rms_dbfs": -22.702386480886982,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -22.1,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "0d68b714-696c-561b-a644-e7fe006d1c2f",
+    "stable_code": "AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_SLOW",
+    "language": "en",
+    "speed": "slow",
+    "normal_asset_id": "04d258c0-1623-58cb-9d9b-dfeccc602e49",
+    "script_id": "21d42bc5-e909-55f7-8480-818eb77ac6a1",
+    "script_hash": "1aad8a78c8a1d6ce18f43b274f2adb8038b50a9b50ed79464a7e04e8e00c6053",
+    "transcript": "Hello. I'm Maya.\nHi. I'm Daniel. Where are you from?\nI'm from Ukraine. Where are you from?\nI'm from the UK. Nice to meet you.\nNice to meet you too.\nBye.",
+    "turn_ids": [
+      "a771d57a-558c-55e7-947b-f466e5c7a893",
+      "92ce1222-e6e7-585b-8487-3aa6aa2dc94e",
+      "4ce1f705-68c6-5606-8f10-0048012589df",
+      "4578ae70-2d5d-562c-af8f-dd8520647fc5",
+      "1c2b2dfc-a627-50aa-a30f-1be9f45869b4",
+      "2beae5b6-681f-53ed-b24d-afcddd4438a4"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "a771d57a-558c-55e7-947b-f466e5c7a893",
+        "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+        "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+        "candidate_id": "en-A-p225",
+        "text": "Hello. I'm Maya.",
+        "start_frame": 0,
+        "end_frame": 37554,
+        "start_ms": 0.0,
+        "end_ms": 1564.75,
+        "turn_sha256": "b3132c5f67385303be7b820ba676d58bbcd17ef96aa40b42dab212bc35b34140"
+      },
+      {
+        "turn_id": "92ce1222-e6e7-585b-8487-3aa6aa2dc94e",
+        "voice_id": "876c0431-a28a-531c-87c9-c7792f7c353d",
+        "character_id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+        "candidate_id": "en-B-p226",
+        "text": "Hi. I'm Daniel. Where are you from?",
+        "start_frame": 48054,
+        "end_frame": 115941,
+        "start_ms": 2002.25,
+        "end_ms": 4830.875,
+        "turn_sha256": "041f6a786d29e70b018165b411dfd010835a06d65a5ae1763ff8e09d3f54a60a"
+      },
+      {
+        "turn_id": "4ce1f705-68c6-5606-8f10-0048012589df",
+        "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+        "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+        "candidate_id": "en-A-p225",
+        "text": "I'm from Ukraine. Where are you from?",
+        "start_frame": 126441,
+        "end_frame": 203977,
+        "start_ms": 5268.375,
+        "end_ms": 8499.041666666666,
+        "turn_sha256": "2798e1e1fcdd7284aae110eb0109fa26b62eaf2d0152ea5f0c6994f8c79887df"
+      },
+      {
+        "turn_id": "4578ae70-2d5d-562c-af8f-dd8520647fc5",
+        "voice_id": "876c0431-a28a-531c-87c9-c7792f7c353d",
+        "character_id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+        "candidate_id": "en-B-p226",
+        "text": "I'm from the UK. Nice to meet you.",
+        "start_frame": 214477,
+        "end_frame": 279613,
+        "start_ms": 8936.541666666666,
+        "end_ms": 11650.541666666666,
+        "turn_sha256": "eac5c3e93038fdcc11a7ace5b682f91c0712ebc47b33362d7eafaa88e7e9919e"
+      },
+      {
+        "turn_id": "1c2b2dfc-a627-50aa-a30f-1be9f45869b4",
+        "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+        "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+        "candidate_id": "en-A-p225",
+        "text": "Nice to meet you too.",
+        "start_frame": 290113,
+        "end_frame": 325014,
+        "start_ms": 12088.041666666666,
+        "end_ms": 13542.25,
+        "turn_sha256": "ec58284d5a18002fa919e635331b92498a05d05cea9b8799fa629a396f35b3f3"
+      },
+      {
+        "turn_id": "2beae5b6-681f-53ed-b24d-afcddd4438a4",
+        "voice_id": "876c0431-a28a-531c-87c9-c7792f7c353d",
+        "character_id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+        "candidate_id": "en-B-p226",
+        "text": "Bye.",
+        "start_frame": 335514,
+        "end_frame": 349291,
+        "start_ms": 13979.75,
+        "end_ms": 14553.791666666666,
+        "turn_sha256": "98ea0bb60fcaa1c2bf55e8d300ca0befc7eb6fa7cb91815dff63fc28d46cb958"
+      }
+    ],
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_SLOW.wav",
+    "sha256": "e74b93de47fbdce126e340de91844021f371bd3a78a40ad73ffdcc64eec86aa0",
+    "bytes": 698626,
+    "metrics": {
+      "frames": 349291,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 14.553791666666667,
+      "peak_dbfs": -5.167432579862989,
+      "rms_dbfs": -22.59936545751531,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -21.7,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "e3bb16bb-7a66-5bf3-8ed0-2b47292b1adc",
+    "stable_code": "AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_01",
+    "language": "en",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "21d42bc5-e909-55f7-8480-818eb77ac6a1",
+    "script_hash": "d3e2d78d3cbd0aebdb81a8a4f8afcc63cd0d255fcab84ccbb067a0915ede7635",
+    "transcript": "Hello. I'm Maya.",
+    "turn_ids": [
+      "a771d57a-558c-55e7-947b-f466e5c7a893"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "a771d57a-558c-55e7-947b-f466e5c7a893",
+        "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+        "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+        "candidate_id": "en-A-p225",
+        "text": "Hello. I'm Maya.",
+        "start_frame": 0,
+        "end_frame": 30372,
+        "start_ms": 0.0,
+        "end_ms": 1265.5,
+        "turn_sha256": "e77d78dde7a9b9984899ff6892f833c2549978dc01fe507fdf588904a0a17c5c"
+      }
+    ],
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_01.wav",
+    "sha256": "e77d78dde7a9b9984899ff6892f833c2549978dc01fe507fdf588904a0a17c5c",
+    "bytes": 60788,
+    "metrics": {
+      "frames": 30372,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.2655,
+      "peak_dbfs": -8.504543265462857,
+      "rms_dbfs": -22.00025991202361,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -22.3,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "128e178e-4578-57d8-bdec-597e0cfe2160",
+    "stable_code": "AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_01_SLOW",
+    "language": "en",
+    "speed": "slow",
+    "normal_asset_id": "e3bb16bb-7a66-5bf3-8ed0-2b47292b1adc",
+    "script_id": "21d42bc5-e909-55f7-8480-818eb77ac6a1",
+    "script_hash": "d3e2d78d3cbd0aebdb81a8a4f8afcc63cd0d255fcab84ccbb067a0915ede7635",
+    "transcript": "Hello. I'm Maya.",
+    "turn_ids": [
+      "a771d57a-558c-55e7-947b-f466e5c7a893"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "a771d57a-558c-55e7-947b-f466e5c7a893",
+        "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+        "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+        "candidate_id": "en-A-p225",
+        "text": "Hello. I'm Maya.",
+        "start_frame": 0,
+        "end_frame": 37554,
+        "start_ms": 0.0,
+        "end_ms": 1564.75,
+        "turn_sha256": "b3132c5f67385303be7b820ba676d58bbcd17ef96aa40b42dab212bc35b34140"
+      }
+    ],
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_01_SLOW.wav",
+    "sha256": "391e038a429e6517474901b72d97a74162b8778a2ab9f218d11eebea0f70f65a",
+    "bytes": 75152,
+    "metrics": {
+      "frames": 37554,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.56475,
+      "peak_dbfs": -8.525031363091381,
+      "rms_dbfs": -21.80339920636685,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -21.9,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "c182fb2b-8396-56be-918c-c20af6de3032",
+    "stable_code": "AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_02",
+    "language": "en",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "21d42bc5-e909-55f7-8480-818eb77ac6a1",
+    "script_hash": "4f06a60cb4fc7f48ada4cdc1a9f94f17818227b8d294052199699dda707481f9",
+    "transcript": "Hi. I'm Daniel. Where are you from?",
+    "turn_ids": [
+      "92ce1222-e6e7-585b-8487-3aa6aa2dc94e"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "92ce1222-e6e7-585b-8487-3aa6aa2dc94e",
+        "voice_id": "876c0431-a28a-531c-87c9-c7792f7c353d",
+        "character_id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+        "candidate_id": "en-B-p226",
+        "text": "Hi. I'm Daniel. Where are you from?",
+        "start_frame": 0,
+        "end_frame": 54614,
+        "start_ms": 0.0,
+        "end_ms": 2275.5833333333335,
+        "turn_sha256": "563334dcec56c177682672f34f2b05f69b16e3b0e0cd6f09f716c1326db28bed"
+      }
+    ],
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_02.wav",
+    "sha256": "563334dcec56c177682672f34f2b05f69b16e3b0e0cd6f09f716c1326db28bed",
+    "bytes": 109272,
+    "metrics": {
+      "frames": 54614,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 2.2755833333333335,
+      "peak_dbfs": -6.952612901651723,
+      "rms_dbfs": -22.00026586998306,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -22.2,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "c3026242-19af-525c-9a69-b875ee52375a",
+    "stable_code": "AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_02_SLOW",
+    "language": "en",
+    "speed": "slow",
+    "normal_asset_id": "c182fb2b-8396-56be-918c-c20af6de3032",
+    "script_id": "21d42bc5-e909-55f7-8480-818eb77ac6a1",
+    "script_hash": "4f06a60cb4fc7f48ada4cdc1a9f94f17818227b8d294052199699dda707481f9",
+    "transcript": "Hi. I'm Daniel. Where are you from?",
+    "turn_ids": [
+      "92ce1222-e6e7-585b-8487-3aa6aa2dc94e"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "92ce1222-e6e7-585b-8487-3aa6aa2dc94e",
+        "voice_id": "876c0431-a28a-531c-87c9-c7792f7c353d",
+        "character_id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+        "candidate_id": "en-B-p226",
+        "text": "Hi. I'm Daniel. Where are you from?",
+        "start_frame": 0,
+        "end_frame": 67887,
+        "start_ms": 0.0,
+        "end_ms": 2828.625,
+        "turn_sha256": "041f6a786d29e70b018165b411dfd010835a06d65a5ae1763ff8e09d3f54a60a"
+      }
+    ],
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_02_SLOW.wav",
+    "sha256": "3677d6182031a109654dde15e92e249ad19babfb10cf5e686375a84906384e92",
+    "bytes": 135818,
+    "metrics": {
+      "frames": 67887,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 2.828625,
+      "peak_dbfs": -6.963242901175727,
+      "rms_dbfs": -21.955315526923663,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -22.3,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "f2586133-ec08-5264-a535-18cdc219e6b6",
+    "stable_code": "AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_03",
+    "language": "en",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "21d42bc5-e909-55f7-8480-818eb77ac6a1",
+    "script_hash": "dc503e896001f849b56ccd1e310a65a36c0177bb968390ade5c25156350e45c6",
+    "transcript": "I'm from Ukraine. Where are you from?",
+    "turn_ids": [
+      "4ce1f705-68c6-5606-8f10-0048012589df"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "4ce1f705-68c6-5606-8f10-0048012589df",
+        "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+        "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+        "candidate_id": "en-A-p225",
+        "text": "I'm from Ukraine. Where are you from?",
+        "start_frame": 0,
+        "end_frame": 62416,
+        "start_ms": 0.0,
+        "end_ms": 2600.6666666666665,
+        "turn_sha256": "74ad9d4bff1d33e1b357bb9af7b9da945c541e73382f55f701c6a459fcd165bd"
+      }
+    ],
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_03.wav",
+    "sha256": "74ad9d4bff1d33e1b357bb9af7b9da945c541e73382f55f701c6a459fcd165bd",
+    "bytes": 124876,
+    "metrics": {
+      "frames": 62416,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 2.6006666666666667,
+      "peak_dbfs": -6.1811174105768885,
+      "rms_dbfs": -22.000266331699333,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -20.5,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "5cbb7f49-7d79-541a-a2a7-cb87dd255e0c",
+    "stable_code": "AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_03_SLOW",
+    "language": "en",
+    "speed": "slow",
+    "normal_asset_id": "f2586133-ec08-5264-a535-18cdc219e6b6",
+    "script_id": "21d42bc5-e909-55f7-8480-818eb77ac6a1",
+    "script_hash": "dc503e896001f849b56ccd1e310a65a36c0177bb968390ade5c25156350e45c6",
+    "transcript": "I'm from Ukraine. Where are you from?",
+    "turn_ids": [
+      "4ce1f705-68c6-5606-8f10-0048012589df"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "4ce1f705-68c6-5606-8f10-0048012589df",
+        "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+        "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+        "candidate_id": "en-A-p225",
+        "text": "I'm from Ukraine. Where are you from?",
+        "start_frame": 0,
+        "end_frame": 77536,
+        "start_ms": 0.0,
+        "end_ms": 3230.6666666666665,
+        "turn_sha256": "2798e1e1fcdd7284aae110eb0109fa26b62eaf2d0152ea5f0c6994f8c79887df"
+      }
+    ],
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_03_SLOW.wav",
+    "sha256": "8a7f9a4b86b69d0480259affd0d76b8ce3b420e0fc5b73bcc12c5a17925b6b5b",
+    "bytes": 155116,
+    "metrics": {
+      "frames": 77536,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 3.2306666666666666,
+      "peak_dbfs": -6.187600224390504,
+      "rms_dbfs": -21.877329675855396,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -20.1,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "96fbe9bb-ad37-5fb8-8dce-f5026e642620",
+    "stable_code": "AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_04",
+    "language": "en",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "21d42bc5-e909-55f7-8480-818eb77ac6a1",
+    "script_hash": "eb3fe243a4886eca6c04246f1310355a8dc036ead554bf05d115174862105464",
+    "transcript": "I'm from the UK. Nice to meet you.",
+    "turn_ids": [
+      "4578ae70-2d5d-562c-af8f-dd8520647fc5"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "4578ae70-2d5d-562c-af8f-dd8520647fc5",
+        "voice_id": "876c0431-a28a-531c-87c9-c7792f7c353d",
+        "character_id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+        "candidate_id": "en-B-p226",
+        "text": "I'm from the UK. Nice to meet you.",
+        "start_frame": 0,
+        "end_frame": 52385,
+        "start_ms": 0.0,
+        "end_ms": 2182.7083333333335,
+        "turn_sha256": "45e900265991e37037b8bdc99850c9a6270923286651f15365c35a30a33b7bfb"
+      }
+    ],
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_04.wav",
+    "sha256": "45e900265991e37037b8bdc99850c9a6270923286651f15365c35a30a33b7bfb",
+    "bytes": 104814,
+    "metrics": {
+      "frames": 52385,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 2.1827083333333333,
+      "peak_dbfs": -7.253450403249456,
+      "rms_dbfs": -22.00026180012271,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -22.3,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "670398f4-4e84-5617-8883-c2474c39b9d6",
+    "stable_code": "AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_04_SLOW",
+    "language": "en",
+    "speed": "slow",
+    "normal_asset_id": "96fbe9bb-ad37-5fb8-8dce-f5026e642620",
+    "script_id": "21d42bc5-e909-55f7-8480-818eb77ac6a1",
+    "script_hash": "eb3fe243a4886eca6c04246f1310355a8dc036ead554bf05d115174862105464",
+    "transcript": "I'm from the UK. Nice to meet you.",
+    "turn_ids": [
+      "4578ae70-2d5d-562c-af8f-dd8520647fc5"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "4578ae70-2d5d-562c-af8f-dd8520647fc5",
+        "voice_id": "876c0431-a28a-531c-87c9-c7792f7c353d",
+        "character_id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+        "candidate_id": "en-B-p226",
+        "text": "I'm from the UK. Nice to meet you.",
+        "start_frame": 0,
+        "end_frame": 65136,
+        "start_ms": 0.0,
+        "end_ms": 2714.0,
+        "turn_sha256": "eac5c3e93038fdcc11a7ace5b682f91c0712ebc47b33362d7eafaa88e7e9919e"
+      }
+    ],
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_04_SLOW.wav",
+    "sha256": "848f0be8bbb6a5b4e3984a7ed17a59e54e1294acda8ddafb97f7c56d54218f2e",
+    "bytes": 130316,
+    "metrics": {
+      "frames": 65136,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 2.714,
+      "peak_dbfs": -7.265067052510172,
+      "rms_dbfs": -21.95851498178369,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -22.0,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "f30c95b6-667a-5fcc-805e-6c8b7a0bb438",
+    "stable_code": "AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_05",
+    "language": "en",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "21d42bc5-e909-55f7-8480-818eb77ac6a1",
+    "script_hash": "4eeef9f518cc52e7f4cbe292de5ac44e940030e64eaae61751ecebdf7acaaba8",
+    "transcript": "Nice to meet you too.",
+    "turn_ids": [
+      "1c2b2dfc-a627-50aa-a30f-1be9f45869b4"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "1c2b2dfc-a627-50aa-a30f-1be9f45869b4",
+        "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+        "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+        "candidate_id": "en-A-p225",
+        "text": "Nice to meet you too.",
+        "start_frame": 0,
+        "end_frame": 28143,
+        "start_ms": 0.0,
+        "end_ms": 1172.625,
+        "turn_sha256": "d9c2a567c8770cf383d71b77a13010e1a3a08fb9fb1734f034c348000dd280a1"
+      }
+    ],
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_05.wav",
+    "sha256": "d9c2a567c8770cf383d71b77a13010e1a3a08fb9fb1734f034c348000dd280a1",
+    "bytes": 56330,
+    "metrics": {
+      "frames": 28143,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.172625,
+      "peak_dbfs": -5.132901914654094,
+      "rms_dbfs": -22.000275175471067,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -22.5,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "1b3d3d63-460d-547b-88eb-4be658508882",
+    "stable_code": "AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_05_SLOW",
+    "language": "en",
+    "speed": "slow",
+    "normal_asset_id": "f30c95b6-667a-5fcc-805e-6c8b7a0bb438",
+    "script_id": "21d42bc5-e909-55f7-8480-818eb77ac6a1",
+    "script_hash": "4eeef9f518cc52e7f4cbe292de5ac44e940030e64eaae61751ecebdf7acaaba8",
+    "transcript": "Nice to meet you too.",
+    "turn_ids": [
+      "1c2b2dfc-a627-50aa-a30f-1be9f45869b4"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "1c2b2dfc-a627-50aa-a30f-1be9f45869b4",
+        "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+        "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+        "candidate_id": "en-A-p225",
+        "text": "Nice to meet you too.",
+        "start_frame": 0,
+        "end_frame": 34901,
+        "start_ms": 0.0,
+        "end_ms": 1454.2083333333333,
+        "turn_sha256": "ec58284d5a18002fa919e635331b92498a05d05cea9b8799fa629a396f35b3f3"
+      }
+    ],
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_05_SLOW.wav",
+    "sha256": "56c500005ac3a285bc89a408a4a3070f710ef3f4dd897ab1204cfb8383dce8c7",
+    "bytes": 69846,
+    "metrics": {
+      "frames": 34901,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.4542083333333333,
+      "peak_dbfs": -5.167432579862989,
+      "rms_dbfs": -21.799175716280903,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -22.1,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "a138cfeb-7c83-5e9a-94bc-3716d237f6c2",
+    "stable_code": "AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_06",
+    "language": "en",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "21d42bc5-e909-55f7-8480-818eb77ac6a1",
+    "script_hash": "fb87f5126ca8826dd1a10c32f1fff7ef2ac6029e5adec0d53ba40caf9a6ed15c",
+    "transcript": "Bye.",
+    "turn_ids": [
+      "2beae5b6-681f-53ed-b24d-afcddd4438a4"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "2beae5b6-681f-53ed-b24d-afcddd4438a4",
+        "voice_id": "876c0431-a28a-531c-87c9-c7792f7c353d",
+        "character_id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+        "candidate_id": "en-B-p226",
+        "text": "Bye.",
+        "start_frame": 0,
+        "end_frame": 11425,
+        "start_ms": 0.0,
+        "end_ms": 476.0416666666667,
+        "turn_sha256": "04fed8e3c429ee63081619f40d1c81312a6bcfde085a9ff9ac8646c2bec742df"
+      }
+    ],
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_06.wav",
+    "sha256": "04fed8e3c429ee63081619f40d1c81312a6bcfde085a9ff9ac8646c2bec742df",
+    "bytes": 22894,
+    "metrics": {
+      "frames": 11425,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 0.47604166666666664,
+      "peak_dbfs": -7.820870704293776,
+      "rms_dbfs": -22.000259781807866,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -21.8,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "59e70595-3224-5fef-a876-1fe22f97b603",
+    "stable_code": "AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_06_SLOW",
+    "language": "en",
+    "speed": "slow",
+    "normal_asset_id": "a138cfeb-7c83-5e9a-94bc-3716d237f6c2",
+    "script_id": "21d42bc5-e909-55f7-8480-818eb77ac6a1",
+    "script_hash": "fb87f5126ca8826dd1a10c32f1fff7ef2ac6029e5adec0d53ba40caf9a6ed15c",
+    "transcript": "Bye.",
+    "turn_ids": [
+      "2beae5b6-681f-53ed-b24d-afcddd4438a4"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "2beae5b6-681f-53ed-b24d-afcddd4438a4",
+        "voice_id": "876c0431-a28a-531c-87c9-c7792f7c353d",
+        "character_id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+        "candidate_id": "en-B-p226",
+        "text": "Bye.",
+        "start_frame": 0,
+        "end_frame": 13777,
+        "start_ms": 0.0,
+        "end_ms": 574.0416666666666,
+        "turn_sha256": "98ea0bb60fcaa1c2bf55e8d300ca0befc7eb6fa7cb91815dff63fc28d46cb958"
+      }
+    ],
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_06_SLOW.wav",
+    "sha256": "7e9eb3ce10f900505eda72abacd31051a4e5fa7bae2a071046ef84d5ec119b19",
+    "bytes": 27598,
+    "metrics": {
+      "frames": 13777,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 0.5740416666666667,
+      "peak_dbfs": -7.834578570393643,
+      "rms_dbfs": -21.834920299769,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -21.0,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "4048827f-feac-5d14-998f-05855b6518e8",
+    "stable_code": "AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT",
+    "language": "en",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "b88f39d7-c639-5804-91c6-074e205407ab",
+    "script_hash": "22275cca7f82e0f9e112a38c6f6be4488d1710c20167c35b3617fa66be629fe0",
+    "transcript": "Hello. What's your name?\nMy name's Maya. Where are you from?\nI'm from the UK. Are you a student?\nYes, I am.\nNice to meet you.\nNice to meet you too.",
+    "turn_ids": [
+      "56d12820-7f44-5a47-b6eb-e50d7f09d876",
+      "0edd421d-cf58-57fe-9a89-2f04c9148fe7",
+      "2f5354a4-4b90-5b36-add3-5cc6873c7a72",
+      "5c4a4c76-2493-527b-b4d3-bf47c38d4a09",
+      "0881a745-f1de-5377-a322-e0b910230e80",
+      "aa1daee0-da45-515d-b298-e3defd41c96d"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "56d12820-7f44-5a47-b6eb-e50d7f09d876",
+        "voice_id": "876c0431-a28a-531c-87c9-c7792f7c353d",
+        "character_id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+        "candidate_id": "en-B-p226",
+        "text": "Hello. What's your name?",
+        "start_frame": 0,
+        "end_frame": 35109,
+        "start_ms": 0.0,
+        "end_ms": 1462.875,
+        "turn_sha256": "8e7cb5463ac6f7396f6fab109f419adc9a23fc0a6782e3d45d20235da0dba383"
+      },
+      {
+        "turn_id": "0edd421d-cf58-57fe-9a89-2f04c9148fe7",
+        "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+        "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+        "candidate_id": "en-A-p225",
+        "text": "My name's Maya. Where are you from?",
+        "start_frame": 43509,
+        "end_frame": 90600,
+        "start_ms": 1812.875,
+        "end_ms": 3775.0,
+        "turn_sha256": "79cfb43197c3f1ad21eb57a9bf237a5fdae415fd66640a4cb36335c5f352b299"
+      },
+      {
+        "turn_id": "2f5354a4-4b90-5b36-add3-5cc6873c7a72",
+        "voice_id": "876c0431-a28a-531c-87c9-c7792f7c353d",
+        "character_id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+        "candidate_id": "en-B-p226",
+        "text": "I'm from the UK. Are you a student?",
+        "start_frame": 99000,
+        "end_frame": 147762,
+        "start_ms": 4125.0,
+        "end_ms": 6156.75,
+        "turn_sha256": "ee62c18194ea378f0d20bd24a293a550ebc8862e0554d5fa26b1d87a4bde1951"
+      },
+      {
+        "turn_id": "5c4a4c76-2493-527b-b4d3-bf47c38d4a09",
+        "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+        "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+        "candidate_id": "en-A-p225",
+        "text": "Yes, I am.",
+        "start_frame": 156162,
+        "end_frame": 187370,
+        "start_ms": 6506.75,
+        "end_ms": 7807.083333333333,
+        "turn_sha256": "77dae3055e3c4d581d90e0ab82afe0e0674c654d821673dbb4492572e075bb47"
+      },
+      {
+        "turn_id": "0881a745-f1de-5377-a322-e0b910230e80",
+        "voice_id": "876c0431-a28a-531c-87c9-c7792f7c353d",
+        "character_id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+        "candidate_id": "en-B-p226",
+        "text": "Nice to meet you.",
+        "start_frame": 195770,
+        "end_frame": 222241,
+        "start_ms": 8157.083333333333,
+        "end_ms": 9260.041666666666,
+        "turn_sha256": "8992b374c508a1b59644194f997cd8afeb0d3a17867492d45d1dea95d5ec4725"
+      },
+      {
+        "turn_id": "aa1daee0-da45-515d-b298-e3defd41c96d",
+        "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+        "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+        "candidate_id": "en-A-p225",
+        "text": "Nice to meet you too.",
+        "start_frame": 230641,
+        "end_frame": 259341,
+        "start_ms": 9610.041666666666,
+        "end_ms": 10805.875,
+        "turn_sha256": "6b4656eff9424503066f7cef734803fa091c3e9104af19afbbfbf5b184730f4d"
+      }
+    ],
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT.wav",
+    "sha256": "6a506cda3950e1a5026a8ff6a47b479ee6170b68ca5a44e403488c74610fe10a",
+    "bytes": 518726,
+    "metrics": {
+      "frames": 259341,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 10.805875,
+      "peak_dbfs": -4.474075882710225,
+      "rms_dbfs": -22.767558118438586,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -22.3,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "b915dd89-9238-50ff-b3da-ea0b0c5a728d",
+    "stable_code": "AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_SLOW",
+    "language": "en",
+    "speed": "slow",
+    "normal_asset_id": "4048827f-feac-5d14-998f-05855b6518e8",
+    "script_id": "b88f39d7-c639-5804-91c6-074e205407ab",
+    "script_hash": "22275cca7f82e0f9e112a38c6f6be4488d1710c20167c35b3617fa66be629fe0",
+    "transcript": "Hello. What's your name?\nMy name's Maya. Where are you from?\nI'm from the UK. Are you a student?\nYes, I am.\nNice to meet you.\nNice to meet you too.",
+    "turn_ids": [
+      "56d12820-7f44-5a47-b6eb-e50d7f09d876",
+      "0edd421d-cf58-57fe-9a89-2f04c9148fe7",
+      "2f5354a4-4b90-5b36-add3-5cc6873c7a72",
+      "5c4a4c76-2493-527b-b4d3-bf47c38d4a09",
+      "0881a745-f1de-5377-a322-e0b910230e80",
+      "aa1daee0-da45-515d-b298-e3defd41c96d"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "56d12820-7f44-5a47-b6eb-e50d7f09d876",
+        "voice_id": "876c0431-a28a-531c-87c9-c7792f7c353d",
+        "character_id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+        "candidate_id": "en-B-p226",
+        "text": "Hello. What's your name?",
+        "start_frame": 0,
+        "end_frame": 43436,
+        "start_ms": 0.0,
+        "end_ms": 1809.8333333333333,
+        "turn_sha256": "74ac66c9c170b4213cf17a13004d0f51e1b83635396eb463ee76d8fbe5fb18b4"
+      },
+      {
+        "turn_id": "0edd421d-cf58-57fe-9a89-2f04c9148fe7",
+        "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+        "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+        "candidate_id": "en-A-p225",
+        "text": "My name's Maya. Where are you from?",
+        "start_frame": 53936,
+        "end_frame": 112504,
+        "start_ms": 2247.3333333333335,
+        "end_ms": 4687.666666666667,
+        "turn_sha256": "a0af030755a45457acb91ec400004d626b294a3fe03cf04f89528ca6aa7cd9c2"
+      },
+      {
+        "turn_id": "2f5354a4-4b90-5b36-add3-5cc6873c7a72",
+        "voice_id": "876c0431-a28a-531c-87c9-c7792f7c353d",
+        "character_id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+        "candidate_id": "en-B-p226",
+        "text": "I'm from the UK. Are you a student?",
+        "start_frame": 123004,
+        "end_frame": 183532,
+        "start_ms": 5125.166666666667,
+        "end_ms": 7647.166666666667,
+        "turn_sha256": "5ac67531a9cf63d55ba0c9f2dc8486568bb01e88bb9ec965974390d3aa12ec95"
+      },
+      {
+        "turn_id": "5c4a4c76-2493-527b-b4d3-bf47c38d4a09",
+        "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+        "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+        "candidate_id": "en-A-p225",
+        "text": "Yes, I am.",
+        "start_frame": 194032,
+        "end_frame": 232415,
+        "start_ms": 8084.666666666667,
+        "end_ms": 9683.958333333334,
+        "turn_sha256": "96ad39b7e722341b284ed29931eeda9aa9b05f73821603c56fd19ec4999634ae"
+      },
+      {
+        "turn_id": "0881a745-f1de-5377-a322-e0b910230e80",
+        "voice_id": "876c0431-a28a-531c-87c9-c7792f7c353d",
+        "character_id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+        "candidate_id": "en-B-p226",
+        "text": "Nice to meet you.",
+        "start_frame": 242915,
+        "end_frame": 275600,
+        "start_ms": 10121.458333333334,
+        "end_ms": 11483.333333333334,
+        "turn_sha256": "8207b8b5f2297d62c0b9165550bcb951c2b311a8c45e4d4531de151e0b396f17"
+      },
+      {
+        "turn_id": "aa1daee0-da45-515d-b298-e3defd41c96d",
+        "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+        "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+        "candidate_id": "en-A-p225",
+        "text": "Nice to meet you too.",
+        "start_frame": 286100,
+        "end_frame": 321533,
+        "start_ms": 11920.833333333334,
+        "end_ms": 13397.208333333334,
+        "turn_sha256": "e4b6bf8b39da2e639d39162b77f8d73e8a7ad49001b7db7b5ff3cb19f6c78d39"
+      }
+    ],
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_SLOW.wav",
+    "sha256": "b784be3de71135495103c0696e4852cc6113c42ef7414af976b2b90de347fb99",
+    "bytes": 643110,
+    "metrics": {
+      "frames": 321533,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 13.397208333333333,
+      "peak_dbfs": -4.504298524643138,
+      "rms_dbfs": -22.6298056080402,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -22.1,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "5e4eb61a-cbdd-5a80-bea8-4948f655cb07",
+    "stable_code": "AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_01",
+    "language": "en",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "b88f39d7-c639-5804-91c6-074e205407ab",
+    "script_hash": "a4fae6b56ccc088cf2a6d840e1e58ac26443578ac4aaa5eef804dcfbfec1baf0",
+    "transcript": "Hello. What's your name?",
+    "turn_ids": [
+      "56d12820-7f44-5a47-b6eb-e50d7f09d876"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "56d12820-7f44-5a47-b6eb-e50d7f09d876",
+        "voice_id": "876c0431-a28a-531c-87c9-c7792f7c353d",
+        "character_id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+        "candidate_id": "en-B-p226",
+        "text": "Hello. What's your name?",
+        "start_frame": 0,
+        "end_frame": 35109,
+        "start_ms": 0.0,
+        "end_ms": 1462.875,
+        "turn_sha256": "8e7cb5463ac6f7396f6fab109f419adc9a23fc0a6782e3d45d20235da0dba383"
+      }
+    ],
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_01.wav",
+    "sha256": "8e7cb5463ac6f7396f6fab109f419adc9a23fc0a6782e3d45d20235da0dba383",
+    "bytes": 70262,
+    "metrics": {
+      "frames": 35109,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.462875,
+      "peak_dbfs": -8.122828594259378,
+      "rms_dbfs": -22.000266547218068,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -22.0,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "bafbd5cb-fb58-5bec-932b-72d187befd27",
+    "stable_code": "AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_01_SLOW",
+    "language": "en",
+    "speed": "slow",
+    "normal_asset_id": "5e4eb61a-cbdd-5a80-bea8-4948f655cb07",
+    "script_id": "b88f39d7-c639-5804-91c6-074e205407ab",
+    "script_hash": "a4fae6b56ccc088cf2a6d840e1e58ac26443578ac4aaa5eef804dcfbfec1baf0",
+    "transcript": "Hello. What's your name?",
+    "turn_ids": [
+      "56d12820-7f44-5a47-b6eb-e50d7f09d876"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "56d12820-7f44-5a47-b6eb-e50d7f09d876",
+        "voice_id": "876c0431-a28a-531c-87c9-c7792f7c353d",
+        "character_id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+        "candidate_id": "en-B-p226",
+        "text": "Hello. What's your name?",
+        "start_frame": 0,
+        "end_frame": 43436,
+        "start_ms": 0.0,
+        "end_ms": 1809.8333333333333,
+        "turn_sha256": "74ac66c9c170b4213cf17a13004d0f51e1b83635396eb463ee76d8fbe5fb18b4"
+      }
+    ],
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_01_SLOW.wav",
+    "sha256": "54e3d4f86f697a5a6aeac1b8297a87a3f2c70f875fdcca499dc0b28d6cd98c55",
+    "bytes": 86916,
+    "metrics": {
+      "frames": 43436,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.8098333333333334,
+      "peak_dbfs": -8.150560695468773,
+      "rms_dbfs": -21.904606080750032,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -22.0,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "4d5e2518-5453-5dba-ae9f-dbfba0647c38",
+    "stable_code": "AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_02",
+    "language": "en",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "b88f39d7-c639-5804-91c6-074e205407ab",
+    "script_hash": "4cf02d86058490ee6b63b5bd8b548454a7c72f557501a139ee455d8a39cea91c",
+    "transcript": "My name's Maya. Where are you from?",
+    "turn_ids": [
+      "0edd421d-cf58-57fe-9a89-2f04c9148fe7"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "0edd421d-cf58-57fe-9a89-2f04c9148fe7",
+        "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+        "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+        "candidate_id": "en-A-p225",
+        "text": "My name's Maya. Where are you from?",
+        "start_frame": 0,
+        "end_frame": 47091,
+        "start_ms": 0.0,
+        "end_ms": 1962.125,
+        "turn_sha256": "79cfb43197c3f1ad21eb57a9bf237a5fdae415fd66640a4cb36335c5f352b299"
+      }
+    ],
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_02.wav",
+    "sha256": "79cfb43197c3f1ad21eb57a9bf237a5fdae415fd66640a4cb36335c5f352b299",
+    "bytes": 94226,
+    "metrics": {
+      "frames": 47091,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.962125,
+      "peak_dbfs": -8.070313172540727,
+      "rms_dbfs": -22.000259870750376,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -22.1,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "c8d25893-6326-55a2-a0dd-962f724118b8",
+    "stable_code": "AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_02_SLOW",
+    "language": "en",
+    "speed": "slow",
+    "normal_asset_id": "4d5e2518-5453-5dba-ae9f-dbfba0647c38",
+    "script_id": "b88f39d7-c639-5804-91c6-074e205407ab",
+    "script_hash": "4cf02d86058490ee6b63b5bd8b548454a7c72f557501a139ee455d8a39cea91c",
+    "transcript": "My name's Maya. Where are you from?",
+    "turn_ids": [
+      "0edd421d-cf58-57fe-9a89-2f04c9148fe7"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "0edd421d-cf58-57fe-9a89-2f04c9148fe7",
+        "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+        "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+        "candidate_id": "en-A-p225",
+        "text": "My name's Maya. Where are you from?",
+        "start_frame": 0,
+        "end_frame": 58568,
+        "start_ms": 0.0,
+        "end_ms": 2440.3333333333335,
+        "turn_sha256": "a0af030755a45457acb91ec400004d626b294a3fe03cf04f89528ca6aa7cd9c2"
+      }
+    ],
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_02_SLOW.wav",
+    "sha256": "6a97239f8a0864103d10684b504315489b58426bb31ea4d7246d8e31d82f0194",
+    "bytes": 117180,
+    "metrics": {
+      "frames": 58568,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 2.4403333333333332,
+      "peak_dbfs": -8.10124538169262,
+      "rms_dbfs": -21.890997227152003,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -22.1,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "05943f47-5048-534d-8ea0-35040638ddf1",
+    "stable_code": "AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_03",
+    "language": "en",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "b88f39d7-c639-5804-91c6-074e205407ab",
+    "script_hash": "47146f9ed127079548debde95d6cfd4429ef89091126049c06ae0a4583ab1c1d",
+    "transcript": "I'm from the UK. Are you a student?",
+    "turn_ids": [
+      "2f5354a4-4b90-5b36-add3-5cc6873c7a72"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "2f5354a4-4b90-5b36-add3-5cc6873c7a72",
+        "voice_id": "876c0431-a28a-531c-87c9-c7792f7c353d",
+        "character_id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+        "candidate_id": "en-B-p226",
+        "text": "I'm from the UK. Are you a student?",
+        "start_frame": 0,
+        "end_frame": 48762,
+        "start_ms": 0.0,
+        "end_ms": 2031.75,
+        "turn_sha256": "ee62c18194ea378f0d20bd24a293a550ebc8862e0554d5fa26b1d87a4bde1951"
+      }
+    ],
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_03.wav",
+    "sha256": "ee62c18194ea378f0d20bd24a293a550ebc8862e0554d5fa26b1d87a4bde1951",
+    "bytes": 97568,
+    "metrics": {
+      "frames": 48762,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 2.03175,
+      "peak_dbfs": -7.988140162210236,
+      "rms_dbfs": -22.00025831811335,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -22.3,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "d439bd07-b125-52ec-ad09-a51fdd8392b6",
+    "stable_code": "AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_03_SLOW",
+    "language": "en",
+    "speed": "slow",
+    "normal_asset_id": "05943f47-5048-534d-8ea0-35040638ddf1",
+    "script_id": "b88f39d7-c639-5804-91c6-074e205407ab",
+    "script_hash": "47146f9ed127079548debde95d6cfd4429ef89091126049c06ae0a4583ab1c1d",
+    "transcript": "I'm from the UK. Are you a student?",
+    "turn_ids": [
+      "2f5354a4-4b90-5b36-add3-5cc6873c7a72"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "2f5354a4-4b90-5b36-add3-5cc6873c7a72",
+        "voice_id": "876c0431-a28a-531c-87c9-c7792f7c353d",
+        "character_id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+        "candidate_id": "en-B-p226",
+        "text": "I'm from the UK. Are you a student?",
+        "start_frame": 0,
+        "end_frame": 60528,
+        "start_ms": 0.0,
+        "end_ms": 2522.0,
+        "turn_sha256": "5ac67531a9cf63d55ba0c9f2dc8486568bb01e88bb9ec965974390d3aa12ec95"
+      }
+    ],
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_03_SLOW.wav",
+    "sha256": "f1992bf1de595644174a3dbe978c2bc9bef1ee00caaf40951aa3b21b71e1f51b",
+    "bytes": 121100,
+    "metrics": {
+      "frames": 60528,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 2.522,
+      "peak_dbfs": -8.104614225406287,
+      "rms_dbfs": -21.87893859293122,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -22.3,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "e0a0da19-f83a-5296-a94d-94c74d3912ac",
+    "stable_code": "AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_04",
+    "language": "en",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "b88f39d7-c639-5804-91c6-074e205407ab",
+    "script_hash": "9b254a136a51903267ecbdc2d86355727d559340a84ce3a7a21a5eaf07bfad66",
+    "transcript": "Yes, I am.",
+    "turn_ids": [
+      "5c4a4c76-2493-527b-b4d3-bf47c38d4a09"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "5c4a4c76-2493-527b-b4d3-bf47c38d4a09",
+        "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+        "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+        "candidate_id": "en-A-p225",
+        "text": "Yes, I am.",
+        "start_frame": 0,
+        "end_frame": 31208,
+        "start_ms": 0.0,
+        "end_ms": 1300.3333333333333,
+        "turn_sha256": "77dae3055e3c4d581d90e0ab82afe0e0674c654d821673dbb4492572e075bb47"
+      }
+    ],
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_04.wav",
+    "sha256": "77dae3055e3c4d581d90e0ab82afe0e0674c654d821673dbb4492572e075bb47",
+    "bytes": 62460,
+    "metrics": {
+      "frames": 31208,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.3003333333333333,
+      "peak_dbfs": -5.353951049244977,
+      "rms_dbfs": -22.00026802104204,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -21.2,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "067ce08e-b72b-5494-bc90-a2b876a0e629",
+    "stable_code": "AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_04_SLOW",
+    "language": "en",
+    "speed": "slow",
+    "normal_asset_id": "e0a0da19-f83a-5296-a94d-94c74d3912ac",
+    "script_id": "b88f39d7-c639-5804-91c6-074e205407ab",
+    "script_hash": "9b254a136a51903267ecbdc2d86355727d559340a84ce3a7a21a5eaf07bfad66",
+    "transcript": "Yes, I am.",
+    "turn_ids": [
+      "5c4a4c76-2493-527b-b4d3-bf47c38d4a09"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "5c4a4c76-2493-527b-b4d3-bf47c38d4a09",
+        "voice_id": "32b19679-395f-558c-8e5b-a7595a2612c3",
+        "character_id": "81db5dad-2178-55e8-a2c8-834fd7ce0eed",
+        "candidate_id": "en-A-p225",
+        "text": "Yes, I am.",
+        "start_frame": 0,
+        "end_frame": 38383,
+        "start_ms": 0.0,
+        "end_ms": 1599.2916666666667,
+        "turn_sha256": "96ad39b7e722341b284ed29931eeda9aa9b05f73821603c56fd19ec4999634ae"
+      }
+    ],
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_04_SLOW.wav",
+    "sha256": "9867707f5cdd7878697e59a4c20fd2f87d5721ad8bf380faed3f1bf0e0b600b8",
+    "bytes": 76810,
+    "metrics": {
+      "frames": 38383,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.5992916666666666,
+      "peak_dbfs": -5.399732431910442,
+      "rms_dbfs": -21.807523686595637,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -20.6,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "10f16fe6-146b-5b6a-8488-44dd0167944b",
+    "stable_code": "AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_05",
+    "language": "en",
+    "speed": "normal",
+    "normal_asset_id": null,
+    "script_id": "b88f39d7-c639-5804-91c6-074e205407ab",
+    "script_hash": "a187ecb21520c57832131004c6564dca678730650c37334c5a25437449cab380",
+    "transcript": "Nice to meet you.",
+    "turn_ids": [
+      "0881a745-f1de-5377-a322-e0b910230e80"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "0881a745-f1de-5377-a322-e0b910230e80",
+        "voice_id": "876c0431-a28a-531c-87c9-c7792f7c353d",
+        "character_id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+        "candidate_id": "en-B-p226",
+        "text": "Nice to meet you.",
+        "start_frame": 0,
+        "end_frame": 26471,
+        "start_ms": 0.0,
+        "end_ms": 1102.9583333333333,
+        "turn_sha256": "8992b374c508a1b59644194f997cd8afeb0d3a17867492d45d1dea95d5ec4725"
+      }
+    ],
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_05.wav",
+    "sha256": "8992b374c508a1b59644194f997cd8afeb0d3a17867492d45d1dea95d5ec4725",
+    "bytes": 52986,
+    "metrics": {
+      "frames": 26471,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.1029583333333333,
+      "peak_dbfs": -4.474075882710225,
+      "rms_dbfs": -22.000271387540273,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -22.7,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  },
+  {
+    "asset_id": "3fa96976-9cfe-5fd7-acd4-0da6e31069e3",
+    "stable_code": "AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_05_SLOW",
+    "language": "en",
+    "speed": "slow",
+    "normal_asset_id": "10f16fe6-146b-5b6a-8488-44dd0167944b",
+    "script_id": "b88f39d7-c639-5804-91c6-074e205407ab",
+    "script_hash": "a187ecb21520c57832131004c6564dca678730650c37334c5a25437449cab380",
+    "transcript": "Nice to meet you.",
+    "turn_ids": [
+      "0881a745-f1de-5377-a322-e0b910230e80"
+    ],
+    "status": "GENERATED_UNREVIEWED",
+    "timing": [
+      {
+        "turn_id": "0881a745-f1de-5377-a322-e0b910230e80",
+        "voice_id": "876c0431-a28a-531c-87c9-c7792f7c353d",
+        "character_id": "c52fc591-8167-5d98-bd2d-461b335631c9",
+        "candidate_id": "en-B-p226",
+        "text": "Nice to meet you.",
+        "start_frame": 0,
+        "end_frame": 32685,
+        "start_ms": 0.0,
+        "end_ms": 1361.875,
+        "turn_sha256": "8207b8b5f2297d62c0b9165550bcb951c2b311a8c45e4d4531de151e0b396f17"
+      }
+    ],
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_05_SLOW.wav",
+    "sha256": "6fe696afaadf177534262acd6c9ffd55721ed0599da72996f103a132a004086c",
+    "bytes": 65414,
+    "metrics": {
+      "frames": 32685,
+      "sample_rate": 24000,
+      "channels": 1,
+      "sample_width": 2,
+      "duration_seconds": 1.361875,
+      "peak_dbfs": -4.504298524643138,
+      "rms_dbfs": -21.778716296415194,
+      "clipped_samples": 0
+    },
+    "integrated_lufs": -22.2,
+    "loudness_note": "Measured diagnostic only; short clips can make gated LUFS unstable. No loudness QA approval."
+  }
+]

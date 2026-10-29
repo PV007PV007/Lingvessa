@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "scope": "M01_COMPLETE_DRAFT",
+  "source_base_sha": "378d8cbed3f7724ffb5e05a14106d83c4fbec0cb",
+  "parent_results_sha256": "f3b2bc74eb79e3396846bbcc0f7c17bf3bee711bae061b44728fd68ce4f889fe",
+  "plan_sha256": "ba8939f81f2ddf64a8e1be2750a45b84318bad81c80d8cec23dda6fd975054f9",
+  "records": [
+    {
+      "role": "assets",
+      "path": "docs/p5/m01-completion-20261014/records/assets-00.json",
+      "sha256": "006ce0d686e743f5847a58ea1bd22bc53152a6eb9b16a214b042b7018b389931",
+      "count": 30
+    },
+    {
+      "role": "assets",
+      "path": "docs/p5/m01-completion-20261014/records/assets-01.json",
+      "sha256": "b57caae4dd7be088d9e47ffc3f1cce51f41bf5e73026bc657700a725b1a85862",
+      "count": 30
+    },
+    {
+      "role": "assets",
+      "path": "docs/p5/m01-completion-20261014/records/assets-02.json",
+      "sha256": "a165eefb7ee65d95103f5858e9162b313da21f893642eb5139f836d2478180cb",
+      "count": 30
+    },
+    {
+      "role": "assets",
+      "path": "docs/p5/m01-completion-20261014/records/assets-03.json",
+      "sha256": "7f9396ebd36cd16be8c5e75107afc55e948e60e3b82982acd4831310cb57a9fb",
+      "count": 30
+    },
+    {
+      "role": "assets",
+      "path": "docs/p5/m01-completion-20261014/records/assets-04.json",
+      "sha256": "0bf450b7c6dde71d7fc5c14afa427b2ce2164d792f1df8036f65fc15e6072496",
+      "count": 30
+    },
+    {
+      "role": "assets",
+      "path": "docs/p5/m01-completion-20261014/records/assets-05.json",
+      "sha256": "2b5d076f19ae788cd87447ac47c31ebe8153f1ecd0904ef2fb8a4892873b552f",
+      "count": 30
+    },
+    {
+      "role": "assets",
+      "path": "docs/p5/m01-completion-20261014/records/assets-06.json",
+      "sha256": "af229714f58206f6b160de34eaf549b0e1f77ac91d335ecf763a79ea748c6944",
+      "count": 24
+    },
+    {
+      "role": "screens",
+      "path": "docs/p5/m01-completion-20261014/records/screens-00.json",
+      "sha256": "c81d08560bca7b68ff61cdf87e501e05fc03b2732b22166677d8202aa1a3c44f",
+      "count": 30
+    },
+    {
+      "role": "screens",
+      "path": "docs/p5/m01-completion-20261014/records/screens-01.json",
+      "sha256": "c84e4d972bfeb24010d240d236f35411d38011d9360a8d58f98545fbebcd3263",
+      "count": 30
+    },
+    {
+      "role": "screens",
+      "path": "docs/p5/m01-completion-20261014/records/screens-02.json",
+      "sha256": "60f36177b51afc468a46d29c139be0e30727445fd5c3c4008cdd3fc79696d9f4",
+      "count": 30
+    },
+    {
+      "role": "screens",
+      "path": "docs/p5/m01-completion-20261014/records/screens-03.json",
+      "sha256": "48e52d2c9f9a4ae3b5f49cc8c5c8b0fa883340bcffc8ee9da22bf8c895248826",
+      "count": 30
+    },
+    {
+      "role": "screens",
+      "path": "docs/p5/m01-completion-20261014/records/screens-04.json",
+      "sha256": "9cddd8b00ca46d7f0a6a2c851946d1f4ef67354b56b1987dc2aae3af36f1013c",
+      "count": 30
+    },
+    {
+      "role": "screens",
+      "path": "docs/p5/m01-completion-20261014/records/screens-05.json",
+      "sha256": "612badd87483988b522bcb9bac1b08e8085c46d269467121221867a404cf419c",
+      "count": 30
+    },
+    {
+      "role": "screens",
+      "path": "docs/p5/m01-completion-20261014/records/screens-06.json",
+      "sha256": "e69aa75af396c185855de1ffbba11f1aca86d22fb5d9b8609e1a018a99c5a62c",
+      "count": 24
+    },
+    {
+      "role": "turns",
+      "path": "docs/p5/m01-completion-20261014/records/turns-00.json",
+      "sha256": "55d6fc0c9110da182b27a0f01af24367892a067ec49c11f3651075b5d5d85b59",
+      "count": 30
+    },
+    {
+      "role": "turns",
+      "path": "docs/p5/m01-completion-20261014/records/turns-01.json",
+      "sha256": "236cf366a9c7238209cf32ef01b0f17ea6aa0354fc34c3bec11491eecfef2838",
+      "count": 30
+    },
+    {
+      "role": "turns",
+      "path": "docs/p5/m01-completion-20261014/records/turns-02.json",
+      "sha256": "0c686cab29f079eca448750dd0e56a0e3ce5648eb860ef7120a4d964a3dffd0a",
+      "count": 30
+    },
+    {
+      "role": "turns",
+      "path": "docs/p5/m01-completion-20261014/records/turns-03.json",
+      "sha256": "14be0df58d379f5b6532fdbe70237e481419992714557c97413c04d565404a10",
+      "count": 7
+    }
+  ],
+  "evidence": [
+    {
+      "path": "docs/p5/m01-completion-20261014/generation.json",
+      "sha256": "2949dd22a2a88804519ffb46cf452e185064d581832546d4c063c67b8c57dad1"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/asr-run.json",
+      "sha256": "4a4c1ffba68ec1a6d73853d99a8da2a883f9d77683e83069fc9ee7199b40d595"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/screen-selection.json",
+      "sha256": "22b4205a2cec53238e0c8b5a83def4b0a6071d7e8fd85bfac837944bfa366c74"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/availability.json",
+      "sha256": "fb590f328d1dbd44d48169687c5d4623d5af5740e1c2944545ea5e8f32953e65"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/reconstruction-plan.json",
+      "sha256": "e821fbf73ffe6f505bc7d94245fe25c182b65cbef3d5a5e3fbc01246b45dcd32"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/processing-recovery.json",
+      "sha256": "223820a06904e9ea69bfef77e43d246b14b2c9ed0578902a95981ba6f50d4a04"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/retained-assembly-marker.json",
+      "sha256": "f8cab09af291a990d725fe07e76a5feeb82ed40670595ad174631a2c145c1ad1"
+    },
+    {
+      "path": "docs/p5/m01-completion-20261014/assembly-checkpoint.json",
+      "sha256": "008ac2030ec43e8b5c24671dc8d726a0707053dd2a48dbb7f1bbb567171d2fda"
+    }
+  ],
+  "tools": {
+    "tools/p5/m01-audio-draft.py": "39c6776d1c753d9cb6f13d28775d5eb227b54f3932eed7368fa0ee1c506b6ec7",
+    "tools/p5/continue-m01-audio.py": "a9591a57732dec76091944e54014ad43a2bf6dae74075df1d1fc0bfbb0b1c937",
+    "tools/p5/authoring_offline.py": "9c7f75399b274c46bebe0844331622b85ed041d4138f718581db647f0206a3ec",
+    "tools/p5/complete-m01-audio.py": "fa166866862d153f9a48217daac6b37bc8743607bc30c759d62b68d665a1fce2",
+    "tools/p5/build-m01-review.py": "9bcb86a13020b6011329492a9c0315fbd6704f6f4baf04dcda5abb7ca470927c",
+    "tools/p5/recover-m01-pocket-journal.py": "e3d520263f37f414739d03f401a7ecdfbfb3a2cbdd53ccf793ad7e0aea17504b"
+  },
+  "counts": {
+    "available_assets": 420,
+    "missing_assets": 0,
+    "new_assets": 204,
+    "retained_assets": 216,
+    "new_turns": 97,
+    "asr_screened_assets": 420,
+    "asr_discrepancy_assets": 243,
+    "languages": {
+      "en": 210,
+      "cs": 210
+    },
+    "quality_retries": 0
+  },
+  "constraints": {
+    "paid_inference": false,
+    "learner_data": false,
+    "uploaded_real_voice_reference": false,
+    "runtime_provider": false,
+    "publication_ready": false,
+    "final_cast_approved": false,
+    "human_review": "PENDING",
+    "p5_milestone": "NOT_READY",
+    "p6_authorized": false
+  },
+  "local_byte_verification": {
+    "parent_wavs": 532,
+    "continuation_wavs": 291,
+    "final_wavs": 420,
+    "all_final_pcm_and_cues_matched": true
+  },
+  "technical_status": "COMPLETE_AUTOMATED_SCREENING",
+  "human_review": "PENDING",
+  "publication_ready": false,
+  "p5_milestone": "NOT_READY",
+  "p6_authorized": false
+}

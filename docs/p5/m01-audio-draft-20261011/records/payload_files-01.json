@@ -1,0 +1,152 @@
+[
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_04.wav",
+    "sha256": "45e900265991e37037b8bdc99850c9a6270923286651f15365c35a30a33b7bfb",
+    "bytes": 104814
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_04_SLOW.wav",
+    "sha256": "848f0be8bbb6a5b4e3984a7ed17a59e54e1294acda8ddafb97f7c56d54218f2e",
+    "bytes": 130316
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_05.wav",
+    "sha256": "d9c2a567c8770cf383d71b77a13010e1a3a08fb9fb1734f034c348000dd280a1",
+    "bytes": 56330
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_05_SLOW.wav",
+    "sha256": "56c500005ac3a285bc89a408a4a3070f710ef3f4dd897ab1204cfb8383dce8c7",
+    "bytes": 69846
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_06.wav",
+    "sha256": "04fed8e3c429ee63081619f40d1c81312a6bcfde085a9ff9ac8646c2bec742df",
+    "bytes": 22894
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT_TURN_06_SLOW.wav",
+    "sha256": "7e9eb3ce10f900505eda72abacd31051a4e5fa7bae2a071046ef84d5ec119b19",
+    "bytes": 27598
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT.wav",
+    "sha256": "6a506cda3950e1a5026a8ff6a47b479ee6170b68ca5a44e403488c74610fe10a",
+    "bytes": 518726
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_SLOW.wav",
+    "sha256": "b784be3de71135495103c0696e4852cc6113c42ef7414af976b2b90de347fb99",
+    "bytes": 643110
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_01.wav",
+    "sha256": "8e7cb5463ac6f7396f6fab109f419adc9a23fc0a6782e3d45d20235da0dba383",
+    "bytes": 70262
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_01_SLOW.wav",
+    "sha256": "54e3d4f86f697a5a6aeac1b8297a87a3f2c70f875fdcca499dc0b28d6cd98c55",
+    "bytes": 86916
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_02.wav",
+    "sha256": "79cfb43197c3f1ad21eb57a9bf237a5fdae415fd66640a4cb36335c5f352b299",
+    "bytes": 94226
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_02_SLOW.wav",
+    "sha256": "6a97239f8a0864103d10684b504315489b58426bb31ea4d7246d8e31d82f0194",
+    "bytes": 117180
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_03.wav",
+    "sha256": "ee62c18194ea378f0d20bd24a293a550ebc8862e0554d5fa26b1d87a4bde1951",
+    "bytes": 97568
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_03_SLOW.wav",
+    "sha256": "f1992bf1de595644174a3dbe978c2bc9bef1ee00caaf40951aa3b21b71e1f51b",
+    "bytes": 121100
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_04.wav",
+    "sha256": "77dae3055e3c4d581d90e0ab82afe0e0674c654d821673dbb4492572e075bb47",
+    "bytes": 62460
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_04_SLOW.wav",
+    "sha256": "9867707f5cdd7878697e59a4c20fd2f87d5721ad8bf380faed3f1bf0e0b600b8",
+    "bytes": 76810
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_05.wav",
+    "sha256": "8992b374c508a1b59644194f997cd8afeb0d3a17867492d45d1dea95d5ec4725",
+    "bytes": 52986
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_05_SLOW.wav",
+    "sha256": "6fe696afaadf177534262acd6c9ffd55721ed0599da72996f103a132a004086c",
+    "bytes": 65414
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_06.wav",
+    "sha256": "6b4656eff9424503066f7cef734803fa091c3e9104af19afbbfbf5b184730f4d",
+    "bytes": 57444
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT_TURN_06_SLOW.wav",
+    "sha256": "3c181976c626113590149f84de1ac4d495e3776ad34cdfa2e2c4c34242a6f3b3",
+    "bytes": 70910
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_AN_ENGINEER.wav",
+    "sha256": "d54606ad04031a74026c07121a52300a17a76b10aa104d5726af1f0ce5409c43",
+    "bytes": 37940
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_AN_ENGINEER_SLOW.wav",
+    "sha256": "e1f84cc98f691545e4d234f0e7a48ca045a8f2e4c098c180e48936286f8d2db3",
+    "bytes": 46746
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_ARE_YOU.wav",
+    "sha256": "af0a2f1d6bea5ab3e360346590d4cbe6aa8ea5149742090cefee029369638f68",
+    "bytes": 46300
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_ARE_YOU_SLOW.wav",
+    "sha256": "f67c02a4d3792d027325ec040d02ac6836aa21de45f6883d2c5931790bf7a056",
+    "bytes": 57038
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_A_STUDENT.wav",
+    "sha256": "ebb94e9d3fcc60e78e089391f6ef932a39876c88ea67938d6e4402ee28ade9b7",
+    "bytes": 30138
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_A_STUDENT_SLOW.wav",
+    "sha256": "ac755893f04f4396f7d2debebb28ca9c2e6be40f3892ca23abcaffb0655439bc",
+    "bytes": 36666
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_A_TEACHER.wav",
+    "sha256": "5a9bffccbc3fc56eb788683e57b81564557ba108cb389013e28466c319d49963",
+    "bytes": 29024
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_A_TEACHER_SLOW.wav",
+    "sha256": "7cb896b89623d35672c1f82cc91b6b665c27c711b1b187efe778428b02a75a17",
+    "bytes": 35736
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_BE_HE.wav",
+    "sha256": "b0db4085161e79e8f5d804f18c4a665a4c4e7025ef5cd2d954f26f31b5c21fa6",
+    "bytes": 35710
+  },
+  {
+    "path": "audio/en/AUD_ENG_M01_WORDS_BE_HES.wav",
+    "sha256": "001ffcce2279e70e57a0a5f5a6f500cd3521c34fc55b63dc14fa7fca334b13a7",
+    "bytes": 22894
+  }
+]

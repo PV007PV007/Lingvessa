@@ -3,6 +3,7 @@ import type pg from 'pg';
 import { ContractError, assertUuid } from '../../packages/domain/src/identity.js';
 import { hashPassword, passwordPolicy, verifyPassword } from '../security/passwords.js';
 import { transaction } from './database.js';
+import {takeP5Quota} from './p5-quota.js';
 
 const digest = (value: string) => createHash('sha256').update(value, 'utf8').digest();
 const unauthorized = () => new ContractError('UNAUTHENTICATED', 'Authentication required');
@@ -24,6 +25,7 @@ export class IdentityRepository {
         expires_at=CASE WHEN auth_rate_windows.expires_at<=now() THEN now()+interval '1 minute' ELSE auth_rate_windows.expires_at END RETURNING attempts`,[digest(`learning:${userId}`)])).rows[0];
     return Number(row.attempts)<=120;
   }
+  async allowSpeechTransport(userId:string):Promise<boolean>{return takeP5Quota(this.pool,'speech_transport',userId);}
   /** Controlled provisioning primitive. Public signup/reset/verification UI is not opened in P2. */
   async provision(email: string, password: string) {
     const normalized = email.trim().normalize('NFC').toLowerCase();

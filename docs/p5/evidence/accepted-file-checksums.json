@@ -1,0 +1,14 @@
+{
+  "01_GOVERNING_DOCUMENTS/Lingvessa_Technical_Specification.pdf": "fdf8b3bd81267ec297fccd132c0d2a44850d1d05e6bccca008ed94c4dc1f9615",
+  "01_GOVERNING_DOCUMENTS/Lingvessa_Implementation_Plan.pdf": "7be218921fbe2c7299899beb8a496afd68dd7cccad9b77cc5a4bdaa238ca4e3c",
+  "01_GOVERNING_DOCUMENTS/Lingvessa_Reference_Module_Design.pdf": "b4a3d91738daa0d96c5e9e6435486fc6bc328f9f8072efb7fa1830620481f0d7",
+  "01_GOVERNING_DOCUMENTS/Lingvessa_Curriculum_Blueprint_A1.pdf": "9dc5c924aee0d742f97e1225246db4c48bebe8473293091ba9fa715622085053",
+  "01_GOVERNING_DOCUMENTS/Lingvessa_Formal_Specification.pdf": "edb294700455639d2b92fd9978fd74990dbd41503127cda430ac4870697e9d88",
+  "01_GOVERNING_DOCUMENTS/Lingvessa_Technical_Design.pdf": "414fe86abb0aa598260eb4589f4547020468824e8511be044dbb5328e46dfeae",
+  "01_GOVERNING_DOCUMENTS/Lingvessa_AI_Integration_Specification.pdf": "9e81ac464eea66e309b957401981f688638ba78208946ec4b37a8ed6735dcbe9",
+  "prisma/migrations/202609130001_p1_bootstrap/migration.sql": "ff76c0621eb0f153047095432f8d7099819880c21fde743427207b82e6bc4a33",
+  "prisma/migrations/202609160001_p3_lesson_engine/migration.sql": "a01ff0acca4c6175adffd4815b8991909ec1a3dbcefc6fc2d996b01bce0b2031",
+  "prisma/migrations/202609180001_p4_mastery_review/migration.sql": "6e0d8c8a64c73160cede7f6acf5c6b0d03614ba6648c8be9945c8ac333bb0b0f",
+  "prisma/migrations/202609150001_p2_foundation/migration.sql": "1070d4ed37133be1a1d166458aead61d446167a91d46921d829843cfa5ec68b6",
+  "00_CONTEXT/00_project_manifest_and_constraints.md": "8a9858dfeb164a4408448c8ebdb9d6c1853c97eebee6fc0a67afec066f88ed86"
+}
