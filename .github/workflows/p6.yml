@@ -1,0 +1,45 @@
+name: P6 English reference preparation
+on:
+  push:
+    branches: ['implementation/p6-*']
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: p6-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  p6-preflight:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      NEXT_TELEMETRY_DISABLED: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+      GITHUB_HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version-file: .node-version
+      - run: npm install --global pnpm@11.19.0
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm validate:baseline
+      - run: pnpm db:generate
+      - run: pnpm typecheck
+      - run: pnpm lint
+      - run: pnpm check:boundaries
+      - run: pnpm check:secrets
+      - run: node --import tsx --test tests/unit/p6-reference.test.ts
+      - run: node --import tsx tools/p6/reference-preflight.ts
+      - name: Preserve preparation evidence; this is not P6 vertical-slice acceptance
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: p6-${{ github.event.pull_request.head.sha || github.sha }}-${{ github.event_name }}
+          path: artifacts/p6/*.json
+          if-no-files-found: error
+          retention-days: 14

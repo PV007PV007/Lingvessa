@@ -1,0 +1,1780 @@
+{
+  "schema_version": "p6-evaluation-probes-1",
+  "publication_ready": false,
+  "scope": "Bounded answer policy checks against the unchanged shared evaluator; not full lesson, image/audio, rubric, DB or browser acceptance",
+  "probes": [
+    {
+      "source_unit": "E-A1-M01-L02",
+      "source_step": 2,
+      "scope": "DETERMINISTIC_POLICY_PROBE_NOT_COMPLETE_ACTIVITY",
+      "contract": {
+        "schema_version": "1.7",
+        "id": "2fcf21b5-6a29-5522-8dee-be2dc19d4634",
+        "stable_code": "P6_PROBE_BE_I",
+        "type": "interactive_grammar",
+        "language": "en",
+        "variety": "en-GB",
+        "cefr": "A1",
+        "content_version_id": "e9766a89-e565-51ff-8d5c-5f9de463cc2b",
+        "presentation": {
+          "instruction_key": "reference_answer",
+          "prompt": "Complete: I ___ Maya.",
+          "media_refs": [],
+          "accessibility": {
+            "keyboard_action": "Type the answer and submit",
+            "feedback_live_region": true
+          }
+        },
+        "response": {
+          "kind": "text",
+          "answer_policy": {
+            "id": "P6_PROBE_BE_I_ANSWER",
+            "version": "p6-probe-1",
+            "mode": "text",
+            "accepted_text": [
+              "am"
+            ],
+            "normalization": {
+              "unicode": "NFC",
+              "locale": "en-GB",
+              "case_sensitive": false,
+              "collapse_whitespace": true,
+              "punctuation_sensitive": false,
+              "apostrophe_equivalent": true,
+              "diacritics_sensitive": true
+            }
+          }
+        },
+        "feedback": {
+          "correct": "Правильно.",
+          "incorrect": "Перевірте потрібну форму й спробуйте ще раз.",
+          "reveal": "am",
+          "remediation": "Повторіть приклад і введіть відповідь."
+        },
+        "learning": {
+          "knowledge_refs": [
+            {
+              "knowledge_item_id": "d5aa3af0-016d-524f-bc58-d4bb4e82dcbc",
+              "stable_code": "ENG_K_BE_I",
+              "role": "practice"
+            }
+          ],
+          "outcome_refs": [],
+          "evidence_map": [
+            {
+              "skill": "grammar",
+              "facet": "grammar_form",
+              "weight": 1
+            }
+          ],
+          "difficulty": 0.2
+        },
+        "runtime": {
+          "completion_policy": "correct_or_reveal_v1",
+          "evaluator_version": "deterministic-core-1.0.0",
+          "presentation_seed": "P6_PROBE_BE_I-1",
+          "presentation_order": [],
+          "max_retries": 3,
+          "auto_advance_allowed": false
+        }
+      },
+      "expected_correct": [
+        "am",
+        " AM "
+      ],
+      "expected_incorrect": [
+        "are",
+        "is",
+        "I am"
+      ],
+      "varieties": [
+        "en-GB",
+        "en-US"
+      ]
+    },
+    {
+      "source_unit": "E-A1-M01-L02",
+      "source_step": 2,
+      "scope": "DETERMINISTIC_POLICY_PROBE_NOT_COMPLETE_ACTIVITY",
+      "contract": {
+        "schema_version": "1.7",
+        "id": "b29015de-fd34-5e26-aa1d-d70a10fd52ae",
+        "stable_code": "P6_PROBE_BE_YOU",
+        "type": "interactive_grammar",
+        "language": "en",
+        "variety": "en-GB",
+        "cefr": "A1",
+        "content_version_id": "e9766a89-e565-51ff-8d5c-5f9de463cc2b",
+        "presentation": {
+          "instruction_key": "reference_answer",
+          "prompt": "Complete: You ___ Daniel.",
+          "media_refs": [],
+          "accessibility": {
+            "keyboard_action": "Type the answer and submit",
+            "feedback_live_region": true
+          }
+        },
+        "response": {
+          "kind": "text",
+          "answer_policy": {
+            "id": "P6_PROBE_BE_YOU_ANSWER",
+            "version": "p6-probe-1",
+            "mode": "text",
+            "accepted_text": [
+              "are"
+            ],
+            "normalization": {
+              "unicode": "NFC",
+              "locale": "en-GB",
+              "case_sensitive": false,
+              "collapse_whitespace": true,
+              "punctuation_sensitive": false,
+              "apostrophe_equivalent": true,
+              "diacritics_sensitive": true
+            }
+          }
+        },
+        "feedback": {
+          "correct": "Правильно.",
+          "incorrect": "Перевірте потрібну форму й спробуйте ще раз.",
+          "reveal": "are",
+          "remediation": "Повторіть приклад і введіть відповідь."
+        },
+        "learning": {
+          "knowledge_refs": [
+            {
+              "knowledge_item_id": "06e9a24c-bb71-5e41-93e5-9adc8ca1777e",
+              "stable_code": "ENG_K_BE_YOU",
+              "role": "practice"
+            }
+          ],
+          "outcome_refs": [],
+          "evidence_map": [
+            {
+              "skill": "grammar",
+              "facet": "grammar_form",
+              "weight": 1
+            }
+          ],
+          "difficulty": 0.2
+        },
+        "runtime": {
+          "completion_policy": "correct_or_reveal_v1",
+          "evaluator_version": "deterministic-core-1.0.0",
+          "presentation_seed": "P6_PROBE_BE_YOU-1",
+          "presentation_order": [],
+          "max_retries": 3,
+          "auto_advance_allowed": false
+        }
+      },
+      "expected_correct": [
+        "are",
+        "ARE"
+      ],
+      "expected_incorrect": [
+        "am",
+        "is"
+      ],
+      "varieties": [
+        "en-GB",
+        "en-US"
+      ]
+    },
+    {
+      "source_unit": "E-A1-M01-L02",
+      "source_step": 6,
+      "scope": "DETERMINISTIC_POLICY_PROBE_NOT_COMPLETE_ACTIVITY",
+      "contract": {
+        "schema_version": "1.7",
+        "id": "c60e1fcd-24a5-50bc-b246-77e4bb425f74",
+        "stable_code": "P6_PROBE_BE_HE",
+        "type": "gap_fill",
+        "language": "en",
+        "variety": "en-GB",
+        "cefr": "A1",
+        "content_version_id": "e9766a89-e565-51ff-8d5c-5f9de463cc2b",
+        "presentation": {
+          "instruction_key": "reference_answer",
+          "prompt": "Complete: He ___ an engineer.",
+          "media_refs": [],
+          "accessibility": {
+            "keyboard_action": "Type the answer and submit",
+            "feedback_live_region": true
+          }
+        },
+        "response": {
+          "kind": "text",
+          "answer_policy": {
+            "id": "P6_PROBE_BE_HE_ANSWER",
+            "version": "p6-probe-1",
+            "mode": "text",
+            "accepted_text": [
+              "is"
+            ],
+            "normalization": {
+              "unicode": "NFC",
+              "locale": "en-GB",
+              "case_sensitive": false,
+              "collapse_whitespace": true,
+              "punctuation_sensitive": false,
+              "apostrophe_equivalent": true,
+              "diacritics_sensitive": true
+            }
+          }
+        },
+        "feedback": {
+          "correct": "Правильно.",
+          "incorrect": "Перевірте потрібну форму й спробуйте ще раз.",
+          "reveal": "is",
+          "remediation": "Повторіть приклад і введіть відповідь."
+        },
+        "learning": {
+          "knowledge_refs": [
+            {
+              "knowledge_item_id": "fabc51b5-7935-5c0a-a8f1-a67667d3b7fe",
+              "stable_code": "ENG_K_BE_HE",
+              "role": "practice"
+            }
+          ],
+          "outcome_refs": [],
+          "evidence_map": [
+            {
+              "skill": "grammar",
+              "facet": "grammar_form",
+              "weight": 1
+            }
+          ],
+          "difficulty": 0.2
+        },
+        "runtime": {
+          "completion_policy": "correct_or_reveal_v1",
+          "evaluator_version": "deterministic-core-1.0.0",
+          "presentation_seed": "P6_PROBE_BE_HE-1",
+          "presentation_order": [],
+          "max_retries": 3,
+          "auto_advance_allowed": false
+        }
+      },
+      "expected_correct": [
+        "is"
+      ],
+      "expected_incorrect": [
+        "am",
+        "are"
+      ],
+      "varieties": [
+        "en-GB",
+        "en-US"
+      ]
+    },
+    {
+      "source_unit": "E-A1-M01-L02",
+      "source_step": 6,
+      "scope": "DETERMINISTIC_POLICY_PROBE_NOT_COMPLETE_ACTIVITY",
+      "contract": {
+        "schema_version": "1.7",
+        "id": "e16d5f09-1576-5605-91eb-dfd5a41f5836",
+        "stable_code": "P6_PROBE_BE_SHE",
+        "type": "gap_fill",
+        "language": "en",
+        "variety": "en-GB",
+        "cefr": "A1",
+        "content_version_id": "e9766a89-e565-51ff-8d5c-5f9de463cc2b",
+        "presentation": {
+          "instruction_key": "reference_answer",
+          "prompt": "Complete: She ___ a student.",
+          "media_refs": [],
+          "accessibility": {
+            "keyboard_action": "Type the answer and submit",
+            "feedback_live_region": true
+          }
+        },
+        "response": {
+          "kind": "text",
+          "answer_policy": {
+            "id": "P6_PROBE_BE_SHE_ANSWER",
+            "version": "p6-probe-1",
+            "mode": "text",
+            "accepted_text": [
+              "is"
+            ],
+            "normalization": {
+              "unicode": "NFC",
+              "locale": "en-GB",
+              "case_sensitive": false,
+              "collapse_whitespace": true,
+              "punctuation_sensitive": false,
+              "apostrophe_equivalent": true,
+              "diacritics_sensitive": true
+            }
+          }
+        },
+        "feedback": {
+          "correct": "Правильно.",
+          "incorrect": "Перевірте потрібну форму й спробуйте ще раз.",
+          "reveal": "is",
+          "remediation": "Повторіть приклад і введіть відповідь."
+        },
+        "learning": {
+          "knowledge_refs": [
+            {
+              "knowledge_item_id": "4a1669e4-95cb-5431-8194-9f65e6125ab7",
+              "stable_code": "ENG_K_BE_SHE",
+              "role": "practice"
+            }
+          ],
+          "outcome_refs": [],
+          "evidence_map": [
+            {
+              "skill": "grammar",
+              "facet": "grammar_form",
+              "weight": 1
+            }
+          ],
+          "difficulty": 0.2
+        },
+        "runtime": {
+          "completion_policy": "correct_or_reveal_v1",
+          "evaluator_version": "deterministic-core-1.0.0",
+          "presentation_seed": "P6_PROBE_BE_SHE-1",
+          "presentation_order": [],
+          "max_retries": 3,
+          "auto_advance_allowed": false
+        }
+      },
+      "expected_correct": [
+        "is"
+      ],
+      "expected_incorrect": [
+        "am",
+        "are"
+      ],
+      "varieties": [
+        "en-GB",
+        "en-US"
+      ]
+    },
+    {
+      "source_unit": "E-A1-M01-L02",
+      "source_step": 5,
+      "scope": "DETERMINISTIC_POLICY_PROBE_NOT_COMPLETE_ACTIVITY",
+      "contract": {
+        "schema_version": "1.7",
+        "id": "ab78b53b-2ec1-5df6-83a9-c721dad1ffb4",
+        "stable_code": "P6_PROBE_A_STUDENT",
+        "type": "interactive_grammar",
+        "language": "en",
+        "variety": "en-GB",
+        "cefr": "A1",
+        "content_version_id": "e9766a89-e565-51ff-8d5c-5f9de463cc2b",
+        "presentation": {
+          "instruction_key": "reference_answer",
+          "prompt": "Complete: ___ student.",
+          "media_refs": [],
+          "accessibility": {
+            "keyboard_action": "Type the answer and submit",
+            "feedback_live_region": true
+          }
+        },
+        "response": {
+          "kind": "text",
+          "answer_policy": {
+            "id": "P6_PROBE_A_STUDENT_ANSWER",
+            "version": "p6-probe-1",
+            "mode": "text",
+            "accepted_text": [
+              "a"
+            ],
+            "normalization": {
+              "unicode": "NFC",
+              "locale": "en-GB",
+              "case_sensitive": false,
+              "collapse_whitespace": true,
+              "punctuation_sensitive": false,
+              "apostrophe_equivalent": true,
+              "diacritics_sensitive": true
+            }
+          }
+        },
+        "feedback": {
+          "correct": "Правильно.",
+          "incorrect": "Перевірте потрібну форму й спробуйте ще раз.",
+          "reveal": "a",
+          "remediation": "Повторіть приклад і введіть відповідь."
+        },
+        "learning": {
+          "knowledge_refs": [
+            {
+              "knowledge_item_id": "86d4dac3-6795-519d-b6bd-6b7ddd6bae2c",
+              "stable_code": "ENG_K_A_AN",
+              "role": "practice"
+            }
+          ],
+          "outcome_refs": [],
+          "evidence_map": [
+            {
+              "skill": "grammar",
+              "facet": "context_use",
+              "weight": 1
+            }
+          ],
+          "difficulty": 0.2
+        },
+        "runtime": {
+          "completion_policy": "correct_or_reveal_v1",
+          "evaluator_version": "deterministic-core-1.0.0",
+          "presentation_seed": "P6_PROBE_A_STUDENT-1",
+          "presentation_order": [],
+          "max_retries": 3,
+          "auto_advance_allowed": false
+        }
+      },
+      "expected_correct": [
+        "a",
+        "A"
+      ],
+      "expected_incorrect": [
+        "an",
+        "the"
+      ],
+      "varieties": [
+        "en-GB",
+        "en-US"
+      ]
+    },
+    {
+      "source_unit": "E-A1-M01-L02",
+      "source_step": 5,
+      "scope": "DETERMINISTIC_POLICY_PROBE_NOT_COMPLETE_ACTIVITY",
+      "contract": {
+        "schema_version": "1.7",
+        "id": "58a394a8-1043-5ede-a7ca-a725635eaff9",
+        "stable_code": "P6_PROBE_A_TEACHER",
+        "type": "interactive_grammar",
+        "language": "en",
+        "variety": "en-GB",
+        "cefr": "A1",
+        "content_version_id": "e9766a89-e565-51ff-8d5c-5f9de463cc2b",
+        "presentation": {
+          "instruction_key": "reference_answer",
+          "prompt": "Complete: ___ teacher.",
+          "media_refs": [],
+          "accessibility": {
+            "keyboard_action": "Type the answer and submit",
+            "feedback_live_region": true
+          }
+        },
+        "response": {
+          "kind": "text",
+          "answer_policy": {
+            "id": "P6_PROBE_A_TEACHER_ANSWER",
+            "version": "p6-probe-1",
+            "mode": "text",
+            "accepted_text": [
+              "a"
+            ],
+            "normalization": {
+              "unicode": "NFC",
+              "locale": "en-GB",
+              "case_sensitive": false,
+              "collapse_whitespace": true,
+              "punctuation_sensitive": false,
+              "apostrophe_equivalent": true,
+              "diacritics_sensitive": true
+            }
+          }
+        },
+        "feedback": {
+          "correct": "Правильно.",
+          "incorrect": "Перевірте потрібну форму й спробуйте ще раз.",
+          "reveal": "a",
+          "remediation": "Повторіть приклад і введіть відповідь."
+        },
+        "learning": {
+          "knowledge_refs": [
+            {
+              "knowledge_item_id": "86d4dac3-6795-519d-b6bd-6b7ddd6bae2c",
+              "stable_code": "ENG_K_A_AN",
+              "role": "practice"
+            }
+          ],
+          "outcome_refs": [],
+          "evidence_map": [
+            {
+              "skill": "grammar",
+              "facet": "context_use",
+              "weight": 1
+            }
+          ],
+          "difficulty": 0.2
+        },
+        "runtime": {
+          "completion_policy": "correct_or_reveal_v1",
+          "evaluator_version": "deterministic-core-1.0.0",
+          "presentation_seed": "P6_PROBE_A_TEACHER-1",
+          "presentation_order": [],
+          "max_retries": 3,
+          "auto_advance_allowed": false
+        }
+      },
+      "expected_correct": [
+        "a"
+      ],
+      "expected_incorrect": [
+        "an"
+      ],
+      "varieties": [
+        "en-GB",
+        "en-US"
+      ]
+    },
+    {
+      "source_unit": "E-A1-M01-L02",
+      "source_step": 5,
+      "scope": "DETERMINISTIC_POLICY_PROBE_NOT_COMPLETE_ACTIVITY",
+      "contract": {
+        "schema_version": "1.7",
+        "id": "3613ae37-9e8e-5724-aecb-0c9a387c9f8a",
+        "stable_code": "P6_PROBE_AN_ENGINEER",
+        "type": "interactive_grammar",
+        "language": "en",
+        "variety": "en-GB",
+        "cefr": "A1",
+        "content_version_id": "e9766a89-e565-51ff-8d5c-5f9de463cc2b",
+        "presentation": {
+          "instruction_key": "reference_answer",
+          "prompt": "Complete: ___ engineer.",
+          "media_refs": [],
+          "accessibility": {
+            "keyboard_action": "Type the answer and submit",
+            "feedback_live_region": true
+          }
+        },
+        "response": {
+          "kind": "text",
+          "answer_policy": {
+            "id": "P6_PROBE_AN_ENGINEER_ANSWER",
+            "version": "p6-probe-1",
+            "mode": "text",
+            "accepted_text": [
+              "an"
+            ],
+            "normalization": {
+              "unicode": "NFC",
+              "locale": "en-GB",
+              "case_sensitive": false,
+              "collapse_whitespace": true,
+              "punctuation_sensitive": false,
+              "apostrophe_equivalent": true,
+              "diacritics_sensitive": true
+            }
+          }
+        },
+        "feedback": {
+          "correct": "Правильно.",
+          "incorrect": "Перевірте потрібну форму й спробуйте ще раз.",
+          "reveal": "an",
+          "remediation": "Повторіть приклад і введіть відповідь."
+        },
+        "learning": {
+          "knowledge_refs": [
+            {
+              "knowledge_item_id": "86d4dac3-6795-519d-b6bd-6b7ddd6bae2c",
+              "stable_code": "ENG_K_A_AN",
+              "role": "practice"
+            }
+          ],
+          "outcome_refs": [],
+          "evidence_map": [
+            {
+              "skill": "grammar",
+              "facet": "context_use",
+              "weight": 1
+            }
+          ],
+          "difficulty": 0.2
+        },
+        "runtime": {
+          "completion_policy": "correct_or_reveal_v1",
+          "evaluator_version": "deterministic-core-1.0.0",
+          "presentation_seed": "P6_PROBE_AN_ENGINEER-1",
+          "presentation_order": [],
+          "max_retries": 3,
+          "auto_advance_allowed": false
+        }
+      },
+      "expected_correct": [
+        "an",
+        "AN"
+      ],
+      "expected_incorrect": [
+        "a"
+      ],
+      "varieties": [
+        "en-GB",
+        "en-US"
+      ]
+    },
+    {
+      "source_unit": "E-A1-M01-L02",
+      "source_step": 7,
+      "scope": "DETERMINISTIC_POLICY_PROBE_NOT_COMPLETE_ACTIVITY",
+      "contract": {
+        "schema_version": "1.7",
+        "id": "010b50dd-6265-58fa-9cb9-d606e3321baf",
+        "stable_code": "P6_PROBE_CONTRACT_IM",
+        "type": "full_typing",
+        "language": "en",
+        "variety": "en-GB",
+        "cefr": "A1",
+        "content_version_id": "e9766a89-e565-51ff-8d5c-5f9de463cc2b",
+        "presentation": {
+          "instruction_key": "reference_answer",
+          "prompt": "Write the contraction of I am.",
+          "media_refs": [],
+          "accessibility": {
+            "keyboard_action": "Type the answer and submit",
+            "feedback_live_region": true
+          }
+        },
+        "response": {
+          "kind": "text",
+          "answer_policy": {
+            "id": "P6_PROBE_CONTRACT_IM_ANSWER",
+            "version": "p6-probe-1",
+            "mode": "text",
+            "accepted_text": [
+              "I'm"
+            ],
+            "normalization": {
+              "unicode": "NFC",
+              "locale": "en-GB",
+              "case_sensitive": false,
+              "collapse_whitespace": true,
+              "punctuation_sensitive": false,
+              "apostrophe_equivalent": true,
+              "diacritics_sensitive": true
+            }
+          }
+        },
+        "feedback": {
+          "correct": "Правильно.",
+          "incorrect": "Перевірте потрібну форму й спробуйте ще раз.",
+          "reveal": "I'm",
+          "remediation": "Повторіть приклад і введіть відповідь."
+        },
+        "learning": {
+          "knowledge_refs": [
+            {
+              "knowledge_item_id": "d5aa3af0-016d-524f-bc58-d4bb4e82dcbc",
+              "stable_code": "ENG_K_BE_I",
+              "role": "practice"
+            }
+          ],
+          "outcome_refs": [],
+          "evidence_map": [
+            {
+              "skill": "writing",
+              "facet": "spelling",
+              "weight": 1
+            }
+          ],
+          "difficulty": 0.2
+        },
+        "runtime": {
+          "completion_policy": "correct_or_reveal_v1",
+          "evaluator_version": "deterministic-core-1.0.0",
+          "presentation_seed": "P6_PROBE_CONTRACT_IM-1",
+          "presentation_order": [],
+          "max_retries": 3,
+          "auto_advance_allowed": false
+        }
+      },
+      "expected_correct": [
+        "I'm",
+        "I’m",
+        "i'm."
+      ],
+      "expected_incorrect": [
+        "I am",
+        "Im",
+        "I are"
+      ],
+      "varieties": [
+        "en-GB",
+        "en-US"
+      ]
+    },
+    {
+      "source_unit": "E-A1-M01-L02",
+      "source_step": 7,
+      "scope": "DETERMINISTIC_POLICY_PROBE_NOT_COMPLETE_ACTIVITY",
+      "contract": {
+        "schema_version": "1.7",
+        "id": "3689953f-b622-529b-9ce5-d355ca9d591e",
+        "stable_code": "P6_PROBE_CONTRACT_YOURE",
+        "type": "full_typing",
+        "language": "en",
+        "variety": "en-GB",
+        "cefr": "A1",
+        "content_version_id": "e9766a89-e565-51ff-8d5c-5f9de463cc2b",
+        "presentation": {
+          "instruction_key": "reference_answer",
+          "prompt": "Write the contraction of you are.",
+          "media_refs": [],
+          "accessibility": {
+            "keyboard_action": "Type the answer and submit",
+            "feedback_live_region": true
+          }
+        },
+        "response": {
+          "kind": "text",
+          "answer_policy": {
+            "id": "P6_PROBE_CONTRACT_YOURE_ANSWER",
+            "version": "p6-probe-1",
+            "mode": "text",
+            "accepted_text": [
+              "you're"
+            ],
+            "normalization": {
+              "unicode": "NFC",
+              "locale": "en-GB",
+              "case_sensitive": false,
+              "collapse_whitespace": true,
+              "punctuation_sensitive": false,
+              "apostrophe_equivalent": true,
+              "diacritics_sensitive": true
+            }
+          }
+        },
+        "feedback": {
+          "correct": "Правильно.",
+          "incorrect": "Перевірте потрібну форму й спробуйте ще раз.",
+          "reveal": "you're",
+          "remediation": "Повторіть приклад і введіть відповідь."
+        },
+        "learning": {
+          "knowledge_refs": [
+            {
+              "knowledge_item_id": "06e9a24c-bb71-5e41-93e5-9adc8ca1777e",
+              "stable_code": "ENG_K_BE_YOU",
+              "role": "practice"
+            }
+          ],
+          "outcome_refs": [],
+          "evidence_map": [
+            {
+              "skill": "writing",
+              "facet": "spelling",
+              "weight": 1
+            }
+          ],
+          "difficulty": 0.2
+        },
+        "runtime": {
+          "completion_policy": "correct_or_reveal_v1",
+          "evaluator_version": "deterministic-core-1.0.0",
+          "presentation_seed": "P6_PROBE_CONTRACT_YOURE-1",
+          "presentation_order": [],
+          "max_retries": 3,
+          "auto_advance_allowed": false
+        }
+      },
+      "expected_correct": [
+        "you're",
+        "you’re"
+      ],
+      "expected_incorrect": [
+        "you are",
+        "your",
+        "youre"
+      ],
+      "varieties": [
+        "en-GB",
+        "en-US"
+      ]
+    },
+    {
+      "source_unit": "E-A1-M01-L02",
+      "source_step": 7,
+      "scope": "DETERMINISTIC_POLICY_PROBE_NOT_COMPLETE_ACTIVITY",
+      "contract": {
+        "schema_version": "1.7",
+        "id": "094bb3a6-e059-5ec0-9924-05e227d3849b",
+        "stable_code": "P6_PROBE_CONTRACT_SHES",
+        "type": "full_typing",
+        "language": "en",
+        "variety": "en-GB",
+        "cefr": "A1",
+        "content_version_id": "e9766a89-e565-51ff-8d5c-5f9de463cc2b",
+        "presentation": {
+          "instruction_key": "reference_answer",
+          "prompt": "Write the contraction of she is.",
+          "media_refs": [],
+          "accessibility": {
+            "keyboard_action": "Type the answer and submit",
+            "feedback_live_region": true
+          }
+        },
+        "response": {
+          "kind": "text",
+          "answer_policy": {
+            "id": "P6_PROBE_CONTRACT_SHES_ANSWER",
+            "version": "p6-probe-1",
+            "mode": "text",
+            "accepted_text": [
+              "she's"
+            ],
+            "normalization": {
+              "unicode": "NFC",
+              "locale": "en-GB",
+              "case_sensitive": false,
+              "collapse_whitespace": true,
+              "punctuation_sensitive": false,
+              "apostrophe_equivalent": true,
+              "diacritics_sensitive": true
+            }
+          }
+        },
+        "feedback": {
+          "correct": "Правильно.",
+          "incorrect": "Перевірте потрібну форму й спробуйте ще раз.",
+          "reveal": "she's",
+          "remediation": "Повторіть приклад і введіть відповідь."
+        },
+        "learning": {
+          "knowledge_refs": [
+            {
+              "knowledge_item_id": "4a1669e4-95cb-5431-8194-9f65e6125ab7",
+              "stable_code": "ENG_K_BE_SHE",
+              "role": "practice"
+            }
+          ],
+          "outcome_refs": [],
+          "evidence_map": [
+            {
+              "skill": "writing",
+              "facet": "spelling",
+              "weight": 1
+            }
+          ],
+          "difficulty": 0.2
+        },
+        "runtime": {
+          "completion_policy": "correct_or_reveal_v1",
+          "evaluator_version": "deterministic-core-1.0.0",
+          "presentation_seed": "P6_PROBE_CONTRACT_SHES-1",
+          "presentation_order": [],
+          "max_retries": 3,
+          "auto_advance_allowed": false
+        }
+      },
+      "expected_correct": [
+        "she's",
+        "she’s"
+      ],
+      "expected_incorrect": [
+        "she is",
+        "shes",
+        "she are"
+      ],
+      "varieties": [
+        "en-GB",
+        "en-US"
+      ]
+    },
+    {
+      "source_unit": "E-A1-M01-L03",
+      "source_step": 11,
+      "scope": "DETERMINISTIC_POLICY_PROBE_NOT_COMPLETE_ACTIVITY",
+      "contract": {
+        "schema_version": "1.7",
+        "id": "b109d229-45df-5c42-8509-54136b3db1b1",
+        "stable_code": "P6_PROBE_ORIGIN_QUESTION",
+        "type": "translation",
+        "language": "en",
+        "variety": "en-GB",
+        "cefr": "A1",
+        "content_version_id": "49cea31a-3365-544e-94f3-fda148ac0f8c",
+        "presentation": {
+          "instruction_key": "reference_answer",
+          "prompt": "Звідки ви?",
+          "media_refs": [],
+          "accessibility": {
+            "keyboard_action": "Type the answer and submit",
+            "feedback_live_region": true
+          }
+        },
+        "response": {
+          "kind": "text",
+          "answer_policy": {
+            "id": "P6_PROBE_ORIGIN_QUESTION_ANSWER",
+            "version": "p6-probe-1",
+            "mode": "text",
+            "accepted_text": [
+              "Where are you from?"
+            ],
+            "normalization": {
+              "unicode": "NFC",
+              "locale": "en-GB",
+              "case_sensitive": false,
+              "collapse_whitespace": true,
+              "punctuation_sensitive": false,
+              "apostrophe_equivalent": true,
+              "diacritics_sensitive": true
+            }
+          }
+        },
+        "feedback": {
+          "correct": "Правильно.",
+          "incorrect": "Перевірте потрібну форму й спробуйте ще раз.",
+          "reveal": "Where are you from?",
+          "remediation": "Повторіть приклад і введіть відповідь."
+        },
+        "learning": {
+          "knowledge_refs": [
+            {
+              "knowledge_item_id": "c8adc167-29f2-5fd9-82a8-e5627f2eb0d3",
+              "stable_code": "ENG_K_FROM_Q",
+              "role": "practice"
+            }
+          ],
+          "outcome_refs": [],
+          "evidence_map": [
+            {
+              "skill": "writing",
+              "facet": "production",
+              "weight": 1
+            }
+          ],
+          "difficulty": 0.2
+        },
+        "runtime": {
+          "completion_policy": "correct_or_reveal_v1",
+          "evaluator_version": "deterministic-core-1.0.0",
+          "presentation_seed": "P6_PROBE_ORIGIN_QUESTION-1",
+          "presentation_order": [],
+          "max_retries": 3,
+          "auto_advance_allowed": false
+        }
+      },
+      "expected_correct": [
+        "Where are you from?",
+        "where are you from",
+        " Where  are you from! "
+      ],
+      "expected_incorrect": [
+        "Where you are from?",
+        "Where are you form?"
+      ],
+      "varieties": [
+        "en-GB",
+        "en-US"
+      ]
+    },
+    {
+      "source_unit": "E-A1-M01-L03",
+      "source_step": 10,
+      "scope": "DETERMINISTIC_POLICY_PROBE_NOT_COMPLETE_ACTIVITY",
+      "contract": {
+        "schema_version": "1.7",
+        "id": "a59966f0-c61c-5a76-951a-c1a208f5460b",
+        "stable_code": "P6_PROBE_ORIGIN_UK",
+        "type": "role_play",
+        "language": "en",
+        "variety": "en-GB",
+        "cefr": "A1",
+        "content_version_id": "49cea31a-3365-544e-94f3-fda148ac0f8c",
+        "presentation": {
+          "instruction_key": "reference_answer",
+          "prompt": "Use the sample profile: Daniel / the UK.",
+          "media_refs": [],
+          "accessibility": {
+            "keyboard_action": "Type the answer and submit",
+            "feedback_live_region": true
+          }
+        },
+        "response": {
+          "kind": "text",
+          "answer_policy": {
+            "id": "P6_PROBE_ORIGIN_UK_ANSWER",
+            "version": "p6-probe-1",
+            "mode": "text",
+            "accepted_text": [
+              "I'm from the UK.",
+              "I am from the UK."
+            ],
+            "normalization": {
+              "unicode": "NFC",
+              "locale": "en-GB",
+              "case_sensitive": false,
+              "collapse_whitespace": true,
+              "punctuation_sensitive": false,
+              "apostrophe_equivalent": true,
+              "diacritics_sensitive": true
+            }
+          }
+        },
+        "feedback": {
+          "correct": "Правильно.",
+          "incorrect": "Перевірте потрібну форму й спробуйте ще раз.",
+          "reveal": "I'm from the UK.",
+          "remediation": "Повторіть приклад і введіть відповідь."
+        },
+        "learning": {
+          "knowledge_refs": [
+            {
+              "knowledge_item_id": "5cf58bef-c180-5fe8-a8d9-4506603b9c61",
+              "stable_code": "ENG_K_FROM_A",
+              "role": "practice"
+            }
+          ],
+          "outcome_refs": [],
+          "evidence_map": [
+            {
+              "skill": "writing",
+              "facet": "production",
+              "weight": 1
+            }
+          ],
+          "difficulty": 0.2
+        },
+        "runtime": {
+          "completion_policy": "correct_or_reveal_v1",
+          "evaluator_version": "deterministic-core-1.0.0",
+          "presentation_seed": "P6_PROBE_ORIGIN_UK-1",
+          "presentation_order": [],
+          "max_retries": 3,
+          "auto_advance_allowed": false
+        }
+      },
+      "expected_correct": [
+        "I'm from the UK.",
+        "I am from the UK",
+        "I’m from the UK!"
+      ],
+      "expected_incorrect": [
+        "I'm from UK.",
+        "I from the UK",
+        "I am from Ukraine."
+      ],
+      "varieties": [
+        "en-GB",
+        "en-US"
+      ]
+    },
+    {
+      "source_unit": "E-A1-M01-L03",
+      "source_step": 10,
+      "scope": "DETERMINISTIC_POLICY_PROBE_NOT_COMPLETE_ACTIVITY",
+      "contract": {
+        "schema_version": "1.7",
+        "id": "771f07fe-199a-59d9-a4ed-b5eeb4fdc15f",
+        "stable_code": "P6_PROBE_ORIGIN_UA",
+        "type": "role_play",
+        "language": "en",
+        "variety": "en-GB",
+        "cefr": "A1",
+        "content_version_id": "49cea31a-3365-544e-94f3-fda148ac0f8c",
+        "presentation": {
+          "instruction_key": "reference_answer",
+          "prompt": "Use the sample profile: Maya / Ukraine.",
+          "media_refs": [],
+          "accessibility": {
+            "keyboard_action": "Type the answer and submit",
+            "feedback_live_region": true
+          }
+        },
+        "response": {
+          "kind": "text",
+          "answer_policy": {
+            "id": "P6_PROBE_ORIGIN_UA_ANSWER",
+            "version": "p6-probe-1",
+            "mode": "text",
+            "accepted_text": [
+              "I'm from Ukraine.",
+              "I am from Ukraine."
+            ],
+            "normalization": {
+              "unicode": "NFC",
+              "locale": "en-GB",
+              "case_sensitive": false,
+              "collapse_whitespace": true,
+              "punctuation_sensitive": false,
+              "apostrophe_equivalent": true,
+              "diacritics_sensitive": true
+            }
+          }
+        },
+        "feedback": {
+          "correct": "Правильно.",
+          "incorrect": "Перевірте потрібну форму й спробуйте ще раз.",
+          "reveal": "I'm from Ukraine.",
+          "remediation": "Повторіть приклад і введіть відповідь."
+        },
+        "learning": {
+          "knowledge_refs": [
+            {
+              "knowledge_item_id": "5cf58bef-c180-5fe8-a8d9-4506603b9c61",
+              "stable_code": "ENG_K_FROM_A",
+              "role": "practice"
+            }
+          ],
+          "outcome_refs": [],
+          "evidence_map": [
+            {
+              "skill": "writing",
+              "facet": "production",
+              "weight": 1
+            }
+          ],
+          "difficulty": 0.2
+        },
+        "runtime": {
+          "completion_policy": "correct_or_reveal_v1",
+          "evaluator_version": "deterministic-core-1.0.0",
+          "presentation_seed": "P6_PROBE_ORIGIN_UA-1",
+          "presentation_order": [],
+          "max_retries": 3,
+          "auto_advance_allowed": false
+        }
+      },
+      "expected_correct": [
+        "I'm from Ukraine",
+        "I am from Ukraine."
+      ],
+      "expected_incorrect": [
+        "I'm from the Ukraine.",
+        "I are from Ukraine"
+      ],
+      "varieties": [
+        "en-GB",
+        "en-US"
+      ]
+    },
+    {
+      "source_unit": "E-A1-M01-L03",
+      "source_step": 4,
+      "scope": "DETERMINISTIC_POLICY_PROBE_NOT_COMPLETE_ACTIVITY",
+      "contract": {
+        "schema_version": "1.7",
+        "id": "d4d5dc81-8bde-5f0d-82ff-3a50b4e18f7e",
+        "stable_code": "P6_PROBE_YES_I_AM",
+        "type": "dialogue_completion",
+        "language": "en",
+        "variety": "en-GB",
+        "cefr": "A1",
+        "content_version_id": "49cea31a-3365-544e-94f3-fda148ac0f8c",
+        "presentation": {
+          "instruction_key": "reference_answer",
+          "prompt": "Maya is from Ukraine. Are you from Ukraine?",
+          "media_refs": [],
+          "accessibility": {
+            "keyboard_action": "Type the answer and submit",
+            "feedback_live_region": true
+          }
+        },
+        "response": {
+          "kind": "text",
+          "answer_policy": {
+            "id": "P6_PROBE_YES_I_AM_ANSWER",
+            "version": "p6-probe-1",
+            "mode": "text",
+            "accepted_text": [
+              "Yes, I am."
+            ],
+            "normalization": {
+              "unicode": "NFC",
+              "locale": "en-GB",
+              "case_sensitive": false,
+              "collapse_whitespace": true,
+              "punctuation_sensitive": false,
+              "apostrophe_equivalent": true,
+              "diacritics_sensitive": true
+            }
+          }
+        },
+        "feedback": {
+          "correct": "Правильно.",
+          "incorrect": "Перевірте потрібну форму й спробуйте ще раз.",
+          "reveal": "Yes, I am.",
+          "remediation": "Повторіть приклад і введіть відповідь."
+        },
+        "learning": {
+          "knowledge_refs": [
+            {
+              "knowledge_item_id": "fb1cb92c-116b-556e-960f-d6e16c94b710",
+              "stable_code": "ENG_K_YESNO",
+              "role": "practice"
+            }
+          ],
+          "outcome_refs": [],
+          "evidence_map": [
+            {
+              "skill": "grammar",
+              "facet": "context_use",
+              "weight": 1
+            }
+          ],
+          "difficulty": 0.2
+        },
+        "runtime": {
+          "completion_policy": "correct_or_reveal_v1",
+          "evaluator_version": "deterministic-core-1.0.0",
+          "presentation_seed": "P6_PROBE_YES_I_AM-1",
+          "presentation_order": [],
+          "max_retries": 3,
+          "auto_advance_allowed": false
+        }
+      },
+      "expected_correct": [
+        "Yes, I am.",
+        "yes, i am",
+        "Yes, I am!"
+      ],
+      "expected_incorrect": [
+        "Yes, I'm.",
+        "Yes, I are.",
+        "No, I am not."
+      ],
+      "varieties": [
+        "en-GB",
+        "en-US"
+      ]
+    },
+    {
+      "source_unit": "E-A1-M01-L03",
+      "source_step": 4,
+      "scope": "DETERMINISTIC_POLICY_PROBE_NOT_COMPLETE_ACTIVITY",
+      "contract": {
+        "schema_version": "1.7",
+        "id": "52545371-c8de-5a59-9aaa-4d83c90ba47b",
+        "stable_code": "P6_PROBE_NO_IM_NOT",
+        "type": "dialogue_completion",
+        "language": "en",
+        "variety": "en-GB",
+        "cefr": "A1",
+        "content_version_id": "49cea31a-3365-544e-94f3-fda148ac0f8c",
+        "presentation": {
+          "instruction_key": "reference_answer",
+          "prompt": "Daniel is from the UK. Are you from Spain?",
+          "media_refs": [],
+          "accessibility": {
+            "keyboard_action": "Type the answer and submit",
+            "feedback_live_region": true
+          }
+        },
+        "response": {
+          "kind": "text",
+          "answer_policy": {
+            "id": "P6_PROBE_NO_IM_NOT_ANSWER",
+            "version": "p6-probe-1",
+            "mode": "text",
+            "accepted_text": [
+              "No, I'm not.",
+              "No, I am not."
+            ],
+            "normalization": {
+              "unicode": "NFC",
+              "locale": "en-GB",
+              "case_sensitive": false,
+              "collapse_whitespace": true,
+              "punctuation_sensitive": false,
+              "apostrophe_equivalent": true,
+              "diacritics_sensitive": true
+            }
+          }
+        },
+        "feedback": {
+          "correct": "Правильно.",
+          "incorrect": "Перевірте потрібну форму й спробуйте ще раз.",
+          "reveal": "No, I'm not.",
+          "remediation": "Повторіть приклад і введіть відповідь."
+        },
+        "learning": {
+          "knowledge_refs": [
+            {
+              "knowledge_item_id": "fb1cb92c-116b-556e-960f-d6e16c94b710",
+              "stable_code": "ENG_K_YESNO",
+              "role": "practice"
+            }
+          ],
+          "outcome_refs": [],
+          "evidence_map": [
+            {
+              "skill": "grammar",
+              "facet": "context_use",
+              "weight": 1
+            }
+          ],
+          "difficulty": 0.2
+        },
+        "runtime": {
+          "completion_policy": "correct_or_reveal_v1",
+          "evaluator_version": "deterministic-core-1.0.0",
+          "presentation_seed": "P6_PROBE_NO_IM_NOT-1",
+          "presentation_order": [],
+          "max_retries": 3,
+          "auto_advance_allowed": false
+        }
+      },
+      "expected_correct": [
+        "No, I'm not.",
+        "No, I am not.",
+        "No, I’m not!"
+      ],
+      "expected_incorrect": [
+        "No, I not.",
+        "Yes, I am."
+      ],
+      "varieties": [
+        "en-GB",
+        "en-US"
+      ]
+    },
+    {
+      "source_unit": "E-A1-M01-L01",
+      "source_step": 11,
+      "scope": "DETERMINISTIC_POLICY_PROBE_NOT_COMPLETE_ACTIVITY",
+      "contract": {
+        "schema_version": "1.7",
+        "id": "03055b24-4f97-52a2-84f9-8dc17c68d14e",
+        "stable_code": "P6_PROBE_REPAIR_REPEAT",
+        "type": "translation",
+        "language": "en",
+        "variety": "en-GB",
+        "cefr": "A1",
+        "content_version_id": "b69bf4a7-8c84-5147-a288-8f4a0526bd32",
+        "presentation": {
+          "instruction_key": "reference_answer",
+          "prompt": "Можете повторити, будь ласка?",
+          "media_refs": [],
+          "accessibility": {
+            "keyboard_action": "Type the answer and submit",
+            "feedback_live_region": true
+          }
+        },
+        "response": {
+          "kind": "text",
+          "answer_policy": {
+            "id": "P6_PROBE_REPAIR_REPEAT_ANSWER",
+            "version": "p6-probe-1",
+            "mode": "text",
+            "accepted_text": [
+              "Can you repeat, please?"
+            ],
+            "normalization": {
+              "unicode": "NFC",
+              "locale": "en-GB",
+              "case_sensitive": false,
+              "collapse_whitespace": true,
+              "punctuation_sensitive": false,
+              "apostrophe_equivalent": true,
+              "diacritics_sensitive": true
+            }
+          }
+        },
+        "feedback": {
+          "correct": "Правильно.",
+          "incorrect": "Перевірте потрібну форму й спробуйте ще раз.",
+          "reveal": "Can you repeat, please?",
+          "remediation": "Повторіть приклад і введіть відповідь."
+        },
+        "learning": {
+          "knowledge_refs": [
+            {
+              "knowledge_item_id": "a500d387-d89a-4de7-9057-9fa4de8e15d2",
+              "stable_code": "ENG_K_REPEAT",
+              "role": "practice"
+            }
+          ],
+          "outcome_refs": [],
+          "evidence_map": [
+            {
+              "skill": "vocabulary",
+              "facet": "recall_l1_to_l2",
+              "weight": 1
+            }
+          ],
+          "difficulty": 0.2
+        },
+        "runtime": {
+          "completion_policy": "correct_or_reveal_v1",
+          "evaluator_version": "deterministic-core-1.0.0",
+          "presentation_seed": "P6_PROBE_REPAIR_REPEAT-1",
+          "presentation_order": [],
+          "max_retries": 3,
+          "auto_advance_allowed": false
+        }
+      },
+      "expected_correct": [
+        "Can you repeat, please?",
+        "can you repeat, please"
+      ],
+      "expected_incorrect": [
+        "Can repeat you, please?",
+        "Thank you."
+      ],
+      "varieties": [
+        "en-GB",
+        "en-US"
+      ]
+    },
+    {
+      "source_unit": "E-A1-M01-L01",
+      "source_step": 11,
+      "scope": "DETERMINISTIC_POLICY_PROBE_NOT_COMPLETE_ACTIVITY",
+      "contract": {
+        "schema_version": "1.7",
+        "id": "ed149973-6694-5132-846d-df41031e9d38",
+        "stable_code": "P6_PROBE_THANK_YOU",
+        "type": "translation",
+        "language": "en",
+        "variety": "en-GB",
+        "cefr": "A1",
+        "content_version_id": "b69bf4a7-8c84-5147-a288-8f4a0526bd32",
+        "presentation": {
+          "instruction_key": "reference_answer",
+          "prompt": "Дякую.",
+          "media_refs": [],
+          "accessibility": {
+            "keyboard_action": "Type the answer and submit",
+            "feedback_live_region": true
+          }
+        },
+        "response": {
+          "kind": "text",
+          "answer_policy": {
+            "id": "P6_PROBE_THANK_YOU_ANSWER",
+            "version": "p6-probe-1",
+            "mode": "text",
+            "accepted_text": [
+              "Thank you."
+            ],
+            "normalization": {
+              "unicode": "NFC",
+              "locale": "en-GB",
+              "case_sensitive": false,
+              "collapse_whitespace": true,
+              "punctuation_sensitive": false,
+              "apostrophe_equivalent": true,
+              "diacritics_sensitive": true
+            }
+          }
+        },
+        "feedback": {
+          "correct": "Правильно.",
+          "incorrect": "Перевірте потрібну форму й спробуйте ще раз.",
+          "reveal": "Thank you.",
+          "remediation": "Повторіть приклад і введіть відповідь."
+        },
+        "learning": {
+          "knowledge_refs": [
+            {
+              "knowledge_item_id": "383a171e-f088-54e0-8b07-1dcba6e92696",
+              "stable_code": "ENG_K_THANKS",
+              "role": "practice"
+            }
+          ],
+          "outcome_refs": [],
+          "evidence_map": [
+            {
+              "skill": "vocabulary",
+              "facet": "recall_l1_to_l2",
+              "weight": 1
+            }
+          ],
+          "difficulty": 0.2
+        },
+        "runtime": {
+          "completion_policy": "correct_or_reveal_v1",
+          "evaluator_version": "deterministic-core-1.0.0",
+          "presentation_seed": "P6_PROBE_THANK_YOU-1",
+          "presentation_order": [],
+          "max_retries": 3,
+          "auto_advance_allowed": false
+        }
+      },
+      "expected_correct": [
+        "Thank you.",
+        "thank you!"
+      ],
+      "expected_incorrect": [
+        "Please.",
+        "Goodbye."
+      ],
+      "varieties": [
+        "en-GB",
+        "en-US"
+      ]
+    },
+    {
+      "source_unit": "E-A1-M01-L01",
+      "source_step": 11,
+      "scope": "DETERMINISTIC_POLICY_PROBE_NOT_COMPLETE_ACTIVITY",
+      "contract": {
+        "schema_version": "1.7",
+        "id": "e547849b-be89-5e7f-b0ed-a2892a21c7bb",
+        "stable_code": "P6_PROBE_GOODBYE",
+        "type": "translation",
+        "language": "en",
+        "variety": "en-GB",
+        "cefr": "A1",
+        "content_version_id": "b69bf4a7-8c84-5147-a288-8f4a0526bd32",
+        "presentation": {
+          "instruction_key": "reference_answer",
+          "prompt": "До побачення.",
+          "media_refs": [],
+          "accessibility": {
+            "keyboard_action": "Type the answer and submit",
+            "feedback_live_region": true
+          }
+        },
+        "response": {
+          "kind": "text",
+          "answer_policy": {
+            "id": "P6_PROBE_GOODBYE_ANSWER",
+            "version": "p6-probe-1",
+            "mode": "text",
+            "accepted_text": [
+              "Goodbye.",
+              "Bye."
+            ],
+            "normalization": {
+              "unicode": "NFC",
+              "locale": "en-GB",
+              "case_sensitive": false,
+              "collapse_whitespace": true,
+              "punctuation_sensitive": false,
+              "apostrophe_equivalent": true,
+              "diacritics_sensitive": true
+            }
+          }
+        },
+        "feedback": {
+          "correct": "Правильно.",
+          "incorrect": "Перевірте потрібну форму й спробуйте ще раз.",
+          "reveal": "Goodbye.",
+          "remediation": "Повторіть приклад і введіть відповідь."
+        },
+        "learning": {
+          "knowledge_refs": [
+            {
+              "knowledge_item_id": "a152e6a6-c718-5d5d-a13d-8b627952430d",
+              "stable_code": "ENG_K_BYE",
+              "role": "practice"
+            }
+          ],
+          "outcome_refs": [],
+          "evidence_map": [
+            {
+              "skill": "vocabulary",
+              "facet": "recall_l1_to_l2",
+              "weight": 1
+            }
+          ],
+          "difficulty": 0.2
+        },
+        "runtime": {
+          "completion_policy": "correct_or_reveal_v1",
+          "evaluator_version": "deterministic-core-1.0.0",
+          "presentation_seed": "P6_PROBE_GOODBYE-1",
+          "presentation_order": [],
+          "max_retries": 3,
+          "auto_advance_allowed": false
+        }
+      },
+      "expected_correct": [
+        "Goodbye.",
+        "Bye.",
+        "goodbye"
+      ],
+      "expected_incorrect": [
+        "Hello.",
+        "Hi."
+      ],
+      "varieties": [
+        "en-GB",
+        "en-US"
+      ]
+    },
+    {
+      "source_unit": "E-A1-M01-L01",
+      "source_step": 6,
+      "scope": "DETERMINISTIC_POLICY_PROBE_NOT_COMPLETE_ACTIVITY",
+      "contract": {
+        "schema_version": "1.7",
+        "id": "c9a669aa-80e8-5dff-a88c-b1a9b102ae5d",
+        "stable_code": "P6_PROBE_HELLO_SPELLING",
+        "type": "full_typing",
+        "language": "en",
+        "variety": "en-GB",
+        "cefr": "A1",
+        "content_version_id": "b69bf4a7-8c84-5147-a288-8f4a0526bd32",
+        "presentation": {
+          "instruction_key": "reference_answer",
+          "prompt": "Type the greeting you heard: hello.",
+          "media_refs": [],
+          "accessibility": {
+            "keyboard_action": "Type the answer and submit",
+            "feedback_live_region": true
+          }
+        },
+        "response": {
+          "kind": "text",
+          "answer_policy": {
+            "id": "P6_PROBE_HELLO_SPELLING_ANSWER",
+            "version": "p6-probe-1",
+            "mode": "text",
+            "accepted_text": [
+              "hello"
+            ],
+            "normalization": {
+              "unicode": "NFC",
+              "locale": "en-GB",
+              "case_sensitive": false,
+              "collapse_whitespace": true,
+              "punctuation_sensitive": false,
+              "apostrophe_equivalent": true,
+              "diacritics_sensitive": true
+            }
+          }
+        },
+        "feedback": {
+          "correct": "Правильно.",
+          "incorrect": "Перевірте потрібну форму й спробуйте ще раз.",
+          "reveal": "hello",
+          "remediation": "Повторіть приклад і введіть відповідь."
+        },
+        "learning": {
+          "knowledge_refs": [
+            {
+              "knowledge_item_id": "49db33a3-4a56-48d6-8a73-0676c3133625",
+              "stable_code": "ENG_K_GREET_HELLO",
+              "role": "practice"
+            }
+          ],
+          "outcome_refs": [],
+          "evidence_map": [
+            {
+              "skill": "writing",
+              "facet": "spelling",
+              "weight": 1
+            }
+          ],
+          "difficulty": 0.2
+        },
+        "runtime": {
+          "completion_policy": "correct_or_reveal_v1",
+          "evaluator_version": "deterministic-core-1.0.0",
+          "presentation_seed": "P6_PROBE_HELLO_SPELLING-1",
+          "presentation_order": [],
+          "max_retries": 3,
+          "auto_advance_allowed": false
+        }
+      },
+      "expected_correct": [
+        "hello",
+        "HELLO"
+      ],
+      "expected_incorrect": [
+        "helo",
+        "hallo"
+      ],
+      "varieties": [
+        "en-GB",
+        "en-US"
+      ]
+    },
+    {
+      "source_unit": "E-A1-M01-R01",
+      "source_step": 5,
+      "scope": "DETERMINISTIC_POLICY_PROBE_NOT_COMPLETE_ACTIVITY",
+      "contract": {
+        "schema_version": "1.7",
+        "id": "c739547a-6f8e-5cb2-8b7d-0ecb7f211cea",
+        "stable_code": "P6_PROBE_RECAP_BE",
+        "type": "error_correction",
+        "language": "en",
+        "variety": "en-GB",
+        "cefr": "A1",
+        "content_version_id": "2cdd5fc6-6c69-561d-9b16-c0ddaff1f661",
+        "presentation": {
+          "instruction_key": "reference_answer",
+          "prompt": "Correct: I are a student.",
+          "media_refs": [],
+          "accessibility": {
+            "keyboard_action": "Type the answer and submit",
+            "feedback_live_region": true
+          }
+        },
+        "response": {
+          "kind": "text",
+          "answer_policy": {
+            "id": "P6_PROBE_RECAP_BE_ANSWER",
+            "version": "p6-probe-1",
+            "mode": "text",
+            "accepted_text": [
+              "I am a student.",
+              "I'm a student."
+            ],
+            "normalization": {
+              "unicode": "NFC",
+              "locale": "en-GB",
+              "case_sensitive": false,
+              "collapse_whitespace": true,
+              "punctuation_sensitive": false,
+              "apostrophe_equivalent": true,
+              "diacritics_sensitive": true
+            }
+          }
+        },
+        "feedback": {
+          "correct": "Правильно.",
+          "incorrect": "Перевірте потрібну форму й спробуйте ще раз.",
+          "reveal": "I am a student.",
+          "remediation": "Повторіть приклад і введіть відповідь."
+        },
+        "learning": {
+          "knowledge_refs": [
+            {
+              "knowledge_item_id": "d5aa3af0-016d-524f-bc58-d4bb4e82dcbc",
+              "stable_code": "ENG_K_BE_I",
+              "role": "practice"
+            }
+          ],
+          "outcome_refs": [],
+          "evidence_map": [
+            {
+              "skill": "grammar",
+              "facet": "grammar_form",
+              "weight": 1
+            }
+          ],
+          "difficulty": 0.2
+        },
+        "runtime": {
+          "completion_policy": "correct_or_reveal_v1",
+          "evaluator_version": "deterministic-core-1.0.0",
+          "presentation_seed": "P6_PROBE_RECAP_BE-1",
+          "presentation_order": [],
+          "max_retries": 3,
+          "auto_advance_allowed": false
+        }
+      },
+      "expected_correct": [
+        "I am a student.",
+        "I’m a student."
+      ],
+      "expected_incorrect": [
+        "I are a student.",
+        "I is a student.",
+        "I am an student."
+      ],
+      "varieties": [
+        "en-GB",
+        "en-US"
+      ]
+    }
+  ]
+}

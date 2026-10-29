@@ -1,0 +1,781 @@
+{
+  "schema_version": "p6-authoring-outline-1",
+  "module": "E-A1-M01",
+  "language": "en",
+  "default_variety": "en-GB",
+  "selectable_varieties": [
+    "en-GB",
+    "en-US"
+  ],
+  "source_document": "Lingvessa_Reference_Module_Design.pdf",
+  "source_version": "1.6",
+  "source_sha256": "b4a3d91738daa0d96c5e9e6435486fc6bc328f9f8072efb7fa1830620481f0d7",
+  "scope": "Source-bound authoring outline; not an executable lesson manifest or publication",
+  "publication_ready": false,
+  "lessons": [
+    {
+      "stable_code": "E-A1-M01-L01",
+      "lesson_id": "61e48434-ac36-442b-8feb-4cc724e38948",
+      "title": "Hello!",
+      "kind": "lesson",
+      "source_section": "6",
+      "steps": [
+        {
+          "position": 1,
+          "source_page": 9,
+          "title": "Context / scene",
+          "objective": "Scene and two greeting turns; exposure only",
+          "candidate_media_codes": [
+            "IMG_ENG_M01_CLUB_01",
+            "AUD_ENG_M01_DIALOGUES_L01_CONTEXT"
+          ],
+          "target_facets": [],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 2,
+          "source_page": 9,
+          "title": "Vocabulary intro",
+          "objective": "Six greeting/leave-taking cards; every card exposed",
+          "candidate_media_codes": [
+            "AUD_ENG_M01_WORDS_HELLO",
+            "AUD_ENG_M01_WORDS_HI",
+            "AUD_ENG_M01_WORDS_GOOD_MORNING",
+            "AUD_ENG_M01_WORDS_GOOD_EVENING",
+            "AUD_ENG_M01_WORDS_GOODBYE",
+            "AUD_ENG_M01_WORDS_BYE"
+          ],
+          "target_facets": [],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 3,
+          "source_page": 9,
+          "title": "Image choice",
+          "objective": "Morning/evening greeting; correct or reveal",
+          "candidate_media_codes": [
+            "IMG_ENG_M01_MORNING_01",
+            "IMG_ENG_M01_EVENING_01"
+          ],
+          "target_facets": [
+            "vocabulary/meaning"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 4,
+          "source_page": 9,
+          "title": "Listening match",
+          "objective": "Identify greeting without text first; normal/slow",
+          "candidate_media_codes": [
+            "AUD_ENG_M01_WORDS_HELLO",
+            "AUD_ENG_M01_WORDS_HI",
+            "AUD_ENG_M01_WORDS_GOODBYE",
+            "AUD_ENG_M01_WORDS_BYE"
+          ],
+          "target_facets": [
+            "listening/listening_recognition"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 5,
+          "source_page": 9,
+          "title": "Usage note",
+          "objective": "Neutral versus informal greeting; staged exposure",
+          "candidate_media_codes": [],
+          "target_facets": [],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 6,
+          "source_page": 9,
+          "title": "Word builder",
+          "objective": "Build HELLO after audio; case insensitive",
+          "candidate_media_codes": [
+            "AUD_ENG_M01_WORDS_HELLO"
+          ],
+          "target_facets": [
+            "writing/spelling"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 7,
+          "source_page": 9,
+          "title": "Pronunciation practice",
+          "objective": "Hello/Hi and /h/; unavailable is neutral",
+          "candidate_media_codes": [
+            "AUD_ENG_M01_WORDS_HELLO",
+            "AUD_ENG_M01_WORDS_HI"
+          ],
+          "target_facets": [
+            "pronunciation/pronunciation_target"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 8,
+          "source_page": 9,
+          "title": "Survival intro",
+          "objective": "Thank you, Sorry, misunderstanding and repeat request",
+          "candidate_media_codes": [
+            "AUD_ENG_M01_WORDS_THANK_YOU",
+            "AUD_ENG_M01_WORDS_SORRY",
+            "AUD_ENG_M01_WORDS_DONT_UNDERSTAND",
+            "AUD_ENG_M01_WORDS_REPEAT"
+          ],
+          "target_facets": [],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 9,
+          "source_page": 9,
+          "title": "Classification",
+          "objective": "Map three phrases to functional categories",
+          "candidate_media_codes": [
+            "VEC_EN_THANKS",
+            "VEC_EN_UNCLEAR",
+            "VEC_EN_REPEAT"
+          ],
+          "target_facets": [
+            "vocabulary/context_use"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 10,
+          "source_page": 10,
+          "title": "Dialogue chain",
+          "objective": "Repair after teacher; wrong keeps turn open; no Speaking evidence",
+          "candidate_media_codes": [
+            "AUD_ENG_M01_DIALOGUES_L01_REPAIR"
+          ],
+          "target_facets": [
+            "vocabulary/context_use"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 11,
+          "source_page": 10,
+          "title": "Retrieval check",
+          "objective": "Thank you/Goodbye/repeat request; decreasing support to typing",
+          "candidate_media_codes": [],
+          "target_facets": [
+            "vocabulary/recall_l1_to_l2",
+            "writing/production"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 12,
+          "source_page": 10,
+          "title": "Lesson result",
+          "objective": "Resolve all scored items; visible result and remediation",
+          "candidate_media_codes": [],
+          "target_facets": [],
+          "runtime_status": "NOT_IMPLEMENTED"
+        }
+      ]
+    },
+    {
+      "stable_code": "E-A1-M01-L02",
+      "lesson_id": "ce6e2ae2-d195-4bf7-bef1-b8bbde0fcdff",
+      "title": "I am / You are",
+      "kind": "lesson",
+      "source_section": "7",
+      "steps": [
+        {
+          "position": 1,
+          "source_page": 10,
+          "title": "Character context",
+          "objective": "Four profile introductions; exposure only",
+          "candidate_media_codes": [
+            "AV_ENG_MAYA_01",
+            "AV_ENG_DANIEL_01",
+            "AV_ENG_TEACHER_01"
+          ],
+          "target_facets": [],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 2,
+          "source_page": 10,
+          "title": "Interactive grammar",
+          "objective": "I am / you are; concise pattern after response",
+          "candidate_media_codes": [],
+          "target_facets": [
+            "grammar/grammar_form"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 3,
+          "source_page": 10,
+          "title": "Full-to-contraction match",
+          "objective": "Four matches: I am/you are/he is/she is",
+          "candidate_media_codes": [
+            "AUD_ENG_M01_WORDS_BE_I",
+            "AUD_ENG_M01_WORDS_BE_YOU",
+            "AUD_ENG_M01_WORDS_BE_HE",
+            "AUD_ENG_M01_WORDS_BE_SHE",
+            "AUD_ENG_M01_WORDS_BE_IM",
+            "AUD_ENG_M01_WORDS_BE_YOURE",
+            "AUD_ENG_M01_WORDS_BE_HES",
+            "AUD_ENG_M01_WORDS_BE_SHES"
+          ],
+          "target_facets": [
+            "grammar/grammar_form"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 4,
+          "source_page": 10,
+          "title": "Pronoun match",
+          "objective": "Speaker/addressee/he/she perspective",
+          "candidate_media_codes": [
+            "AV_ENG_MAYA_01",
+            "AV_ENG_DANIEL_01",
+            "AV_ENG_TEACHER_01"
+          ],
+          "target_facets": [
+            "vocabulary/meaning",
+            "grammar/grammar_form"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 5,
+          "source_page": 10,
+          "title": "a/an discovery",
+          "objective": "Student/teacher/engineer; sound-based article; three role images",
+          "candidate_media_codes": [
+            "AUD_ENG_M01_WORDS_A_STUDENT",
+            "AUD_ENG_M01_WORDS_A_TEACHER",
+            "AUD_ENG_M01_WORDS_AN_ENGINEER"
+          ],
+          "target_facets": [
+            "grammar/context_use"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 6,
+          "source_page": 10,
+          "title": "Gap fill",
+          "objective": "She is a student / He is an engineer",
+          "candidate_media_codes": [],
+          "target_facets": [
+            "grammar/grammar_form"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 7,
+          "source_page": 10,
+          "title": "Contraction typing",
+          "objective": "Contraction objective: full form meaning-correct but form-needed",
+          "candidate_media_codes": [],
+          "target_facets": [
+            "writing/spelling",
+            "grammar/grammar_form"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 8,
+          "source_page": 10,
+          "title": "Listening detail",
+          "objective": "Three introductions -> profiles; transcript after attempt",
+          "candidate_media_codes": [],
+          "target_facets": [
+            "listening/listening_recognition"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 9,
+          "source_page": 10,
+          "title": "Micro-note",
+          "objective": "Contractions common; full forms valid in other objectives",
+          "candidate_media_codes": [],
+          "target_facets": [],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 10,
+          "source_page": 10,
+          "title": "Dialogue completion",
+          "objective": "Hi, I am Maya / Hello, I am Daniel; support-dependent typing",
+          "candidate_media_codes": [
+            "AUD_ENG_M01_WORDS_NAME_MAYA",
+            "AUD_ENG_M01_WORDS_IM_DANIEL"
+          ],
+          "target_facets": [
+            "writing/production",
+            "grammar/grammar_form"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 11,
+          "source_page": 10,
+          "title": "Read aloud",
+          "objective": "Model role sentence; unavailable continues",
+          "candidate_media_codes": [],
+          "target_facets": [
+            "pronunciation/intelligibility"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 12,
+          "source_page": 10,
+          "title": "Lesson result",
+          "objective": "No unresolved scored items; unassessed speech distinct",
+          "candidate_media_codes": [],
+          "target_facets": [],
+          "runtime_status": "NOT_IMPLEMENTED"
+        }
+      ]
+    },
+    {
+      "stable_code": "E-A1-M01-L03",
+      "lesson_id": "d307461d-1eed-4a20-92e3-fb4d67878dd4",
+      "title": "Where are you from?",
+      "kind": "lesson",
+      "source_section": "8",
+      "steps": [
+        {
+          "position": 1,
+          "source_page": 11,
+          "title": "Visual lexical intro",
+          "objective": "Six country cards: UK/Ukraine/Czechia/Poland/Germany/Spain",
+          "candidate_media_codes": [
+            "VEC_FLAG_GB",
+            "VEC_FLAG_UA",
+            "VEC_FLAG_CZ",
+            "VEC_FLAG_PL",
+            "VEC_FLAG_DE",
+            "VEC_FLAG_ES",
+            "AUD_ENG_M01_WORDS_COUNTRY_GB",
+            "AUD_ENG_M01_WORDS_COUNTRY_UA",
+            "AUD_ENG_M01_WORDS_COUNTRY_CZ",
+            "AUD_ENG_M01_WORDS_COUNTRY_PL",
+            "AUD_ENG_M01_WORDS_COUNTRY_DE",
+            "AUD_ENG_M01_WORDS_COUNTRY_ES"
+          ],
+          "target_facets": [],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 2,
+          "source_page": 11,
+          "title": "Chunk intro",
+          "objective": "Where are you from? / I am from Ukraine",
+          "candidate_media_codes": [
+            "AUD_ENG_M01_WORDS_FROM_Q",
+            "AUD_ENG_M01_WORDS_FROM_UA"
+          ],
+          "target_facets": [],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 3,
+          "source_page": 11,
+          "title": "Question order",
+          "objective": "You are from Poland -> Are you from Poland?",
+          "candidate_media_codes": [],
+          "target_facets": [
+            "grammar/grammar_form",
+            "grammar/context_use"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 4,
+          "source_page": 11,
+          "title": "Short answer",
+          "objective": "Yes, I am / No, I am not; punctuation tolerant",
+          "candidate_media_codes": [],
+          "target_facets": [
+            "grammar/context_use"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 5,
+          "source_page": 11,
+          "title": "Profile choice",
+          "objective": "She is from Spain -> profile; retain context",
+          "candidate_media_codes": [],
+          "target_facets": [
+            "vocabulary/meaning"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 6,
+          "source_page": 11,
+          "title": "Listening gist",
+          "objective": "Three introductions -> country only; logged accessibility override",
+          "candidate_media_codes": [],
+          "target_facets": [
+            "listening/listening_gist"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 7,
+          "source_page": 11,
+          "title": "City and spelling support",
+          "objective": "London/Prague/Kyiv/Warsaw; spelling question and letters",
+          "candidate_media_codes": [
+            "AUD_ENG_M01_WORDS_CITY_LON",
+            "AUD_ENG_M01_WORDS_CITY_PRA",
+            "AUD_ENG_M01_WORDS_CITY_KYI",
+            "AUD_ENG_M01_WORDS_CITY_WAR",
+            "AUD_ENG_M01_WORDS_SPELL_Q"
+          ],
+          "target_facets": [],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 8,
+          "source_page": 11,
+          "title": "Letter listening",
+          "objective": "Hear M-A-Y-A; select string; normal/slow",
+          "candidate_media_codes": [
+            "AUD_ENG_M01_WORDS_LETTER_M",
+            "AUD_ENG_M01_WORDS_LETTER_A",
+            "AUD_ENG_M01_WORDS_LETTER_Y"
+          ],
+          "target_facets": [
+            "listening/listening_recognition",
+            "writing/spelling"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 9,
+          "source_page": 11,
+          "title": "UK usage note",
+          "objective": "I am from the UK; shared en-GB/en-US usage",
+          "candidate_media_codes": [
+            "AUD_ENG_M01_WORDS_COUNTRY_GB"
+          ],
+          "target_facets": [],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 10,
+          "source_page": 11,
+          "title": "Role-play prompt",
+          "objective": "Sample origin answer; typed route always; Speaking only if usable",
+          "candidate_media_codes": [
+            "AUD_ENG_M01_WORDS_FROM_Q"
+          ],
+          "target_facets": [
+            "writing/production"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 11,
+          "source_page": 11,
+          "title": "Typing",
+          "objective": "Translate the origin question; strict target",
+          "candidate_media_codes": [],
+          "target_facets": [
+            "writing/production",
+            "grammar/grammar_form"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 12,
+          "source_page": 11,
+          "title": "Lesson result",
+          "objective": "Resolve scored errors; partial speech evidence explicit",
+          "candidate_media_codes": [],
+          "target_facets": [],
+          "runtime_status": "NOT_IMPLEMENTED"
+        }
+      ]
+    },
+    {
+      "stable_code": "E-A1-M01-L04",
+      "lesson_id": "76a801be-1665-4b49-8585-6c4153a10388",
+      "title": "Nice to meet you",
+      "kind": "lesson",
+      "source_section": "9",
+      "steps": [
+        {
+          "position": 1,
+          "source_page": 11,
+          "title": "Retrieval warm-up",
+          "objective": "Four prior chunks without full prompt; remediation seed",
+          "candidate_media_codes": [],
+          "target_facets": [
+            "vocabulary/recall_l1_to_l2"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 2,
+          "source_page": 11,
+          "title": "Dialogue listening",
+          "objective": "Six-turn first meeting; answer gist before transcript",
+          "candidate_media_codes": [
+            "AUD_ENG_M01_DIALOGUES_L04_FIRST_CONTACT"
+          ],
+          "target_facets": [
+            "listening/listening_gist"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 3,
+          "source_page": 11,
+          "title": "Dialogue chain: name",
+          "objective": "Greeting/name turn; support selected by mastery",
+          "candidate_media_codes": [],
+          "target_facets": [
+            "vocabulary/context_use"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 4,
+          "source_page": 11,
+          "title": "Dialogue chain: origin",
+          "objective": "Origin question and answer; accepted variants",
+          "candidate_media_codes": [],
+          "target_facets": [
+            "vocabulary/context_use",
+            "grammar/grammar_form"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 5,
+          "source_page": 11,
+          "title": "Social-close chunk",
+          "objective": "Nice to meet you / Nice to meet you too; exposure",
+          "candidate_media_codes": [
+            "AUD_ENG_M01_WORDS_NICE_MEET",
+            "AUD_ENG_M01_WORDS_NICE_MEET_TOO"
+          ],
+          "target_facets": [],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 6,
+          "source_page": 12,
+          "title": "Pronunciation practice",
+          "objective": "Nice to meet you; sentence stress; unavailable continues",
+          "candidate_media_codes": [
+            "AUD_ENG_M01_WORDS_NICE_MEET"
+          ],
+          "target_facets": [
+            "pronunciation/pronunciation_target"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 7,
+          "source_page": 12,
+          "title": "Role-play",
+          "objective": "Three learner turns: name/origin/close; turn rubric; no hard speech gate",
+          "candidate_media_codes": [],
+          "target_facets": [
+            "writing/production"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 8,
+          "source_page": 12,
+          "title": "Sample profile",
+          "objective": "Fictional Name/Country/City; no personal data required",
+          "candidate_media_codes": [],
+          "target_facets": [
+            "writing/context_use"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 9,
+          "source_page": 12,
+          "title": "Profile reading",
+          "objective": "Yes/No and detail; Reading is an assessment domain, not a new skill",
+          "candidate_media_codes": [],
+          "target_facets": [
+            "vocabulary/meaning",
+            "vocabulary/context_use"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 10,
+          "source_page": 12,
+          "title": "Supported production",
+          "objective": "Three or four short sentences; blocks or typing; rubric variants",
+          "candidate_media_codes": [],
+          "target_facets": [
+            "writing/production"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 11,
+          "source_page": 12,
+          "title": "Strategy note",
+          "objective": "Keep exchange short; ask for repetition when needed",
+          "candidate_media_codes": [],
+          "target_facets": [],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 12,
+          "source_page": 12,
+          "title": "Lesson result",
+          "objective": "Zero unresolved scored items; readiness and recap recommendation",
+          "candidate_media_codes": [],
+          "target_facets": [],
+          "runtime_status": "NOT_IMPLEMENTED"
+        }
+      ]
+    },
+    {
+      "stable_code": "E-A1-M01-R01",
+      "lesson_id": "92477a87-f79e-41ca-88ab-f687ae64c18a",
+      "title": "First day at a language club",
+      "kind": "recap",
+      "source_section": "10",
+      "steps": [
+        {
+          "position": 1,
+          "source_page": 12,
+          "title": "Mixed retrieval",
+          "objective": "Six due/core items in varied operations; no new instruction",
+          "candidate_media_codes": [],
+          "target_facets": [
+            "vocabulary/recall_l1_to_l2"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 2,
+          "source_page": 12,
+          "title": "Listening gist",
+          "objective": "Arrival dialogue; identify new person; transcript after answer",
+          "candidate_media_codes": [
+            "AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT"
+          ],
+          "target_facets": [
+            "listening/listening_gist"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 3,
+          "source_page": 12,
+          "title": "Listening detail",
+          "objective": "Configured name and country; normal/slow",
+          "candidate_media_codes": [
+            "AUD_ENG_M01_DIALOGUES_R01_FIRST_CONTACT"
+          ],
+          "target_facets": [
+            "listening/listening_detail"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 4,
+          "source_page": 12,
+          "title": "Greeting register",
+          "objective": "Morning/neutral/informal categories; resolve all or reveal",
+          "candidate_media_codes": [
+            "IMG_ENG_M01_MORNING_01",
+            "IMG_ENG_M01_CLUB_01"
+          ],
+          "target_facets": [
+            "vocabulary/register"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 5,
+          "source_page": 12,
+          "title": "Grammar correction",
+          "objective": "I are -> I am / I am contracted; explain form",
+          "candidate_media_codes": [],
+          "target_facets": [
+            "grammar/grammar_form"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 6,
+          "source_page": 12,
+          "title": "Typing",
+          "objective": "Where are you from?; punctuation tolerant",
+          "candidate_media_codes": [],
+          "target_facets": [
+            "writing/production"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 7,
+          "source_page": 12,
+          "title": "Dialogue chain",
+          "objective": "Four turns including repair; retain prior turns",
+          "candidate_media_codes": [],
+          "target_facets": [
+            "vocabulary/context_use",
+            "grammar/grammar_form"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 8,
+          "source_page": 12,
+          "title": "Pronunciation pair",
+          "objective": "Greeting and Nice to meet you; unavailable never blocks",
+          "candidate_media_codes": [
+            "AUD_ENG_M01_WORDS_HELLO",
+            "AUD_ENG_M01_WORDS_NICE_MEET"
+          ],
+          "target_facets": [
+            "pronunciation/pronunciation_target"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 9,
+          "source_page": 13,
+          "title": "Final role-play",
+          "objective": "Four learner turns: greeting/name/origin/close; no timer; typed != Speaking",
+          "candidate_media_codes": [],
+          "target_facets": [
+            "writing/production"
+          ],
+          "runtime_status": "NOT_IMPLEMENTED"
+        },
+        {
+          "position": 10,
+          "source_page": 13,
+          "title": "Result",
+          "objective": "Remediate scored mistakes; speech separate; immutable analytics",
+          "candidate_media_codes": [],
+          "target_facets": [],
+          "runtime_status": "NOT_IMPLEMENTED"
+        }
+      ]
+    }
+  ]
+}

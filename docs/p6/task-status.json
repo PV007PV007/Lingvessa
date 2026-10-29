@@ -1,0 +1,26 @@
+{
+  "phase": "P6",
+  "status": "IN_PROGRESS",
+  "milestone_status": "NOT_READY",
+  "accepted_p5": "docs/p6/evidence/p5-acceptance.json",
+  "p6_authorized": true,
+  "p7_authorized": false,
+  "tasks": [
+    {
+      "task_id": "IMP-P6-001",
+      "status": "IN_PROGRESS",
+      "goal": "Executable English M01 four lessons and recap",
+      "current_batch": "Source outline, immutable English media preflight, bounded deterministic evaluation probes",
+      "pending": [
+        "Complete versioned lesson manifests and knowledge/outcome inventory",
+        "Load/replay/publish approved closure in disposable PostgreSQL/S3",
+        "Objective-specific accessibility and variant/voice policy",
+        "Lesson results/remediation/review/reload and nonblocking speech",
+        "English mobile/desktop E2E and vertical-slice defect report"
+      ]
+    }
+  ],
+  "od_004": "OPEN",
+  "od_006": "OPEN",
+  "next_action": "Compile source-bound lesson manifests using the shared contract; review observed contract gaps before any behavior change."
+}

@@ -1,3 +1,17 @@
+## Current owner acceptance and P6 start — 2026-10-29
+
+**P0–P5 ACCEPTED in recorded scopes. P6 IN PROGRESS / NOT READY. P7 NOT AUTHORIZED.** The owner's **“дозволяю”** answers the explicit P5 development/reference acceptance, merge-commit and P6-start proposal. [Decision and verified merge](../docs/p6/evidence/p5-acceptance.json).
+
+PR #5 is MERGED. Accepted tested HEAD `8f353cf44945738cff1b2ea49bfd9ce730ebf022`; main merge `da3a38c844d68bc6b4051f59d8c9265964347069`; equal tree `ff9e9f0b364db7d2989973e6197cb12133e5bcb0`. Merge parents and main were read back. [Final P5 proof](../docs/p6/evidence/verified-p5-ci-8f353cf.json): seven workflows / eleven jobs PASS, both actual M01 PostgreSQL/S3/HTTP runs and independent artifacts, zero dependency findings. This later acceptance supersedes the historical pre-acceptance statuses below; historical source evidence is not rewritten.
+
+Active branch `implementation/p6-english-reference`; task IMP-P6-001. [P6 scope and execution](../docs/p6/README.md), [task status](../docs/p6/task-status.json), [97 unchanged source clauses](../docs/p6/requirement-evidence.json), [observed gaps](../docs/p6/defects.json). First batch: five-unit / 58-row source outline, 20 bounded evaluator probes (176 response/locale cases), approved English catalog preflight. This is preparation, not complete executable lessons, PostgreSQL lesson publication, browser acceptance or milestone PASS. Exact new-source CI determines the batch result.
+
+Next concrete action: compile complete versioned English lesson/activity/knowledge/outcome manifests, resolve objective-specific accessibility, meaning/form, media and variety gaps through the shared contracts, then execute actual English PostgreSQL/S3/mobile/desktop journeys. No hardcoded lesson content in the renderer, English-only evaluator or synthetic-to-real relabelling. P6 stays NOT READY until the Plan §13 exit report is actually complete.
+
+OD-004 production delivery and OD-006 usable learner scoring remain OPEN. The 420-WAV/six-voice/rights approval (2026-10-14) and 30-visual approval (2026-10-20) stand. No regeneration, changed approved media, original ZIP publication, final WAV corpus in Git, new paid service or PC access. P7 and later milestones need separate authorization. Old P5 instructions to wait for acceptance/no P6 below are history, not current commands.
+
+## Historical pre-acceptance handoff
+
 ## Current bounded dependency follow-up — 2026-10-28
 
 P5 **IN PROGRESS / NOT READY**; PR #5 OPEN DRAFT; no merge/P6. Exact `e9a831061216272514a3c9dc22a605ff65351ef8` passed all seven workflows / eleven jobs on attempt 1 and both independent input/runtime audits: 420 unchanged WAVs, 450 pins, 31 gates and 28 browser cases per event, 46 acceptance references each. [Retained proof](../docs/p5/exit-review-20261028/verified-ci-e9a8310.json). All 850 source blobs matched GitHub. No historical/synthetic result substituted for a real M01 run.
