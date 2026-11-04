@@ -5,3 +5,5 @@ P6 is authorized from the accepted P5 merge. Reference Module Design v1.6 §§5�
 `m01/sequence.json` is the 58-row source outline; `m01/evaluation-probes.json` contains bounded authored text-policy checks using the shared evaluator. Neither file is a published or executable complete lesson. The P1–P5 synthetic fixtures remain separate and historical.
 
 See `docs/p6/README.md` for current scope, exact-source evidence, unresolved objective/contract gaps and the next versioned lesson-loading work. Default English variety is en-GB; en-US text probes do not imply en-US audio or learner-profile switching has passed.
+
+L01 now has an authored draft in `m01/l01.json` (29 activities; native result/remediation). See `docs/p6/l01.md` for source mapping, immutable media, separate hosted SVG/text test scope and the outstanding full-audio gate. No English module publication or P6 acceptance is asserted.

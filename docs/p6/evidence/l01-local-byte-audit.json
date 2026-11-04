@@ -1,0 +1,481 @@
+{
+  "status": "LOCAL_BYTE_CHECK_PASS_ONLY",
+  "verified_final_wavs": 420,
+  "acoustic_single_turn_results": 402,
+  "assembled_dialogues": 18,
+  "final_counts": {
+    "en": 210,
+    "cs": 210
+  },
+  "selected_wavs": 26,
+  "selected_svgs": 9,
+  "media_uses": 51,
+  "pins": [
+    {
+      "asset_id": "75c7bc9b-5ca7-5d89-ab17-42ff34618e4a",
+      "stable_code": "AUD_ENG_M01_DIALOGUES_L01_CONTEXT",
+      "asset_version": 2,
+      "checksum": "1e762ae78c7ebaf02f38f8b50323e1804e14e76eb0c513086c18cbba5d9b4514",
+      "byte_length": 69230,
+      "kind": "audio",
+      "scope": {
+        "language": "en",
+        "variety": "en-GB"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "a676082b-2d47-5a2f-b518-638d379e9baa",
+      "stable_code": "AUD_ENG_M01_DIALOGUES_L01_CONTEXT_SLOW",
+      "asset_version": 2,
+      "checksum": "789479ec7bc286686038bc8c23788df90129ada33461513613fd937db271dc69",
+      "byte_length": 85532,
+      "kind": "audio",
+      "scope": {
+        "language": "en",
+        "variety": "en-GB"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "fc0a943c-db22-58a4-a4fe-828e4cf8d629",
+      "stable_code": "AUD_ENG_M01_DIALOGUES_L01_REPAIR",
+      "asset_version": 2,
+      "checksum": "b4710478228f7551f3be61f3901041f690aa9ff6d5c74e2eb6603e20897cc80b",
+      "byte_length": 344136,
+      "kind": "audio",
+      "scope": {
+        "language": "en",
+        "variety": "en-GB"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "fb614a06-40a2-589f-832d-8bcf92e98f8a",
+      "stable_code": "AUD_ENG_M01_DIALOGUES_L01_REPAIR_SLOW",
+      "asset_version": 2,
+      "checksum": "38407b53c614e4f2736c21b757b451f338a96ebce08e744a0faf4c1152149035",
+      "byte_length": 426786,
+      "kind": "audio",
+      "scope": {
+        "language": "en",
+        "variety": "en-GB"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "832e929e-3546-5f0a-9a28-950ea6aae4ef",
+      "stable_code": "AUD_ENG_M01_DIALOGUES_L01_REPAIR_TURN_01",
+      "asset_version": 2,
+      "checksum": "6e0a59fe893f4a4371e327fd13fe28c03a31bfcdb1020a18b5c18a5e110a6c08",
+      "byte_length": 86980,
+      "kind": "audio",
+      "scope": {
+        "language": "en",
+        "variety": "en-GB"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "6aae2e5b-863f-5486-ba1c-d3d4fb71975b",
+      "stable_code": "AUD_ENG_M01_DIALOGUES_L01_REPAIR_TURN_01_SLOW",
+      "asset_version": 2,
+      "checksum": "3c16d991a18b9f5c830e7fd803ce583dc39d43195f75e801145acea67d29d880",
+      "byte_length": 107808,
+      "kind": "audio",
+      "scope": {
+        "language": "en",
+        "variety": "en-GB"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "78ac7f8c-b986-5fb4-974e-7118ed2b0c32",
+      "stable_code": "AUD_ENG_M01_WORDS_BYE",
+      "asset_version": 2,
+      "checksum": "5980ae8469c1ee460805f05c56dd094345995a1943b0d06a0f22c5b8ace0016b",
+      "byte_length": 28466,
+      "kind": "audio",
+      "scope": {
+        "language": "en",
+        "variety": "en-GB"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "b506b6d6-fefc-5662-bffa-f7afd2ae9cd8",
+      "stable_code": "AUD_ENG_M01_WORDS_BYE_SLOW",
+      "asset_version": 2,
+      "checksum": "03988b545643287bd19d6e675593ea03a4b7beb2e25f72e86b505b99fb8cd834",
+      "byte_length": 34558,
+      "kind": "audio",
+      "scope": {
+        "language": "en",
+        "variety": "en-GB"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "ec78d56e-6dd9-5427-a5cc-97860a2d2911",
+      "stable_code": "AUD_ENG_M01_WORDS_DONT_UNDERSTAND",
+      "asset_version": 2,
+      "checksum": "3e5e7f05007163244ef697c846e792b032f2d822348974db415b8a1e9e474938",
+      "byte_length": 49086,
+      "kind": "audio",
+      "scope": {
+        "language": "en",
+        "variety": "en-GB"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "c0f88b9e-836b-5e67-aa48-00a93076a72f",
+      "stable_code": "AUD_ENG_M01_WORDS_DONT_UNDERSTAND_SLOW",
+      "asset_version": 2,
+      "checksum": "df85e350ada240ae2afddbf98d66e3f361eb7fda1dcb8e1e4dd495779819e7a0",
+      "byte_length": 60378,
+      "kind": "audio",
+      "scope": {
+        "language": "en",
+        "variety": "en-GB"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "85176529-1d14-582f-a76b-e48978c46f0a",
+      "stable_code": "AUD_ENG_M01_WORDS_GOODBYE",
+      "asset_version": 2,
+      "checksum": "0059d6d10dc78b85e6e4377ae83e9a42ef655c8966e25b71648864073ce6781a",
+      "byte_length": 30696,
+      "kind": "audio",
+      "scope": {
+        "language": "en",
+        "variety": "en-GB"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "b8a73775-fdda-56a1-bf88-ca7d22c1b685",
+      "stable_code": "AUD_ENG_M01_WORDS_GOODBYE_SLOW",
+      "asset_version": 2,
+      "checksum": "2aa7b6519ae45d8a6ea84c169cb364dda17b3cda0cba42d10456bd64338089dd",
+      "byte_length": 37752,
+      "kind": "audio",
+      "scope": {
+        "language": "en",
+        "variety": "en-GB"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "640cacf4-fbe4-5b6e-8e34-fe1fc23dd256",
+      "stable_code": "AUD_ENG_M01_WORDS_GOOD_EVENING",
+      "asset_version": 2,
+      "checksum": "0e99ac7fee52724e3067e899700196e2398bc5ae4532cba0eba068a798440563",
+      "byte_length": 79178,
+      "kind": "audio",
+      "scope": {
+        "language": "en",
+        "variety": "en-GB"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "7dfd60bb-998f-53ae-8ff0-5d1c1dbb1c0b",
+      "stable_code": "AUD_ENG_M01_WORDS_GOOD_EVENING_SLOW",
+      "asset_version": 2,
+      "checksum": "c83df1877850ef2213154bf156e8caae13ad5e52958b98fc0bd44f00a46a7dca",
+      "byte_length": 98270,
+      "kind": "audio",
+      "scope": {
+        "language": "en",
+        "variety": "en-GB"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "7ab5e8f3-b586-5e0d-af8a-af0d6c7b8c65",
+      "stable_code": "AUD_ENG_M01_WORDS_GOOD_MORNING",
+      "asset_version": 2,
+      "checksum": "e07b9f2a436c2529a6bb8679b949d5bb763f2fe5f430ef7f8929ebf9706dac7f",
+      "byte_length": 37382,
+      "kind": "audio",
+      "scope": {
+        "language": "en",
+        "variety": "en-GB"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "2a7da8f0-70ab-549a-919e-8fb488468261",
+      "stable_code": "AUD_ENG_M01_WORDS_GOOD_MORNING_SLOW",
+      "asset_version": 2,
+      "checksum": "4fa78624d32357395399249ef7f73f5c97e1cf7ba4c86722a669795056b95098",
+      "byte_length": 45752,
+      "kind": "audio",
+      "scope": {
+        "language": "en",
+        "variety": "en-GB"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "7a567fc4-f9a0-5f71-9a6d-c564b14ee472",
+      "stable_code": "AUD_ENG_M01_WORDS_HELLO",
+      "asset_version": 2,
+      "checksum": "49bc97e8475119b35d28045fad656f79214ee60fe590847a356d68a3d7e2b19c",
+      "byte_length": 29024,
+      "kind": "audio",
+      "scope": {
+        "language": "en",
+        "variety": "en-GB"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "fe32df64-de79-5e81-8fc6-71732060850a",
+      "stable_code": "AUD_ENG_M01_WORDS_HELLO_SLOW",
+      "asset_version": 2,
+      "checksum": "b6bec6812866ab484139a492d24380735192c84937192053026a9ee1a7b616d1",
+      "byte_length": 35714,
+      "kind": "audio",
+      "scope": {
+        "language": "en",
+        "variety": "en-GB"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "b5f5ddd4-2163-58a7-837c-93ec0cc66e9d",
+      "stable_code": "AUD_ENG_M01_WORDS_HI",
+      "asset_version": 2,
+      "checksum": "68eb28e85d40b03e9e2a690942d348e09b00f24376d98edef411c6c5a1ddd992",
+      "byte_length": 22336,
+      "kind": "audio",
+      "scope": {
+        "language": "en",
+        "variety": "en-GB"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "05b33953-9d28-5087-b13d-c6071efd2ae0",
+      "stable_code": "AUD_ENG_M01_WORDS_HI_SLOW",
+      "asset_version": 2,
+      "checksum": "2ff1e074ab8a1b5834d23f73f3f11b05ae93c4fba4d011a6066e2ae69e554dbb",
+      "byte_length": 27062,
+      "kind": "audio",
+      "scope": {
+        "language": "en",
+        "variety": "en-GB"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "5ea9a048-ca81-591f-9a18-3e97a9befa2d",
+      "stable_code": "AUD_ENG_M01_WORDS_REPEAT",
+      "asset_version": 2,
+      "checksum": "a4d44fd93a340cdf93cd3e9c6452724a082009746867bde5e5d16eb2912c66f2",
+      "byte_length": 108158,
+      "kind": "audio",
+      "scope": {
+        "language": "en",
+        "variety": "en-GB"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "edb5cea6-2849-596b-8089-5137250971ff",
+      "stable_code": "AUD_ENG_M01_WORDS_REPEAT_SLOW",
+      "asset_version": 2,
+      "checksum": "f63c7554b54e66d2e21f3a146ca778a4bd2bf1c07c27ddbb086df6cd4e1bd535",
+      "byte_length": 134140,
+      "kind": "audio",
+      "scope": {
+        "language": "en",
+        "variety": "en-GB"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "22ba4ca9-69b4-5a8f-83db-a0b74440e99c",
+      "stable_code": "AUD_ENG_M01_WORDS_SORRY",
+      "asset_version": 2,
+      "checksum": "e8875a77135c35636e3ccdaa5b4a184ae348d662e0b22d139faaf2d6f393f2d2",
+      "byte_length": 34040,
+      "kind": "audio",
+      "scope": {
+        "language": "en",
+        "variety": "en-GB"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "8356f8b1-fe40-53c4-a602-36715d4f07ee",
+      "stable_code": "AUD_ENG_M01_WORDS_SORRY_SLOW",
+      "asset_version": 2,
+      "checksum": "b575e1461f55111bf724a6188b152ca78e6bed9520c4bc0c2b6b74d99cf4dfc3",
+      "byte_length": 41618,
+      "kind": "audio",
+      "scope": {
+        "language": "en",
+        "variety": "en-GB"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "08b3a4ec-36cf-5b2f-a385-11b586fc2700",
+      "stable_code": "AUD_ENG_M01_WORDS_THANK_YOU",
+      "asset_version": 2,
+      "checksum": "2c0ab6410c23ac0401cc131eeba542d78562eb82a1bce260db5da3afec70fe97",
+      "byte_length": 36826,
+      "kind": "audio",
+      "scope": {
+        "language": "en",
+        "variety": "en-GB"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "a9b66a2c-7bd6-5265-8316-5cb7bd442586",
+      "stable_code": "AUD_ENG_M01_WORDS_THANK_YOU_SLOW",
+      "asset_version": 2,
+      "checksum": "6189db46504e0133a0bca80ad2c9014225425576cb2000970b776017d531aace",
+      "byte_length": 45258,
+      "kind": "audio",
+      "scope": {
+        "language": "en",
+        "variety": "en-GB"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "623db132-8f9b-5cfd-af48-63b723c57bee",
+      "stable_code": "AV_ENG_DANIEL_01",
+      "asset_version": 2,
+      "checksum": "8a33e6c8834c4c6da60b9e321066ce665e22ee3160a2a2166f10a7708844a894",
+      "byte_length": 1163,
+      "kind": "avatar",
+      "scope": {
+        "language": "en",
+        "variety": "common"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "84621e38-8b2a-5b9a-931a-a8a428108603",
+      "stable_code": "AV_ENG_MAYA_01",
+      "asset_version": 2,
+      "checksum": "61aea745e7c9849bb084929945844c64aa84d690c1a6f9ba3e7b8800cd501a2b",
+      "byte_length": 1226,
+      "kind": "avatar",
+      "scope": {
+        "language": "en",
+        "variety": "common"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "87b4ae9f-e331-57e1-856b-175ca3d3879b",
+      "stable_code": "AV_ENG_TEACHER_01",
+      "asset_version": 2,
+      "checksum": "323bce3a1e9c1903cc9a55dcb819cab14c65f3a37b2ad0dd86f25fe902abdc72",
+      "byte_length": 1161,
+      "kind": "avatar",
+      "scope": {
+        "language": "en",
+        "variety": "common"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "7cb5edb4-0727-5430-a18f-97cfb5d749f0",
+      "stable_code": "IMG_ENG_M01_CLUB_01",
+      "asset_version": 2,
+      "checksum": "cfe41de78b373781cb1b1e41db2ae22ea55d2e218b7fbe1b6b853109eed0686a",
+      "byte_length": 2793,
+      "kind": "image",
+      "scope": {
+        "language": "en",
+        "variety": "common"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "af38a95a-65a3-5091-b67c-5ce0b6798e71",
+      "stable_code": "IMG_ENG_M01_EVENING_01",
+      "asset_version": 2,
+      "checksum": "f00a4d6155023fdbdabd1b2bba3323ba5767305d1e56ad77b234ef7b49e81a47",
+      "byte_length": 3029,
+      "kind": "image",
+      "scope": {
+        "language": "en",
+        "variety": "common"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "d4d69958-e2ee-5352-80aa-f2b8093a1205",
+      "stable_code": "IMG_ENG_M01_MORNING_01",
+      "asset_version": 2,
+      "checksum": "9e00e545b054906930b0803af6bc5647e9d8672a6548e64906d11a28d8f2fb73",
+      "byte_length": 2690,
+      "kind": "image",
+      "scope": {
+        "language": "en",
+        "variety": "common"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "f9f0df04-3746-5409-97aa-bd53e039e91a",
+      "stable_code": "VEC_EN_REPEAT",
+      "asset_version": 2,
+      "checksum": "e4c6ce60c20f605cdcdbf54f2726d65f284865be462bc705776e253540d5c237",
+      "byte_length": 433,
+      "kind": "vector",
+      "scope": {
+        "language": "en",
+        "variety": "common"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "1b320540-dbca-5b9f-bc75-014a16d43d7f",
+      "stable_code": "VEC_EN_THANKS",
+      "asset_version": 2,
+      "checksum": "6196b7054e9c4290b29b38a1c457347657a1c69a4412399a07b15aa461ee7412",
+      "byte_length": 439,
+      "kind": "vector",
+      "scope": {
+        "language": "en",
+        "variety": "common"
+      },
+      "decorative": false
+    },
+    {
+      "asset_id": "60830e20-3a49-5030-bf1b-9b905d82dd5c",
+      "stable_code": "VEC_EN_UNCLEAR",
+      "asset_version": 2,
+      "checksum": "769607e22a3c3e58c04bf50d14cb2db6e8e70c9fc10d9aef041309fd0cc9b8d0",
+      "byte_length": 532,
+      "kind": "vector",
+      "scope": {
+        "language": "en",
+        "variety": "common"
+      },
+      "decorative": false
+    }
+  ],
+  "postgresql_executed": false,
+  "s3_executed": false,
+  "browser_executed": false,
+  "production_profile_approved": false,
+  "code_bindings": {
+    "content/english/m01/l01.json": "778f0dcadf6b7774ec6df4d7f379a3489da283f6368840346f132b90a7e1be8e",
+    "tools/p6/l01-input.ts": "4034701b38abae2ed8664ca76c569ae20a77ed7552bb6b2d22b729c35a719041",
+    "tools/p6/l01-byte-check.ts": "147207ff48577abefeef1b401e9dc3d77bc33e3760a8eb92d6340d23a3263f49",
+    "tools/p5/media-library.ts": "129031a66ebe737a235bb238de4990a9297f78bd2d666a55a590232f257e0d4f",
+    "assets/media/m01/registry.json": "2a5e8632987beec7bf34d31fc1f5552dee95f56eb0b971d6caac847bbffdea3d"
+  }
+}

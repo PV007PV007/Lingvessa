@@ -529,7 +529,13 @@
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
       "actual_test_files": [],
       "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "verified_implementation_sha": null,
+      "preparation_status": "L01_AUTHORED_FULL_CLAUSE_PENDING",
+      "preparation_links": [
+        "content/english/m01/l01.json",
+        "docs/p6/l01.md",
+        "tools/p6/l01-postgres.ts"
+      ]
     },
     {
       "requirement_id": "N-REF-P09-T02-R03",
@@ -560,7 +566,13 @@
       "applicability": "Binding when the named optional capability is enabled; default-off/fallback restrictions always apply.",
       "actual_test_files": [],
       "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "verified_implementation_sha": null,
+      "preparation_status": "L01_AUTHORED_FULL_CLAUSE_PENDING",
+      "preparation_links": [
+        "content/english/m01/l01.json",
+        "docs/p6/l01.md",
+        "tools/p6/l01-postgres.ts"
+      ]
     },
     {
       "requirement_id": "N-REF-P09-T02-R04",
@@ -591,7 +603,13 @@
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
       "actual_test_files": [],
       "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "verified_implementation_sha": null,
+      "preparation_status": "L01_AUTHORED_FULL_CLAUSE_PENDING",
+      "preparation_links": [
+        "content/english/m01/l01.json",
+        "docs/p6/l01.md",
+        "tools/p6/l01-postgres.ts"
+      ]
     },
     {
       "requirement_id": "N-REF-P09-T02-R05",
@@ -622,7 +640,13 @@
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
       "actual_test_files": [],
       "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "verified_implementation_sha": null,
+      "preparation_status": "L01_AUTHORED_FULL_CLAUSE_PENDING",
+      "preparation_links": [
+        "content/english/m01/l01.json",
+        "docs/p6/l01.md",
+        "tools/p6/l01-postgres.ts"
+      ]
     },
     {
       "requirement_id": "N-REF-P09-T02-R06",
@@ -653,7 +677,13 @@
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
       "actual_test_files": [],
       "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "verified_implementation_sha": null,
+      "preparation_status": "L01_AUTHORED_FULL_CLAUSE_PENDING",
+      "preparation_links": [
+        "content/english/m01/l01.json",
+        "docs/p6/l01.md",
+        "tools/p6/l01-postgres.ts"
+      ]
     },
     {
       "requirement_id": "N-REF-P09-T02-R07",
@@ -684,7 +714,13 @@
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
       "actual_test_files": [],
       "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "verified_implementation_sha": null,
+      "preparation_status": "L01_AUTHORED_FULL_CLAUSE_PENDING",
+      "preparation_links": [
+        "content/english/m01/l01.json",
+        "docs/p6/l01.md",
+        "tools/p6/l01-postgres.ts"
+      ]
     },
     {
       "requirement_id": "N-REF-P09-T02-R08",
@@ -715,7 +751,13 @@
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
       "actual_test_files": [],
       "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "verified_implementation_sha": null,
+      "preparation_status": "L01_AUTHORED_FULL_CLAUSE_PENDING",
+      "preparation_links": [
+        "content/english/m01/l01.json",
+        "docs/p6/l01.md",
+        "tools/p6/l01-postgres.ts"
+      ]
     },
     {
       "requirement_id": "N-REF-P09-T02-R09",
@@ -746,7 +788,13 @@
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
       "actual_test_files": [],
       "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "verified_implementation_sha": null,
+      "preparation_status": "L01_AUTHORED_FULL_CLAUSE_PENDING",
+      "preparation_links": [
+        "content/english/m01/l01.json",
+        "docs/p6/l01.md",
+        "tools/p6/l01-postgres.ts"
+      ]
     },
     {
       "requirement_id": "N-REF-P09-T02-R10",
@@ -777,7 +825,13 @@
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
       "actual_test_files": [],
       "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "verified_implementation_sha": null,
+      "preparation_status": "L01_AUTHORED_FULL_CLAUSE_PENDING",
+      "preparation_links": [
+        "content/english/m01/l01.json",
+        "docs/p6/l01.md",
+        "tools/p6/l01-postgres.ts"
+      ]
     },
     {
       "requirement_id": "N-REF-P10-T01-R02",
@@ -808,7 +862,13 @@
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
       "actual_test_files": [],
       "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "verified_implementation_sha": null,
+      "preparation_status": "L01_AUTHORED_FULL_CLAUSE_PENDING",
+      "preparation_links": [
+        "content/english/m01/l01.json",
+        "docs/p6/l01.md",
+        "tools/p6/l01-postgres.ts"
+      ]
     },
     {
       "requirement_id": "N-REF-P10-T01-R03",
@@ -839,7 +899,13 @@
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
       "actual_test_files": [],
       "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "verified_implementation_sha": null,
+      "preparation_status": "L01_AUTHORED_FULL_CLAUSE_PENDING",
+      "preparation_links": [
+        "content/english/m01/l01.json",
+        "docs/p6/l01.md",
+        "tools/p6/l01-postgres.ts"
+      ]
     },
     {
       "requirement_id": "N-REF-P10-T01-R04",
@@ -870,7 +936,13 @@
       "applicability": "Baseline requirement within its stated scope; canonical annex controls names and eligibility.",
       "actual_test_files": [],
       "actual_gate_ids": [],
-      "verified_implementation_sha": null
+      "verified_implementation_sha": null,
+      "preparation_status": "L01_AUTHORED_FULL_CLAUSE_PENDING",
+      "preparation_links": [
+        "content/english/m01/l01.json",
+        "docs/p6/l01.md",
+        "tools/p6/l01-postgres.ts"
+      ]
     },
     {
       "requirement_id": "N-REF-P10-T02-R02",

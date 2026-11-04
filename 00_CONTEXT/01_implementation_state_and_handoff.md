@@ -262,3 +262,12 @@ Plan v1.4 §12 p7 requires all M01 required asset IDs to resolve. Prepared: 18 o
 OD-004 delivery profile OPEN. Final audio tooling/cast/generation and audio rights were approved on 2026-10-14; older audition records below/above remain historical. OD-006 usable real-provider speech calibration OPEN; default stays neutral `speech_unavailable`. Paid inference=false; monthly paid budget=0. No P6/P7/P8 runtime starts. EXC-P1-001 remains: main lacks technical branch protection; implementation branch, PR, CI and owner review apply.
 
 Next: apply the remaining-gate plan linked above. The real corpus run is complete on 460aab0; subsequent revisions reuse the private asset automatically for exact-source CI. Do not restart old missing-audio work.
+
+
+## 2026-11-04 — P6 L01 reconstruction and execution checkpoint
+
+P5 remains owner accepted/merged at `da3a38c844d68bc6b4051f59d8c9265964347069`. P6 is authorized, IN PROGRESS / NOT READY; PR #6 stays Draft; no P6 merge or P7. Verified parent `9c45c601b7a1ef24c1d338c1f606c1c612c9f628`: 8 successful workflows; both P6 artifacts independently checked against 867 source blobs. Nov3 drafted files/checkpoint were absent from restored scratch; remote branch did not advance. Unattached blob/tree creation is unconfirmed; do not claim success from the interrupted cell.
+
+Reconstructed `content/english/m01/l01.json`: 29 shared contracts, 44 versions, 35 immutable pins (26 WAV + 9 SVG), 51 uses. Atomic importer rejects changed/partial closures and creates no approvals. Local read-only byte audit verifies all 420 approved final WAVs; this is not PostgreSQL/S3 proof. Hosted CI now explicitly tests nine complete SVG/text activities under separate test version IDs with PostgreSQL 18.6, pinned MinIO, restart, replay, publication and two browser viewports. New-source hosted result is pending; inspect PR #6 and its exact-source artifacts. Full-audio L01 and remaining units remain pending. See `docs/p6/l01.md` and `docs/p6/task-status.json`.
+
+Automatic review rejected refreshing the already-successful P5 input job on Nov3. It was not rerun; do not work around the rejection or trusted input controls. Full-audio hosted input stays blocked until explicit authorization of that action. Preserve existing audio/voice/rights and visual approvals; no regeneration or WAV Git storage. OD-004/OD-006 remain OPEN.

@@ -13,7 +13,7 @@ const sequencePath='content/english/m01/sequence.json',probePath='content/englis
 const sourcePath='01_GOVERNING_DOCUMENTS/Lingvessa_Reference_Module_Design.pdf';
 const hash=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex');
 const step=z.object({position:z.number().int().positive(),source_page:z.number().int().min(9).max(13),title:z.string().min(1),objective:z.string().min(1),
-  candidate_media_codes:z.array(z.string()),target_facets:z.array(z.string()),runtime_status:z.literal('NOT_IMPLEMENTED')}).strict();
+  candidate_media_codes:z.array(z.string()),target_facets:z.array(z.string()),runtime_status:z.enum(['NOT_IMPLEMENTED','AUTHORED_CONTRACT_BOUND','NATIVE_RESULT_BOUND'])}).strict();
 const outlineSchema=z.object({schema_version:z.literal('p6-authoring-outline-1'),module:z.literal('E-A1-M01'),language:z.literal('en'),
   default_variety:z.literal('en-GB'),selectable_varieties:z.tuple([z.literal('en-GB'),z.literal('en-US')]),
   source_document:z.literal('Lingvessa_Reference_Module_Design.pdf'),source_version:z.literal('1.6'),source_sha256:z.string(),

@@ -12,7 +12,7 @@ concurrency:
 jobs:
   p6-preflight:
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    timeout-minutes: 45
     env:
       NEXT_TELEMETRY_DISABLED: '1'
       PYTHONDONTWRITEBYTECODE: '1'
@@ -34,8 +34,18 @@ jobs:
       - run: pnpm check:boundaries
       - run: pnpm check:secrets
       - run: node --import tsx --test tests/unit/p6-reference.test.ts
+      - run: node --import tsx --test tests/unit/p6-authored-unit.test.ts
       - run: node --import tsx tools/p6/reference-preflight.ts
-      - name: Preserve preparation evidence; this is not P6 vertical-slice acceptance
+      - run: node --import tsx tools/p6/authored-l01-check.ts
+      - run: pnpm build:web
+      - run: pnpm exec playwright install --with-deps chromium
+        timeout-minutes: 10
+      - name: Build pinned standalone S3 protocol test server
+        run: go install github.com/minio/minio@9e49d5e7a648f00e26f2246f4dc28e6b07f8c84a
+      - run: pnpm bootstrap:local
+      - name: Execute nine complete authored SVG/text activities with PostgreSQL S3 and browser
+        run: MINIO_BINARY="$(go env GOPATH)/bin/minio" node --env-file=.local/runtime.env --import tsx tools/p6/l01-postgres.ts --svg-text-slice
+      - name: Preserve scoped evidence; this is not complete audio L01 or P6 acceptance
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:

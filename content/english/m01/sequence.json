@@ -30,7 +30,7 @@
             "AUD_ENG_M01_DIALOGUES_L01_CONTEXT"
           ],
           "target_facets": [],
-          "runtime_status": "NOT_IMPLEMENTED"
+          "runtime_status": "AUTHORED_CONTRACT_BOUND"
         },
         {
           "position": 2,
@@ -46,7 +46,7 @@
             "AUD_ENG_M01_WORDS_BYE"
           ],
           "target_facets": [],
-          "runtime_status": "NOT_IMPLEMENTED"
+          "runtime_status": "AUTHORED_CONTRACT_BOUND"
         },
         {
           "position": 3,
@@ -60,7 +60,7 @@
           "target_facets": [
             "vocabulary/meaning"
           ],
-          "runtime_status": "NOT_IMPLEMENTED"
+          "runtime_status": "AUTHORED_CONTRACT_BOUND"
         },
         {
           "position": 4,
@@ -76,7 +76,7 @@
           "target_facets": [
             "listening/listening_recognition"
           ],
-          "runtime_status": "NOT_IMPLEMENTED"
+          "runtime_status": "AUTHORED_CONTRACT_BOUND"
         },
         {
           "position": 5,
@@ -85,7 +85,7 @@
           "objective": "Neutral versus informal greeting; staged exposure",
           "candidate_media_codes": [],
           "target_facets": [],
-          "runtime_status": "NOT_IMPLEMENTED"
+          "runtime_status": "AUTHORED_CONTRACT_BOUND"
         },
         {
           "position": 6,
@@ -98,7 +98,7 @@
           "target_facets": [
             "writing/spelling"
           ],
-          "runtime_status": "NOT_IMPLEMENTED"
+          "runtime_status": "AUTHORED_CONTRACT_BOUND"
         },
         {
           "position": 7,
@@ -112,7 +112,7 @@
           "target_facets": [
             "pronunciation/pronunciation_target"
           ],
-          "runtime_status": "NOT_IMPLEMENTED"
+          "runtime_status": "AUTHORED_CONTRACT_BOUND"
         },
         {
           "position": 8,
@@ -126,7 +126,7 @@
             "AUD_ENG_M01_WORDS_REPEAT"
           ],
           "target_facets": [],
-          "runtime_status": "NOT_IMPLEMENTED"
+          "runtime_status": "AUTHORED_CONTRACT_BOUND"
         },
         {
           "position": 9,
@@ -141,7 +141,7 @@
           "target_facets": [
             "vocabulary/context_use"
           ],
-          "runtime_status": "NOT_IMPLEMENTED"
+          "runtime_status": "AUTHORED_CONTRACT_BOUND"
         },
         {
           "position": 10,
@@ -154,7 +154,7 @@
           "target_facets": [
             "vocabulary/context_use"
           ],
-          "runtime_status": "NOT_IMPLEMENTED"
+          "runtime_status": "AUTHORED_CONTRACT_BOUND"
         },
         {
           "position": 11,
@@ -166,7 +166,7 @@
             "vocabulary/recall_l1_to_l2",
             "writing/production"
           ],
-          "runtime_status": "NOT_IMPLEMENTED"
+          "runtime_status": "AUTHORED_CONTRACT_BOUND"
         },
         {
           "position": 12,
@@ -175,7 +175,7 @@
           "objective": "Resolve all scored items; visible result and remediation",
           "candidate_media_codes": [],
           "target_facets": [],
-          "runtime_status": "NOT_IMPLEMENTED"
+          "runtime_status": "NATIVE_RESULT_BOUND"
         }
       ]
     },

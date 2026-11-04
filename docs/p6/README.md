@@ -22,3 +22,7 @@ Next, compile the 58 source rows into complete versioned lesson/activity/knowled
 Any actual contract/invariant change follows `docs/governance/change-control.md`: document the exact conflict, prepare the ADR/spec change and secure the necessary owner decision before changing behavior. Ordinary implementation within the approved contracts continues autonomously. The defect list is not a request to reopen accepted P5 or regenerate media.
 
 OD-004 stays OPEN before production delivery; OD-006 stays OPEN before usable learner scoring. Existing approved audio/visual sets remain unchanged, speech defaults to unavailable, large audio bytes stay outside Git, and no new paid service or PC access is needed. P7 and later milestones remain stopped until separately authorized.
+
+## L01 batch — 2026-11-04
+
+See [L01 implementation and test boundaries](l01.md): 29 contracts, 44 versions, 26 approved WAV + 9 SVG pins. The next hosted gate exercises nine whole SVG/text activities using real PostgreSQL/S3 and two browser viewports. Full audio execution and the remaining four units are still pending; P6 remains NOT READY. The existing first-batch outline/probe sections are historical preparation scope.
