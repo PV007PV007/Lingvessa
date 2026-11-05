@@ -7,6 +7,14 @@
     "en": 210,
     "cs": 210
   },
+  "single_turn_counts": {
+    "en": 202,
+    "cs": 200
+  },
+  "dialogue_counts": {
+    "en": 8,
+    "cs": 10
+  },
   "selected_wavs": 26,
   "selected_svgs": 9,
   "media_uses": 51,
@@ -472,10 +480,13 @@
   "browser_executed": false,
   "production_profile_approved": false,
   "code_bindings": {
-    "content/english/m01/l01.json": "778f0dcadf6b7774ec6df4d7f379a3489da283f6368840346f132b90a7e1be8e",
+    "content/english/m01/l01.json": "6dbdd196efcc954bc2360d4bc186f574832945b1d700294bb5c54626ac413fbe",
     "tools/p6/l01-input.ts": "4034701b38abae2ed8664ca76c569ae20a77ed7552bb6b2d22b729c35a719041",
-    "tools/p6/l01-byte-check.ts": "147207ff48577abefeef1b401e9dc3d77bc33e3760a8eb92d6340d23a3263f49",
+    "tools/p6/l01-byte-check.ts": "573302f7e3ffb45a76a4797c2a13113a736013f68cbbc36b9532b7dde315695c",
+    "packages/content-tools/src/authored-unit.ts": "cc7da39772cb4b4b7f68dd7ded5038b0827c66f5b4e66e825952e23baebb3c83",
     "tools/p5/media-library.ts": "129031a66ebe737a235bb238de4990a9297f78bd2d666a55a590232f257e0d4f",
-    "assets/media/m01/registry.json": "2a5e8632987beec7bf34d31fc1f5552dee95f56eb0b971d6caac847bbffdea3d"
+    "packages/provider-adapters/storage/asset-integrity.ts": "ff2afc7ec559616a4a9ee9f632d1b4ce6e7bacb0432bbe90e8c69399ac11ed6b",
+    "assets/media/m01/registry.json": "2a5e8632987beec7bf34d31fc1f5552dee95f56eb0b971d6caac847bbffdea3d",
+    "docs/p5/integration-20261015/external-m01-byte-validation.json": "dc8a678594b766ed3b38b5d4bcffe21ab3933f0d48a6414566f2067468761bd1"
   }
 }

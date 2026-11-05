@@ -45,3 +45,14 @@ test('hosted SVG/text test slice retains nine whole activities under separate ve
   for(const a of slice.activities){const original=full.activities.find(o=>o.id===a.id)!;assert.notEqual(a.content_version_id,original.content_version_id);assert.deepEqual({...a,content_version_id:original.content_version_id},original);}
   assert(slice.entities.every(e=>e.version_id!==full.entities.find(f=>f.id===e.id)!.version_id));
 });
+test('publication references are canonical even when the lesson starts in a different teaching order',()=>{
+  const {payloads}=compileAuthoredUnit(l01TestSlice(raw()));
+  const lesson=payloads.find(p=>p.kind==='lesson')!;
+  const suffix=(code:string)=>code.slice('E-A1-M01-L01-'.length);
+  assert.deepEqual(lesson.refs.map(r=>suffix(r.stable_code)),[
+    'FUNCTION-REPEAT','FUNCTION-THANKS','FUNCTION-UNCLEAR','REGISTER','RETRIEVE-BYE','RETRIEVE-REPEAT','RETRIEVE-THANKS','SCENE-EVENING','SCENE-MORNING',
+  ]);
+  assert.deepEqual(lesson.activities!.slice(0,2).map(a=>suffix(a.stable_code)),['SCENE-MORNING','SCENE-EVENING']);
+  const repair=compileAuthoredUnit(raw()).payloads.find(p=>p.stable_code==='E-A1-M01-L01-REPAIR')!;
+  assert.deepEqual(repair.refs.map(r=>[r.relation,r.stable_code]),[['knowledge','ENG_K_DONT_UNDERSTAND'],['knowledge','ENG_K_REPEAT'],['outcome','E-A1-M01-OUTCOME-CONTACT']]);
+});

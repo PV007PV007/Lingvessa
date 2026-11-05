@@ -12,8 +12,8 @@
       "stable_code": "E-COURSE",
       "kind": "course",
       "title": "English",
-      "version_id": "f6ae2650-3a83-5e5d-a0c7-ab890ed494a5",
-      "version_code": "p6-l01-1",
+      "version_id": "63aa66e9-03da-5a92-9763-5e9c3307dd28",
+      "version_code": "p6-l01-2",
       "variety_scope": "common",
       "metadata": {}
     },
@@ -22,8 +22,8 @@
       "stable_code": "E-A1",
       "kind": "level",
       "title": "A1",
-      "version_id": "0a6b6b59-3533-5450-940b-024f7f87508e",
-      "version_code": "p6-l01-1",
+      "version_id": "24c8c0e7-4078-573e-96e0-1c59e9ab7c3d",
+      "version_code": "p6-l01-2",
       "variety_scope": "common",
       "metadata": {
         "cefr": "A1",
@@ -36,8 +36,8 @@
       "stable_code": "E-A1-M01",
       "kind": "module",
       "title": "Hello & first contact",
-      "version_id": "a06a228b-ca3d-51c8-871d-ae1d860be9e9",
-      "version_code": "p6-l01-1",
+      "version_id": "609a6482-e8b7-5be0-beb4-489875d28082",
+      "version_code": "p6-l01-2",
       "variety_scope": "common",
       "metadata": {
         "position": 0
@@ -49,8 +49,8 @@
       "stable_code": "E-A1-M01-L01",
       "kind": "lesson",
       "title": "Hello!",
-      "version_id": "d1542eef-f94f-5b88-a02a-27bc31830166",
-      "version_code": "p6-l01-1",
+      "version_id": "cb7b20b7-f4a8-5c68-ab3a-685fd5f47f0a",
+      "version_code": "p6-l01-2",
       "variety_scope": "common",
       "metadata": {
         "position": 0,
@@ -63,8 +63,8 @@
       "stable_code": "ENG_K_GREET_HELLO",
       "kind": "knowledge",
       "title": "Hello.",
-      "version_id": "79f58646-74b8-5a22-9a85-1604cd7436f4",
-      "version_code": "p6-l01-1",
+      "version_id": "c15015ad-6e81-5a2d-8da6-652ecb768cec",
+      "version_code": "p6-l01-2",
       "variety_scope": "common",
       "metadata": {
         "knowledge_type": "chunk",
@@ -79,8 +79,8 @@
       "stable_code": "ENG_K_GREET_HI",
       "kind": "knowledge",
       "title": "Hi.",
-      "version_id": "5eb74ee1-0c6d-59c0-a327-484e870b5740",
-      "version_code": "p6-l01-1",
+      "version_id": "fb2bf43f-c4de-5236-a92b-a8c8aefef490",
+      "version_code": "p6-l01-2",
       "variety_scope": "common",
       "metadata": {
         "knowledge_type": "chunk",
@@ -103,8 +103,8 @@
         "cefr": "A1",
         "learning_scope": "active"
       },
-      "version_id": "dbfb794b-4a15-5c0e-bdd2-549e29b783eb",
-      "version_code": "p6-l01-1"
+      "version_id": "548cb42d-e33a-5bf4-8060-bd6fc267dea1",
+      "version_code": "p6-l01-2"
     },
     {
       "id": "020b01d7-30f8-5445-ad8b-6a32e1a3d3ae",
@@ -119,8 +119,8 @@
         "cefr": "A1",
         "learning_scope": "active"
       },
-      "version_id": "944922ed-abe9-5458-84e8-bcdbbf55f9fa",
-      "version_code": "p6-l01-1"
+      "version_id": "0a3562f0-641e-59e6-abba-27e8362624c4",
+      "version_code": "p6-l01-2"
     },
     {
       "id": "58118423-c0b8-5760-83a9-f77c25c4e278",
@@ -135,8 +135,8 @@
         "cefr": "A1",
         "learning_scope": "active"
       },
-      "version_id": "38ef9314-b160-5322-9c4c-7912a9e4e1ae",
-      "version_code": "p6-l01-1"
+      "version_id": "dd8acbd6-8912-5b10-b1a2-2580fcca4b0a",
+      "version_code": "p6-l01-2"
     },
     {
       "id": "133c28fc-0e3c-5589-8c61-0b0870c7f936",
@@ -151,8 +151,8 @@
         "cefr": "A1",
         "learning_scope": "active"
       },
-      "version_id": "40b618e6-eb8b-54ba-9357-9f8e9b98a16f",
-      "version_code": "p6-l01-1"
+      "version_id": "ace390e4-86b6-5567-868f-740b68e7f176",
+      "version_code": "p6-l01-2"
     },
     {
       "id": "fc0533b7-c5da-5f2f-b774-243bd4727c71",
@@ -167,8 +167,8 @@
         "cefr": "A1",
         "learning_scope": "active"
       },
-      "version_id": "7c7238b9-f45a-5c68-827f-e39a65ae3202",
-      "version_code": "p6-l01-1"
+      "version_id": "2204751f-1020-5080-b682-546071c4cf77",
+      "version_code": "p6-l01-2"
     },
     {
       "id": "52f368d8-cc22-531c-8baa-e58b764a2b3d",
@@ -183,16 +183,16 @@
         "cefr": "A1",
         "learning_scope": "active"
       },
-      "version_id": "8e0a17a6-f1d9-5b61-8aa5-3ea90c153f2f",
-      "version_code": "p6-l01-1"
+      "version_id": "dc062c16-a629-5108-aef3-d286d955c647",
+      "version_code": "p6-l01-2"
     },
     {
       "id": "a500d387-d89a-4de7-9057-9fa4de8e15d2",
       "stable_code": "ENG_K_REPEAT",
       "kind": "knowledge",
       "title": "Can you repeat, please?",
-      "version_id": "51d29a0a-f006-5863-bd3a-9a1d18fb5257",
-      "version_code": "p6-l01-1",
+      "version_id": "e9daeb2e-5c5a-5e10-aac3-f67109b24069",
+      "version_code": "p6-l01-2",
       "variety_scope": "common",
       "metadata": {
         "knowledge_type": "chunk",
@@ -207,8 +207,8 @@
       "stable_code": "ENG_K_PRON_H",
       "kind": "knowledge",
       "title": "/h/ awareness",
-      "version_id": "6a34741d-0c82-55e3-9692-858ff0801058",
-      "version_code": "p6-l01-1",
+      "version_id": "8b7d3ed9-8d1c-5b2e-8a26-4532e0857c2e",
+      "version_code": "p6-l01-2",
       "variety_scope": "common",
       "metadata": {
         "knowledge_type": "pronunciation",
@@ -223,8 +223,8 @@
       "stable_code": "E-A1-M01-OUTCOME-CONTACT",
       "kind": "outcome",
       "title": "First contact",
-      "version_id": "72be2a4c-2c20-5353-909b-ad4787925969",
-      "version_code": "p6-l01-1",
+      "version_id": "23e63194-247f-5d90-a8c5-7667ea91bd52",
+      "version_code": "p6-l01-2",
       "variety_scope": "common",
       "metadata": {
         "cefr": "A1",
@@ -245,8 +245,8 @@
         "source_step": 1,
         "source_page": 9
       },
-      "version_id": "a94db8cf-a832-5a16-8497-0f18211d3f3a",
-      "version_code": "p6-l01-1",
+      "version_id": "1ebff3c8-75a9-51be-9772-db115b174e59",
+      "version_code": "p6-l01-2",
       "parent_id": "61e48434-ac36-442b-8feb-4cc724e38948"
     },
     {
@@ -262,8 +262,8 @@
         "source_step": 2,
         "source_page": 9
       },
-      "version_id": "3755d0aa-8b6c-5e23-a43b-b222881476a9",
-      "version_code": "p6-l01-1",
+      "version_id": "12471935-181d-5ae7-9548-8740b585774e",
+      "version_code": "p6-l01-2",
       "parent_id": "61e48434-ac36-442b-8feb-4cc724e38948"
     },
     {
@@ -279,8 +279,8 @@
         "source_step": 2,
         "source_page": 9
       },
-      "version_id": "cb260beb-0b01-55e2-b576-02286fbbf12c",
-      "version_code": "p6-l01-1",
+      "version_id": "999a5a32-148e-56e0-8b7a-0e9c5fb53c4e",
+      "version_code": "p6-l01-2",
       "parent_id": "61e48434-ac36-442b-8feb-4cc724e38948"
     },
     {
@@ -296,8 +296,8 @@
         "source_step": 2,
         "source_page": 9
       },
-      "version_id": "275f56e5-d03c-5626-a60c-97023218ffee",
-      "version_code": "p6-l01-1",
+      "version_id": "b212214d-598d-5216-8c1b-71363fbfe5f5",
+      "version_code": "p6-l01-2",
       "parent_id": "61e48434-ac36-442b-8feb-4cc724e38948"
     },
     {
@@ -313,8 +313,8 @@
         "source_step": 2,
         "source_page": 9
       },
-      "version_id": "17d3981a-e25e-5be3-b543-9e870e34d003",
-      "version_code": "p6-l01-1",
+      "version_id": "1c38c070-1bdb-5730-b320-d82a180954ce",
+      "version_code": "p6-l01-2",
       "parent_id": "61e48434-ac36-442b-8feb-4cc724e38948"
     },
     {
@@ -330,8 +330,8 @@
         "source_step": 2,
         "source_page": 9
       },
-      "version_id": "44c8f683-8fa4-5ead-94db-3e2f74be6273",
-      "version_code": "p6-l01-1",
+      "version_id": "036dcb6e-3aca-57f3-be48-d790670f2086",
+      "version_code": "p6-l01-2",
       "parent_id": "61e48434-ac36-442b-8feb-4cc724e38948"
     },
     {
@@ -347,8 +347,8 @@
         "source_step": 2,
         "source_page": 9
       },
-      "version_id": "bb2990f5-68eb-576d-a26b-12cce0e9d91d",
-      "version_code": "p6-l01-1",
+      "version_id": "11dd6b22-9da9-5269-9953-86eed00a9c81",
+      "version_code": "p6-l01-2",
       "parent_id": "61e48434-ac36-442b-8feb-4cc724e38948"
     },
     {
@@ -364,8 +364,8 @@
         "source_step": 3,
         "source_page": 9
       },
-      "version_id": "c65e93da-7839-590f-ba3f-8f31754af790",
-      "version_code": "p6-l01-1",
+      "version_id": "6f187704-06d9-5b96-90a4-85e28592bc64",
+      "version_code": "p6-l01-2",
       "parent_id": "61e48434-ac36-442b-8feb-4cc724e38948"
     },
     {
@@ -381,8 +381,8 @@
         "source_step": 3,
         "source_page": 9
       },
-      "version_id": "1191c92c-13ed-589b-aac0-e2014ae4a2a1",
-      "version_code": "p6-l01-1",
+      "version_id": "ac99e9de-ea88-52e5-889c-d7869a57a59b",
+      "version_code": "p6-l01-2",
       "parent_id": "61e48434-ac36-442b-8feb-4cc724e38948"
     },
     {
@@ -398,8 +398,8 @@
         "source_step": 4,
         "source_page": 9
       },
-      "version_id": "0c37a269-9649-5b9a-9ad5-0798490d2e99",
-      "version_code": "p6-l01-1",
+      "version_id": "c63d30e6-c492-54a1-9230-0383065c192c",
+      "version_code": "p6-l01-2",
       "parent_id": "61e48434-ac36-442b-8feb-4cc724e38948"
     },
     {
@@ -415,8 +415,8 @@
         "source_step": 4,
         "source_page": 9
       },
-      "version_id": "5f3060d1-2d92-53d0-b70e-9340ed9493b8",
-      "version_code": "p6-l01-1",
+      "version_id": "1e6a72fd-94e7-5066-96df-ca1951acc67e",
+      "version_code": "p6-l01-2",
       "parent_id": "61e48434-ac36-442b-8feb-4cc724e38948"
     },
     {
@@ -432,8 +432,8 @@
         "source_step": 4,
         "source_page": 9
       },
-      "version_id": "b34e5756-9b37-5457-a73c-8c71f4020415",
-      "version_code": "p6-l01-1",
+      "version_id": "5221617c-ba95-5385-9826-6df799b74107",
+      "version_code": "p6-l01-2",
       "parent_id": "61e48434-ac36-442b-8feb-4cc724e38948"
     },
     {
@@ -449,8 +449,8 @@
         "source_step": 4,
         "source_page": 9
       },
-      "version_id": "0913de5f-c2cb-5e95-9a79-066600e0a3bf",
-      "version_code": "p6-l01-1",
+      "version_id": "db4ffe6a-30d0-5617-9110-c4445e0f5354",
+      "version_code": "p6-l01-2",
       "parent_id": "61e48434-ac36-442b-8feb-4cc724e38948"
     },
     {
@@ -466,8 +466,8 @@
         "source_step": 5,
         "source_page": 9
       },
-      "version_id": "fc97723f-ec23-575d-83f6-f53797fcdcbc",
-      "version_code": "p6-l01-1",
+      "version_id": "00dd3b9b-791f-5fed-9d6c-8b1002bf8cc9",
+      "version_code": "p6-l01-2",
       "parent_id": "61e48434-ac36-442b-8feb-4cc724e38948"
     },
     {
@@ -483,8 +483,8 @@
         "source_step": 6,
         "source_page": 9
       },
-      "version_id": "53b3fa48-2f44-5394-810d-521f92dc5a1e",
-      "version_code": "p6-l01-1",
+      "version_id": "a9bb5044-a8c4-5be9-9f8b-0ebb51834c9c",
+      "version_code": "p6-l01-2",
       "parent_id": "61e48434-ac36-442b-8feb-4cc724e38948"
     },
     {
@@ -500,8 +500,8 @@
         "source_step": 7,
         "source_page": 9
       },
-      "version_id": "dfafa034-6043-56c4-b87c-aaeec4e782ae",
-      "version_code": "p6-l01-1",
+      "version_id": "a596c0c2-c28d-5010-a4a5-ca4179eab79d",
+      "version_code": "p6-l01-2",
       "parent_id": "61e48434-ac36-442b-8feb-4cc724e38948"
     },
     {
@@ -517,8 +517,8 @@
         "source_step": 7,
         "source_page": 9
       },
-      "version_id": "23a8252f-bd58-5a5b-8621-cb5f439d4785",
-      "version_code": "p6-l01-1",
+      "version_id": "f9b5e0a2-4e05-5003-b3c5-8796a64983cc",
+      "version_code": "p6-l01-2",
       "parent_id": "61e48434-ac36-442b-8feb-4cc724e38948"
     },
     {
@@ -534,8 +534,8 @@
         "source_step": 8,
         "source_page": 9
       },
-      "version_id": "4a715035-6a88-543d-8620-dec6173cf065",
-      "version_code": "p6-l01-1",
+      "version_id": "42f9bebe-6741-554a-849a-9c7bc6db88f6",
+      "version_code": "p6-l01-2",
       "parent_id": "61e48434-ac36-442b-8feb-4cc724e38948"
     },
     {
@@ -551,8 +551,8 @@
         "source_step": 8,
         "source_page": 9
       },
-      "version_id": "c25df9c0-cda1-585b-955d-ea67cdc86495",
-      "version_code": "p6-l01-1",
+      "version_id": "b03078c9-d082-5518-a0ae-8428a287c8aa",
+      "version_code": "p6-l01-2",
       "parent_id": "61e48434-ac36-442b-8feb-4cc724e38948"
     },
     {
@@ -568,8 +568,8 @@
         "source_step": 8,
         "source_page": 9
       },
-      "version_id": "bea7d600-e86a-56ef-80ac-58623d647052",
-      "version_code": "p6-l01-1",
+      "version_id": "e809208d-40e6-5008-b9f6-2362cde80de6",
+      "version_code": "p6-l01-2",
       "parent_id": "61e48434-ac36-442b-8feb-4cc724e38948"
     },
     {
@@ -585,8 +585,8 @@
         "source_step": 8,
         "source_page": 9
       },
-      "version_id": "ab0bf69d-a5bc-57af-82bb-275bcdfad2c7",
-      "version_code": "p6-l01-1",
+      "version_id": "c6b5e181-9219-55dc-b37a-812e069560bf",
+      "version_code": "p6-l01-2",
       "parent_id": "61e48434-ac36-442b-8feb-4cc724e38948"
     },
     {
@@ -602,8 +602,8 @@
         "source_step": 9,
         "source_page": 9
       },
-      "version_id": "10cceabc-7e36-5b64-ab69-e673b7315adc",
-      "version_code": "p6-l01-1",
+      "version_id": "7e8dd57d-2098-5451-8e5a-5fd6087eab9f",
+      "version_code": "p6-l01-2",
       "parent_id": "61e48434-ac36-442b-8feb-4cc724e38948"
     },
     {
@@ -619,8 +619,8 @@
         "source_step": 9,
         "source_page": 9
       },
-      "version_id": "e42cfdb2-37d0-556f-9e32-762b1d5ca466",
-      "version_code": "p6-l01-1",
+      "version_id": "d12cca63-4b18-53ab-bcd6-a32e90064cd5",
+      "version_code": "p6-l01-2",
       "parent_id": "61e48434-ac36-442b-8feb-4cc724e38948"
     },
     {
@@ -636,8 +636,8 @@
         "source_step": 9,
         "source_page": 9
       },
-      "version_id": "1fe914b6-430f-5c08-a64a-4461b5acf59f",
-      "version_code": "p6-l01-1",
+      "version_id": "4af08646-e896-5a2d-8766-64141146035f",
+      "version_code": "p6-l01-2",
       "parent_id": "61e48434-ac36-442b-8feb-4cc724e38948"
     },
     {
@@ -653,8 +653,8 @@
         "source_step": 10,
         "source_page": 10
       },
-      "version_id": "9d66d21a-cba0-5864-97b4-48be5e030885",
-      "version_code": "p6-l01-1",
+      "version_id": "a3f4960d-85ca-556f-af5c-deabcfe1630c",
+      "version_code": "p6-l01-2",
       "parent_id": "61e48434-ac36-442b-8feb-4cc724e38948"
     },
     {
@@ -670,8 +670,8 @@
         "source_step": 10,
         "source_page": 10
       },
-      "version_id": "d6cdc85c-c0b2-55e7-bdd5-6f2819135e10",
-      "version_code": "p6-l01-1",
+      "version_id": "d3024909-b055-5ed5-b7ba-1a916fa3b021",
+      "version_code": "p6-l01-2",
       "parent_id": "61e48434-ac36-442b-8feb-4cc724e38948"
     },
     {
@@ -687,8 +687,8 @@
         "source_step": 11,
         "source_page": 10
       },
-      "version_id": "63a5461d-d5fa-5ad8-bf32-6749c3a062e2",
-      "version_code": "p6-l01-1",
+      "version_id": "ba48edd6-6596-53e6-8de7-6fb885c15b0b",
+      "version_code": "p6-l01-2",
       "parent_id": "61e48434-ac36-442b-8feb-4cc724e38948"
     },
     {
@@ -704,8 +704,8 @@
         "source_step": 11,
         "source_page": 10
       },
-      "version_id": "d177b9c7-5f98-5b97-b000-31f5c718740f",
-      "version_code": "p6-l01-1",
+      "version_id": "4f3bc16a-06cf-5150-90d8-27744767ff14",
+      "version_code": "p6-l01-2",
       "parent_id": "61e48434-ac36-442b-8feb-4cc724e38948"
     },
     {
@@ -721,8 +721,8 @@
         "source_step": 11,
         "source_page": 10
       },
-      "version_id": "cf3e69f1-58d2-5cec-b8b5-4012db600cbf",
-      "version_code": "p6-l01-1",
+      "version_id": "37bc5972-1fe8-5f0a-a4cb-1f312ce178cd",
+      "version_code": "p6-l01-2",
       "parent_id": "61e48434-ac36-442b-8feb-4cc724e38948"
     }
   ],
@@ -735,7 +735,7 @@
       "language": "en",
       "variety": "en-GB",
       "cefr": "A1",
-      "content_version_id": "d1542eef-f94f-5b88-a02a-27bc31830166",
+      "content_version_id": "cb7b20b7-f4a8-5c68-ab3a-685fd5f47f0a",
       "presentation": {
         "instruction_key": "P6_SCENE_INTRO",
         "prompt": "Arriving at the language club",
@@ -828,7 +828,7 @@
       "language": "en",
       "variety": "en-GB",
       "cefr": "A1",
-      "content_version_id": "d1542eef-f94f-5b88-a02a-27bc31830166",
+      "content_version_id": "cb7b20b7-f4a8-5c68-ab3a-685fd5f47f0a",
       "presentation": {
         "instruction_key": "P6_VOCABULARY_INTRO",
         "prompt": "Hello.",
@@ -909,7 +909,7 @@
       "language": "en",
       "variety": "en-GB",
       "cefr": "A1",
-      "content_version_id": "d1542eef-f94f-5b88-a02a-27bc31830166",
+      "content_version_id": "cb7b20b7-f4a8-5c68-ab3a-685fd5f47f0a",
       "presentation": {
         "instruction_key": "P6_VOCABULARY_INTRO",
         "prompt": "Hi.",
@@ -990,7 +990,7 @@
       "language": "en",
       "variety": "en-GB",
       "cefr": "A1",
-      "content_version_id": "d1542eef-f94f-5b88-a02a-27bc31830166",
+      "content_version_id": "cb7b20b7-f4a8-5c68-ab3a-685fd5f47f0a",
       "presentation": {
         "instruction_key": "P6_VOCABULARY_INTRO",
         "prompt": "Good morning.",
@@ -1071,7 +1071,7 @@
       "language": "en",
       "variety": "en-GB",
       "cefr": "A1",
-      "content_version_id": "d1542eef-f94f-5b88-a02a-27bc31830166",
+      "content_version_id": "cb7b20b7-f4a8-5c68-ab3a-685fd5f47f0a",
       "presentation": {
         "instruction_key": "P6_VOCABULARY_INTRO",
         "prompt": "Good evening.",
@@ -1152,7 +1152,7 @@
       "language": "en",
       "variety": "en-GB",
       "cefr": "A1",
-      "content_version_id": "d1542eef-f94f-5b88-a02a-27bc31830166",
+      "content_version_id": "cb7b20b7-f4a8-5c68-ab3a-685fd5f47f0a",
       "presentation": {
         "instruction_key": "P6_VOCABULARY_INTRO",
         "prompt": "Goodbye.",
@@ -1233,7 +1233,7 @@
       "language": "en",
       "variety": "en-GB",
       "cefr": "A1",
-      "content_version_id": "d1542eef-f94f-5b88-a02a-27bc31830166",
+      "content_version_id": "cb7b20b7-f4a8-5c68-ab3a-685fd5f47f0a",
       "presentation": {
         "instruction_key": "P6_VOCABULARY_INTRO",
         "prompt": "Bye.",
@@ -1314,7 +1314,7 @@
       "language": "en",
       "variety": "en-GB",
       "cefr": "A1",
-      "content_version_id": "d1542eef-f94f-5b88-a02a-27bc31830166",
+      "content_version_id": "cb7b20b7-f4a8-5c68-ab3a-685fd5f47f0a",
       "presentation": {
         "instruction_key": "P6_IMAGE_CHOICE",
         "prompt": "Choose a greeting for this scene.",
@@ -1415,7 +1415,7 @@
       "language": "en",
       "variety": "en-GB",
       "cefr": "A1",
-      "content_version_id": "d1542eef-f94f-5b88-a02a-27bc31830166",
+      "content_version_id": "cb7b20b7-f4a8-5c68-ab3a-685fd5f47f0a",
       "presentation": {
         "instruction_key": "P6_IMAGE_CHOICE",
         "prompt": "Choose a greeting for this scene.",
@@ -1516,7 +1516,7 @@
       "language": "en",
       "variety": "en-GB",
       "cefr": "A1",
-      "content_version_id": "d1542eef-f94f-5b88-a02a-27bc31830166",
+      "content_version_id": "cb7b20b7-f4a8-5c68-ab3a-685fd5f47f0a",
       "presentation": {
         "instruction_key": "P6_LISTENING_DETAIL",
         "prompt": "Listen and choose the greeting you hear.",
@@ -1628,7 +1628,7 @@
       "language": "en",
       "variety": "en-GB",
       "cefr": "A1",
-      "content_version_id": "d1542eef-f94f-5b88-a02a-27bc31830166",
+      "content_version_id": "cb7b20b7-f4a8-5c68-ab3a-685fd5f47f0a",
       "presentation": {
         "instruction_key": "P6_LISTENING_DETAIL",
         "prompt": "Listen and choose the greeting you hear.",
@@ -1740,7 +1740,7 @@
       "language": "en",
       "variety": "en-GB",
       "cefr": "A1",
-      "content_version_id": "d1542eef-f94f-5b88-a02a-27bc31830166",
+      "content_version_id": "cb7b20b7-f4a8-5c68-ab3a-685fd5f47f0a",
       "presentation": {
         "instruction_key": "P6_LISTENING_DETAIL",
         "prompt": "Listen and choose the greeting you hear.",
@@ -1852,7 +1852,7 @@
       "language": "en",
       "variety": "en-GB",
       "cefr": "A1",
-      "content_version_id": "d1542eef-f94f-5b88-a02a-27bc31830166",
+      "content_version_id": "cb7b20b7-f4a8-5c68-ab3a-685fd5f47f0a",
       "presentation": {
         "instruction_key": "P6_LISTENING_DETAIL",
         "prompt": "Listen and choose the greeting you hear.",
@@ -1964,7 +1964,7 @@
       "language": "en",
       "variety": "en-GB",
       "cefr": "A1",
-      "content_version_id": "d1542eef-f94f-5b88-a02a-27bc31830166",
+      "content_version_id": "cb7b20b7-f4a8-5c68-ab3a-685fd5f47f0a",
       "presentation": {
         "instruction_key": "P6_SENTENCE_INTRO",
         "prompt": "Neutral and informal greetings",
@@ -2029,7 +2029,7 @@
       "language": "en",
       "variety": "en-GB",
       "cefr": "A1",
-      "content_version_id": "d1542eef-f94f-5b88-a02a-27bc31830166",
+      "content_version_id": "cb7b20b7-f4a8-5c68-ab3a-685fd5f47f0a",
       "presentation": {
         "instruction_key": "P6_WORD_BUILDER",
         "prompt": "Listen and type the letters of the greeting.",
@@ -2118,7 +2118,7 @@
       "language": "en",
       "variety": "en-GB",
       "cefr": "A1",
-      "content_version_id": "d1542eef-f94f-5b88-a02a-27bc31830166",
+      "content_version_id": "cb7b20b7-f4a8-5c68-ab3a-685fd5f47f0a",
       "presentation": {
         "instruction_key": "P6_LISTEN_REPEAT",
         "prompt": "Listen and repeat: Hello",
@@ -2208,7 +2208,7 @@
       "language": "en",
       "variety": "en-GB",
       "cefr": "A1",
-      "content_version_id": "d1542eef-f94f-5b88-a02a-27bc31830166",
+      "content_version_id": "cb7b20b7-f4a8-5c68-ab3a-685fd5f47f0a",
       "presentation": {
         "instruction_key": "P6_LISTEN_REPEAT",
         "prompt": "Listen and repeat: Hi",
@@ -2298,7 +2298,7 @@
       "language": "en",
       "variety": "en-GB",
       "cefr": "A1",
-      "content_version_id": "d1542eef-f94f-5b88-a02a-27bc31830166",
+      "content_version_id": "cb7b20b7-f4a8-5c68-ab3a-685fd5f47f0a",
       "presentation": {
         "instruction_key": "P6_VOCABULARY_INTRO",
         "prompt": "Thank you.",
@@ -2379,7 +2379,7 @@
       "language": "en",
       "variety": "en-GB",
       "cefr": "A1",
-      "content_version_id": "d1542eef-f94f-5b88-a02a-27bc31830166",
+      "content_version_id": "cb7b20b7-f4a8-5c68-ab3a-685fd5f47f0a",
       "presentation": {
         "instruction_key": "P6_VOCABULARY_INTRO",
         "prompt": "Sorry.",
@@ -2460,7 +2460,7 @@
       "language": "en",
       "variety": "en-GB",
       "cefr": "A1",
-      "content_version_id": "d1542eef-f94f-5b88-a02a-27bc31830166",
+      "content_version_id": "cb7b20b7-f4a8-5c68-ab3a-685fd5f47f0a",
       "presentation": {
         "instruction_key": "P6_VOCABULARY_INTRO",
         "prompt": "I don't understand.",
@@ -2541,7 +2541,7 @@
       "language": "en",
       "variety": "en-GB",
       "cefr": "A1",
-      "content_version_id": "d1542eef-f94f-5b88-a02a-27bc31830166",
+      "content_version_id": "cb7b20b7-f4a8-5c68-ab3a-685fd5f47f0a",
       "presentation": {
         "instruction_key": "P6_VOCABULARY_INTRO",
         "prompt": "Can you repeat, please?",
@@ -2622,7 +2622,7 @@
       "language": "en",
       "variety": "en-GB",
       "cefr": "A1",
-      "content_version_id": "d1542eef-f94f-5b88-a02a-27bc31830166",
+      "content_version_id": "cb7b20b7-f4a8-5c68-ab3a-685fd5f47f0a",
       "presentation": {
         "instruction_key": "P6_CLASSIFICATION",
         "prompt": "What is this phrase for?",
@@ -2724,7 +2724,7 @@
       "language": "en",
       "variety": "en-GB",
       "cefr": "A1",
-      "content_version_id": "d1542eef-f94f-5b88-a02a-27bc31830166",
+      "content_version_id": "cb7b20b7-f4a8-5c68-ab3a-685fd5f47f0a",
       "presentation": {
         "instruction_key": "P6_CLASSIFICATION",
         "prompt": "What is this phrase for?",
@@ -2826,7 +2826,7 @@
       "language": "en",
       "variety": "en-GB",
       "cefr": "A1",
-      "content_version_id": "d1542eef-f94f-5b88-a02a-27bc31830166",
+      "content_version_id": "cb7b20b7-f4a8-5c68-ab3a-685fd5f47f0a",
       "presentation": {
         "instruction_key": "P6_CLASSIFICATION",
         "prompt": "What is this phrase for?",
@@ -2928,7 +2928,7 @@
       "language": "en",
       "variety": "en-GB",
       "cefr": "A1",
-      "content_version_id": "d1542eef-f94f-5b88-a02a-27bc31830166",
+      "content_version_id": "cb7b20b7-f4a8-5c68-ab3a-685fd5f47f0a",
       "presentation": {
         "instruction_key": "P6_DIALOGUE_CHAIN",
         "prompt": "You did not catch the teacher. Choose a repair phrase.",
@@ -3047,7 +3047,7 @@
       "language": "en",
       "variety": "en-GB",
       "cefr": "A1",
-      "content_version_id": "d1542eef-f94f-5b88-a02a-27bc31830166",
+      "content_version_id": "cb7b20b7-f4a8-5c68-ab3a-685fd5f47f0a",
       "presentation": {
         "instruction_key": "P6_SCENE_INTRO",
         "prompt": "Listen to the completed repair exchange.",
@@ -3133,7 +3133,7 @@
       "language": "en",
       "variety": "en-GB",
       "cefr": "A1",
-      "content_version_id": "d1542eef-f94f-5b88-a02a-27bc31830166",
+      "content_version_id": "cb7b20b7-f4a8-5c68-ab3a-685fd5f47f0a",
       "presentation": {
         "instruction_key": "P6_MULTIPLE_CHOICE",
         "prompt": "Choose the English phrase for «Дякую».",
@@ -3227,7 +3227,7 @@
       "language": "en",
       "variety": "en-GB",
       "cefr": "A1",
-      "content_version_id": "d1542eef-f94f-5b88-a02a-27bc31830166",
+      "content_version_id": "cb7b20b7-f4a8-5c68-ab3a-685fd5f47f0a",
       "presentation": {
         "instruction_key": "P6_TRANSLATION",
         "prompt": "Write an English way to say «До побачення».",
@@ -3309,7 +3309,7 @@
       "language": "en",
       "variety": "en-GB",
       "cefr": "A1",
-      "content_version_id": "d1542eef-f94f-5b88-a02a-27bc31830166",
+      "content_version_id": "cb7b20b7-f4a8-5c68-ab3a-685fd5f47f0a",
       "presentation": {
         "instruction_key": "P6_TRANSLATION",
         "prompt": "Write an English request: «Повторіть, будь ласка».",

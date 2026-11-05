@@ -10,7 +10,7 @@
       "task_id": "IMP-P6-001",
       "status": "IN_PROGRESS",
       "goal": "Executable English M01 four lessons and recap",
-      "current_batch": "L01: 29 authored contracts / 44 versions / 35 pins; exact-source hosted SVG/text 9-activity PostgreSQL/S3/browser gate pending",
+      "current_batch": "L01 revision 2; canonical publication references with original teaching order. Current hosted result: inspect PR #6 and its source-bound P6 artifacts.",
       "pending": [
         "Full L01 approved-audio hosted input and PostgreSQL/S3 execution",
         "Full L01 audio mobile/desktop journey and objective/visibility review",
@@ -22,5 +22,10 @@
   ],
   "od_004": "OPEN",
   "od_006": "OPEN",
-  "next_action": "Push reconstructed L01 batch, inspect exact-source CI; no refresh of denied P5 input job without new explicit authorization."
+  "next_action": "Inspect P6 push and PR results for the current PR #6 HEAD. After confirming nine complete SVG/text activities, advance to the full 29-activity audio gate and remaining units. No denied P5 export rerun without specific authorization.",
+  "last_observed_in_repository": {
+    "source_sha": "0eef7f32bae9eaa2ca2d8a527d7ce3357d634c1e",
+    "evidence": "docs/p6/evidence/l01-publication-0eef7f3.json",
+    "status": "IMPORT_REPLAY_RESTART_PASSED_PUBLICATION_REJECTED_NO_BROWSER"
+  }
 }

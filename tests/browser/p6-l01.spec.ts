@@ -11,9 +11,16 @@ test('authored L01 SVG/text: real delivery, wrong/reveal, reload, native remedia
   const slice=l01TestSlice(JSON.parse(readFileSync('content/english/m01/l01.json','utf8')));
   await page.goto('/lesson/'+user.run_id);
   for(const [index,a] of slice.activities.entries()){
+    await expect(page.getByText(`English · ${index+1} / ${slice.activities.length}`,{exact:true})).toBeVisible();
     await expect(page.getByRole('heading',{name:a.presentation.prompt,exact:true})).toBeVisible();
     await page.getByLabel('Автоматично переходити після відповіді').uncheck();
-    if(a.presentation.media_refs.length){const img=page.locator('.lesson-media img');await expect(img).toHaveCount(a.presentation.media_refs.length);await expect.poll(()=>img.evaluateAll(imgs=>imgs.every(i=>(i as HTMLImageElement).complete&&(i as HTMLImageElement).naturalWidth>0))).toBe(true);}
+    if(a.presentation.media_refs.length){
+      const images=page.locator('.lesson-media img');await expect(images).toHaveCount(a.presentation.media_refs.length);
+      for(const ref of a.presentation.media_refs){const src=`/api/v1/lesson-runs/${user.run_id}/media/${ref.asset_id}/${ref.asset_version}?item_id=${a.id}`;
+        const img=page.locator(`.lesson-media img[src="${src}"]`);await expect(img).toBeVisible();
+        await expect.poll(()=>img.evaluate(el=>(el as HTMLImageElement).complete&&(el as HTMLImageElement).naturalWidth>0)).toBe(true);
+      }
+    }
     expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
     if(index===0){
       await page.getByRole('radio',{name:'Goodbye.',exact:true}).check();await page.getByRole('button',{name:'Перевірити',exact:true}).click();

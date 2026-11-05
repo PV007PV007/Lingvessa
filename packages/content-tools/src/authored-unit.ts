@@ -19,6 +19,8 @@ export const authoredUnitSchema=z.object({
 }).strict();
 export type AuthoredUnit=z.infer<typeof authoredUnitSchema>;
 const invalid=(message:string):never=>{throw new ContractError('INVALID_INPUT',message);};
+// Relation names and stable codes are ASCII. Use the same ordering as PostgreSQL COLLATE "C".
+const compareCode=(left:string,right:string)=>left<right?-1:left>right?1:0;
 export function responseModality(kind:AuthoredUnit['activities'][number]['response']['kind']){
   return kind==='none'?'none':kind==='speech'?'speech':kind==='text'?'typed':'selection';
 }
@@ -48,6 +50,7 @@ export function compileAuthoredUnit(raw:unknown){
     const a=unit.activities.find(a=>a.id===e.id);
     const refs:ContentPayload['refs']=unit.entities.filter(c=>c.parent_id===e.id).map(c=>ref(c.id,'contains'));
     if(a){for(const k of a.learning.knowledge_refs)refs.push(ref(k.knowledge_item_id,'knowledge'));for(const o of a.learning.outcome_refs)refs.push(ref(o.outcome_id,'outcome'));}
+    refs.sort((l,r)=>compareCode(l.relation,r.relation)||compareCode(l.stable_code,r.stable_code));
     const payload:ContentPayload={schema_version:'1.7',entity_id:e.id,content_version_id:e.version_id,stable_code:e.stable_code,version_code:e.version_code,language:unit.language,kind:e.kind,title:e.title,variety_scope:e.variety_scope,refs,body:{...e.metadata,authored_source_hash:sourceHash,source_document:unit.source_document,source_sha256:unit.source_sha256,scope:unit.scope}};
     if(e.kind==='lesson')payload.activities=unit.activities.map(a=>({id:a.id,stable_code:a.stable_code,type:a.type,response_modality:responseModality(a.response.kind),completion_policy:a.runtime.completion_policy,knowledge_refs:a.learning.knowledge_refs,evidence_map:a.learning.evidence_map,media_refs:a.presentation.media_refs,contract:a}));
     return validateContent(payload);

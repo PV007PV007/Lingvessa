@@ -271,3 +271,10 @@ P5 remains owner accepted/merged at `da3a38c844d68bc6b4051f59d8c9265964347069`. 
 Reconstructed `content/english/m01/l01.json`: 29 shared contracts, 44 versions, 35 immutable pins (26 WAV + 9 SVG), 51 uses. Atomic importer rejects changed/partial closures and creates no approvals. Local read-only byte audit verifies all 420 approved final WAVs; this is not PostgreSQL/S3 proof. Hosted CI now explicitly tests nine complete SVG/text activities under separate test version IDs with PostgreSQL 18.6, pinned MinIO, restart, replay, publication and two browser viewports. New-source hosted result is pending; inspect PR #6 and its exact-source artifacts. Full-audio L01 and remaining units remain pending. See `docs/p6/l01.md` and `docs/p6/task-status.json`.
 
 Automatic review rejected refreshing the already-successful P5 input job on Nov3. It was not rerun; do not work around the rejection or trusted input controls. Full-audio hosted input stays blocked until explicit authorization of that action. Preserve existing audio/voice/rights and visual approvals; no regeneration or WAV Git storage. OD-004/OD-006 remain OPEN.
+
+
+## 2026-11-05 — P6 L01 publication fix
+
+Both P6 events on `0eef7f32bae9eaa2ca2d8a527d7ce3357d634c1e` passed real PostgreSQL/S3 import, replay and byte readback after restart. Both failed the PostgreSQL canonical-reference guard at test publication. No browser pass on that SHA; the other six workflows succeeded. See `docs/p6/evidence/l01-publication-0eef7f3.json`.
+
+The compiler now orders references by relation then stable code separately from teaching order; all corrected content versions have new IDs, while lesson/activity identities and media pins stay unchanged. The full L01 and nine-activity test slice have version codes `p6-l01-2` and `p6-l01-svg-text-test-2`. The current commit’s push/PR jobs and scope-specific artifact audit are linked from PR #6. Read those jobs before any retry. Full-audio L01 (29 activities/35 pins) and the remaining units are still separate work. P6 remains IN PROGRESS / NOT READY, PR #6 Draft, OD-004/006 open, P7 stopped.
