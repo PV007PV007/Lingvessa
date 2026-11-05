@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "phase": "P6",
+  "milestone_status": "NOT_READY",
+  "items": [
+    {
+      "id": "P6-CONTENT-001",
+      "severity": "BLOCKER",
+      "status": "OPEN_IMPLEMENTATION",
+      "source": "Plan \u00a713; Reference \u00a7\u00a76\u201310 pp9\u201313",
+      "finding": "L01 has 29 authored contracts and 44 versions. L02/L03/L04/Recap remain outlines. No complete five-unit authored publication/journey is proved.",
+      "next_action": "Run L01 scoped and full-audio gates, then complete remaining units without substituting probes for curriculum."
+    },
+    {
+      "id": "P6-A11Y-001",
+      "severity": "BLOCKER",
+      "status": "OBSERVED_SHARED_CONTRACT_GAP",
+      "source": "Reference \u00a77 L02.8 p10; \u00a78 L03.6 p11; \u00a79 L04.2 p11; \u00a710 R01.2 p12",
+      "finding": "Current MediaPanel and ActivityRenderer allow transcript disclosure before the first answer. Existing support telemetry does not implement the source-specific after-attempt visibility policy.",
+      "code": [
+        "apps/web/src/lesson/media.tsx",
+        "apps/web/src/lesson/activity.tsx",
+        "packages/activity-schemas/src/lesson.ts"
+      ],
+      "next_action": "Specify the shared objective/visibility/accessibility-override contract and required audit/evidence semantics; review any contract change before implementation."
+    },
+    {
+      "id": "P6-EVAL-001",
+      "severity": "IMPORTANT",
+      "status": "OBSERVED_SHARED_CONTRACT_GAP",
+      "source": "Reference \u00a77 L02.7 p10",
+      "finding": "A contraction objective can reject a full form, but the current result has a single correct/incorrect axis. The probes do not prove meaning-correct/form-needed feedback or independent facet outcomes.",
+      "code": [
+        "packages/lesson-engine/src/evaluator.ts",
+        "packages/activity-schemas/src/lesson.ts"
+      ],
+      "next_action": "Review shared objective-aware feedback/evidence contract; do not mark full-form semantics incorrect or add an English-only evaluator."
+    },
+    {
+      "id": "P6-MEDIA-001",
+      "severity": "IMPORTANT",
+      "status": "OPEN_OBJECTIVE_BINDING_REVIEW",
+      "source": "Reference \u00a77 L02.1/L02.5/L02.8 p10; \u00a78 L03.5/L03.6 p11; \u00a710 recap scenario p12",
+      "finding": "All 225 existing English catalog assets resolve. This does not prove the four profile introductions, three role-image uses, listening-profile/country stimuli or the two new recap characters. The approved English visuals comprise three scenes, three avatars, three icons and six flags.",
+      "next_action": "Map each authored stimulus exactly to approved material; prepare explicit additional requirements where reuse is insufficient. Never substitute a generic scene or new script for unchanged approved bytes."
+    },
+    {
+      "id": "P6-VARIANT-001",
+      "severity": "IMPORTANT",
+      "status": "OPEN_VARIANT_REVIEW",
+      "source": "Reference \u00a75 p8; CUR-A1-011",
+      "finding": "176 policy cases cover en-GB/en-US text normalization. Existing approved English voices are en-GB. No learner-profile switching, meaningful letter-name variety note or en-US audio acceptance is asserted.",
+      "next_action": "Author and verify explicit variety metadata/notes against the existing approved voices without silently relabelling en-GB audio."
+    },
+    {
+      "id": "P6-JOURNEY-001",
+      "severity": "BLOCKER",
+      "status": "OPEN_EXECUTION_GATE",
+      "source": "Plan \u00a713 p7; Reference \u00a7\u00a79\u201311 pp11\u201314",
+      "finding": "Nine complete L01 activities (20 content versions, five SVGs) ran through test publication, authenticated delivery, wrong/reveal, reload, remediation, completion and Review seeding on source 51079b6. Full audio L01 and the four other units are not proved.",
+      "next_action": "Run real PostgreSQL/S3-backed English lesson journeys after authoring; retain exact-source vertical-slice report and defect list."
+    },
+    {
+      "id": "P6-INPUT-001",
+      "severity": "BLOCKER",
+      "status": "FULL_L01_HOSTED_INPUT_MISSING",
+      "source": "docs/p6/l01.md \u2014 Recovery and input boundary",
+      "finding": "Existing approved final WAVs verified locally. Hosted final-only artifact expired; automatic review rejected Nov3 p5-input-slot rerun. No full-audio P6 hosted result is claimed.",
+      "next_action": "A read-only consumer now checks the producer identity, ZIP and 420 individual WAVs; offline acceptance of the retained final-only package passed. Obtain narrow approval before refreshing the expired exported input, then run the full 29-activity browser gate on a pinned P6 push."
+    }
+  ],
+  "unchanged_decisions": {
+    "OD-004": "OPEN_BEFORE_PRODUCTION_DELIVERY",
+    "OD-006": "OPEN_BEFORE_USABLE_LEARNER_SCORING"
+  }
+}

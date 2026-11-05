@@ -1,0 +1,33 @@
+{
+  "phase": "P5",
+  "status": "OWNER_ACCEPTED",
+  "scope": "DEVELOPMENT_REFERENCE_NOT_PRODUCTION",
+  "owner_decision_date": "2026-10-29",
+  "owner_reply": "дозволяю",
+  "approved_question": "Підтверджуєте прийняття P5 для development/reference, merge PR #5 через merge commit і початок P6?",
+  "tested_head_sha": "8f353cf44945738cff1b2ea49bfd9ce730ebf022",
+  "tree_sha": "ff9e9f0b364db7d2989973e6197cb12133e5bcb0",
+  "merge_commit_sha": "da3a38c844d68bc6b4051f59d8c9265964347069",
+  "parents": [
+    "5027f001237b6451237d87343ebeca58cd0af007",
+    "8f353cf44945738cff1b2ea49bfd9ce730ebf022"
+  ],
+  "merged_at": "2026-10-29T14:13:33Z",
+  "pr": 5,
+  "merge_method": "merge",
+  "merge_tree_and_parents_verified": true,
+  "runtime_evidence": "docs/p6/evidence/verified-p5-ci-8f353cf.json",
+  "historical_evidence_rule": "Retain pre-acceptance NOT_READY/P6-false records unchanged. This later owner decision supersedes their phase boundary, not their tested runtime result.",
+  "trace_counts_at_acceptance": {
+    "PASS": 178,
+    "PARTIAL": 31,
+    "PENDING": 147
+  },
+  "od_004": "OPEN_BEFORE_PRODUCTION_DELIVERY",
+  "od_006": "OPEN_BEFORE_USABLE_LEARNER_SCORING",
+  "audio_approval_retained": "2026-10-14",
+  "visual_approval_retained": "2026-10-20",
+  "p6_authorized": true,
+  "p7_authorized": false,
+  "production_profile_approved": false
+}

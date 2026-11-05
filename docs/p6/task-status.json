@@ -1,0 +1,31 @@
+{
+  "phase": "P6",
+  "status": "IN_PROGRESS",
+  "milestone_status": "NOT_READY",
+  "accepted_p5": "docs/p6/evidence/p5-acceptance.json",
+  "p6_authorized": true,
+  "p7_authorized": false,
+  "tasks": [
+    {
+      "task_id": "IMP-P6-001",
+      "status": "IN_PROGRESS",
+      "goal": "Executable English M01 four lessons and recap",
+      "current_batch": "English L01 r2: nine complete activities have run on PostgreSQL/S3/mobile/desktop. The 29-activity browser harness and a read-only final-WAV consumer are prepared; no full hosted audio run yet.",
+      "pending": [
+        "Full L01 approved-audio hosted input and PostgreSQL/S3 execution",
+        "Full L01 audio mobile/desktop journey and objective/visibility review",
+        "Complete L02/L03/L04/Recap authoring and execution",
+        "Shared transcript visibility and objective-aware feedback decisions",
+        "P6 vertical-slice acceptance with all source clauses evidenced"
+      ]
+    }
+  ],
+  "od_004": "OPEN",
+  "od_006": "OPEN",
+  "next_action": "Inspect current PR #6 exact-source CI. Full hosted L01 needs a fresh authorized final-only artifact; activate one pinned P6 push only after verifying the producer result. Continue remaining unit authoring in parallel with the input decision.",
+  "last_observed_in_repository": {
+    "source_sha": "51079b68902d4a913940258cafc12d5290748aeb",
+    "evidence": "docs/p6/evidence/l01-runtime-51079b6.json",
+    "status": "PUSH_RUNTIME_PASS_9_ACTIVITIES_2_BROWSERS_PR_DEPENDENCY_INSTALL_TIMEOUT"
+  }
+}
