@@ -25,4 +25,4 @@ OD-004 stays OPEN before production delivery; OD-006 stays OPEN before usable le
 
 ## L01 batch — 2026-11-04
 
-See [L01 implementation and test boundaries](l01.md): 29 contracts, 44 versions, 26 approved WAV + 9 SVG pins. The next hosted gate exercises nine whole SVG/text activities using real PostgreSQL/S3 and two browser viewports. Full audio execution and the remaining four units are still pending; P6 remains NOT READY. The existing first-batch outline/probe sections are historical preparation scope.
+See [L01 implementation and test boundaries](l01.md): 29 contracts, 44 versions, 26 approved WAV + 9 SVG pins. The push on 51079b6 executed nine whole SVG/text activities using real PostgreSQL/S3 and both browser viewports; see the separate PR environment failure and its fix in the L01 record. Full audio execution and the remaining four units are still pending; P6 remains NOT READY. The existing first-batch outline/probe sections are historical preparation scope.

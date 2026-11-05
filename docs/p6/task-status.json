@@ -10,7 +10,7 @@
       "task_id": "IMP-P6-001",
       "status": "IN_PROGRESS",
       "goal": "Executable English M01 four lessons and recap",
-      "current_batch": "L01 revision 2; canonical publication references with original teaching order. Current hosted result: inspect PR #6 and its source-bound P6 artifacts.",
+      "current_batch": "English L01 r2: nine complete activities have run on PostgreSQL/S3/mobile/desktop. The 29-activity browser harness and a read-only final-WAV consumer are prepared; no full hosted audio run yet.",
       "pending": [
         "Full L01 approved-audio hosted input and PostgreSQL/S3 execution",
         "Full L01 audio mobile/desktop journey and objective/visibility review",
@@ -22,10 +22,10 @@
   ],
   "od_004": "OPEN",
   "od_006": "OPEN",
-  "next_action": "Inspect P6 push and PR results for the current PR #6 HEAD. After confirming nine complete SVG/text activities, advance to the full 29-activity audio gate and remaining units. No denied P5 export rerun without specific authorization.",
+  "next_action": "Inspect current PR #6 exact-source CI. Full hosted L01 needs a fresh authorized final-only artifact; activate one pinned P6 push only after verifying the producer result. Continue remaining unit authoring in parallel with the input decision.",
   "last_observed_in_repository": {
-    "source_sha": "0eef7f32bae9eaa2ca2d8a527d7ce3357d634c1e",
-    "evidence": "docs/p6/evidence/l01-publication-0eef7f3.json",
-    "status": "IMPORT_REPLAY_RESTART_PASSED_PUBLICATION_REJECTED_NO_BROWSER"
+    "source_sha": "51079b68902d4a913940258cafc12d5290748aeb",
+    "evidence": "docs/p6/evidence/l01-runtime-51079b6.json",
+    "status": "PUSH_RUNTIME_PASS_9_ACTIVITIES_2_BROWSERS_PR_DEPENDENCY_INSTALL_TIMEOUT"
   }
 }

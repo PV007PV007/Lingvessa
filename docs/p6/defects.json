@@ -57,7 +57,7 @@
       "severity": "BLOCKER",
       "status": "OPEN_EXECUTION_GATE",
       "source": "Plan \u00a713 p7; Reference \u00a7\u00a79\u201311 pp11\u201314",
-      "finding": "No complete P6 mobile/desktop journey has executed. Persistent turn history, supported production, result/remediation, Review seed, restart/resume and nonblocking speech remain to be proved on actual authored units.",
+      "finding": "Nine complete L01 activities (20 content versions, five SVGs) ran through test publication, authenticated delivery, wrong/reveal, reload, remediation, completion and Review seeding on source 51079b6. Full audio L01 and the four other units are not proved.",
       "next_action": "Run real PostgreSQL/S3-backed English lesson journeys after authoring; retain exact-source vertical-slice report and defect list."
     },
     {
@@ -66,7 +66,7 @@
       "status": "FULL_L01_HOSTED_INPUT_MISSING",
       "source": "docs/p6/l01.md \u2014 Recovery and input boundary",
       "finding": "Existing approved final WAVs verified locally. Hosted final-only artifact expired; automatic review rejected Nov3 p5-input-slot rerun. No full-audio P6 hosted result is claimed.",
-      "next_action": "Finish unaffected SVG/text gate. Refresh requires explicit authorization of rejected job rerun; do not bypass trusted P5 transport checks."
+      "next_action": "A read-only consumer now checks the producer identity, ZIP and 420 individual WAVs; offline acceptance of the retained final-only package passed. Obtain narrow approval before refreshing the expired exported input, then run the full 29-activity browser gate on a pinned P6 push."
     }
   ],
   "unchanged_decisions": {

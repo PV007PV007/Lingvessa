@@ -96,10 +96,10 @@ try{
   const lessons=new LessonRepository(pool!);
   const profile=async(user:string)=>{const id=randomUUID();await pool!.query('INSERT INTO language_profiles(id,user_id,language_id,variant_id) SELECT $1,$2,$3,id FROM variants WHERE language_id=$3 AND is_default',[id,user,unit.language_id]);return id;};
   const profileId=await profile(learner),start={language_profile_id:profileId,publication_id:publicationId,lesson_id:unit.lesson_id};let run=await lessons.start(learner,start),delivered=0,neutral=0;
-  await gate('authored lesson journey, wrong/reveal, reload, replay, remediation and Review seed',async()=>{
-    // No scoring policy or provider is installed. This explicitly tests the neutral unavailable route only.
-    const speech=new SpeechRepository(pool!,{put:async()=>{throw new Error('No speech bytes expected');},read:async()=>{throw new Error('No speech bytes expected');},delete:async()=>undefined,prune:async()=>0},
+  // No scoring policy or provider is installed. This explicitly tests the neutral unavailable route only.
+  const speech=new SpeechRepository(pool!,{put:async()=>{throw new Error('No speech bytes expected');},read:async()=>{throw new Error('No speech bytes expected');},delete:async()=>undefined,prune:async()=>0},
       {code:'p6_unavailable',modelVersion:'none-1',available:false,evaluate:async()=>{throw new Error('No provider invocation permitted');}},randomBytes(32));
+  await gate('authored lesson journey, wrong/reveal, reload, replay, remediation and Review seed',async()=>{
     let wrong=false,turns=0;
     while(run.state!=='completed'){
       assert(turns++<45);const a=unit.activities.find(a=>a.id===run.current_activity_id)!;
@@ -126,15 +126,17 @@ try{
     await assert.rejects(media.bytesForRun(author,run.id,unit.activities[0]!.id,entries[0]!.metadata.asset_id,entries[0]!.metadata.asset_version),{code:'NOT_FOUND'});
   });
   let browserExecuted=false;
-  if(mode==='--svg-text-slice')await gate('mobile and desktop: real authored SVG/text lesson through Next/API/PostgreSQL/S3',async()=>{
+  await gate(mode==='--real-l01'?'mobile and desktop: full audio L01 through Next/API/PostgreSQL/S3':'mobile and desktop: real authored SVG/text lesson through Next/API/PostgreSQL/S3',async()=>{
     const users=[];
     for(const viewport of ['mobile','desktop']){const email=viewport+'-'+suffix+'@example.invalid',pass=randomBytes(32).toString('base64url'),id=await identity.provision(email,pass);
       const r=await lessons.start(id,{language_profile_id:await profile(id),publication_id:publicationId,lesson_id:unit.lesson_id});users.push({viewport,email,password:pass,run_id:r.id});}
-    await l01BrowserGate(pool!,storage!.store(),users);browserExecuted=true;
+    await l01BrowserGate(pool!,storage!.store(),speech,mode,users);
+    for(const u of users){const counter=await pool!.query("SELECT count(*) FROM activity_attempts WHERE lesson_run_id=$1 AND outcome='speech_unavailable'",[u.run_id]);assert.equal(Number(counter.rows[0].count),mode==='--real-l01'?2:0);}
+    assert.equal((await pool!.query("SELECT count(*) FROM evidence_events WHERE skill IN ('speaking','pronunciation')")).rows[0].count,'0');browserExecuted=true;
   });
   assert.equal((await pool!.query("SELECT count(*) FROM publications WHERE channel<>'test'")).rows[0].count,'0');
-  const paths=['content/english/m01/l01.json','packages/content-tools/src/authored-unit.ts','infra/persistence/authored-unit.ts','tools/p6/l01-input.ts','tools/p6/l01-postgres.ts','tools/p6/l01-browser-gate.ts','tools/p6/playwright.config.ts','tests/browser/p6-l01.spec.ts','tests/fixtures/p6/l01-test-slice.json','tests/support/p6-authored-slice.ts','infra/local/database-guard.ts','.github/workflows/p6.yml'];
-  const report={status:'PASS',source_sha,mode,scope:unit.scope,activities:unit.activities.length,content_versions:unit.entities.length,media_pins:unit.media_pins,media_uses:delivered,postgresql_server_version:'180006',postgresql_executed:true,s3_executed:true,adapter_restarted:true,import_replayed:true,immutable_changes_rejected:true,browser_executed:browserExecuted,browser_projects:browserExecuted?['mobile','desktop']:[],neutral_speech_continues:neutral,full_audio_l01_executed:mode==='--real-l01',full_audio_browser_executed:false,production_profile_approved:false,production_publication_created:false,owner_content_approval_created:false,milestone_status:'NOT_READY',gates,test_server_revision:minioTestRevision,test_server_binary_sha256:storage.binary_sha256,code_bindings:Object.fromEntries(await Promise.all(paths.map(async p=>[p,createHash('sha256').update(await readFile(p)).digest('hex')])))};
+  const paths=['content/english/m01/l01.json','packages/content-tools/src/authored-unit.ts','infra/persistence/authored-unit.ts','tools/p6/l01-input.ts','tools/p6/l01-postgres.ts','tools/p6/l01-browser-gate.ts','tools/p6/playwright.config.ts','tests/browser/p6-l01.spec.ts','tests/support/p6-browser-media.ts','tests/fixtures/p6/l01-test-slice.json','tests/support/p6-authored-slice.ts','infra/local/database-guard.ts','.github/workflows/p6.yml'];
+  const report={status:'PASS',source_sha,mode,scope:unit.scope,activities:unit.activities.length,content_versions:unit.entities.length,media_pins:unit.media_pins,media_uses:delivered,postgresql_server_version:'180006',postgresql_executed:true,s3_executed:true,adapter_restarted:true,import_replayed:true,immutable_changes_rejected:true,browser_executed:browserExecuted,browser_projects:browserExecuted?['mobile','desktop']:[],neutral_speech_continues:neutral,full_audio_l01_executed:mode==='--real-l01',full_audio_browser_executed:mode==='--real-l01'&&browserExecuted,production_profile_approved:false,production_publication_created:false,owner_content_approval_created:false,milestone_status:'NOT_READY',gates,test_server_revision:minioTestRevision,test_server_binary_sha256:storage.binary_sha256,code_bindings:Object.fromEntries(await Promise.all(paths.map(async p=>[p,createHash('sha256').update(await readFile(p)).digest('hex')])))};
   await mkdir('artifacts/p6',{recursive:true});await writeFile('artifacts/p6/'+(mode==='--real-l01'?'l01-real.json':'l01-svg-text.json'),JSON.stringify(report,null,2)+'\n');
   console.log(JSON.stringify({status:report.status,mode,source_sha,gates:gates.length,activities:unit.activities.length,media:unit.media_pins.length,browser:browserExecuted}));
 }finally{
