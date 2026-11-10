@@ -1,0 +1,25 @@
+{
+  "source_sha": "aaaf72687cff75c080c5c50b87d96299105c481d",
+  "observed_at": "2026-11-10",
+  "status": "UNSUPPORTED_LOCAL_FULL_AUDIO_RUNTIME",
+  "source_tree_sha": "c7180cdf1df93db655cb4157d3a25634a3baa177",
+  "source_checkout_clean": true,
+  "toolchain": {
+    "node": "24.19.0",
+    "pnpm": "11.19.0"
+  },
+  "dependency_install": "PASS_FROZEN_LOCKFILE",
+  "prisma_generate": "PASS",
+  "web_build": "PASS",
+  "s3_test_server_revision": "9e49d5e7a648f00e26f2246f4dc28e6b07f8c84a",
+  "s3_binary_sha256": "d267cf0924d7bb8a4111f594ba61b24673ac42ddc59e1197e556882db17e936e",
+  "s3_started": false,
+  "s3_error": "FATAL Unable to get IP addresses of this host; route ip+net: netlinkrib: operation not permitted",
+  "postgresql_source_sha256": "555610c24d53e4316da5b7d3fc25c279d96856d5e0e23ee308c328c5fa881d9f",
+  "postgresql_executed": false,
+  "browser_executed": false,
+  "full_audio_l01_executed": false,
+  "audio_regenerated": false,
+  "input_exported": false,
+  "next": "Use a supported isolated runtime; do not bypass denied syscalls or substitute storage. Existing complete input remains unchanged. Hosted full-audio refresh is a separate previously rejected action requiring specific authorization."
+}

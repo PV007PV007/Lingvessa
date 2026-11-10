@@ -611,12 +611,24 @@
         "tools/p6/l01-postgres.ts"
       ],
       "partial_runtime_evidence": {
-        "source_sha": "51079b68902d4a913940258cafc12d5290748aeb",
-        "artifact_id": 13429173013,
-        "path": "docs/p6/evidence/l01-runtime-51079b6.json",
-        "observed": "morning/evening choices on mobile and desktop in nine-activity test publication",
-        "full_requirement_accepted": false
-      }
+        "source_sha": "aaaf72687cff75c080c5c50b87d96299105c481d",
+        "path": "docs/p6/evidence/verified-ci-aaaf726.json",
+        "observed": "morning/evening choices on mobile and desktop in nine-activity test publication; repeated on push and PR with authenticated HTTP SHA-256 and anonymous 401 assertions",
+        "full_requirement_accepted": false,
+        "artifact_ids": [
+          13754399287,
+          13754988684
+        ]
+      },
+      "partial_runtime_evidence_history": [
+        {
+          "source_sha": "51079b68902d4a913940258cafc12d5290748aeb",
+          "artifact_id": 13429173013,
+          "path": "docs/p6/evidence/l01-runtime-51079b6.json",
+          "observed": "morning/evening choices on mobile and desktop in nine-activity test publication",
+          "full_requirement_accepted": false
+        }
+      ]
     },
     {
       "requirement_id": "N-REF-P09-T02-R05",
@@ -692,12 +704,24 @@
         "tools/p6/l01-postgres.ts"
       ],
       "partial_runtime_evidence": {
-        "source_sha": "51079b68902d4a913940258cafc12d5290748aeb",
-        "artifact_id": 13429173013,
-        "path": "docs/p6/evidence/l01-runtime-51079b6.json",
-        "observed": "staged register note on mobile and desktop in nine-activity test publication",
-        "full_requirement_accepted": false
-      }
+        "source_sha": "aaaf72687cff75c080c5c50b87d96299105c481d",
+        "path": "docs/p6/evidence/verified-ci-aaaf726.json",
+        "observed": "staged register note on mobile and desktop in nine-activity test publication; repeated on push and PR with authenticated HTTP SHA-256 and anonymous 401 assertions",
+        "full_requirement_accepted": false,
+        "artifact_ids": [
+          13754399287,
+          13754988684
+        ]
+      },
+      "partial_runtime_evidence_history": [
+        {
+          "source_sha": "51079b68902d4a913940258cafc12d5290748aeb",
+          "artifact_id": 13429173013,
+          "path": "docs/p6/evidence/l01-runtime-51079b6.json",
+          "observed": "staged register note on mobile and desktop in nine-activity test publication",
+          "full_requirement_accepted": false
+        }
+      ]
     },
     {
       "requirement_id": "N-REF-P09-T02-R07",
@@ -847,12 +871,24 @@
         "tools/p6/l01-postgres.ts"
       ],
       "partial_runtime_evidence": {
-        "source_sha": "51079b68902d4a913940258cafc12d5290748aeb",
-        "artifact_id": 13429173013,
-        "path": "docs/p6/evidence/l01-runtime-51079b6.json",
-        "observed": "three classifications on mobile and desktop in nine-activity test publication",
-        "full_requirement_accepted": false
-      }
+        "source_sha": "aaaf72687cff75c080c5c50b87d96299105c481d",
+        "path": "docs/p6/evidence/verified-ci-aaaf726.json",
+        "observed": "three classifications on mobile and desktop in nine-activity test publication; repeated on push and PR with authenticated HTTP SHA-256 and anonymous 401 assertions",
+        "full_requirement_accepted": false,
+        "artifact_ids": [
+          13754399287,
+          13754988684
+        ]
+      },
+      "partial_runtime_evidence_history": [
+        {
+          "source_sha": "51079b68902d4a913940258cafc12d5290748aeb",
+          "artifact_id": 13429173013,
+          "path": "docs/p6/evidence/l01-runtime-51079b6.json",
+          "observed": "three classifications on mobile and desktop in nine-activity test publication",
+          "full_requirement_accepted": false
+        }
+      ]
     },
     {
       "requirement_id": "N-REF-P10-T01-R02",
@@ -928,12 +964,24 @@
         "tools/p6/l01-postgres.ts"
       ],
       "partial_runtime_evidence": {
-        "source_sha": "51079b68902d4a913940258cafc12d5290748aeb",
-        "artifact_id": 13429173013,
-        "path": "docs/p6/evidence/l01-runtime-51079b6.json",
-        "observed": "three retrieval items on mobile and desktop in nine-activity test publication",
-        "full_requirement_accepted": false
-      }
+        "source_sha": "aaaf72687cff75c080c5c50b87d96299105c481d",
+        "path": "docs/p6/evidence/verified-ci-aaaf726.json",
+        "observed": "three retrieval items on mobile and desktop in nine-activity test publication; repeated on push and PR with authenticated HTTP SHA-256 and anonymous 401 assertions",
+        "full_requirement_accepted": false,
+        "artifact_ids": [
+          13754399287,
+          13754988684
+        ]
+      },
+      "partial_runtime_evidence_history": [
+        {
+          "source_sha": "51079b68902d4a913940258cafc12d5290748aeb",
+          "artifact_id": 13429173013,
+          "path": "docs/p6/evidence/l01-runtime-51079b6.json",
+          "observed": "three retrieval items on mobile and desktop in nine-activity test publication",
+          "full_requirement_accepted": false
+        }
+      ]
     },
     {
       "requirement_id": "N-REF-P10-T01-R04",
@@ -972,12 +1020,24 @@
         "tools/p6/l01-postgres.ts"
       ],
       "partial_runtime_evidence": {
-        "source_sha": "51079b68902d4a913940258cafc12d5290748aeb",
-        "artifact_id": 13429173013,
-        "path": "docs/p6/evidence/l01-runtime-51079b6.json",
-        "observed": "native wrong/reveal, remediation and result on mobile and desktop in nine-activity test publication",
-        "full_requirement_accepted": false
-      }
+        "source_sha": "aaaf72687cff75c080c5c50b87d96299105c481d",
+        "path": "docs/p6/evidence/verified-ci-aaaf726.json",
+        "observed": "native wrong/reveal, remediation and result on mobile and desktop in nine-activity test publication; repeated on push and PR with authenticated HTTP SHA-256 and anonymous 401 assertions",
+        "full_requirement_accepted": false,
+        "artifact_ids": [
+          13754399287,
+          13754988684
+        ]
+      },
+      "partial_runtime_evidence_history": [
+        {
+          "source_sha": "51079b68902d4a913940258cafc12d5290748aeb",
+          "artifact_id": 13429173013,
+          "path": "docs/p6/evidence/l01-runtime-51079b6.json",
+          "observed": "native wrong/reveal, remediation and result on mobile and desktop in nine-activity test publication",
+          "full_requirement_accepted": false
+        }
+      ]
     },
     {
       "requirement_id": "N-REF-P10-T02-R02",

@@ -22,7 +22,8 @@
         "apps/web/src/lesson/activity.tsx",
         "packages/activity-schemas/src/lesson.ts"
       ],
-      "next_action": "Specify the shared objective/visibility/accessibility-override contract and required audit/evidence semantics; review any contract change before implementation."
+      "next_action": "Specify the shared objective/visibility/accessibility-override contract and required audit/evidence semantics; review any contract change before implementation.",
+      "review_proposal": "docs/p6/shared-contract-proposals.md"
     },
     {
       "id": "P6-EVAL-001",
@@ -34,7 +35,8 @@
         "packages/lesson-engine/src/evaluator.ts",
         "packages/activity-schemas/src/lesson.ts"
       ],
-      "next_action": "Review shared objective-aware feedback/evidence contract; do not mark full-form semantics incorrect or add an English-only evaluator."
+      "next_action": "Review shared objective-aware feedback/evidence contract; do not mark full-form semantics incorrect or add an English-only evaluator.",
+      "review_proposal": "docs/p6/shared-contract-proposals.md"
     },
     {
       "id": "P6-MEDIA-001",
@@ -42,7 +44,8 @@
       "status": "OPEN_OBJECTIVE_BINDING_REVIEW",
       "source": "Reference \u00a77 L02.1/L02.5/L02.8 p10; \u00a78 L03.5/L03.6 p11; \u00a710 recap scenario p12",
       "finding": "All 225 existing English catalog assets resolve. This does not prove the four profile introductions, three role-image uses, listening-profile/country stimuli or the two new recap characters. The approved English visuals comprise three scenes, three avatars, three icons and six flags.",
-      "next_action": "Map each authored stimulus exactly to approved material; prepare explicit additional requirements where reuse is insufficient. Never substitute a generic scene or new script for unchanged approved bytes."
+      "next_action": "Map each authored stimulus exactly to approved material; prepare explicit additional requirements where reuse is insufficient. Never substitute a generic scene or new script for unchanged approved bytes.",
+      "review_proposal": "docs/p6/shared-contract-proposals.md"
     },
     {
       "id": "P6-VARIANT-001",
@@ -65,8 +68,8 @@
       "severity": "BLOCKER",
       "status": "FULL_L01_HOSTED_INPUT_MISSING",
       "source": "docs/p6/l01.md \u2014 Recovery and input boundary",
-      "finding": "Existing approved final WAVs verified locally. Hosted final-only artifact expired; automatic review rejected Nov3 p5-input-slot rerun. No full-audio P6 hosted result is claimed.",
-      "next_action": "A read-only consumer now checks the producer identity, ZIP and 420 individual WAVs; offline acceptance of the retained final-only package passed. Obtain narrow approval before refreshing the expired exported input, then run the full 29-activity browser gate on a pinned P6 push."
+      "finding": "All approved WAVs remain available locally; full hosted input artifact expired. Both aaaf7268 nine-activity runs pass. Local pinned MinIO cannot start because netlink is denied; no local full-audio result or renewed P5 export is claimed.",
+      "next_action": "Use a supported runtime. The prepared read-only consumer is ready; refreshing the rejected P5 export requires specific authorization. See local-runtime-20261110.json."
     }
   ],
   "unchanged_decisions": {
