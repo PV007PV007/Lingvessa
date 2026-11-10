@@ -18,6 +18,9 @@ test('authored L01: exact media delivery, wrong/reveal, reload, native remediati
   },true);});
   let neutral=0;
   await page.goto('/lesson/'+user.run_id);
+  // The authenticated route must still deny the same request without a session.
+  expect(await page.evaluate(async path=>(await fetch(path,{credentials:'omit',cache:'no-store'})).status,
+    '/api/v1/lesson-runs/'+user.run_id+'/media?item_id='+unit.activities[0]!.id)).toBe(401);
   for(const [index,a] of unit.activities.entries()){
     await expect(page.getByText(`English · ${index+1} / ${unit.activities.length}`,{exact:true})).toBeVisible();
     await expect(page.getByRole('heading',{name:a.presentation.prompt,exact:true})).toBeVisible();

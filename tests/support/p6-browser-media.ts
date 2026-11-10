@@ -1,6 +1,5 @@
 /// <reference lib="dom" />
 import {expect,type Page} from '@playwright/test';
-import {createHash} from 'node:crypto';
 import {deliveredMediaListSchema} from '../../packages/activity-schemas/src/media-delivery.js';
 import type {AuthoredUnit} from '../../packages/content-tools/src/authored-unit.js';
 
@@ -9,14 +8,23 @@ export async function checkItemMedia(page:Page,runId:string,item:AuthoredUnit['a
   const refs=item.presentation.media_refs,base='/api/v1/lesson-runs/'+runId+'/media';
   const url=(id:string,version:number)=>base+'/'+id+'/'+version+'?item_id='+item.id;
   if(!refs.length){await expect(page.locator('.lesson-media')).toHaveCount(0);return;}
-  const list=await page.request.get(base+'?item_id='+item.id);expect(list.status()).toBe(200);
-  const assets=deliveredMediaListSchema.parse(await list.json());
+  // Use the signed-in browser, including its Secure HttpOnly session on loopback.
+  const list=await page.evaluate(async path=>{
+    const response=await fetch(path,{credentials:'same-origin',cache:'no-store'});
+    return {status:response.status,value:response.ok?await response.json() as unknown:null};
+  },base+'?item_id='+item.id);
+  expect(list.status).toBe(200);
+  const assets=deliveredMediaListSchema.parse(list.value);
   expect(assets.map(a=>a.asset_id).sort()).toEqual(refs.map(r=>r.asset_id).sort());
   for(const ref of refs){
     const pin=pins.find(p=>p.asset_id===ref.asset_id)!,a=assets.find(m=>m.asset_id===ref.asset_id)!;
     expect([a.asset_version,a.role,a.kind,a.checksum,a.byte_length]).toEqual([pin.asset_version,ref.role,pin.kind,pin.checksum,pin.byte_length]);
-    const src=url(a.asset_id,a.asset_version),response=await page.request.get(src);expect(response.status()).toBe(200);
-    const body=await response.body();expect(body.length).toBe(pin.byte_length);expect(createHash('sha256').update(body).digest('hex')).toBe(pin.checksum);
+    const src=url(a.asset_id,a.asset_version),response=await page.evaluate(async path=>{
+      const r=await fetch(path,{credentials:'same-origin',cache:'no-store'}),bytes=await r.arrayBuffer();
+      const digest=await crypto.subtle.digest('SHA-256',bytes);
+      return {status:r.status,size:bytes.byteLength,sha256:Array.from(new Uint8Array(digest),b=>b.toString(16).padStart(2,'0')).join('')};
+    },src);
+    expect([response.status,response.size,response.sha256]).toEqual([200,pin.byte_length,pin.checksum]);
     if(pin.kind!=='audio'){
       const img=page.locator('.lesson-media img[src="'+src+'"]');await expect(img).toBeVisible();
       await expect.poll(()=>img.evaluate(el=>(el as HTMLImageElement).complete&&(el as HTMLImageElement).naturalWidth>0)).toBe(true);
