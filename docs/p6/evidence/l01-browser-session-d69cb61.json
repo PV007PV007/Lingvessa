@@ -1,0 +1,45 @@
+{
+  "source_sha": "d69cb6103bb66542dd4cde1ec694d7900c38aea8",
+  "verified_at": "2026-11-10",
+  "status": "SIX_BACKEND_GATES_PASS_BROWSER_MEDIA_PROBE_401",
+  "jobs": [
+    {
+      "run_id": 42059674521,
+      "job_id": 127357518047,
+      "event": "push"
+    },
+    {
+      "run_id": 42059684423,
+      "job_id": 127357553785,
+      "event": "pull_request"
+    }
+  ],
+  "gates": [
+    "authority and missing-byte closure reject without partial content",
+    "real approved media bytes import and replay; no generation",
+    "authored import/replay rejects changed versions and inserts no approval/publication",
+    "adapter restart, new PostgreSQL pool, immutable readback and replay",
+    "disposable test publication validates exact version and media pins",
+    "authored lesson journey, wrong/reveal, reload, replay, remediation and Review seed"
+  ],
+  "observed_from": "Both completed job logs: each contains six PASS gates and two failed browser cases, expected media HTTP 200 but received 401.",
+  "artifacts": [
+    {
+      "artifact_id": 13430721803,
+      "event": "push",
+      "sha256": "aadb25715b14d6c24573033f594374cf6ad6da4c820dcaa0279cdcadeef8af6b",
+      "bytes": 49704,
+      "expired": false
+    },
+    {
+      "artifact_id": 13431606056,
+      "event": "pull_request",
+      "sha256": "44142778a741088a0befc57415c609112f22bde10b5447bd1ea59d97c3b03441",
+      "bytes": 49850,
+      "expired": false
+    }
+  ],
+  "full_audio_run": false,
+  "browser_completed": false,
+  "correction": "Use same-origin browser fetch and browser SHA-256; explicitly verify 401 with credentials omitted. No production session or authorization changes."
+}

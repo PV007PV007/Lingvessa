@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+import {execFileSync} from 'node:child_process';
+import {readFile,mkdir,writeFile} from 'node:fs/promises';
+import {compileAuthoredUnit,verifyAuthoredMedia} from '../../packages/content-tools/src/authored-unit.js';
+import {loadMediaLibrary} from '../p5/media-library.js';
+const codePaths=['content/english/m01/l01.json','packages/content-tools/src/authored-unit.ts','infra/persistence/authored-unit.ts','tests/fixtures/p6/l01-test-slice.json','tests/support/p6-authored-slice.ts','tests/unit/p6-authored-unit.test.ts','tools/p6/authored-l01-check.ts'];
+const raw=await readFile(codePaths[0]!),{unit,payloads}=compileAuthoredUnit(JSON.parse(raw.toString()));
+assert.equal(createHash('sha256').update(await readFile('01_GOVERNING_DOCUMENTS/Lingvessa_Reference_Module_Design.pdf')).digest('hex'),unit.source_sha256);
+const library=await loadMediaLibrary(process.cwd(),{metadataOnly:true});verifyAuthoredMedia(unit,library.entries.map(e=>e.metadata));
+const source_sha=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();if(process.env.GITHUB_HEAD_SHA)assert.equal(source_sha,process.env.GITHUB_HEAD_SHA);
+const report={status:'AUTHORED_CONTRACT_CHECK_PASS',source_sha,activities:unit.activities.length,content_versions:payloads.length,media_pins:unit.media_pins,media_uses:unit.activities.reduce((n,a)=>n+a.presentation.media_refs.length,0),source_step_12:'NATIVE_RESULT_REMEDIATION',postgresql_executed:false,s3_executed:false,browser_executed:false,audio_bytes_verified:false,milestone_status:'NOT_READY',code_bindings:Object.fromEntries(await Promise.all(codePaths.map(async p=>[p,createHash('sha256').update(await readFile(p)).digest('hex')])))};
+await mkdir('artifacts/p6',{recursive:true});await writeFile('artifacts/p6/l01-authored.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({status:report.status,activities:report.activities,versions:payloads.length,pins:unit.media_pins.length,media_uses:report.media_uses}));

@@ -1,0 +1,33 @@
+{
+  "phase": "P6",
+  "status": "IN_PROGRESS",
+  "milestone_status": "NOT_READY",
+  "accepted_p5": "docs/p6/evidence/p5-acceptance.json",
+  "p6_authorized": true,
+  "p7_authorized": false,
+  "tasks": [
+    {
+      "task_id": "IMP-P6-001",
+      "status": "IN_PROGRESS",
+      "goal": "Executable English M01 four lessons and recap",
+      "current_batch": "Nine complete L01 activities verified on aaaf7268 in both hosted runs: real PostgreSQL/S3, exact authenticated media bytes, anonymous denial and two browser viewports. Full 29-activity audio gate remains unexecuted.",
+      "pending": [
+        "Full L01 approved-audio hosted input and PostgreSQL/S3 execution",
+        "Full L01 audio mobile/desktop journey and objective/visibility review",
+        "Complete L02/L03/L04/Recap authoring and execution",
+        "Shared transcript visibility and objective-aware feedback decisions",
+        "P6 vertical-slice acceptance with all source clauses evidenced"
+      ]
+    }
+  ],
+  "od_004": "OPEN",
+  "od_006": "OPEN",
+  "next_action": "Review and authorize only the previously rejected one-time P5 final-audio refresh if hosted full L01 execution is to proceed; use the pinned read-only P6 consumer after producer success. Review shared-contract proposals before affected learner behavior changes; complete remaining lesson authoring and media requirements. Current exact-source CI is linked from PR6.",
+  "last_observed_in_repository": {
+    "source_sha": "aaaf72687cff75c080c5c50b87d96299105c481d",
+    "evidence": "docs/p6/evidence/verified-ci-aaaf726.json",
+    "status": "ALL_EIGHT_WORKFLOWS_GREEN_NINE_ACTIVITY_SCOPE"
+  },
+  "local_execution_boundary": "docs/p6/evidence/local-runtime-20261110.json",
+  "review_proposals": "docs/p6/shared-contract-proposals.md"
+}

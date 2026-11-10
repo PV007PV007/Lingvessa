@@ -31,7 +31,7 @@
     "test:containers": "node --import tsx tools/p1/containers.ts --smoke",
     "audit:dependencies": "pnpm audit --prod --audit-level high",
     "test:smoke": "node --import tsx --test tests/smoke/*.test.ts",
-    "validate:baseline": "python3 tools/governance/validate_p5_baseline.py",
+    "validate:baseline": "python3 tools/governance/validate_p6_baseline.py",
     "validate:references": "node --import tsx tools/p2/validate-fixtures.ts",
     "benchmark:passwords": "node --import tsx tools/p2/benchmark-passwords.ts"
   },

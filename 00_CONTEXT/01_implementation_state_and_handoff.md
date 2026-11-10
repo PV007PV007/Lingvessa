@@ -1,3 +1,21 @@
+## Current owner acceptance and P6 start — 2026-10-29
+
+**P0–P5 ACCEPTED in recorded scopes. P6 IN PROGRESS / NOT READY. P7 NOT AUTHORIZED.** The owner's **“дозволяю”** answers the explicit P5 development/reference acceptance, merge-commit and P6-start proposal. [Decision and verified merge](../docs/p6/evidence/p5-acceptance.json).
+
+PR #5 is MERGED. Accepted tested HEAD `8f353cf44945738cff1b2ea49bfd9ce730ebf022`; main merge `da3a38c844d68bc6b4051f59d8c9265964347069`; equal tree `ff9e9f0b364db7d2989973e6197cb12133e5bcb0`. Merge parents and main were read back. [Final P5 proof](../docs/p6/evidence/verified-p5-ci-8f353cf.json): seven workflows / eleven jobs PASS, both actual M01 PostgreSQL/S3/HTTP runs and independent artifacts, zero dependency findings. This later acceptance supersedes the historical pre-acceptance statuses below; historical source evidence is not rewritten.
+
+Active branch `implementation/p6-english-reference`; task IMP-P6-001. [P6 scope and execution](../docs/p6/README.md), [task status](../docs/p6/task-status.json), [97 unchanged source clauses](../docs/p6/requirement-evidence.json), [observed gaps](../docs/p6/defects.json). First batch: five-unit / 58-row source outline, 20 bounded evaluator probes (176 response/locale cases), approved English catalog preflight. This is preparation, not complete executable lessons, PostgreSQL lesson publication, browser acceptance or milestone PASS. Exact new-source CI determines the batch result.
+
+Current L01 evidence: the [51079b6 push](https://github.com/PV007PV007/Lingvessa/actions/runs/42056297085) executed nine whole activities on PostgreSQL 18.6 and S3, including test publication, restart/readback, mobile and desktop completion. The separate PR run timed out installing optional fonts before runtime. [Source-bound record](../docs/p6/evidence/l01-runtime-51079b6.json). Consult PR #6 for subsequent exact-source results.
+
+Latest verified implementation: [aaaf7268](../docs/p6/evidence/verified-ci-aaaf726.json) has all eight workflows green. Both P6 runs prove nine complete L01 activities, 20 content versions, five actual SVGs, PostgreSQL/S3 publication/replay/restart, authenticated HTTP-byte checks, anonymous denial and mobile/desktop completion. Current documentation-only follow-up CI is linked from PR6.
+
+Next concrete action: obtain specific authorization before the previously rejected P5 final-input refresh, then execute the full 29-activity audio gate with the prepared pinned consumer. Local MinIO cannot start under the current netlink restrictions; [boundary](../docs/p6/evidence/local-runtime-20261110.json). Review [shared-contract proposals and missing stimuli](../docs/p6/shared-contract-proposals.md) before affected behavior changes, then complete L02/L03/L04/Recap. P6 remains NOT READY; no merge or P7.
+
+OD-004 production delivery and OD-006 usable learner scoring remain OPEN. The 420-WAV/six-voice/rights approval (2026-10-14) and 30-visual approval (2026-10-20) stand. No regeneration, changed approved media, original ZIP publication, final WAV corpus in Git, new paid service or PC access. P7 and later milestones need separate authorization. Old P5 instructions to wait for acceptance/no P6 below are history, not current commands.
+
+## Historical pre-acceptance handoff
+
 ## Current bounded dependency follow-up — 2026-10-28
 
 P5 **IN PROGRESS / NOT READY**; PR #5 OPEN DRAFT; no merge/P6. Exact `e9a831061216272514a3c9dc22a605ff65351ef8` passed all seven workflows / eleven jobs on attempt 1 and both independent input/runtime audits: 420 unchanged WAVs, 450 pins, 31 gates and 28 browser cases per event, 46 acceptance references each. [Retained proof](../docs/p5/exit-review-20261028/verified-ci-e9a8310.json). All 850 source blobs matched GitHub. No historical/synthetic result substituted for a real M01 run.
@@ -248,3 +266,19 @@ Plan v1.4 §12 p7 requires all M01 required asset IDs to resolve. Prepared: 18 o
 OD-004 delivery profile OPEN. Final audio tooling/cast/generation and audio rights were approved on 2026-10-14; older audition records below/above remain historical. OD-006 usable real-provider speech calibration OPEN; default stays neutral `speech_unavailable`. Paid inference=false; monthly paid budget=0. No P6/P7/P8 runtime starts. EXC-P1-001 remains: main lacks technical branch protection; implementation branch, PR, CI and owner review apply.
 
 Next: apply the remaining-gate plan linked above. The real corpus run is complete on 460aab0; subsequent revisions reuse the private asset automatically for exact-source CI. Do not restart old missing-audio work.
+
+
+## 2026-11-04 — P6 L01 reconstruction and execution checkpoint
+
+P5 remains owner accepted/merged at `da3a38c844d68bc6b4051f59d8c9265964347069`. P6 is authorized, IN PROGRESS / NOT READY; PR #6 stays Draft; no P6 merge or P7. Verified parent `9c45c601b7a1ef24c1d338c1f606c1c612c9f628`: 8 successful workflows; both P6 artifacts independently checked against 867 source blobs. Nov3 drafted files/checkpoint were absent from restored scratch; remote branch did not advance. Unattached blob/tree creation is unconfirmed; do not claim success from the interrupted cell.
+
+Reconstructed `content/english/m01/l01.json`: 29 shared contracts, 44 versions, 35 immutable pins (26 WAV + 9 SVG), 51 uses. Atomic importer rejects changed/partial closures and creates no approvals. Local read-only byte audit verifies all 420 approved final WAVs; this is not PostgreSQL/S3 proof. Hosted CI now explicitly tests nine complete SVG/text activities under separate test version IDs with PostgreSQL 18.6, pinned MinIO, restart, replay, publication and two browser viewports. New-source hosted result is pending; inspect PR #6 and its exact-source artifacts. Full-audio L01 and remaining units remain pending. See `docs/p6/l01.md` and `docs/p6/task-status.json`.
+
+Automatic review rejected refreshing the already-successful P5 input job on Nov3. It was not rerun; do not work around the rejection or trusted input controls. Full-audio hosted input stays blocked until explicit authorization of that action. Preserve existing audio/voice/rights and visual approvals; no regeneration or WAV Git storage. OD-004/OD-006 remain OPEN.
+
+
+## 2026-11-05 — P6 L01 publication fix
+
+Both P6 events on `0eef7f32bae9eaa2ca2d8a527d7ce3357d634c1e` passed real PostgreSQL/S3 import, replay and byte readback after restart. Both failed the PostgreSQL canonical-reference guard at test publication. No browser pass on that SHA; the other six workflows succeeded. See `docs/p6/evidence/l01-publication-0eef7f3.json`.
+
+The compiler now orders references by relation then stable code separately from teaching order; all corrected content versions have new IDs, while lesson/activity identities and media pins stay unchanged. The full L01 and nine-activity test slice have version codes `p6-l01-2` and `p6-l01-svg-text-test-2`. The current commit’s push/PR jobs and scope-specific artifact audit are linked from PR #6. Read those jobs before any retry. Full-audio L01 (29 activities/35 pins) and the remaining units are still separate work. P6 remains IN PROGRESS / NOT READY, PR #6 Draft, OD-004/006 open, P7 stopped.

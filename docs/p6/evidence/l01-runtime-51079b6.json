@@ -1,0 +1,225 @@
+{
+  "source_sha": "51079b68902d4a913940258cafc12d5290748aeb",
+  "status": "PUSH_PASS_PR_BROWSER_INSTALL_TIMEOUT",
+  "scope": "NINE_WHOLE_L01_ACTIVITIES_NOT_FULL_AUDIO_OR_MILESTONE",
+  "workflows": [
+    {
+      "id": 42056312950,
+      "name": "P5 media and speech",
+      "event": "pull_request",
+      "head_sha": "51079b68902d4a913940258cafc12d5290748aeb",
+      "attempt": 1,
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/42056312950",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "id": 127345530118,
+          "name": "p5-exit",
+          "head_sha": "51079b68902d4a913940258cafc12d5290748aeb",
+          "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/42056312950/job/127345530118",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 127345530415,
+          "name": "p5-private-bridge",
+          "head_sha": "51079b68902d4a913940258cafc12d5290748aeb",
+          "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/42056312950/job/127345530415",
+          "status": "completed",
+          "conclusion": "skipped",
+          "failed_steps": []
+        },
+        {
+          "id": 127345531049,
+          "name": "p5-input-slot",
+          "head_sha": "51079b68902d4a913940258cafc12d5290748aeb",
+          "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/42056312950/job/127345531049",
+          "status": "completed",
+          "conclusion": "skipped",
+          "failed_steps": []
+        }
+      ]
+    },
+    {
+      "id": 42056313030,
+      "name": "P1 foundation",
+      "event": "pull_request",
+      "head_sha": "51079b68902d4a913940258cafc12d5290748aeb",
+      "attempt": 1,
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/42056313030",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "id": 127345528797,
+          "name": "p1-exit",
+          "head_sha": "51079b68902d4a913940258cafc12d5290748aeb",
+          "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/42056313030/job/127345528797",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        }
+      ]
+    },
+    {
+      "id": 42056312987,
+      "name": "P2 data foundation",
+      "event": "pull_request",
+      "head_sha": "51079b68902d4a913940258cafc12d5290748aeb",
+      "attempt": 1,
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/42056312987",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "id": 127345527484,
+          "name": "p2-exit",
+          "head_sha": "51079b68902d4a913940258cafc12d5290748aeb",
+          "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/42056312987/job/127345527484",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        }
+      ]
+    },
+    {
+      "id": 42056312929,
+      "name": "P4 mastery and Review",
+      "event": "pull_request",
+      "head_sha": "51079b68902d4a913940258cafc12d5290748aeb",
+      "attempt": 1,
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/42056312929",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "id": 127345530952,
+          "name": "p4-exit",
+          "head_sha": "51079b68902d4a913940258cafc12d5290748aeb",
+          "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/42056312929/job/127345530952",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        }
+      ]
+    },
+    {
+      "id": 42056313132,
+      "name": "P3 lesson engine",
+      "event": "pull_request",
+      "head_sha": "51079b68902d4a913940258cafc12d5290748aeb",
+      "attempt": 1,
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/42056313132",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "id": 127345529159,
+          "name": "p3-exit",
+          "head_sha": "51079b68902d4a913940258cafc12d5290748aeb",
+          "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/42056313132/job/127345529159",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        }
+      ]
+    },
+    {
+      "id": 42056313110,
+      "name": "P6 English reference preparation",
+      "event": "pull_request",
+      "head_sha": "51079b68902d4a913940258cafc12d5290748aeb",
+      "attempt": 1,
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/42056313110",
+      "status": "completed",
+      "conclusion": "failure",
+      "jobs": [
+        {
+          "id": 127345528604,
+          "name": "p6-preflight",
+          "head_sha": "51079b68902d4a913940258cafc12d5290748aeb",
+          "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/42056313110/job/127345528604",
+          "status": "completed",
+          "conclusion": "failure",
+          "failed_steps": [
+            "Run pnpm exec playwright install --with-deps chromium"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 42056296987,
+      "name": "P1 foundation",
+      "event": "push",
+      "head_sha": "51079b68902d4a913940258cafc12d5290748aeb",
+      "attempt": 1,
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/42056296987",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "id": 127345474352,
+          "name": "p1-exit",
+          "head_sha": "51079b68902d4a913940258cafc12d5290748aeb",
+          "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/42056296987/job/127345474352",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        }
+      ]
+    },
+    {
+      "id": 42056297085,
+      "name": "P6 English reference preparation",
+      "event": "push",
+      "head_sha": "51079b68902d4a913940258cafc12d5290748aeb",
+      "attempt": 1,
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/42056297085",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "id": 127345480904,
+          "name": "p6-preflight",
+          "head_sha": "51079b68902d4a913940258cafc12d5290748aeb",
+          "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/42056297085/job/127345480904",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        }
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "event": "push",
+      "artifact_id": 13429173013,
+      "sha256": "4d37db71b92c5918fb3a709ad869eb933ff7bab99133206ea68e6939c2afd6b6",
+      "bytes": 50565,
+      "source_sha": "51079b68902d4a913940258cafc12d5290748aeb",
+      "source_blobs_verified": 884,
+      "status": "PASS",
+      "governance_checks": 86,
+      "authored_activities": 29,
+      "executed_activities": 9,
+      "executed_content_versions": 20,
+      "actual_svg_assets": 5,
+      "postgresql": "18.6",
+      "restart_replay_immutable": true,
+      "browser_cases": 2,
+      "browser_retries": 0,
+      "full_audio_l01_executed": false,
+      "milestone_status": "NOT_READY"
+    },
+    {
+      "event": "pull_request",
+      "artifact_id": 13428424788,
+      "sha256": "b995ce0ab23f5525d5a11e2bf5c3ac548ba91e4562598ec066ee7fd198002259",
+      "bytes": 46835,
+      "scope": "preparation only; no learner execution or browser report"
+    }
+  ],
+  "failure_detail": "PR job 127345528604 timed out after 10 minutes in playwright install --with-deps chromium while Azure Ubuntu mirror repeatedly failed to deliver optional fonts. No P6 runtime gate ran on that PR job."
+}

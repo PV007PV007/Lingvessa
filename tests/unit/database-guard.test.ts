@@ -13,7 +13,7 @@ test('bootstrap refuses production, remote and unrelated databases', () => {
 });
 
 test('bootstrap accepts only explicit local synthetic database names', () => {
-  for (const name of ['lingvessa_p1_local', 'lingvessa_p1_test_ab12', 'lingvessa_p4_test_ab12', 'lingvessa_p5_test_ab12']) {
+  for (const name of ['lingvessa_p1_local', 'lingvessa_p1_test_ab12', 'lingvessa_p4_test_ab12', 'lingvessa_p5_test_ab12','lingvessa_p6_test_ab12']) {
     const DATABASE_URL = `postgresql://127.0.0.1/${name}`;
     assert.equal(localDatabaseUrl({ LINGVESSA_ENV: 'local', DATABASE_URL }), DATABASE_URL);
   }
