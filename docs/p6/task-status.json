@@ -10,7 +10,7 @@
       "task_id": "IMP-P6-001",
       "status": "IN_PROGRESS",
       "goal": "Executable English M01 four lessons and recap",
-      "current_batch": "Nine complete L01 activities verified on aaaf7268 in both hosted runs: real PostgreSQL/S3, exact authenticated media bytes, anonymous denial and two browser viewports. Full 29-activity audio gate remains unexecuted.",
+      "current_batch": "Recover the specifically authorized approved-audio test through an isolated same-run P6 relay after two observed historical producer DNS failures. Full 29-activity L01 and all-450-asset M01 execution on the new source remain pending.",
       "pending": [
         "Full L01 approved-audio hosted input and PostgreSQL/S3 execution",
         "Full L01 audio mobile/desktop journey and objective/visibility review",
@@ -22,12 +22,14 @@
   ],
   "od_004": "OPEN",
   "od_006": "OPEN",
-  "next_action": "Review and authorize only the previously rejected one-time P5 final-audio refresh if hosted full L01 execution is to proceed; use the pinned read-only P6 consumer after producer success. Review shared-contract proposals before affected learner behavior changes; complete remaining lesson authoring and media requirements. Current exact-source CI is linked from PR6.",
+  "next_action": "Inspect current-source same-run input, --real-m01, --real-l01 and both browser reports; verify all eight workflows and update PR6. Do not repeat the old P5 producer or infer runtime success from byte checks.",
   "last_observed_in_repository": {
     "source_sha": "aaaf72687cff75c080c5c50b87d96299105c481d",
     "evidence": "docs/p6/evidence/verified-ci-aaaf726.json",
     "status": "ALL_EIGHT_WORKFLOWS_GREEN_NINE_ACTIVITY_SCOPE"
   },
   "local_execution_boundary": "docs/p6/evidence/local-runtime-20261110.json",
-  "review_proposals": "docs/p6/shared-contract-proposals.md"
+  "review_proposals": "docs/p6/shared-contract-proposals.md",
+  "input_authorization": "docs/p6/final-input-authorization-20261111.json",
+  "input_recovery": "docs/p6/evidence/input-refresh-20261123.json"
 }

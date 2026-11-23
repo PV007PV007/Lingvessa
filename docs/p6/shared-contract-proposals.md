@@ -4,7 +4,7 @@ These proposals are reviewable implementation decisions for Reference Module Des
 
 ## Listening transcript disclosure
 
-Sources: §7 L02.8 p10, §8 L03.6 p11, §9 L04.2 p11 and §10 R01.2 p12. L02 requires an attempt before transcript disclosure; L03 includes a logged accessibility override. The current player and authenticated media API can expose text before an answer. Closing a browser details element is insufficient: inline text, metadata and dialogue turns also carry the answer. The existing support event records use, but does not enforce disclosure order.
+Sources: §6 L01.4 p9 (hear a greeting without text), §7 L02.8 p10, §8 L03.6 p11, §9 L04.2 p11 and §10 R01.2 p12. L02 requires an attempt before transcript disclosure; L03 includes a logged accessibility override. The current player and authenticated media API can expose text before an answer. Closing a browser details element is insufficient: inline text, metadata and dialogue turns also carry the answer. The existing support event records use, but does not enforce disclosure order.
 
 Proposed decision: a versioned, language-neutral activity policy distinguishes legacy access, access after a submitted answer, and an explicitly permitted early accessibility override. The server omits answer-bearing inline text, transcripts and turn text until the rule is satisfied. An assisted reveal may disclose text as assistance. Playback, timing, speaker identities and non-answer-bearing alt text remain available. A permitted override is keyboard accessible, requires no diagnosis and records an idempotent support event before returning text.
 

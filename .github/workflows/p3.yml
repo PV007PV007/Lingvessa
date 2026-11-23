@@ -30,6 +30,8 @@ jobs:
       - run: pnpm check
       - run: pnpm validate:references
       - run: pnpm audit:dependencies
+      - name: Prepare signed Ubuntu package sources
+        run: bash tools/ci/ubuntu-package-sources.sh
       - run: pnpm exec playwright install --with-deps chromium
       - run: pnpm bootstrap:local
       - run: node --env-file=.local/runtime.env --import tsx --test tests/integration/*.test.ts

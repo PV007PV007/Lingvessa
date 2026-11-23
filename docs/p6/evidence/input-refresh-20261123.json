@@ -1,0 +1,58 @@
+{
+  "verified_at": "2026-11-23",
+  "producer_source_sha": "8f353cf44945738cff1b2ea49bfd9ce730ebf022",
+  "producer_run_id": 40746611469,
+  "head_unchanged": "74c28161f3375c249c35f9c522d9cd525f714949",
+  "attempts": [
+    {
+      "attempt": 2,
+      "input_job": 130562715954,
+      "input_success": true,
+      "exit_job": 130562866414,
+      "exit_conclusion": "failure",
+      "artifact_id": 13862095528,
+      "artifact_sha256": "493e8ba011fd133dc11a9a548eef105875c4bab36080258cdd1121bfc9158776"
+    },
+    {
+      "attempt": 3,
+      "input_job": 130570688595,
+      "input_success": true,
+      "exit_job": 130570805753,
+      "exit_conclusion": "failure",
+      "artifact_id": 13861503624,
+      "artifact_sha256": "d3a3b6e619a3748815e55dea094daa87e08a305bd0ce5781ae06871d51d6bc7f"
+    }
+  ],
+  "failure_step": "Install audio inspection tool with bounded package-network waits",
+  "observed_errors": [
+    "2026-11-11T14:09:05.5153070Z   Temporary failure resolving 'azure.archive.ubuntu.com'",
+    "2026-11-11T14:09:09.4823679Z W: Failed to fetch mirror+file:/etc/apt/apt-mirrors.txt/dists/noble/InRelease  Temporary failure resolving 'azure.archive.ubuntu.com'",
+    "2026-11-11T14:09:09.4824598Z W: Failed to fetch mirror+file:/etc/apt/apt-mirrors.txt/dists/noble-updates/InRelease  Temporary failure resolving 'azure.archive.ubuntu.com'",
+    "2026-11-11T14:09:09.4825947Z W: Failed to fetch mirror+file:/etc/apt/apt-mirrors.txt/dists/noble-backports/InRelease  Temporary failure resolving 'azure.archive.ubuntu.com'",
+    "2026-11-11T14:09:09.4826832Z W: Failed to fetch mirror+file:/etc/apt/apt-mirrors.txt/dists/noble-security/InRelease  Temporary failure resolving 'azure.archive.ubuntu.com'",
+    "2026-11-11T14:15:58.7894618Z ##[error]The action 'Install audio inspection tool with bounded package-network waits' has timed out after 10 minutes."
+  ],
+  "historical_byte_verification": {
+    "date": "2026-11-11",
+    "per_artifact": {
+      "zip_bytes": 35959324,
+      "wavs": 420,
+      "languages": {
+        "en": 210,
+        "cs": 210
+      },
+      "audio_bytes": 35876788,
+      "immutable_checksums_and_pcm_pass": true
+    },
+    "single_turn_acoustic_results": 402,
+    "assembled_dialogues": 18,
+    "original_archive_in_artifact": false
+  },
+  "current_artifacts": "Both one-day input artifacts have expired; retained report artifacts contain no replacement audio input.",
+  "real_m01_executed_in_these_attempts": false,
+  "full_audio_l01_executed": false,
+  "recovery": "Use an isolated same-run P6 final-only transport dependency and run the unchanged --real-m01 plus full --real-l01 commands on the new P6 source. Fix the observed Ubuntu mirror DNS dependency using signed canonical package archives; do not repeat the historical P5 run.",
+  "p6_milestone_status": "NOT_READY",
+  "od_004": "OPEN",
+  "od_006": "OPEN"
+}

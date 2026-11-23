@@ -11,7 +11,58 @@ concurrency:
   group: p6-${{ github.ref }}
   cancel-in-progress: true
 jobs:
+  p6-input:
+    if: >-
+      github.repository == 'PV007PV007/Lingvessa' && github.event_name == 'push' &&
+      github.ref == 'refs/heads/implementation/p6-english-reference' &&
+      contains(github.event.head_commit.message, '[p6:verify-final-l01]')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    permissions:
+      contents: write
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      GITHUB_HEAD_SHA: ${{ github.sha }}
+    outputs:
+      artifact_id: ${{ steps.relay.outputs.artifact-id }}
+      sha256: ${{ steps.relay.outputs.artifact-digest }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+          sparse-checkout: |
+            .github/workflows/p6.yml
+            tools/p6/same-run-input.py
+            tools/p6/receive-final-wavs.py
+            tools/p5/public-m01-input.py
+            tools/p5/private-m01-transfer.py
+            tools/p5/stage-m01-audio.py
+            docs/p6/authorization.json
+            docs/p6/final-input-authorization-20261111.json
+            docs/p6/same-run-input-request.json
+            docs/p5/public-test-input-20261026/owner-scope.json
+            docs/p5/m01-completion-20261014/owner-approval.json
+            docs/p5/m01-completion-attribution.md
+            assets/media/m01/source-all-assets.json
+            assets/media/m01/records
+          sparse-checkout-cone-mode: false
+      - name: Verify private original and export only approved final WAVs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 tools/p6/same-run-input.py export
+      - name: Relay verified finals to the dependent read-only test for one day
+        id: relay
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: p6-approved-audio-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/p6-approved-input/*
+          if-no-files-found: error
+          retention-days: 1
+          compression-level: 0
   p6-preflight:
+    needs: p6-input
+    if: ${{ !cancelled() && (needs.p6-input.result == 'success' || needs.p6-input.result == 'skipped') }}
     runs-on: ubuntu-24.04
     timeout-minutes: 45
     env:
@@ -37,6 +88,7 @@ jobs:
       - run: node --import tsx --test tests/unit/p6-reference.test.ts
       - run: node --import tsx --test tests/unit/p6-authored-unit.test.ts
       - run: python3 tests/unit/p6-final-input.test.py
+      - run: python3 tests/unit/p6-same-run-input.test.py
       - run: node --import tsx tools/p6/reference-preflight.ts
       - run: node --import tsx tools/p6/authored-l01-check.ts
       - run: pnpm build:web
@@ -48,11 +100,7 @@ jobs:
             node --input-type=module -e "import { chromium } from '@playwright/test'; const b = await chromium.launch(); try { const p = await b.newPage(); await p.goto('about:blank'); } finally { await b.close(); }"
           }
           if ! smoke; then
-            sudo tee /etc/apt/apt.conf.d/99lingvessa-p6-timeouts >/dev/null <<'APT'
-          Acquire::Retries "1";
-          Acquire::http::Timeout "15";
-          Acquire::https::Timeout "15";
-          APT
+            bash tools/ci/ubuntu-package-sources.sh
             pnpm exec playwright install-deps chromium
             smoke
           fi
@@ -61,17 +109,25 @@ jobs:
       - run: pnpm bootstrap:local
       - name: Execute nine complete authored SVG/text activities with PostgreSQL S3 and browser
         run: MINIO_BINARY="$(go env GOPATH)/bin/minio" node --env-file=.local/runtime.env --import tsx tools/p6/l01-postgres.ts --svg-text-slice
-      # One new owner-authorized P6 push may consume a previously produced final-only artifact.
-      # No exporter/rerun is invoked here. The receiver also pins the parent and rejects old requests.
-      - name: Receive pinned final-only input for an explicit full lesson test
+      # The isolated successful dependency supplies exact same-source/run/attempt input.
+      - name: Receive and verify the successful same-run final-only relay
         id: full_input
-        if: >-
-          github.repository == 'PV007PV007/Lingvessa' && github.event_name == 'push' &&
-          github.ref == 'refs/heads/implementation/p6-english-reference' &&
-          contains(github.event.head_commit.message, '[p6:verify-final-l01]')
+        if: needs.p6-input.result == 'success'
         env:
           GH_TOKEN: ${{ github.token }}
-        run: python3 tools/p6/receive-final-wavs.py hosted --request docs/p6/approved-input-request.json --out "$RUNNER_TEMP/p6-approved-input"
+          P6_INPUT_JOB_RESULT: ${{ needs.p6-input.result }}
+          P6_INPUT_ARTIFACT_ID: ${{ needs.p6-input.outputs.artifact_id }}
+          P6_INPUT_SHA256: ${{ needs.p6-input.outputs.sha256 }}
+        run: python3 tools/p6/same-run-input.py receive
+      - name: Verify all approved M01 bytes with PostgreSQL S3 restart and HTTP delivery
+        if: steps.full_input.outcome == 'success'
+        env:
+          P5_M01_AUDIO_ROOT: ${{ runner.temp }}/p6-approved-input/audio
+        run: |
+          node --import tsx tools/p5/prepare-m01-publication.ts
+          MINIO_BINARY="$(go env GOPATH)/bin/minio" node --env-file=.local/runtime.env --import tsx tools/p5/verify-m01-s3-import.ts --real-m01
+          cp artifacts/p5/m01-publication-bindings.json artifacts/p6/m01-publication-bindings.json
+          cp artifacts/p5/m01-library-import-validation.json artifacts/p6/m01-library-import-validation.json
       - name: Execute the full 29-activity audio lesson on accepted input
         if: steps.full_input.outcome == 'success'
         env:

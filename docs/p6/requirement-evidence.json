@@ -3178,5 +3178,13 @@
       "actual_gate_ids": [],
       "verified_implementation_sha": null
     }
-  ]
+  ],
+  "input_recovery_evidence": {
+    "path": "docs/p6/evidence/input-refresh-20261123.json",
+    "scope": "Historical 420-WAV input verification and infrastructure failure; current full runtime still pending",
+    "new_runtime_commands": [
+      "tools/p5/verify-m01-s3-import.ts --real-m01",
+      "tools/p6/l01-postgres.ts --real-l01"
+    ]
+  }
 }

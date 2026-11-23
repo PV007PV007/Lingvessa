@@ -1,0 +1,21 @@
+{
+  "status": "OWNER_AUTHORIZED",
+  "decision_date": "2026-11-11",
+  "owner_response": "ДОЗВОЛЯЮ",
+  "final_wav_count": 420,
+  "authorized_scope": "Refresh existing approved final-only audio input and execute real M01 and full P6 L01 development tests using GitHub Actions.",
+  "original_audio_approval": "2026-10-14; quality, six voices and rights unchanged",
+  "original_archive_publication_authorized": false,
+  "audio_regeneration_authorized": false,
+  "new_paid_service_authorized": false,
+  "owner_pc_access_authorized": false,
+  "resumption_date": "2026-11-23",
+  "resumption_instruction": "Продовж цей чат",
+  "implementation_recovery": "After two observed Ubuntu mirror failures and expired one-day relays, move the same approved final-only transport into an isolated dependency of the P6 push. No third blind retry of the historical P5 workflow.",
+  "restrictions": "Exact same-repository P6 push, pinned parent and explicit marker; original archive stays draft/private, finals retained one day only; tests use read-only token and disposable PostgreSQL/S3.",
+  "shared_contract_proposals_approved": false,
+  "p6_merge_authorized": false,
+  "p7_authorized": false,
+  "od_004": "OPEN",
+  "od_006": "OPEN"
+}
