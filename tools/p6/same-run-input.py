@@ -25,6 +25,44 @@ AUTHORIZATION = 'docs/p6/final-input-authorization-20261111.json'
 MARKER = '[p6:verify-final-l01]'
 
 
+def failure_code(error):
+    """Expose only fixed classifications, never remote text, paths or signed URLs."""
+    messages = {
+        'Invalid one-push request': 'REQUEST_INVALID',
+        'Not the explicitly requested P6 push': 'EVENT_OR_PARENT_MISMATCH',
+        'Missing run identity': 'RUN_IDENTITY_MISSING',
+        'P6 final-input scope lacks owner authorization': 'AUTHORIZATION_MISMATCH',
+        'Approved final-only public transport scope changed': 'PUBLIC_SCOPE_MISMATCH',
+        'Require external runner temporary storage': 'TEMPORARY_STORAGE_INVALID',
+        'Input already exists; inspect before retrying': 'DESTINATION_EXISTS',
+        'Ephemeral isolated-job token is required': 'JOB_TOKEN_MISSING',
+        'This profile requires the authorized public repository': 'REPOSITORY_SCOPE_MISMATCH',
+        'Input container identity/draft restriction failed; do not modify it automatically': 'ORIGINAL_DRAFT_IDENTITY_MISMATCH',
+        'Pinned input container identity mismatch': 'ORIGINAL_CONTAINER_MISMATCH',
+        'Approved input is missing or ambiguous': 'ORIGINAL_ASSET_MISSING_OR_AMBIGUOUS',
+        'Pinned input identity mismatch': 'ORIGINAL_ASSET_IDENTITY_MISMATCH',
+        'Unexpected archive download location': 'ORIGINAL_DOWNLOAD_LOCATION_INVALID',
+        'Original archive is anonymously accessible; export refused': 'ORIGINAL_ANONYMOUSLY_ACCESSIBLE',
+        'Original archive access boundary is unproven': 'ORIGINAL_PRIVACY_UNPROVEN',
+        'GitHub API request failed; details suppressed': 'GITHUB_API_TRANSPORT_FAILURE',
+        'Private archive download/verification failed; credentials and response suppressed': 'ORIGINAL_DOWNLOAD_OR_CHECKSUM_FAILED',
+        'Final WAV checksum mismatch': 'FINAL_WAV_CHECKSUM_MISMATCH',
+        'Approved PCM format or frame count differs': 'FINAL_WAV_PCM_MISMATCH',
+        'Receipt or immutable code bindings differ': 'RECEIPT_MISMATCH',
+    }
+    if type(error) in (ValueError, p5.InputError, p5.transport.TransferError):
+        message = str(error)
+        if message in messages:
+            return messages[message]
+        if type(error) is p5.transport.TransferError:
+            match = re.fullmatch(r'GitHub API request failed: HTTP ([1-5][0-9]{2})', message)
+            if match:
+                return 'GITHUB_API_HTTP_' + match[1]
+    if isinstance(error, FileNotFoundError):
+        return 'LOCAL_FILE_MISSING'
+    return 'UNCLASSIFIED_INPUT_FAILURE'
+
+
 def validate_context(q, env, event, head, parents):
     require(isinstance(q, dict) and set(q) == {'consumer_parent_sha'}
             and re.fullmatch(r'[a-f0-9]{40}', q.get('consumer_parent_sha', '')), 'Invalid one-push request')
@@ -159,8 +197,11 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('mode', choices=['export', 'receive'])
     args = parser.parse_args()
+    phase = 'context'
     try:
         identity = context()
+        phase = args.mode
         (export if args.mode == 'export' else receive)(identity)
-    except Exception:
+    except Exception as error:
+        print(json.dumps({'status': 'P6_INPUT_FAILED', 'phase': phase, 'code': failure_code(error)}))
         raise SystemExit('P6 approved input failed; remote details and original archive identifiers suppressed') from None

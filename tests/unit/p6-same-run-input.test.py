@@ -16,6 +16,19 @@ spec.loader.exec_module(m)
 
 
 class SameRunInput(unittest.TestCase):
+    def test_failure_diagnostics_never_disclose_remote_details(self):
+        secret = 'private-example?credential=REDACTION_FIXTURE'
+        for error in [RuntimeError(secret), ValueError(secret), m.p5.InputError(secret),
+                      m.p5.transport.TransferError(secret),
+                      m.p5.transport.TransferError('GitHub API request failed: HTTP 403 ' + secret),
+                      FileNotFoundError(2, secret, '/private/' + secret)]:
+            code = m.failure_code(error)
+            self.assertNotIn(secret, code)
+            self.assertIn(code, ['UNCLASSIFIED_INPUT_FAILURE', 'LOCAL_FILE_MISSING'])
+        self.assertEqual(m.failure_code(m.p5.transport.TransferError('GitHub API request failed: HTTP 403')), 'GITHUB_API_HTTP_403')
+        self.assertEqual(m.failure_code(ValueError('Not the explicitly requested P6 push')), 'EVENT_OR_PARENT_MISMATCH')
+        self.assertEqual(m.failure_code(m.p5.InputError('Original archive access boundary is unproven')), 'ORIGINAL_PRIVACY_UNPROVEN')
+
     def setUp(self):
         self.head, self.parent = 'a' * 40, 'b' * 40
         self.q = {'consumer_parent_sha': self.parent}

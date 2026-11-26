@@ -38,5 +38,21 @@
   "review_proposals": "docs/p6/shared-contract-proposals.md",
   "input_authorization": "docs/p6/final-input-authorization-20261111.json",
   "input_recovery": "docs/p6/evidence/input-refresh-20261123.json",
-  "runtime_evidence": "docs/p6/evidence/l01-runtime-c609687.json"
+  "runtime_evidence": "docs/p6/evidence/l01-runtime-c609687.json",
+  "current_input_execution": {
+    "source_sha": "88b460a0897c888ab15eec04d21ffd7197ed6ee1",
+    "run_id": 45865526441,
+    "attempts_failed_before_export": [
+      1,
+      2
+    ],
+    "failed_jobs": [
+      140067233536,
+      140068367156
+    ],
+    "audio_artifact_created": false,
+    "real_m01_or_l01_executed": false,
+    "diagnosis": "The generic exception handler hid the cause. Add fixed failure classifications without printing remote messages, credentials, private IDs or signed URLs; inspect the successor before any retry.",
+    "original_identity_readonly_verified": "Existing unpublished draft; pinned asset identity and size match"
+  }
 }
