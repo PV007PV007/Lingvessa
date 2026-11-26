@@ -10,26 +10,33 @@
       "task_id": "IMP-P6-001",
       "status": "IN_PROGRESS",
       "goal": "Executable English M01 four lessons and recap",
-      "current_batch": "Recover the specifically authorized approved-audio test through an isolated same-run P6 relay after two observed historical producer DNS failures. Full 29-activity L01 and all-450-asset M01 execution on the new source remain pending.",
+      "current_batch": "Full approved-input M01 and 29-activity L01 passed on c6096879, independently audited on 2026-11-26. Patch effect/Next advisories and revalidate the exact successor before remaining-unit work.",
       "pending": [
-        "Full L01 approved-audio hosted input and PostgreSQL/S3 execution",
-        "Full L01 audio mobile/desktop journey and objective/visibility review",
+        "Exact successor dependency audit and all eight CI workflows",
+        "Full L01 objective/visibility and pedagogical review",
         "Complete L02/L03/L04/Recap authoring and execution",
         "Shared transcript visibility and objective-aware feedback decisions",
         "P6 vertical-slice acceptance with all source clauses evidenced"
+      ],
+      "completed_scoped_gates": [
+        "420 unchanged WAV checksums and immutable records, final-only same-run transfer",
+        "450-asset PostgreSQL/S3 import, replay, immutable versions, restart and HTTP-byte delivery",
+        "Full L01: 29 activities, 44 versions, 35 pins, seven real runtime gates",
+        "Full L01 mobile/desktop audio journey; two neutral speech continuations per learner; no scoring claim"
       ]
     }
   ],
   "od_004": "OPEN",
   "od_006": "OPEN",
-  "next_action": "Inspect current-source same-run input, --real-m01, --real-l01 and both browser reports; verify all eight workflows and update PR6. Do not repeat the old P5 producer or infer runtime success from byte checks.",
+  "next_action": "Verify the dependency-fix successor with the existing same-run approved input and real M01/L01 gates; record exact-HEAD evidence in PR6, then continue remaining units and the documented shared-contract/media review.",
   "last_observed_in_repository": {
-    "source_sha": "aaaf72687cff75c080c5c50b87d96299105c481d",
-    "evidence": "docs/p6/evidence/verified-ci-aaaf726.json",
-    "status": "ALL_EIGHT_WORKFLOWS_GREEN_NINE_ACTIVITY_SCOPE"
+    "source_sha": "c6096879fc065d6fae8e447eaa218a624e92e3d2",
+    "evidence": "docs/p6/evidence/l01-runtime-c609687.json",
+    "status": "FULL_M01_AND_L01_PASS_BUT_SIX_DEPENDENCY_AUDIT_FAILURES"
   },
   "local_execution_boundary": "docs/p6/evidence/local-runtime-20261110.json",
   "review_proposals": "docs/p6/shared-contract-proposals.md",
   "input_authorization": "docs/p6/final-input-authorization-20261111.json",
-  "input_recovery": "docs/p6/evidence/input-refresh-20261123.json"
+  "input_recovery": "docs/p6/evidence/input-refresh-20261123.json",
+  "runtime_evidence": "docs/p6/evidence/l01-runtime-c609687.json"
 }

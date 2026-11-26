@@ -2,7 +2,7 @@
   "phase": "P6",
   "status": "IN_PROGRESS",
   "source_rows": 97,
-  "scope": "All source/task assignments preserved; no full requirement PASS from preparatory probes",
+  "scope": "All 97 source/task assignments preserved; full L01 runtime evidence is scoped separately and does not close complete-module or objective-review requirements",
   "requirements": [
     {
       "requirement_id": "CUR-A1-011",
@@ -3181,10 +3181,28 @@
   ],
   "input_recovery_evidence": {
     "path": "docs/p6/evidence/input-refresh-20261123.json",
-    "scope": "Historical 420-WAV input verification and infrastructure failure; current full runtime still pending",
+    "scope": "Historical Nov11 transport success and infrastructure failure; superseded for current runtime by l01-runtime-c609687.json",
     "new_runtime_commands": [
       "tools/p5/verify-m01-s3-import.ts --real-m01",
       "tools/p6/l01-postgres.ts --real-l01"
     ]
+  },
+  "scoped_runtime_evidence": {
+    "path": "docs/p6/evidence/l01-runtime-c609687.json",
+    "source_sha": "c6096879fc065d6fae8e447eaa218a624e92e3d2",
+    "status": "FULL_M01_AND_L01_RUNTIME_PASS",
+    "full_l01_activities": 29,
+    "content_versions": 44,
+    "media_pins": 35,
+    "actual_postgresql_s3_restart_http": true,
+    "mobile_desktop_audio": true,
+    "not_proved": [
+      "L02/L03/L04/Recap",
+      "Listening after-attempt transcript semantics",
+      "Meaning-correct target-form-needed feedback",
+      "Pedagogical and variety acceptance",
+      "Production delivery or usable speech scoring"
+    ],
+    "requirement_statuses_unchanged": true
   }
 }
