@@ -1,0 +1,418 @@
+{
+  "schema_version": 1,
+  "phase": "P6",
+  "verified_on": "2026-11-27",
+  "executed_on": "2026-11-26",
+  "status": "VERIFIED_GITHUB_EXECUTION",
+  "tested_sha": "d1e19afd0c30e955ab565e89cd195bed6cb75219",
+  "tree_sha": "606ae3ca287a4a427d2b8641be9c1447619c61da",
+  "milestone_status": "NOT_READY",
+  "github": {
+    "workflow_count": 8,
+    "successful_jobs": 9,
+    "expected_skipped_jobs": 3,
+    "workflows": [
+      {
+        "id": 45866440390,
+        "name": "P1 foundation",
+        "event": "pull_request",
+        "head_sha": "d1e19afd0c30e955ab565e89cd195bed6cb75219",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/45866440390"
+      },
+      {
+        "id": 45866440444,
+        "name": "P4 mastery and Review",
+        "event": "pull_request",
+        "head_sha": "d1e19afd0c30e955ab565e89cd195bed6cb75219",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/45866440444"
+      },
+      {
+        "id": 45866440415,
+        "name": "P5 media and speech",
+        "event": "pull_request",
+        "head_sha": "d1e19afd0c30e955ab565e89cd195bed6cb75219",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/45866440415"
+      },
+      {
+        "id": 45866440361,
+        "name": "P2 data foundation",
+        "event": "pull_request",
+        "head_sha": "d1e19afd0c30e955ab565e89cd195bed6cb75219",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/45866440361"
+      },
+      {
+        "id": 45866440581,
+        "name": "P3 lesson engine",
+        "event": "pull_request",
+        "head_sha": "d1e19afd0c30e955ab565e89cd195bed6cb75219",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/45866440581"
+      },
+      {
+        "id": 45866440370,
+        "name": "P6 English reference preparation",
+        "event": "pull_request",
+        "head_sha": "d1e19afd0c30e955ab565e89cd195bed6cb75219",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/45866440370"
+      },
+      {
+        "id": 45866432980,
+        "name": "P6 English reference preparation",
+        "event": "push",
+        "head_sha": "d1e19afd0c30e955ab565e89cd195bed6cb75219",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/45866432980"
+      },
+      {
+        "id": 45866433030,
+        "name": "P1 foundation",
+        "event": "push",
+        "head_sha": "d1e19afd0c30e955ab565e89cd195bed6cb75219",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/45866433030"
+      }
+    ],
+    "jobs": [
+      {
+        "id": 140070350309,
+        "name": "p1-exit",
+        "run_id": 45866440390,
+        "head_sha": "d1e19afd0c30e955ab565e89cd195bed6cb75219",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/45866440390/job/140070350309"
+      },
+      {
+        "id": 140070350619,
+        "name": "p4-exit",
+        "run_id": 45866440444,
+        "head_sha": "d1e19afd0c30e955ab565e89cd195bed6cb75219",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/45866440444/job/140070350619"
+      },
+      {
+        "id": 140070471534,
+        "name": "p5-exit",
+        "run_id": 45866440415,
+        "head_sha": "d1e19afd0c30e955ab565e89cd195bed6cb75219",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/45866440415/job/140070471534"
+      },
+      {
+        "id": 140070472937,
+        "name": "p5-input-slot",
+        "run_id": 45866440415,
+        "head_sha": "d1e19afd0c30e955ab565e89cd195bed6cb75219",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "skipped",
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/45866440415/job/140070472937"
+      },
+      {
+        "id": 140070537965,
+        "name": "p5-private-bridge",
+        "run_id": 45866440415,
+        "head_sha": "d1e19afd0c30e955ab565e89cd195bed6cb75219",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "skipped",
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/45866440415/job/140070537965"
+      },
+      {
+        "id": 140070350115,
+        "name": "p2-exit",
+        "run_id": 45866440361,
+        "head_sha": "d1e19afd0c30e955ab565e89cd195bed6cb75219",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/45866440361/job/140070350115"
+      },
+      {
+        "id": 140070357883,
+        "name": "p3-exit",
+        "run_id": 45866440581,
+        "head_sha": "d1e19afd0c30e955ab565e89cd195bed6cb75219",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/45866440581/job/140070357883"
+      },
+      {
+        "id": 140070351850,
+        "name": "p6-preflight",
+        "run_id": 45866440370,
+        "head_sha": "d1e19afd0c30e955ab565e89cd195bed6cb75219",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/45866440370/job/140070351850"
+      },
+      {
+        "id": 140070353916,
+        "name": "p6-input",
+        "run_id": 45866440370,
+        "head_sha": "d1e19afd0c30e955ab565e89cd195bed6cb75219",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "skipped",
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/45866440370/job/140070353916"
+      },
+      {
+        "id": 140070324683,
+        "name": "p6-input",
+        "run_id": 45866432980,
+        "head_sha": "d1e19afd0c30e955ab565e89cd195bed6cb75219",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/45866432980/job/140070324683"
+      },
+      {
+        "id": 140070469780,
+        "name": "p6-preflight",
+        "run_id": 45866432980,
+        "head_sha": "d1e19afd0c30e955ab565e89cd195bed6cb75219",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/45866432980/job/140070469780"
+      },
+      {
+        "id": 140070324899,
+        "name": "p1-exit",
+        "run_id": 45866433030,
+        "head_sha": "d1e19afd0c30e955ab565e89cd195bed6cb75219",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/45866433030/job/140070324899"
+      }
+    ]
+  },
+  "source_verification": {
+    "status": "GITHUB_LOG_AND_IMMUTABLE_SOURCE_AUDIT_PASS",
+    "source_sha": "d1e19afd0c30e955ab565e89cd195bed6cb75219",
+    "code_bindings_verified": 42,
+    "catalog_records_verified": 15,
+    "delivered_pins_verified": 450,
+    "audio_assets": 420,
+    "svg_assets": 30,
+    "wav_counts": {
+      "en": 210,
+      "cs": 210,
+      "single": {
+        "en": 202,
+        "cs": 200
+      },
+      "dialogues": {
+        "en": 8,
+        "cs": 10
+      }
+    },
+    "full_l01": {
+      "status": "PASS",
+      "mode": "--real-l01",
+      "source_sha": "d1e19afd0c30e955ab565e89cd195bed6cb75219",
+      "gates": 7,
+      "activities": 29,
+      "media": 35,
+      "browser": true,
+      "content_versions": 44,
+      "media_pins": 35,
+      "media_uses": 51
+    },
+    "input_artifact_id": 15141141389,
+    "input_artifact_sha256": "d1498964c6e912bebaccace1b40f27feabde025eb6c97d37cc35956a2cd61232",
+    "production_delivery_approved": false,
+    "od_004": "OPEN",
+    "od_006": "OPEN",
+    "p6": "NOT_READY",
+    "current_runtime_archives_independently_downloaded_and_unzipped": false,
+    "archive_audit_boundary": "Execution environment unavailable on 2026-11-27; current execution verified from completed Actions jobs, decoded logs, immutable source records and GitHub artifact metadata. Current input ZIP was independently audited on 2026-11-26."
+  },
+  "real_m01": {
+    "activity_audio_closure_verified": 2,
+    "required_test_uses_verified": 450,
+    "required_test_use_scope": "DISPOSABLE_FIXTURE_KIND_VARIETY_ACCESSIBILITY_NOT_PEDAGOGICAL_COURSE_MAPPING",
+    "http_delivery": {
+      "status": "PASS",
+      "executed": true,
+      "scope": "REAL_M01_LOOPBACK_HTTP_POSTGRESQL_S3_NOT_PRODUCTION_CDN",
+      "metadata_lists": 2,
+      "full_assets": 450,
+      "audio_assets": 420,
+      "visual_assets": 30,
+      "byte_ranges": 8,
+      "negative_responses": 20,
+      "storage_outage_503": 2,
+      "storage_recovery_reads": 2,
+      "authenticated_login": true,
+      "all_full_response_checksums_verified": true,
+      "private_no_store_headers_verified": true,
+      "svg_sandbox_headers_verified": true,
+      "production_delivery_profile_approved": false
+    },
+    "status": "PASS",
+    "scope": "REAL_M01_BYTES_POSTGRESQL_S3_IMPORT",
+    "commit": "d1e19afd0c30e955ab565e89cd195bed6cb75219",
+    "source_sha": "d1e19afd0c30e955ab565e89cd195bed6cb75219",
+    "database": "PostgreSQL 18.6",
+    "imported_versions": 450,
+    "audio_assets": 420,
+    "visual_drafts": 30,
+    "synthetic_vectors": 0,
+    "real_m01_audio_imported": true,
+    "exact_replay": true,
+    "immutable_update_and_delete_rejected": true,
+    "changed_bytes_rejected": true,
+    "database_pool_recreated": true,
+    "storage_adapter_restart_verified": true,
+    "storage_server_restart_verified": true,
+    "all_stored_bytes_verified": true,
+    "anonymous_access_denied": true,
+    "import_inserted_approvals": 0,
+    "test_publications": 2,
+    "test_fixture_asset_approvals": 2700,
+    "test_approval_scope": "DISPOSABLE_TEST_FIXTURE_ONLY_NOT_OWNER_OR_PRODUCTION_APPROVAL",
+    "delivered_assets": 450,
+    "delivered_real_m01_audio_assets": 420,
+    "delivered_test_visual_assets": 30,
+    "catalog_resolved_assets": 450,
+    "binding_plan_sha256": "3c9c7a32d6b0cab6ff4e1747db025fcaa116435311ebd050cd7367762f31b223",
+    "delivered_test_avatar_assets": 6,
+    "same_language_versioned_avatar_closure_checks": 2,
+    "delivery_scope": "MEDIA_REPOSITORY_OWNER_SCOPED_TEST_LESSON_AFTER_S3_RESTART",
+    "foreign_user_and_activity_denied": true,
+    "production_publication_created": false,
+    "production_delivery_profile_approved": false,
+    "p6_authorized": false,
+    "test_server_source_revision": "9e49d5e7a648f00e26f2246f4dc28e6b07f8c84a",
+    "test_server_binary_sha256": "8f2f97f09e80c811162d32f65cf742072bf85d341ca4a7f3388e1a6b75d0fd9a"
+  },
+  "full_l01": {
+    "status": "PASS",
+    "mode": "--real-l01",
+    "source_sha": "d1e19afd0c30e955ab565e89cd195bed6cb75219",
+    "gates": 7,
+    "activities": 29,
+    "media": 35,
+    "browser": true,
+    "browser_cases_passed": 2,
+    "retries_configured": 0,
+    "neutral_speech_rule": "Two unavailable continuations per repository/browser learner, asserted by unchanged source; no speaking/pronunciation evidence",
+    "test_job_id": 140070469780
+  },
+  "regression": {
+    "p5_gates": 31,
+    "p5_gates_passed": true,
+    "dependency_audit": {
+      "scope": "PRODUCTION_DEPENDENCY_GRAPH",
+      "failure_threshold": "HIGH_OR_CRITICAL",
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "advisory_count": 0
+    },
+    "scope": "P1-P5 regression fixtures; real M01 is separately executed by P6 push. P6 PR and ordinary P6 push exercise the nine-activity scope."
+  },
+  "artifacts": [
+    {
+      "id": 15141141389,
+      "name": "p6-approved-audio-45866432980-1",
+      "size_in_bytes": 35960124,
+      "digest": "sha256:d1498964c6e912bebaccace1b40f27feabde025eb6c97d37cc35956a2cd61232",
+      "expired": false,
+      "created_at": "2026-11-26T17:17:30Z",
+      "expires_at": "2026-11-27T17:17:28Z"
+    },
+    {
+      "id": 15140788086,
+      "name": "p6-d1e19afd0c30e955ab565e89cd195bed6cb75219-push",
+      "size_in_bytes": 179561,
+      "digest": "sha256:4d802af8af77be11f5dcbe89c7734e6ca6ff5df4fd5f05a16e13acc4ca70420f",
+      "expired": false,
+      "created_at": "2026-11-26T17:24:50Z",
+      "expires_at": "2026-12-10T17:24:48Z"
+    },
+    {
+      "id": 15139539554,
+      "name": "p6-d1e19afd0c30e955ab565e89cd195bed6cb75219-pull_request",
+      "size_in_bytes": 51393,
+      "digest": "sha256:78c4332f90deb6562b404754b50bb145fd011370dcc4e701d4f9eb9bb486ea68",
+      "expired": false,
+      "created_at": "2026-11-26T17:21:50Z",
+      "expires_at": "2026-12-10T17:21:49Z"
+    }
+  ],
+  "prior_verification": {
+    "current_input_zip_audit_date": "2026-11-26",
+    "current_input_zip_id": 15141141389,
+    "files": 420,
+    "bytes": 35876788,
+    "receipt_bindings_verified": 27,
+    "original_archive_in_artifact": false,
+    "audio_regenerated": false,
+    "c609_independent_report_archive_audit": "docs/p6/evidence/l01-runtime-c609687.json"
+  },
+  "historical_failures": {
+    "source_sha": "88b460a0897c888ab15eec04d21ffd7197ed6ee1",
+    "run_id": 45865526441,
+    "attempts": [
+      1,
+      2
+    ],
+    "job_ids": [
+      140067233536,
+      140068367156
+    ],
+    "artifact_created": false,
+    "dependent_full_runtime_executed": false,
+    "root_cause": "NOT_ESTABLISHED: old generic handler hid the cause. Success of d1e19af does not prove a particular cause."
+  },
+  "decisions": {
+    "P5": "OWNER_ACCEPTED_DEVELOPMENT_REFERENCE",
+    "P6": "IN_PROGRESS_NOT_READY",
+    "P7": "NOT_AUTHORIZED",
+    "OD-004": "OPEN",
+    "OD-006": "OPEN",
+    "shared_contract_proposals": "OWNER_DECISION_PENDING",
+    "merge_authorized": false
+  },
+  "continuation": {
+    "runtime_input_refresh_needed_now": false,
+    "next": "Finish remaining units and obtain an explicit decision on the documented transcript/feedback contract proposals. No regeneration or repeated input export is needed for these documentation updates.",
+    "documentation_successor": "Verify its ordinary eight workflows and unchanged runtime/source bindings; do not relabel d1e19af full-audio execution as having run on a documentation-only successor.",
+    "idempotent_inspection": "GET /repos/PV007PV007/Lingvessa/actions/runs?head_sha=d1e19afd0c30e955ab565e89cd195bed6cb75219&per_page=100"
+  }
+}

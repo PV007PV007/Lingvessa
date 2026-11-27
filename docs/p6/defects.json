@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "phase": "P6",
+  "milestone_status": "NOT_READY",
+  "items": [
+    {
+      "id": "P6-CONTENT-001",
+      "severity": "BLOCKER",
+      "status": "OPEN_IMPLEMENTATION",
+      "source": "Plan §13; Reference §§6–10 pp9–13",
+      "finding": "L01 has 29 authored contracts and 44 versions with a verified full PostgreSQL/S3/browser journey on d1e19af. L02/L03/L04/Recap remain outlines. No complete five-unit authored publication/journey is proved.",
+      "next_action": "Complete remaining units and objective-specific review without substituting probes for curriculum.",
+      "evidence": "docs/p6/evidence/verified-ci-d1e19af.json"
+    },
+    {
+      "id": "P6-A11Y-001",
+      "severity": "BLOCKER",
+      "status": "OBSERVED_SHARED_CONTRACT_GAP",
+      "source": "Reference §6 L01.4 p9; §7 L02.8 p10; §8 L03.6 p11; §9 L04.2 p11; §10 R01.2 p12",
+      "finding": "Current MediaPanel and authenticated media API expose transcript/turn text before the first answer. This also affects the four L01 listening-choice activities. Runtime completion does not prove independent listening or objective-specific after-attempt visibility.",
+      "code": [
+        "apps/web/src/lesson/media.tsx",
+        "apps/web/src/lesson/activity.tsx",
+        "packages/activity-schemas/src/lesson.ts"
+      ],
+      "next_action": "Specify the shared objective/visibility/accessibility-override contract and required audit/evidence semantics; review any contract change before implementation.",
+      "review_proposal": "docs/p6/shared-contract-proposals.md"
+    },
+    {
+      "id": "P6-EVAL-001",
+      "severity": "IMPORTANT",
+      "status": "OBSERVED_SHARED_CONTRACT_GAP",
+      "source": "Reference §7 L02.7 p10",
+      "finding": "A contraction objective can reject a full form, but the current result has a single correct/incorrect axis. The probes do not prove meaning-correct/form-needed feedback or independent facet outcomes.",
+      "code": [
+        "packages/lesson-engine/src/evaluator.ts",
+        "packages/activity-schemas/src/lesson.ts"
+      ],
+      "next_action": "Review shared objective-aware feedback/evidence contract; do not mark full-form semantics incorrect or add an English-only evaluator.",
+      "review_proposal": "docs/p6/shared-contract-proposals.md"
+    },
+    {
+      "id": "P6-MEDIA-001",
+      "severity": "IMPORTANT",
+      "status": "OPEN_OBJECTIVE_BINDING_REVIEW",
+      "source": "Reference §7 L02.1/L02.5/L02.8 p10; §8 L03.5/L03.6 p11; §10 recap scenario p12",
+      "finding": "All 225 existing English catalog assets resolve. This does not prove the four profile introductions, three role-image uses, listening-profile/country stimuli or the two new recap characters. The approved English visuals comprise three scenes, three avatars, three icons and six flags.",
+      "next_action": "Map each authored stimulus exactly to approved material; prepare explicit additional requirements where reuse is insufficient. Never substitute a generic scene or new script for unchanged approved bytes.",
+      "review_proposal": "docs/p6/shared-contract-proposals.md"
+    },
+    {
+      "id": "P6-VARIANT-001",
+      "severity": "IMPORTANT",
+      "status": "OPEN_VARIANT_REVIEW",
+      "source": "Reference §5 p8; CUR-A1-011",
+      "finding": "176 policy cases cover en-GB/en-US text normalization. Existing approved English voices are en-GB. No learner-profile switching, meaningful letter-name variety note or en-US audio acceptance is asserted.",
+      "next_action": "Author and verify explicit variety metadata/notes against the existing approved voices without silently relabelling en-GB audio."
+    },
+    {
+      "id": "P6-JOURNEY-001",
+      "severity": "BLOCKER",
+      "status": "OPEN_EXECUTION_GATE",
+      "source": "Plan §13 p7; Reference §§9–11 pp11–14",
+      "finding": "Full L01 ran all 29 activities, 44 versions and 35 real-media pins through seven PostgreSQL/S3/publication/journey gates and both browser viewports on d1e19af. The four other units and complete-module journey are not proved.",
+      "next_action": "Preserve the verified L01 regression; execute all remaining authored units and the complete module against exact-source reports.",
+      "evidence": "docs/p6/evidence/verified-ci-d1e19af.json"
+    },
+    {
+      "id": "P6-INPUT-001",
+      "severity": "BLOCKER",
+      "status": "RESOLVED_IN_VERIFIED_SCOPE",
+      "source": "docs/p6/l01.md — Recovery and input boundary",
+      "finding": "All 420 immutable WAVs and same-run transfer passed on d1e19af, followed by real M01 and full L01. Both old 88b460a failures remain recorded without an asserted cause.",
+      "next_action": "No input refresh is currently needed. Preserve the same-run identity/privacy/byte guards for a future code regression.",
+      "evidence": "docs/p6/evidence/verified-ci-d1e19af.json"
+    },
+    {
+      "id": "P6-DEPS-001",
+      "severity": "BLOCKER",
+      "status": "RESOLVED_IN_VERIFIED_SCOPE",
+      "source": "GitHub P1-P5 audit gates on c6096879; npm audit on 2026-11-26",
+      "finding": "Pinned effect 3.22.1 and Next.js 16.4.5 passed all eight d1e19af workflows, real M01/L01 and the production audit with zero advisories. Historical c6096879 audit failures are retained.",
+      "next_action": "Preserve the pinned lockfile and unchanged dependency audit gate; do not waive later advisories.",
+      "evidence": "docs/p6/evidence/verified-ci-d1e19af.json"
+    }
+  ],
+  "unchanged_decisions": {
+    "OD-004": "OPEN_BEFORE_PRODUCTION_DELIVERY",
+    "OD-006": "OPEN_BEFORE_USABLE_LEARNER_SCORING"
+  }
+}

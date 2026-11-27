@@ -218,11 +218,7 @@ jobs:
       - name: Install audio inspection tool with bounded package-network waits
         timeout-minutes: 10
         run: |
-          sudo tee /etc/apt/apt.conf.d/99lingvessa-network-timeouts >/dev/null <<'APT'
-          Acquire::Retries "2";
-          Acquire::http::Timeout "30";
-          Acquire::https::Timeout "30";
-          APT
+          bash tools/ci/ubuntu-package-sources.sh
           sudo apt-get update
           sudo apt-get install --yes --no-install-recommends ffmpeg
           ffmpeg -version

@@ -1,0 +1,98 @@
+{
+  "source_sha": "0eef7f32bae9eaa2ca2d8a527d7ce3357d634c1e",
+  "overall": "P6_TEST_PUBLICATION_FAILED",
+  "inspected": "2026-11-05",
+  "workflows": [
+    {
+      "id": 41872890753,
+      "name": "P2 data foundation",
+      "event": "pull_request",
+      "attempt": 1,
+      "conclusion": "success",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/41872890753"
+    },
+    {
+      "id": 41872890839,
+      "name": "P4 mastery and Review",
+      "event": "pull_request",
+      "attempt": 1,
+      "conclusion": "success",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/41872890839"
+    },
+    {
+      "id": 41872890910,
+      "name": "P1 foundation",
+      "event": "pull_request",
+      "attempt": 1,
+      "conclusion": "success",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/41872890910"
+    },
+    {
+      "id": 41872890976,
+      "name": "P3 lesson engine",
+      "event": "pull_request",
+      "attempt": 1,
+      "conclusion": "success",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/41872890976"
+    },
+    {
+      "id": 41872890854,
+      "name": "P5 media and speech",
+      "event": "pull_request",
+      "attempt": 1,
+      "conclusion": "success",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/41872890854"
+    },
+    {
+      "id": 41872890781,
+      "name": "P6 English reference preparation",
+      "event": "pull_request",
+      "attempt": 1,
+      "conclusion": "failure",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/41872890781"
+    },
+    {
+      "id": 41872881573,
+      "name": "P1 foundation",
+      "event": "push",
+      "attempt": 1,
+      "conclusion": "success",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/41872881573"
+    },
+    {
+      "id": 41872881466,
+      "name": "P6 English reference preparation",
+      "event": "push",
+      "attempt": 1,
+      "conclusion": "failure",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/41872881466"
+    }
+  ],
+  "p6_jobs": [
+    {
+      "job_id": 126724459346,
+      "last_passing_gates": [
+        "authority and missing-byte closure reject without partial content",
+        "real approved media bytes import and replay; no generation",
+        "authored import/replay rejects changed versions and inserts no approval/publication",
+        "adapter restart, new PostgreSQL pool, immutable readback and replay"
+      ],
+      "error": "payload references must match resolved UUID references in canonical order",
+      "sqlstate": "23514",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/41872881466/job/126724459346"
+    },
+    {
+      "job_id": 126724491315,
+      "last_passing_gates": [
+        "authority and missing-byte closure reject without partial content",
+        "real approved media bytes import and replay; no generation",
+        "authored import/replay rejects changed versions and inserts no approval/publication",
+        "adapter restart, new PostgreSQL pool, immutable readback and replay"
+      ],
+      "error": "payload references must match resolved UUID references in canonical order",
+      "sqlstate": "23514",
+      "url": "https://github.com/PV007PV007/Lingvessa/actions/runs/41872890781/job/126724491315"
+    }
+  ],
+  "scope": "9 intact SVG/text activities; import/replay, immutable-asset checks and 5 real SVG readbacks after restart passed. Test publication failed before learner/browser execution. No audio journey or milestone pass."
+}

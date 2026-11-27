@@ -1,0 +1,319 @@
+{
+  "status": "INDEPENDENT_ARTIFACT_AUDIT_PASS",
+  "source_sha": "c6096879fc065d6fae8e447eaa218a624e92e3d2",
+  "artifacts": [
+    {
+      "event": "push",
+      "source_sha": "c6096879fc065d6fae8e447eaa218a624e92e3d2",
+      "run_id": 45245532871,
+      "artifact_id": 14854446932,
+      "zip_bytes": 179273,
+      "zip_sha256": "e3fca8bff9794a5c5ad5bd4e0fae4eb76ac96f0133313ac1b168eeda2b642684",
+      "members": 10,
+      "report_sha256": {
+        "baseline-validation.json": "9ac2426bae7e1019d483f1778d63800e5c223858bf8876adcd8cca4ca3871e92",
+        "l01-authored.json": "d19e9292ecc7342628131dea1c5c37f0182ba2b24f3f994f87a905ac700ef195",
+        "l01-browser.json": "8311a4a6c203fea5cefdbe443eaf07a7d0f3de5c0614cf7703d1f258b1790212",
+        "l01-input.json": "4a1305e0fb5a0557857810ec2e58381704d1e6a65d2b6ed208dd985792662447",
+        "l01-real-browser.json": "4913851bbf5a4ac2999983fd60928481dcd42a6d2b387cfe5959bbd795bc0ae7",
+        "l01-real.json": "f21ab37a1b459d3b68a2a3e9435444ac51680d974b79e33e8f79b7255622956c",
+        "l01-svg-text.json": "639af9e1b0165d2c6b67fe0bea5ef9ebfc05a8c02da6c6b61d63f7342f3ed38a",
+        "m01-library-import-validation.json": "c1e35419890e93f792ccab34d4e49dc71742a7b8231ebdca0ffcdce9cfe904cc",
+        "m01-publication-bindings.json": "30daf6ad94734bce6120ddb1a2fd4c7dcb49d284a65d2fda5a5a6c680b6ccbef",
+        "reference-preflight.json": "cef657e880e389e345b4916e627951cd9ff59f3622a1b58f115627300233783b"
+      },
+      "verified_code_bindings": 96,
+      "governance_checks": 86,
+      "svg_text_slice": {
+        "status": "PASS",
+        "activities": 9,
+        "content_versions": 20,
+        "media_pins": 5,
+        "media_uses": 5,
+        "gates": 7,
+        "postgresql": "18.6",
+        "s3_restart": true,
+        "immutable_replay": true,
+        "neutral_speech_continues": 0,
+        "browser": {
+          "projects": [
+            "mobile",
+            "desktop"
+          ],
+          "passed": 2,
+          "retries": 0,
+          "unexpected": 0,
+          "checked_out_git_commit": "c6096879fc065d6fae8e447eaa218a624e92e3d2",
+          "github_event_sha": "c6096879fc065d6fae8e447eaa218a624e92e3d2"
+        }
+      },
+      "full_l01": {
+        "status": "PASS",
+        "activities": 29,
+        "content_versions": 44,
+        "media_pins": 35,
+        "media_uses": 51,
+        "gates": 7,
+        "postgresql": "18.6",
+        "s3_restart": true,
+        "immutable_replay": true,
+        "neutral_speech_continues": 2,
+        "browser": {
+          "projects": [
+            "mobile",
+            "desktop"
+          ],
+          "passed": 2,
+          "retries": 0,
+          "unexpected": 0,
+          "checked_out_git_commit": "c6096879fc065d6fae8e447eaa218a624e92e3d2",
+          "github_event_sha": "c6096879fc065d6fae8e447eaa218a624e92e3d2"
+        }
+      },
+      "input": {
+        "artifact_id": 14854331292,
+        "zip_bytes": 35960124,
+        "zip_sha256": "7ccbabaf423c31541289709c09e25c86d97d91e9638091ce45a4834d8dd2554e",
+        "files": 420,
+        "languages": {
+          "en": 210,
+          "cs": 210
+        },
+        "audio_bytes": 35876788
+      },
+      "real_m01": {
+        "status": "PASS",
+        "database": "PostgreSQL 18.6",
+        "imported_versions": 450,
+        "audio_assets": 420,
+        "visual_drafts": 30,
+        "synthetic_vectors": 0,
+        "exact_replay": true,
+        "immutable_update_and_delete_rejected": true,
+        "changed_bytes_rejected": true,
+        "database_pool_recreated": true,
+        "storage_adapter_restart_verified": true,
+        "storage_server_restart_verified": true,
+        "all_stored_bytes_verified": true,
+        "import_inserted_approvals": 0,
+        "test_publications": 2,
+        "test_fixture_asset_approvals": 2700,
+        "test_approval_scope": "DISPOSABLE_TEST_FIXTURE_ONLY_NOT_OWNER_OR_PRODUCTION_APPROVAL",
+        "production_publication_created": false,
+        "production_delivery_profile_approved": false,
+        "http_delivery": {
+          "status": "PASS",
+          "executed": true,
+          "scope": "REAL_M01_LOOPBACK_HTTP_POSTGRESQL_S3_NOT_PRODUCTION_CDN",
+          "metadata_lists": 2,
+          "full_assets": 450,
+          "audio_assets": 420,
+          "visual_assets": 30,
+          "byte_ranges": 8,
+          "negative_responses": 20,
+          "storage_outage_503": 2,
+          "storage_recovery_reads": 2,
+          "authenticated_login": true,
+          "all_full_response_checksums_verified": true,
+          "private_no_store_headers_verified": true,
+          "svg_sandbox_headers_verified": true,
+          "production_delivery_profile_approved": false
+        }
+      }
+    },
+    {
+      "event": "pr",
+      "source_sha": "c6096879fc065d6fae8e447eaa218a624e92e3d2",
+      "run_id": 45245544146,
+      "artifact_id": 14854566454,
+      "zip_bytes": 51115,
+      "zip_sha256": "00cb79321901470cd2ac230c9c52d0f1f0018b38a073ed3f6a22030012d32ad3",
+      "members": 5,
+      "report_sha256": {
+        "baseline-validation.json": "9ac2426bae7e1019d483f1778d63800e5c223858bf8876adcd8cca4ca3871e92",
+        "l01-authored.json": "d19e9292ecc7342628131dea1c5c37f0182ba2b24f3f994f87a905ac700ef195",
+        "l01-browser.json": "c093b5d04a6cd994728371e629312aa0e34873ab7325b9cc4a9f103999058101",
+        "l01-svg-text.json": "639af9e1b0165d2c6b67fe0bea5ef9ebfc05a8c02da6c6b61d63f7342f3ed38a",
+        "reference-preflight.json": "cef657e880e389e345b4916e627951cd9ff59f3622a1b58f115627300233783b"
+      },
+      "verified_code_bindings": 33,
+      "governance_checks": 86,
+      "svg_text_slice": {
+        "status": "PASS",
+        "activities": 9,
+        "content_versions": 20,
+        "media_pins": 5,
+        "media_uses": 5,
+        "gates": 7,
+        "postgresql": "18.6",
+        "s3_restart": true,
+        "immutable_replay": true,
+        "neutral_speech_continues": 0,
+        "browser": {
+          "projects": [
+            "mobile",
+            "desktop"
+          ],
+          "passed": 2,
+          "retries": 0,
+          "unexpected": 0,
+          "checked_out_git_commit": "c6096879fc065d6fae8e447eaa218a624e92e3d2",
+          "github_event_sha": "392fb99b81cd1fb13ea67a3f23cb7c191963cfe9"
+        }
+      }
+    }
+  ],
+  "milestone_status": "NOT_READY",
+  "verified_on": "2026-11-26",
+  "executed_on": "2026-11-23",
+  "source_tree_sha": "c60c66d787ee02376f230ffa46e3e8bd50a15993",
+  "source_blobs_verified": 898,
+  "scope": "Actual full M01 import/delivery and full L01 runtime; not all P6 units, human acceptance or production approval",
+  "input_byte_audit": {
+    "status": "ALL_FINAL_BYTES_VERIFIED",
+    "source_sha": "c6096879fc065d6fae8e447eaa218a624e92e3d2",
+    "run_id": 45245532871,
+    "attempt": 1,
+    "artifact_id": 14854331292,
+    "zip_bytes": 35960124,
+    "zip_sha256": "7ccbabaf423c31541289709c09e25c86d97d91e9638091ce45a4834d8dd2554e",
+    "files": 420,
+    "languages": {
+      "en": 210,
+      "cs": 210
+    },
+    "single_turn_acoustic_files": {
+      "en": 202,
+      "cs": 200
+    },
+    "assembled_dialogues": {
+      "en": 8,
+      "cs": 10
+    },
+    "audio_bytes": 35876788,
+    "receipt_bindings_verified": 27,
+    "original_archive_in_artifact": false,
+    "audio_regenerated": false,
+    "postgresql_executed_by_this_audit": false
+  },
+  "github_workflows": [
+    {
+      "id": 45245544146,
+      "name": "P6 English reference preparation",
+      "event": "pull_request",
+      "head_sha": "c6096879fc065d6fae8e447eaa218a624e92e3d2",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/45245544146"
+    },
+    {
+      "id": 45245543839,
+      "name": "P4 mastery and Review",
+      "event": "pull_request",
+      "head_sha": "c6096879fc065d6fae8e447eaa218a624e92e3d2",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "failure",
+      "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/45245543839"
+    },
+    {
+      "id": 45245543900,
+      "name": "P1 foundation",
+      "event": "pull_request",
+      "head_sha": "c6096879fc065d6fae8e447eaa218a624e92e3d2",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "failure",
+      "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/45245543900"
+    },
+    {
+      "id": 45245543807,
+      "name": "P3 lesson engine",
+      "event": "pull_request",
+      "head_sha": "c6096879fc065d6fae8e447eaa218a624e92e3d2",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "failure",
+      "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/45245543807"
+    },
+    {
+      "id": 45245543854,
+      "name": "P5 media and speech",
+      "event": "pull_request",
+      "head_sha": "c6096879fc065d6fae8e447eaa218a624e92e3d2",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "failure",
+      "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/45245543854"
+    },
+    {
+      "id": 45245543801,
+      "name": "P2 data foundation",
+      "event": "pull_request",
+      "head_sha": "c6096879fc065d6fae8e447eaa218a624e92e3d2",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "failure",
+      "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/45245543801"
+    },
+    {
+      "id": 45245532871,
+      "name": "P6 English reference preparation",
+      "event": "push",
+      "head_sha": "c6096879fc065d6fae8e447eaa218a624e92e3d2",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/45245532871"
+    },
+    {
+      "id": 45245532925,
+      "name": "P1 foundation",
+      "event": "push",
+      "head_sha": "c6096879fc065d6fae8e447eaa218a624e92e3d2",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "failure",
+      "html_url": "https://github.com/PV007PV007/Lingvessa/actions/runs/45245532925"
+    }
+  ],
+  "overall_ci_status": "NOT_GREEN: both P6 workflows passed; six P1-P5 workflows failed dependency audit before their runtime gates",
+  "audit_failure": {
+    "module": "effect",
+    "version": "3.20.0",
+    "severity": "high",
+    "advisory": "https://github.com/advisories/GHSA-7589-6fvf-x4pw",
+    "additional_moderate_next_advisories": 7
+  },
+  "byte_count_explanation": {
+    "single_turn_acoustic_results": 402,
+    "single_turn_languages": {
+      "en": 202,
+      "cs": 200
+    },
+    "assembled_dialogues": 18,
+    "dialogue_languages": {
+      "en": 8,
+      "cs": 10
+    },
+    "final_wavs": 420,
+    "final_languages": {
+      "en": 210,
+      "cs": 210
+    },
+    "separate_syntheses_claimed": false
+  },
+  "boundaries": {
+    "owner_audio_approval_20261014": "RETAINED",
+    "owner_visual_approval_20261020": "RETAINED",
+    "od_004": "OPEN",
+    "od_006": "OPEN",
+    "p6": "IN_PROGRESS_NOT_READY",
+    "p7_authorized": false,
+    "original_archive_public": false,
+    "audio_regenerated": false,
+    "full_wavs_in_git": false
+  },
+  "next_action": "Patch observed dependency advisories and verify all eight workflows and full M01/L01 on the exact successor; PR6 records final results without an untested evidence-only descendant."
+}

@@ -1,0 +1,165 @@
+{
+  "date": "2026-11-26",
+  "scope": "P6 dependency maintenance and exact-source regression; no shared-contract or media change",
+  "observed_parent_sha": "c6096879fc065d6fae8e447eaa218a624e92e3d2",
+  "toolchain": {
+    "node": "24.19.0",
+    "pnpm": "11.19.0"
+  },
+  "before": {
+    "metadata": {
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 7,
+        "high": 1,
+        "critical": 0
+      },
+      "dependencies": 133,
+      "devDependencies": 0,
+      "optionalDependencies": 173,
+      "totalDependencies": 306
+    },
+    "advisories": [
+      {
+        "module_name": "next",
+        "severity": "moderate",
+        "title": "Next.js: Information disclosure across root params when a 'use cache' function is called through unstable_cache()",
+        "url": "https://github.com/advisories/GHSA-mfr8-8qww-v76h",
+        "vulnerable_versions": ">=16.3.0 <=16.4.4",
+        "patched_versions": ">=16.4.5"
+      },
+      {
+        "module_name": "next",
+        "severity": "moderate",
+        "title": "Next.js: Cache leak across root param values in nested 'use cache' functions via delayed inner stream metadata",
+        "url": "https://github.com/advisories/GHSA-vc7v-qv4w-wrv8",
+        "vulnerable_versions": ">=16.2.0 <=16.4.4",
+        "patched_versions": ">=16.4.5"
+      },
+      {
+        "module_name": "effect",
+        "severity": "high",
+        "title": "Effect: ReDoS in Schema.TemplateLiteral compiled regex",
+        "url": "https://github.com/advisories/GHSA-7589-6fvf-x4pw",
+        "vulnerable_versions": "<=3.22.0",
+        "patched_versions": ">=3.22.1"
+      },
+      {
+        "module_name": "next",
+        "severity": "moderate",
+        "title": "Next.js: SVG rejection bypass in the image optimization",
+        "url": "https://github.com/advisories/GHSA-7qx7-33qx-rqx2",
+        "vulnerable_versions": ">=16.0.0 <=16.4.4",
+        "patched_versions": ">=16.4.5"
+      },
+      {
+        "module_name": "next",
+        "severity": "moderate",
+        "title": "Next.js: HttpOnly cookie exposure through internal response header on Next.js Edge runtime routes",
+        "url": "https://github.com/advisories/GHSA-f3mh-rxg3-f5g2",
+        "vulnerable_versions": ">=16.0.0 <=16.4.4",
+        "patched_versions": ">=16.4.5"
+      },
+      {
+        "module_name": "next",
+        "severity": "moderate",
+        "title": "Next.js: Cross-client response injection and disclosure in self-hosted Next.js applications forwarding fetched responses",
+        "url": "https://github.com/advisories/GHSA-pc58-hwjq-p385",
+        "vulnerable_versions": ">=16.0.0 <=16.4.4",
+        "patched_versions": ">=16.4.5"
+      },
+      {
+        "module_name": "next",
+        "severity": "moderate",
+        "title": "Next.js: Cross-user cache disclosure and poisoning in Next.js use cache with binary arguments",
+        "url": "https://github.com/advisories/GHSA-rhh4-g77r-r9qj",
+        "vulnerable_versions": ">=16.0.0 <=16.4.4",
+        "patched_versions": ">=16.4.5"
+      },
+      {
+        "module_name": "next",
+        "severity": "moderate",
+        "title": "Next.js: Cache poisoning of shared fallback shells in Cache Components via request-supplied placeholder route params",
+        "url": "https://github.com/advisories/GHSA-vvgp-ww4w-46vf",
+        "vulnerable_versions": ">=16.4.0 <=16.4.4",
+        "patched_versions": ">=16.4.5"
+      }
+    ]
+  },
+  "changes": [
+    {
+      "package": "effect",
+      "from": "3.20.0",
+      "to": "3.22.1",
+      "scope": "@prisma/config@7.10.0>effect narrow override",
+      "registry": {
+        "version": "3.22.1",
+        "dependencies": {
+          "fast-check": "^3.23.1",
+          "@standard-schema/spec": "^1.0.0"
+        },
+        "dist.integrity": "sha512-TNoXushmPOBAjJlthF5d2QwnX2xBPEtcNJr5XKNKbRLbDvBcOYkXlYDfvGfSA0zriwLFuCll5MDtNMAdZL17PQ=="
+      }
+    },
+    {
+      "package": "next",
+      "from": "16.4.1",
+      "to": "16.4.5",
+      "scope": "apps/web and apps/admin; matching @next/env and SWC packages",
+      "registry": {
+        "version": "16.4.5",
+        "dependencies": {
+          "postcss": "8.5.23",
+          "@next/env": "16.4.5",
+          "styled-jsx": "5.1.6",
+          "@swc/helpers": "0.5.23",
+          "caniuse-lite": "^1.0.30001579",
+          "baseline-browser-mapping": "^2.9.19"
+        },
+        "dist.integrity": "sha512-rmdfsWosjTUO+6R0S3KokoIk6Kj0sWDRTe86tZHdqaWH/oXq/udX3/4xb+YQi7aWbyEFoglDU54kaifLCdXbBw=="
+      }
+    }
+  ],
+  "after": {
+    "advisories": {},
+    "metadata": {
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "dependencies": 133,
+      "devDependencies": 0,
+      "optionalDependencies": 173,
+      "totalDependencies": 306
+    }
+  },
+  "lockfile_method": "Regenerated with the pinned pnpm; frozen-lockfile install passed. No manual integrity substitutions.",
+  "local_validation": {
+    "prisma_generate": "PASS",
+    "prisma_validate": "PASS",
+    "peers": "PASS",
+    "lint": "PASS",
+    "typecheck": "PASS",
+    "dependency_boundaries": "PASS",
+    "secret_scan": "PASS",
+    "governance": "86/86 PASS",
+    "python_input_guards": "6/6 PASS",
+    "unit_tests": "71 PASS; 1 explicit real-M01 unit skip; no real-runtime substitution",
+    "temporary_directory_boundary": "Initial pnpm check stopped in the existing persistent-filesystem rejection test because this host /tmp is tmpfs. Re-executed the unchanged unit suite with TMPDIR pointing to an actual disk-backed task temporary directory; all non-optional tests passed. /dev/shm and the production store checks were unchanged.",
+    "server_web_admin_build": "PASS",
+    "smoke": "4/4 PASS"
+  },
+  "hosted_successor": "PENDING; require all eight workflows plus --real-m01 and --real-l01 on exact successor. Final evidence is recorded in PR6 without an untested evidence-only commit.",
+  "audit_threshold_unchanged": "high; no advisory ignore, waiver, retry masking or disabled test",
+  "milestone_status": "NOT_READY",
+  "patched_file_sha256": {
+    "pnpm-workspace.yaml": "38d94340a4a24a879326df790fc29f324dd37b34f3047a76c290b1437b7dd380",
+    "pnpm-lock.yaml": "538dd37e055b292e2974fb90e7da3dcc38ce19a09a6491df135c195716675577",
+    "apps/web/package.json": "6422ee53fc35ad597d5783b06bd19b71775e5a8c02030eeb12a2ded8638b141a",
+    "apps/admin/package.json": "e8160b7af04524424791957c763dfd57fff41e64e6886b4e60cead01da1186d6"
+  }
+}
