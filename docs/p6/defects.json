@@ -8,8 +8,9 @@
       "severity": "BLOCKER",
       "status": "OPEN_IMPLEMENTATION",
       "source": "Plan §13; Reference §§6–10 pp9–13",
-      "finding": "L01 has 29 authored contracts and 44 versions with a verified full PostgreSQL/S3/browser journey on c6096879. L02/L03/L04/Recap remain outlines. No complete five-unit authored publication/journey is proved.",
-      "next_action": "Complete remaining units and objective-specific review without substituting probes for curriculum."
+      "finding": "L01 has 29 authored contracts and 44 versions with a verified full PostgreSQL/S3/browser journey on d1e19af. L02/L03/L04/Recap remain outlines. No complete five-unit authored publication/journey is proved.",
+      "next_action": "Complete remaining units and objective-specific review without substituting probes for curriculum.",
+      "evidence": "docs/p6/evidence/verified-ci-d1e19af.json"
     },
     {
       "id": "P6-A11Y-001",
@@ -60,27 +61,27 @@
       "severity": "BLOCKER",
       "status": "OPEN_EXECUTION_GATE",
       "source": "Plan §13 p7; Reference §§9–11 pp11–14",
-      "finding": "Full L01 ran all 29 activities, 44 versions and 35 real-media pins through seven PostgreSQL/S3/publication/journey gates and both browser viewports on c6096879. The four other units and complete-module journey are not proved.",
+      "finding": "Full L01 ran all 29 activities, 44 versions and 35 real-media pins through seven PostgreSQL/S3/publication/journey gates and both browser viewports on d1e19af. The four other units and complete-module journey are not proved.",
       "next_action": "Preserve the verified L01 regression; execute all remaining authored units and the complete module against exact-source reports.",
-      "evidence": "docs/p6/evidence/l01-runtime-c609687.json"
+      "evidence": "docs/p6/evidence/verified-ci-d1e19af.json"
     },
     {
       "id": "P6-INPUT-001",
       "severity": "BLOCKER",
       "status": "RESOLVED_IN_VERIFIED_SCOPE",
       "source": "docs/p6/l01.md — Recovery and input boundary",
-      "finding": "Same-run input job 137941166736 and dependent test 137941349305 succeeded on c6096879. All 420 final WAVs, 27 receipt bindings, full M01 and full L01 were independently verified. Historical one-day input expiry does not invalidate this retained execution proof.",
-      "next_action": "For a code regression needing audio, use the authorized same-run relay with the exact new parent and inspect that run; do not rerun the historical P5 producer blindly.",
-      "evidence": "docs/p6/evidence/l01-runtime-c609687.json"
+      "finding": "All 420 immutable WAVs and same-run transfer passed on d1e19af, followed by real M01 and full L01. Both old 88b460a failures remain recorded without an asserted cause.",
+      "next_action": "No input refresh is currently needed. Preserve the same-run identity/privacy/byte guards for a future code regression.",
+      "evidence": "docs/p6/evidence/verified-ci-d1e19af.json"
     },
     {
       "id": "P6-DEPS-001",
       "severity": "BLOCKER",
-      "status": "PATCH_PREPARED_PENDING_EXACT_SOURCE_CI",
+      "status": "RESOLVED_IN_VERIFIED_SCOPE",
       "source": "GitHub P1-P5 audit gates on c6096879; npm audit on 2026-11-26",
-      "finding": "One high effect advisory and seven moderate Next.js advisories block a clean dependency result. Narrow effect 3.22.1 override and Next 16.4.5 patch releases are prepared; historical c6096879 remains red.",
-      "next_action": "Require the unchanged dependency gate, Prisma/build checks, existing browser regressions and full approved-audio M01/L01 to pass on the exact successor. Consult PR6 for its completed run results.",
-      "evidence": "docs/p6/evidence/dependency-remediation-20261126.json"
+      "finding": "Pinned effect 3.22.1 and Next.js 16.4.5 passed all eight d1e19af workflows, real M01/L01 and the production audit with zero advisories. Historical c6096879 audit failures are retained.",
+      "next_action": "Preserve the pinned lockfile and unchanged dependency audit gate; do not waive later advisories.",
+      "evidence": "docs/p6/evidence/verified-ci-d1e19af.json"
     }
   ],
   "unchanged_decisions": {

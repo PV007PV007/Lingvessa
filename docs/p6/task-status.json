@@ -10,9 +10,8 @@
       "task_id": "IMP-P6-001",
       "status": "IN_PROGRESS",
       "goal": "Executable English M01 four lessons and recap",
-      "current_batch": "Full approved-input M01 and 29-activity L01 passed on c6096879, independently audited on 2026-11-26. Patch effect/Next advisories and revalidate the exact successor before remaining-unit work.",
+      "current_batch": "Full approved-input M01 and L01 plus all eight workflows passed on d1e19af. Dependency audit has zero findings. Continue remaining four units and owner-reviewed shared transcript/feedback contracts; P6 is not accepted.",
       "pending": [
-        "Exact successor dependency audit and all eight CI workflows",
         "Full L01 objective/visibility and pedagogical review",
         "Complete L02/L03/L04/Recap authoring and execution",
         "Shared transcript visibility and objective-aware feedback decisions",
@@ -22,24 +21,36 @@
         "420 unchanged WAV checksums and immutable records, final-only same-run transfer",
         "450-asset PostgreSQL/S3 import, replay, immutable versions, restart and HTTP-byte delivery",
         "Full L01: 29 activities, 44 versions, 35 pins, seven real runtime gates",
-        "Full L01 mobile/desktop audio journey; two neutral speech continuations per learner; no scoring claim"
+        "Full L01 mobile/desktop audio journey; two neutral speech continuations per learner; no scoring claim",
+        "All eight workflows on d1e19af attempt 1; zero production dependency advisories"
       ]
     }
   ],
   "od_004": "OPEN",
   "od_006": "OPEN",
-  "next_action": "Verify the dependency-fix successor with the existing same-run approved input and real M01/L01 gates; record exact-HEAD evidence in PR6, then continue remaining units and the documented shared-contract/media review.",
+  "next_action": "Continue L02/L03/L04/Recap authoring; obtain the explicit owner decision for the two shared-contract proposals before changing their behavior. Inspect exact documentation-head CI in PR6; do not refresh or regenerate audio merely to update status.",
   "last_observed_in_repository": {
-    "source_sha": "c6096879fc065d6fae8e447eaa218a624e92e3d2",
-    "evidence": "docs/p6/evidence/l01-runtime-c609687.json",
-    "status": "FULL_M01_AND_L01_PASS_BUT_SIX_DEPENDENCY_AUDIT_FAILURES"
+    "source_sha": "d1e19afd0c30e955ab565e89cd195bed6cb75219",
+    "evidence": "docs/p6/evidence/verified-ci-d1e19af.json",
+    "status": "ALL_EIGHT_WORKFLOWS_GREEN_FULL_M01_AND_L01_PASS"
   },
   "local_execution_boundary": "docs/p6/evidence/local-runtime-20261110.json",
   "review_proposals": "docs/p6/shared-contract-proposals.md",
   "input_authorization": "docs/p6/final-input-authorization-20261111.json",
   "input_recovery": "docs/p6/evidence/input-refresh-20261123.json",
-  "runtime_evidence": "docs/p6/evidence/l01-runtime-c609687.json",
+  "runtime_evidence": "docs/p6/evidence/verified-ci-d1e19af.json",
   "current_input_execution": {
+    "source_sha": "d1e19afd0c30e955ab565e89cd195bed6cb75219",
+    "run_id": 45866432980,
+    "attempt": 1,
+    "input_job_id": 140070324683,
+    "full_test_job_id": 140070469780,
+    "input_artifact_id": 15141141389,
+    "files": 420,
+    "status": "PASS_REAL_M01_AND_FULL_L01",
+    "evidence": "docs/p6/evidence/verified-ci-d1e19af.json"
+  },
+  "historical_input_execution": {
     "source_sha": "88b460a0897c888ab15eec04d21ffd7197ed6ee1",
     "run_id": 45865526441,
     "attempts_failed_before_export": [

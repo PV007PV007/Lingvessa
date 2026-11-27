@@ -3188,9 +3188,9 @@
     ]
   },
   "scoped_runtime_evidence": {
-    "path": "docs/p6/evidence/l01-runtime-c609687.json",
-    "source_sha": "c6096879fc065d6fae8e447eaa218a624e92e3d2",
-    "status": "FULL_M01_AND_L01_RUNTIME_PASS",
+    "path": "docs/p6/evidence/verified-ci-d1e19af.json",
+    "source_sha": "d1e19afd0c30e955ab565e89cd195bed6cb75219",
+    "status": "FULL_M01_AND_L01_RUNTIME_AND_ALL_EIGHT_WORKFLOWS_PASS",
     "full_l01_activities": 29,
     "content_versions": 44,
     "media_pins": 35,
@@ -3203,6 +3203,7 @@
       "Pedagogical and variety acceptance",
       "Production delivery or usable speech scoring"
     ],
-    "requirement_statuses_unchanged": true
+    "requirement_statuses_unchanged": true,
+    "dependency_advisory_count": 0
   }
 }
